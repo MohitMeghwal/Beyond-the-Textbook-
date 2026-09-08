@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Science Beyond the Textbook</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-dark: #0b0f0d;
+            --card-bg: rgba(18, 26, 22, 0.9);
+            --accent-green: #20e382;
+            --accent-glow: rgba(32, 227, 130, 0.3);
+            --text-main: #f0f5f2;
+            --text-muted: #8c9e95;
+            --card-border: rgba(255, 255, 255, 0.08);
+            --font-heading: 'Caveat', cursive;
+            --font-body: 'Inter', sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: var(--font-body);
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        /* --- NAVBAR --- */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 4%;
+            background: rgba(11, 15, 13, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--card-border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .logo { display: flex; align-items: center; gap: 8px; text-decoration: none; color: inherit; }
+        .flask-icon { font-size: 1.5rem; }
+        .logo-text h1 { font-family: var(--font-heading); font-size: 1.4rem; color: var(--accent-green); line-height: 1; letter-spacing: 1px; }
+        .logo-text p { font-size: 0.5rem; letter-spacing: 1.5px; color: var(--text-main); }
+        
+        .nav-links { display: flex; gap: 15px; list-style: none; font-size: 0.8rem; }
+        .nav-links a { color: var(--text-main); text-decoration: none; transition: 0.3s; }
+        .nav-links a:hover, .nav-links a.active { color: var(--accent-green); }
+        
+        .nav-controls { display: flex; gap: 8px; align-items: center; }
+        .lang-btn, .settings-btn { background: rgba(255,255,255,0.05); border: 1px solid var(--card-border); color: var(--text-main); padding: 4px 8px; border-radius: 6px; cursor: pointer; font-size: 0.75rem; transition: 0.3s; }
+        .lang-btn:hover { border-color: var(--accent-green); color: var(--accent-green); }
+
+        /* --- MAIN CONTAINER --- */
+        .main-wrapper {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        /* --- HERO SECTION WITH IMAGE --- */
+        .hero-section {
+            min-height: 420px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            padding: 30px;
+            background: linear-gradient(135deg, rgba(15,25,20,0.95), rgba(11,15,13,0.9)), 
+                        url('PASTE_HERO_BG_IMAGE_URL_HERE') center/cover;
+            border-radius: 16px;
+            border: 1px solid var(--card-border);
+            overflow: hidden;
+        }
+        .hero-content { max-width: 600px; z-index: 2; }
+        .hero-title { font-family: var(--font-heading); font-size: 4rem; line-height: 0.9; margin-bottom: 15px; transform: rotate(-1deg); text-shadow: 0 4px 20px rgba(0,0,0,0.8); }
+        .hero-title .highlight { color: var(--accent-green); }
+        .hero-subtitle { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 25px; line-height: 1.5; }
+        
+        .btn-primary {
+            display: inline-block;
+            text-decoration: none;
+            background: linear-gradient(135deg, #20e382, #11b563);
+            color: #0b0f0d;
+            border: none;
+            padding: 10px 24px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            cursor: pointer;
+            box-shadow: 0 0 20px var(--accent-glow);
+            transition: 0.3s;
+            width: fit-content;
+        }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 0 30px rgba(32, 227, 130, 0.6); }
+
+        /* --- SECTION 2: WHY DOES THIS HAPPEN --- */
+        .why-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 20px;
+            backdrop-filter: blur(10px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            gap: 15px;
+        }
+        .why-left h2 { font-family: var(--font-heading); font-size: 1.8rem; display: flex; align-items: center; gap: 8px; }
+        .why-left p { color: var(--text-muted); font-size: 0.8rem; margin-top: 2px; }
+        
+        .why-right {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background: rgba(0,0,0,0.4);
+            border: 1px solid var(--card-border);
+            padding: 12px;
+            border-radius: 12px;
+            width: 60%;
+        }
+        .q-thumb { width: 110px; height: 75px; border-radius: 8px; background: url('PASTE_WHY_THUMB_IMAGE_URL_HERE') center/cover; flex-shrink: 0; }
+        .q-info { flex: 1; }
+        .q-badge { background: rgba(32, 227, 130, 0.15); color: var(--accent-green); font-size: 0.6rem; padding: 2px 6px; border-radius: 4px; font-weight: 600; display: inline-block; margin-bottom: 4px; }
+        .q-info h3 { font-size: 0.85rem; line-height: 1.3; margin-bottom: 6px; }
+        .q-actions { display: flex; align-items: center; justify-content: space-between; }
+        .btn-show { background: rgba(255,255,255,0.08); border: 1px solid var(--card-border); color: #fff; padding: 4px 10px; border-radius: 20px; font-size: 0.7rem; cursor: pointer; transition: 0.3s; }
+        .btn-show:hover { background: var(--accent-green); color: #000; }
+        .explore-more { color: var(--text-main); text-decoration: none; font-size: 0.75rem; transition: 0.3s; }
+        .explore-more:hover { color: var(--accent-green); }
+
+        /* --- SECTION 3: EXPLORE SUBJECTS --- */
+        .subjects-container {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 20px;
+        }
+        .section-header h2 { font-family: var(--font-heading); font-size: 1.8rem; display: flex; align-items: center; gap: 8px; }
+        .section-header p { color: var(--text-muted); font-size: 0.8rem; margin-bottom: 12px; }
+        
+        .subjects-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+        }
+        .subject-box {
+            height: 100px;
+            border-radius: 10px;
+            padding: 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid var(--card-border);
+            cursor: pointer;
+            transition: 0.3s;
+            background-size: cover;
+            background-position: center;
+            text-decoration: none;
+            color: var(--text-main);
+        }
+        .subject-box::before { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.2)); z-index: 1; }
+        .subject-box h3, .subject-box span { z-index: 2; position: relative; }
+        .subject-box h3 { font-size: 0.9rem; font-weight: 600; }
+        .subject-box span { font-size: 0.8rem; position: absolute; right: 12px; bottom: 12px; color: var(--accent-green); }
+        .subject-box:hover { border-color: var(--accent-green); transform: translateY(-2px); }
+
+        .physics-bg { background-image: url('PASTE_PHYSICS_IMAGE_URL_HERE'); }
+        .chem-bg { background-image: url('PASTE_CHEMISTRY_IMAGE_URL_HERE'); }
+        .bio-bg { background-image: url('PASTE_BIOLOGY_IMAGE_URL_HERE'); }
+        .earth-bg { background-image: url('PASTE_EARTH_IMAGE_URL_HERE'); }
+
+        /* --- SECTION 4: SCIENCE IS EVERYWHERE (SCROLL) --- */
+        .scroll-banner {
+            background: #d4c8b8;
+            color: #2c251e;
+            border-radius: 16px;
+            padding: 20px;
+        }
+        .scroll-banner h2 { font-family: var(--font-heading); font-size: 1.8rem; color: #2c251e; display: flex; align-items: center; gap: 8px; }
+        .scroll-banner p { color: #5a4d41; font-size: 0.8rem; margin-bottom: 12px; }
+        
+        .scroll-items {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+            padding-bottom: 5px;
+            scrollbar-width: none;
+        }
+        .item-node {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            cursor: pointer;
+            min-width: 60px;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+        .item-node:hover { transform: scale(1.08); }
+        .node-circle {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background: #fff;
+            border: 2px solid #5a4d41;
+            background-size: cover;
+            background-position: center;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+        }
+        .node-text { font-size: 0.7rem; font-weight: 700; color: #2c251e; text-align: center; }
+
+        /* --- SECTION 5: FEATURE CARDS GRID --- */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+        }
+        .feat-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 10px;
+            padding: 15px;
+            text-decoration: none;
+            color: var(--text-main);
+            transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 85px;
+        }
+        .feat-card:hover { border-color: var(--accent-green); background: rgba(32, 227, 130, 0.03); transform: translateY(-2px); }
+        .feat-card h3 { font-size: 0.85rem; font-weight: 600; margin-bottom: 3px; display: flex; align-items: center; gap: 6px; }
+        .feat-card p { font-size: 0.7rem; color: var(--text-muted); }
+
+        /* --- FOOTER CTA --- */
+        .footer-cta {
+            text-align: center;
+            padding: 30px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+        .footer-cta h2 { font-family: var(--font-heading); font-size: 1.8rem; }
+
+        /* Responsive */
+        @media(max-width: 900px) {
+            .subjects-grid, .features-grid { grid-template-columns: repeat(2, 1fr); }
+            .why-card { flex-direction: column; align-items: stretch; }
+            .why-right { width: 100%; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <span class="flask-icon">🧪</span>
+            <div class="logo-text">
+                <h1>SCIENCE</h1>
+                <p>BEYOND THE TEXTBOOK</p>
+            </div>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active" data-en="Home" data-hi="होम">Home</a></li>
+            <li><a href="subjects/index.html" data-en="Subjects" data-hi="विषय">Subjects</a></li>
+            <li><a href="why/index.html" data-en="Explore" data-hi="खोजें">Explore</a></li>
+            <li><a href="games/index.html" data-en="Games" data-hi="गेम्स">Games</a></li>
+            <li><a href="lab/index.html" data-en="Lab" data-hi="लैब">Lab</a></li>
+        </ul>
+        <div class="nav-controls">
+            <button id="lang-toggle" class="lang-btn">EN | हिंदी</button>
+            <button class="settings-btn">⚙️</button>
+        </div>
+    </nav>
+
+    <!-- Main Content Wrapper -->
+    <div class="main-wrapper">
+
+        <!-- Hero Section -->
+        <header class="hero-section" style="background: linear-gradient(135deg, rgba(15,25,20,0.95), rgba(11,15,13,0.9)), url('PASTE_HERO_BG_IMAGE_URL_HERE') center/cover;">
+            <div class="hero-content">
+                <h1 class="hero-title">SCIENCE <br> <span class="highlight">BEYOND THE TEXTBOOK</span></h1>
+                <p class="hero-subtitle" data-en="Explore. Experiment. Understand. Because Science isn't just a subject, it's a way of seeing the world." data-hi="खोजें। प्रयोग करें। समझें। क्योंकि विज्ञान केवल एक विषय नहीं है, यह दुनिया को देखने का एक नजरिया है।">
+                    Explore. Experiment. Understand. Because Science isn't just a subject, it's a way of seeing the world.
+                </p>
+                <a href="why/index.html" class="btn-primary" data-en="Start Exploring →" data-hi="खोजना शुरू करें →">Start Exploring →</a>
+            </div>
+        </header>
+
+        <!-- Why Does This Happen Section -->
+        <section class="why-card">
+            <div class="why-left">
+                <h2>💡 <span data-en="Why Does This Happen?" data-hi="ऐसा क्यों होता है?">Why Does This Happen?</span></h2>
+                <p data-en="Everyday questions. Real science." data-hi="रोजमर्रा के सवाल। असली विज्ञान।">Everyday questions. Real science.</p>
+            </div>
+            <div class="why-right">
+                <div class="q-thumb" style="background: url('PASTE_WHY_THUMB_IMAGE_URL_HERE') center/cover;"></div>
+                <div class="q-info">
+                    <span class="q-badge" data-en="Today's Question" data-hi="आज का सवाल">Today's Question</span>
+                    <h3 id="question-text">Why does the sky appear blue?</h3>
+                    <div class="q-actions">
+                        <button class="btn-show" id="show-answer-btn" data-en="👁️ Show Answer" data-hi="👁️ उत्तर देखें">👁️ Show Answer</button>
+                        <a href="why/index.html" class="explore-more" data-en="Explore More →" data-hi="और जानें →">Explore More →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Explore Subjects Section -->
+        <section class="subjects-container">
+            <div class="section-header">
+                <h2>🔬 <span data-en="Explore Subjects" data-hi="विषय खोजें">Explore Subjects</span></h2>
+                <p data-en="Dive into the core of science." data-hi="विज्ञान की गहराई में जाएं।">Dive into the core of science.</p>
+            </div>
+            <div class="subjects-grid">
+                <a href="subjects/physics/index.html" class="subject-box" style="background-image: url('PASTE_PHYSICS_IMAGE_URL_HERE');">
+                    <h3 data-en="Physics" data-hi="भौतिक विज्ञान">Physics</h3>
+                    <span>→</span>
+                </a>
+                <a href="subjects/chemistry/index.html" class="subject-box" style="background-image: url('PASTE_CHEMISTRY_IMAGE_URL_HERE');">
+                    <h3 data-en="Chemistry" data-hi="रसायन विज्ञान">Chemistry</h3>
+                    <span>→</span>
+                </a>
+                <a href="subjects/biology/index.html" class="subject-box" style="background-image: url('PASTE_BIOLOGY_IMAGE_URL_HERE');">
+                    <h3 data-en="Biology" data-hi="जीव विज्ञान">Biology</h3>
+                    <span>→</span>
+                </a>
+                <a href="subjects/earth/index.html" class="subject-box" style="background-image: url('PASTE_EARTH_IMAGE_URL_HERE');">
+                    <h3 data-en="Earth & Environment" data-hi="पृथ्वी और पर्यावरण">Earth & Environment</h3>
+                    <span>→</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Science Is Everywhere (Scroll Banner) -->
+        <section class="scroll-banner">
+            <h2>🔍 <span data-en="Science Is Everywhere" data-hi="विज्ञान हर जगह है">Science Is Everywhere</span></h2>
+            <p data-en="Look around. Science is closer than you think." data-hi="चारों ओर देखें। विज्ञान आपकी सोच से भी करीब है।">Look around. Science is closer than you think.</p>
+            <div class="scroll-items">
+                <a href="everywhere/smartphone.html" class="item-node"><div class="node-circle" style="background-image: url('PASTE_SMARTPHONE_IMG_URL');"></div><span class="node-text" data-en="Smartphone" data-hi="स्मार्टफोन">Smartphone</span></a>
+                <a href="everywhere/refrigerator.html" class="item-node"><div class="node-circle" style="background-image: url('PASTE_FRIDGE_IMG_URL');"></div><span class="node-text" data-en="Refrigerator" data-hi="फ्रिज">Refrigerator</span></a>
+                <a href="everywhere/pressure-cooker.html" class="item-node"><div class="node-circle" style="background-image: url('PASTE_COOKER_IMG_URL');"></div><span class="node-text" data-en="Pressure Cooker" data-hi="प्रेशर कुकर">Pressure Cooker</span></a>
+                <a href="everywhere/bicycle.html" class="item-node"><div class="node-circle" style="background-image: url('PASTE_BICYCLE_IMG_URL');"></div><span class="node-text" data-en="Bicycle" data-hi="साइकिल">Bicycle</span></a>
+                <a href="everywhere/battery.html" class="item-node"><div class="node-circle" style="background-image: url('PASTE_BATTERY_IMG_URL');"></div><span class="node-text" data-en="Battery" data-hi="बैटरी">Battery</span></a>
+                <a href="everywhere/glasses.html" class="item-node"><div class="node-circle" style="background-image: url('PASTE_GLASSES_IMG_URL');"></div><span class="node-text" data-en="Glasses" data-hi="चश्मा">Glasses</span></a>
+                <a href="everywhere/rainbow.html" class="item-node"><div class="node-circle" style="background-image: url('PASTE_RAINBOW_IMG_URL');"></div><span class="node-text" data-en="Rainbow" data-hi="इंद्रधनुष">Rainbow</span></a>
+                <a href="everywhere/plants.html" class="item-node"><div class="node-circle" style="background-image: url('PASTE_PLANTS_IMG_URL');"></div><span class="node-text" data-en="Plants" data-hi="पौधे">Plants</span></a>
+            </div>
+        </section>
+
+        <!-- Feature Grid -->
+        <section class="features-grid">
+            <a href="invisible/index.html" class="feat-card">
+                <h3>👁️ <span data-en="Make the Invisible Visible" data-hi="अदृश्य को दृश्य बनाएं">Make the Invisible Visible</span></h3>
+                <p data-en="See what you can't..." data-hi="वह देखें जो आप नहीं देख सकते...">See what you can't...</p>
+            </a>
+            <a href="lab/index.html" class="feat-card">
+                <h3>🧪 <span data-en="Virtual Lab" data-hi="वर्चुअल लैब">Virtual Lab</span></h3>
+                <p data-en="Experiment. Learn. Grow." data-hi="प्रयोग करें। सीखें। आगे बढ़ें।">Experiment. Learn. Grow.</p>
+            </a>
+            <a href="magic/index.html" class="feat-card">
+                <h3>✨ <span data-en="Science That Looks Like Magic" data-hi="विज्ञान जो जादू जैसा लगे">Science That Looks Like Magic</span></h3>
+                <p data-en="Magic or Science?" data-hi="जादू या विज्ञान?">Magic or Science?</p>
+            </a>
+            <a href="games/index.html" class="feat-card">
+                <h3>🎮 <span data-en="Science Games" data-hi="विज्ञान के खेल">Science Games</span></h3>
+                <p data-en="Play. Explore. Learn." data-hi="खेलें। खोजें। सीखें।">Play. Explore. Learn.</p>
+            </a>
+            <a href="what-if/index.html" class="feat-card">
+                <h3>❓ <span data-en="What If?" data-hi="क्या हो अगर?">What If?</span></h3>
+                <p data-en="Imagine. Explore. Understand." data-hi="कल्पना करें। खोजें। समझें।">Imagine. Explore. Understand.</p>
+            </a>
+            <a href="beyond/index.html" class="feat-card">
+                <h3>🚀 <span data-en="Beyond the Textbook" data-hi="किताबों से परे">Beyond the Textbook</span></h3>
+                <p data-en="Real-world science. Bigger dreams." data-hi="वास्तविक दुनिया का विज्ञान। बड़े सपने।">Real-world science. Bigger dreams.</p>
+            </a>
+            <a href="real-world/index.html" class="feat-card">
+                <h3>🌍 <span data-en="Science in the Real World" data-hi="असली दुनिया में विज्ञान">Science in the Real World</span></h3>
+                <p data-en="Science that shapes our lives." data-hi="विज्ञान जो हमारा जीवन संवारता है।">Science that shapes our lives.</p>
+            </a>
+            <a href="science-around-us/index.html" class="feat-card">
+                <h3>📰 <span data-en="Science Around Us" data-hi="हमारे आस-पास विज्ञान">Science Around Us</span></h3>
+                <p data-en="Latest discoveries. Amazing innovations." data-hi="नवीनतम खोजें। अद्भुत नवाचार।">Latest discoveries. Amazing innovations.</p>
+            </a>
+        </section>
+
+        <!-- Footer CTA -->
+        <footer class="footer-cta">
+            <h2 data-en="The world is full of science. Are you ready to explore?" data-hi="दुनिया विज्ञान से भरी है। क्या आप खोजने के लिए तैयार हैं?">The world is full of science. Are you ready to explore?</h2>
+            <a href="why/index.html" class="btn-primary" data-en="Start Exploring →" data-hi="खोजना शुरू करें →">Start Exploring →</a>
+        </footer>
+
+    </div>
+
+    <!-- JavaScript for Language Toggle -->
+    <script>
+        const langToggleBtn = document.getElementById('lang-toggle');
+        let currentLang = 'en';
+
+        langToggleBtn.addEventListener('click', () => {
+            currentLang = currentLang === 'en' ? 'hi' : 'en';
+            langToggleBtn.innerText = currentLang === 'en' ? 'EN | हिंदी' : 'हिंदी | EN';
+            
+            document.querySelectorAll('[data-en]').forEach(el => {
+                if (currentLang === 'hi' && el.getAttribute('data-hi')) {
+                    el.innerText = el.getAttribute('data-hi');
+                } else {
+                    el.innerText = el.getAttribute('data-en');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
