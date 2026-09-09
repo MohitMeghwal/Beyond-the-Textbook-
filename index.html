@@ -1,434 +1,819 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Science Beyond the Textbook</title>
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <style>
-        :root {
-            --bg-dark: #0b0f0d;
-            --card-bg: rgba(18, 26, 22, 0.9);
-            --accent-green: #20e382;
-            --accent-glow: rgba(32, 227, 130, 0.3);
-            --text-main: #f0f5f2;
-            --text-muted: #8c9e95;
-            --card-border: rgba(255, 255, 255, 0.08);
-            --font-heading: 'Caveat', cursive;
-            --font-body: 'Inter', sans-serif;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Science Beyond the Textbook — explore Class 10 science through curiosity, visual explanations, virtual labs, games and real-world applications.">
+<meta name="theme-color" content="#0a0f0c">
+<meta property="og:title" content="Science Beyond the Textbook">
+<meta property="og:description" content="See science. Explore science. Experiment with science.">
+<meta property="og:type" content="website">
+<title>Science Beyond the Textbook | Explore Science</title>
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&display=swap');
 
-        body {
-    background: linear-gradient(rgba(11, 15, 13, 0.88), rgba(11, 15, 13, 0.95)), 
-                url('https://drive.google.com/file/d/1WpOPhF6Y540XdPvXg8p80jawZgaC7WnX/view?usp=drivesdk') center/cover fixed;
-    color: var(--text-main);
-    font-family: var(--font-body);
-    overflow-x: hidden;
-    min-height: 100vh;
+:root{
+  --bg:#07100b;
+  --bg2:#0c1510;
+  --panel:rgba(12,18,15,.88);
+  --panel2:rgba(20,28,23,.92);
+  --stone:#252822;
+  --stone2:#151a17;
+  --paper:#ded0ae;
+  --paper2:#cbb98e;
+  --text:#f4f5ef;
+  --muted:#b9c0b8;
+  --green:#65f28b;
+  --green2:#35c968;
+  --line:rgba(255,255,255,.18);
+  --shadow:0 18px 50px rgba(0,0,0,.38);
+  --radius:18px;
+  --max:1280px;
 }
 
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  min-height:100vh;
+  color:var(--text);
+  background:
+    radial-gradient(circle at 50% 8%,rgba(53,130,73,.24),transparent 32%),
+    linear-gradient(180deg,#07100b 0%,#0b120e 45%,#060b08 100%);
+  font-family:Inter,"Noto Sans Devanagari",sans-serif;
+  overflow-x:hidden;
+}
+body:before{
+  content:"";
+  position:fixed;inset:0;pointer-events:none;z-index:50;
+  opacity:.12;
+  background-image:
+    radial-gradient(circle at 20% 20%,#fff 0 1px,transparent 1.5px),
+    radial-gradient(circle at 80% 70%,#fff 0 1px,transparent 1.5px);
+  background-size:180px 180px,240px 240px;
+  mix-blend-mode:screen;
+}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+img{display:block;max-width:100%}
+.container{width:min(calc(100% - 28px),var(--max));margin:auto}
+.caveat{font-family:Caveat,cursive}
+.hi{font-family:"Noto Sans Devanagari",sans-serif}
 
-        /* --- NAVBAR --- */
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 12px 4%;
-            background: rgba(11, 15, 13, 0.95);
-            backdrop-filter: blur(10px);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 1px solid var(--card-border);
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-        .logo { display: flex; align-items: center; gap: 8px; text-decoration: none; color: inherit; }
-        .flask-icon { font-size: 1.5rem; }
-        .logo-text h1 { font-family: var(--font-heading); font-size: 1.4rem; color: var(--accent-green); line-height: 1; letter-spacing: 1px; }
-        .logo-text p { font-size: 0.5rem; letter-spacing: 1.5px; color: var(--text-main); }
-        
-        .nav-links { display: flex; gap: 15px; list-style: none; font-size: 0.8rem; }
-        .nav-links a { color: var(--text-main); text-decoration: none; transition: 0.3s; }
-        .nav-links a:hover, .nav-links a.active { color: var(--accent-green); }
-        
-        .nav-controls { display: flex; gap: 8px; align-items: center; }
-        .lang-btn, .settings-btn { background: rgba(255,255,255,0.05); border: 1px solid var(--card-border); color: var(--text-main); padding: 4px 8px; border-radius: 6px; cursor: pointer; font-size: 0.75rem; transition: 0.3s; }
-        .lang-btn:hover { border-color: var(--accent-green); color: var(--accent-green); }
+/* Ambient world */
+.world{
+  position:fixed;inset:0;z-index:-2;overflow:hidden;
+  background:
+    linear-gradient(180deg,rgba(2,8,5,.24),rgba(3,8,5,.82)),
+    radial-gradient(circle at 15% 30%,rgba(39,102,52,.35),transparent 25%),
+    radial-gradient(circle at 85% 25%,rgba(21,84,48,.3),transparent 30%),
+    #08110c;
+}
+.world:before,.world:after{
+  content:"";position:absolute;inset:auto;
+  width:48vw;height:75vh;filter:blur(45px);opacity:.35;
+  background:radial-gradient(ellipse,#1e6b3d,transparent 68%);
+}
+.world:before{left:-25vw;top:18vh}
+.world:after{right:-25vw;top:45vh}
 
-        /* --- MAIN CONTAINER --- */
-        .main-wrapper {
-            max-width: 1300px;
-            margin: 0 auto;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
+/* NAV */
+.nav{
+  position:sticky;top:0;z-index:100;
+  border-bottom:1px solid rgba(255,255,255,.14);
+  background:rgba(5,10,8,.86);
+  backdrop-filter:blur(18px);
+}
+.nav-inner{
+  min-height:68px;display:flex;align-items:center;gap:22px;
+}
+.brand{display:flex;align-items:center;gap:10px;min-width:max-content}
+.brand-icon{
+  width:42px;height:42px;border:2px solid var(--green);
+  border-radius:12px 12px 15px 15px;display:grid;place-items:center;
+  color:var(--green);font-size:23px;box-shadow:0 0 20px rgba(101,242,139,.12);
+}
+.brand-title{line-height:.9}
+.brand-title strong{display:block;font-size:19px;letter-spacing:.3px}
+.brand-title small{font-family:Caveat,cursive;font-size:15px;color:#d9e2d8;letter-spacing:.4px}
+.nav-links{display:flex;align-items:center;gap:4px;margin-left:auto}
+.nav-links a,.nav-drop{
+  padding:10px 13px;border-radius:10px;font-size:13px;color:#e7ebe6;
+  transition:.2s ease;white-space:nowrap;
+}
+.nav-links a:hover,.nav-drop:hover{background:rgba(101,242,139,.1);color:var(--green)}
+.nav-drop{position:relative;cursor:pointer}
+.nav-drop span{margin-left:4px}
+.dropdown{
+  display:none;position:absolute;top:42px;left:0;min-width:190px;padding:8px;
+  background:rgba(9,15,12,.97);border:1px solid var(--line);border-radius:14px;
+  box-shadow:var(--shadow);
+}
+.nav-drop:hover .dropdown{display:block}
+.dropdown a{display:block;padding:10px;border-radius:9px}
+.actions{display:flex;align-items:center;gap:8px}
+.lang{
+  border:1px solid rgba(255,255,255,.6);background:rgba(0,0,0,.25);
+  color:#fff;border-radius:22px;padding:7px 11px;font-size:12px;cursor:pointer;
+}
+.lang b{color:var(--green)}
+.icon-btn{
+  width:38px;height:38px;border-radius:50%;border:1px solid var(--line);
+  background:rgba(255,255,255,.06);color:#fff;cursor:pointer;
+}
+.menu-btn{display:none}
 
-        /* --- HERO SECTION WITH IMAGE --- */
-        .hero-section {
-            min-height: 420px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            position: relative;
-            padding: 30px;
-            background: linear-gradient(135deg, rgba(15,25,20,0.95), rgba(11,15,13,0.9)), 
-                        url('https://drive.google.com/file/d/1YZ8aEQKCjYqynVgyeSA9DVqIKLGeb7zm/view?usp=drivesdk') center/cover;
-            border-radius: 16px;
-            border: 1px solid var(--card-border);
-            overflow: hidden;
-        }
-        .hero-content { max-width: 600px; z-index: 2; }
-        .hero-title { font-family: var(--font-heading); font-size: 4rem; line-height: 0.9; margin-bottom: 15px; transform: rotate(-1deg); text-shadow: 0 4px 20px rgba(0,0,0,0.8); }
-        .hero-title .highlight { color: var(--accent-green); }
-        .hero-subtitle { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 25px; line-height: 1.5; }
-        
-        .btn-primary {
-            display: inline-block;
-            text-decoration: none;
-            background: linear-gradient(135deg, #20e382, #11b563);
-            color: #0b0f0d;
-            border: none;
-            padding: 10px 24px;
-            border-radius: 30px;
-            font-weight: 700;
-            font-size: 0.9rem;
-            cursor: pointer;
-            box-shadow: 0 0 20px var(--accent-glow);
-            transition: 0.3s;
-            width: fit-content;
-        }
-        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 0 30px rgba(32, 227, 130, 0.6); }
+/* HERO */
+.hero{
+  min-height:510px;display:flex;align-items:center;position:relative;
+  overflow:hidden;border-bottom:1px solid rgba(255,255,255,.08);
+}
+.hero-bg{
+  position:absolute;inset:0;background-image:
+    linear-gradient(90deg,rgba(3,9,6,.92) 0%,rgba(3,9,6,.64) 38%,rgba(3,9,6,.08) 74%,rgba(3,9,6,.3)),
+    linear-gradient(0deg,rgba(3,8,5,.72),transparent 45%),
+    url("https://res.cloudinary.com/eq1jpw1h/image/upload/f_auto,q_auto/1000067381");
+  background-size:cover;background-position:center;
+  filter:saturate(.98);
+  transform:scale(1.015);
+}
+.hero-content{position:relative;z-index:2;padding:72px 0 85px;max-width:640px}
+.kicker{
+  display:inline-flex;align-items:center;gap:8px;color:var(--green);
+  font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase;
+  margin-bottom:12px;
+}
+.kicker:before{content:"";width:28px;height:2px;background:var(--green)}
+.hero h1{
+  font-family:Caveat,cursive;font-size:clamp(64px,8vw,112px);
+  line-height:.75;letter-spacing:-2px;text-transform:uppercase;
+  text-shadow:0 5px 35px rgba(0,0,0,.65);
+}
+.hero h1 span{display:block;color:#f5f8f2}
+.hero h1 .green{color:#dffff0}
+.hero-sub{font-size:16px;font-weight:700;margin-top:26px;max-width:500px}
+.hero-desc{margin-top:6px;color:#d0d7d0;line-height:1.65;max-width:500px}
+.cta{
+  display:inline-flex;align-items:center;gap:10px;margin-top:23px;
+  padding:12px 19px;border-radius:30px;background:var(--green);color:#061008;
+  font-weight:800;border:0;box-shadow:0 8px 28px rgba(101,242,139,.2);
+  transition:.2s transform,.2s box-shadow;
+}
+.cta:hover{transform:translateY(-2px);box-shadow:0 12px 35px rgba(101,242,139,.3)}
+.quote{
+  position:absolute;right:2%;bottom:50px;max-width:190px;
+  font-family:Caveat,cursive;font-size:23px;line-height:1.1;
+  color:#f5f3e9;text-align:center;transform:rotate(-4deg);
+  text-shadow:0 3px 14px rgba(0,0,0,.65);
+}
+.hero-quote .quote-text{display:block}
+.hero-quote .quote-author{
+  display:block;margin-top:9px;font-family:Caveat,cursive;
+  font-size:17px;color:#d8e2d8;
+}
 
-        /* --- SECTION 2: WHY DOES THIS HAPPEN --- */
-        .why-card {
-            background: var(--card-bg);
-            border: 1px solid var(--card-border);
-            border-radius: 16px;
-            padding: 20px;
-            backdrop-filter: blur(10px);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            gap: 15px;
-        }
-        .why-left h2 { font-family: var(--font-heading); font-size: 1.8rem; display: flex; align-items: center; gap: 8px; }
-        .why-left p { color: var(--text-muted); font-size: 0.8rem; margin-top: 2px; }
-        
-        .why-right {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            background: rgba(0,0,0,0.4);
-            border: 1px solid var(--card-border);
-            padding: 12px;
-            border-radius: 12px;
-            width: 60%;
-        }
-        .q-thumb { width: 110px; height: 75px; border-radius: 8px; background: url('https://i.ibb.co/VYf0jZzB/29876.jpg') center/cover; flex-shrink: 0; }
-        .q-info { flex: 1; }
-        .q-badge { background: rgba(32, 227, 130, 0.15); color: var(--accent-green); font-size: 0.6rem; padding: 2px 6px; border-radius: 4px; font-weight: 600; display: inline-block; margin-bottom: 4px; }
-        .q-info h3 { font-size: 0.85rem; line-height: 1.3; margin-bottom: 6px; }
-        .q-actions { display: flex; align-items: center; justify-content: space-between; }
-        .btn-show { background: rgba(255,255,255,0.08); border: 1px solid var(--card-border); color: #fff; padding: 4px 10px; border-radius: 20px; font-size: 0.7rem; cursor: pointer; transition: 0.3s; }
-        .btn-show:hover { background: var(--accent-green); color: #000; }
-        .explore-more { color: var(--text-main); text-decoration: none; font-size: 0.75rem; transition: 0.3s; }
-        .explore-more:hover { color: var(--accent-green); }
+/* Shared sections */
+section{padding:16px 0}
+.section-card{
+  border:1px solid rgba(255,255,255,.2);border-radius:20px;
+  background:linear-gradient(135deg,rgba(30,34,29,.93),rgba(10,15,12,.91));
+  box-shadow:var(--shadow);overflow:hidden;
+}
+.section-head{display:flex;align-items:center;gap:18px;padding:23px 25px}
+.section-icon{
+  width:54px;height:54px;flex:0 0 54px;border:1px solid rgba(101,242,139,.35);
+  border-radius:15px;display:grid;place-items:center;color:var(--green);font-size:27px;
+  background:rgba(101,242,139,.08);
+}
+.section-head h2{font-family:Caveat,cursive;font-size:36px;line-height:1}
+.section-head p{margin-top:5px;color:#c5ccc5;font-size:13px}
 
-        /* --- SECTION 3: EXPLORE SUBJECTS --- */
-        .subjects-container {
-            background: var(--card-bg);
-            border: 1px solid var(--card-border);
-            border-radius: 16px;
-            padding: 20px;
-        }
-        .section-header h2 { font-family: var(--font-heading); font-size: 1.8rem; display: flex; align-items: center; gap: 8px; }
-        .section-header p { color: var(--text-muted); font-size: 0.8rem; margin-bottom: 12px; }
-        
-        .subjects-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 12px;
-        }
-        .subject-box {
-            height: 100px;
-            border-radius: 10px;
-            padding: 12px;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            position: relative;
-            overflow: hidden;
-            border: 1px solid var(--card-border);
-            cursor: pointer;
-            transition: 0.3s;
-            background-size: cover;
-            background-position: center;
-            text-decoration: none;
-            color: var(--text-main);
-        }
-        .subject-box::before { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.2)); z-index: 1; }
-        .subject-box h3, .subject-box span { z-index: 2; position: relative; }
-        .subject-box h3 { font-size: 0.9rem; font-weight: 600; }
-        .subject-box span { font-size: 0.8rem; position: absolute; right: 12px; bottom: 12px; color: var(--accent-green); }
-        .subject-box:hover { border-color: var(--accent-green); transform: translateY(-2px); }
+/* Why */
+.why-grid{display:grid;grid-template-columns:220px 185px 1fr 150px;gap:14px;align-items:center;padding:0 20px 20px}
+.why-intro{padding:10px 6px}
+.why-intro h3{font-family:Caveat,cursive;font-size:28px}
+.why-intro p{color:#adb5ad;font-size:12px;margin-top:4px}
+.question-image{height:120px;border-radius:13px;overflow:hidden;border:1px solid var(--line)}
+.question-image img{width:100%;height:100%;object-fit:cover}
+.question-body{padding:5px}
+.badge{display:inline-block;background:var(--green);color:#071008;border-radius:10px;padding:4px 8px;font-size:10px;font-weight:800}
+.question{font-size:17px;font-weight:800;margin:9px 0 5px}
+.answer{color:#c8d0c8;font-size:12px;line-height:1.55}
+.hidden{display:none}
+.small-btn{
+  border:0;border-radius:22px;padding:9px 13px;background:var(--green);color:#071008;
+  font-size:11px;font-weight:800;cursor:pointer;
+}
+.more-link{color:var(--green);font-size:12px;font-weight:800;white-space:nowrap}
+.more-link:hover{text-decoration:underline}
 
-        .physics-bg { background-image: url('https://drive.google.com/file/d/1EyuOKvT5scq3-eUblEKyUyCQ3aPxM3k9/view?usp=drivesdk'); }
-        .chem-bg { background-image: url('https://drive.google.com/file/d/1X-JUpCFUUfEcPdTjLb89JN7MzyLDREUL/view?usp=drivesdk'); }
-        .bio-bg { background-image: url('https://drive.google.com/file/d/1H5_RVQvHD4bh24hZU5zSlcNpd5EKucKg/view?usp=drivesdk'); }
-        .earth-bg { background-image: url('https://drive.google.com/file/d/1XvlmePD0fG_ujudp73kIEPinxwqzIcrF/view?usp=drivesdk'); }
+/* Subjects */
+.subjects-wrap{padding:0 20px 22px}
+.subject-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.subject{
+  position:relative;min-height:185px;overflow:hidden;border-radius:15px;
+  border:1px solid rgba(255,255,255,.22);background:#0c1410;
+  transition:.25s transform,.25s border-color;
+}
+.subject:hover{transform:translateY(-4px);border-color:rgba(101,242,139,.7)}
+.subject img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.subject:after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(0deg,rgba(3,7,5,.92),rgba(3,7,5,.04) 70%);
+}
+.subject-content{position:absolute;z-index:2;left:15px;right:15px;bottom:13px}
+.subject-content h3{font-family:Caveat,cursive;font-size:23px}
+.subject-content p{font-size:10px;color:#d2d8d2;margin-top:1px}
+.arrow{position:absolute;right:13px;bottom:12px;z-index:3;font-size:22px}
 
-        /* --- SECTION 4: SCIENCE IS EVERYWHERE (SCROLL) --- */
-        .scroll-banner {
-            background: #d4c8b8;
-            color: #2c251e;
-            border-radius: 16px;
-            padding: 20px;
-        }
-        .scroll-banner h2 { font-family: var(--font-heading); font-size: 1.8rem; color: #2c251e; display: flex; align-items: center; gap: 8px; }
-        .scroll-banner p { color: #5a4d41; font-size: 0.8rem; margin-bottom: 12px; }
-        
-        .scroll-items {
-            display: flex;
-            gap: 20px;
-            overflow-x: auto;
-            padding-bottom: 5px;
-            scrollbar-width: none;
-        }
-        .item-node {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 6px;
-            cursor: pointer;
-            min-width: 60px;
-            transition: 0.3s;
-            text-decoration: none;
-        }
-        .item-node:hover { transform: scale(1.08); }
-        .node-circle {
-            width: 55px;
-            height: 55px;
-            border-radius: 50%;
-            background: #fff;
-            border: 2px solid #5a4d41;
-            background-size: cover;
-            background-position: center;
-            box-shadow: 0 3px 8px rgba(0,0,0,0.15);
-        }
-        .node-text { font-size: 0.7rem; font-weight: 700; color: #2c251e; text-align: center; }
+/* Parchment */
+.parchment{
+  background:
+    radial-gradient(circle at 15% 20%,rgba(255,255,255,.2),transparent 20%),
+    radial-gradient(circle at 80% 80%,rgba(89,59,25,.18),transparent 30%),
+    linear-gradient(120deg,#e1d1aa,#cdbb91);
+  color:#161817;border:1px solid rgba(255,255,255,.32);
+}
+.every-head{display:flex;align-items:center;gap:18px;padding:20px 28px 10px}
+.search-symbol{font-size:48px;line-height:1;transform:rotate(-8deg)}
+.every-head h2{font-family:Caveat,cursive;font-size:34px}
+.every-head p{font-size:12px;margin-top:2px}
+.every-row{
+  display:flex;gap:15px;overflow-x:auto;padding:8px 24px 23px;
+  scrollbar-width:thin;
+}
+.every-item{
+  min-width:105px;text-align:center;cursor:pointer;transition:.2s transform;
+}
+.every-item:hover{transform:translateY(-4px)}
+.every-img{
+  width:72px;height:72px;margin:auto;border-radius:50%;border:2px solid rgba(20,25,22,.35);
+  display:grid;place-items:center;font-size:30px;background:rgba(255,255,255,.28);
+  box-shadow:inset 0 0 20px rgba(255,255,255,.2);
+}
+.every-item strong{display:block;font-family:"Noto Sans Devanagari",sans-serif;font-size:11px;margin-top:7px}
+.placeholder-note{font-size:8px;opacity:.6;margin-top:2px}
 
-        /* --- SECTION 5: FEATURE CARDS GRID --- */
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 12px;
-        }
-        .feat-card {
-            background: var(--card-bg);
-            border: 1px solid var(--card-border);
-            border-radius: 10px;
-            padding: 15px;
-            text-decoration: none;
-            color: var(--text-main);
-            transition: 0.3s;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            min-height: 85px;
-        }
-        .feat-card:hover { border-color: var(--accent-green); background: rgba(32, 227, 130, 0.03); transform: translateY(-2px); }
-        .feat-card h3 { font-size: 0.85rem; font-weight: 600; margin-bottom: 3px; display: flex; align-items: center; gap: 6px; }
-        .feat-card p { font-size: 0.7rem; color: var(--text-muted); }
+/* Feature grid */
+.feature-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.feature{
+  min-height:102px;position:relative;overflow:hidden;border:1px solid rgba(255,255,255,.2);
+  border-radius:14px;background:linear-gradient(135deg,#18221c,#07100c);
+  padding:17px 42px 14px 70px;transition:.22s transform,.22s border-color;
+}
+.feature:hover{transform:translateY(-3px);border-color:rgba(101,242,139,.6)}
+.feature .fi{position:absolute;left:17px;top:19px;font-size:29px;color:#f5f7f3}
+.feature h3{font-size:14px}
+.feature p{font-size:10px;color:#b6c0b7;margin-top:5px;line-height:1.35}
+.feature .fa{position:absolute;right:13px;bottom:12px;color:var(--green);font-size:18px}
 
-        /* --- FOOTER CTA --- */
-        .footer-cta {
-            text-align: center;
-            padding: 30px 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 15px;
-        }
-        .footer-cta h2 { font-family: var(--font-heading); font-size: 1.8rem; }
+/* Placeholder visual strips */
+.visual-strip{
+  margin-top:8px;border-radius:12px;height:30px;overflow:hidden;opacity:.9;
+  background:
+    radial-gradient(circle at 25% 50%,rgba(101,242,139,.9) 0 2px,transparent 3px),
+    radial-gradient(circle at 55% 35%,rgba(255,255,255,.65) 0 1px,transparent 2px),
+    linear-gradient(100deg,#101d16,#163a25,#07100b);
+}
 
-        /* Responsive */
-        @media(max-width: 900px) {
-            .subjects-grid, .features-grid { grid-template-columns: repeat(2, 1fr); }
-            .why-card { flex-direction: column; align-items: stretch; }
-            .why-right { width: 100%; }
-            .nav-links { display: none; }
-        }
-    </style>
+/* Footer CTA */
+.final{
+  margin-top:4px;padding:30px 25px 0;text-align:center;position:relative;
+  min-height:185px;overflow:hidden;
+  background:
+    linear-gradient(0deg,rgba(4,9,6,.94),rgba(4,9,6,.15)),
+    radial-gradient(circle at 50% 100%,rgba(50,121,68,.42),transparent 45%);
+  border-top:1px solid rgba(255,255,255,.14);
+}
+.final h2{font-family:Caveat,cursive;font-size:38px}
+.final p{color:#cbd2cb;font-size:13px;margin-top:4px}
+.final .cta{margin-top:13px}
+.footer-line{margin-top:25px;padding:14px;border-top:1px solid rgba(255,255,255,.1);font-size:11px;color:#889289}
+
+/* Settings modal */
+.modal{display:none;position:fixed;inset:0;z-index:200;background:rgba(0,0,0,.7);backdrop-filter:blur(7px);padding:20px}
+.modal.open{display:grid;place-items:center}
+.modal-box{width:min(440px,100%);background:#111814;border:1px solid var(--line);border-radius:20px;padding:23px;box-shadow:var(--shadow)}
+.modal-top{display:flex;justify-content:space-between;align-items:center}
+.modal h3{font-family:Caveat,cursive;font-size:30px}
+.modal-close{background:none;border:0;color:#fff;font-size:25px;cursor:pointer}
+.setting-row{margin-top:20px;padding:15px;border-radius:13px;background:rgba(255,255,255,.05)}
+.setting-row strong{display:block;font-size:13px}
+.setting-row p{color:#aab3ab;font-size:11px;margin-top:5px;line-height:1.5}
+
+/* Toast */
+.toast{
+  position:fixed;left:50%;bottom:20px;transform:translate(-50%,20px);
+  background:#e9f5e9;color:#071008;padding:11px 16px;border-radius:25px;
+  font-size:12px;font-weight:700;opacity:0;pointer-events:none;transition:.25s;z-index:300;
+}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+
+/* Mobile */
+@media(max-width:900px){
+  .nav-links{display:none}
+  .menu-btn{display:block}
+  .nav-inner{min-height:62px}
+  .hero{min-height:560px}
+  .hero-bg{background-position:62% center}
+  .hero-content{padding:65px 0 120px;max-width:58%}
+  .quote{right:3%;bottom:40px;font-size:19px;max-width:155px}
+  .hero-quote .quote-author{font-size:15px}
+  .why-grid{grid-template-columns:170px 1fr}
+  .why-intro{grid-column:1/-1}
+  .question-image{height:125px}
+  .more-link{grid-column:1/-1;text-align:right}
+  .subject-grid{grid-template-columns:repeat(2,1fr)}
+  .feature-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:600px){
+  .container{width:min(calc(100% - 18px),var(--max))}
+  .brand-icon{width:36px;height:36px;font-size:19px}
+  .brand-title strong{font-size:16px}
+  .brand-title small{font-size:13px}
+  .actions{margin-left:auto}
+  .hero{min-height:610px}
+  .hero-bg{
+    background-image:
+      linear-gradient(90deg,rgba(3,9,6,.94) 0%,rgba(3,9,6,.64) 55%,rgba(3,9,6,.12)),
+      linear-gradient(0deg,rgba(3,8,5,.84),transparent 55%),
+      url("https://res.cloudinary.com/eq1jpw1h/image/upload/f_auto,q_auto/1000067381");
+    background-position:67% center;
+  }
+  .hero-content{max-width:100%;padding:50px 20px 130px}
+  .hero h1{font-size:68px}
+  .hero-sub{font-size:14px;max-width:270px}
+  .hero-desc{font-size:12px;max-width:285px}
+  .quote{right:10px;bottom:33px;max-width:135px;font-size:17px}
+  .hero-quote .quote-author{font-size:13px;margin-top:6px}
+  .section-head{padding:19px 16px;gap:12px}
+  .section-icon{width:44px;height:44px;flex-basis:44px;font-size:22px}
+  .section-head h2,.every-head h2{font-size:30px}
+  .why-grid{grid-template-columns:125px 1fr;padding:0 13px 15px}
+  .why-intro{padding:4px}
+  .question-image{height:105px}
+  .question{font-size:14px}
+  .answer{font-size:10px}
+  .subjects-wrap{padding:0 13px 16px}
+  .subject{min-height:145px}
+  .subject-content h3{font-size:20px}
+  .subject-content p{display:none}
+  .every-head{padding:17px 16px 6px}
+  .every-row{padding:7px 16px 18px;gap:8px}
+  .every-item{min-width:83px}
+  .every-img{width:58px;height:58px;font-size:25px}
+  .every-item strong{font-size:9px}
+  .feature-grid{grid-template-columns:repeat(2,1fr);gap:7px}
+  .feature{min-height:98px;padding:14px 24px 12px 47px}
+  .feature .fi{left:11px;top:15px;font-size:21px}
+  .feature h3{font-size:11px}
+  .feature p{font-size:8px}
+  .feature .fa{font-size:14px;right:9px;bottom:8px}
+  .final{min-height:175px;padding-top:25px}
+  .final h2{font-size:31px}
+  .final p{font-size:11px}
+}
+
+/* Mobile menu */
+.mobile-menu{
+  display:none;position:fixed;z-index:150;top:62px;left:0;right:0;
+  padding:12px;background:rgba(6,11,8,.98);border-bottom:1px solid var(--line);
+}
+.mobile-menu.open{display:block}
+.mobile-menu a{
+  display:block;padding:13px;border-radius:10px;font-size:14px;
+  border-bottom:1px solid rgba(255,255,255,.05);
+}
+.mobile-menu a:hover{background:rgba(101,242,139,.1);color:var(--green)}
+</style>
 </head>
-<body>
 
-    <!-- Navbar -->
-    <nav class="navbar">
-        <a href="index.html" class="logo">
-            <span class="flask-icon">🧪</span>
-            <div class="logo-text">
-                <h1>SCIENCE</h1>
-                <p>BEYOND THE TEXTBOOK</p>
-            </div>
-        </a>
-        <ul class="nav-links">
-            <li><a href="index.html" class="active" data-en="Home" data-hi="होम">Home</a></li>
-            <li><a href="subjects/index.html" data-en="Subjects" data-hi="विषय">Subjects</a></li>
-            <li><a href="why/index.html" data-en="Explore" data-hi="खोजें">Explore</a></li>
-            <li><a href="games/index.html" data-en="Games" data-hi="गेम्स">Games</a></li>
-            <li><a href="lab/index.html" data-en="Lab" data-hi="लैब">Lab</a></li>
-        </ul>
-        <div class="nav-controls">
-            <button id="lang-toggle" class="lang-btn">EN | हिंदी</button>
-            <button class="settings-btn">⚙️</button>
+<body>
+<div class="world"></div>
+
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="index.html" aria-label="Science Beyond the Textbook Home">
+      <div class="brand-icon">⚗</div>
+      <div class="brand-title">
+        <strong>SCIENCE</strong>
+        <small>BEYOND THE TEXTBOOK</small>
+      </div>
+    </a>
+
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="index.html">⌂ Home</a>
+      <div class="nav-drop">Subjects ˅
+        <div class="dropdown">
+          <a href="physics/index.html">Physics</a>
+          <a href="chemistry/index.html">Chemistry</a>
+          <a href="biology/index.html">Biology</a>
+          <a href="earth/index.html">Earth & Environment</a>
         </div>
+      </div>
+      <div class="nav-drop">Explore ˅
+        <div class="dropdown">
+          <a href="why/index.html">Why Does This Happen?</a>
+          <a href="invisible-visible/index.html">Make the Invisible Visible</a>
+          <a href="magic-science/index.html">Science That Looks Like Magic</a>
+          <a href="what-if/index.html">What If?</a>
+          <a href="beyond-textbook/index.html">Beyond the Textbook</a>
+        </div>
+      </div>
+      <div class="nav-drop">Games ˅
+        <div class="dropdown">
+          <a href="games/index.html">All Games</a>
+          <a href="games/circuit-builder.html">Circuit Builder</a>
+          <a href="games/magnetic-maze.html">Magnetic Maze</a>
+          <a href="games/build-a-cell.html">Build a Cell</a>
+          <a href="games/light-challenge.html">Light Challenge</a>
+        </div>
+      </div>
+      <div class="nav-drop">Lab ˅
+        <div class="dropdown">
+          <a href="lab/index.html">Virtual Lab</a>
+          <a href="lab/ohms-law.html">Ohm's Law</a>
+          <a href="lab/electric-circuit.html">Electric Circuit</a>
+          <a href="lab/ray-optics.html">Ray Optics</a>
+          <a href="lab/chemical-reaction.html">Chemical Reaction</a>
+        </div>
+      </div>
+      <div class="nav-drop">More ˅
+        <div class="dropdown">
+          <a href="science-around-us/index.html">Science Around Us</a>
+          <a href="real-world/index.html">Science in the Real World</a>
+          <a href="about.html">About</a>
+        </div>
+      </div>
     </nav>
 
-    <!-- Main Content Wrapper -->
-    <div class="main-wrapper">
-
-        <!-- Hero Section -->
-        <header class="hero-section" style="background: linear-gradient(135deg, rgba(15,25,20,0.95), rgba(11,15,13,0.9)), url('PASTE_HERO_BG_IMAGE_URL_HERE') center/cover;">
-            <div class="hero-content">
-                <h1 class="hero-title">SCIENCE <br> <span class="highlight">BEYOND THE TEXTBOOK</span></h1>
-                <p class="hero-subtitle" data-en="Explore. Experiment. Understand. Because Science isn't just a subject, it's a way of seeing the world." data-hi="खोजें। प्रयोग करें। समझें। क्योंकि विज्ञान केवल एक विषय नहीं है, यह दुनिया को देखने का एक नजरिया है।">
-                    Explore. Experiment. Understand. Because Science isn't just a subject, it's a way of seeing the world.
-                </p>
-                <a href="why/index.html" class="btn-primary" data-en="Start Exploring →" data-hi="खोजना शुरू करें →">Start Exploring →</a>
-            </div>
-        </header>
-
-        <!-- Why Does This Happen Section -->
-        <section class="why-card">
-            <div class="why-left">
-                <h2>💡 <span data-en="Why Does This Happen?" data-hi="ऐसा क्यों होता है?">Why Does This Happen?</span></h2>
-                <p data-en="Everyday questions. Real science." data-hi="रोजमर्रा के सवाल। असली विज्ञान।">Everyday questions. Real science.</p>
-            </div>
-            <div class="why-right">
-                <div class="q-thumb" style="background: url('PASTE_WHY_THUMB_IMAGE_URL_HERE') center/cover;"></div>
-                <div class="q-info">
-                    <span class="q-badge" data-en="Today's Question" data-hi="आज का सवाल">Today's Question</span>
-                    <h3 id="question-text">Why does the sky appear blue?</h3>
-                    <div class="q-actions">
-                        <button class="btn-show" id="show-answer-btn" data-en="👁️ Show Answer" data-hi="👁️ उत्तर देखें">👁️ Show Answer</button>
-                        <a href="why/index.html" class="explore-more" data-en="Explore More →" data-hi="और जानें →">Explore More →</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Explore Subjects Section -->
-        <section class="subjects-container">
-            <div class="section-header">
-                <h2>🔬 <span data-en="Explore Subjects" data-hi="विषय खोजें">Explore Subjects</span></h2>
-                <p data-en="Dive into the core of science." data-hi="विज्ञान की गहराई में जाएं।">Dive into the core of science.</p>
-            </div>
-            <div class="subjects-grid">
-                <a href="subjects/physics/index.html" class="subject-box" style="background-image: url('PASTE_PHYSICS_IMAGE_URL_HERE');">
-                    <h3 data-en="Physics" data-hi="भौतिक विज्ञान">Physics</h3>
-                    <span>→</span>
-                </a>
-                <a href="subjects/chemistry/index.html" class="subject-box" style="background-image: url('PASTE_CHEMISTRY_IMAGE_URL_HERE');">
-                    <h3 data-en="Chemistry" data-hi="रसायन विज्ञान">Chemistry</h3>
-                    <span>→</span>
-                </a>
-                <a href="subjects/biology/index.html" class="subject-box" style="background-image: url('PASTE_BIOLOGY_IMAGE_URL_HERE');">
-                    <h3 data-en="Biology" data-hi="जीव विज्ञान">Biology</h3>
-                    <span>→</span>
-                </a>
-                <a href="subjects/earth/index.html" class="subject-box" style="background-image: url('PASTE_EARTH_IMAGE_URL_HERE');">
-                    <h3 data-en="Earth & Environment" data-hi="पृथ्वी और पर्यावरण">Earth & Environment</h3>
-                    <span>→</span>
-                </a>
-            </div>
-        </section>
-
-        <!-- Science Is Everywhere (Scroll Banner) -->
-        <section class="scroll-banner">
-            <h2>🔍 <span data-en="Science Is Everywhere" data-hi="विज्ञान हर जगह है">Science Is Everywhere</span></h2>
-            <p data-en="Look around. Science is closer than you think." data-hi="चारों ओर देखें। विज्ञान आपकी सोच से भी करीब है।">Look around. Science is closer than you think.</p>
-            <div class="scroll-items">
-                <a href="everywhere/smartphone.html" class="item-node"><div class="node-circle" style="background-image: url('PASTE_SMARTPHONE_IMG_URL');"></div><span class="node-text" data-en="Smartphone" data-hi="स्मार्टफोन">Smartphone</span></a>
-                <a href="everywhere/refrigerator.html" class="item-node"><div class="node-circle" style="background-image: url('PASTE_FRIDGE_IMG_URL');"></div><span class="node-text" data-en="Refrigerator" data-hi="फ्रिज">Refrigerator</span></a>
-                <a href="everywhere/pressure-cooker.html" class="item-node"><div class="node-circle" style="background-image: url('PASTE_COOKER_IMG_URL');"></div><span class="node-text" data-en="Pressure Cooker" data-hi="प्रेशर कुकर">Pressure Cooker</span></a>
-                <a href="everywhere/bicycle.html" class="item-node"><div class="node-circle" style="background-image: url('PASTE_BICYCLE_IMG_URL');"></div><span class="node-text" data-en="Bicycle" data-hi="साइकिल">Bicycle</span></a>
-                <a href="everywhere/battery.html" class="item-node"><div class="node-circle" style="background-image: url('PASTE_BATTERY_IMG_URL');"></div><span class="node-text" data-en="Battery" data-hi="बैटरी">Battery</span></a>
-                <a href="everywhere/glasses.html" class="item-node"><div class="node-circle" style="background-image: url('PASTE_GLASSES_IMG_URL');"></div><span class="node-text" data-en="Glasses" data-hi="चश्मा">Glasses</span></a>
-                <a href="everywhere/rainbow.html" class="item-node"><div class="node-circle" style="background-image: url('PASTE_RAINBOW_IMG_URL');"></div><span class="node-text" data-en="Rainbow" data-hi="इंद्रधनुष">Rainbow</span></a>
-                <a href="everywhere/plants.html" class="item-node"><div class="node-circle" style="background-image: url('PASTE_PLANTS_IMG_URL');"></div><span class="node-text" data-en="Plants" data-hi="पौधे">Plants</span></a>
-            </div>
-        </section>
-
-        <!-- Feature Grid -->
-        <section class="features-grid">
-            <a href="invisible/index.html" class="feat-card">
-                <h3>👁️ <span data-en="Make the Invisible Visible" data-hi="अदृश्य को दृश्य बनाएं">Make the Invisible Visible</span></h3>
-                <p data-en="See what you can't..." data-hi="वह देखें जो आप नहीं देख सकते...">See what you can't...</p>
-            </a>
-            <a href="lab/index.html" class="feat-card">
-                <h3>🧪 <span data-en="Virtual Lab" data-hi="वर्चुअल लैब">Virtual Lab</span></h3>
-                <p data-en="Experiment. Learn. Grow." data-hi="प्रयोग करें। सीखें। आगे बढ़ें।">Experiment. Learn. Grow.</p>
-            </a>
-            <a href="magic/index.html" class="feat-card">
-                <h3>✨ <span data-en="Science That Looks Like Magic" data-hi="विज्ञान जो जादू जैसा लगे">Science That Looks Like Magic</span></h3>
-                <p data-en="Magic or Science?" data-hi="जादू या विज्ञान?">Magic or Science?</p>
-            </a>
-            <a href="games/index.html" class="feat-card">
-                <h3>🎮 <span data-en="Science Games" data-hi="विज्ञान के खेल">Science Games</span></h3>
-                <p data-en="Play. Explore. Learn." data-hi="खेलें। खोजें। सीखें।">Play. Explore. Learn.</p>
-            </a>
-            <a href="what-if/index.html" class="feat-card">
-                <h3>❓ <span data-en="What If?" data-hi="क्या हो अगर?">What If?</span></h3>
-                <p data-en="Imagine. Explore. Understand." data-hi="कल्पना करें। खोजें। समझें।">Imagine. Explore. Understand.</p>
-            </a>
-            <a href="beyond/index.html" class="feat-card">
-                <h3>🚀 <span data-en="Beyond the Textbook" data-hi="किताबों से परे">Beyond the Textbook</span></h3>
-                <p data-en="Real-world science. Bigger dreams." data-hi="वास्तविक दुनिया का विज्ञान। बड़े सपने।">Real-world science. Bigger dreams.</p>
-            </a>
-            <a href="real-world/index.html" class="feat-card">
-                <h3>🌍 <span data-en="Science in the Real World" data-hi="असली दुनिया में विज्ञान">Science in the Real World</span></h3>
-                <p data-en="Science that shapes our lives." data-hi="विज्ञान जो हमारा जीवन संवारता है।">Science that shapes our lives.</p>
-            </a>
-            <a href="science-around-us/index.html" class="feat-card">
-                <h3>📰 <span data-en="Science Around Us" data-hi="हमारे आस-पास विज्ञान">Science Around Us</span></h3>
-                <p data-en="Latest discoveries. Amazing innovations." data-hi="नवीनतम खोजें। अद्भुत नवाचार।">Latest discoveries. Amazing innovations.</p>
-            </a>
-        </section>
-
-        <!-- Footer CTA -->
-        <footer class="footer-cta">
-            <h2 data-en="The world is full of science. Are you ready to explore?" data-hi="दुनिया विज्ञान से भरी है। क्या आप खोजने के लिए तैयार हैं?">The world is full of science. Are you ready to explore?</h2>
-            <a href="why/index.html" class="btn-primary" data-en="Start Exploring →" data-hi="खोजना शुरू करें →">Start Exploring →</a>
-        </footer>
-
+    <div class="actions">
+      <button class="lang" id="langBtn" type="button">EN <span>|</span> <b>हिंदी</b></button>
+      <button class="icon-btn" id="settingsBtn" type="button" aria-label="Settings">⚙</button>
+      <button class="icon-btn menu-btn" id="menuBtn" type="button" aria-label="Open menu">☰</button>
     </div>
+  </div>
+</header>
 
-    <!-- JavaScript for Language Toggle -->
-    <script>
-        const langToggleBtn = document.getElementById('lang-toggle');
-        let currentLang = 'en';
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">⌂ Home</a>
+  <a href="physics/index.html">⚛ Physics</a>
+  <a href="chemistry/index.html">⚗ Chemistry</a>
+  <a href="biology/index.html">🧬 Biology</a>
+  <a href="earth/index.html">🌍 Earth & Environment</a>
+  <a href="why/index.html">💡 Why Does This Happen?</a>
+  <a href="lab/index.html">🧪 Virtual Lab</a>
+  <a href="games/index.html">🎮 Science Games</a>
+  <a href="magic-science/index.html">✨ Science That Looks Like Magic</a>
+  <a href="what-if/index.html">❓ What If?</a>
+  <a href="beyond-textbook/index.html">🚀 Beyond the Textbook</a>
+  <a href="real-world/index.html">🌐 Science in the Real World</a>
+  <a href="science-around-us/index.html">📰 Science Around Us</a>
+</div>
 
-        langToggleBtn.addEventListener('click', () => {
-            currentLang = currentLang === 'en' ? 'hi' : 'en';
-            langToggleBtn.innerText = currentLang === 'en' ? 'EN | हिंदी' : 'हिंदी | EN';
-            
-            document.querySelectorAll('[data-en]').forEach(el => {
-                if (currentLang === 'hi' && el.getAttribute('data-hi')) {
-                    el.innerText = el.getAttribute('data-hi');
-                } else {
-                    el.innerText = el.getAttribute('data-en');
-                }
-            });
-        });
-    </script>
+<main>
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-bg"></div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="kicker">Science Exploration Platform</div>
+        <h1>
+          <span>Science</span>
+          <span class="green">Beyond the</span>
+          <span>Textbook</span>
+        </h1>
+        <p class="hero-sub" data-en="Explore. Experiment. Understand." data-hi="खोजो। प्रयोग करो। समझो।">Explore. Experiment. Understand.</p>
+        <p class="hero-desc" data-en="Science isn't only something you read in a book. It is happening around you every day." data-hi="विज्ञान केवल किताब में पढ़ने की चीज़ नहीं है। यह हर दिन हमारे आसपास हो रहा है।">Science isn't only something you read in a book. It is happening around you every day.</p>
+        <a class="cta" href="#explore" data-en="Start Exploring →" data-hi="खोज शुरू करें →">Start Exploring →</a>
+      </div>
+      <div class="quote hero-quote">
+        <span class="quote-text">“The power of science... is the power to change the world.”</span>
+        <span class="quote-author">— Senku Ishigami</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY -->
+  <section id="why">
+    <div class="container">
+      <div class="section-card">
+        <div class="section-head">
+          <div class="section-icon">💡</div>
+          <div>
+            <h2>Why Does This Happen?</h2>
+            <p data-en="Everyday questions. Real science." data-hi="रोज़मर्रा के सवाल। असली विज्ञान।">Everyday questions. Real science.</p>
+          </div>
+        </div>
+        <div class="why-grid">
+          <div class="why-intro">
+            <h3 data-en="Small questions can reveal big science." data-hi="छोटे सवाल बड़े विज्ञान को समझा सकते हैं।">Small questions can reveal big science.</h3>
+            <p data-en="A new curiosity challenge appears every visit." data-hi="हर विज़िट पर एक नई जिज्ञासा आपका इंतज़ार करती है।">A new curiosity challenge appears every visit.</p>
+          </div>
+          <div class="question-image"><img id="whyImage" alt="Science curiosity visual"></div>
+          <div class="question-body">
+            <span class="badge" id="questionBadge">Today's Question</span>
+            <div class="question" id="questionText"></div>
+            <div class="answer hidden" id="answerText"></div>
+            <button class="small-btn" id="answerBtn" type="button">◉ Show Answer</button>
+          </div>
+          <a class="more-link" href="why/index.html">Explore More →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SUBJECTS -->
+  <section id="explore">
+    <div class="container">
+      <div class="section-card">
+        <div class="section-head">
+          <div class="section-icon">⚗</div>
+          <div>
+            <h2>Explore Subjects</h2>
+            <p data-en="Four subjects. Infinite possibilities." data-hi="चार विषय। अनंत संभावनाएँ।">Four subjects. Infinite possibilities.</p>
+          </div>
+        </div>
+        <div class="subjects-wrap">
+          <div class="subject-grid">
+            <a class="subject" href="physics/index.html">
+              <img src="https://res.cloudinary.com/eq1jpw1h/image/upload/f_auto,q_auto/1000067382" alt="Physics science visual">
+              <div class="subject-content"><h3>Physics</h3><p>Motion, energy, light & forces</p></div><span class="arrow">→</span>
+            </a>
+            <a class="subject" href="chemistry/index.html">
+              <img src="https://res.cloudinary.com/eq1jpw1h/image/upload/f_auto,q_auto/1000067384" alt="Chemistry science visual">
+              <div class="subject-content"><h3>Chemistry</h3><p>Matter, reactions & molecules</p></div><span class="arrow">→</span>
+            </a>
+            <a class="subject" href="biology/index.html">
+              <img src="https://res.cloudinary.com/eq1jpw1h/image/upload/f_auto,q_auto/1000067385" alt="Biology science visual">
+              <div class="subject-content"><h3>Biology</h3><p>Life, cells & living systems</p></div><span class="arrow">→</span>
+            </a>
+            <a class="subject" href="earth/index.html">
+              <img src="https://res.cloudinary.com/eq1jpw1h/image/upload/f_auto,q_auto/1000067386" alt="Earth and environment science visual">
+              <div class="subject-content"><h3>Earth & Environment</h3><p>Planet, climate & ecosystems</p></div><span class="arrow">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCIENCE EVERYWHERE -->
+  <section>
+    <div class="container">
+      <div class="section-card parchment">
+        <div class="every-head">
+          <div class="search-symbol">⌕</div>
+          <div>
+            <h2>Science Is Everywhere</h2>
+            <p data-en="Look around. Science is closer than you think." data-hi="चारों ओर देखो। विज्ञान आपकी सोच से भी करीब है।">Look around. Science is closer than you think.</p>
+          </div>
+        </div>
+        <div class="every-row" id="everyRow"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPLORE MODULES -->
+  <section>
+    <div class="container">
+      <div class="feature-grid">
+        <a class="feature" href="invisible-visible/index.html">
+          <span class="fi">◉</span><h3>Make the Invisible Visible</h3>
+          <p>See electrons, fields, DNA, sound & more.</p><span class="fa">→</span>
+        </a>
+        <a class="feature" href="lab/index.html">
+          <span class="fi">⚗</span><h3>Virtual Lab</h3>
+          <p>Perform experiments. Learn by doing.</p><span class="fa">→</span>
+        </a>
+        <a class="feature" href="magic-science/index.html">
+          <span class="fi">✦</span><h3>Science That Looks Like Magic</h3>
+          <p>Observe → Guess → Discover.</p><span class="fa">→</span>
+        </a>
+        <a class="feature" href="games/index.html">
+          <span class="fi">⌁</span><h3>Science Games</h3>
+          <p>Play, solve, learn and experiment.</p><span class="fa">→</span>
+        </a>
+        <a class="feature" href="what-if/index.html">
+          <span class="fi">?</span><h3>What If?</h3>
+          <p>Imagine it. Predict it. Explore it.</p><span class="fa">→</span>
+        </a>
+        <a class="feature" href="beyond-textbook/index.html">
+          <span class="fi">↗</span><h3>Beyond the Textbook</h3>
+          <p>Connect school science to real technology.</p><span class="fa">→</span>
+        </a>
+        <a class="feature" href="real-world/index.html">
+          <span class="fi">◉</span><h3>Science in the Real World</h3>
+          <p>Discover science shaping our world.</p><span class="fa">→</span>
+        </a>
+        <a class="feature" href="science-around-us/index.html">
+          <span class="fi">▤</span><h3>Science Around Us</h3>
+          <p>Discoveries, missions, inventions & breakthroughs.</p><span class="fa">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section>
+    <div class="container">
+      <div class="section-card final">
+        <h2 data-en="Ready to see science differently?" data-hi="क्या आप विज्ञान को एक नए तरीके से देखने के लिए तैयार हैं?">Ready to see science differently?</h2>
+        <p data-en="Ask questions. Explore ideas. Discover how the world works." data-hi="सवाल पूछो। विचार खोजो। जानो कि दुनिया कैसे काम करती है।">Ask questions. Explore ideas. Discover how the world works.</p>
+        <a class="cta" href="#explore" data-en="Start Exploring →" data-hi="खोज शुरू करें →">Start Exploring →</a>
+        <div class="footer-line">© <span id="year"></span> Science Beyond the Textbook · Built for curious minds.</div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- SETTINGS -->
+<div class="modal" id="settingsModal" role="dialog" aria-modal="true" aria-label="Settings">
+  <div class="modal-box">
+    <div class="modal-top">
+      <h3>Settings</h3>
+      <button class="modal-close" id="closeSettings" aria-label="Close settings">×</button>
+    </div>
+    <div class="setting-row">
+      <strong>Language</strong>
+      <p>Use the EN | हिंदी switch in the navigation. Your choice is saved on this device.</p>
+    </div>
+    <div class="setting-row">
+      <strong>Motion</strong>
+      <p>The interface uses subtle motion only and respects your device's reduced-motion preference.</p>
+    </div>
+    <div class="setting-row">
+      <strong>Image system</strong>
+      <p>Homepage hero and subject visuals are delivered from Cloudinary. Future section images can be added without redesigning the UI.</p>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+/* ============================================================
+   SCIENCE BEYOND THE TEXTBOOK — SINGLE FILE HOMEPAGE
+   Future pages/data can be added without changing this UI.
+   ============================================================ */
+
+/* ---------- WHY DOES THIS HAPPEN? DATA ----------
+   Later this array can be moved to data/why-questions.js.
+   Replace image values with Cloudinary URLs as new visuals are uploaded.
+*/
+const questionsDatabase = [
+  {
+    questionEn: "Why does the sky appear blue?",
+    questionHi: "आसमान नीला क्यों दिखाई देता है?",
+    answerEn: "Sunlight contains many colors. Earth's atmosphere scatters shorter blue wavelengths more strongly, so blue light reaches our eyes from many directions.",
+    answerHi: "सूर्य के प्रकाश में कई रंग होते हैं। पृथ्वी का वायुमंडल छोटी तरंगदैर्ध्य वाले नीले प्रकाश को अधिक बिखेरता है, इसलिए आसमान नीला दिखाई देता है।",
+    image: "https://res.cloudinary.com/eq1jpw1h/image/upload/f_auto,q_auto/1000067386"
+  },
+  {
+    questionEn: "Why does a rainbow appear after rain?",
+    questionHi: "बारिश के बाद इंद्रधनुष क्यों दिखाई देता है?",
+    answerEn: "Tiny water droplets split sunlight into its component colors through refraction, reflection and dispersion, producing the rainbow we see.",
+    answerHi: "हवा में मौजूद पानी की छोटी बूंदें प्रकाश का अपवर्तन, परावर्तन और विक्षेपण करती हैं। इससे सूर्य का प्रकाश अलग-अलग रंगों में दिखाई देता है।",
+    image: "https://res.cloudinary.com/eq1jpw1h/image/upload/f_auto,q_auto/1000067386"
+  },
+  {
+    questionEn: "Why does a pressure cooker cook food faster?",
+    questionHi: "प्रेशर कुकर में खाना जल्दी क्यों पकता है?",
+    answerEn: "Higher pressure raises the boiling point of water, allowing food to cook at a higher temperature.",
+    answerHi: "अधिक दाब पानी के क्वथनांक को बढ़ा देता है। इसलिए भोजन अधिक तापमान पर पकता है और जल्दी तैयार होता है।",
+    image: ""
+  },
+  {
+    questionEn: "Why does a bicycle stay balanced while moving?",
+    questionHi: "चलती हुई साइकिल संतुलित क्यों रहती है?",
+    answerEn: "The moving wheels, steering and the rider's adjustments work together to help keep the bicycle balanced while it moves.",
+    answerHi: "चलते समय पहियों की गति, स्टीयरिंग और चालक के छोटे-छोटे समायोजन मिलकर साइकिल को संतुलित रखने में मदद करते हैं।",
+    image: ""
+  }
+];
+
+let currentLanguage = localStorage.getItem("scienceLanguage") || "en";
+let currentQuestion = questionsDatabase[Math.floor(Math.random() * questionsDatabase.length)];
+
+/* ---------- LANGUAGE ---------- */
+function applyLanguage(){
+  document.documentElement.lang = currentLanguage === "hi" ? "hi" : "en";
+
+  document.querySelectorAll("[data-en]").forEach(el => {
+    const value = currentLanguage === "hi" ? el.dataset.hi : el.dataset.en;
+    if(value) el.textContent = value;
+  });
+
+  document.getElementById("langBtn").innerHTML =
+    currentLanguage === "en" ? "EN <span>|</span> <b>हिंदी</b>" : "<b>EN</b> <span>|</span> हिंदी";
+
+  renderQuestion();
+}
+document.getElementById("langBtn").addEventListener("click", () => {
+  currentLanguage = currentLanguage === "en" ? "hi" : "en";
+  localStorage.setItem("scienceLanguage", currentLanguage);
+  applyLanguage();
+  showToast(currentLanguage === "hi" ? "भाषा: हिंदी" : "Language: English");
+});
+
+/* ---------- RANDOM QUESTION ---------- */
+function renderQuestion(){
+  const q = currentQuestion;
+  document.getElementById("questionText").textContent =
+    currentLanguage === "hi" ? q.questionHi : q.questionEn;
+  document.getElementById("answerText").textContent =
+    currentLanguage === "hi" ? q.answerHi : q.answerEn;
+
+  const img = document.getElementById("whyImage");
+  if(q.image){
+    img.src = q.image;
+    img.style.display = "block";
+    img.parentElement.style.background = "";
+  } else {
+    img.removeAttribute("src");
+    img.style.display = "none";
+    img.parentElement.style.background =
+      "radial-gradient(circle at 50% 45%,rgba(101,242,139,.4),transparent 18%),linear-gradient(135deg,#15261b,#07100c)";
+  }
+
+  document.getElementById("answerText").classList.add("hidden");
+  document.getElementById("answerBtn").textContent =
+    currentLanguage === "hi" ? "◉ उत्तर देखें" : "◉ Show Answer";
+}
+
+document.getElementById("answerBtn").addEventListener("click", () => {
+  const answer = document.getElementById("answerText");
+  const open = answer.classList.toggle("hidden");
+  document.getElementById("answerBtn").textContent =
+    open
+      ? (currentLanguage === "hi" ? "◉ उत्तर देखें" : "◉ Show Answer")
+      : (currentLanguage === "hi" ? "◉ उत्तर छिपाएँ" : "◉ Hide Answer");
+});
+
+/* ---------- SCIENCE IS EVERYWHERE ----------
+   These currently use lightweight placeholders.
+   Later add Cloudinary image URLs in the image property.
+*/
+const everydayScience = [
+  {icon:"📱", en:"Smartphone", hi:"स्मार्टफोन", link:"science-around-us/smartphone.html", image:""},
+  {icon:"▣", en:"Refrigerator", hi:"फ्रिज", link:"science-around-us/refrigerator.html", image:""},
+  {icon:"♨", en:"Pressure Cooker", hi:"प्रेशर कुकर", link:"science-around-us/pressure-cooker.html", image:""},
+  {icon:"🚲", en:"Bicycle", hi:"साइकिल", link:"science-around-us/bicycle.html", image:""},
+  {icon:"🔋", en:"Battery", hi:"बैटरी", link:"science-around-us/battery.html", image:""},
+  {icon:"👓", en:"Glasses", hi:"चश्मा", link:"science-around-us/glasses.html", image:""},
+  {icon:"🌈", en:"Rainbow", hi:"इंद्रधनुष", link:"magic-science/rainbow.html", image:""},
+  {icon:"🌱", en:"Plants", hi:"पौधे", link:"biology/plants.html", image:""}
+];
+
+function renderEveryday(){
+  const row = document.getElementById("everyRow");
+  row.innerHTML = everydayScience.map(item => `
+    <a class="every-item" href="${item.link}">
+      <div class="every-img">
+        ${item.image ? `<img src="${item.image}" alt="${item.en}" style="width:100%;height:100%;object-fit:cover;border-radius:50%">` : item.icon}
+      </div>
+      <strong>${currentLanguage === "hi" ? item.hi : item.en}</strong>
+      ${item.image ? "" : '<div class="placeholder-note">image later</div>'}
+    </a>
+  `).join("");
+}
+renderEveryday();
+
+/* ---------- MOBILE MENU ---------- */
+const mobileMenu = document.getElementById("mobileMenu");
+document.getElementById("menuBtn").addEventListener("click", () => {
+  mobileMenu.classList.toggle("open");
+});
+mobileMenu.querySelectorAll("a").forEach(a => {
+  a.addEventListener("click", () => mobileMenu.classList.remove("open"));
+});
+
+/* ---------- SETTINGS ---------- */
+const settingsModal = document.getElementById("settingsModal");
+document.getElementById("settingsBtn").addEventListener("click", () => settingsModal.classList.add("open"));
+document.getElementById("closeSettings").addEventListener("click", () => settingsModal.classList.remove("open"));
+settingsModal.addEventListener("click", e => {
+  if(e.target === settingsModal) settingsModal.classList.remove("open");
+});
+
+/* ---------- TOAST ---------- */
+function showToast(message){
+  const toast = document.getElementById("toast");
+  toast.textContent = message;
+  toast.classList.add("show");
+  clearTimeout(window.toastTimer);
+  window.toastTimer = setTimeout(() => toast.classList.remove("show"), 1800);
+}
+
+/* ---------- YEAR + LANGUAGE INIT ---------- */
+document.getElementById("year").textContent = new Date().getFullYear();
+applyLanguage();
+renderEveryday();
+
+/* Respect reduced motion */
+if(window.matchMedia("(prefers-reduced-motion: reduce)").matches){
+  document.documentElement.style.scrollBehavior = "auto";
+}
+</script>
 </body>
 </html>
-
