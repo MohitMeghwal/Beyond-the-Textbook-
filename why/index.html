@@ -1,0 +1,1459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="Explore everyday science questions and discover why things happen around us.">
+
+<meta name="theme-color" content="#07100b">
+
+<title>Why Does This Happen? | Science Beyond the Textbook</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&display=swap');
+
+:root{
+  --bg:#07100b;
+  --panel:#101813;
+  --panel2:#151e18;
+  --green:#65f28b;
+  --green2:#35c968;
+  --text:#f4f5ef;
+  --muted:#aeb8b0;
+  --line:rgba(255,255,255,.15);
+  --shadow:0 18px 50px rgba(0,0,0,.42);
+  --max:1180px;
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  min-height:100vh;
+  color:var(--text);
+  background:#07100b;
+  font-family:Inter,"Noto Sans Devanagari",sans-serif;
+  overflow-x:hidden;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+button,
+input{
+  font:inherit;
+}
+
+
+/* =========================================================
+   BACKGROUND WORLD
+========================================================= */
+
+.world{
+  position:fixed;
+  inset:0;
+  z-index:-3;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(3,9,6,.55),
+      rgba(3,9,6,.94)
+    ),
+    url("https://res.cloudinary.com/eq1jpw1h/image/upload/v1789020960/file_000000003a208211bafe8e4bf6052ee1.png");
+
+  background-size:cover;
+  background-position:center;
+  background-attachment:fixed;
+}
+
+.world:after{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background:
+    radial-gradient(
+      circle at 20% 30%,
+      rgba(101,242,139,.10),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 80% 70%,
+      rgba(53,201,104,.08),
+      transparent 28%
+    );
+}
+
+
+/* =========================================================
+   DECORATIVE SCIENCE CAPTIONS
+========================================================= */
+
+.science-caption{
+  position:fixed;
+  z-index:-1;
+  font-family:Caveat,cursive;
+  color:rgba(255,255,255,.08);
+  font-size:38px;
+  pointer-events:none;
+  user-select:none;
+  white-space:nowrap;
+}
+
+.caption-1{
+  top:25%;
+  left:-20px;
+  transform:rotate(-12deg);
+}
+
+.caption-2{
+  top:55%;
+  right:-35px;
+  transform:rotate(10deg);
+}
+
+.caption-3{
+  bottom:12%;
+  left:7%;
+  transform:rotate(-5deg);
+}
+
+.caption-4{
+  top:75%;
+  right:12%;
+  transform:rotate(-8deg);
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.nav{
+  position:sticky;
+  top:0;
+  z-index:100;
+  border-bottom:1px solid rgba(255,255,255,.13);
+  background:rgba(5,10,8,.88);
+  backdrop-filter:blur(18px);
+}
+
+.nav-inner{
+  width:min(calc(100% - 28px),var(--max));
+  min-height:68px;
+  margin:auto;
+
+  display:flex;
+  align-items:center;
+  gap:22px;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.brand-icon{
+  width:40px;
+  height:40px;
+
+  display:grid;
+  place-items:center;
+
+  color:var(--green);
+
+  border:1px solid rgba(101,242,139,.35);
+  border-radius:12px;
+
+  background:rgba(101,242,139,.06);
+}
+
+.brand-title{
+  line-height:.9;
+}
+
+.brand-title strong{
+  display:block;
+  font-size:18px;
+}
+
+.brand-title small{
+  font-family:Caveat,cursive;
+  font-size:14px;
+  color:#d6dfd6;
+}
+
+.nav-links{
+  margin-left:auto;
+
+  display:flex;
+  align-items:center;
+  gap:3px;
+}
+
+.nav-links a{
+  padding:9px 12px;
+  border-radius:9px;
+  font-size:12px;
+  color:#e4e9e4;
+}
+
+.nav-links a:hover{
+  background:rgba(101,242,139,.1);
+  color:var(--green);
+}
+
+.actions{
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
+.lang{
+  padding:7px 11px;
+  border-radius:22px;
+  border:1px solid rgba(255,255,255,.45);
+  background:rgba(0,0,0,.25);
+  color:#fff;
+  cursor:pointer;
+  font-size:11px;
+}
+
+.lang b{
+  color:var(--green);
+}
+
+.back-btn{
+  padding:8px 12px;
+  border:1px solid var(--line);
+  border-radius:20px;
+  background:rgba(255,255,255,.05);
+  color:#fff;
+  font-size:11px;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+  width:min(calc(100% - 28px),var(--max));
+  min-height:370px;
+  margin:30px auto 18px;
+
+  position:relative;
+  overflow:hidden;
+
+  display:flex;
+  align-items:flex-end;
+
+  border:1px solid rgba(255,255,255,.17);
+  border-radius:24px;
+
+  box-shadow:var(--shadow);
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(3,8,5,.94),
+      rgba(3,8,5,.55) 55%,
+      rgba(3,8,5,.15)
+    ),
+    url("https://res.cloudinary.com/eq1jpw1h/image/upload/v1789020960/file_000000003a208211bafe8e4bf6052ee1.png");
+
+  background-size:cover;
+  background-position:center;
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  padding:45px;
+  max-width:680px;
+}
+
+.kicker{
+  display:flex;
+  align-items:center;
+  gap:9px;
+
+  color:var(--green);
+
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:2px;
+  text-transform:uppercase;
+
+  margin-bottom:10px;
+}
+
+.kicker:before{
+  content:"";
+  width:30px;
+  height:2px;
+  background:var(--green);
+}
+
+.hero h1{
+  font-family:Caveat,cursive;
+  font-size:clamp(55px,7vw,90px);
+  line-height:.82;
+  text-transform:uppercase;
+  letter-spacing:-1px;
+
+  text-shadow:0 5px 30px rgba(0,0,0,.65);
+}
+
+.hero h1 span{
+  display:block;
+}
+
+.hero h1 .green{
+  color:#dffff0;
+}
+
+.hero-sub{
+  margin-top:20px;
+  font-size:16px;
+  font-weight:700;
+}
+
+.hero-desc{
+  margin-top:7px;
+  color:#cbd4cc;
+  max-width:530px;
+  line-height:1.6;
+  font-size:13px;
+}
+
+.hero-tags{
+  margin-top:22px;
+
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+}
+
+.hero-tag{
+  padding:7px 11px;
+  border-radius:20px;
+
+  border:1px solid rgba(101,242,139,.25);
+  background:rgba(101,242,139,.07);
+
+  color:#dce9df;
+  font-size:10px;
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.main{
+  width:min(calc(100% - 28px),var(--max));
+  margin:auto;
+  padding-bottom:70px;
+}
+
+.toolbar{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin:15px 0;
+}
+
+.search{
+  flex:1;
+  position:relative;
+}
+
+.search input{
+  width:100%;
+  height:45px;
+
+  padding:0 16px 0 42px;
+
+  border:1px solid var(--line);
+  border-radius:14px;
+
+  background:rgba(10,17,13,.9);
+  color:#fff;
+
+  outline:none;
+}
+
+.search input:focus{
+  border-color:rgba(101,242,139,.6);
+}
+
+.search-icon{
+  position:absolute;
+  left:15px;
+  top:50%;
+  transform:translateY(-50%);
+  font-size:18px;
+  opacity:.7;
+}
+
+.question-count{
+  padding:11px 15px;
+
+  border-radius:13px;
+  border:1px solid var(--line);
+
+  background:rgba(10,17,13,.9);
+
+  font-size:11px;
+  color:#cbd3cc;
+}
+
+
+/* =========================================================
+   FILTERS
+========================================================= */
+
+.filters{
+  display:flex;
+  gap:7px;
+
+  overflow-x:auto;
+  padding-bottom:5px;
+
+  scrollbar-width:none;
+}
+
+.filters::-webkit-scrollbar{
+  display:none;
+}
+
+.filter{
+  flex:0 0 auto;
+
+  padding:8px 13px;
+
+  border-radius:20px;
+  border:1px solid var(--line);
+
+  background:rgba(10,17,13,.8);
+
+  color:#cdd5ce;
+  font-size:11px;
+
+  cursor:pointer;
+}
+
+.filter:hover{
+  border-color:rgba(101,242,139,.5);
+}
+
+.filter.active{
+  background:var(--green);
+  border-color:var(--green);
+  color:#071008;
+  font-weight:800;
+}
+
+
+/* =========================================================
+   QUESTIONS GRID
+========================================================= */
+
+.questions-grid{
+  margin-top:17px;
+
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+}
+
+.question-card{
+  position:relative;
+  overflow:hidden;
+
+  border:1px solid rgba(255,255,255,.15);
+  border-radius:17px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(25,34,28,.94),
+      rgba(8,14,11,.95)
+    );
+
+  transition:.22s transform,.22s border-color,.22s box-shadow;
+}
+
+.question-card:hover{
+  transform:translateY(-4px);
+  border-color:rgba(101,242,139,.5);
+  box-shadow:0 15px 35px rgba(0,0,0,.35);
+}
+
+.card-top{
+  display:flex;
+  align-items:center;
+  gap:12px;
+
+  padding:18px 18px 8px;
+}
+
+.emoji{
+  width:50px;
+  height:50px;
+
+  flex:0 0 50px;
+
+  display:grid;
+  place-items:center;
+
+  border-radius:14px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(101,242,139,.18),
+      rgba(101,242,139,.03)
+    );
+
+  border:1px solid rgba(101,242,139,.2);
+
+  font-size:27px;
+}
+
+.category{
+  display:inline-block;
+
+  padding:4px 8px;
+
+  border-radius:8px;
+
+  background:rgba(101,242,139,.1);
+  color:var(--green);
+
+  font-size:9px;
+  font-weight:800;
+}
+
+.card-number{
+  margin-left:auto;
+  color:#68746b;
+  font-size:10px;
+}
+
+.question-card h2{
+  padding:8px 18px 0;
+
+  font-size:17px;
+  line-height:1.3;
+}
+
+.question-card .hi-question{
+  font-family:"Noto Sans Devanagari",sans-serif;
+}
+
+.card-footer{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  padding:16px 18px 17px;
+}
+
+.answer-btn{
+  border:0;
+  border-radius:20px;
+
+  padding:8px 12px;
+
+  background:var(--green);
+  color:#071008;
+
+  font-size:10px;
+  font-weight:800;
+
+  cursor:pointer;
+}
+
+.answer-btn:hover{
+  background:#83f7a1;
+}
+
+.expand-icon{
+  color:var(--green);
+  font-size:17px;
+}
+
+.answer-box{
+  display:none;
+
+  margin:0 18px 17px;
+  padding:13px;
+
+  border-radius:12px;
+
+  border:1px solid rgba(101,242,139,.18);
+  background:rgba(101,242,139,.05);
+
+  color:#cbd5cd;
+
+  font-size:11px;
+  line-height:1.6;
+}
+
+.answer-box.open{
+  display:block;
+  animation:answerIn .22s ease;
+}
+
+@keyframes answerIn{
+  from{
+    opacity:0;
+    transform:translateY(-5px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.empty{
+  display:none;
+
+  padding:55px 20px;
+  text-align:center;
+
+  border:1px dashed rgba(255,255,255,.2);
+  border-radius:18px;
+
+  background:rgba(10,17,13,.75);
+}
+
+.empty-icon{
+  font-size:42px;
+}
+
+.empty h3{
+  margin-top:8px;
+  font-family:Caveat,cursive;
+  font-size:29px;
+}
+
+.empty p{
+  margin-top:4px;
+  color:var(--muted);
+  font-size:11px;
+}
+
+
+/* =========================================================
+   BOTTOM CTA
+========================================================= */
+
+.bottom-cta{
+  margin-top:35px;
+
+  padding:38px 20px;
+
+  text-align:center;
+
+  border:1px solid rgba(255,255,255,.15);
+  border-radius:20px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(20,34,25,.93),
+      rgba(6,13,9,.95)
+    );
+}
+
+.bottom-cta h2{
+  font-family:Caveat,cursive;
+  font-size:38px;
+}
+
+.bottom-cta p{
+  margin-top:4px;
+  color:#b9c3ba;
+  font-size:12px;
+}
+
+.home-btn{
+  display:inline-flex;
+  margin-top:17px;
+
+  padding:11px 17px;
+
+  border-radius:25px;
+
+  background:var(--green);
+  color:#071008;
+
+  font-size:11px;
+  font-weight:800;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer{
+  margin-top:25px;
+
+  text-align:center;
+
+  padding:15px;
+
+  border-top:1px solid rgba(255,255,255,.1);
+
+  color:#7e8981;
+  font-size:10px;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:900px){
+
+  .nav-links{
+    display:none;
+  }
+
+  .questions-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .hero-content{
+    padding:38px;
+  }
+
+}
+
+@media(max-width:600px){
+
+  .nav-inner{
+    min-height:60px;
+  }
+
+  .brand-icon{
+    width:35px;
+    height:35px;
+  }
+
+  .brand-title strong{
+    font-size:15px;
+  }
+
+  .brand-title small{
+    font-size:12px;
+  }
+
+  .back-btn{
+    display:none;
+  }
+
+  .hero{
+    min-height:480px;
+    margin-top:14px;
+
+    background-position:65% center;
+  }
+
+  .hero-content{
+    padding:30px 22px 32px;
+  }
+
+  .hero h1{
+    font-size:62px;
+  }
+
+  .hero-sub{
+    font-size:13px;
+  }
+
+  .hero-desc{
+    font-size:11px;
+    max-width:285px;
+  }
+
+  .hero-tags{
+    max-width:300px;
+  }
+
+  .hero-tag{
+    font-size:9px;
+  }
+
+  .toolbar{
+    flex-direction:column;
+    align-items:stretch;
+  }
+
+  .question-count{
+    text-align:center;
+  }
+
+  .questions-grid{
+    grid-template-columns:1fr;
+  }
+
+  .question-card h2{
+    font-size:16px;
+  }
+
+  .science-caption{
+    font-size:25px;
+  }
+
+  .bottom-cta h2{
+    font-size:31px;
+  }
+
+}
+
+
+/* Reduced motion */
+
+@media(prefers-reduced-motion:reduce){
+
+  *{
+    scroll-behavior:auto !important;
+    transition:none !important;
+    animation:none !important;
+  }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+<!-- ========================================================
+     BACKGROUND
+========================================================= -->
+
+<div class="world"></div>
+
+<div class="science-caption caption-1">
+  OBSERVE → QUESTION → DISCOVER
+</div>
+
+<div class="science-caption caption-2">
+  WHY?
+</div>
+
+<div class="science-caption caption-3">
+  SCIENCE IS EVERYWHERE
+</div>
+
+<div class="science-caption caption-4">
+  CURIOSITY → KNOWLEDGE
+</div>
+
+
+<!-- ========================================================
+     NAV
+========================================================= -->
+
+<header class="nav">
+
+  <div class="nav-inner">
+
+    <a class="brand" href="../index.html">
+
+      <div class="brand-icon">
+        🧪
+      </div>
+
+      <div class="brand-title">
+        <strong>SCIENCE</strong>
+        <small>BEYOND THE TEXTBOOK</small>
+      </div>
+
+    </a>
+
+
+    <nav class="nav-links">
+
+      <a href="../index.html">
+        ⌂ Home
+      </a>
+
+      <a href="../physics/index.html">
+        Physics
+      </a>
+
+      <a href="../chemistry/index.html">
+        Chemistry
+      </a>
+
+      <a href="../biology/index.html">
+        Biology
+      </a>
+
+      <a href="../lab/index.html">
+        Virtual Lab
+      </a>
+
+      <a href="../games/index.html">
+        Games
+      </a>
+
+    </nav>
+
+
+    <div class="actions">
+
+      <a class="back-btn" href="../index.html">
+        ← Home
+      </a>
+
+      <button
+        class="lang"
+        id="langBtn"
+        type="button"
+      >
+        EN <span>|</span> <b>हिंदी</b>
+      </button>
+
+    </div>
+
+  </div>
+
+</header>
+
+
+<!-- ========================================================
+     HERO
+========================================================= -->
+
+<section class="hero">
+
+  <div class="hero-content">
+
+    <div class="kicker">
+      Curiosity Explorer
+    </div>
+
+    <h1>
+      <span>Why Does</span>
+      <span class="green">This Happen?</span>
+    </h1>
+
+    <p
+      class="hero-sub"
+      data-en="Small questions can reveal big science."
+      data-hi="छोटे सवाल बड़े विज्ञान को समझने का रास्ता दिखाते हैं।"
+    >
+      Small questions can reveal big science.
+    </p>
+
+    <p
+      class="hero-desc"
+      data-en="Look around you. Everyday things are full of scientific mysteries. Ask why, explore the idea, and discover what is really happening."
+      data-hi="अपने आसपास देखो। रोज़मर्रा की चीज़ों में विज्ञान के कई रहस्य छिपे हैं। सवाल पूछो, विचार को समझो और जानो कि वास्तव में क्या हो रहा है।"
+    >
+      Look around you. Everyday things are full of scientific
+      mysteries. Ask why, explore the idea, and discover what
+      is really happening.
+    </p>
+
+
+    <div class="hero-tags">
+
+      <span class="hero-tag">👀 Observe</span>
+      <span class="hero-tag">❓ Question</span>
+      <span class="hero-tag">🧠 Think</span>
+      <span class="hero-tag">🔬 Discover</span>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ========================================================
+     MAIN
+========================================================= -->
+
+<main class="main">
+
+
+  <!-- TOOLBAR -->
+
+  <div class="toolbar">
+
+    <div class="search">
+
+      <span class="search-icon">
+        🔎
+      </span>
+
+      <input
+        id="searchInput"
+        type="search"
+        placeholder="Search a science question..."
+        data-placeholder-en="Search a science question..."
+        data-placeholder-hi="विज्ञान का सवाल खोजें..."
+      >
+
+    </div>
+
+
+    <div class="question-count" id="questionCount">
+      20 questions
+    </div>
+
+  </div>
+
+
+  <!-- FILTERS -->
+
+  <div class="filters" id="filters">
+
+    <button class="filter active" data-category="all">
+      All
+    </button>
+
+    <button class="filter" data-category="Light">
+      💡 Light
+    </button>
+
+    <button class="filter" data-category="Physics">
+      ⚙ Physics
+    </button>
+
+    <button class="filter" data-category="Electricity">
+      ⚡ Electricity
+    </button>
+
+    <button class="filter" data-category="Biology">
+      🌱 Biology
+    </button>
+
+    <button class="filter" data-category="Chemistry">
+      🧪 Chemistry
+    </button>
+
+    <button class="filter" data-category="Earth">
+      🌍 Earth
+    </button>
+
+    <button class="filter" data-category="Space">
+      🌙 Space
+    </button>
+
+  </div>
+
+
+  <!-- QUESTIONS -->
+
+  <div
+    class="questions-grid"
+    id="questionsGrid"
+  ></div>
+
+
+  <!-- EMPTY -->
+
+  <div class="empty" id="emptyState">
+
+    <div class="empty-icon">
+      🔭
+    </div>
+
+    <h3>
+      No question found
+    </h3>
+
+    <p>
+      Try another keyword or category.
+    </p>
+
+  </div>
+
+
+  <!-- CTA -->
+
+  <div class="bottom-cta">
+
+    <h2
+      data-en="Never stop asking why."
+      data-hi="कभी भी सवाल पूछना बंद मत करो।"
+    >
+      Never stop asking why.
+    </h2>
+
+    <p
+      data-en="Every question is the beginning of a new discovery."
+      data-hi="हर सवाल एक नई खोज की शुरुआत हो सकता है।"
+    >
+      Every question is the beginning of a new discovery.
+    </p>
+
+    <a
+      class="home-btn"
+      href="../index.html"
+      data-en="← Back to Science Exploration"
+      data-hi="← विज्ञान की खोज पर वापस जाएँ"
+    >
+      ← Back to Science Exploration
+    </a>
+
+  </div>
+
+
+  <footer class="footer">
+    © <span id="year"></span>
+    Science Beyond the Textbook · Built for curious minds.
+  </footer>
+
+</main>
+
+
+<!-- ========================================================
+     DATA
+========================================================= -->
+
+<script src="../data/why-questions.js"></script>
+
+
+<script>
+
+/* =========================================================
+   STATE
+========================================================= */
+
+let currentLanguage =
+  localStorage.getItem("scienceLanguage") || "en";
+
+let currentCategory = "all";
+
+let searchTerm = "";
+
+
+/* =========================================================
+   ELEMENTS
+========================================================= */
+
+const grid =
+  document.getElementById("questionsGrid");
+
+const emptyState =
+  document.getElementById("emptyState");
+
+const count =
+  document.getElementById("questionCount");
+
+const searchInput =
+  document.getElementById("searchInput");
+
+const langBtn =
+  document.getElementById("langBtn");
+
+
+/* =========================================================
+   RENDER QUESTIONS
+========================================================= */
+
+function renderQuestions(){
+
+  const filtered = whyQuestions.filter(q => {
+
+    const categoryMatch =
+      currentCategory === "all" ||
+      q.category === currentCategory;
+
+    const searchText = (
+      q.questionEn + " " +
+      q.questionHi + " " +
+      q.answerEn + " " +
+      q.answerHi + " " +
+      q.category + " " +
+      q.categoryHi
+    ).toLowerCase();
+
+    const searchMatch =
+      searchText.includes(searchTerm.toLowerCase());
+
+    return categoryMatch && searchMatch;
+
+  });
+
+
+  grid.innerHTML = filtered.map(q => {
+
+    const question =
+      currentLanguage === "hi"
+        ? q.questionHi
+        : q.questionEn;
+
+    const answer =
+      currentLanguage === "hi"
+        ? q.answerHi
+        : q.answerEn;
+
+    const category =
+      currentLanguage === "hi"
+        ? q.categoryHi
+        : q.category;
+
+    const answerLabel =
+      currentLanguage === "hi"
+        ? "उत्तर देखें"
+        : "Show Answer";
+
+    return `
+
+      <article class="question-card">
+
+        <div class="card-top">
+
+          <div class="emoji">
+            ${q.emoji}
+          </div>
+
+          <div>
+            <span class="category">
+              ${category}
+            </span>
+          </div>
+
+          <span class="card-number">
+            #${q.id}
+          </span>
+
+        </div>
+
+
+        <h2>
+          ${question}
+        </h2>
+
+
+        <div class="card-footer">
+
+          <button
+            class="answer-btn"
+            onclick="toggleAnswer(${q.id})"
+            type="button"
+          >
+            ◉ ${answerLabel}
+          </button>
+
+          <span class="expand-icon">
+            ↓
+          </span>
+
+        </div>
+
+
+        <div
+          class="answer-box"
+          id="answer-${q.id}"
+        >
+          ${answer}
+        </div>
+
+      </article>
+
+    `;
+
+  }).join("");
+
+
+  count.textContent =
+    currentLanguage === "hi"
+      ? `${filtered.length} सवाल`
+      : `${filtered.length} questions`;
+
+
+  emptyState.style.display =
+    filtered.length ? "none" : "block";
+
+}
+
+
+/* =========================================================
+   ANSWER TOGGLE
+========================================================= */
+
+function toggleAnswer(id){
+
+  const box =
+    document.getElementById(`answer-${id}`);
+
+  if(!box) return;
+
+  box.classList.toggle("open");
+
+  const btn =
+    box.parentElement.querySelector(".answer-btn");
+
+  if(box.classList.contains("open")){
+
+    btn.textContent =
+      currentLanguage === "hi"
+        ? "◉ उत्तर छिपाएँ"
+        : "◉ Hide Answer";
+
+  }else{
+
+    btn.textContent =
+      currentLanguage === "hi"
+        ? "◉ उत्तर देखें"
+        : "◉ Show Answer";
+
+  }
+
+}
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+searchInput.addEventListener("input", e => {
+
+  searchTerm = e.target.value.trim();
+
+  renderQuestions();
+
+});
+
+
+/* =========================================================
+   CATEGORY FILTER
+========================================================= */
+
+document
+  .querySelectorAll(".filter")
+  .forEach(button => {
+
+    button.addEventListener("click", () => {
+
+      document
+        .querySelectorAll(".filter")
+        .forEach(b =>
+          b.classList.remove("active")
+        );
+
+      button.classList.add("active");
+
+      currentCategory =
+        button.dataset.category;
+
+      renderQuestions();
+
+    });
+
+  });
+
+
+/* =========================================================
+   LANGUAGE
+========================================================= */
+
+function applyLanguage(){
+
+  document.documentElement.lang =
+    currentLanguage === "hi"
+      ? "hi"
+      : "en";
+
+
+  document
+    .querySelectorAll("[data-en]")
+    .forEach(el => {
+
+      const value =
+        currentLanguage === "hi"
+          ? el.dataset.hi
+          : el.dataset.en;
+
+      if(value){
+        el.textContent = value;
+      }
+
+    });
+
+
+  searchInput.placeholder =
+    currentLanguage === "hi"
+      ? searchInput.dataset.placeholderHi
+      : searchInput.dataset.placeholderEn;
+
+
+  langBtn.innerHTML =
+    currentLanguage === "en"
+      ? `EN <span>|</span> <b>हिंदी</b>`
+      : `<b>EN</b> <span>|</span> हिंदी`;
+
+
+  renderQuestions();
+
+}
+
+
+langBtn.addEventListener("click", () => {
+
+  currentLanguage =
+    currentLanguage === "en"
+      ? "hi"
+      : "en";
+
+  localStorage.setItem(
+    "scienceLanguage",
+    currentLanguage
+  );
+
+  applyLanguage();
+
+});
+
+
+/* =========================================================
+   YEAR
+========================================================= */
+
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+
+
+/* =========================================================
+   INITIAL LOAD
+========================================================= */
+
+applyLanguage();
+
+</script>
+
+</body>
+  </html>
