@@ -1,0 +1,2850 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Make the Invisible Visible — explore hidden scientific phenomena through interactive visualizations.">
+<meta name="theme-color" content="#07100b">
+<title>Make the Invisible Visible | Science Beyond the Textbook</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&display=swap');
+
+:root{
+  --bg:#07100b;
+  --bg2:#0b1510;
+  --panel:rgba(13,20,16,.92);
+  --panel2:#111b15;
+  --green:#65f28b;
+  --green2:#35c968;
+  --text:#f4f5ef;
+  --muted:#aeb8af;
+  --line:rgba(255,255,255,.15);
+  --soft:rgba(101,242,139,.09);
+  --shadow:0 18px 50px rgba(0,0,0,.4);
+  --max:1280px;
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  min-height:100vh;
+  overflow-x:hidden;
+  color:var(--text);
+  background:
+    radial-gradient(circle at 50% 8%,rgba(53,130,73,.2),transparent 30%),
+    linear-gradient(180deg,#07100b,#0b120e 50%,#060b08);
+  font-family:Inter,"Noto Sans Devanagari",sans-serif;
+}
+
+body:before{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:50;
+  pointer-events:none;
+  opacity:.1;
+  background-image:
+    radial-gradient(circle at 20% 20%,#fff 0 1px,transparent 1.5px),
+    radial-gradient(circle at 80% 70%,#fff 0 1px,transparent 1.5px);
+  background-size:180px 180px,240px 240px;
+  mix-blend-mode:screen;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+button{
+  font:inherit;
+}
+
+img{
+  display:block;
+  max-width:100%;
+}
+
+.container{
+  width:min(calc(100% - 28px),var(--max));
+  margin:auto;
+}
+
+.caveat{
+  font-family:Caveat,cursive;
+}
+
+
+/* =========================
+   BACKGROUND WORLD
+========================= */
+
+.world{
+  position:fixed;
+  inset:0;
+  z-index:-2;
+  overflow:hidden;
+  background:
+    linear-gradient(180deg,rgba(2,8,5,.3),rgba(3,8,5,.86)),
+    radial-gradient(circle at 15% 30%,rgba(39,102,52,.35),transparent 25%),
+    radial-gradient(circle at 85% 25%,rgba(21,84,48,.3),transparent 30%),
+    #08110c;
+}
+
+.world:before,
+.world:after{
+  content:"";
+  position:absolute;
+  width:48vw;
+  height:75vh;
+  filter:blur(45px);
+  opacity:.3;
+  background:radial-gradient(ellipse,#1e6b3d,transparent 68%);
+}
+
+.world:before{
+  left:-25vw;
+  top:18vh;
+}
+
+.world:after{
+  right:-25vw;
+  top:45vh;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.nav{
+  position:sticky;
+  top:0;
+  z-index:100;
+  border-bottom:1px solid rgba(255,255,255,.14);
+  background:rgba(5,10,8,.88);
+  backdrop-filter:blur(18px);
+}
+
+.nav-inner{
+  min-height:68px;
+  display:flex;
+  align-items:center;
+  gap:22px;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  min-width:max-content;
+}
+
+.brand-icon{
+  width:40px;
+  height:40px;
+  border:1px solid rgba(101,242,139,.5);
+  border-radius:12px;
+  display:grid;
+  place-items:center;
+  color:var(--green);
+  background:rgba(101,242,139,.07);
+  font-size:20px;
+}
+
+.brand-title{
+  line-height:.9;
+}
+
+.brand-title strong{
+  display:block;
+  font-size:18px;
+}
+
+.brand-title small{
+  font-family:Caveat,cursive;
+  font-size:14px;
+  color:#d9e2d8;
+}
+
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:4px;
+  margin-left:auto;
+}
+
+.nav-links a,
+.nav-drop{
+  padding:10px 13px;
+  border-radius:10px;
+  font-size:13px;
+  color:#e7ebe6;
+  white-space:nowrap;
+  cursor:pointer;
+}
+
+.nav-links a:hover,
+.nav-drop:hover{
+  background:rgba(101,242,139,.1);
+  color:var(--green);
+}
+
+.nav-drop{
+  position:relative;
+}
+
+.dropdown{
+  display:none;
+  position:absolute;
+  top:42px;
+  left:0;
+  min-width:190px;
+  padding:8px;
+  background:rgba(9,15,12,.98);
+  border:1px solid var(--line);
+  border-radius:14px;
+  box-shadow:var(--shadow);
+}
+
+.nav-drop:hover .dropdown{
+  display:block;
+}
+
+.dropdown a{
+  display:block;
+  padding:10px;
+}
+
+.actions{
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
+.lang{
+  border:1px solid rgba(255,255,255,.6);
+  background:rgba(0,0,0,.25);
+  color:#fff;
+  border-radius:22px;
+  padding:7px 11px;
+  font-size:12px;
+  cursor:pointer;
+}
+
+.lang b{
+  color:var(--green);
+}
+
+.icon-btn{
+  width:38px;
+  height:38px;
+  border-radius:50%;
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.06);
+  color:#fff;
+  cursor:pointer;
+}
+
+.menu-btn{
+  display:none;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+  min-height:570px;
+  position:relative;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.hero-bg{
+  position:absolute;
+  inset:0;
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(3,9,6,.94) 0%,
+      rgba(3,9,6,.72) 35%,
+      rgba(3,9,6,.22) 72%,
+      rgba(3,9,6,.48) 100%
+    ),
+    linear-gradient(
+      0deg,
+      rgba(3,8,5,.82),
+      transparent 55%
+    ),
+    url("https://res.cloudinary.com/eq1jpw1h/image/upload/v1789027848/file_00000000c8388210b7ca866098b64437.png");
+
+  background-size:cover;
+  background-position:center;
+  transform:scale(1.015);
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  padding:85px 0 100px;
+  max-width:650px;
+}
+
+.kicker{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  color:var(--green);
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  margin-bottom:14px;
+}
+
+.kicker:before{
+  content:"";
+  width:28px;
+  height:2px;
+  background:var(--green);
+}
+
+.hero h1{
+  font-family:Caveat,cursive;
+  font-size:clamp(62px,8vw,108px);
+  line-height:.76;
+  letter-spacing:-2px;
+  text-transform:uppercase;
+  text-shadow:0 5px 35px rgba(0,0,0,.65);
+}
+
+.hero h1 span{
+  display:block;
+}
+
+.hero h1 .green{
+  color:#dffff0;
+}
+
+.hero-sub{
+  margin-top:28px;
+  font-size:17px;
+  font-weight:800;
+}
+
+.hero-desc{
+  max-width:550px;
+  margin-top:8px;
+  color:#ccd5cd;
+  font-size:14px;
+  line-height:1.7;
+}
+
+.hero-buttons{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top:24px;
+}
+
+.cta{
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  padding:12px 19px;
+  border-radius:30px;
+  background:var(--green);
+  color:#061008;
+  font-weight:800;
+  font-size:13px;
+  border:0;
+  cursor:pointer;
+  box-shadow:0 8px 28px rgba(101,242,139,.18);
+  transition:.2s;
+}
+
+.cta:hover{
+  transform:translateY(-2px);
+}
+
+.ghost-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  padding:11px 18px;
+  border-radius:30px;
+  border:1px solid rgba(255,255,255,.25);
+  background:rgba(0,0,0,.25);
+  color:#fff;
+  font-size:13px;
+  font-weight:700;
+}
+
+
+/* =========================
+   CAPTION
+========================= */
+
+.hero-caption{
+  position:absolute;
+  right:4%;
+  bottom:45px;
+  max-width:220px;
+  text-align:center;
+  font-family:Caveat,cursive;
+  font-size:23px;
+  line-height:1.1;
+  color:#eef5ed;
+  transform:rotate(-4deg);
+  text-shadow:0 3px 15px #000;
+}
+
+.hero-caption small{
+  display:block;
+  margin-top:8px;
+  font-size:15px;
+  color:#c6d4c7;
+}
+
+
+/* =========================
+   SECTION COMMON
+========================= */
+
+section{
+  padding:18px 0;
+}
+
+.section-card{
+  border:1px solid rgba(255,255,255,.17);
+  border-radius:20px;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(28,34,29,.94),
+      rgba(9,15,12,.94)
+    );
+  box-shadow:var(--shadow);
+  overflow:hidden;
+}
+
+.section-head{
+  display:flex;
+  align-items:center;
+  gap:15px;
+  padding:23px 25px;
+}
+
+.section-icon{
+  width:52px;
+  height:52px;
+  flex:0 0 52px;
+  border-radius:15px;
+  display:grid;
+  place-items:center;
+  background:rgba(101,242,139,.08);
+  border:1px solid rgba(101,242,139,.35);
+  font-size:26px;
+}
+
+.section-head h2{
+  font-family:Caveat,cursive;
+  font-size:36px;
+  line-height:1;
+}
+
+.section-head p{
+  color:#bfc8c0;
+  font-size:12px;
+  margin-top:5px;
+}
+
+
+/* =========================
+   INTRO
+========================= */
+
+.intro{
+  padding:0 25px 25px;
+}
+
+.intro-box{
+  border-radius:16px;
+  padding:22px;
+  background:
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(101,242,139,.12),
+      transparent 30%
+    ),
+    rgba(0,0,0,.18);
+  border:1px solid rgba(255,255,255,.09);
+}
+
+.intro-box h3{
+  font-family:Caveat,cursive;
+  font-size:30px;
+}
+
+.intro-box p{
+  color:#c0c9c1;
+  font-size:13px;
+  line-height:1.7;
+  margin-top:7px;
+  max-width:850px;
+}
+
+
+/* =========================
+   PHENOMENA GRID
+========================= */
+
+.phenomena{
+  padding:0 20px 22px;
+}
+
+.phenomena-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:11px;
+}
+
+.phenomenon{
+  min-height:205px;
+  position:relative;
+  overflow:hidden;
+  padding:20px;
+  border-radius:16px;
+  border:1px solid rgba(255,255,255,.16);
+
+  /* TEXT VISIBILITY FIX */
+  color:var(--text) !important;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(25,37,29,.95),
+      rgba(7,14,10,.98)
+    );
+  cursor:pointer;
+  transition:.25s;
+}
+
+.phenomenon:hover{
+  transform:translateY(-5px);
+  border-color:rgba(101,242,139,.6);
+  box-shadow:0 15px 35px rgba(0,0,0,.3);
+}
+
+.phenomenon:before{
+  content:"";
+  position:absolute;
+  width:130px;
+  height:130px;
+  right:-45px;
+  top:-45px;
+  border-radius:50%;
+  background:rgba(101,242,139,.08);
+}
+
+.p-icon{
+  width:58px;
+  height:58px;
+  display:grid;
+  place-items:center;
+  border-radius:16px;
+  background:rgba(101,242,139,.09);
+  border:1px solid rgba(101,242,139,.22);
+  font-size:31px;
+}
+
+
+/* ===== TEXT VISIBILITY FIX ===== */
+
+.phenomenon h3{
+  margin-top:18px;
+  font-size:16px;
+
+  /* FIX BLACK TEXT */
+  color:#f4f5ef !important;
+}
+
+.phenomenon p{
+  margin-top:5px;
+
+  /* FIX BLACK / DARK TEXT */
+  color:#aeb8b0 !important;
+
+  font-size:11px;
+  line-height:1.5;
+}
+
+.explore-tag{
+  position:absolute;
+  right:14px;
+  bottom:13px;
+  color:var(--green) !important;
+  font-size:12px;
+  font-weight:800;
+}
+
+
+/* =========================
+   INTERACTIVE AREA
+========================= */
+
+.interactive{
+  padding:0 20px 24px;
+}
+
+.interactive-box{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  min-height:330px;
+  border:1px solid rgba(255,255,255,.14);
+  border-radius:18px;
+  overflow:hidden;
+  background:#07100b;
+}
+
+.visual{
+  position:relative;
+  min-height:330px;
+  overflow:hidden;
+  background:
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(101,242,139,.13),
+      transparent 40%
+    ),
+    #07100b;
+}
+
+.visual-label{
+  position:absolute;
+  top:16px;
+  left:18px;
+  color:var(--green);
+  font-size:10px;
+  letter-spacing:1.5px;
+  font-weight:800;
+  text-transform:uppercase;
+}
+
+.visual-content{
+  position:absolute;
+  inset:55px 20px 20px;
+  display:grid;
+  place-items:center;
+}
+
+
+/* ELECTRON VISUAL */
+
+.wire{
+  width:75%;
+  height:4px;
+  border-radius:20px;
+  background:#26352c;
+  box-shadow:0 0 15px rgba(101,242,139,.12);
+  position:relative;
+}
+
+.electron{
+  position:absolute;
+  top:50%;
+  left:0;
+  width:13px;
+  height:13px;
+  margin-top:-6px;
+  border-radius:50%;
+  background:var(--green);
+  box-shadow:0 0 15px rgba(101,242,139,.8);
+  animation:electronMove 2.3s linear infinite;
+}
+
+.electron:nth-child(2){
+  animation-delay:.7s
+}
+
+.electron:nth-child(3){
+  animation-delay:1.4s
+}
+
+@keyframes electronMove{
+  from{left:0}
+  to{left:calc(100% - 13px)}
+}
+
+
+/* FIELD */
+
+.magnet{
+  width:95px;
+  height:38px;
+  display:flex;
+  border-radius:7px;
+  overflow:hidden;
+  box-shadow:0 10px 30px rgba(0,0,0,.35);
+}
+
+.magnet span{
+  flex:1;
+  display:grid;
+  place-items:center;
+  font-size:15px;
+  font-weight:800;
+  background:#26322b;
+}
+
+.field{
+  position:absolute;
+  width:260px;
+  height:150px;
+  border:2px solid rgba(101,242,139,.35);
+  border-radius:50%;
+  animation:pulseField 2s ease-in-out infinite;
+}
+
+.field:nth-child(2){
+  width:320px;
+  height:190px;
+  opacity:.55;
+  animation-delay:.4s;
+}
+
+.field:nth-child(3){
+  width:390px;
+  height:230px;
+  opacity:.3;
+  animation-delay:.8s;
+}
+
+@keyframes pulseField{
+  0%,100%{
+    transform:scale(.94)
+  }
+
+  50%{
+    transform:scale(1.04)
+  }
+}
+
+
+/* DNA */
+
+.dna{
+  position:relative;
+  width:90px;
+  height:220px;
+}
+
+.dna:before,
+.dna:after{
+  content:"";
+  position:absolute;
+  top:0;
+  bottom:0;
+  width:5px;
+  border-radius:50%;
+  border:2px solid var(--green);
+}
+
+.dna:before{
+  left:15px;
+  transform:skewY(22deg);
+}
+
+.dna:after{
+  right:15px;
+  transform:skewY(-22deg);
+}
+
+.dna span{
+  position:absolute;
+  left:22px;
+  right:22px;
+  height:3px;
+  background:#b8eac3;
+  transform:rotate(0deg);
+}
+
+.dna span:nth-child(1){top:20px}
+.dna span:nth-child(2){top:55px}
+.dna span:nth-child(3){top:90px}
+.dna span:nth-child(4){top:125px}
+.dna span:nth-child(5){top:160px}
+.dna span:nth-child(6){top:195px}
+
+
+/* SOUND */
+
+.sound{
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
+.sound span{
+  width:5px;
+  height:45px;
+  border-radius:10px;
+  background:var(--green);
+  animation:soundWave .9s ease-in-out infinite alternate;
+}
+
+.sound span:nth-child(2){
+  height:75px;
+  animation-delay:.1s
+}
+
+.sound span:nth-child(3){
+  height:110px;
+  animation-delay:.2s
+}
+
+.sound span:nth-child(4){
+  height:145px;
+  animation-delay:.3s
+}
+
+.sound span:nth-child(5){
+  height:110px;
+  animation-delay:.4s
+}
+
+.sound span:nth-child(6){
+  height:75px;
+  animation-delay:.5s
+}
+
+.sound span:nth-child(7){
+  height:45px;
+  animation-delay:.6s
+}
+
+@keyframes soundWave{
+  from{
+    transform:scaleY(.5);
+    opacity:.5
+  }
+
+  to{
+    transform:scaleY(1);
+    opacity:1
+  }
+}
+
+.info-panel{
+  padding:30px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.info-panel .mini{
+  color:var(--green);
+  font-size:10px;
+  letter-spacing:1.5px;
+  font-weight:800;
+  text-transform:uppercase;
+}
+
+.info-panel h3{
+  font-family:Caveat,cursive;
+  font-size:39px;
+  margin-top:8px;
+}
+
+.info-panel p{
+  color:#bfc8c0;
+  font-size:13px;
+  line-height:1.7;
+  margin-top:8px;
+}
+
+.switches{
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px;
+  margin-top:20px;
+}
+
+.switch-btn{
+  padding:8px 12px;
+  border-radius:20px;
+  border:1px solid rgba(255,255,255,.18);
+  background:rgba(255,255,255,.05);
+  color:#dfe5df;
+  cursor:pointer;
+  font-size:11px;
+}
+
+.switch-btn.active,
+.switch-btn:hover{
+  background:var(--green);
+  color:#061008;
+  border-color:var(--green);
+}
+
+
+/* =========================
+   HOW IT WORKS
+========================= */
+
+.steps{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:11px;
+  padding:0 20px 22px;
+}
+
+.step{
+  padding:20px;
+  border:1px solid rgba(255,255,255,.14);
+  border-radius:15px;
+  background:rgba(255,255,255,.025);
+}
+
+.step-num{
+  color:var(--green);
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:1px;
+}
+
+.step h3{
+  margin-top:8px;
+  font-family:Caveat,cursive;
+  font-size:27px;
+}
+
+.step p{
+  color:#adb7ae;
+  font-size:11px;
+  line-height:1.55;
+  margin-top:4px;
+}
+
+
+/* =========================
+   CTA
+========================= */
+
+.final{
+  margin-top:3px;
+  min-height:220px;
+  padding:45px 25px 38px;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(4,9,6,.95),
+      rgba(4,9,6,.78),
+      rgba(4,9,6,.95)
+    ),
+    url("https://res.cloudinary.com/eq1jpw1h/image/upload/v1789027848/file_00000000c8388210b7ca866098b64437.png");
+  background-size:cover;
+  background-position:center;
+}
+
+.final:before{
+  content:"SCIENCE IS EVERYWHERE";
+  position:absolute;
+  left:50%;
+  top:15px;
+  transform:translateX(-50%);
+  font-family:Caveat,cursive;
+  font-size:16px;
+  color:rgba(101,242,139,.5);
+  letter-spacing:2px;
+}
+
+.final h2{
+  font-family:Caveat,cursive;
+  font-size:40px;
+}
+
+.final p{
+  color:#c7d0c8;
+  font-size:13px;
+  margin-top:4px;
+}
+
+.footer-line{
+  margin-top:28px;
+  padding-top:14px;
+  border-top:1px solid rgba(255,255,255,.1);
+  color:#7f8c82;
+  font-size:10px;
+}
+
+
+/* =========================
+   TOAST
+========================= */
+
+.toast{
+  position:fixed;
+  left:50%;
+  bottom:20px;
+  transform:translate(-50%,20px);
+  opacity:0;
+  pointer-events:none;
+  z-index:300;
+  padding:11px 17px;
+  border-radius:25px;
+  background:#e9f5e9;
+  color:#071008;
+  font-size:12px;
+  font-weight:800;
+  transition:.25s;
+}
+
+.toast.show{
+  opacity:1;
+  transform:translate(-50%,0);
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:900px){
+
+  .nav-links{
+    display:none;
+  }
+
+  .menu-btn{
+    display:block;
+  }
+
+  .hero{
+    min-height:590px;
+  }
+
+  .hero-bg{
+    background-position:58% center;
+  }
+
+  .hero-content{
+    max-width:60%;
+    padding:70px 0 125px;
+  }
+
+  .hero-caption{
+    right:3%;
+    bottom:35px;
+    max-width:165px;
+    font-size:19px;
+  }
+
+  .phenomena-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .interactive-box{
+    grid-template-columns:1fr;
+  }
+
+  .steps{
+    grid-template-columns:1fr;
+  }
+}
+
+
+@media(max-width:600px){
+
+  .container{
+    width:min(calc(100% - 18px),var(--max));
+  }
+
+  .nav-inner{
+    min-height:62px;
+  }
+
+  .brand-icon{
+    width:35px;
+    height:35px;
+  }
+
+  .brand-title strong{
+    font-size:15px;
+  }
+
+  .brand-title small{
+    font-size:12px;
+  }
+
+  .actions{
+    margin-left:auto;
+  }
+
+  .hero{
+    min-height:610px;
+  }
+
+  .hero-bg{
+    background-image:
+      linear-gradient(
+        90deg,
+        rgba(3,9,6,.94) 0%,
+        rgba(3,9,6,.7) 55%,
+        rgba(3,9,6,.18)
+      ),
+      linear-gradient(
+        0deg,
+        rgba(3,8,5,.9),
+        transparent 55%
+      ),
+      url("https://res.cloudinary.com/eq1jpw1h/image/upload/v1789027848/file_00000000c8388210b7ca866098b64437.png");
+
+    background-position:64% center;
+  }
+
+  .hero-content{
+    max-width:100%;
+    padding:55px 20px 135px;
+  }
+
+  .hero h1{
+    font-size:67px;
+  }
+
+  .hero-sub{
+    font-size:14px;
+    max-width:280px;
+  }
+
+  .hero-desc{
+    font-size:12px;
+    max-width:290px;
+  }
+
+  .hero-caption{
+    right:8px;
+    bottom:29px;
+    max-width:135px;
+    font-size:17px;
+  }
+
+  .hero-caption small{
+    font-size:12px;
+  }
+
+  .section-head{
+    padding:19px 16px;
+  }
+
+  .section-icon{
+    width:43px;
+    height:43px;
+    flex-basis:43px;
+    font-size:22px;
+  }
+
+  .section-head h2{
+    font-size:30px;
+  }
+
+  .intro{
+    padding:0 13px 16px;
+  }
+
+  .intro-box{
+    padding:17px;
+  }
+
+  .intro-box h3{
+    font-size:27px;
+  }
+
+  .intro-box p{
+    font-size:11px;
+  }
+
+  .phenomena{
+    padding:0 13px 16px;
+  }
+
+  .phenomena-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:7px;
+  }
+
+  .phenomenon{
+    min-height:170px;
+    padding:13px;
+  }
+
+  .p-icon{
+    width:45px;
+    height:45px;
+    font-size:24px;
+  }
+
+  .phenomenon h3{
+    font-size:13px;
+    margin-top:12px;
+
+    /* MOBILE TEXT VISIBILITY FIX */
+    color:#f4f5ef !important;
+  }
+
+  .phenomenon p{
+    font-size:9px;
+
+    /* MOBILE TEXT VISIBILITY FIX */
+    color:#aeb8b0 !important;
+  }
+
+  .explore-tag{
+    font-size:10px;
+  }
+
+  .interactive{
+    padding:0 13px 16px;
+  }
+
+  .interactive-box{
+    min-height:0;
+  }
+
+  .visual{
+    min-height:260px;
+  }
+
+  .info-panel{
+    padding:22px;
+  }
+
+  .info-panel h3{
+    font-size:34px;
+  }
+
+  .info-panel p{
+    font-size:11px;
+  }
+
+  .steps{
+    padding:0 13px 16px;
+    gap:7px;
+  }
+
+  .step{
+    padding:16px;
+  }
+
+  .final{
+    min-height:185px;
+    padding:35px 18px 30px;
+  }
+
+  .final h2{
+    font-size:31px;
+  }
+
+  .final p{
+    font-size:11px;
+  }
+}
+
+
+/* =========================
+   MOBILE MENU
+========================= */
+
+.mobile-menu{
+  display:none;
+  position:fixed;
+  z-index:150;
+  top:62px;
+  left:0;
+  right:0;
+  padding:12px;
+  background:rgba(6,11,8,.98);
+  border-bottom:1px solid var(--line);
+}
+
+.mobile-menu.open{
+  display:block;
+}
+
+.mobile-menu a{
+  display:block;
+  padding:13px;
+  border-bottom:1px solid rgba(255,255,255,.05);
+  font-size:14px;
+}
+
+.mobile-menu a:hover{
+  background:rgba(101,242,139,.1);
+  color:var(--green);
+}
+
+
+@media(prefers-reduced-motion:reduce){
+
+  *,
+  *:before,
+  *:after{
+    animation-duration:.01ms!important;
+    transition-duration:.01ms!important;
+  }
+
+  html{
+    scroll-behavior:auto;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="world"></div>
+
+
+<!-- =========================
+     NAVBAR
+========================= -->
+
+<header class="nav">
+
+  <div class="container nav-inner">
+
+    <a class="brand" href="../index.html">
+
+      <div class="brand-icon">⚗</div>
+
+      <div class="brand-title">
+        <strong>SCIENCE</strong>
+        <small>BEYOND THE TEXTBOOK</small>
+      </div>
+
+    </a>
+
+
+    <nav class="nav-links">
+
+      <a href="../index.html">⌂ Home</a>
+
+
+      <div class="nav-drop">
+        Subjects ˅
+
+        <div class="dropdown">
+
+          <a href="../physics/index.html">
+            Physics
+          </a>
+
+          <a href="../chemistry/index.html">
+            Chemistry
+          </a>
+
+          <a href="../biology/index.html">
+            Biology
+          </a>
+
+          <a href="../earth/index.html">
+            Earth & Environment
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="nav-drop">
+        Explore ˅
+
+        <div class="dropdown">
+
+          <a href="../why/index.html">
+            Why Does This Happen?
+          </a>
+
+          <a href="index.html">
+            Make the Invisible Visible
+          </a>
+
+          <a href="../magic-science/index.html">
+            Science That Looks Like Magic
+          </a>
+
+          <a href="../what-if/index.html">
+            What If?
+          </a>
+
+          <a href="../beyond-textbook/index.html">
+            Beyond the Textbook
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="nav-drop">
+
+        Games ˅
+
+        <div class="dropdown">
+
+          <a href="../games/index.html">
+            All Games
+          </a>
+
+          <a href="../games/circuit-builder.html">
+            Circuit Builder
+          </a>
+
+          <a href="../games/magnetic-maze.html">
+            Magnetic Maze
+          </a>
+
+          <a href="../games/build-a-cell.html">
+            Build a Cell
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="nav-drop">
+
+        Lab ˅
+
+        <div class="dropdown">
+
+          <a href="../lab/index.html">
+            Virtual Lab
+          </a>
+
+          <a href="../lab/ohms-law.html">
+            Ohm's Law
+          </a>
+
+          <a href="../lab/electric-circuit.html">
+            Electric Circuit
+          </a>
+
+          <a href="../lab/ray-optics.html">
+            Ray Optics
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="nav-drop">
+
+        More ˅
+
+        <div class="dropdown">
+
+          <a href="../science-around-us/index.html">
+            Science Around Us
+          </a>
+
+          <a href="../real-world/index.html">
+            Science in the Real World
+          </a>
+
+          <a href="../about.html">
+            About
+          </a>
+
+        </div>
+
+      </div>
+
+    </nav>
+
+
+    <div class="actions">
+
+      <button class="lang" id="langBtn">
+        EN <span>|</span> <b>हिंदी</b>
+      </button>
+
+      <button class="icon-btn" id="menuBtn">
+        ☰
+      </button>
+
+    </div>
+
+  </div>
+
+</header>
+
+
+<!-- =========================
+     MOBILE MENU
+========================= -->
+
+<div class="mobile-menu" id="mobileMenu">
+
+  <a href="../index.html">
+    ⌂ Home
+  </a>
+
+  <a href="../physics/index.html">
+    ⚛ Physics
+  </a>
+
+  <a href="../chemistry/index.html">
+    🧪 Chemistry
+  </a>
+
+  <a href="../biology/index.html">
+    🧬 Biology
+  </a>
+
+  <a href="../earth/index.html">
+    🌍 Earth & Environment
+  </a>
+
+  <a href="../why/index.html">
+    💡 Why Does This Happen?
+  </a>
+
+  <a href="index.html">
+    👁 Make the Invisible Visible
+  </a>
+
+  <a href="../magic-science/index.html">
+    ✨ Science That Looks Like Magic
+  </a>
+
+  <a href="../what-if/index.html">
+    ❓ What If?
+  </a>
+
+  <a href="../beyond-textbook/index.html">
+    🚀 Beyond the Textbook
+  </a>
+
+  <a href="../lab/index.html">
+    🧪 Virtual Lab
+  </a>
+
+  <a href="../games/index.html">
+    🎮 Science Games
+  </a>
+
+  <a href="../real-world/index.html">
+    🌐 Science in the Real World
+  </a>
+
+  <a href="../science-around-us/index.html">
+    📰 Science Around Us
+  </a>
+
+</div>
+
+
+<main>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+  <div class="hero-bg"></div>
+
+  <div class="container">
+
+    <div class="hero-content">
+
+      <div class="kicker">
+        Hidden Science
+      </div>
+
+      <h1>
+
+        <span>
+          Make the
+        </span>
+
+        <span class="green">
+          Invisible
+        </span>
+
+        <span>
+          Visible
+        </span>
+
+      </h1>
+
+
+      <p
+        class="hero-sub"
+        data-en="See what your eyes normally can't."
+        data-hi="जो आँखें सामान्यतः नहीं देख सकतीं, उसे देखो.">
+
+        See what your eyes normally can't.
+
+      </p>
+
+
+      <p
+        class="hero-desc"
+        data-en="Electrons, magnetic fields, sound waves, DNA and countless microscopic processes are happening around you right now. Let's make them visible."
+        data-hi="इलेक्ट्रॉन, चुंबकीय क्षेत्र, ध्वनि तरंगें, DNA और अनगिनत सूक्ष्म प्रक्रियाएँ अभी आपके आसपास हो रही हैं। आइए इन्हें दृश्य बनाकर समझते हैं।">
+
+        Electrons, magnetic fields, sound waves, DNA and countless microscopic processes are happening around you right now. Let's make them visible.
+
+      </p>
+
+
+      <div class="hero-buttons">
+
+        <a class="cta" href="#phenomena">
+
+          <span
+            data-en="Start Exploring"
+            data-hi="खोज शुरू करें">
+
+            Start Exploring
+
+          </span>
+
+          →
+
+        </a>
+
+
+        <a class="ghost-btn" href="../index.html">
+
+          ←
+
+          <span
+            data-en="Back Home"
+            data-hi="होम पर जाएँ">
+
+            Back Home
+
+          </span>
+
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="hero-caption">
+
+      “What if we could see
+      the science happening
+      beneath the surface?”
+
+      <small>
+        — Science Beyond the Textbook
+      </small>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     INTRO
+========================= -->
+
+<section>
+
+  <div class="container">
+
+    <div class="section-card">
+
+      <div class="section-head">
+
+        <div class="section-icon">
+          👁
+        </div>
+
+        <div>
+
+          <h2
+            data-en="Look Beyond What You See"
+            data-hi="जो दिखता है, उससे आगे देखो">
+
+            Look Beyond What You See
+
+          </h2>
+
+          <p
+            data-en="Reality is full of invisible processes."
+            data-hi="वास्तविक दुनिया अदृश्य प्रक्रियाओं से भरी है।">
+
+            Reality is full of invisible processes.
+
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="intro">
+
+        <div class="intro-box">
+
+          <h3
+            data-en="Your eyes show you the world. Science reveals what is happening inside it."
+            data-hi="आपकी आँखें दुनिया दिखाती हैं। विज्ञान बताता है कि उसके अंदर वास्तव में क्या हो रहा है।">
+
+            Your eyes show you the world. Science reveals what is happening inside it.
+
+          </h3>
+
+
+          <p
+            data-en="Electric current is not a visible stream of tiny balls. A magnetic field cannot normally be seen. Sound travels through invisible changes in pressure. Even inside your cells, millions of molecular events happen every second. Here, we turn these hidden ideas into visuals you can explore."
+            data-hi="विद्युत धारा आँखों को बहती हुई दिखाई नहीं देती। चुंबकीय क्षेत्र सामान्यतः दिखाई नहीं देता। ध्वनि अदृश्य दाब परिवर्तनों के रूप में यात्रा करती है। यहाँ तक कि आपकी कोशिकाओं के अंदर भी हर सेकंड लाखों आणविक घटनाएँ होती हैं। यहाँ हम इन अदृश्य विचारों को ऐसे दृश्य रूप में समझेंगे जिन्हें आप आसानी से explore कर सकते हैं।">
+
+            Electric current is not a visible stream of tiny balls. A magnetic field cannot normally be seen. Sound travels through invisible changes in pressure. Even inside your cells, millions of molecular events happen every second. Here, we turn these hidden ideas into visuals you can explore.
+
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     PHENOMENA
+========================= -->
+
+<section id="phenomena">
+
+  <div class="container">
+
+    <div class="section-card">
+
+      <div class="section-head">
+
+        <div class="section-icon">
+          🔬
+        </div>
+
+        <div>
+
+          <h2
+            data-en="What Can We Make Visible?"
+            data-hi="हम क्या दृश्य बना सकते हैं?">
+
+            What Can We Make Visible?
+
+          </h2>
+
+          <p
+            data-en="Choose a phenomenon and explore it."
+            data-hi="किसी घटना को चुनें और उसे explore करें।">
+
+            Choose a phenomenon and explore it.
+
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="phenomena">
+
+        <div class="phenomena-grid">
+
+
+          <!-- ELECTRONS -->
+
+          <button
+            class="phenomenon"
+            data-topic="electrons">
+
+            <div class="p-icon">
+              ⚡
+            </div>
+
+            <h3
+              data-en="Electrons & Current"
+              data-hi="इलेक्ट्रॉन और विद्युत धारा">
+
+              Electrons & Current
+
+            </h3>
+
+            <p
+              data-en="See how charged particles move through a conductor."
+              data-hi="देखें कि आवेशित कण चालक के अंदर कैसे गति करते हैं।">
+
+              See how charged particles move through a conductor.
+
+            </p>
+
+            <span class="explore-tag">
+              Explore →
+            </span>
+
+          </button>
+
+
+          <!-- MAGNET -->
+
+          <button
+            class="phenomenon"
+            data-topic="magnetic">
+
+            <div class="p-icon">
+              🧲
+            </div>
+
+            <h3
+              data-en="Magnetic Field"
+              data-hi="चुंबकीय क्षेत्र">
+
+              Magnetic Field
+
+            </h3>
+
+            <p
+              data-en="Visualize the invisible field surrounding a magnet."
+              data-hi="चुंबक के चारों ओर मौजूद अदृश्य क्षेत्र को देखें।">
+
+              Visualize the invisible field surrounding a magnet.
+
+            </p>
+
+            <span class="explore-tag">
+              Explore →
+            </span>
+
+          </button>
+
+
+          <!-- SOUND -->
+
+          <button
+            class="phenomenon"
+            data-topic="sound">
+
+            <div class="p-icon">
+              🔊
+            </div>
+
+            <h3
+              data-en="Sound Waves"
+              data-hi="ध्वनि तरंगें">
+
+              Sound Waves
+
+            </h3>
+
+            <p
+              data-en="See how vibrations travel through a medium."
+              data-hi="देखें कि कंपन माध्यम के अंदर कैसे यात्रा करते हैं।">
+
+              See how vibrations travel through a medium.
+
+            </p>
+
+            <span class="explore-tag">
+              Explore →
+            </span>
+
+          </button>
+
+
+          <!-- DNA -->
+
+          <button
+            class="phenomenon"
+            data-topic="dna">
+
+            <div class="p-icon">
+              🧬
+            </div>
+
+            <h3
+              data-en="DNA"
+              data-hi="DNA">
+
+              DNA
+
+            </h3>
+
+            <p
+              data-en="Explore the molecule that stores biological information."
+              data-hi="उस अणु को समझें जो जैविक जानकारी को संग्रहीत करता है।">
+
+              Explore the molecule that stores biological information.
+
+            </p>
+
+            <span class="explore-tag">
+              Explore →
+            </span>
+
+          </button>
+
+
+          <!-- MOLECULES -->
+
+          <button
+            class="phenomenon"
+            data-topic="molecules">
+
+            <div class="p-icon">
+              ⚛️
+            </div>
+
+            <h3
+              data-en="Atoms & Molecules"
+              data-hi="परमाणु और अणु">
+
+              Atoms & Molecules
+
+            </h3>
+
+            <p
+              data-en="Discover the tiny building blocks of matter."
+              data-hi="पदार्थ के सूक्ष्म निर्माण खंडों को जानें।">
+
+              Discover the tiny building blocks of matter.
+
+            </p>
+
+            <span class="explore-tag">
+              Explore →
+            </span>
+
+          </button>
+
+
+          <!-- DIFFUSION -->
+
+          <button
+            class="phenomenon"
+            data-topic="diffusion">
+
+            <div class="p-icon">
+              💧
+            </div>
+
+            <h3
+              data-en="Diffusion"
+              data-hi="विसरण">
+
+              Diffusion
+
+            </h3>
+
+            <p
+              data-en="Watch particles spread from crowded to less crowded regions."
+              data-hi="देखें कि कण अधिक सांद्रता से कम सांद्रता की ओर कैसे फैलते हैं।">
+
+              Watch particles spread from crowded to less crowded regions.
+
+            </p>
+
+            <span class="explore-tag">
+              Explore →
+            </span>
+
+          </button>
+
+
+          <!-- RESPIRATION -->
+
+          <button
+            class="phenomenon"
+            data-topic="respiration">
+
+            <div class="p-icon">
+              🫁
+            </div>
+
+            <h3
+              data-en="Gas Exchange"
+              data-hi="गैसों का आदान-प्रदान">
+
+              Gas Exchange
+
+            </h3>
+
+            <p
+              data-en="See how oxygen and carbon dioxide move during respiration."
+              data-hi="देखें कि श्वसन के दौरान ऑक्सीजन और कार्बन डाइऑक्साइड कैसे गति करते हैं।">
+
+              See how oxygen and carbon dioxide move during respiration.
+
+            </p>
+
+            <span class="explore-tag">
+              Explore →
+            </span>
+
+          </button>
+
+
+          <!-- AIR PRESSURE -->
+
+          <button
+            class="phenomenon"
+            data-topic="pressure">
+
+            <div class="p-icon">
+              🌬️
+            </div>
+
+            <h3
+              data-en="Air Pressure"
+              data-hi="वायु दाब">
+
+              Air Pressure
+
+            </h3>
+
+            <p
+              data-en="Visualize the invisible push created by air particles."
+              data-hi="हवा के कणों द्वारा उत्पन्न अदृश्य दाब को देखें।">
+
+              Visualize the invisible push created by air particles.
+
+            </p>
+
+            <span class="explore-tag">
+              Explore →
+            </span>
+
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     INTERACTIVE EXPLORER
+========================= -->
+
+<section>
+
+  <div class="container">
+
+    <div class="section-card">
+
+      <div class="section-head">
+
+        <div class="section-icon">
+          🧪
+        </div>
+
+        <div>
+
+          <h2
+            data-en="See It in Action"
+            data-hi="इसे काम करते हुए देखो">
+
+            See It in Action
+
+          </h2>
+
+          <p
+            data-en="A simple visual model of invisible science."
+            data-hi="अदृश्य विज्ञान का एक सरल दृश्य मॉडल।">
+
+            A simple visual model of invisible science.
+
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="interactive">
+
+        <div class="interactive-box">
+
+
+          <div class="visual">
+
+            <div
+              class="visual-label"
+              id="visualLabel">
+
+              ELECTRONS
+
+            </div>
+
+
+            <div
+              class="visual-content"
+              id="visualContent">
+
+              <div class="wire">
+
+                <span class="electron"></span>
+                <span class="electron"></span>
+                <span class="electron"></span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="info-panel">
+
+            <span
+              class="mini"
+              id="infoMini">
+
+              Invisible phenomenon
+
+            </span>
+
+
+            <h3 id="infoTitle">
+              Electrons & Current
+            </h3>
+
+
+            <p id="infoText">
+
+              Electric current involves the movement of charged particles through a conductor. The particles themselves are far too small to see, but we can model their motion.
+
+            </p>
+
+
+            <div class="switches">
+
+              <button
+                class="switch-btn active"
+                data-topic="electrons">
+
+                ⚡ Electrons
+
+              </button>
+
+
+              <button
+                class="switch-btn"
+                data-topic="magnetic">
+
+                🧲 Field
+
+              </button>
+
+
+              <button
+                class="switch-btn"
+                data-topic="sound">
+
+                🔊 Sound
+
+              </button>
+
+
+              <button
+                class="switch-btn"
+                data-topic="dna">
+
+                🧬 DNA
+
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     SCIENTIFIC THINKING
+========================= -->
+
+<section>
+
+  <div class="container">
+
+    <div class="section-card">
+
+      <div class="section-head">
+
+        <div class="section-icon">
+          🧠
+        </div>
+
+        <div>
+
+          <h2
+            data-en="How Do Scientists See the Invisible?"
+            data-hi="वैज्ञानिक अदृश्य चीज़ों को कैसे देखते हैं?">
+
+            How Do Scientists See the Invisible?
+
+          </h2>
+
+          <p
+            data-en="Science uses evidence, models and instruments."
+            data-hi="विज्ञान प्रमाण, मॉडल और उपकरणों का उपयोग करता है।">
+
+            Science uses evidence, models and instruments.
+
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="steps">
+
+
+        <div class="step">
+
+          <div class="step-num">
+            01 — OBSERVE
+          </div>
+
+          <h3
+            data-en="Notice the Effect"
+            data-hi="प्रभाव को देखो">
+
+            Notice the Effect
+
+          </h3>
+
+          <p
+            data-en="We may not see the cause directly, but we can observe what it does."
+            data-hi="हम कारण को सीधे नहीं देख सकते, लेकिन उसके प्रभाव को देख सकते हैं।">
+
+            We may not see the cause directly, but we can observe what it does.
+
+          </p>
+
+        </div>
+
+
+        <div class="step">
+
+          <div class="step-num">
+            02 — MODEL
+          </div>
+
+          <h3
+            data-en="Build a Model"
+            data-hi="एक मॉडल बनाओ">
+
+            Build a Model
+
+          </h3>
+
+          <p
+            data-en="Scientists use diagrams, equations, simulations and physical models to represent hidden processes."
+            data-hi="वैज्ञानिक अदृश्य प्रक्रियाओं को समझाने के लिए चित्र, समीकरण, सिमुलेशन और भौतिक मॉडल बनाते हैं।">
+
+            Scientists use diagrams, equations, simulations and physical models to represent hidden processes.
+
+          </p>
+
+        </div>
+
+
+        <div class="step">
+
+          <div class="step-num">
+            03 — TEST
+          </div>
+
+          <h3
+            data-en="Test the Idea"
+            data-hi="विचार की जाँच करो">
+
+            Test the Idea
+
+          </h3>
+
+          <p
+            data-en="If the model correctly predicts what happens, it becomes a useful scientific explanation."
+            data-hi="यदि मॉडल सही परिणाम की भविष्यवाणी करता है, तो वह एक उपयोगी वैज्ञानिक व्याख्या बन जाता है।">
+
+            If the model correctly predicts what happens, it becomes a useful scientific explanation.
+
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     FINAL CTA
+========================= -->
+
+<section>
+
+  <div class="container">
+
+    <div class="section-card final">
+
+
+      <h2
+        data-en="There's More Science Hiding in Plain Sight."
+        data-hi="आपके आसपास अभी भी बहुत सा विज्ञान छिपा है।">
+
+        There's More Science Hiding in Plain Sight.
+
+      </h2>
+
+
+      <p
+        data-en="Keep exploring. The invisible is everywhere."
+        data-hi="खोजते रहो। अदृश्य विज्ञान हर जगह है।">
+
+        Keep exploring. The invisible is everywhere.
+
+      </p>
+
+
+      <a
+        class="cta"
+        href="../index.html#explore"
+        style="margin-top:15px;">
+
+        <span
+          data-en="Explore More Science"
+          data-hi="और विज्ञान खोजें">
+
+          Explore More Science
+
+        </span>
+
+        →
+
+      </a>
+
+
+      <div class="footer-line">
+
+        ©
+        <span id="year"></span>
+
+        Science Beyond the Textbook · Built for curious minds.
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+
+<div
+  class="toast"
+  id="toast">
+</div>
+
+
+<script>
+
+/* ==========================================
+   LANGUAGE SYSTEM
+========================================== */
+
+let currentLanguage =
+  localStorage.getItem("scienceLanguage") || "en";
+
+
+function applyLanguage(){
+
+  document.documentElement.lang =
+    currentLanguage === "hi" ? "hi" : "en";
+
+
+  document.querySelectorAll("[data-en]").forEach(el => {
+
+    const value =
+      currentLanguage === "hi"
+        ? el.dataset.hi
+        : el.dataset.en;
+
+    if(value){
+      el.textContent = value;
+    }
+
+  });
+
+
+  document.getElementById("langBtn").innerHTML =
+    currentLanguage === "en"
+      ? 'EN <span>|</span> <b>हिंदी</b>'
+      : '<b>EN</b> <span>|</span> हिंदी';
+
+
+  updateExplorer(activeTopic);
+
+}
+
+
+document.getElementById("langBtn")
+  .addEventListener("click",()=>{
+
+    currentLanguage =
+      currentLanguage === "en"
+        ? "hi"
+        : "en";
+
+
+    localStorage.setItem(
+      "scienceLanguage",
+      currentLanguage
+    );
+
+
+    applyLanguage();
+
+
+    showToast(
+      currentLanguage === "hi"
+        ? "भाषा: हिंदी"
+        : "Language: English"
+    );
+
+  });
+
+
+/* ==========================================
+   INTERACTIVE EXPLORER
+========================================== */
+
+const topics = {
+
+  electrons:{
+
+    label:"ELECTRONS",
+
+    titleEn:"Electrons & Current",
+
+    titleHi:"इलेक्ट्रॉन और विद्युत धारा",
+
+    textEn:
+      "Electric current involves the movement of charged particles through a conductor. The particles themselves are far too small to see, but we can model their motion.",
+
+    textHi:
+      "विद्युत धारा में चालक के अंदर आवेशित कणों की गति शामिल होती है। ये कण इतने छोटे होते हैं कि सीधे दिखाई नहीं देते, लेकिन हम उनके व्यवहार का मॉडल बना सकते हैं."
+
+  },
+
+
+  magnetic:{
+
+    label:"MAGNETIC FIELD",
+
+    titleEn:"Magnetic Field",
+
+    titleHi:"चुंबकीय क्षेत्र",
+
+    textEn:
+      "A magnetic field surrounds magnets and moving charges. We cannot normally see the field, but field lines help us visualize its direction and strength.",
+
+    textHi:
+      "चुंबकीय क्षेत्र चुंबक और गतिमान आवेशों के आसपास मौजूद होता है। इसे सामान्यतः देखा नहीं जा सकता, लेकिन field lines इसकी दिशा और शक्ति को समझने में मदद करती हैं।"
+
+  },
+
+
+  sound:{
+
+    label:"SOUND WAVES",
+
+    titleEn:"Sound Waves",
+
+    titleHi:"ध्वनि तरंगें",
+
+    textEn:
+      "Sound travels through vibrations in a medium. The particles oscillate around their positions while the disturbance moves forward.",
+
+    textHi:
+      "ध्वनि किसी माध्यम में कंपन के द्वारा यात्रा करती है। माध्यम के कण अपनी स्थिति के आसपास कंपन करते हैं जबकि विक्षोभ आगे बढ़ता है।"
+
+  },
+
+
+  dna:{
+
+    label:"DNA",
+
+    titleEn:"DNA",
+
+    titleHi:"DNA",
+
+    textEn:
+      "DNA is a molecule that stores biological information. Its structure contains information used by living cells to build and maintain themselves.",
+
+    textHi:
+      "DNA एक ऐसा अणु है जो जैविक जानकारी को संग्रहीत करता है। इसकी संरचना में वह जानकारी होती है जिसका उपयोग जीवित कोशिकाएँ अपने निर्माण और कार्यों के लिए करती हैं।"
+
+  }
+
+};
+
+
+let activeTopic = "electrons";
+
+
+function updateExplorer(topic){
+
+  activeTopic = topic;
+
+  const data = topics[topic];
+
+  if(!data) return;
+
+
+  document.getElementById("visualLabel").textContent =
+    data.label;
+
+
+  document.getElementById("infoTitle").textContent =
+    currentLanguage === "hi"
+      ? data.titleHi
+      : data.titleEn;
+
+
+  document.getElementById("infoText").textContent =
+    currentLanguage === "hi"
+      ? data.textHi
+      : data.textEn;
+
+
+  document.querySelectorAll(".switch-btn")
+    .forEach(btn => {
+
+      btn.classList.toggle(
+        "active",
+        btn.dataset.topic === topic
+      );
+
+    });
+
+
+  renderVisual(topic);
+
+}
+
+
+/* ==========================================
+   VISUAL RENDER
+========================================== */
+
+function renderVisual(topic){
+
+  const visual =
+    document.getElementById("visualContent");
+
+
+  visual.innerHTML = "";
+
+
+  /* ELECTRONS */
+
+  if(topic === "electrons"){
+
+    visual.innerHTML = `
+
+      <div class="wire">
+
+        <span class="electron"></span>
+
+        <span class="electron"></span>
+
+        <span class="electron"></span>
+
+      </div>
+
+    `;
+
+  }
+
+
+  /* MAGNETIC FIELD */
+
+  if(topic === "magnetic"){
+
+    visual.innerHTML = `
+
+      <div class="field"></div>
+
+      <div class="field"></div>
+
+      <div class="field"></div>
+
+      <div class="magnet">
+
+        <span>N</span>
+
+        <span>S</span>
+
+      </div>
+
+    `;
+
+  }
+
+
+  /* SOUND */
+
+  if(topic === "sound"){
+
+    visual.innerHTML = `
+
+      <div class="sound">
+
+        <span></span>
+
+        <span></span>
+
+        <span></span>
+
+        <span></span>
+
+        <span></span>
+
+        <span></span>
+
+        <span></span>
+
+      </div>
+
+    `;
+
+  }
+
+
+  /* DNA */
+
+  if(topic === "dna"){
+
+    visual.innerHTML = `
+
+      <div class="dna">
+
+        <span></span>
+
+        <span></span>
+
+        <span></span>
+
+        <span></span>
+
+        <span></span>
+
+        <span></span>
+
+      </div>
+
+    `;
+
+  }
+
+}
+
+
+/* ==========================================
+   CARD CLICK
+========================================== */
+
+document.querySelectorAll(".phenomenon")
+  .forEach(card => {
+
+    card.addEventListener("click",()=>{
+
+      const topic =
+        card.dataset.topic;
+
+
+      if(topics[topic]){
+
+        updateExplorer(topic);
+
+
+        document.querySelector(".interactive")
+          .scrollIntoView({
+
+            behavior:"smooth",
+
+            block:"center"
+
+          });
+
+      }else{
+
+        showToast(
+
+          currentLanguage === "hi"
+
+            ? "यह visual जल्द जोड़ा जाएगा।"
+
+            : "This visual is coming soon."
+
+        );
+
+      }
+
+    });
+
+  });
+
+
+/* ==========================================
+   SWITCH BUTTONS
+========================================== */
+
+document.querySelectorAll(".switch-btn")
+  .forEach(btn => {
+
+    btn.addEventListener("click",()=>{
+
+      updateExplorer(
+        btn.dataset.topic
+      );
+
+    });
+
+  });
+
+
+/* ==========================================
+   MOBILE MENU
+========================================== */
+
+const mobileMenu =
+  document.getElementById("mobileMenu");
+
+
+document.getElementById("menuBtn")
+  .addEventListener("click",()=>{
+
+    mobileMenu.classList.toggle("open");
+
+  });
+
+
+mobileMenu.querySelectorAll("a")
+  .forEach(link=>{
+
+    link.addEventListener("click",()=>{
+
+      mobileMenu.classList.remove("open");
+
+    });
+
+  });
+
+
+/* ==========================================
+   TOAST
+========================================== */
+
+function showToast(message){
+
+  const toast =
+    document.getElementById("toast");
+
+
+  toast.textContent =
+    message;
+
+
+  toast.classList.add("show");
+
+
+  clearTimeout(
+    window.toastTimer
+  );
+
+
+  window.toastTimer =
+    setTimeout(()=>{
+
+      toast.classList.remove("show");
+
+    },1800);
+
+}
+
+
+/* ==========================================
+   INIT
+========================================== */
+
+document.getElementById("year")
+  .textContent =
+  new Date().getFullYear();
+
+
+applyLanguage();
+
+</script>
+
+</body>
+  </html>
