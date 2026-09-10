@@ -1125,29 +1125,52 @@ section{
 
 
 .experiment-btn{
-  left:13px;
-  right:13px;
-  bottom:13px;
+  position:absolute;
 
-  height:33px;
+  left:21px;
+  right:21px;
+  bottom:17px;
+
+  height:36px;
 
   display:flex;
   align-items:center;
   justify-content:center;
 
-  font-size:9px;
+  border-radius:20px;
+
+  border:1px solid rgba(101,242,139,.45);
+
+  background:rgba(101,242,139,.12);
+
+  color:var(--green);
+
+  font-weight:800;
+  font-size:11px;
   line-height:1;
+
   text-align:center;
+  text-decoration:none;
+
+  cursor:pointer;
+  transition:.2s;
+
+  z-index:2;
 }
 
 .experiment-btn:hover{
   background:var(--green);
-
   color:#061008;
-
   border-color:var(--green);
 }
+.experiment-btn,
+.experiment-btn:visited{
+  color:var(--green);
+}
 
+.experiment-btn:hover{
+  color:#061008;
+  }  
 
 /* ==================================================
    HOW LAB WORKS
@@ -1824,7 +1847,6 @@ section{
 
   font-size:9px;
   line-height:1;
-  text-align:center;
 }
 
 
