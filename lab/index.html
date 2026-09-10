@@ -1,0 +1,4188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="Virtual Science Lab — perform interactive experiments, observe results and understand science beyond the textbook.">
+
+<meta name="theme-color" content="#07100b">
+
+<title>Virtual Lab | Science Beyond the Textbook</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&display=swap');
+
+
+:root{
+  --bg:#07100b;
+  --bg2:#0b1510;
+  --panel:rgba(13,20,16,.94);
+  --panel2:#111b15;
+  --green:#65f28b;
+  --green2:#35c968;
+  --text:#f4f5ef;
+  --muted:#aeb8af;
+  --line:rgba(255,255,255,.15);
+  --shadow:0 18px 50px rgba(0,0,0,.4);
+  --max:1280px;
+}
+
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+
+html{
+  scroll-behavior:smooth;
+}
+
+
+body{
+  min-height:100vh;
+  overflow-x:hidden;
+  color:var(--text);
+  background:
+    radial-gradient(
+      circle at 50% 8%,
+      rgba(53,130,73,.2),
+      transparent 30%
+    ),
+    linear-gradient(
+      180deg,
+      #07100b,
+      #0b120e 50%,
+      #060b08
+    );
+
+  font-family:
+    Inter,
+    "Noto Sans Devanagari",
+    sans-serif;
+}
+
+
+body:before{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:50;
+  pointer-events:none;
+  opacity:.1;
+
+  background-image:
+    radial-gradient(
+      circle at 20% 20%,
+      #fff 0 1px,
+      transparent 1.5px
+    ),
+    radial-gradient(
+      circle at 80% 70%,
+      #fff 0 1px,
+      transparent 1.5px
+    );
+
+  background-size:
+    180px 180px,
+    240px 240px;
+
+  mix-blend-mode:screen;
+}
+
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+
+button{
+  font:inherit;
+}
+
+
+img{
+  display:block;
+  max-width:100%;
+}
+
+
+.container{
+  width:min(
+    calc(100% - 28px),
+    var(--max)
+  );
+
+  margin:auto;
+}
+
+
+.caveat{
+  font-family:Caveat,cursive;
+}
+
+
+/* ==================================================
+   BACKGROUND WORLD
+================================================== */
+
+
+.world{
+  position:fixed;
+  inset:0;
+  z-index:-2;
+  overflow:hidden;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(2,8,5,.3),
+      rgba(3,8,5,.86)
+    ),
+    radial-gradient(
+      circle at 15% 30%,
+      rgba(39,102,52,.35),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 85% 25%,
+      rgba(21,84,48,.3),
+      transparent 30%
+    ),
+    #08110c;
+}
+
+
+.world:before,
+.world:after{
+  content:"";
+  position:absolute;
+
+  width:48vw;
+  height:75vh;
+
+  filter:blur(45px);
+  opacity:.3;
+
+  background:
+    radial-gradient(
+      ellipse,
+      #1e6b3d,
+      transparent 68%
+    );
+}
+
+
+.world:before{
+  left:-25vw;
+  top:18vh;
+}
+
+
+.world:after{
+  right:-25vw;
+  top:45vh;
+}
+
+
+/* ==================================================
+   NAVBAR
+================================================== */
+
+
+.nav{
+  position:sticky;
+  top:0;
+  z-index:100;
+
+  border-bottom:
+    1px solid rgba(255,255,255,.14);
+
+  background:
+    rgba(5,10,8,.88);
+
+  backdrop-filter:blur(18px);
+}
+
+
+.nav-inner{
+  min-height:68px;
+
+  display:flex;
+  align-items:center;
+
+  gap:22px;
+}
+
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:10px;
+
+  min-width:max-content;
+}
+
+
+.brand-icon{
+  width:40px;
+  height:40px;
+
+  border:
+    1px solid rgba(101,242,139,.5);
+
+  border-radius:12px;
+
+  display:grid;
+  place-items:center;
+
+  color:var(--green);
+
+  background:
+    rgba(101,242,139,.07);
+
+  font-size:20px;
+}
+
+
+.brand-title{
+  line-height:.9;
+}
+
+
+.brand-title strong{
+  display:block;
+  font-size:18px;
+}
+
+
+.brand-title small{
+  font-family:Caveat,cursive;
+  font-size:14px;
+  color:#d9e2d8;
+}
+
+
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:4px;
+
+  margin-left:auto;
+}
+
+
+.nav-links a,
+.nav-drop{
+  padding:10px 13px;
+
+  border-radius:10px;
+
+  font-size:13px;
+
+  color:#e7ebe6;
+
+  white-space:nowrap;
+
+  cursor:pointer;
+}
+
+
+.nav-links a:hover,
+.nav-drop:hover{
+  background:
+    rgba(101,242,139,.1);
+
+  color:var(--green);
+}
+
+
+.nav-drop{
+  position:relative;
+}
+
+
+.dropdown{
+  display:none;
+
+  position:absolute;
+
+  top:42px;
+  left:0;
+
+  min-width:190px;
+
+  padding:8px;
+
+  background:
+    rgba(9,15,12,.98);
+
+  border:
+    1px solid var(--line);
+
+  border-radius:14px;
+
+  box-shadow:var(--shadow);
+}
+
+
+.nav-drop:hover .dropdown{
+  display:block;
+}
+
+
+.dropdown a{
+  display:block;
+  padding:10px;
+}
+
+
+.actions{
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
+
+.lang{
+  border:
+    1px solid rgba(255,255,255,.6);
+
+  background:
+    rgba(0,0,0,.25);
+
+  color:#fff;
+
+  border-radius:22px;
+
+  padding:7px 11px;
+
+  font-size:12px;
+
+  cursor:pointer;
+}
+
+
+.lang b{
+  color:var(--green);
+}
+
+
+.icon-btn{
+  width:38px;
+  height:38px;
+
+  border-radius:50%;
+
+  border:
+    1px solid var(--line);
+
+  background:
+    rgba(255,255,255,.06);
+
+  color:#fff;
+
+  cursor:pointer;
+}
+
+
+.menu-btn{
+  display:none;
+}
+
+
+/* ==================================================
+   HERO
+================================================== */
+
+
+.hero{
+  min-height:600px;
+
+  position:relative;
+  overflow:hidden;
+
+  display:flex;
+  align-items:center;
+
+  border-bottom:
+    1px solid rgba(255,255,255,.08);
+}
+
+
+.hero-bg{
+  position:absolute;
+  inset:0;
+
+  background-image:
+
+    linear-gradient(
+      90deg,
+      rgba(3,9,6,.96) 0%,
+      rgba(3,9,6,.78) 32%,
+      rgba(3,9,6,.28) 67%,
+      rgba(3,9,6,.52) 100%
+    ),
+
+    linear-gradient(
+      0deg,
+      rgba(3,8,5,.86),
+      transparent 58%
+    ),
+
+    url("https://res.cloudinary.com/eq1jpw1h/image/upload/v1789036823/file_000000006de08208905b21a879a734fd.png");
+
+  background-size:cover;
+  background-position:center;
+
+  transform:scale(1.015);
+}
+
+
+.hero-content{
+  position:relative;
+  z-index:2;
+
+  padding:
+    90px 0 105px;
+
+  max-width:620px;
+}
+
+
+.kicker{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+
+  color:var(--green);
+
+  font-size:11px;
+  font-weight:800;
+
+  letter-spacing:2px;
+
+  text-transform:uppercase;
+
+  margin-bottom:14px;
+}
+
+
+.kicker:before{
+  content:"";
+
+  width:28px;
+  height:2px;
+
+  background:var(--green);
+}
+
+
+.hero h1{
+  font-family:Caveat,cursive;
+
+  font-size:
+    clamp(64px,8vw,108px);
+
+  line-height:.78;
+
+  letter-spacing:-2px;
+
+  text-transform:uppercase;
+
+  text-shadow:
+    0 5px 35px rgba(0,0,0,.7);
+}
+
+
+.hero h1 span{
+  display:block;
+}
+
+
+.hero h1 .green{
+  color:#dffff0;
+}
+
+
+.hero-sub{
+  margin-top:28px;
+
+  font-size:17px;
+  font-weight:800;
+}
+
+
+.hero-desc{
+  max-width:540px;
+
+  margin-top:8px;
+
+  color:#ccd5cd;
+
+  font-size:14px;
+
+  line-height:1.7;
+}
+
+
+.hero-buttons{
+  display:flex;
+
+  gap:10px;
+
+  flex-wrap:wrap;
+
+  margin-top:24px;
+}
+
+
+.cta{
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+
+  padding:12px 19px;
+
+  border-radius:30px;
+
+  background:var(--green);
+
+  color:#061008;
+
+  font-weight:800;
+
+  font-size:13px;
+
+  border:0;
+
+  cursor:pointer;
+
+  box-shadow:
+    0 8px 28px
+    rgba(101,242,139,.18);
+
+  transition:.2s;
+}
+
+
+.cta:hover{
+  transform:translateY(-2px);
+}
+
+
+.ghost-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+
+  padding:11px 18px;
+
+  border-radius:30px;
+
+  border:
+    1px solid rgba(255,255,255,.25);
+
+  background:
+    rgba(0,0,0,.25);
+
+  color:#fff;
+
+  font-size:13px;
+  font-weight:700;
+}
+
+
+/* ==================================================
+   HERO CAPTION
+================================================== */
+
+
+.hero-caption{
+  position:absolute;
+
+  right:4%;
+  bottom:42px;
+
+  max-width:230px;
+
+  text-align:center;
+
+  font-family:Caveat,cursive;
+
+  font-size:23px;
+
+  line-height:1.1;
+
+  color:#eef5ed;
+
+  transform:rotate(-4deg);
+
+  text-shadow:
+    0 3px 15px #000;
+}
+
+
+.hero-caption small{
+  display:block;
+
+  margin-top:8px;
+
+  font-size:15px;
+
+  color:#c6d4c7;
+}
+
+
+/* ==================================================
+   COMMON SECTION
+================================================== */
+
+
+section{
+  padding:18px 0;
+}
+
+
+.section-card{
+  border:
+    1px solid rgba(255,255,255,.17);
+
+  border-radius:20px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(28,34,29,.94),
+      rgba(9,15,12,.94)
+    );
+
+  box-shadow:var(--shadow);
+
+  overflow:hidden;
+}
+
+
+.section-head{
+  display:flex;
+  align-items:center;
+
+  gap:15px;
+
+  padding:23px 25px;
+}
+
+
+.section-icon{
+  width:52px;
+  height:52px;
+
+  flex:
+    0 0 52px;
+
+  border-radius:15px;
+
+  display:grid;
+  place-items:center;
+
+  background:
+    rgba(101,242,139,.08);
+
+  border:
+    1px solid rgba(101,242,139,.35);
+
+  font-size:26px;
+}
+
+
+.section-head h2{
+  font-family:Caveat,cursive;
+
+  font-size:36px;
+
+  line-height:1;
+}
+
+
+.section-head p{
+  color:#bfc8c0;
+
+  font-size:12px;
+
+  margin-top:5px;
+}
+
+
+/* ==================================================
+   INTRO
+================================================== */
+
+
+.intro{
+  padding:
+    0 25px 25px;
+}
+
+
+.intro-box{
+  border-radius:16px;
+
+  padding:23px;
+
+  background:
+
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(101,242,139,.12),
+      transparent 30%
+    ),
+
+    rgba(0,0,0,.18);
+
+  border:
+    1px solid rgba(255,255,255,.09);
+}
+
+
+.intro-box h3{
+  font-family:Caveat,cursive;
+
+  font-size:31px;
+}
+
+
+.intro-box p{
+  color:#c0c9c1;
+
+  font-size:13px;
+
+  line-height:1.75;
+
+  margin-top:8px;
+
+  max-width:900px;
+}
+
+
+/* ==================================================
+   LAB CATEGORIES
+================================================== */
+
+
+.categories{
+  padding:
+    0 20px 23px;
+}
+
+
+.category-grid{
+  display:grid;
+
+  grid-template-columns:
+    repeat(4,1fr);
+
+  gap:11px;
+}
+
+
+.category{
+  position:relative;
+
+  min-height:170px;
+
+  padding:22px;
+
+  border-radius:17px;
+
+  border:
+    1px solid rgba(255,255,255,.15);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(25,37,29,.95),
+      rgba(7,14,10,.98)
+    );
+
+  cursor:pointer;
+
+  transition:.25s;
+
+  text-align:left;
+
+  color:var(--text);
+}
+
+
+.category:hover{
+  transform:translateY(-5px);
+
+  border-color:
+    rgba(101,242,139,.55);
+
+  box-shadow:
+    0 15px 35px
+    rgba(0,0,0,.3);
+}
+
+
+.category:before{
+  content:"";
+
+  position:absolute;
+
+  width:120px;
+  height:120px;
+
+  right:-40px;
+  top:-40px;
+
+  border-radius:50%;
+
+  background:
+    rgba(101,242,139,.07);
+}
+
+
+.category-icon{
+  width:57px;
+  height:57px;
+
+  display:grid;
+  place-items:center;
+
+  border-radius:16px;
+
+  background:
+    rgba(101,242,139,.09);
+
+  border:
+    1px solid rgba(101,242,139,.24);
+
+  font-size:30px;
+}
+
+
+.category h3{
+  margin-top:16px;
+
+  font-size:16px;
+}
+
+
+.category p{
+  margin-top:5px;
+
+  color:#aeb8b0;
+
+  font-size:11px;
+
+  line-height:1.5;
+}
+
+
+.category-tag{
+  position:absolute;
+
+  right:14px;
+  bottom:13px;
+
+  color:var(--green);
+
+  font-size:11px;
+
+  font-weight:800;
+}
+
+
+/* ==================================================
+   EXPERIMENTS
+================================================== */
+
+
+.experiments{
+  padding:
+    0 20px 25px;
+}
+
+
+.experiment-toolbar{
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+  gap:12px;
+
+  margin-bottom:14px;
+
+  flex-wrap:wrap;
+}
+
+
+.filters{
+  display:flex;
+
+  gap:7px;
+
+  flex-wrap:wrap;
+}
+
+
+.filter{
+  padding:8px 13px;
+
+  border-radius:20px;
+
+  border:
+    1px solid rgba(255,255,255,.17);
+
+  background:
+    rgba(255,255,255,.04);
+
+  color:#dfe5df;
+
+  cursor:pointer;
+
+  font-size:11px;
+
+  transition:.2s;
+}
+
+
+.filter:hover,
+.filter.active{
+  background:var(--green);
+
+  color:#061008;
+
+  border-color:var(--green);
+}
+
+
+.experiment-count{
+  color:#8f9c92;
+
+  font-size:11px;
+}
+
+
+.experiment-grid{
+  display:grid;
+
+  grid-template-columns:
+    repeat(3,1fr);
+
+  gap:11px;
+}
+
+
+.experiment{
+  position:relative;
+
+  min-height:250px;
+
+  padding:21px;
+
+  border-radius:17px;
+
+  border:
+    1px solid rgba(255,255,255,.14);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(20,31,24,.96),
+      rgba(7,13,10,.98)
+    );
+
+  overflow:hidden;
+
+  transition:.25s;
+}
+
+
+.experiment:hover{
+  transform:translateY(-4px);
+
+  border-color:
+    rgba(101,242,139,.45);
+}
+
+
+.experiment-top{
+  display:flex;
+
+  align-items:flex-start;
+
+  justify-content:space-between;
+
+  gap:10px;
+}
+
+
+.experiment-icon{
+  width:55px;
+  height:55px;
+
+  display:grid;
+  place-items:center;
+
+  border-radius:15px;
+
+  background:
+    rgba(101,242,139,.09);
+
+  border:
+    1px solid rgba(101,242,139,.23);
+
+  font-size:28px;
+}
+
+
+.badge{
+  padding:5px 9px;
+
+  border-radius:15px;
+
+  font-size:9px;
+
+  font-weight:800;
+
+  letter-spacing:.7px;
+
+  color:#bfc9c1;
+
+  background:
+    rgba(255,255,255,.05);
+
+  border:
+    1px solid rgba(255,255,255,.1);
+}
+
+
+.badge.ready{
+  color:var(--green);
+
+  border-color:
+    rgba(101,242,139,.25);
+
+  background:
+    rgba(101,242,139,.07);
+}
+
+
+.experiment h3{
+  margin-top:16px;
+
+  font-size:17px;
+}
+
+
+.experiment-desc{
+  margin-top:6px;
+
+  color:#aeb8b0;
+
+  font-size:11px;
+
+  line-height:1.6;
+
+  min-height:37px;
+}
+
+
+.experiment-meta{
+  display:flex;
+
+  gap:6px;
+
+  flex-wrap:wrap;
+
+  margin-top:13px;
+}
+
+
+.meta{
+  padding:5px 8px;
+
+  border-radius:10px;
+
+  color:#bfc8c0;
+
+  background:
+    rgba(255,255,255,.035);
+
+  font-size:9px;
+}
+
+
+.experiment-btn{
+  position:absolute;
+
+  left:21px;
+  right:21px;
+  bottom:17px;
+
+  height:36px;
+
+  border-radius:20px;
+
+  border:
+    1px solid rgba(101,242,139,.35);
+
+  background:
+    rgba(101,242,139,.07);
+
+  color:var(--green);
+
+  font-weight:800;
+
+  font-size:11px;
+
+  cursor:pointer;
+
+  transition:.2s;
+}
+
+
+.experiment-btn:hover{
+  background:var(--green);
+
+  color:#061008;
+
+  border-color:var(--green);
+}
+
+
+/* ==================================================
+   HOW LAB WORKS
+================================================== */
+
+
+.lab-steps{
+  padding:
+    0 20px 25px;
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(5,1fr);
+
+  gap:9px;
+}
+
+
+.lab-step{
+  position:relative;
+
+  padding:20px 15px;
+
+  min-height:145px;
+
+  border-radius:15px;
+
+  border:
+    1px solid rgba(255,255,255,.13);
+
+  background:
+    rgba(255,255,255,.025);
+
+  text-align:center;
+}
+
+
+.lab-step:not(:last-child):after{
+  content:"→";
+
+  position:absolute;
+
+  right:-15px;
+
+  top:50%;
+
+  transform:translateY(-50%);
+
+  color:var(--green);
+
+  font-weight:800;
+
+  z-index:2;
+}
+
+
+.step-number{
+  width:35px;
+  height:35px;
+
+  margin:auto;
+
+  display:grid;
+  place-items:center;
+
+  border-radius:50%;
+
+  color:#061008;
+
+  background:var(--green);
+
+  font-size:11px;
+
+  font-weight:900;
+}
+
+
+.lab-step h3{
+  margin-top:10px;
+
+  font-family:Caveat,cursive;
+
+  font-size:24px;
+}
+
+
+.lab-step p{
+  margin-top:4px;
+
+  color:#aeb8b0;
+
+  font-size:10px;
+
+  line-height:1.5;
+}
+
+
+/* ==================================================
+   LAB NOTE
+================================================== */
+
+
+.note{
+  margin:
+    0 20px 25px;
+
+  padding:20px;
+
+  border-radius:16px;
+
+  border:
+    1px solid rgba(101,242,139,.2);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(101,242,139,.07),
+      rgba(0,0,0,.12)
+    );
+
+  display:flex;
+
+  gap:15px;
+
+  align-items:flex-start;
+}
+
+
+.note-icon{
+  font-size:27px;
+}
+
+
+.note h3{
+  font-family:Caveat,cursive;
+
+  font-size:28px;
+}
+
+
+.note p{
+  margin-top:4px;
+
+  color:#b9c4bb;
+
+  font-size:11px;
+
+  line-height:1.6;
+}
+
+
+/* ==================================================
+   FINAL CTA
+================================================== */
+
+
+.final{
+  margin-top:3px;
+
+  min-height:235px;
+
+  padding:
+    45px 25px 38px;
+
+  text-align:center;
+
+  position:relative;
+
+  overflow:hidden;
+
+  background:
+
+    linear-gradient(
+      180deg,
+      rgba(4,9,6,.95),
+      rgba(4,9,6,.78),
+      rgba(4,9,6,.95)
+    ),
+
+    url("https://res.cloudinary.com/eq1jpw1h/image/upload/v1789036823/file_000000006de08208905b21a879a734fd.png");
+
+  background-size:cover;
+
+  background-position:center;
+}
+
+
+.final:before{
+  content:"SCIENCE IS AN EXPERIMENT";
+
+  position:absolute;
+
+  left:50%;
+  top:15px;
+
+  transform:translateX(-50%);
+
+  font-family:Caveat,cursive;
+
+  font-size:16px;
+
+  color:
+    rgba(101,242,139,.5);
+
+  letter-spacing:2px;
+}
+
+
+.final h2{
+  font-family:Caveat,cursive;
+
+  font-size:42px;
+}
+
+
+.final p{
+  color:#c7d0c8;
+
+  font-size:13px;
+
+  margin-top:4px;
+}
+
+
+.footer-line{
+  margin-top:28px;
+
+  padding-top:14px;
+
+  border-top:
+    1px solid rgba(255,255,255,.1);
+
+  color:#7f8c82;
+
+  font-size:10px;
+}
+
+
+/* ==================================================
+   TOAST
+================================================== */
+
+
+.toast{
+  position:fixed;
+
+  left:50%;
+  bottom:20px;
+
+  transform:
+    translate(-50%,20px);
+
+  opacity:0;
+
+  pointer-events:none;
+
+  z-index:300;
+
+  padding:
+    11px 17px;
+
+  border-radius:25px;
+
+  background:#e9f5e9;
+
+  color:#071008;
+
+  font-size:12px;
+
+  font-weight:800;
+
+  transition:.25s;
+}
+
+
+.toast.show{
+  opacity:1;
+
+  transform:
+    translate(-50%,0);
+}
+
+
+/* ==================================================
+   MOBILE MENU
+================================================== */
+
+
+.mobile-menu{
+  display:none;
+
+  position:fixed;
+
+  z-index:150;
+
+  top:62px;
+
+  left:0;
+  right:0;
+
+  padding:12px;
+
+  background:
+    rgba(6,11,8,.98);
+
+  border-bottom:
+    1px solid var(--line);
+}
+
+
+.mobile-menu.open{
+  display:block;
+}
+
+
+.mobile-menu a{
+  display:block;
+
+  padding:13px;
+
+  border-bottom:
+    1px solid rgba(255,255,255,.05);
+
+  font-size:14px;
+}
+
+
+.mobile-menu a:hover{
+  background:
+    rgba(101,242,139,.1);
+
+  color:var(--green);
+}
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+
+@media(max-width:1000px){
+
+  .nav-links{
+    display:none;
+  }
+
+  .menu-btn{
+    display:block;
+  }
+
+  .category-grid{
+    grid-template-columns:
+      repeat(2,1fr);
+  }
+
+  .experiment-grid{
+    grid-template-columns:
+      repeat(2,1fr);
+  }
+
+  .lab-steps{
+    grid-template-columns:
+      repeat(3,1fr);
+  }
+
+  .lab-step:nth-child(3):after{
+    display:none;
+  }
+
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+
+@media(max-width:600px){
+
+  .container{
+    width:min(
+      calc(100% - 18px),
+      var(--max)
+    );
+  }
+
+
+  .nav-inner{
+    min-height:62px;
+  }
+
+
+  .brand-icon{
+    width:35px;
+    height:35px;
+  }
+
+
+  .brand-title strong{
+    font-size:15px;
+  }
+
+
+  .brand-title small{
+    font-size:12px;
+  }
+
+
+  .actions{
+    margin-left:auto;
+  }
+
+
+  .hero{
+    min-height:620px;
+  }
+
+
+  .hero-bg{
+    background-image:
+
+      linear-gradient(
+        90deg,
+        rgba(3,9,6,.96) 0%,
+        rgba(3,9,6,.72) 53%,
+        rgba(3,9,6,.22) 100%
+      ),
+
+      linear-gradient(
+        0deg,
+        rgba(3,8,5,.9),
+        transparent 55%
+      ),
+
+      url("https://res.cloudinary.com/eq1jpw1h/image/upload/v1789036823/file_000000006de08208905b21a879a734fd.png");
+
+    background-position:
+      63% center;
+  }
+
+
+  .hero-content{
+    max-width:100%;
+
+    padding:
+      60px 20px 140px;
+  }
+
+
+  .hero h1{
+    font-size:68px;
+  }
+
+
+  .hero-sub{
+    font-size:14px;
+
+    max-width:290px;
+  }
+
+
+  .hero-desc{
+    font-size:12px;
+
+    max-width:290px;
+  }
+
+
+  .hero-caption{
+    right:8px;
+
+    bottom:29px;
+
+    max-width:145px;
+
+    font-size:17px;
+  }
+
+
+  .hero-caption small{
+    font-size:12px;
+  }
+
+
+  .section-head{
+    padding:
+      19px 16px;
+  }
+
+
+  .section-icon{
+    width:43px;
+    height:43px;
+
+    flex-basis:43px;
+
+    font-size:22px;
+  }
+
+
+  .section-head h2{
+    font-size:30px;
+  }
+
+
+  .section-head p{
+    font-size:10px;
+  }
+
+
+  .intro{
+    padding:
+      0 13px 16px;
+  }
+
+
+  .intro-box{
+    padding:17px;
+  }
+
+
+  .intro-box h3{
+    font-size:27px;
+  }
+
+
+  .intro-box p{
+    font-size:11px;
+  }
+
+
+  .categories{
+    padding:
+      0 13px 16px;
+  }
+
+
+  .category-grid{
+    grid-template-columns:
+      repeat(2,1fr);
+
+    gap:7px;
+  }
+
+
+  .category{
+    min-height:170px;
+
+    padding:14px;
+  }
+
+
+  .category-icon{
+    width:45px;
+    height:45px;
+
+    font-size:24px;
+  }
+
+
+  .category h3{
+    font-size:13px;
+
+    margin-top:12px;
+  }
+
+
+  .category p{
+    font-size:9px;
+  }
+
+
+  .category-tag{
+    font-size:9px;
+
+    right:10px;
+    bottom:10px;
+  }
+
+
+  .experiments{
+    padding:
+      0 13px 17px;
+  }
+
+
+  .experiment-toolbar{
+    align-items:flex-start;
+  }
+
+
+  .filters{
+    width:100%;
+  }
+
+
+  .filter{
+    font-size:9px;
+
+    padding:
+      7px 10px;
+  }
+
+
+  .experiment-grid{
+    grid-template-columns:
+      repeat(2,1fr);
+
+    gap:7px;
+  }
+
+
+  .experiment{
+    min-height:260px;
+
+    padding:13px;
+  }
+
+
+  .experiment-icon{
+    width:45px;
+    height:45px;
+
+    font-size:23px;
+  }
+
+
+  .badge{
+    font-size:7px;
+
+    padding:
+      4px 6px;
+  }
+
+
+  .experiment h3{
+    font-size:13px;
+
+    margin-top:13px;
+  }
+
+
+  .experiment-desc{
+    font-size:9px;
+
+    line-height:1.5;
+  }
+
+
+  .experiment-meta{
+    margin-top:10px;
+  }
+
+
+  .meta{
+    font-size:7px;
+
+    padding:
+      4px 6px;
+  }
+
+
+  .experiment-btn{
+    left:13px;
+    right:13px;
+    bottom:13px;
+
+    height:33px;
+
+    font-size:9px;
+  }
+
+
+  .lab-steps{
+    grid-template-columns:
+      1fr;
+
+    padding:
+      0 13px 17px;
+  }
+
+
+  .lab-step{
+    min-height:120px;
+  }
+
+
+  .lab-step:not(:last-child):after{
+    content:"↓";
+
+    right:50%;
+
+    top:auto;
+    bottom:-18px;
+
+    transform:
+      translateX(50%);
+  }
+
+
+  .note{
+    margin:
+      0 13px 17px;
+
+    padding:16px;
+  }
+
+
+  .note h3{
+    font-size:25px;
+  }
+
+
+  .note p{
+    font-size:10px;
+  }
+
+
+  .final{
+    min-height:195px;
+
+    padding:
+      35px 18px 30px;
+  }
+
+
+  .final h2{
+    font-size:32px;
+  }
+
+
+  .final p{
+    font-size:11px;
+  }
+
+}
+
+
+/* ==================================================
+   REDUCED MOTION
+================================================== */
+
+
+@media(prefers-reduced-motion:reduce){
+
+  *,
+  *:before,
+  *:after{
+    animation-duration:.01ms!important;
+
+    transition-duration:.01ms!important;
+  }
+
+  html{
+    scroll-behavior:auto;
+  }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<div class="world"></div>
+
+
+<!-- ==================================================
+     NAVBAR
+================================================== -->
+
+
+<header class="nav">
+
+  <div class="container nav-inner">
+
+
+    <a class="brand" href="../index.html">
+
+      <div class="brand-icon">
+        ⚗
+      </div>
+
+      <div class="brand-title">
+
+        <strong>
+          SCIENCE
+        </strong>
+
+        <small>
+          BEYOND THE TEXTBOOK
+        </small>
+
+      </div>
+
+    </a>
+
+
+    <nav class="nav-links">
+
+
+      <a href="../index.html">
+        ⌂ Home
+      </a>
+
+
+      <div class="nav-drop">
+
+        Subjects ˅
+
+        <div class="dropdown">
+
+          <a href="../physics/index.html">
+            Physics
+          </a>
+
+          <a href="../chemistry/index.html">
+            Chemistry
+          </a>
+
+          <a href="../biology/index.html">
+            Biology
+          </a>
+
+          <a href="../earth/index.html">
+            Earth & Environment
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="nav-drop">
+
+        Explore ˅
+
+        <div class="dropdown">
+
+          <a href="../why/index.html">
+            Why Does This Happen?
+          </a>
+
+          <a href="../invisible-visible/index.html">
+            Make the Invisible Visible
+          </a>
+
+          <a href="../magic-science/index.html">
+            Science That Looks Like Magic
+          </a>
+
+          <a href="../what-if/index.html">
+            What If?
+          </a>
+
+          <a href="../beyond-textbook/index.html">
+            Beyond the Textbook
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="nav-drop">
+
+        Games ˅
+
+        <div class="dropdown">
+
+          <a href="../games/index.html">
+            All Games
+          </a>
+
+          <a href="../games/circuit-builder.html">
+            Circuit Builder
+          </a>
+
+          <a href="../games/magnetic-maze.html">
+            Magnetic Maze
+          </a>
+
+          <a href="../games/build-a-cell.html">
+            Build a Cell
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="nav-drop">
+
+        Lab ˅
+
+        <div class="dropdown">
+
+          <a href="index.html">
+            Virtual Lab
+          </a>
+
+          <a href="ohms-law.html">
+            Ohm's Law
+          </a>
+
+          <a href="electric-circuit.html">
+            Electric Circuit
+          </a>
+
+          <a href="ray-optics.html">
+            Ray Optics
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="nav-drop">
+
+        More ˅
+
+        <div class="dropdown">
+
+          <a href="../science-around-us/index.html">
+            Science Around Us
+          </a>
+
+          <a href="../real-world/index.html">
+            Science in the Real World
+          </a>
+
+          <a href="../about.html">
+            About
+          </a>
+
+        </div>
+
+      </div>
+
+
+    </nav>
+
+
+    <div class="actions">
+
+
+      <button
+        class="lang"
+        id="langBtn">
+
+        EN
+        <span>|</span>
+        <b>हिंदी</b>
+
+      </button>
+
+
+      <button
+        class="icon-btn menu-btn"
+        id="menuBtn">
+
+        ☰
+
+      </button>
+
+
+    </div>
+
+
+  </div>
+
+</header>
+
+
+
+<!-- ==================================================
+     MOBILE MENU
+================================================== -->
+
+
+<div
+  class="mobile-menu"
+  id="mobileMenu">
+
+
+  <a href="../index.html">
+    ⌂ Home
+  </a>
+
+  <a href="../physics/index.html">
+    ⚛ Physics
+  </a>
+
+  <a href="../chemistry/index.html">
+    🧪 Chemistry
+  </a>
+
+  <a href="../biology/index.html">
+    🧬 Biology
+  </a>
+
+  <a href="../earth/index.html">
+    🌍 Earth & Environment
+  </a>
+
+
+  <a href="../why/index.html">
+    💡 Why Does This Happen?
+  </a>
+
+  <a href="../invisible-visible/index.html">
+    👁 Make the Invisible Visible
+  </a>
+
+  <a href="../magic-science/index.html">
+    ✨ Science That Looks Like Magic
+  </a>
+
+  <a href="../what-if/index.html">
+    ❓ What If?
+  </a>
+
+  <a href="../beyond-textbook/index.html">
+    🚀 Beyond the Textbook
+  </a>
+
+
+  <a href="index.html">
+    🧪 Virtual Lab
+  </a>
+
+  <a href="../games/index.html">
+    🎮 Science Games
+  </a>
+
+
+  <a href="../real-world/index.html">
+    🌐 Science in the Real World
+  </a>
+
+  <a href="../science-around-us/index.html">
+    📰 Science Around Us
+  </a>
+
+</div>
+
+
+
+<main>
+
+
+<!-- ==================================================
+     HERO
+================================================== -->
+
+
+<section class="hero">
+
+
+  <div class="hero-bg"></div>
+
+
+  <div class="container">
+
+
+    <div class="hero-content">
+
+
+      <div class="kicker">
+
+        Interactive Experiments
+
+      </div>
+
+
+      <h1>
+
+        <span>
+          Virtual
+        </span>
+
+        <span class="green">
+          Science
+        </span>
+
+        <span>
+          Lab
+        </span>
+
+      </h1>
+
+
+      <p
+        class="hero-sub"
+        data-en="Experiment. Observe. Understand."
+        data-hi="प्रयोग करो। देखो। समझो।">
+
+        Experiment. Observe. Understand.
+
+      </p>
+
+
+      <p
+        class="hero-desc"
+        data-en="Step inside a virtual laboratory and explore scientific ideas by changing variables, observing results and connecting them with the concepts you learn."
+        data-hi="एक आभासी प्रयोगशाला में प्रवेश करें और चर बदलकर, परिणाम देखकर तथा उन्हें अपने सीखे हुए विज्ञान के सिद्धांतों से जोड़कर वैज्ञानिक विचारों को समझें।">
+
+        Step inside a virtual laboratory and explore scientific ideas by changing variables, observing results and connecting them with the concepts you learn.
+
+      </p>
+
+
+      <div class="hero-buttons">
+
+
+        <a
+          class="cta"
+          href="#experiments">
+
+          <span
+            data-en="Explore Experiments"
+            data-hi="प्रयोग देखें">
+
+            Explore Experiments
+
+          </span>
+
+          →
+
+        </a>
+
+
+        <a
+          class="ghost-btn"
+          href="../index.html">
+
+          ←
+
+          <span
+            data-en="Back Home"
+            data-hi="होम पर जाएँ">
+
+            Back Home
+
+          </span>
+
+        </a>
+
+
+      </div>
+
+
+    </div>
+
+
+    <div class="hero-caption">
+
+      “Don't just learn
+      what happens.
+      Experiment with why.”
+
+      <small>
+        — Science Beyond the Textbook
+      </small>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     INTRO
+================================================== -->
+
+
+<section>
+
+
+  <div class="container">
+
+
+    <div class="section-card">
+
+
+      <div class="section-head">
+
+
+        <div class="section-icon">
+          🧪
+        </div>
+
+
+        <div>
+
+
+          <h2
+            data-en="Welcome to the Virtual Lab"
+            data-hi="वर्चुअल लैब में आपका स्वागत है">
+
+            Welcome to the Virtual Lab
+
+          </h2>
+
+
+          <p
+            data-en="Science becomes clearer when you experiment."
+            data-hi="जब आप प्रयोग करते हैं तो विज्ञान और स्पष्ट हो जाता है।">
+
+            Science becomes clearer when you experiment.
+
+          </p>
+
+
+        </div>
+
+
+      </div>
+
+
+      <div class="intro">
+
+
+        <div class="intro-box">
+
+
+          <h3
+            data-en="What happens when you stop reading and start experimenting?"
+            data-hi="जब आप पढ़ना छोड़कर प्रयोग करना शुरू करते हैं तो क्या होता है?">
+
+            What happens when you stop reading and start experimenting?
+
+          </h3>
+
+
+          <p
+            data-en="A virtual lab lets you explore scientific relationships without worrying about breaking equipment or making a mistake. Change a value, observe what happens, try again and build your own understanding."
+            data-hi="वर्चुअल लैब आपको उपकरण खराब होने या गलती होने की चिंता किए बिना वैज्ञानिक संबंधों को explore करने देती है। कोई मान बदलें, परिणाम देखें, फिर दोबारा प्रयास करें और अपनी समझ स्वयं विकसित करें।">
+
+            A virtual lab lets you explore scientific relationships without worrying about breaking equipment or making a mistake. Change a value, observe what happens, try again and build your own understanding.
+
+          </p>
+
+
+        </div>
+
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     CATEGORIES
+================================================== -->
+
+
+<section id="categories">
+
+
+  <div class="container">
+
+
+    <div class="section-card">
+
+
+      <div class="section-head">
+
+
+        <div class="section-icon">
+          🔬
+        </div>
+
+
+        <div>
+
+
+          <h2
+            data-en="Explore the Laboratory"
+            data-hi="प्रयोगशाला को explore करें">
+
+            Explore the Laboratory
+
+          </h2>
+
+
+          <p
+            data-en="Choose a branch of science."
+            data-hi="विज्ञान की एक शाखा चुनें।">
+
+            Choose a branch of science.
+
+          </p>
+
+
+        </div>
+
+
+      </div>
+
+
+      <div class="categories">
+
+
+        <div class="category-grid">
+
+
+          <button
+            class="category"
+            data-filter="physics">
+
+
+            <div class="category-icon">
+              ⚡
+            </div>
+
+
+            <h3
+              data-en="Physics Lab"
+              data-hi="भौतिक विज्ञान लैब">
+
+              Physics Lab
+
+            </h3>
+
+
+            <p
+              data-en="Explore electricity, light, motion, forces and more."
+              data-hi="विद्युत, प्रकाश, गति, बल और अन्य concepts को explore करें।">
+
+              Explore electricity, light, motion, forces and more.
+
+            </p>
+
+
+            <span class="category-tag">
+              Explore →
+            </span>
+
+
+          </button>
+
+
+
+          <button
+            class="category"
+            data-filter="chemistry">
+
+
+            <div class="category-icon">
+              🧪
+            </div>
+
+
+            <h3
+              data-en="Chemistry Lab"
+              data-hi="रसायन विज्ञान लैब">
+
+              Chemistry Lab
+
+            </h3>
+
+
+            <p
+              data-en="Observe reactions, acids, bases and chemical changes."
+              data-hi="अभिक्रियाओं, अम्ल, क्षार और रासायनिक परिवर्तनों को देखें।">
+
+              Observe reactions, acids, bases and chemical changes.
+
+            </p>
+
+
+            <span class="category-tag">
+              Explore →
+            </span>
+
+
+          </button>
+
+
+
+          <button
+            class="category"
+            data-filter="biology">
+
+
+            <div class="category-icon">
+              🧬
+            </div>
+
+
+            <h3
+              data-en="Biology Lab"
+              data-hi="जीव विज्ञान लैब">
+
+              Biology Lab
+
+            </h3>
+
+
+            <p
+              data-en="Visualize cells, biological processes and living systems."
+              data-hi="कोशिकाओं, जैविक प्रक्रियाओं और जीवित तंत्रों को समझें।">
+
+              Visualize cells, biological processes and living systems.
+
+            </p>
+
+
+            <span class="category-tag">
+              Explore →
+            </span>
+
+
+          </button>
+
+
+
+          <button
+            class="category"
+            data-filter="general">
+
+
+            <div class="category-icon">
+              🔭
+            </div>
+
+
+            <h3
+              data-en="Explore & Discover"
+              data-hi="खोजें और समझें">
+
+              Explore & Discover
+
+            </h3>
+
+
+            <p
+              data-en="Interactive models that connect different areas of science."
+              data-hi="विभिन्न विज्ञान शाखाओं को जोड़ने वाले interactive models।">
+
+              Interactive models that connect different areas of science.
+
+            </p>
+
+
+            <span class="category-tag">
+              Explore →
+            </span>
+
+
+          </button>
+
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     EXPERIMENTS
+================================================== -->
+
+
+<section
+  id="experiments">
+
+
+  <div class="container">
+
+
+    <div class="section-card">
+
+
+      <div class="section-head">
+
+
+        <div class="section-icon">
+          ⚙️
+        </div>
+
+
+        <div>
+
+
+          <h2
+            data-en="Interactive Experiments"
+            data-hi="इंटरैक्टिव प्रयोग">
+
+            Interactive Experiments
+
+          </h2>
+
+
+          <p
+            data-en="Choose an experiment and start exploring."
+            data-hi="एक प्रयोग चुनें और explore करना शुरू करें।">
+
+            Choose an experiment and start exploring.
+
+          </p>
+
+
+        </div>
+
+
+      </div>
+
+
+      <div class="experiments">
+
+
+        <div class="experiment-toolbar">
+
+
+          <div class="filters">
+
+
+            <button
+              class="filter active"
+              data-filter="all">
+
+              All
+
+            </button>
+
+
+            <button
+              class="filter"
+              data-filter="physics">
+
+              ⚡ Physics
+
+            </button>
+
+
+            <button
+              class="filter"
+              data-filter="chemistry">
+
+              🧪 Chemistry
+
+            </button>
+
+
+            <button
+              class="filter"
+              data-filter="biology">
+
+              🧬 Biology
+
+            </button>
+
+
+          </div>
+
+
+          <div
+            class="experiment-count"
+            id="experimentCount">
+
+            9 experiments
+
+          </div>
+
+
+        </div>
+
+
+
+        <div class="experiment-grid">
+
+
+          <!-- OHM'S LAW -->
+
+
+          <article
+            class="experiment"
+            data-category="physics">
+
+
+            <div class="experiment-top">
+
+
+              <div class="experiment-icon">
+                ⚡
+              </div>
+
+
+              <span class="badge ready">
+                READY
+              </span>
+
+
+            </div>
+
+
+            <h3
+              data-en="Ohm's Law"
+              data-hi="ओम का नियम">
+
+              Ohm's Law
+
+            </h3>
+
+
+            <p
+              class="experiment-desc"
+              data-en="Change voltage and resistance and observe how current responds."
+              data-hi="वोल्टेज और प्रतिरोध बदलें और देखें कि धारा कैसे बदलती है।">
+
+              Change voltage and resistance and observe how current responds.
+
+            </p>
+
+
+            <div class="experiment-meta">
+
+              <span class="meta">
+                V = IR
+              </span>
+
+              <span class="meta">
+                Electricity
+              </span>
+
+              <span class="meta">
+                Class 10
+              </span>
+
+            </div>
+
+
+            <a
+              class="experiment-btn"
+              href="ohms-law.html">
+
+              <span
+                data-en="Open Experiment →"
+                data-hi="प्रयोग खोलें →">
+
+                Open Experiment →
+
+              </span>
+
+            </a>
+
+
+          </article>
+
+
+
+          <!-- ELECTRIC CIRCUIT -->
+
+
+          <article
+            class="experiment"
+            data-category="physics">
+
+
+            <div class="experiment-top">
+
+
+              <div class="experiment-icon">
+                🔋
+              </div>
+
+
+              <span class="badge">
+                SOON
+              </span>
+
+
+            </div>
+
+
+            <h3
+              data-en="Electric Circuit"
+              data-hi="विद्युत परिपथ">
+
+              Electric Circuit
+
+            </h3>
+
+
+            <p
+              class="experiment-desc"
+              data-en="Build a circuit using cells, switches, wires and resistors."
+              data-hi="सेल, स्विच, तार और प्रतिरोधक का उपयोग करके परिपथ बनाएँ।">
+
+              Build a circuit using cells, switches, wires and resistors.
+
+            </p>
+
+
+            <div class="experiment-meta">
+
+              <span class="meta">
+                Circuit
+              </span>
+
+              <span class="meta">
+                Current
+              </span>
+
+              <span class="meta">
+                Class 10
+              </span>
+
+            </div>
+
+
+            <button
+              class="experiment-btn soon">
+
+              <span
+                data-en="Coming Soon"
+                data-hi="जल्द आ रहा है">
+
+                Coming Soon
+
+              </span>
+
+            </button>
+
+
+          </article>
+
+
+
+          <!-- GALVANOMETER -->
+
+
+          <article
+            class="experiment"
+            data-category="physics">
+
+
+            <div class="experiment-top">
+
+
+              <div class="experiment-icon">
+                🎛️
+              </div>
+
+
+              <span class="badge">
+                SOON
+              </span>
+
+
+            </div>
+
+
+            <h3
+              data-en="Galvanometer → Voltmeter"
+              data-hi="गैल्वेनोमीटर → वोल्टमीटर">
+
+              Galvanometer → Voltmeter
+
+            </h3>
+
+
+            <p
+              class="experiment-desc"
+              data-en="Explore how a galvanometer can be converted into a voltmeter."
+              data-hi="जानें कि गैल्वेनोमीटर को वोल्टमीटर में कैसे बदला जा सकता है।">
+
+              Explore how a galvanometer can be converted into a voltmeter.
+
+            </p>
+
+
+            <div class="experiment-meta">
+
+              <span class="meta">
+                Measurement
+              </span>
+
+              <span class="meta">
+                Resistance
+              </span>
+
+            </div>
+
+
+            <button
+              class="experiment-btn soon">
+
+              <span
+                data-en="Coming Soon"
+                data-hi="जल्द आ रहा है">
+
+                Coming Soon
+
+              </span>
+
+            </button>
+
+
+          </article>
+
+
+
+          <!-- RAY OPTICS -->
+
+
+          <article
+            class="experiment"
+            data-category="physics">
+
+
+            <div class="experiment-top">
+
+
+              <div class="experiment-icon">
+                🔭
+              </div>
+
+
+              <span class="badge">
+                SOON
+              </span>
+
+
+            </div>
+
+
+            <h3
+              data-en="Ray Optics"
+              data-hi="किरण प्रकाशिकी">
+
+              Ray Optics
+
+            </h3>
+
+
+            <p
+              class="experiment-desc"
+              data-en="Change object position and observe reflection or refraction."
+              data-hi="वस्तु की स्थिति बदलें और परावर्तन या अपवर्तन देखें।">
+
+              Change object position and observe reflection or refraction.
+
+            </p>
+
+
+            <div class="experiment-meta">
+
+              <span class="meta">
+                Light
+              </span>
+
+              <span class="meta">
+                Reflection
+              </span>
+
+              <span class="meta">
+                Refraction
+              </span>
+
+            </div>
+
+
+            <button
+              class="experiment-btn soon">
+
+              <span
+                data-en="Coming Soon"
+                data-hi="जल्द आ रहा है">
+
+                Coming Soon
+
+              </span>
+
+            </button>
+
+
+          </article>
+
+
+
+          <!-- CHEMICAL REACTION -->
+
+
+          <article
+            class="experiment"
+            data-category="chemistry">
+
+
+            <div class="experiment-top">
+
+
+              <div class="experiment-icon">
+                🧪
+              </div>
+
+
+              <span class="badge">
+                SOON
+              </span>
+
+
+            </div>
+
+
+            <h3
+              data-en="Chemical Reaction"
+              data-hi="रासायनिक अभिक्रिया">
+
+              Chemical Reaction
+
+            </h3>
+
+
+            <p
+              class="experiment-desc"
+              data-en="Mix substances and observe the signs of a chemical change."
+              data-hi="पदार्थों को मिलाएँ और रासायनिक परिवर्तन के संकेत देखें।">
+
+              Mix substances and observe the signs of a chemical change.
+
+            </p>
+
+
+            <div class="experiment-meta">
+
+              <span class="meta">
+                Reaction
+              </span>
+
+              <span class="meta">
+                Matter
+              </span>
+
+              <span class="meta">
+                Class 10
+              </span>
+
+            </div>
+
+
+            <button
+              class="experiment-btn soon">
+
+              <span
+                data-en="Coming Soon"
+                data-hi="जल्द आ रहा है">
+
+                Coming Soon
+
+              </span>
+
+            </button>
+
+
+          </article>
+
+
+
+          <!-- ACID BASE -->
+
+
+          <article
+            class="experiment"
+            data-category="chemistry">
+
+
+            <div class="experiment-top">
+
+
+              <div class="experiment-icon">
+                🧪
+              </div>
+
+
+              <span class="badge">
+                SOON
+              </span>
+
+
+            </div>
+
+
+            <h3
+              data-en="Acids & Bases"
+              data-hi="अम्ल और क्षार">
+
+              Acids & Bases
+
+            </h3>
+
+
+            <p
+              class="experiment-desc"
+              data-en="Explore indicators, pH and the difference between acids and bases."
+              data-hi="सूचक, pH तथा अम्ल और क्षार के अंतर को explore करें।">
+
+              Explore indicators, pH and the difference between acids and bases.
+
+            </p>
+
+
+            <div class="experiment-meta">
+
+              <span class="meta">
+                pH
+              </span>
+
+              <span class="meta">
+                Indicators
+              </span>
+
+            </div>
+
+
+            <button
+              class="experiment-btn soon">
+
+              <span
+                data-en="Coming Soon"
+                data-hi="जल्द आ रहा है">
+
+                Coming Soon
+
+              </span>
+
+            </button>
+
+
+          </article>
+
+
+
+          <!-- CELL -->
+
+
+          <article
+            class="experiment"
+            data-category="biology">
+
+
+            <div class="experiment-top">
+
+
+              <div class="experiment-icon">
+                🧫
+              </div>
+
+
+              <span class="badge">
+                SOON
+              </span>
+
+
+            </div>
+
+
+            <h3
+              data-en="Explore a Cell"
+              data-hi="कोशिका को explore करें">
+
+              Explore a Cell
+
+            </h3>
+
+
+            <p
+              class="experiment-desc"
+              data-en="Explore cell structures and understand what each part does."
+              data-hi="कोशिका की संरचनाओं को explore करें और उनके कार्य समझें।">
+
+              Explore cell structures and understand what each part does.
+
+            </p>
+
+
+            <div class="experiment-meta">
+
+              <span class="meta">
+                Cell
+              </span>
+
+              <span class="meta">
+                Biology
+              </span>
+
+            </div>
+
+
+            <button
+              class="experiment-btn soon">
+
+              <span
+                data-en="Coming Soon"
+                data-hi="जल्द आ रहा है">
+
+                Coming Soon
+
+              </span>
+
+            </button>
+
+
+          </article>
+
+
+
+          <!-- RESPIRATION -->
+
+
+          <article
+            class="experiment"
+            data-category="biology">
+
+
+            <div class="experiment-top">
+
+
+              <div class="experiment-icon">
+                🫁
+              </div>
+
+
+              <span class="badge">
+                SOON
+              </span>
+
+
+            </div>
+
+
+            <h3
+              data-en="Respiration"
+              data-hi="श्वसन">
+
+              Respiration
+
+            </h3>
+
+
+            <p
+              class="experiment-desc"
+              data-en="Visualize gas exchange and understand how oxygen reaches cells."
+              data-hi="गैसों के आदान-प्रदान को देखें और समझें कि ऑक्सीजन कोशिकाओं तक कैसे पहुँचती है।">
+
+              Visualize gas exchange and understand how oxygen reaches cells.
+
+            </p>
+
+
+            <div class="experiment-meta">
+
+              <span class="meta">
+                Oxygen
+              </span>
+
+              <span class="meta">
+                Gas Exchange
+              </span>
+
+            </div>
+
+
+            <button
+              class="experiment-btn soon">
+
+              <span
+                data-en="Coming Soon"
+                data-hi="जल्द आ रहा है">
+
+                Coming Soon
+
+              </span>
+
+            </button>
+
+
+          </article>
+
+
+
+          <!-- DNA -->
+
+
+          <article
+            class="experiment"
+            data-category="biology">
+
+
+            <div class="experiment-top">
+
+
+              <div class="experiment-icon">
+                🧬
+              </div>
+
+
+              <span class="badge">
+                SOON
+              </span>
+
+
+            </div>
+
+
+            <h3
+              data-en="DNA Explorer"
+              data-hi="DNA Explorer">
+
+              DNA Explorer
+
+            </h3>
+
+
+            <p
+              class="experiment-desc"
+              data-en="Explore the structure of DNA and the information stored within it."
+              data-hi="DNA की संरचना और उसमें संग्रहीत जानकारी को explore करें।">
+
+              Explore the structure of DNA and the information stored within it.
+
+            </p>
+
+
+            <div class="experiment-meta">
+
+              <span class="meta">
+                DNA
+              </span>
+
+              <span class="meta">
+                Genetics
+              </span>
+
+            </div>
+
+
+            <button
+              class="experiment-btn soon">
+
+              <span
+                data-en="Coming Soon"
+                data-hi="जल्द आ रहा है">
+
+                Coming Soon
+
+              </span>
+
+            </button>
+
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     HOW IT WORKS
+================================================== -->
+
+
+<section>
+
+
+  <div class="container">
+
+
+    <div class="section-card">
+
+
+      <div class="section-head">
+
+
+        <div class="section-icon">
+          🧠
+        </div>
+
+
+        <div>
+
+
+          <h2
+            data-en="How the Virtual Lab Works"
+            data-hi="वर्चुअल लैब कैसे काम करती है?">
+
+            How the Virtual Lab Works
+
+          </h2>
+
+
+          <p
+            data-en="Learn by interacting with the experiment."
+            data-hi="प्रयोग के साथ interact करके सीखें।">
+
+            Learn by interacting with the experiment.
+
+          </p>
+
+
+        </div>
+
+
+      </div>
+
+
+      <div class="lab-steps">
+
+
+        <div class="lab-step">
+
+
+          <div class="step-number">
+            01
+          </div>
+
+
+          <h3
+            data-en="Choose"
+            data-hi="चुनें">
+
+            Choose
+
+          </h3>
+
+
+          <p
+            data-en="Select an experiment."
+            data-hi="एक प्रयोग चुनें।">
+
+            Select an experiment.
+
+          </p>
+
+
+        </div>
+
+
+
+        <div class="lab-step">
+
+
+          <div class="step-number">
+            02
+          </div>
+
+
+          <h3
+            data-en="Build"
+            data-hi="बनाएँ">
+
+            Build
+
+          </h3>
+
+
+          <p
+            data-en="Arrange the virtual equipment."
+            data-hi="आभासी उपकरण व्यवस्थित करें।">
+
+            Arrange the virtual equipment.
+
+          </p>
+
+
+        </div>
+
+
+
+        <div class="lab-step">
+
+
+          <div class="step-number">
+            03
+          </div>
+
+
+          <h3
+            data-en="Experiment"
+            data-hi="प्रयोग करें">
+
+            Experiment
+
+          </h3>
+
+
+          <p
+            data-en="Change values and conditions."
+            data-hi="मान और परिस्थितियाँ बदलें।">
+
+            Change values and conditions.
+
+          </p>
+
+
+        </div>
+
+
+
+        <div class="lab-step">
+
+
+          <div class="step-number">
+            04
+          </div>
+
+
+          <h3
+            data-en="Observe"
+            data-hi="देखें">
+
+            Observe
+
+          </h3>
+
+
+          <p
+            data-en="Watch what changes."
+            data-hi="देखें कि क्या बदलता है।">
+
+            Watch what changes.
+
+          </p>
+
+
+        </div>
+
+
+
+        <div class="lab-step">
+
+
+          <div class="step-number">
+            05
+          </div>
+
+
+          <h3
+            data-en="Understand"
+            data-hi="समझें">
+
+            Understand
+
+          </h3>
+
+
+          <p
+            data-en="Connect the result to science."
+            data-hi="परिणाम को विज्ञान से जोड़ें।">
+
+            Connect the result to science.
+
+          </p>
+
+
+        </div>
+
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     SCIENCE NOTE
+================================================== -->
+
+
+<section>
+
+
+  <div class="container">
+
+
+    <div class="note">
+
+
+      <div class="note-icon">
+        💡
+      </div>
+
+
+      <div>
+
+
+        <h3
+          data-en="A simulation is not just an animation."
+          data-hi="Simulation केवल animation नहीं है।">
+
+          A simulation is not just an animation.
+
+        </h3>
+
+
+        <p
+          data-en="A useful virtual experiment should let you change something, observe a measurable result and understand why that result changes. That's the goal of this laboratory."
+          data-hi="एक उपयोगी virtual experiment आपको कुछ बदलने, उसका परिणाम देखने और यह समझने देता है कि परिणाम क्यों बदलता है। इस laboratory का उद्देश्य यही है।">
+
+          A useful virtual experiment should let you change something, observe a measurable result and understand why that result changes. That's the goal of this laboratory.
+
+        </p>
+
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     FINAL CTA
+================================================== -->
+
+
+<section>
+
+
+  <div class="container">
+
+
+    <div class="section-card final">
+
+
+      <h2
+        data-en="Science Is Better When You Can Experiment With It."
+        data-hi="विज्ञान तब और बेहतर समझ आता है जब आप उसके साथ प्रयोग कर सकते हैं।">
+
+        Science Is Better When You Can Experiment With It.
+
+      </h2>
+
+
+      <p
+        data-en="Choose an experiment and discover what happens."
+        data-hi="एक प्रयोग चुनें और जानें कि क्या होता है।">
+
+        Choose an experiment and discover what happens.
+
+      </p>
+
+
+      <a
+        class="cta"
+        href="#experiments"
+        style="margin-top:15px;">
+
+        <span
+          data-en="Start Experimenting"
+          data-hi="प्रयोग शुरू करें">
+
+          Start Experimenting
+
+        </span>
+
+        →
+
+      </a>
+
+
+      <div class="footer-line">
+
+        ©
+        <span id="year"></span>
+
+        Science Beyond the Textbook
+        · Built for curious minds.
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+</main>
+
+
+
+<div
+  class="toast"
+  id="toast">
+</div>
+
+
+
+<script>
+
+
+/* ==================================================
+   LANGUAGE SYSTEM
+================================================== */
+
+
+let currentLanguage =
+  localStorage.getItem("scienceLanguage") || "en";
+
+
+function applyLanguage(){
+
+
+  document.documentElement.lang =
+    currentLanguage === "hi"
+      ? "hi"
+      : "en";
+
+
+  document
+    .querySelectorAll("[data-en]")
+    .forEach(el => {
+
+
+      const value =
+        currentLanguage === "hi"
+          ? el.dataset.hi
+          : el.dataset.en;
+
+
+      if(value){
+
+        el.textContent = value;
+
+      }
+
+    });
+
+
+  document.getElementById("langBtn").innerHTML =
+
+    currentLanguage === "en"
+
+      ? 'EN <span>|</span> <b>हिंदी</b>'
+
+      : '<b>EN</b> <span>|</span> हिंदी';
+
+}
+
+
+/* LANGUAGE BUTTON */
+
+
+document
+  .getElementById("langBtn")
+  .addEventListener("click",()=>{
+
+
+    currentLanguage =
+      currentLanguage === "en"
+        ? "hi"
+        : "en";
+
+
+    localStorage.setItem(
+      "scienceLanguage",
+      currentLanguage
+    );
+
+
+    applyLanguage();
+
+
+    showToast(
+
+      currentLanguage === "hi"
+
+        ? "भाषा: हिंदी"
+
+        : "Language: English"
+
+    );
+
+  });
+
+
+
+/* ==================================================
+   EXPERIMENT FILTER
+================================================== */
+
+
+const filterButtons =
+  document.querySelectorAll(".filter");
+
+
+const experiments =
+  document.querySelectorAll(".experiment");
+
+
+const experimentCount =
+  document.getElementById("experimentCount");
+
+
+function filterExperiments(category){
+
+
+  let visible = 0;
+
+
+  experiments.forEach(card => {
+
+
+    const cardCategory =
+      card.dataset.category;
+
+
+    if(
+      category === "all" ||
+      cardCategory === category
+    ){
+
+      card.style.display = "";
+
+      visible++;
+
+    }else{
+
+      card.style.display = "none";
+
+    }
+
+  });
+
+
+  experimentCount.textContent =
+    visible +
+    (
+      currentLanguage === "hi"
+        ? " प्रयोग"
+        : visible === 1
+          ? " experiment"
+          : " experiments"
+    );
+
+}
+
+
+filterButtons.forEach(button => {
+
+
+  button.addEventListener("click",()=>{
+
+
+    filterButtons.forEach(btn => {
+
+      btn.classList.remove("active");
+
+    });
+
+
+    button.classList.add("active");
+
+
+    filterExperiments(
+      button.dataset.filter
+    );
+
+  });
+
+});
+
+
+
+/* ==================================================
+   CATEGORY BUTTONS
+================================================== */
+
+
+document
+  .querySelectorAll(".category")
+  .forEach(category => {
+
+
+    category.addEventListener("click",()=>{
+
+
+      const filter =
+        category.dataset.filter;
+
+
+      if(
+        filter === "physics" ||
+        filter === "chemistry" ||
+        filter === "biology"
+      ){
+
+
+        const matchingButton =
+          document.querySelector(
+            `.filter[data-filter="${filter}"]`
+          );
+
+
+        if(matchingButton){
+
+          filterButtons.forEach(btn => {
+
+            btn.classList.remove("active");
+
+          });
+
+
+          matchingButton.classList.add("active");
+
+
+          filterExperiments(filter);
+
+
+          document
+            .getElementById("experiments")
+            .scrollIntoView({
+
+              behavior:"smooth",
+
+              block:"start"
+
+            });
+
+        }
+
+      }else{
+
+
+        filterButtons.forEach(btn => {
+
+          btn.classList.remove("active");
+
+        });
+
+
+        document
+          .querySelector(
+            '.filter[data-filter="all"]'
+          )
+          .classList.add("active");
+
+
+        filterExperiments("all");
+
+
+        document
+          .getElementById("experiments")
+          .scrollIntoView({
+
+            behavior:"smooth",
+
+            block:"start"
+
+          });
+
+      }
+
+    });
+
+  });
+
+
+
+/* ==================================================
+   COMING SOON
+================================================== */
+
+
+document
+  .querySelectorAll(".soon")
+  .forEach(button => {
+
+
+    button.addEventListener("click",()=>{
+
+
+      showToast(
+
+        currentLanguage === "hi"
+
+          ? "यह प्रयोग जल्द उपलब्ध होगा।"
+
+          : "This experiment is coming soon."
+
+      );
+
+    });
+
+  });
+
+
+
+/* ==================================================
+   MOBILE MENU
+================================================== */
+
+
+const mobileMenu =
+  document.getElementById("mobileMenu");
+
+
+document
+  .getElementById("menuBtn")
+  .addEventListener("click",()=>{
+
+
+    mobileMenu.classList.toggle(
+      "open"
+    );
+
+  });
+
+
+mobileMenu
+  .querySelectorAll("a")
+  .forEach(link => {
+
+
+    link.addEventListener("click",()=>{
+
+      mobileMenu.classList.remove(
+        "open"
+      );
+
+    });
+
+  });
+
+
+
+/* ==================================================
+   TOAST
+================================================== */
+
+
+function showToast(message){
+
+
+  const toast =
+    document.getElementById("toast");
+
+
+  toast.textContent =
+    message;
+
+
+  toast.classList.add("show");
+
+
+  clearTimeout(
+    window.toastTimer
+  );
+
+
+  window.toastTimer =
+    setTimeout(()=>{
+
+      toast.classList.remove("show");
+
+    },1800);
+
+}
+
+
+
+/* ==================================================
+   INIT
+================================================== */
+
+
+document
+  .getElementById("year")
+  .textContent =
+    new Date().getFullYear();
+
+
+applyLanguage();
+
+
+filterExperiments("all");
+
+
+</script>
+
+
+</body>
+</html>
