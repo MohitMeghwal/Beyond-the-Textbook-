@@ -1,0 +1,2530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#07100b">
+
+<title>Science That Looks Like Magic | Science Beyond the Textbook</title>
+
+<meta name="description"
+content="Explore everyday phenomena, magic tricks and surprising scientific illusions through interactive science.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap"
+rel="stylesheet">
+
+<style>
+
+/* =========================================================
+   MASTER DESIGN SYSTEM — SCIENCE BEYOND THE TEXTBOOK
+   Based on why/index.html
+========================================================= */
+
+:root{
+  --bg:#07100b;
+  --panel:#101813;
+  --panel2:#151e18;
+  --green:#65f28b;
+  --green2:#35c968;
+  --text:#f4f5ef;
+  --muted:#aeb8b0;
+  --line:rgba(255,255,255,.15);
+  --shadow:0 18px 50px rgba(0,0,0,.42);
+  --max:1180px;
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  min-height:100vh;
+  background:var(--bg);
+  color:var(--text);
+  font-family:Inter,Arial,sans-serif;
+  overflow-x:hidden;
+}
+
+button,
+input{
+  font:inherit;
+}
+
+button{
+  cursor:pointer;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+
+/* =========================================================
+   BACKGROUND
+========================================================= */
+
+.world{
+  position:fixed;
+  inset:0;
+  z-index:-3;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(3,9,6,.55),
+      rgba(3,9,6,.94)
+    ),
+    url("https://res.cloudinary.com/eq1jpw1h/image/upload/v1789110104/file_00000000969c8211b29ef6fc7b2f2e78.png");
+
+  background-size:cover;
+  background-position:center;
+  background-attachment:fixed;
+}
+
+.world::after{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background:
+    radial-gradient(
+      circle at 50% 20%,
+      rgba(101,242,139,.08),
+      transparent 42%
+    );
+}
+
+
+/* =========================================================
+   DECORATIVE SCIENCE CAPTIONS
+========================================================= */
+
+.science-caption{
+  position:fixed;
+  z-index:-1;
+
+  font-family:Caveat,cursive;
+  color:rgba(255,255,255,.09);
+
+  font-size:clamp(28px,4vw,58px);
+  font-weight:600;
+  letter-spacing:2px;
+
+  pointer-events:none;
+  user-select:none;
+  white-space:nowrap;
+}
+
+.caption-1{
+  top:19%;
+  left:-18px;
+  transform:rotate(-7deg);
+}
+
+.caption-2{
+  top:44%;
+  right:-20px;
+  transform:rotate(7deg);
+}
+
+.caption-3{
+  bottom:27%;
+  left:5%;
+  transform:rotate(-5deg);
+}
+
+.caption-4{
+  bottom:8%;
+  right:4%;
+  transform:rotate(5deg);
+}
+
+.caption-5{
+  top:67%;
+  left:-12px;
+  font-size:clamp(24px,3vw,44px);
+  transform:rotate(-8deg);
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.nav{
+  position:sticky;
+  top:0;
+  z-index:1000;
+
+  background:rgba(7,16,11,.78);
+  backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px);
+
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.nav-inner{
+  width:min(var(--max),calc(100% - 32px));
+  min-height:72px;
+  margin:auto;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  flex-shrink:0;
+}
+
+.brand-icon{
+  width:40px;
+  height:40px;
+
+  display:grid;
+  place-items:center;
+
+  border:1px solid var(--line);
+  border-radius:12px;
+
+  background:rgba(255,255,255,.04);
+  font-size:22px;
+}
+
+.brand-title{
+  display:flex;
+  flex-direction:column;
+  line-height:1;
+}
+
+.brand-title strong{
+  font-size:15px;
+  letter-spacing:1.5px;
+}
+
+.brand-title small{
+  margin-top:4px;
+  color:var(--muted);
+  font-size:8px;
+  letter-spacing:1.5px;
+}
+
+.nav-links{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:5px;
+  flex:1;
+}
+
+.nav-links a{
+  padding:9px 10px;
+  border-radius:10px;
+
+  color:#dfe7e1;
+  font-size:12px;
+  font-weight:600;
+
+  transition:.2s ease;
+}
+
+.nav-links a:hover{
+  background:rgba(101,242,139,.09);
+  color:var(--green);
+}
+
+.actions{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  flex-shrink:0;
+}
+
+.back-btn,
+.lang{
+  min-height:38px;
+  padding:0 13px;
+
+  border:1px solid var(--line);
+  border-radius:10px;
+
+  background:rgba(255,255,255,.04);
+  color:var(--text);
+
+  font-size:12px;
+  font-weight:600;
+
+  transition:.2s ease;
+}
+
+.back-btn:hover,
+.lang:hover{
+  border-color:rgba(101,242,139,.4);
+  background:rgba(101,242,139,.08);
+}
+
+.lang{
+  border-color:rgba(101,242,139,.28);
+}
+
+.lang b{
+  color:var(--green);
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+main{
+  width:min(var(--max),calc(100% - 32px));
+  margin:auto;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+  min-height:390px;
+  margin-top:24px;
+
+  position:relative;
+  overflow:hidden;
+
+  display:flex;
+  align-items:center;
+
+  border:1px solid var(--line);
+  border-radius:24px;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(3,8,5,.94),
+      rgba(3,8,5,.62) 52%,
+      rgba(3,8,5,.18)
+    ),
+    url("https://res.cloudinary.com/eq1jpw1h/image/upload/v1789110104/file_00000000969c8211b29ef6fc7b2f2e78.png");
+
+  background-size:cover;
+  background-position:center;
+
+  box-shadow:var(--shadow);
+}
+
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background:
+    radial-gradient(
+      circle at 75% 45%,
+      rgba(101,242,139,.10),
+      transparent 30%
+    );
+
+  pointer-events:none;
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+
+  width:min(680px,100%);
+  padding:48px 42px;
+}
+
+.kicker{
+  color:var(--green);
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  margin-bottom:10px;
+}
+
+.hero h1{
+  font-family:Caveat,cursive;
+  font-size:clamp(58px,8vw,104px);
+  line-height:.82;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  margin-bottom:18px;
+}
+
+.hero h1 span{
+  color:var(--green);
+}
+
+.hero-subtitle{
+  font-size:20px;
+  font-weight:700;
+  margin-bottom:10px;
+}
+
+.hero-description{
+  max-width:610px;
+  color:#c4cdc6;
+  line-height:1.7;
+  font-size:14px;
+}
+
+.tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:20px;
+}
+
+.tag{
+  padding:7px 11px;
+  border:1px solid rgba(101,242,139,.25);
+  border-radius:999px;
+
+  background:rgba(101,242,139,.07);
+  color:#dcefe1;
+
+  font-size:11px;
+}
+
+
+/* =========================================================
+   SECTION
+========================================================= */
+
+.section{
+  margin-top:70px;
+}
+
+.section-head{
+  margin-bottom:24px;
+}
+
+.section-kicker{
+  color:var(--green);
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  margin-bottom:7px;
+}
+
+.section-title{
+  font-family:Caveat,cursive;
+  font-size:clamp(42px,6vw,68px);
+  line-height:.9;
+  text-transform:uppercase;
+}
+
+.section-description{
+  max-width:700px;
+  margin-top:12px;
+
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.7;
+}
+
+
+/* =========================================================
+   FILTER BAR
+========================================================= */
+
+.toolbar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+
+  margin-bottom:20px;
+}
+
+.filters{
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px;
+}
+
+.filter-btn{
+  padding:9px 13px;
+
+  border:1px solid var(--line);
+  border-radius:10px;
+
+  background:rgba(255,255,255,.035);
+  color:#dbe3dd;
+
+  font-size:12px;
+  font-weight:600;
+
+  transition:.2s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active{
+  border-color:rgba(101,242,139,.45);
+  background:rgba(101,242,139,.10);
+  color:var(--green);
+}
+
+
+/* =========================================================
+   PHENOMENA GRID
+========================================================= */
+
+.phenomena-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:15px;
+}
+
+.phenomenon-card{
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.045),
+      rgba(255,255,255,.018)
+    );
+
+  border:1px solid var(--line);
+  border-radius:17px;
+
+  overflow:hidden;
+  box-shadow:0 10px 30px rgba(0,0,0,.18);
+
+  transition:
+    transform .25s ease,
+    border-color .25s ease;
+}
+
+.phenomenon-card:hover{
+  transform:translateY(-3px);
+  border-color:rgba(101,242,139,.3);
+}
+
+.card-main{
+  padding:20px;
+}
+
+.card-top{
+  display:flex;
+  align-items:flex-start;
+  gap:13px;
+}
+
+.card-icon{
+  width:48px;
+  height:48px;
+  flex-shrink:0;
+
+  display:grid;
+  place-items:center;
+
+  border:1px solid rgba(255,255,255,.10);
+  border-radius:14px;
+
+  background:rgba(255,255,255,.045);
+  font-size:25px;
+}
+
+.card-title{
+  font-size:17px;
+  font-weight:700;
+  line-height:1.3;
+}
+
+.card-topic{
+  margin-top:5px;
+
+  color:var(--green);
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:1px;
+  text-transform:uppercase;
+}
+
+.card-observe{
+  margin-top:14px;
+
+  color:#bfc9c1;
+  font-size:13px;
+  line-height:1.65;
+}
+
+.card-footer{
+  margin-top:17px;
+
+  display:flex;
+  justify-content:flex-end;
+}
+
+.explore-btn,
+.reveal-btn,
+.check-btn,
+.next-btn{
+  border:1px solid rgba(101,242,139,.35);
+  border-radius:10px;
+
+  background:rgba(101,242,139,.09);
+  color:var(--green);
+
+  padding:9px 14px;
+
+  font-size:12px;
+  font-weight:700;
+
+  transition:.2s ease;
+}
+
+.explore-btn:hover,
+.reveal-btn:hover,
+.check-btn:hover,
+.next-btn:hover{
+  background:rgba(101,242,139,.16);
+  border-color:rgba(101,242,139,.6);
+}
+
+.card-details{
+  display:none;
+
+  border-top:1px solid var(--line);
+  background:rgba(0,0,0,.13);
+}
+
+.phenomenon-card.open .card-details{
+  display:block;
+}
+
+.detail{
+  padding:15px 20px;
+  border-bottom:1px solid rgba(255,255,255,.07);
+}
+
+.detail:last-child{
+  border-bottom:0;
+}
+
+.detail-label{
+  color:var(--green);
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+  margin-bottom:6px;
+}
+
+.detail-text{
+  color:#c7d0ca;
+  font-size:13px;
+  line-height:1.65;
+}
+
+
+/* =========================================================
+   MAGIC TRICKS
+========================================================= */
+
+.tricks-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:15px;
+}
+
+.trick-card{
+  border:1px solid var(--line);
+  border-radius:17px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.045),
+      rgba(255,255,255,.018)
+    );
+
+  overflow:hidden;
+}
+
+.trick-card.open{
+  border-color:rgba(101,242,139,.30);
+}
+
+.trick-head{
+  padding:20px;
+}
+
+.trick-title-row{
+  display:flex;
+  gap:13px;
+  align-items:flex-start;
+}
+
+.trick-icon{
+  width:48px;
+  height:48px;
+  display:grid;
+  place-items:center;
+  flex-shrink:0;
+
+  border:1px solid rgba(255,255,255,.10);
+  border-radius:14px;
+
+  background:rgba(255,255,255,.04);
+
+  font-size:25px;
+}
+
+.trick-title{
+  font-size:17px;
+  font-weight:700;
+  line-height:1.3;
+}
+
+.trick-subtitle{
+  margin-top:5px;
+  color:var(--muted);
+  font-size:11px;
+}
+
+.trick-observe{
+  margin-top:14px;
+  color:#c4cec6;
+  font-size:13px;
+  line-height:1.65;
+}
+
+.trick-action{
+  margin-top:16px;
+  display:flex;
+  justify-content:flex-end;
+}
+
+.trick-secret{
+  display:none;
+  border-top:1px solid var(--line);
+  background:rgba(0,0,0,.14);
+}
+
+.trick-card.open .trick-secret{
+  display:block;
+}
+
+
+/* =========================================================
+   QUIZ
+========================================================= */
+
+.quiz-wrap{
+  max-width:800px;
+  margin:0 auto;
+}
+
+.quiz-card{
+  border:1px solid var(--line);
+  border-radius:22px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.055),
+      rgba(255,255,255,.018)
+    );
+
+  box-shadow:var(--shadow);
+  overflow:hidden;
+}
+
+.quiz-top{
+  padding:25px 26px 20px;
+
+  border-bottom:1px solid var(--line);
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:15px;
+}
+
+.quiz-number{
+  color:var(--green);
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+}
+
+.quiz-topic{
+  color:var(--muted);
+  font-size:12px;
+}
+
+.quiz-body{
+  padding:27px;
+}
+
+.quiz-observe-label,
+.quiz-question-label{
+  color:var(--green);
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+  margin-bottom:7px;
+}
+
+.quiz-observe{
+  color:#bfc9c1;
+  font-size:13px;
+  line-height:1.7;
+  margin-bottom:24px;
+}
+
+.quiz-question{
+  font-size:22px;
+  font-weight:700;
+  line-height:1.4;
+  margin-bottom:17px;
+}
+
+.options{
+  display:grid;
+  gap:9px;
+}
+
+.option{
+  width:100%;
+  padding:13px 14px;
+
+  text-align:left;
+
+  border:1px solid rgba(255,255,255,.13);
+  border-radius:11px;
+
+  background:rgba(255,255,255,.025);
+  color:#dce4de;
+
+  font-size:13px;
+  line-height:1.5;
+
+  transition:.2s ease;
+}
+
+.option:hover{
+  border-color:rgba(101,242,139,.35);
+  background:rgba(101,242,139,.055);
+}
+
+.option.selected{
+  border-color:rgba(101,242,139,.65);
+  background:rgba(101,242,139,.10);
+  color:#fff;
+}
+
+.option.correct{
+  border-color:rgba(101,242,139,.7);
+  background:rgba(101,242,139,.13);
+}
+
+.option.wrong{
+  border-color:rgba(255,110,110,.55);
+  background:rgba(255,80,80,.08);
+}
+
+.quiz-actions{
+  margin-top:18px;
+  display:flex;
+  justify-content:flex-end;
+}
+
+.check-btn{
+  min-width:130px;
+}
+
+.result{
+  display:none;
+
+  margin-top:18px;
+  padding:17px;
+
+  border:1px solid var(--line);
+  border-radius:13px;
+
+  background:rgba(255,255,255,.025);
+}
+
+.result.show{
+  display:block;
+}
+
+.result-title{
+  font-weight:800;
+  margin-bottom:7px;
+}
+
+.result.correct-result .result-title{
+  color:var(--green);
+}
+
+.result.wrong-result .result-title{
+  color:#ffaaa0;
+}
+
+.result-explanation{
+  color:#c5cec7;
+  font-size:13px;
+  line-height:1.7;
+}
+
+.next-wrap{
+  display:none;
+  margin-top:15px;
+  justify-content:flex-end;
+}
+
+.next-wrap.show{
+  display:flex;
+}
+
+
+/* =========================================================
+   FINAL CTA
+========================================================= */
+
+.cta{
+  min-height:300px;
+  margin:75px 0 35px;
+
+  position:relative;
+  overflow:hidden;
+
+  border:1px solid var(--line);
+  border-radius:24px;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(3,8,5,.93),
+      rgba(3,8,5,.58),
+      rgba(3,8,5,.18)
+    ),
+    url("https://res.cloudinary.com/eq1jpw1h/image/upload/v1789110104/file_00000000969c8211b29ef6fc7b2f2e78.png");
+
+  background-size:cover;
+  background-position:center;
+
+  display:flex;
+  align-items:center;
+}
+
+.cta-content{
+  width:min(650px,100%);
+  padding:42px;
+}
+
+.cta h2{
+  font-family:Caveat,cursive;
+  font-size:clamp(42px,6vw,70px);
+  line-height:.9;
+  text-transform:uppercase;
+  margin-bottom:12px;
+}
+
+.cta p{
+  max-width:560px;
+  color:#c1cbc4;
+  font-size:14px;
+  line-height:1.7;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+  width:min(var(--max),calc(100% - 32px));
+  margin:0 auto;
+  padding:28px 0 35px;
+
+  border-top:1px solid rgba(255,255,255,.09);
+
+  color:#7f8c83;
+  font-size:11px;
+  text-align:center;
+}
+
+
+/* =========================================================
+   LANGUAGE
+========================================================= */
+
+[data-hi]{
+  transition:none;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.empty{
+  grid-column:1/-1;
+
+  padding:45px 20px;
+  text-align:center;
+
+  border:1px dashed var(--line);
+  border-radius:16px;
+
+  color:var(--muted);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:900px){
+
+  .nav-inner{
+    flex-wrap:wrap;
+    padding:10px 0;
+  }
+
+  .nav-links{
+    order:3;
+    width:100%;
+
+    overflow-x:auto;
+    justify-content:flex-start;
+
+    padding-bottom:3px;
+  }
+
+  .nav-links a{
+    white-space:nowrap;
+  }
+
+  .actions{
+    margin-left:auto;
+  }
+
+  .hero{
+    min-height:400px;
+  }
+
+  .hero-content{
+    padding:40px 30px;
+  }
+
+  .phenomena-grid,
+  .tricks-grid{
+    grid-template-columns:1fr;
+  }
+
+  .science-caption{
+    opacity:.65;
+  }
+}
+
+
+@media(max-width:600px){
+
+  .nav-inner,
+  main,
+  footer{
+    width:min(100% - 20px,var(--max));
+  }
+
+  .nav-inner{
+    min-height:65px;
+    gap:8px;
+  }
+
+  .brand-title strong{
+    font-size:13px;
+  }
+
+  .brand-title small{
+    font-size:7px;
+  }
+
+  .brand-icon{
+    width:36px;
+    height:36px;
+    font-size:19px;
+  }
+
+  .back-btn{
+    display:none;
+  }
+
+  .actions{
+    gap:5px;
+  }
+
+  .lang{
+    min-height:35px;
+    padding:0 9px;
+    font-size:11px;
+  }
+
+  .nav-links{
+    gap:2px;
+  }
+
+  .nav-links a{
+    padding:7px 8px;
+    font-size:11px;
+  }
+
+  .hero{
+    margin-top:14px;
+    min-height:440px;
+    border-radius:20px;
+
+    background-position:58% center;
+  }
+
+  .hero-content{
+    padding:30px 22px;
+    align-self:flex-end;
+  }
+
+  .hero h1{
+    font-size:clamp(52px,17vw,78px);
+  }
+
+  .hero-subtitle{
+    font-size:17px;
+  }
+
+  .hero-description{
+    font-size:13px;
+  }
+
+  .section{
+    margin-top:55px;
+  }
+
+  .section-title{
+    font-size:46px;
+  }
+
+  .toolbar{
+    align-items:flex-start;
+  }
+
+  .filters{
+    gap:6px;
+  }
+
+  .filter-btn{
+    padding:8px 10px;
+    font-size:11px;
+  }
+
+  .card-main,
+  .trick-head{
+    padding:17px;
+  }
+
+  .detail{
+    padding:14px 17px;
+  }
+
+  .quiz-body{
+    padding:20px;
+  }
+
+  .quiz-top{
+    padding:20px;
+  }
+
+  .quiz-question{
+    font-size:19px;
+  }
+
+  .option{
+    font-size:12px;
+    padding:12px;
+  }
+
+  .cta{
+    min-height:360px;
+    border-radius:20px;
+    margin-top:60px;
+  }
+
+  .cta-content{
+    padding:27px 22px;
+    align-self:flex-end;
+  }
+
+  .cta h2{
+    font-size:49px;
+  }
+
+  .science-caption{
+    font-size:28px;
+  }
+
+  .caption-2,
+  .caption-4{
+    right:-45px;
+  }
+
+  .caption-1,
+  .caption-5{
+    left:-35px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media(prefers-reduced-motion:reduce){
+
+  html{
+    scroll-behavior:auto;
+  }
+
+  *,
+  *::before,
+  *::after{
+    transition:none !important;
+    animation:none !important;
+  }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+<!-- Background -->
+<div class="world"></div>
+
+
+<!-- Decorative science captions -->
+<div class="science-caption caption-1">
+  OBSERVE → WONDER → DISCOVER
+</div>
+
+<div class="science-caption caption-2">
+  SCIENCE LOOKS LIKE MAGIC
+</div>
+
+<div class="science-caption caption-3">
+  LOOK CLOSER
+</div>
+
+<div class="science-caption caption-4">
+  EVERY MAGIC HAS A SECRET
+</div>
+
+<div class="science-caption caption-5">
+  WHAT SEEMS IMPOSSIBLE → HAS AN EXPLANATION
+</div>
+
+
+<!-- =======================================================
+     NAVIGATION
+======================================================= -->
+
+<header class="nav">
+
+  <div class="nav-inner">
+
+    <a class="brand" href="../index.html">
+
+      <div class="brand-icon">
+        🧪
+      </div>
+
+      <div class="brand-title">
+        <strong>SCIENCE</strong>
+        <small>BEYOND THE TEXTBOOK</small>
+      </div>
+
+    </a>
+
+
+    <nav class="nav-links">
+
+      <a href="../index.html">⌂ Home</a>
+
+      <a href="../physics/index.html">Physics</a>
+
+      <a href="../chemistry/index.html">Chemistry</a>
+
+      <a href="../biology/index.html">Biology</a>
+
+      <a href="../lab/index.html">Virtual Lab</a>
+
+      <a href="../games/index.html">Games</a>
+
+    </nav>
+
+
+    <div class="actions">
+
+      <a class="back-btn" href="../index.html">
+        ← Home
+      </a>
+
+      <button
+        class="lang"
+        id="langBtn"
+        type="button"
+      >
+        EN <span>|</span> <b>हिंदी</b>
+      </button>
+
+    </div>
+
+  </div>
+
+</header>
+
+
+
+<main>
+
+
+<!-- =======================================================
+     HERO
+======================================================= -->
+
+<section class="hero">
+
+  <div class="hero-content">
+
+    <div
+      class="kicker"
+      data-en="EXPLORE THE IMPOSSIBLE"
+      data-hi="असंभव लगने वाली चीज़ों को समझो"
+    >
+      EXPLORE THE IMPOSSIBLE
+    </div>
+
+
+    <h1>
+      SCIENCE THAT
+      <span>LOOKS LIKE MAGIC</span>
+    </h1>
+
+
+    <div
+      class="hero-subtitle"
+      data-en="When science becomes so surprising that it feels like magic."
+      data-hi="जब science इतनी surprising हो जाए कि वह magic जैसी लगे।"
+    >
+      When science becomes so surprising that it feels like magic.
+    </div>
+
+
+    <p
+      class="hero-description"
+      data-en="A magnet moves an object without touching it. A plant closes its leaves. A coin disappears. A laser beam suddenly becomes visible. Nothing supernatural is happening — there is science hiding behind the illusion."
+      data-hi="Magnet bina touch kiye object ko move karta hai. Plant apne leaves band kar leta hai. Coin gayab ho jaata hai. Laser beam achanak visible ho jaati hai. Kuch supernatural nahi ho raha — har illusion ke peeche science chhupi hai."
+    >
+      A magnet moves an object without touching it. A plant closes its leaves. A coin disappears. A laser beam suddenly becomes visible. Nothing supernatural is happening — there is science hiding behind the illusion.
+    </p>
+
+
+    <div class="tags">
+
+      <span class="tag">🔬 Observe</span>
+      <span class="tag">🧠 Question</span>
+      <span class="tag">✨ Discover</span>
+      <span class="tag">⚡ Science</span>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =======================================================
+     PHENOMENA
+======================================================= -->
+
+<section class="section" id="phenomena">
+
+  <div class="section-head">
+
+    <div
+      class="section-kicker"
+      data-en="01 · LOOK AROUND"
+      data-hi="01 · अपने आसपास देखो"
+    >
+      01 · LOOK AROUND
+    </div>
+
+
+    <h2
+      class="section-title"
+      data-en="PHENOMENA THAT FEEL LIKE MAGIC"
+      data-hi="MAGIC जैसी लगने वाली PHENOMENA"
+    >
+      PHENOMENA THAT FEEL LIKE MAGIC
+    </h2>
+
+
+    <p
+      class="section-description"
+      data-en="Everyday things that look strange at first — until you discover the science behind them."
+      data-hi="रोज़मर्रा की ऐसी चीज़ें जो पहली नज़र में अजीब लगती हैं — लेकिन उनके पीछे की science जानने पर सब समझ आने लगता है।"
+    >
+      Everyday things that look strange at first — until you discover the science behind them.
+    </p>
+
+  </div>
+
+
+  <div class="toolbar">
+
+    <div class="filters">
+
+      <button class="filter-btn active" data-filter="All">
+        All
+      </button>
+
+      <button class="filter-btn" data-filter="Physics">
+        Physics
+      </button>
+
+      <button class="filter-btn" data-filter="Chemistry">
+        Chemistry
+      </button>
+
+      <button class="filter-btn" data-filter="Biology">
+        Biology
+      </button>
+
+      <button class="filter-btn" data-filter="Earth & Environment">
+        Earth & Environment
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <div
+    class="phenomena-grid"
+    id="phenomenaGrid"
+  ></div>
+
+</section>
+
+
+
+<!-- =======================================================
+     MAGIC TRICKS
+======================================================= -->
+
+<section class="section" id="magic-tricks">
+
+  <div class="section-head">
+
+    <div
+      class="section-kicker"
+      data-en="02 · REVEAL THE SECRET"
+      data-hi="02 · SECRET जानो"
+    >
+      02 · REVEAL THE SECRET
+    </div>
+
+
+    <h2
+      class="section-title"
+      data-en="SCIENCE BEHIND REAL MAGIC TRICKS"
+      data-hi="REAL MAGIC TRICKS के पीछे की SCIENCE"
+    >
+      SCIENCE BEHIND REAL MAGIC TRICKS
+    </h2>
+
+
+    <p
+      class="section-description"
+      data-en="The illusion is real. The magic is in understanding how it works."
+      data-hi="Illusion real hai। Magic यह समझने में है कि वह काम कैसे करता है।"
+    >
+      The illusion is real. The magic is in understanding how it works.
+    </p>
+
+  </div>
+
+
+  <div
+    class="tricks-grid"
+    id="tricksGrid"
+  ></div>
+
+</section>
+
+
+
+<!-- =======================================================
+     QUIZ
+======================================================= -->
+
+<section class="section" id="quiz">
+
+  <div class="section-head">
+
+    <div
+      class="section-kicker"
+      data-en="03 · GUESS IT FIRST"
+      data-hi="03 · पहले GUESS करो"
+    >
+      03 · GUESS IT FIRST
+    </div>
+
+
+    <h2
+      class="section-title"
+      data-en="CAN YOU EXPLAIN THE MAGIC?"
+      data-hi="क्या तुम MAGIC को समझा सकते हो?"
+    >
+      CAN YOU EXPLAIN THE MAGIC?
+    </h2>
+
+
+    <p
+      class="section-description"
+      data-en="Look at the phenomenon, make your guess, then reveal the scientific explanation."
+      data-hi="Phenomenon को देखो, अपना answer सोचो और फिर scientific explanation देखो।"
+    >
+      Look at the phenomenon, make your guess, then reveal the scientific explanation.
+    </p>
+
+  </div>
+
+
+  <div class="quiz-wrap">
+
+    <div class="quiz-card">
+
+      <div class="quiz-top">
+
+        <div
+          class="quiz-number"
+          id="quizNumber"
+        >
+          QUESTION 1 / 12
+        </div>
+
+        <div
+          class="quiz-topic"
+          id="quizTopic"
+        >
+          Static Electricity
+        </div>
+
+      </div>
+
+
+      <div class="quiz-body">
+
+        <div
+          class="quiz-observe-label"
+          data-en="OBSERVE"
+          data-hi="देखो"
+        >
+          OBSERVE
+        </div>
+
+
+        <div
+          class="quiz-observe"
+          id="quizObserve"
+        ></div>
+
+
+        <div
+          class="quiz-question-label"
+          data-en="YOUR QUESTION"
+          data-hi="सवाल"
+        >
+          YOUR QUESTION
+        </div>
+
+
+        <div
+          class="quiz-question"
+          id="quizQuestion"
+        ></div>
+
+
+        <div
+          class="options"
+          id="quizOptions"
+        ></div>
+
+
+        <div class="quiz-actions">
+
+          <button
+            class="check-btn"
+            id="checkBtn"
+            type="button"
+            data-en="Check Answer"
+            data-hi="Answer Check करो"
+          >
+            Check Answer
+          </button>
+
+        </div>
+
+
+        <div
+          class="result"
+          id="quizResult"
+        >
+
+          <div
+            class="result-title"
+            id="resultTitle"
+          ></div>
+
+          <div
+            class="result-explanation"
+            id="resultExplanation"
+          ></div>
+
+        </div>
+
+
+        <div
+          class="next-wrap"
+          id="nextWrap"
+        >
+
+          <button
+            class="next-btn"
+            id="nextBtn"
+            type="button"
+            data-en="Next Question →"
+            data-hi="Next Question →"
+          >
+            Next Question →
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =======================================================
+     FINAL CTA
+======================================================= -->
+
+<section class="cta">
+
+  <div class="cta-content">
+
+    <div
+      class="section-kicker"
+      data-en="KEEP EXPLORING"
+      data-hi="EXPLORATION जारी रखो"
+    >
+      KEEP EXPLORING
+    </div>
+
+
+    <h2
+      data-en="THE MORE YOU QUESTION, THE MORE MAGIC YOU SEE."
+      data-hi="जितना ज्यादा QUESTION करोगे, उतनी ज्यादा MAGIC जैसी SCIENCE दिखाई देगी।"
+    >
+      THE MORE YOU QUESTION, THE MORE MAGIC YOU SEE.
+    </h2>
+
+
+    <p
+      data-en="Science does not remove the wonder. It makes the wonder even more interesting."
+      data-hi="Science wonder को खत्म नहीं करती। वह wonder को और भी interesting बना देती है।"
+    >
+      Science does not remove the wonder. It makes the wonder even more interesting.
+    </p>
+
+  </div>
+
+</section>
+
+
+</main>
+
+
+
+<footer>
+
+  <div
+    data-en="Science Beyond the Textbook · See → Explore → Question → Understand"
+    data-hi="Science Beyond the Textbook · देखो → Explore करो → Question करो → Understand करो"
+  >
+    Science Beyond the Textbook · See → Explore → Question → Understand
+  </div>
+
+</footer>
+
+
+
+<!-- =======================================================
+     EXTERNAL DATA FILES
+======================================================= -->
+
+<script src="../data/magic-phenomena.js"></script>
+<script src="../data/magic-tricks.js"></script>
+<script src="../data/magic-quiz.js"></script>
+
+
+
+<script>
+
+/* =========================================================
+   LANGUAGE SYSTEM
+========================================================= */
+
+let currentLanguage =
+  localStorage.getItem("scienceLanguage") || "en";
+
+
+const langBtn =
+  document.getElementById("langBtn");
+
+
+function getText(value){
+
+  if(!value) return "";
+
+  if(typeof value === "string"){
+    return value;
+  }
+
+  return value[currentLanguage] || value.en || "";
+}
+
+
+function applyLanguage(){
+
+  document.documentElement.lang =
+    currentLanguage === "hi" ? "hi" : "en";
+
+
+  document.querySelectorAll("[data-en]").forEach(el=>{
+
+    const value =
+      currentLanguage === "hi"
+        ? el.dataset.hi
+        : el.dataset.en;
+
+    if(value){
+      el.textContent = value;
+    }
+
+  });
+
+
+  langBtn.innerHTML =
+    currentLanguage === "en"
+      ? `EN <span>|</span> <b>हिंदी</b>`
+      : `<b>EN</b> <span>|</span> हिंदी`;
+
+
+  renderPhenomena();
+  renderTricks();
+  renderQuiz();
+
+}
+
+
+langBtn.addEventListener("click",()=>{
+
+  currentLanguage =
+    currentLanguage === "en"
+      ? "hi"
+      : "en";
+
+  localStorage.setItem(
+    "scienceLanguage",
+    currentLanguage
+  );
+
+  applyLanguage();
+
+});
+
+
+
+/* =========================================================
+   PHENOMENA
+========================================================= */
+
+const phenomenaGrid =
+  document.getElementById("phenomenaGrid");
+
+let activeFilter = "All";
+
+
+function renderPhenomena(){
+
+  phenomenaGrid.innerHTML = "";
+
+
+  if(
+    typeof magicPhenomena === "undefined" ||
+    !Array.isArray(magicPhenomena)
+  ){
+
+    phenomenaGrid.innerHTML = `
+      <div class="empty">
+        Magic phenomena data could not be loaded.
+      </div>
+    `;
+
+    return;
+  }
+
+
+  const filtered =
+    activeFilter === "All"
+      ? magicPhenomena
+      : magicPhenomena.filter(item=>{
+
+          const subject =
+            item.subject ||
+            item.category ||
+            item.topic ||
+            "";
+
+          return subject
+            .toLowerCase()
+            .includes(activeFilter.toLowerCase());
+
+        });
+
+
+  if(!filtered.length){
+
+    phenomenaGrid.innerHTML = `
+      <div class="empty">
+        No phenomena found.
+      </div>
+    `;
+
+    return;
+  }
+
+
+  filtered.forEach(item=>{
+
+    const card =
+      document.createElement("article");
+
+    card.className =
+      "phenomenon-card";
+
+
+    const subject =
+      item.subject ||
+      item.category ||
+      item.topic ||
+      "";
+
+
+    const title =
+      getText(item.title);
+
+
+    const observe =
+      getText(item.observe);
+
+
+    const science =
+      getText(
+        item.science ||
+        item.theScience
+      );
+
+
+    const see =
+      getText(
+        item.see ||
+        item.youllSeeThisIn ||
+        item.seeThisIn
+      );
+
+
+    const fact =
+      getText(
+        item.funFact ||
+        item.fact
+      );
+
+
+    card.innerHTML = `
+
+      <div class="card-main">
+
+        <div class="card-top">
+
+          <div class="card-icon">
+            ${item.icon || "🔬"}
+          </div>
+
+          <div>
+
+            <div class="card-title">
+              ${title}
+            </div>
+
+            <div class="card-topic">
+              ${subject}
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="card-observe">
+          ${observe}
+        </div>
+
+
+        <div class="card-footer">
+
+          <button
+            class="explore-btn"
+            type="button"
+          >
+            ${
+              currentLanguage === "hi"
+                ? "Explore करो →"
+                : "Explore →"
+            }
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <div class="card-details">
+
+        <div class="detail">
+
+          <div class="detail-label">
+            ${
+              currentLanguage === "hi"
+                ? "THE SCIENCE"
+                : "THE SCIENCE"
+            }
+          </div>
+
+          <div class="detail-text">
+            ${science}
+          </div>
+
+        </div>
+
+
+        <div class="detail">
+
+          <div class="detail-label">
+            ${
+              currentLanguage === "hi"
+                ? "यहाँ देखोगे"
+                : "YOU'LL SEE THIS IN"
+            }
+          </div>
+
+          <div class="detail-text">
+            ${see}
+          </div>
+
+        </div>
+
+
+        <div class="detail">
+
+          <div class="detail-label">
+            ${
+              currentLanguage === "hi"
+                ? "FUN FACT"
+                : "FUN FACT"
+            }
+          </div>
+
+          <div class="detail-text">
+            ${fact}
+          </div>
+
+        </div>
+
+      </div>
+
+    `;
+
+
+    const exploreBtn =
+      card.querySelector(".explore-btn");
+
+
+    exploreBtn.addEventListener("click",()=>{
+
+      const open =
+        card.classList.toggle("open");
+
+
+      exploreBtn.textContent =
+        open
+          ? (
+              currentLanguage === "hi"
+                ? "Close ↑"
+                : "Close ↑"
+            )
+          : (
+              currentLanguage === "hi"
+                ? "Explore करो →"
+                : "Explore →"
+            );
+
+    });
+
+
+    phenomenaGrid.appendChild(card);
+
+  });
+
+}
+
+
+
+/* =========================================================
+   FILTERS
+========================================================= */
+
+document
+  .querySelectorAll(".filter-btn")
+  .forEach(button=>{
+
+    button.addEventListener("click",()=>{
+
+      document
+        .querySelectorAll(".filter-btn")
+        .forEach(btn=>{
+          btn.classList.remove("active");
+        });
+
+
+      button.classList.add("active");
+
+
+      activeFilter =
+        button.dataset.filter;
+
+
+      renderPhenomena();
+
+    });
+
+  });
+
+
+
+/* =========================================================
+   MAGIC TRICKS
+========================================================= */
+
+const tricksGrid =
+  document.getElementById("tricksGrid");
+
+
+function renderTricks(){
+
+  tricksGrid.innerHTML = "";
+
+
+  if(
+    typeof magicTricks === "undefined" ||
+    !Array.isArray(magicTricks)
+  ){
+
+    tricksGrid.innerHTML = `
+      <div class="empty">
+        Magic tricks data could not be loaded.
+      </div>
+    `;
+
+    return;
+  }
+
+
+  magicTricks.forEach(item=>{
+
+    const card =
+      document.createElement("article");
+
+    card.className =
+      "trick-card";
+
+
+    const title =
+      getText(item.title);
+
+
+    const subtitle =
+      getText(item.subtitle);
+
+
+    const observe =
+      getText(
+        item.whatYouSee ||
+        item.observe
+      );
+
+
+    const secret =
+      getText(item.secret);
+
+
+    const fact =
+      getText(item.funFact);
+
+
+    card.innerHTML = `
+
+      <div class="trick-head">
+
+        <div class="trick-title-row">
+
+          <div class="trick-icon">
+            ${item.icon || "✨"}
+          </div>
+
+          <div>
+
+            <div class="trick-title">
+              ${title}
+            </div>
+
+            ${
+              subtitle
+                ? `
+                  <div class="trick-subtitle">
+                    ${subtitle}
+                  </div>
+                `
+                : ""
+            }
+
+          </div>
+
+        </div>
+
+
+        <div class="trick-observe">
+          ${observe}
+        </div>
+
+
+        <div class="trick-action">
+
+          <button
+            class="reveal-btn"
+            type="button"
+          >
+            ${
+              currentLanguage === "hi"
+                ? "Reveal Secret →"
+                : "Reveal Secret →"
+            }
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <div class="trick-secret">
+
+        <div class="detail">
+
+          <div class="detail-label">
+            ${
+              currentLanguage === "hi"
+                ? "THE SECRET"
+                : "THE SECRET"
+            }
+          </div>
+
+          <div class="detail-text">
+            ${secret}
+          </div>
+
+        </div>
+
+
+        <div class="detail">
+
+          <div class="detail-label">
+            FUN FACT
+          </div>
+
+          <div class="detail-text">
+            ${fact}
+          </div>
+
+        </div>
+
+      </div>
+
+    `;
+
+
+    const revealBtn =
+      card.querySelector(".reveal-btn");
+
+
+    revealBtn.addEventListener("click",()=>{
+
+      const open =
+        card.classList.toggle("open");
+
+
+      revealBtn.textContent =
+        open
+          ? (
+              currentLanguage === "hi"
+                ? "Hide Secret ↑"
+                : "Hide Secret ↑"
+            )
+          : "Reveal Secret →";
+
+    });
+
+
+    tricksGrid.appendChild(card);
+
+  });
+
+}
+
+
+
+/* =========================================================
+   QUIZ
+========================================================= */
+
+let quizIndex = 0;
+let selectedAnswer = null;
+let answerChecked = false;
+
+
+const quizNumber =
+  document.getElementById("quizNumber");
+
+const quizTopic =
+  document.getElementById("quizTopic");
+
+const quizObserve =
+  document.getElementById("quizObserve");
+
+const quizQuestion =
+  document.getElementById("quizQuestion");
+
+const quizOptions =
+  document.getElementById("quizOptions");
+
+const checkBtn =
+  document.getElementById("checkBtn");
+
+const quizResult =
+  document.getElementById("quizResult");
+
+const resultTitle =
+  document.getElementById("resultTitle");
+
+const resultExplanation =
+  document.getElementById("resultExplanation");
+
+const nextWrap =
+  document.getElementById("nextWrap");
+
+const nextBtn =
+  document.getElementById("nextBtn");
+
+
+
+function renderQuiz(){
+
+  if(
+    typeof magicQuiz === "undefined" ||
+    !Array.isArray(magicQuiz) ||
+    magicQuiz.length === 0
+  ){
+
+    quizQuestion.textContent =
+      "Quiz data could not be loaded.";
+
+    return;
+  }
+
+
+  if(quizIndex >= magicQuiz.length){
+    quizIndex = 0;
+  }
+
+
+  const item =
+    magicQuiz[quizIndex];
+
+
+  selectedAnswer = null;
+  answerChecked = false;
+
+
+  quizNumber.textContent =
+    currentLanguage === "hi"
+      ? `QUESTION ${quizIndex + 1} / ${magicQuiz.length}`
+      : `QUESTION ${quizIndex + 1} / ${magicQuiz.length}`;
+
+
+  quizTopic.textContent =
+    item.topic || "";
+
+
+  quizObserve.textContent =
+    getText(item.observe);
+
+
+  quizQuestion.textContent =
+    getText(item.question);
+
+
+  quizOptions.innerHTML = "";
+
+
+  const options =
+    currentLanguage === "hi"
+      ? item.options.hi
+      : item.options.en;
+
+
+  options.forEach((option,index)=>{
+
+    const button =
+      document.createElement("button");
+
+    button.type = "button";
+    button.className = "option";
+    button.textContent = option;
+
+
+    button.addEventListener("click",()=>{
+
+      if(answerChecked) return;
+
+
+      document
+        .querySelectorAll(".option")
+        .forEach(btn=>{
+          btn.classList.remove("selected");
+        });
+
+
+      button.classList.add("selected");
+
+      selectedAnswer = index;
+
+    });
+
+
+    quizOptions.appendChild(button);
+
+  });
+
+
+  quizResult.className = "result";
+
+  resultTitle.textContent = "";
+  resultExplanation.textContent = "";
+
+  nextWrap.classList.remove("show");
+
+
+  checkBtn.disabled = false;
+  checkBtn.style.opacity = "1";
+
+
+  checkBtn.textContent =
+    currentLanguage === "hi"
+      ? "Answer Check करो"
+      : "Check Answer";
+
+}
+
+
+
+/* =========================================================
+   CHECK ANSWER
+========================================================= */
+
+checkBtn.addEventListener("click",()=>{
+
+  if(answerChecked) return;
+
+
+  if(selectedAnswer === null){
+
+    resultTitle.textContent =
+      currentLanguage === "hi"
+        ? "Pehle ek answer select karo."
+        : "Select an answer first.";
+
+    resultExplanation.textContent = "";
+
+    quizResult.className =
+      "result show wrong-result";
+
+    return;
+
+  }
+
+
+  const item =
+    magicQuiz[quizIndex];
+
+
+  answerChecked = true;
+
+
+  const options =
+    document.querySelectorAll(".option");
+
+
+  options.forEach((button,index)=>{
+
+    if(index === item.correctAnswer){
+      button.classList.add("correct");
+    }
+
+    if(
+      index === selectedAnswer &&
+      index !== item.correctAnswer
+    ){
+      button.classList.add("wrong");
+    }
+
+  });
+
+
+  const isCorrect =
+    selectedAnswer === item.correctAnswer;
+
+
+  quizResult.className =
+    isCorrect
+      ? "result show correct-result"
+      : "result show wrong-result";
+
+
+  resultTitle.textContent =
+    isCorrect
+      ? (
+          currentLanguage === "hi"
+            ? "✓ Correct!"
+            : "✓ Correct!"
+        )
+      : (
+          currentLanguage === "hi"
+            ? "✗ Not quite!"
+            : "✗ Not quite!"
+        );
+
+
+  resultExplanation.textContent =
+    getText(item.explanation);
+
+
+  nextWrap.classList.add("show");
+
+
+  checkBtn.disabled = true;
+  checkBtn.style.opacity = ".45";
+
+});
+
+
+
+/* =========================================================
+   NEXT QUESTION
+========================================================= */
+
+nextBtn.addEventListener("click",()=>{
+
+  quizIndex++;
+
+
+  if(quizIndex >= magicQuiz.length){
+    quizIndex = 0;
+  }
+
+
+  renderQuiz();
+
+
+  document
+    .getElementById("quiz")
+    .scrollIntoView({
+      behavior:"smooth",
+      block:"start"
+    });
+
+});
+
+
+
+/* =========================================================
+   INITIAL RENDER
+========================================================= */
+
+applyLanguage();
+
+</script>
+
+</body>
+</html>
