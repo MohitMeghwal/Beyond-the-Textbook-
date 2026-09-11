@@ -379,6 +379,182 @@ button{
 
   cursor:pointer;
 }
+/* ==================================================
+   NAVBAR
+================================================== */
+
+
+.nav{
+  position:sticky;
+  top:0;
+  z-index:100;
+
+  border-bottom:
+    1px solid rgba(255,255,255,.14);
+
+  background:
+    rgba(5,10,8,.88);
+
+  backdrop-filter:blur(18px);
+}
+
+
+.nav-inner{
+  min-height:68px;
+
+  display:flex;
+  align-items:center;
+
+  gap:22px;
+}
+
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:10px;
+
+  min-width:max-content;
+}
+
+
+.brand-icon{
+  width:40px;
+  height:40px;
+
+  border:
+    1px solid rgba(101,242,139,.5);
+
+  border-radius:12px;
+
+  display:grid;
+  place-items:center;
+
+  color:var(--green);
+
+  background:
+    rgba(101,242,139,.07);
+
+  font-size:20px;
+}
+
+
+.brand-title{
+  line-height:.9;
+}
+
+
+.brand-title strong{
+  display:block;
+  font-size:18px;
+}
+
+
+.brand-title small{
+  font-family:Caveat,cursive;
+  font-size:14px;
+  color:#d9e2d8;
+}
+
+
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:4px;
+
+  margin-left:auto;
+}
+
+
+.nav-links a,
+.nav-drop{
+  padding:10px 13px;
+
+  border-radius:10px;
+
+  font-size:13px;
+
+  color:#e7ebe6;
+
+  white-space:nowrap;
+
+  cursor:pointer;
+}
+
+
+.nav-links a:hover,
+.nav-drop:hover{
+  background:
+    rgba(101,242,139,.1);
+
+  color:var(--green);
+}
+
+
+.nav-drop{
+  position:relative;
+}
+
+
+.dropdown{
+  display:none;
+
+  position:absolute;
+
+  top:42px;
+  left:0;
+
+  min-width:190px;
+
+  padding:8px;
+
+  background:
+    rgba(9,15,12,.98);
+
+  border:
+    1px solid var(--line);
+
+  border-radius:14px;
+
+  box-shadow:var(--shadow);
+}
+
+
+.nav-drop:hover .dropdown{
+  display:block;
+}
+
+
+.dropdown a{
+  display:block;
+  padding:10px;
+}
+
+
+.actions{
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
+
+.lang{
+  border:
+    1px solid rgba(255,255,255,.6);
+
+  background:
+    rgba(0,0,0,.25);
+
+  color:#fff;
+
+  border-radius:22px;
+
+  padding:7px 11px;
+
+  font-size:12px;
+
+  cursor:pointer;
+}
 
 
 .lang b{
@@ -407,6 +583,7 @@ button{
 .menu-btn{
   display:none;
 }
+
 
 
 /* ==================================================
@@ -1058,22 +1235,287 @@ button{
 
 <div class="world"></div>
 
-<!-- NAVBAR -->
+<!-- ==================================================
+     NAVBAR
+================================================== -->
+
+
 <header class="nav">
+
   <div class="container nav-inner">
+
+
     <a class="brand" href="../index.html">
-      <div class="brand-icon">⚗</div>
-      <div class="brand-title"><strong>SCIENCE</strong><small>BEYOND THE TEXTBOOK</small></div>
+
+      <div class="brand-icon">
+        ⚗
+      </div>
+
+      <div class="brand-title">
+
+        <strong>
+          SCIENCE
+        </strong>
+
+        <small>
+          BEYOND THE TEXTBOOK
+        </small>
+
+      </div>
+
     </a>
+
+
     <nav class="nav-links">
-      <a href="../index.html">⌂ Home</a>
+
+
+      <a href="../index.html">
+        ⌂ Home
+      </a>
+
+
+      <div class="nav-drop">
+
+        Subjects ˅
+
+        <div class="dropdown">
+
+          <a href="../physics/index.html">
+            Physics
+          </a>
+
+          <a href="../chemistry/index.html">
+            Chemistry
+          </a>
+
+          <a href="../biology/index.html">
+            Biology
+          </a>
+
+          <a href="../earth/index.html">
+            Earth & Environment
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="nav-drop">
+
+        Explore ˅
+
+        <div class="dropdown">
+
+          <a href="../why/index.html">
+            Why Does This Happen?
+          </a>
+
+          <a href="../invisible-visible/index.html">
+            Make the Invisible Visible
+          </a>
+
+          <a href="../magic-science/index.html">
+            Science That Looks Like Magic
+          </a>
+
+          <a href="../what-if/index.html">
+            What If?
+          </a>
+
+          <a href="../beyond-textbook/index.html">
+            Beyond the Textbook
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="nav-drop">
+
+        Games ˅
+
+        <div class="dropdown">
+
+          <a href="../games/index.html">
+            All Games
+          </a>
+
+          <a href="../games/circuit-builder.html">
+            Circuit Builder
+          </a>
+
+          <a href="../games/magnetic-maze.html">
+            Magnetic Maze
+          </a>
+
+          <a href="../games/build-a-cell.html">
+            Build a Cell
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="nav-drop">
+
+        Lab ˅
+
+        <div class="dropdown">
+
+          <a href="index.html">
+            Virtual Lab
+          </a>
+
+          <a href="ohms-law.html">
+            Ohm's Law
+          </a>
+
+          <a href="electric-circuit.html">
+            Electric Circuit
+          </a>
+
+          <a href="ray-optics.html">
+            Ray Optics
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="nav-drop">
+
+        More ˅
+
+        <div class="dropdown">
+
+          <a href="../science-around-us/index.html">
+            Science Around Us
+          </a>
+
+          <a href="../real-world/index.html">
+            Science in the Real World
+          </a>
+
+          <a href="../about.html">
+            About
+          </a>
+
+        </div>
+
+      </div>
+
+
     </nav>
+
+
     <div class="actions">
-      <button class="lang" id="langBtn">EN <span>|</span> <b>हिंदी</b></button>
-      <button class="icon-btn menu-btn" id="menuBtn">☰</button>
+
+
+      <button
+        class="lang"
+        id="langBtn">
+
+        EN
+        <span>|</span>
+        <b>हिंदी</b>
+
+      </button>
+
+
+      <button
+        class="icon-btn menu-btn"
+        id="menuBtn">
+
+        ☰
+
+      </button>
+
+
     </div>
+
+
   </div>
+
 </header>
+
+
+
+<!-- ==================================================
+     MOBILE MENU
+================================================== -->
+
+
+<div
+  class="mobile-menu"
+  id="mobileMenu">
+
+
+  <a href="../index.html">
+    ⌂ Home
+  </a>
+
+  <a href="../physics/index.html">
+    ⚛ Physics
+  </a>
+
+  <a href="../chemistry/index.html">
+    🧪 Chemistry
+  </a>
+
+  <a href="../biology/index.html">
+    🧬 Biology
+  </a>
+
+  <a href="../earth/index.html">
+    🌍 Earth & Environment
+  </a>
+
+
+  <a href="../why/index.html">
+    💡 Why Does This Happen?
+  </a>
+
+  <a href="../invisible-visible/index.html">
+    👁 Make the Invisible Visible
+  </a>
+
+  <a href="../magic-science/index.html">
+    ✨ Science That Looks Like Magic
+  </a>
+
+  <a href="../what-if/index.html">
+    ❓ What If?
+  </a>
+
+  <a href="../beyond-textbook/index.html">
+    🚀 Beyond the Textbook
+  </a>
+
+
+  <a href="index.html">
+    🧪 Virtual Lab
+  </a>
+
+  <a href="../games/index.html">
+    🎮 Science Games
+  </a>
+
+
+  <a href="../real-world/index.html">
+    🌐 Science in the Real World
+  </a>
+
+  <a href="../science-around-us/index.html">
+    📰 Science Around Us
+  </a>
+
+</div>
+
+
 
 <main>
 
