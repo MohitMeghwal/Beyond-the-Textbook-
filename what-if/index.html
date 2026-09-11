@@ -1,0 +1,2578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>What If? | Science Beyond the Textbook</title>
+
+<meta name="description"
+content="Explore What If science scenarios, interactive simulations and the equations that explain how our universe works.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&display=swap');
+
+:root{
+  --bg:#07100b;
+  --bg2:#0b1510;
+  --panel:rgba(13,20,16,.92);
+  --panel2:#111b15;
+  --green:#65f28b;
+  --green2:#35c968;
+  --text:#f4f5ef;
+  --muted:#aeb8af;
+  --line:rgba(255,255,255,.15);
+  --soft:rgba(101,242,139,.09);
+  --shadow:0 18px 50px rgba(0,0,0,.4);
+  --max:1280px;
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:
+    radial-gradient(circle at 15% 10%,rgba(101,242,139,.08),transparent 30%),
+    radial-gradient(circle at 85% 30%,rgba(53,201,104,.06),transparent 28%),
+    linear-gradient(180deg,#07100b,#08120c 45%,#060d09);
+  color:var(--text);
+  font-family:Inter,Arial,sans-serif;
+  line-height:1.6;
+  min-height:100vh;
+  overflow-x:hidden;
+}
+
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:-1;
+  opacity:.32;
+  background-image:
+    radial-gradient(circle,rgba(255,255,255,.11) 1px,transparent 1px);
+  background-size:42px 42px;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+button{
+  font:inherit;
+}
+
+.container{
+  width:min(var(--max),calc(100% - 40px));
+  margin:auto;
+}
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.nav{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(7,16,11,.82);
+  backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px);
+  border-bottom:1px solid rgba(255,255,255,.1);
+}
+
+.nav-inner{
+  min-height:76px;
+  display:flex;
+  align-items:center;
+  gap:24px;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  flex-shrink:0;
+}
+
+.brand-icon{
+  width:42px;
+  height:42px;
+  border-radius:13px;
+  display:grid;
+  place-items:center;
+  background:rgba(101,242,139,.08);
+  border:1px solid rgba(101,242,139,.25);
+  font-size:23px;
+}
+
+.brand-title{
+  display:flex;
+  flex-direction:column;
+  line-height:1.05;
+}
+
+.brand-title strong{
+  font-size:15px;
+  letter-spacing:1.5px;
+}
+
+.brand-title small{
+  margin-top:5px;
+  color:var(--muted);
+  font-size:8px;
+  letter-spacing:1.5px;
+}
+
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:4px;
+  margin-left:12px;
+}
+
+.nav-links>a,
+.nav-drop{
+  padding:10px 11px;
+  color:#dbe2dc;
+  font-size:13px;
+  font-weight:600;
+  white-space:nowrap;
+  border-radius:10px;
+  transition:.2s ease;
+  cursor:pointer;
+}
+
+.nav-links>a:hover,
+.nav-drop:hover{
+  background:rgba(101,242,139,.08);
+  color:var(--green);
+}
+
+.nav-drop{
+  position:relative;
+}
+
+.dropdown{
+  position:absolute;
+  top:calc(100% + 8px);
+  left:0;
+  min-width:215px;
+  padding:8px;
+  border:1px solid var(--line);
+  border-radius:14px;
+  background:rgba(9,17,12,.97);
+  box-shadow:var(--shadow);
+  backdrop-filter:blur(16px);
+  opacity:0;
+  visibility:hidden;
+  transform:translateY(-5px);
+  transition:.2s ease;
+}
+
+.nav-drop:hover .dropdown{
+  opacity:1;
+  visibility:visible;
+  transform:translateY(0);
+}
+
+.dropdown a{
+  display:block;
+  padding:10px 12px;
+  border-radius:9px;
+  font-size:12px;
+  color:#d9e0da;
+}
+
+.dropdown a:hover{
+  background:rgba(101,242,139,.09);
+  color:var(--green);
+}
+
+/* Language + Menu always on the right */
+.actions{
+  margin-left:auto;
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+  gap:10px;
+  flex-shrink:0;
+}
+
+.lang{
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.035);
+  color:#e9eee9;
+  border-radius:999px;
+  padding:8px 13px;
+  cursor:pointer;
+  font-size:11px;
+  font-weight:700;
+  white-space:nowrap;
+}
+
+.lang span{
+  color:#68736b;
+  margin:0 3px;
+}
+
+.lang b{
+  color:var(--green);
+}
+
+.icon-btn{
+  width:39px;
+  height:39px;
+  border-radius:50%;
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.035);
+  color:#edf2ed;
+  display:grid;
+  place-items:center;
+  cursor:pointer;
+  font-size:17px;
+}
+
+.icon-btn:hover,
+.lang:hover{
+  border-color:rgba(101,242,139,.4);
+  background:rgba(101,242,139,.07);
+}
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+.mobile-menu{
+  position:fixed;
+  top:76px;
+  left:15px;
+  right:15px;
+  z-index:999;
+  padding:12px;
+  border:1px solid var(--line);
+  border-radius:18px;
+  background:rgba(7,16,11,.97);
+  backdrop-filter:blur(20px);
+  box-shadow:var(--shadow);
+  display:none;
+  max-height:calc(100vh - 95px);
+  overflow-y:auto;
+}
+
+.mobile-menu.open{
+  display:block;
+}
+
+.mobile-menu a{
+  display:block;
+  padding:12px 14px;
+  border-radius:10px;
+  color:#dce4dd;
+  font-size:13px;
+  font-weight:600;
+}
+
+.mobile-menu a:hover{
+  background:rgba(101,242,139,.08);
+  color:var(--green);
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+  min-height:590px;
+  position:relative;
+  display:flex;
+  align-items:center;
+  overflow:hidden;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(4,10,7,.97) 0%,
+      rgba(4,10,7,.82) 37%,
+      rgba(4,10,7,.36) 72%,
+      rgba(4,10,7,.72) 100%
+    ),
+    linear-gradient(0deg,rgba(4,10,7,.4),rgba(4,10,7,.1)),
+    url("https://res.cloudinary.com/eq1jpw1h/image/upload/v1789142393/file_0000000077248210abcd82248a2eccbe.png")
+    center/cover no-repeat;
+}
+
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 78% 45%,rgba(101,242,139,.14),transparent 28%),
+    linear-gradient(180deg,transparent 65%,#07100b 100%);
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  padding:80px 0;
+  max-width:760px;
+}
+
+.kicker{
+  color:var(--green);
+  text-transform:uppercase;
+  letter-spacing:3px;
+  font-size:11px;
+  font-weight:800;
+  margin-bottom:14px;
+}
+
+.hero h1{
+  font-family:Caveat,cursive;
+  text-transform:uppercase;
+  font-size:clamp(64px,10vw,130px);
+  line-height:.83;
+  letter-spacing:2px;
+  margin-bottom:26px;
+}
+
+.hero h1 span{
+  color:var(--green);
+}
+
+.hero p{
+  max-width:650px;
+  color:#c4cec5;
+  font-size:16px;
+}
+
+.hero-caption{
+  position:absolute;
+  right:6%;
+  bottom:55px;
+  z-index:3;
+  font-family:Caveat,cursive;
+  color:#dce8df;
+  font-size:22px;
+  transform:rotate(-4deg);
+}
+
+/* =========================================================
+   GENERAL SECTIONS
+========================================================= */
+
+section{
+  padding:85px 0;
+}
+
+.section-head{
+  max-width:780px;
+  margin-bottom:36px;
+}
+
+.eyebrow{
+  color:var(--green);
+  text-transform:uppercase;
+  letter-spacing:2.5px;
+  font-size:10px;
+  font-weight:800;
+  margin-bottom:8px;
+}
+
+.section-head h2{
+  font-family:Caveat,cursive;
+  text-transform:uppercase;
+  font-size:clamp(42px,6vw,72px);
+  line-height:.95;
+  margin-bottom:15px;
+}
+
+.section-head p{
+  color:var(--muted);
+  font-size:14px;
+}
+
+/* =========================================================
+   SIMULATION
+========================================================= */
+
+.simulation-section{
+  padding-top:40px;
+}
+
+.simulation-shell{
+  background:
+    linear-gradient(145deg,rgba(18,29,21,.95),rgba(8,15,11,.97));
+  border:1px solid var(--line);
+  border-radius:24px;
+  overflow:hidden;
+  box-shadow:var(--shadow);
+}
+
+.simulation-header{
+  padding:24px 26px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+  border-bottom:1px solid var(--line);
+}
+
+.simulation-title{
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+
+.simulation-icon{
+  width:48px;
+  height:48px;
+  display:grid;
+  place-items:center;
+  border-radius:14px;
+  background:rgba(101,242,139,.08);
+  border:1px solid rgba(101,242,139,.22);
+  font-size:23px;
+}
+
+.simulation-title h3{
+  font-size:19px;
+  margin-bottom:2px;
+}
+
+.simulation-title p{
+  color:var(--muted);
+  font-size:12px;
+}
+
+.next-btn{
+  border:1px solid rgba(101,242,139,.35);
+  background:rgba(101,242,139,.08);
+  color:var(--green);
+  padding:11px 17px;
+  border-radius:11px;
+  cursor:pointer;
+  font-size:12px;
+  font-weight:800;
+  white-space:nowrap;
+}
+
+.next-btn:hover{
+  background:rgba(101,242,139,.14);
+}
+
+.simulation-stage{
+  min-height:480px;
+  position:relative;
+  background:#050b07;
+  overflow:hidden;
+}
+
+#whatIfCanvas{
+  width:100%;
+  height:480px;
+  display:block;
+}
+
+.simulation-info{
+  padding:22px 26px 26px;
+  border-top:1px solid var(--line);
+}
+
+.simulation-info h3{
+  font-size:22px;
+  margin-bottom:6px;
+}
+
+.simulation-info p{
+  color:var(--muted);
+  max-width:900px;
+  font-size:13px;
+}
+
+/* =========================================================
+   FILTERS
+========================================================= */
+
+.filters{
+  display:flex;
+  flex-wrap:wrap;
+  gap:9px;
+  margin-bottom:28px;
+}
+
+.filter-btn{
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.025);
+  color:#cbd4cd;
+  padding:9px 14px;
+  border-radius:999px;
+  cursor:pointer;
+  font-size:11px;
+  font-weight:700;
+}
+
+.filter-btn.active,
+.filter-btn:hover{
+  color:var(--green);
+  border-color:rgba(101,242,139,.35);
+  background:rgba(101,242,139,.08);
+}
+
+/* =========================================================
+   WHAT IF CARDS
+========================================================= */
+
+.scenario-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+}
+
+.scenario-card{
+  background:
+    linear-gradient(145deg,rgba(16,27,20,.96),rgba(10,18,13,.94));
+  border:1px solid var(--line);
+  border-radius:19px;
+  overflow:hidden;
+  transition:.25s ease;
+}
+
+.scenario-card:hover{
+  transform:translateY(-3px);
+  border-color:rgba(101,242,139,.28);
+}
+
+.scenario-main{
+  padding:20px;
+  cursor:pointer;
+}
+
+.scenario-top{
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  margin-bottom:14px;
+}
+
+.scenario-icon{
+  width:45px;
+  height:45px;
+  border-radius:13px;
+  display:grid;
+  place-items:center;
+  background:rgba(101,242,139,.07);
+  border:1px solid rgba(101,242,139,.17);
+  font-size:21px;
+}
+
+.scenario-arrow{
+  color:#849188;
+  font-size:16px;
+}
+
+.scenario-card h3{
+  font-size:17px;
+  line-height:1.3;
+  margin-bottom:8px;
+}
+
+.scenario-card .whatif{
+  color:var(--muted);
+  font-size:12px;
+  line-height:1.55;
+}
+
+.scenario-details{
+  display:none;
+  border-top:1px solid var(--line);
+  padding:18px 20px 20px;
+  background:rgba(0,0,0,.12);
+}
+
+.scenario-card.open .scenario-details{
+  display:block;
+}
+
+.detail{
+  margin-bottom:15px;
+}
+
+.detail:last-child{
+  margin-bottom:0;
+}
+
+.detail strong{
+  display:block;
+  color:var(--green);
+  font-size:10px;
+  text-transform:uppercase;
+  letter-spacing:1.5px;
+  margin-bottom:3px;
+}
+
+.detail p{
+  color:#b8c2ba;
+  font-size:12px;
+}
+
+/* =========================================================
+   EQUATIONS
+========================================================= */
+
+.equation-section{
+  position:relative;
+}
+
+.equation-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:17px;
+}
+
+.equation-card{
+  padding:25px;
+  border:1px solid var(--line);
+  border-radius:20px;
+  background:
+    linear-gradient(145deg,rgba(16,28,20,.96),rgba(9,17,12,.94));
+  box-shadow:0 12px 35px rgba(0,0,0,.2);
+  transition:.25s ease;
+}
+
+.equation-card:hover{
+  border-color:rgba(101,242,139,.3);
+  transform:translateY(-2px);
+}
+
+.equation-number{
+  color:var(--green);
+  font-size:10px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  font-weight:800;
+  margin-bottom:10px;
+}
+
+.equation-name{
+  font-size:18px;
+  font-weight:800;
+  margin-bottom:16px;
+}
+
+.formula{
+  min-height:88px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:18px;
+  margin-bottom:17px;
+  border-radius:14px;
+  background:
+    radial-gradient(circle at center,rgba(101,242,139,.1),transparent 65%),
+    #070e09;
+  border:1px solid rgba(101,242,139,.16);
+  color:#f1f5f0;
+  font-family:Georgia,serif;
+  font-size:clamp(20px,3vw,30px);
+  font-style:italic;
+  text-align:center;
+}
+
+/*
+   Equation names stay English.
+   Only explanations/descriptions switch language.
+*/
+
+.equation-desc{
+  color:#b9c4bc;
+  font-size:12px;
+  line-height:1.65;
+}
+
+.equation-desc.hi{
+  display:none;
+  color:#b9c4bc;
+  font-size:12px;
+  line-height:1.8;
+  font-family:"Noto Sans Devanagari",Inter,sans-serif;
+}
+
+/* Hindi mode:
+   hide English explanations
+   show Hindi explanations
+*/
+body.hindi .equation-desc.en{
+  display:none;
+}
+
+body.hindi .equation-desc.hi{
+  display:block;
+}
+
+/* =========================================================
+   UNIVERSE
+========================================================= */
+
+.universe-card{
+  min-height:370px;
+  position:relative;
+  overflow:hidden;
+  border:1px solid var(--line);
+  border-radius:24px;
+  background:
+    radial-gradient(circle at 72% 50%,rgba(101,242,139,.14),transparent 22%),
+    radial-gradient(circle at 75% 50%,rgba(255,255,255,.08) 0 3px,transparent 4px),
+    linear-gradient(145deg,#0b1710,#050a07);
+}
+
+.universe-card::before{
+  content:"";
+  position:absolute;
+  width:260px;
+  height:260px;
+  right:9%;
+  top:55px;
+  border-radius:50%;
+  background:
+    radial-gradient(circle at 35% 30%,#dce9dd 0 2%,#6a8d73 10%,#1b3223 42%,#07100b 70%);
+  box-shadow:
+    0 0 60px rgba(101,242,139,.15),
+    inset -35px -25px 50px rgba(0,0,0,.6);
+}
+
+.universe-card::after{
+  content:"";
+  position:absolute;
+  width:410px;
+  height:120px;
+  right:2%;
+  top:125px;
+  border:1px solid rgba(101,242,139,.18);
+  border-radius:50%;
+  transform:rotate(-18deg);
+}
+
+.universe-content{
+  position:relative;
+  z-index:2;
+  max-width:650px;
+  padding:55px;
+}
+
+.universe-content h2{
+  font-family:Caveat,cursive;
+  text-transform:uppercase;
+  font-size:clamp(42px,6vw,70px);
+  line-height:.95;
+  margin-bottom:18px;
+}
+
+.universe-content p{
+  color:var(--muted);
+  font-size:13px;
+}
+
+/* =========================================================
+   FINAL CTA
+   This is intentionally the LAST section.
+   No navigation footer below it.
+========================================================= */
+
+.final-cta{
+  min-height:430px;
+  position:relative;
+  display:flex;
+  align-items:center;
+  overflow:hidden;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(4,10,7,.96),
+      rgba(4,10,7,.78) 42%,
+      rgba(4,10,7,.35)
+    ),
+    url("https://res.cloudinary.com/eq1jpw1h/image/upload/v1789142393/file_0000000077248210abcd82248a2eccbe.png")
+    center/cover no-repeat;
+}
+
+.final-cta::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(0deg,#07100b,transparent 35%);
+}
+
+.cta-content{
+  position:relative;
+  z-index:2;
+  max-width:650px;
+}
+
+.cta-content h2{
+  font-family:Caveat,cursive;
+  text-transform:uppercase;
+  font-size:clamp(48px,7vw,82px);
+  line-height:.9;
+  margin-bottom:18px;
+}
+
+.cta-content p{
+  color:#bec9c1;
+  font-size:14px;
+}
+
+.cta-caption{
+  position:absolute;
+  right:7%;
+  bottom:65px;
+  z-index:3;
+  font-family:Caveat,cursive;
+  font-size:24px;
+  transform:rotate(-5deg);
+}
+
+/* =========================================================
+   LANGUAGE
+========================================================= */
+
+/*
+   UI / section names / captions remain English.
+   Only elements explicitly marked .bilingual switch.
+*/
+
+.bilingual-hi{
+  display:none;
+}
+
+body.hindi .bilingual-en{
+  display:none;
+}
+
+body.hindi .bilingual-hi{
+  display:block;
+}
+
+.inline-bilingual-hi{
+  display:none;
+}
+
+body.hindi .inline-bilingual-en{
+  display:none;
+}
+
+body.hindi .inline-bilingual-hi{
+  display:inline;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:1100px){
+
+  .nav-links{
+    display:none;
+  }
+
+  .actions{
+    margin-left:auto;
+  }
+
+  .scenario-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media(max-width:900px){
+
+  .container{
+    width:min(var(--max),calc(100% - 28px));
+  }
+
+  section{
+    padding:65px 0;
+  }
+
+  .hero{
+    min-height:570px;
+  }
+
+  .hero-content{
+    padding:70px 0;
+  }
+
+  .equation-grid{
+    grid-template-columns:1fr;
+  }
+
+  .universe-content{
+    padding:38px;
+  }
+
+  .universe-card::before{
+    opacity:.45;
+    right:-80px;
+  }
+
+  .universe-card::after{
+    opacity:.35;
+    right:-100px;
+  }
+}
+
+@media(max-width:600px){
+
+  .nav-inner{
+    min-height:68px;
+  }
+
+  .brand-icon{
+    width:38px;
+    height:38px;
+  }
+
+  .brand-title strong{
+    font-size:13px;
+  }
+
+  .brand-title small{
+    font-size:7px;
+  }
+
+  .actions{
+    gap:7px;
+  }
+
+  .lang{
+    padding:7px 10px;
+    font-size:10px;
+  }
+
+  .icon-btn{
+    width:37px;
+    height:37px;
+  }
+
+  .mobile-menu{
+    top:68px;
+  }
+
+  .hero{
+    min-height:540px;
+    background-position:62% center;
+  }
+
+  .hero-content{
+    padding:60px 0;
+  }
+
+  .hero h1{
+    font-size:68px;
+  }
+
+  .hero p{
+    font-size:14px;
+  }
+
+  .hero-caption{
+    right:20px;
+    bottom:30px;
+    font-size:18px;
+  }
+
+  section{
+    padding:55px 0;
+  }
+
+  .section-head h2{
+    font-size:50px;
+  }
+
+  .simulation-header{
+    align-items:flex-start;
+    flex-direction:column;
+    padding:19px;
+  }
+
+  .simulation-stage{
+    min-height:350px;
+  }
+
+  #whatIfCanvas{
+    height:350px;
+  }
+
+  .simulation-info{
+    padding:19px;
+  }
+
+  .scenario-grid{
+    grid-template-columns:1fr;
+  }
+
+  .filters{
+    gap:7px;
+  }
+
+  .filter-btn{
+    padding:8px 11px;
+  }
+
+  .equation-card{
+    padding:19px;
+  }
+
+  .formula{
+    min-height:78px;
+    font-size:21px;
+  }
+
+  .universe-card{
+    min-height:430px;
+  }
+
+  .universe-content{
+    padding:28px;
+  }
+
+  .universe-card::before{
+    width:190px;
+    height:190px;
+    top:205px;
+    right:-20px;
+  }
+
+  .universe-card::after{
+    width:300px;
+    top:250px;
+  }
+
+  .final-cta{
+    min-height:460px;
+  }
+
+  .cta-caption{
+    right:20px;
+    bottom:35px;
+    font-size:19px;
+  }
+}
+
+@media(prefers-reduced-motion:reduce){
+
+  html{
+    scroll-behavior:auto;
+  }
+
+  *{
+    transition:none !important;
+  }
+}
+</style>
+</head>
+
+
+<body>
+
+<!-- =========================================================
+     NAVBAR
+========================================================= -->
+
+<header class="nav">
+
+  <div class="container nav-inner">
+
+    <a class="brand" href="../index.html">
+
+      <div class="brand-icon">⚗</div>
+
+      <div class="brand-title">
+        <strong>SCIENCE</strong>
+        <small>BEYOND THE TEXTBOOK</small>
+      </div>
+
+    </a>
+
+
+    <nav class="nav-links">
+
+      <a href="../index.html">⌂ Home</a>
+
+      <div class="nav-drop">
+        Subjects ˅
+
+        <div class="dropdown">
+          <a href="../physics/index.html">Physics</a>
+          <a href="../chemistry/index.html">Chemistry</a>
+          <a href="../biology/index.html">Biology</a>
+          <a href="../earth/index.html">Earth & Environment</a>
+        </div>
+
+      </div>
+
+
+      <div class="nav-drop">
+        Explore ˅
+
+        <div class="dropdown">
+          <a href="../why/index.html">Why Does This Happen?</a>
+          <a href="../invisible-visible/index.html">Make the Invisible Visible</a>
+          <a href="../magic-science/index.html">Science That Looks Like Magic</a>
+          <a href="index.html">What If?</a>
+          <a href="../beyond-textbook/index.html">Beyond the Textbook</a>
+        </div>
+
+      </div>
+
+
+      <div class="nav-drop">
+        Games ˅
+
+        <div class="dropdown">
+          <a href="../games/index.html">All Games</a>
+          <a href="../games/circuit-builder.html">Circuit Builder</a>
+          <a href="../games/magnetic-maze.html">Magnetic Maze</a>
+          <a href="../games/build-a-cell.html">Build a Cell</a>
+        </div>
+
+      </div>
+
+
+      <div class="nav-drop">
+        Lab ˅
+
+        <div class="dropdown">
+          <a href="../lab/index.html">Virtual Lab</a>
+          <a href="../lab/ohms-law.html">Ohm's Law</a>
+          <a href="../lab/electric-circuit.html">Electric Circuit</a>
+          <a href="../lab/ray-optics.html">Ray Optics</a>
+        </div>
+
+      </div>
+
+
+      <div class="nav-drop">
+        More ˅
+
+        <div class="dropdown">
+          <a href="../science-around-us/index.html">Science Around Us</a>
+          <a href="../real-world/index.html">Science in the Real World</a>
+          <a href="../about.html">About</a>
+        </div>
+
+      </div>
+
+    </nav>
+
+
+    <!-- RIGHT SIDE -->
+
+    <div class="actions">
+
+      <button class="lang" id="langBtn">
+        EN <span>|</span> <b>हिंदी</b>
+      </button>
+
+      <button class="icon-btn" id="menuBtn" aria-label="Open menu">
+        ☰
+      </button>
+
+    </div>
+
+  </div>
+
+</header>
+
+
+<!-- =========================================================
+     MOBILE MENU
+========================================================= -->
+
+<div class="mobile-menu" id="mobileMenu">
+
+  <a href="../index.html">⌂ Home</a>
+
+  <a href="../physics/index.html">⚛ Physics</a>
+  <a href="../chemistry/index.html">🧪 Chemistry</a>
+  <a href="../biology/index.html">🧬 Biology</a>
+  <a href="../earth/index.html">🌍 Earth & Environment</a>
+
+  <a href="../why/index.html">💡 Why Does This Happen?</a>
+  <a href="../invisible-visible/index.html">👁 Make the Invisible Visible</a>
+  <a href="../magic-science/index.html">✨ Science That Looks Like Magic</a>
+  <a href="index.html">❓ What If?</a>
+  <a href="../beyond-textbook/index.html">🚀 Beyond the Textbook</a>
+
+  <a href="../lab/index.html">🧪 Virtual Lab</a>
+  <a href="../games/index.html">🎮 Science Games</a>
+
+  <a href="../real-world/index.html">🌐 Science in the Real World</a>
+  <a href="../science-around-us/index.html">📰 Science Around Us</a>
+
+</div>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="hero">
+
+  <div class="container hero-content">
+
+    <div class="kicker">
+      IMAGINE. CHANGE ONE RULE.
+    </div>
+
+    <h1>
+      WHAT<br>
+      <span>IF?</span>
+    </h1>
+
+    <p class="bilingual-en">
+      What if one fundamental rule of nature suddenly changed?
+      Explore the consequences, watch science unfold, and discover
+      the equations hiding behind the impossible.
+    </p>
+
+    <p class="bilingual-hi">
+      अगर प्रकृति का कोई एक मूल नियम अचानक बदल जाए तो क्या होगा?
+      उसके परिणामों को खोजिए, विज्ञान को बदलते हुए देखिए और उन
+      समीकरणों को समझिए जो इस असंभव कल्पना के पीछे छिपे हैं।
+    </p>
+
+  </div>
+
+
+  <!-- Caption always English -->
+
+  <div class="hero-caption">
+    Change the rule. Observe the universe.
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     SIMULATION
+========================================================= -->
+
+<section class="simulation-section">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <div class="eyebrow">
+        INTERACTIVE THOUGHT EXPERIMENT
+      </div>
+
+      <h2>
+        SEE WHAT HAPPENS
+      </h2>
+
+      <p class="bilingual-en">
+        Change a fundamental condition of nature and observe how the
+        system responds. Each simulation focuses on a scientific idea.
+      </p>
+
+      <p class="bilingual-hi">
+        प्रकृति की किसी मूल स्थिति को बदलिए और देखिए कि पूरा तंत्र
+        कैसे प्रतिक्रिया करता है। हर simulation एक वैज्ञानिक विचार पर केंद्रित है।
+      </p>
+
+    </div>
+
+
+    <div class="simulation-shell">
+
+      <div class="simulation-header">
+
+        <div class="simulation-title">
+
+          <div class="simulation-icon" id="simulationIcon">
+            ❓
+          </div>
+
+          <div>
+
+            <h3 id="simulationTitle">
+              What If?
+            </h3>
+
+            <p id="simulationSubtitle">
+              Explore a different possibility.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <button class="next-btn" id="nextSimulation">
+          Next Simulation →
+        </button>
+
+      </div>
+
+
+      <div class="simulation-stage">
+        <canvas id="whatIfCanvas"></canvas>
+      </div>
+
+
+      <div class="simulation-info">
+
+        <h3 id="simulationInfoTitle">
+          What If?
+        </h3>
+
+        <p
+          id="simulationInfoText"
+          class="bilingual-en"
+        >
+          Explore how changing one condition can change an entire system.
+        </p>
+
+        <p
+          id="simulationInfoTextHi"
+          class="bilingual-hi"
+        >
+          देखिए कि एक स्थिति को बदलने से पूरा तंत्र कैसे बदल सकता है।
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     35 WHAT IF SCENARIOS
+========================================================= -->
+
+<section>
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <div class="eyebrow">
+        EXPLORE POSSIBILITIES
+      </div>
+
+      <h2>
+        35 WHAT IF SCENARIOS
+      </h2>
+
+      <p class="bilingual-en">
+        Ask impossible questions. Explore their consequences.
+        Then uncover the science behind them.
+      </p>
+
+      <p class="bilingual-hi">
+        असंभव सवाल पूछिए। उनके परिणामों को खोजिए और फिर उनके पीछे
+        छिपे विज्ञान को समझिए।
+      </p>
+
+    </div>
+
+
+    <div class="filters">
+
+      <button class="filter-btn active" data-filter="all">
+        All
+      </button>
+
+      <button class="filter-btn" data-filter="earth">
+        🌍 Earth
+      </button>
+
+      <button class="filter-btn" data-filter="space">
+        🌌 Space
+      </button>
+
+      <button class="filter-btn" data-filter="physics">
+        ⚛ Physics
+      </button>
+
+      <button class="filter-btn" data-filter="biology">
+        🧬 Biology
+      </button>
+
+      <button class="filter-btn" data-filter="environment">
+        🌿 Environment
+      </button>
+
+      <button class="filter-btn" data-filter="astronomy">
+        🔭 Astronomy
+      </button>
+
+    </div>
+
+
+    <div class="scenario-grid" id="scenarioGrid"></div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     THE EQUATION BEHIND IT
+========================================================= -->
+
+<section class="equation-section">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <div class="eyebrow">
+        THE MATHEMATICS OF REALITY
+      </div>
+
+      <h2>
+        THE EQUATION BEHIND IT
+      </h2>
+
+      <p class="bilingual-en">
+        Nature may look mysterious, but many of its most surprising
+        behaviours can be described using a few powerful equations.
+      </p>
+
+      <p class="bilingual-hi">
+        प्रकृति रहस्यमय लग सकती है, लेकिन इसके कई आश्चर्यजनक व्यवहारों
+        को कुछ शक्तिशाली समीकरणों की सहायता से समझाया जा सकता है।
+      </p>
+
+    </div>
+
+
+    <div class="equation-grid">
+
+
+      <!-- EQUATION 01 -->
+
+      <article class="equation-card">
+
+        <div class="equation-number">
+          01 · GRAVITY
+        </div>
+
+        <div class="equation-name">
+          Newton's Law of Universal Gravitation
+        </div>
+
+        <div class="formula">
+          F = G m₁m₂ / r²
+        </div>
+
+        <p class="equation-desc en bilingual-en">
+          The gravitational force between two objects depends on their
+          masses and decreases with the square of the distance between them.
+        </p>
+
+        <p class="equation-desc hi">
+          दो वस्तुओं के बीच गुरुत्वाकर्षण बल उनके द्रव्यमान पर निर्भर करता है
+          और उनके बीच की दूरी के वर्ग के साथ घटता है।
+        </p>
+
+      </article>
+
+
+      <!-- EQUATION 02 -->
+
+      <article class="equation-card">
+
+        <div class="equation-number">
+          02 · ORBIT
+        </div>
+
+        <div class="equation-name">
+          Orbital Velocity
+        </div>
+
+        <div class="formula">
+          v = √(GM / r)
+        </div>
+
+        <p class="equation-desc en bilingual-en">
+          An object's orbital speed depends on the mass of the body it
+          orbits and its distance from that body.
+        </p>
+
+        <p class="equation-desc hi">
+          किसी वस्तु का कक्षीय वेग उस पिंड के द्रव्यमान और उससे उसकी दूरी
+          पर निर्भर करता है जिसके चारों ओर वह परिक्रमा करती है।
+        </p>
+
+      </article>
+
+
+      <!-- EQUATION 03 -->
+
+      <article class="equation-card">
+
+        <div class="equation-number">
+          03 · CIRCULAR MOTION
+        </div>
+
+        <div class="equation-name">
+          Centripetal Force
+        </div>
+
+        <div class="formula">
+          F = mv² / r
+        </div>
+
+        <p class="equation-desc en bilingual-en">
+          Circular motion requires an inward-directed force. The required
+          force increases with mass and the square of velocity.
+        </p>
+
+        <p class="equation-desc hi">
+          वृत्तीय गति के लिए अंदर की ओर निर्देशित बल आवश्यक होता है।
+          आवश्यक बल द्रव्यमान और वेग के वर्ग के साथ बढ़ता है।
+        </p>
+
+      </article>
+
+
+      <!-- EQUATION 04 -->
+
+      <article class="equation-card">
+
+        <div class="equation-number">
+          04 · MOTION
+        </div>
+
+        <div class="equation-name">
+          Newton's Second Law
+        </div>
+
+        <div class="formula">
+          F = ma
+        </div>
+
+        <p class="equation-desc en bilingual-en">
+          Net force produces acceleration. A larger force gives greater
+          acceleration for the same mass.
+        </p>
+
+        <p class="equation-desc hi">
+          परिणामी बल त्वरण उत्पन्न करता है। समान द्रव्यमान के लिए अधिक बल
+          अधिक त्वरण उत्पन्न करता है।
+        </p>
+
+      </article>
+
+
+      <!-- EQUATION 05 -->
+
+      <article class="equation-card">
+
+        <div class="equation-number">
+          05 · ENERGY
+        </div>
+
+        <div class="equation-name">
+          Kinetic Energy
+        </div>
+
+        <div class="formula">
+          K = ½mv²
+        </div>
+
+        <p class="equation-desc en bilingual-en">
+          Moving objects possess kinetic energy. Because velocity is
+          squared, even a change in speed can strongly affect the energy.
+        </p>
+
+        <p class="equation-desc hi">
+          गतिशील वस्तुओं में गतिज ऊर्जा होती है। इसमें वेग का वर्ग होने के
+          कारण गति में परिवर्तन ऊर्जा को काफी प्रभावित कर सकता है।
+        </p>
+
+      </article>
+
+
+      <!-- EQUATION 06 -->
+
+      <article class="equation-card">
+
+        <div class="equation-number">
+          06 · ESCAPE
+        </div>
+
+        <div class="equation-name">
+          Escape Velocity
+        </div>
+
+        <div class="formula">
+          vₑ = √(2GM / r)
+        </div>
+
+        <p class="equation-desc en bilingual-en">
+          Escape velocity is the minimum speed required to move away from
+          a massive body without continuous propulsion.
+        </p>
+
+        <p class="equation-desc hi">
+          पलायन वेग वह न्यूनतम गति है जो किसी विशाल पिंड के गुरुत्वीय
+          प्रभाव से दूर जाने के लिए आवश्यक होती है।
+        </p>
+
+      </article>
+
+
+      <!-- EQUATION 07 -->
+
+      <article class="equation-card">
+
+        <div class="equation-number">
+          07 · WAVES
+        </div>
+
+        <div class="equation-name">
+          Wave Relationship
+        </div>
+
+        <div class="formula">
+          v = fλ
+        </div>
+
+        <p class="equation-desc en bilingual-en">
+          Wave speed equals frequency multiplied by wavelength. Changing
+          one quantity affects the relationship between the others.
+        </p>
+
+        <p class="equation-desc hi">
+          तरंग की चाल आवृत्ति और तरंगदैर्ध्य के गुणनफल के बराबर होती है।
+          एक राशि बदलने पर दूसरी राशियों के साथ उसका संबंध भी बदलता है।
+        </p>
+
+      </article>
+
+
+      <!-- EQUATION 08 -->
+
+      <article class="equation-card">
+
+        <div class="equation-number">
+          08 · UNIVERSE
+        </div>
+
+        <div class="equation-name">
+          Mass–Energy Equivalence
+        </div>
+
+        <div class="formula">
+          E = mc²
+        </div>
+
+        <p class="equation-desc en bilingual-en">
+          Mass and energy are deeply connected. A small amount of mass
+          corresponds to a very large amount of energy because c² is enormous.
+        </p>
+
+        <p class="equation-desc hi">
+          द्रव्यमान और ऊर्जा आपस में गहराई से जुड़े हुए हैं। c² का मान बहुत
+          बड़ा होने के कारण थोड़े से द्रव्यमान के बराबर बहुत अधिक ऊर्जा हो सकती है।
+        </p>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     WHAT IF... THE UNIVERSE?
+========================================================= -->
+
+<section>
+
+  <div class="container">
+
+    <div class="universe-card">
+
+      <div class="universe-content">
+
+        <div class="eyebrow">
+          GO BEYOND EARTH
+        </div>
+
+        <h2>
+          WHAT IF... THE UNIVERSE?
+        </h2>
+
+        <p class="bilingual-en">
+          The same questions that help us understand Earth can take us
+          much farther — to stars, galaxies, spacetime and the deepest
+          rules of the cosmos.
+        </p>
+
+        <p class="bilingual-hi">
+          वही सवाल जो हमें पृथ्वी को समझने में मदद करते हैं, हमें तारों,
+          आकाशगंगाओं, spacetime और ब्रह्मांड के गहरे नियमों तक ले जा सकते हैं।
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     FINAL CTA
+     NOTHING AFTER THIS SECTION
+========================================================= -->
+
+<section class="final-cta">
+
+  <div class="container cta-content">
+
+    <div class="eyebrow">
+      NEVER STOP QUESTIONING
+    </div>
+
+    <h2>
+      WHAT IF YOU CHANGED THE QUESTION?
+    </h2>
+
+    <p class="bilingual-en">
+      Science begins when curiosity asks a question nobody has asked before.
+    </p>
+
+    <p class="bilingual-hi">
+      विज्ञान तब शुरू होता है जब जिज्ञासा ऐसा सवाल पूछती है
+      जिसे पहले किसी ने नहीं पूछा।
+    </p>
+
+  </div>
+
+
+  <div class="cta-caption">
+    Question everything.
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     DATA
+========================================================= -->
+
+<script src="../data/what-if.js"></script>
+<script src="../data/what-if-simulation.js"></script>
+
+
+<script>
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+const menuBtn =
+  document.getElementById("menuBtn");
+
+const mobileMenu =
+  document.getElementById("mobileMenu");
+
+menuBtn.addEventListener("click",()=>{
+
+  mobileMenu.classList.toggle("open");
+
+});
+
+
+document
+  .querySelectorAll(".mobile-menu a")
+  .forEach(link=>{
+
+    link.addEventListener("click",()=>{
+
+      mobileMenu.classList.remove("open");
+
+    });
+
+  });
+
+
+/* =========================================================
+   LANGUAGE
+========================================================= */
+
+const langBtn =
+  document.getElementById("langBtn");
+
+
+function applyLanguage(){
+
+  const lang =
+    localStorage.getItem("scienceLanguage") || "en";
+
+  document.body.classList.toggle(
+    "hindi",
+    lang === "hi"
+  );
+
+  document.documentElement.lang =
+    lang === "hi" ? "hi" : "en";
+
+}
+
+
+langBtn.addEventListener("click",()=>{
+
+  const current =
+    localStorage.getItem("scienceLanguage") || "en";
+
+  const next =
+    current === "en" ? "hi" : "en";
+
+  localStorage.setItem(
+    "scienceLanguage",
+    next
+  );
+
+  applyLanguage();
+
+  renderScenarios(currentFilter);
+
+  updateSimulationText();
+
+});
+
+
+applyLanguage();
+
+
+/* =========================================================
+   SCENARIO TEXT
+========================================================= */
+
+function getText(obj){
+
+  if(!obj) return "";
+
+  const lang =
+    localStorage.getItem("scienceLanguage") || "en";
+
+  return obj[lang] || obj.en || "";
+
+}
+
+
+/* =========================================================
+   SCENARIO CATEGORY
+========================================================= */
+
+function getScenarioCategory(item){
+
+  const text = (
+
+    (item.title?.en || "") + " " +
+    (item.whatIf?.en || "") + " " +
+    (item.changes?.en || "") + " " +
+    (item.why?.en || "") + " " +
+    (item.science?.en || "")
+
+  ).toLowerCase();
+
+
+  if(
+    text.includes("dna") ||
+    text.includes("human") ||
+    text.includes("oxygen") ||
+    text.includes("tree") ||
+    text.includes("atom")
+  ){
+    return "biology";
+  }
+
+
+  if(
+    text.includes("moon") ||
+    text.includes("sun") ||
+    text.includes("jupiter") ||
+    text.includes("saturn") ||
+    text.includes("universe") ||
+    text.includes("space") ||
+    text.includes("planet") ||
+    text.includes("orbit")
+  ){
+    return "astronomy";
+  }
+
+
+  if(
+    text.includes("atmosphere") ||
+    text.includes("ocean") ||
+    text.includes("rain") ||
+    text.includes("earth")
+  ){
+    return "earth";
+  }
+
+
+  if(
+    text.includes("gravity") ||
+    text.includes("light") ||
+    text.includes("fire") ||
+    text.includes("temperature")
+  ){
+    return "physics";
+  }
+
+
+  if(
+    text.includes("environment") ||
+    text.includes("cloud")
+  ){
+    return "environment";
+  }
+
+
+  return "space";
+
+}
+
+
+/* =========================================================
+   RENDER 35 SCENARIOS
+========================================================= */
+
+const scenarioGrid =
+  document.getElementById("scenarioGrid");
+
+let currentFilter = "all";
+
+
+function renderScenarios(filter="all"){
+
+  scenarioGrid.innerHTML = "";
+
+
+  if(!window.whatIfData){
+
+    scenarioGrid.innerHTML = `
+      <div style="
+        grid-column:1/-1;
+        padding:30px;
+        color:#9aa59d;
+        border:1px solid rgba(255,255,255,.1);
+        border-radius:16px;
+      ">
+        What If data could not be loaded.
+      </div>
+    `;
+
+    return;
+
+  }
+
+
+  whatIfData.forEach(item=>{
+
+    const category =
+      getScenarioCategory(item);
+
+
+    if(
+      filter !== "all" &&
+      category !== filter
+    ){
+      return;
+    }
+
+
+    const card =
+      document.createElement("article");
+
+
+    card.className =
+      "scenario-card";
+
+
+    const lang =
+      localStorage.getItem("scienceLanguage") || "en";
+
+
+    const changesLabel =
+      lang === "hi"
+        ? "क्या बदलेगा"
+        : "Changes";
+
+
+    const whyLabel =
+      lang === "hi"
+        ? "क्यों?"
+        : "Why?";
+
+
+    const noticeLabel =
+      lang === "hi"
+        ? "क्या दिखाई देगा"
+        : "Notice";
+
+
+    const scienceLabel =
+      lang === "hi"
+        ? "विज्ञान"
+        : "Science";
+
+
+    card.innerHTML = `
+
+      <div class="scenario-main">
+
+        <div class="scenario-top">
+
+          <div class="scenario-icon">
+            ${item.icon || "❓"}
+          </div>
+
+          <div class="scenario-arrow">
+            ↗
+          </div>
+
+        </div>
+
+
+        <h3>
+          ${getText(item.title)}
+        </h3>
+
+
+        <p class="whatif">
+          ${getText(item.whatIf)}
+        </p>
+
+      </div>
+
+
+      <div class="scenario-details">
+
+        <div class="detail">
+
+          <strong>
+            ${changesLabel}
+          </strong>
+
+          <p>
+            ${getText(item.changes)}
+          </p>
+
+        </div>
+
+
+        <div class="detail">
+
+          <strong>
+            ${whyLabel}
+          </strong>
+
+          <p>
+            ${getText(item.why)}
+          </p>
+
+        </div>
+
+
+        <div class="detail">
+
+          <strong>
+            ${noticeLabel}
+          </strong>
+
+          <p>
+            ${getText(item.notice)}
+          </p>
+
+        </div>
+
+
+        <div class="detail">
+
+          <strong>
+            ${scienceLabel}
+          </strong>
+
+          <p>
+            ${getText(item.science)}
+          </p>
+
+        </div>
+
+      </div>
+
+    `;
+
+
+    card
+      .querySelector(".scenario-main")
+      .addEventListener("click",()=>{
+
+        card.classList.toggle("open");
+
+      });
+
+
+    scenarioGrid.appendChild(card);
+
+  });
+
+}
+
+
+renderScenarios();
+
+
+/* =========================================================
+   FILTERS
+========================================================= */
+
+document
+  .querySelectorAll(".filter-btn")
+  .forEach(button=>{
+
+    button.addEventListener("click",()=>{
+
+      document
+        .querySelectorAll(".filter-btn")
+        .forEach(btn=>{
+          btn.classList.remove("active");
+        });
+
+
+      button.classList.add("active");
+
+
+      currentFilter =
+        button.dataset.filter;
+
+
+      renderScenarios(
+        currentFilter
+      );
+
+    });
+
+  });
+
+
+/* =========================================================
+   SIMULATIONS
+========================================================= */
+
+const simulations = [
+
+  {
+    key:"sun-disappeared",
+
+    icon:"☀️",
+
+    title:{
+      en:"Sun Suddenly Vanished",
+      hi:"सूर्य अचानक गायब हो जाए"
+    },
+
+    subtitle:{
+      en:"Watch the Solar System respond.",
+      hi:"देखिए सौरमंडल कैसे प्रतिक्रिया करता है।"
+    },
+
+    info:{
+      en:"The simulation explores what happens to Earth's orbit when the Sun's gravitational influence disappears.",
+      hi:"यह simulation दिखाता है कि सूर्य का गुरुत्वीय प्रभाव समाप्त होने पर पृथ्वी की कक्षा पर क्या प्रभाव पड़ेगा।"
+    }
+  },
+
+
+  {
+    key:"earth-stopped-spinning",
+
+    icon:"🌍",
+
+    title:{
+      en:"Earth Stopped Spinning",
+      hi:"पृथ्वी घूमना बंद कर दे"
+    },
+
+    subtitle:{
+      en:"Watch Earth's rotation change.",
+      hi:"देखिए पृथ्वी का घूर्णन कैसे बदलता है।"
+    },
+
+    info:{
+      en:"Explore the consequences of suddenly removing Earth's rotational motion.",
+      hi:"देखिए अगर पृथ्वी का घूर्णन अचानक रुक जाए तो क्या परिणाम हो सकते हैं।"
+    }
+  },
+
+
+  {
+    key:"moon-disappeared",
+
+    icon:"🌙",
+
+    title:{
+      en:"Moon Suddenly Vanished",
+      hi:"चंद्रमा अचानक गायब हो जाए"
+    },
+
+    subtitle:{
+      en:"Observe Earth's system without the Moon.",
+      hi:"चंद्रमा के बिना पृथ्वी की प्रणाली को देखिए।"
+    },
+
+    info:{
+      en:"Explore how removing the Moon changes the Earth–Moon system.",
+      hi:"देखिए चंद्रमा को हटाने से पृथ्वी–चंद्रमा प्रणाली में क्या परिवर्तन आता है।"
+    }
+  },
+
+
+  {
+    key:"magnetic-field-lost",
+
+    icon:"🧲",
+
+    title:{
+      en:"Earth Lost Its Magnetic Field",
+      hi:"पृथ्वी का चुंबकीय क्षेत्र समाप्त हो जाए"
+    },
+
+    subtitle:{
+      en:"Visualize the invisible shield around Earth.",
+      hi:"पृथ्वी के अदृश्य चुंबकीय कवच को देखिए।"
+    },
+
+    info:{
+      en:"Explore the role of Earth's magnetic field in protecting and shaping our planet's space environment.",
+      hi:"देखिए पृथ्वी का चुंबकीय क्षेत्र हमारे ग्रह के अंतरिक्षीय वातावरण में क्या भूमिका निभाता है।"
+    }
+  },
+
+
+  {
+    key:"half-gravity",
+
+    icon:"🪶",
+
+    title:{
+      en:"Gravity Became Half as Strong",
+      hi:"गुरुत्वाकर्षण आधा हो जाए"
+    },
+
+    subtitle:{
+      en:"See how weaker gravity changes motion.",
+      hi:"देखिए कम गुरुत्वाकर्षण गति को कैसे बदलता है।"
+    },
+
+    info:{
+      en:"Observe how reducing gravitational strength changes the motion of objects.",
+      hi:"देखिए गुरुत्वाकर्षण की शक्ति कम होने पर वस्तुओं की गति कैसे बदलती है।"
+    }
+  },
+
+
+  {
+    key:"jupiter-swapped-mars",
+
+    icon:"🪐",
+
+    title:{
+      en:"Jupiter Swapped Places with Mars",
+      hi:"बृहस्पति और मंगल अपनी जगह बदल लें"
+    },
+
+    subtitle:{
+      en:"Watch the Solar System rearrange.",
+      hi:"देखिए सौरमंडल की व्यवस्था कैसे बदलती है।"
+    },
+
+    info:{
+      en:"Explore how moving two planets to dramatically different orbital distances changes the Solar System.",
+      hi:"देखिए दो ग्रहों को अलग-अलग कक्षीय दूरियों पर रखने से सौरमंडल की व्यवस्था कैसे बदलती है।"
+    }
+  }
+
+];
+
+
+let simulationIndex = -1;
+
+
+/* =========================================================
+   SIMULATION ELEMENTS
+========================================================= */
+
+const simulationIcon =
+  document.getElementById(
+    "simulationIcon"
+  );
+
+
+const simulationTitle =
+  document.getElementById(
+    "simulationTitle"
+  );
+
+
+const simulationSubtitle =
+  document.getElementById(
+    "simulationSubtitle"
+  );
+
+
+const simulationInfoTitle =
+  document.getElementById(
+    "simulationInfoTitle"
+  );
+
+
+const simulationInfoText =
+  document.getElementById(
+    "simulationInfoText"
+  );
+
+
+const simulationInfoTextHi =
+  document.getElementById(
+    "simulationInfoTextHi"
+  );
+
+
+/* =========================================================
+   GET SIMULATION TEXT
+========================================================= */
+
+function getSimulationText(obj){
+
+  const lang =
+    localStorage.getItem("scienceLanguage") || "en";
+
+  return obj[lang] || obj.en;
+
+}
+
+
+/* =========================================================
+   RANDOM SIMULATION
+========================================================= */
+
+function getRandomSimulationIndex(){
+
+  if(simulations.length <= 1){
+    return 0;
+  }
+
+
+  let next;
+
+  do{
+
+    next =
+      Math.floor(
+        Math.random() *
+        simulations.length
+      );
+
+  }while(
+    next === simulationIndex
+  );
+
+
+  return next;
+
+}
+
+
+/* =========================================================
+   OPEN SIMULATION
+========================================================= */
+
+function openSimulation(index){
+
+  simulationIndex =
+    (index + simulations.length) %
+    simulations.length;
+
+
+  const sim =
+    simulations[simulationIndex];
+
+
+  simulationIcon.textContent =
+    sim.icon;
+
+
+  simulationTitle.textContent =
+    getSimulationText(
+      sim.title
+    );
+
+
+  simulationSubtitle.textContent =
+    getSimulationText(
+      sim.subtitle
+    );
+
+
+  simulationInfoTitle.textContent =
+    getSimulationText(
+      sim.title
+    );
+
+
+  const lang =
+    localStorage.getItem("scienceLanguage") || "en";
+
+
+  if(lang === "hi"){
+
+    simulationInfoText.style.display =
+      "none";
+
+    simulationInfoTextHi.style.display =
+      "block";
+
+  }else{
+
+    simulationInfoText.style.display =
+      "block";
+
+    simulationInfoTextHi.style.display =
+      "none";
+
+  }
+
+
+  if(window.WhatIfSimulation &&
+     typeof window.WhatIfSimulation.open === "function"){
+
+    window.WhatIfSimulation.open(
+      sim.key
+    );
+
+  }
+
+}
+
+
+/* =========================================================
+   UPDATE CURRENT SIMULATION LANGUAGE
+========================================================= */
+
+function updateSimulationText(){
+
+  if(simulationIndex < 0){
+    return;
+  }
+
+
+  const sim =
+    simulations[simulationIndex];
+
+
+  simulationTitle.textContent =
+    getSimulationText(
+      sim.title
+    );
+
+
+  simulationSubtitle.textContent =
+    getSimulationText(
+      sim.subtitle
+    );
+
+
+  simulationInfoTitle.textContent =
+    getSimulationText(
+      sim.title
+    );
+
+
+  const lang =
+    localStorage.getItem("scienceLanguage") || "en";
+
+
+  if(lang === "hi"){
+
+    simulationInfoText.style.display =
+      "none";
+
+    simulationInfoTextHi.style.display =
+      "block";
+
+  }else{
+
+    simulationInfoText.style.display =
+      "block";
+
+    simulationInfoTextHi.style.display =
+      "none";
+
+  }
+
+}
+
+
+/* =========================================================
+   NEXT = RANDOM DIFFERENT SIMULATION
+========================================================= */
+
+document
+  .getElementById("nextSimulation")
+  .addEventListener("click",()=>{
+
+    const randomIndex =
+      getRandomSimulationIndex();
+
+    openSimulation(
+      randomIndex
+    );
+
+  });
+
+
+/* =========================================================
+   FIRST SIMULATION = RANDOM
+========================================================= */
+
+openSimulation(
+  Math.floor(
+    Math.random() *
+    simulations.length
+  )
+);
+
+</script>
+
+</body>
+  </html>
