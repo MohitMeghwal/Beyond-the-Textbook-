@@ -1212,10 +1212,37 @@ button{
 .mobile-menu a{ display:block; padding:13px; border-bottom:1px solid rgba(255,255,255,.05); font-size:14px; }
 
 @media(max-width:1000px){
-  .nav-links{ display:none; } .menu-btn{ display:block; }
-  .lab-layout{ grid-template-columns:1fr; }
-  .side-panel{ display:grid; grid-template-columns:1fr 1fr; }
-  .challenge{ grid-column:1 / -1; }
+
+  .nav-links{
+    display:none;
+  }
+
+  .menu-btn{
+    display:block;
+  }
+
+  /* EN | हिंदी + Menu ko brand ke paas rakhta hai */
+  .actions{
+    margin-left:0;
+  }
+
+  .nav-inner{
+    justify-content:flex-start;
+  }
+
+  .lab-layout{
+    grid-template-columns:1fr;
+  }
+
+  .side-panel{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+  }
+
+  .challenge{
+    grid-column:1 / -1;
+  }
+
 }
 
 @media(max-width:600px){
