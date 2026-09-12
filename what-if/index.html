@@ -6,15 +6,12 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description"
-content="Explore What If science scenarios, interactive simulations and the equations that explain how our universe works.">
-
-<meta name="theme-color" content="#07100b">
-
 <title>What If? | Science Beyond the Textbook</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
+<meta name="description"
+content="What If? — explore scientific thought experiments and interactive simulations that reveal how changing one rule of nature could change the world.">
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <style>
@@ -23,18 +20,26 @@ content="Explore What If science scenarios, interactive simulations and the equa
 
 
 :root{
+
   --bg:#07100b;
   --bg2:#0b1510;
+
   --panel:rgba(13,20,16,.92);
   --panel2:#111b15;
+
   --green:#65f28b;
   --green2:#35c968;
+
   --text:#f4f5ef;
   --muted:#aeb8af;
+
   --line:rgba(255,255,255,.15);
   --soft:rgba(101,242,139,.09);
+
   --shadow:0 18px 50px rgba(0,0,0,.4);
+
   --max:1280px;
+
 }
 
 
@@ -51,35 +56,79 @@ html{
 
 
 body{
-  min-height:100vh;
-  color:var(--text);
 
   background:
-    radial-gradient(circle at 15% 10%,rgba(101,242,139,.08),transparent 30%),
-    radial-gradient(circle at 85% 30%,rgba(53,201,104,.06),transparent 28%),
-    linear-gradient(180deg,#07100b,#08120c 45%,#060d09);
+    radial-gradient(
+      circle at 15% 10%,
+      rgba(54,150,82,.13),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 85% 25%,
+      rgba(26,112,60,.11),
+      transparent 30%
+    ),
+    linear-gradient(
+      180deg,
+      #07100b,
+      #09130d 45%,
+      #07100b
+    );
 
-  font-family:Inter,"Noto Sans Devanagari",sans-serif;
+  color:var(--text);
+
+  font-family:Inter,system-ui,sans-serif;
 
   overflow-x:hidden;
+
 }
 
 
 body::before{
+
   content:"";
 
   position:fixed;
+
   inset:0;
 
   pointer-events:none;
-  z-index:-1;
 
-  opacity:.28;
+  opacity:.18;
 
   background-image:
-    radial-gradient(circle,rgba(255,255,255,.11) 1px,transparent 1px);
+    radial-gradient(
+      circle,
+      rgba(255,255,255,.5) .5px,
+      transparent .7px
+    );
 
-  background-size:42px 42px;
+  background-size:45px 45px;
+
+  z-index:-2;
+
+}
+
+
+body::after{
+
+  content:"";
+
+  position:fixed;
+
+  inset:0;
+
+  pointer-events:none;
+
+  background:
+    radial-gradient(
+      circle at 50% 20%,
+      transparent 20%,
+      rgba(0,0,0,.25) 100%
+    );
+
+  z-index:-1;
+
 }
 
 
@@ -94,508 +143,1393 @@ button{
 }
 
 
-img{
-  display:block;
-  max-width:100%;
-}
-
-
 .container{
-  width:min(var(--max),calc(100% - 40px));
+
+  width:min(
+    var(--max),
+    calc(100% - 40px)
+  );
+
   margin:auto;
+
 }
 
 
 /* =========================================================
    NAVBAR
-========================================================= */
+   ========================================================= */
 
 .nav{
+
   position:sticky;
+
   top:0;
+
   z-index:1000;
 
-  background:rgba(7,16,11,.82);
+  background:rgba(5,12,8,.82);
 
   backdrop-filter:blur(18px);
   -webkit-backdrop-filter:blur(18px);
 
-  border-bottom:1px solid rgba(255,255,255,.1);
+  border-bottom:
+    1px solid rgba(255,255,255,.10);
+
 }
 
 
 .nav-inner{
+
   min-height:76px;
 
   display:flex;
+
   align-items:center;
 
-  gap:24px;
+  gap:20px;
+
 }
 
 
+/* BRAND — IMAGE 2 STYLE */
+
 .brand{
+
   display:flex;
+
   align-items:center;
-  gap:12px;
+
+  gap:14px;
 
   flex-shrink:0;
+
 }
 
 
 .brand-icon{
-  width:42px;
-  height:42px;
 
-  border-radius:13px;
+  width:48px;
+  height:48px;
 
   display:grid;
+
   place-items:center;
 
-  background:rgba(101,242,139,.08);
+  color:var(--green);
 
-  border:1px solid rgba(101,242,139,.25);
+}
 
-  font-size:23px;
+
+.brand-icon svg{
+
+  width:47px;
+  height:47px;
+
+  filter:
+    drop-shadow(
+      0 0 8px rgba(101,242,139,.20)
+    );
+
 }
 
 
 .brand-title{
+
   display:flex;
+
   flex-direction:column;
 
-  line-height:1.05;
+  line-height:1;
+
 }
 
 
 .brand-title strong{
-  font-size:15px;
-  letter-spacing:1.5px;
+
+  font-size:20px;
+
+  font-weight:800;
+
+  letter-spacing:.04em;
+
 }
 
 
 .brand-title small{
-  margin-top:5px;
 
-  color:var(--muted);
+  margin-top:7px;
 
-  font-size:8px;
+  color:#eef3ef;
 
-  letter-spacing:1.5px;
+  font-family:Caveat,cursive;
+
+  font-size:19px;
+
+  font-weight:500;
+
+  font-style:italic;
+
+  letter-spacing:.01em;
+
 }
 
 
 .nav-links{
+
   display:flex;
+
   align-items:center;
 
-  gap:4px;
+  gap:3px;
 
-  margin-left:12px;
+  margin-left:20px;
+
 }
 
 
 .nav-links>a,
 .nav-drop{
+
+  position:relative;
+
   padding:10px 11px;
 
-  color:#dbe2dc;
+  color:#dfe7e0;
 
-  font-size:13px;
+  font-size:12px;
+
   font-weight:600;
-
-  white-space:nowrap;
 
   border-radius:10px;
 
-  transition:.2s ease;
-
   cursor:pointer;
+
 }
 
 
 .nav-links>a:hover,
 .nav-drop:hover{
-  background:rgba(101,242,139,.08);
+
+  background:
+    rgba(101,242,139,.07);
+
   color:var(--green);
-}
 
-
-.nav-drop{
-  position:relative;
 }
 
 
 .dropdown{
+
   position:absolute;
 
-  top:calc(100% + 8px);
+  top:calc(100% + 7px);
+
   left:0;
 
-  min-width:215px;
+  min-width:210px;
 
   padding:8px;
 
-  border:1px solid var(--line);
+  border:
+    1px solid var(--line);
 
   border-radius:14px;
 
-  background:rgba(9,17,12,.97);
+  background:
+    rgba(7,15,10,.97);
 
   box-shadow:var(--shadow);
 
-  backdrop-filter:blur(16px);
-
   opacity:0;
+
   visibility:hidden;
 
-  transform:translateY(-5px);
+  transform:translateY(6px);
 
   transition:.2s ease;
+
 }
 
 
 .nav-drop:hover .dropdown{
+
   opacity:1;
+
   visibility:visible;
 
   transform:translateY(0);
+
 }
 
 
 .dropdown a{
+
   display:block;
 
-  padding:10px 12px;
+  padding:10px 11px;
 
   border-radius:9px;
 
   font-size:12px;
 
-  color:#d9e0da;
+  color:#d9e2db;
+
 }
 
 
 .dropdown a:hover{
-  background:rgba(101,242,139,.09);
+
+  background:var(--soft);
+
   color:var(--green);
+
 }
 
 
-/* RIGHT SIDE */
-
 .actions{
+
   margin-left:auto;
 
   display:flex;
+
   align-items:center;
-  justify-content:flex-end;
 
-  gap:10px;
+  gap:9px;
 
-  flex-shrink:0;
 }
 
 
 .lang{
-  border:1px solid var(--line);
 
-  background:rgba(255,255,255,.035);
+  border:
+    1px solid rgba(255,255,255,.15);
+
+  background:
+    rgba(255,255,255,.035);
 
   color:#e9eee9;
 
   border-radius:999px;
 
-  padding:8px 13px;
+  padding:9px 13px;
 
   cursor:pointer;
 
   font-size:11px;
+
   font-weight:700;
 
-  white-space:nowrap;
+}
+
+
+.lang:hover{
+
+  border-color:
+    rgba(101,242,139,.5);
+
 }
 
 
 .lang span{
-  color:#68736b;
-  margin:0 3px;
+
+  opacity:.4;
+
+  margin:0 4px;
+
 }
 
 
 .lang b{
+
   color:var(--green);
+
 }
 
 
 .icon-btn{
-  width:39px;
-  height:39px;
+
+  width:40px;
+  height:40px;
 
   border-radius:50%;
 
-  border:1px solid var(--line);
+  border:
+    1px solid rgba(255,255,255,.15);
 
-  background:rgba(255,255,255,.035);
+  background:
+    rgba(255,255,255,.035);
 
-  color:#edf2ed;
-
-  display:grid;
-  place-items:center;
+  color:#edf2ee;
 
   cursor:pointer;
 
-  font-size:17px;
+  display:grid;
+
+  place-items:center;
+
 }
 
 
-.icon-btn:hover,
-.lang:hover{
-  border-color:rgba(101,242,139,.4);
+.icon-btn:hover{
 
-  background:rgba(101,242,139,.07);
+  border-color:
+    rgba(101,242,139,.5);
+
+  color:var(--green);
+
 }
 
 
 /* =========================================================
    MOBILE MENU
-========================================================= */
+   ========================================================= */
 
 .mobile-menu{
-  position:fixed;
-
-  top:76px;
-  left:15px;
-  right:15px;
-
-  z-index:999;
-
-  padding:12px;
-
-  border:1px solid var(--line);
-
-  border-radius:18px;
-
-  background:rgba(7,16,11,.97);
-
-  backdrop-filter:blur(20px);
-
-  box-shadow:var(--shadow);
 
   display:none;
 
-  max-height:calc(100vh - 95px);
-
-  overflow-y:auto;
-}
-
-
-.mobile-menu.open{
-  display:block;
-}
-
-
-.mobile-menu a{
-  display:block;
-
-  padding:12px 14px;
-
-  border-radius:10px;
-
-  color:#dce4dd;
-
-  font-size:13px;
-  font-weight:600;
-}
-
-
-.mobile-menu a:hover{
-  background:rgba(101,242,139,.08);
-  color:var(--green);
 }
 
 
 /* =========================================================
    HERO
-========================================================= */
+   ========================================================= */
 
 .hero{
-  min-height:590px;
 
   position:relative;
 
+  min-height:570px;
+
   display:flex;
+
   align-items:center;
 
   overflow:hidden;
 
   background:
+
     linear-gradient(
       90deg,
-      rgba(4,10,7,.97) 0%,
-      rgba(4,10,7,.82) 37%,
-      rgba(4,10,7,.36) 72%,
-      rgba(4,10,7,.72) 100%
+      rgba(3,10,6,.90),
+      rgba(3,10,6,.48),
+      rgba(3,10,6,.72)
     ),
 
     linear-gradient(
       0deg,
-      rgba(4,10,7,.4),
-      rgba(4,10,7,.1)
+      rgba(3,10,6,.88),
+      transparent 55%
     ),
 
-    url("https://res.cloudinary.com/eq1jpw1h/image/upload/v1789142393/file_0000000077248210abcd82248a2eccbe.png")
+    url(
+      "https://res.cloudinary.com/eq1jpw1h/image/upload/v1789142393/file_0000000077248210abcd82248a2eccbe.png"
+    )
 
     center/cover no-repeat;
+
 }
 
 
 .hero::before{
+
   content:"";
 
   position:absolute;
+
   inset:0;
 
   background:
+
     radial-gradient(
-      circle at 78% 45%,
-      rgba(101,242,139,.14),
-      transparent 28%
+      circle at 65% 42%,
+      rgba(101,242,139,.13),
+      transparent 25%
     ),
 
     linear-gradient(
-      180deg,
-      transparent 65%,
-      #07100b 100%
+      90deg,
+      rgba(4,11,7,.88),
+      transparent 70%
     );
+
 }
 
 
 .hero-content{
+
   position:relative;
+
   z-index:2;
+
+  width:min(
+    var(--max),
+    calc(100% - 40px)
+  );
+
+  margin:auto;
 
   padding:80px 0;
 
-  max-width:760px;
 }
 
 
-.kicker{
+.eyebrow{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:10px;
+
   color:var(--green);
+
+  font-size:11px;
+
+  font-weight:800;
+
+  letter-spacing:.2em;
 
   text-transform:uppercase;
 
-  letter-spacing:3px;
+}
 
-  font-size:11px;
-  font-weight:800;
 
-  margin-bottom:14px;
+.eyebrow::before{
+
+  content:"";
+
+  width:35px;
+
+  height:1px;
+
+  background:var(--green);
+
 }
 
 
 .hero h1{
+
+  margin-top:18px;
+
+  max-width:760px;
+
   font-family:Caveat,cursive;
+
+  font-size:
+    clamp(72px,12vw,155px);
+
+  line-height:.76;
+
+  letter-spacing:.01em;
 
   text-transform:uppercase;
 
-  font-size:clamp(64px,10vw,130px);
-
-  line-height:.83;
-
-  letter-spacing:2px;
-
-  margin-bottom:26px;
-}
-
-
-.hero h1 span{
-  color:var(--green);
 }
 
 
 .hero p{
+
+  margin-top:28px;
+
   max-width:650px;
 
-  color:#c4cec5;
+  color:#d0d8d1;
 
-  font-size:16px;
+  line-height:1.8;
+
+  font-size:15px;
+
 }
 
 
 .hero-caption{
+
   position:absolute;
 
   right:6%;
-  bottom:55px;
 
-  z-index:3;
+  bottom:35px;
 
   font-family:Caveat,cursive;
 
-  color:#dce8df;
+  font-size:25px;
 
-  font-size:22px;
+  color:
+    rgba(101,242,139,.82);
 
-  transform:rotate(-4deg);
+  transform:rotate(-5deg);
+
 }
 
 
 /* =========================================================
    GENERAL SECTIONS
-========================================================= */
+   ========================================================= */
 
 section{
-  padding:85px 0;
+
+  position:relative;
+
+  padding:95px 0;
+
 }
 
 
 .section-head{
-  max-width:780px;
 
-  margin-bottom:36px;
+  margin-bottom:38px;
+
 }
 
 
-.eyebrow{
+.section-kicker{
+
   color:var(--green);
 
-  text-transform:uppercase;
-
-  letter-spacing:2.5px;
-
   font-size:10px;
+
   font-weight:800;
 
-  margin-bottom:8px;
+  letter-spacing:.2em;
+
+  text-transform:uppercase;
+
+  margin-bottom:9px;
+
 }
 
 
-.section-head h2{
+.section-title{
+
   font-family:Caveat,cursive;
 
-  text-transform:uppercase;
-
-  font-size:clamp(42px,6vw,72px);
+  font-size:
+    clamp(42px,6vw,72px);
 
   line-height:.95;
 
-  margin-bottom:15px;
+  text-transform:uppercase;
+
 }
 
 
-.section-head p{
+.section-description{
+
+  max-width:760px;
+
+  margin-top:15px;
+
   color:var(--muted);
 
+  line-height:1.8;
+
   font-size:14px;
+
 }
 
 
 /* =========================================================
-   BILINGUAL SYSTEM
-   Section names/captions remain English.
-========================================================= */
+   SEE WHAT HAPPENS
+   ========================================================= */
+
+.simulation-section{
+
+  padding-top:105px;
+
+  padding-bottom:95px;
+
+}
+
+
+.simulation-intro{
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:flex-end;
+
+  gap:30px;
+
+  margin-bottom:32px;
+
+}
+
+
+.simulation-caption{
+
+  max-width:330px;
+
+  color:#9fab9f;
+
+  font-family:Caveat,cursive;
+
+  font-size:23px;
+
+  line-height:1.2;
+
+  transform:rotate(-2deg);
+
+}
+
+
+/*
+   ACTUAL SIMULATION CONTAINER
+   DIRECTLY INSIDE SEE WHAT HAPPENS
+*/
+
+#whatIfSimulation{
+
+  width:100%;
+
+  min-height:100px;
+
+}
+
+
+.simulation-actions{
+
+  display:flex;
+
+  justify-content:center;
+
+  margin-top:22px;
+
+}
+
+
+.next-simulation{
+
+  border:
+    1px solid rgba(101,242,139,.42);
+
+  background:
+    rgba(101,242,139,.08);
+
+  color:var(--green);
+
+  border-radius:12px;
+
+  padding:12px 18px;
+
+  font-size:12px;
+
+  font-weight:800;
+
+  cursor:pointer;
+
+  transition:.2s ease;
+
+}
+
+
+.next-simulation:hover{
+
+  background:var(--green);
+
+  color:#061008;
+
+  transform:translateY(-2px);
+
+}
+
+
+/* =========================================================
+   WHAT IF SCENARIOS
+   ========================================================= */
+
+.scenario-section{
+
+  padding-top:90px;
+
+}
+
+
+.filters{
+
+  display:flex;
+
+  flex-wrap:wrap;
+
+  gap:8px;
+
+  margin-bottom:28px;
+
+}
+
+
+.filter-btn{
+
+  border:
+    1px solid rgba(255,255,255,.13);
+
+  background:
+    rgba(255,255,255,.035);
+
+  color:#cbd5cc;
+
+  border-radius:999px;
+
+  padding:9px 14px;
+
+  cursor:pointer;
+
+  font-size:11px;
+
+  font-weight:700;
+
+}
+
+
+.filter-btn.active,
+.filter-btn:hover{
+
+  border-color:var(--green);
+
+  background:
+    rgba(101,242,139,.09);
+
+  color:var(--green);
+
+}
+
+
+.scenario-grid{
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(3,1fr);
+
+  gap:16px;
+
+}
+
+
+.scenario-card{
+
+  background:
+
+    linear-gradient(
+      145deg,
+      rgba(17,29,21,.96),
+      rgba(8,15,10,.96)
+    );
+
+  border:
+    1px solid var(--line);
+
+  border-radius:20px;
+
+  padding:22px;
+
+  box-shadow:
+    0 14px 40px rgba(0,0,0,.22);
+
+  transition:.25s ease;
+
+}
+
+
+.scenario-card:hover{
+
+  transform:translateY(-4px);
+
+  border-color:
+    rgba(101,242,139,.35);
+
+}
+
+
+.scenario-icon{
+
+  width:44px;
+  height:44px;
+
+  display:grid;
+
+  place-items:center;
+
+  border-radius:13px;
+
+  background:
+    rgba(101,242,139,.08);
+
+  border:
+    1px solid rgba(101,242,139,.16);
+
+  font-size:21px;
+
+  margin-bottom:17px;
+
+}
+
+
+.scenario-card h3{
+
+  font-size:16px;
+
+  line-height:1.35;
+
+  margin-bottom:12px;
+
+}
+
+
+.scenario-card p{
+
+  color:var(--muted);
+
+  font-size:12px;
+
+  line-height:1.7;
+
+}
+
+
+.scenario-label{
+
+  display:inline-block;
+
+  margin-top:16px;
+
+  color:var(--green);
+
+  font-size:10px;
+
+  font-weight:800;
+
+  letter-spacing:.12em;
+
+  text-transform:uppercase;
+
+}
+
+
+/* =========================================================
+   THE EQUATION BEHIND IT
+   ========================================================= */
+
+.equation-section{
+
+  padding-top:100px;
+
+}
+
+
+.equation-grid{
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(4,1fr);
+
+  gap:16px;
+
+}
+
+
+.equation-card{
+
+  min-height:275px;
+
+  padding:22px;
+
+  border:
+    1px solid var(--line);
+
+  border-radius:20px;
+
+  background:
+
+    radial-gradient(
+      circle at 90% 0%,
+      rgba(101,242,139,.08),
+      transparent 40%
+    ),
+
+    linear-gradient(
+      145deg,
+      #101b14,
+      #09100c
+    );
+
+  box-shadow:var(--shadow);
+
+}
+
+
+.equation-number{
+
+  color:var(--green);
+
+  font-size:10px;
+
+  font-weight:800;
+
+  letter-spacing:.15em;
+
+}
+
+
+.equation{
+
+  margin:25px 0 17px;
+
+  color:#f5f7f4;
+
+  font-family:Georgia,serif;
+
+  font-size:26px;
+
+  font-weight:600;
+
+  word-break:break-word;
+
+}
+
+
+.equation-name{
+
+  font-size:13px;
+
+  font-weight:800;
+
+  margin-bottom:10px;
+
+}
+
+
+.equation-description{
+
+  color:var(--muted);
+
+  font-size:12px;
+
+  line-height:1.75;
+
+}
+
+
+.equation-detail{
+
+  margin-top:11px;
+
+  padding-top:11px;
+
+  border-top:
+    1px solid rgba(255,255,255,.08);
+
+  color:#87958a;
+
+  font-size:11px;
+
+  line-height:1.7;
+
+}
+
+
+/* =========================================================
+   WHAT IF... THE UNIVERSE?
+   ========================================================= */
+
+.universe-section{
+
+  padding-top:95px;
+
+}
+
+
+.universe-panel{
+
+  position:relative;
+
+  min-height:520px;
+
+  overflow:hidden;
+
+  border:
+    1px solid var(--line);
+
+  border-radius:24px;
+
+  background:
+
+    radial-gradient(
+      circle at 72% 45%,
+      rgba(101,242,139,.12),
+      transparent 25%
+    ),
+
+    radial-gradient(
+      circle at 80% 60%,
+      rgba(70,130,255,.09),
+      transparent 20%
+    ),
+
+    linear-gradient(
+      135deg,
+      #0d1b12,
+      #050a07
+    );
+
+  box-shadow:var(--shadow);
+
+  display:flex;
+
+  align-items:center;
+
+}
+
+
+.universe-stars{
+
+  position:absolute;
+
+  inset:0;
+
+  opacity:.65;
+
+  background-image:
+
+    radial-gradient(
+      circle,
+      #dbe9df 1px,
+      transparent 1.4px
+    );
+
+  background-size:70px 70px;
+
+}
+
+
+.universe-content{
+
+  position:relative;
+
+  z-index:2;
+
+  padding:55px;
+
+  max-width:720px;
+
+}
+
+
+.universe-content h2{
+
+  font-family:Caveat,cursive;
+
+  text-transform:uppercase;
+
+  font-size:
+    clamp(46px,7vw,80px);
+
+  line-height:.9;
+
+}
+
+
+.universe-content p{
+
+  margin-top:22px;
+
+  color:#b7c2b9;
+
+  max-width:650px;
+
+  line-height:1.8;
+
+  font-size:14px;
+
+}
+
+
+.universe-extra{
+
+  margin-top:22px;
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(2,1fr);
+
+  gap:10px;
+
+  max-width:650px;
+
+}
+
+
+.universe-fact{
+
+  padding:14px 15px;
+
+  border:
+    1px solid rgba(255,255,255,.10);
+
+  border-radius:13px;
+
+  background:
+    rgba(255,255,255,.025);
+
+}
+
+
+.universe-fact strong{
+
+  display:block;
+
+  color:var(--green);
+
+  font-size:11px;
+
+  letter-spacing:.1em;
+
+  text-transform:uppercase;
+
+  margin-bottom:6px;
+
+}
+
+
+.universe-fact span{
+
+  color:#9eaaa0;
+
+  font-size:11px;
+
+  line-height:1.6;
+
+}
+
+
+.universe-orbit{
+
+  position:absolute;
+
+  width:360px;
+  height:360px;
+
+  right:8%;
+
+  top:50%;
+
+  transform:translateY(-50%);
+
+  border:
+    1px solid rgba(101,242,139,.18);
+
+  border-radius:50%;
+
+}
+
+
+.universe-orbit::before{
+
+  content:"";
+
+  position:absolute;
+
+  inset:55px;
+
+  border:
+    1px solid rgba(101,242,139,.13);
+
+  border-radius:50%;
+
+}
+
+
+.universe-orbit::after{
+
+  content:"";
+
+  position:absolute;
+
+  width:70px;
+  height:70px;
+
+  top:50%;
+  left:50%;
+
+  transform:
+    translate(-50%,-50%);
+
+  border-radius:50%;
+
+  background:
+
+    radial-gradient(
+      circle at 35% 30%,
+      #eaffee,
+      #65f28b 30%,
+      #1b6334 65%,
+      #07100b 100%
+    );
+
+  box-shadow:
+    0 0 70px rgba(101,242,139,.3);
+
+}
+
+
+/* =========================================================
+   FINAL CTA
+   ========================================================= */
+
+.final-cta{
+
+  min-height:540px;
+
+  display:flex;
+
+  align-items:center;
+
+  overflow:hidden;
+
+  background:
+
+    linear-gradient(
+      90deg,
+      rgba(3,10,6,.88),
+      rgba(3,10,6,.44),
+      rgba(3,10,6,.80)
+    ),
+
+    linear-gradient(
+      0deg,
+      rgba(3,10,6,.9),
+      transparent 55%
+    ),
+
+    url(
+      "https://res.cloudinary.com/eq1jpw1h/image/upload/v1789142393/file_0000000077248210abcd82248a2eccbe.png"
+    )
+
+    center/cover no-repeat;
+
+}
+
+
+.final-cta-content{
+
+  width:min(
+    var(--max),
+    calc(100% - 40px)
+  );
+
+  margin:auto;
+
+}
+
+
+.final-cta h2{
+
+  max-width:800px;
+
+  font-family:Caveat,cursive;
+
+  font-size:
+    clamp(55px,8vw,100px);
+
+  line-height:.88;
+
+  text-transform:uppercase;
+
+}
+
+
+.final-cta p{
+
+  margin-top:20px;
+
+  max-width:560px;
+
+  color:#c6d0c8;
+
+  line-height:1.75;
+
+  font-size:14px;
+
+}
+
+
+.cta-caption{
+
+  margin-top:30px;
+
+  font-family:Caveat,cursive;
+
+  color:var(--green);
+
+  font-size:25px;
+
+  transform:rotate(-3deg);
+
+}
+
+
+/* IMAGE 2 STYLE BRAND LINE IN CTA */
+
+.cta-brand-line{
+
+  margin-top:25px;
+
+  display:flex;
+
+  align-items:center;
+
+  gap:12px;
+
+  color:#f1f5f1;
+
+}
+
+
+.cta-brand-line::before{
+
+  content:"";
+
+  width:35px;
+
+  height:1px;
+
+  background:var(--green);
+
+}
+
+
+.cta-brand-line span{
+
+  font-family:Caveat,cursive;
+
+  font-size:24px;
+
+  font-style:italic;
+
+  letter-spacing:.02em;
+
+}
+
+
+.cta-brand-line b{
+
+  font-family:Inter,sans-serif;
+
+  font-size:11px;
+
+  letter-spacing:.18em;
+
+  color:var(--green);
+
+}
+
+
+/* =========================================================
+   LANGUAGE
+   ========================================================= */
 
 .bilingual-hi{
   display:none;
@@ -612,817 +1546,356 @@ body.hindi .bilingual-hi{
 }
 
 
-/* =========================================================
-   SIMULATION
-========================================================= */
-
-.simulation-section{
-  padding-top:40px;
-}
-
-
-.simulation-wrap{
-  position:relative;
-}
-
-
-/*
-   The simulation engine requires this exact container.
-   what-if-simulation.js renders the complete simulation here.
-*/
-
-#whatIfSimulation{
-  width:100%;
-}
-
-
-.simulation-next{
-  position:absolute;
-
-  right:20px;
-  top:-73px;
-
-  z-index:10;
-
-  border:1px solid rgba(101,242,139,.35);
-
-  background:rgba(101,242,139,.08);
-
-  color:var(--green);
-
-  padding:11px 17px;
-
-  border-radius:11px;
-
-  cursor:pointer;
-
-  font-size:12px;
-  font-weight:800;
-
-  white-space:nowrap;
-
-  transition:.2s ease;
-}
-
-
-.simulation-next:hover{
-  background:rgba(101,242,139,.15);
-
-  border-color:rgba(101,242,139,.55);
-
-  transform:translateY(-1px);
-}
-
-
-/*
-   Keep the simulation engine visually consistent
-   with the page.
-*/
-
-#whatIfSimulation .wfs{
-  width:100%;
-}
-
-
-#whatIfSimulation .wfs-shell{
-  width:100%;
+body.hindi .section-description.bilingual-hi{
+  display:block;
 }
 
 
 /* =========================================================
-   FILTERS
-========================================================= */
+   DATA MESSAGE
+   ========================================================= */
 
-.filters{
-  display:flex;
+.data-message{
 
-  flex-wrap:wrap;
+  padding:30px;
 
-  gap:9px;
+  border:
+    1px dashed rgba(255,255,255,.14);
 
-  margin-bottom:28px;
-}
+  border-radius:18px;
 
-
-.filter-btn{
-  border:1px solid var(--line);
-
-  background:rgba(255,255,255,.025);
-
-  color:#cbd4cd;
-
-  padding:9px 14px;
-
-  border-radius:999px;
-
-  cursor:pointer;
-
-  font-size:11px;
-  font-weight:700;
-}
-
-
-.filter-btn.active,
-.filter-btn:hover{
-  color:var(--green);
-
-  border-color:rgba(101,242,139,.35);
-
-  background:rgba(101,242,139,.08);
-}
-
-
-/* =========================================================
-   WHAT IF SCENARIOS
-========================================================= */
-
-.scenario-grid{
-  display:grid;
-
-  grid-template-columns:repeat(3,1fr);
-
-  gap:16px;
-}
-
-
-.scenario-card{
-  background:
-    linear-gradient(
-      145deg,
-      rgba(16,27,20,.96),
-      rgba(10,18,13,.94)
-    );
-
-  border:1px solid var(--line);
-
-  border-radius:19px;
-
-  overflow:hidden;
-
-  transition:.25s ease;
-}
-
-
-.scenario-card:hover{
-  transform:translateY(-3px);
-
-  border-color:rgba(101,242,139,.28);
-}
-
-
-.scenario-main{
-  padding:20px;
-
-  cursor:pointer;
-}
-
-
-.scenario-top{
-  display:flex;
-
-  justify-content:space-between;
-
-  gap:12px;
-
-  margin-bottom:14px;
-}
-
-
-.scenario-icon{
-  width:45px;
-  height:45px;
-
-  border-radius:13px;
-
-  display:grid;
-  place-items:center;
-
-  background:rgba(101,242,139,.07);
-
-  border:1px solid rgba(101,242,139,.17);
-
-  font-size:21px;
-}
-
-
-.scenario-arrow{
-  color:#849188;
-
-  font-size:16px;
-}
-
-
-.scenario-card h3{
-  font-size:17px;
-
-  line-height:1.3;
-
-  margin-bottom:8px;
-}
-
-
-.scenario-card .whatif{
   color:var(--muted);
-
-  font-size:12px;
-
-  line-height:1.55;
-}
-
-
-.scenario-details{
-  display:none;
-
-  border-top:1px solid var(--line);
-
-  padding:18px 20px 20px;
-
-  background:rgba(0,0,0,.12);
-}
-
-
-.scenario-card.open .scenario-details{
-  display:block;
-}
-
-
-.detail{
-  margin-bottom:15px;
-}
-
-
-.detail:last-child{
-  margin-bottom:0;
-}
-
-
-.detail strong{
-  display:block;
-
-  color:var(--green);
-
-  font-size:10px;
-
-  text-transform:uppercase;
-
-  letter-spacing:1.5px;
-
-  margin-bottom:3px;
-}
-
-
-.detail p{
-  color:#b8c2ba;
-
-  font-size:12px;
-}
-
-
-/* =========================================================
-   EQUATIONS
-========================================================= */
-
-.equation-grid{
-  display:grid;
-
-  grid-template-columns:repeat(2,1fr);
-
-  gap:17px;
-}
-
-
-.equation-card{
-  padding:25px;
-
-  border:1px solid var(--line);
-
-  border-radius:20px;
-
-  background:
-    linear-gradient(
-      145deg,
-      rgba(16,28,20,.96),
-      rgba(9,17,12,.94)
-    );
-
-  box-shadow:
-    0 12px 35px rgba(0,0,0,.2);
-
-  transition:.25s ease;
-}
-
-
-.equation-card:hover{
-  border-color:rgba(101,242,139,.3);
-
-  transform:translateY(-2px);
-}
-
-
-.equation-number{
-  color:var(--green);
-
-  font-size:10px;
-
-  letter-spacing:2px;
-
-  text-transform:uppercase;
-
-  font-weight:800;
-
-  margin-bottom:10px;
-}
-
-
-.equation-name{
-  font-size:18px;
-
-  font-weight:800;
-
-  margin-bottom:16px;
-}
-
-
-.formula{
-  min-height:88px;
-
-  display:flex;
-
-  align-items:center;
-
-  justify-content:center;
-
-  padding:18px;
-
-  margin-bottom:17px;
-
-  border-radius:14px;
-
-  background:
-    radial-gradient(
-      circle at center,
-      rgba(101,242,139,.1),
-      transparent 65%
-    ),
-
-    #070e09;
-
-  border:1px solid rgba(101,242,139,.16);
-
-  color:#f1f5f0;
-
-  font-family:Georgia,serif;
-
-  font-size:clamp(20px,3vw,30px);
-
-  font-style:italic;
 
   text-align:center;
-}
 
-
-.equation-desc{
-  color:#b9c4bc;
-
-  font-size:12px;
-
-  line-height:1.65;
-}
-
-
-.equation-desc.hi{
-  display:none;
-
-  color:#b9c4bc;
-
-  font-size:12px;
-
-  line-height:1.8;
-
-  font-family:"Noto Sans Devanagari",Inter,sans-serif;
-}
-
-
-body.hindi .equation-desc.en{
-  display:none;
-}
-
-
-body.hindi .equation-desc.hi{
-  display:block;
-}
-
-
-/* =========================================================
-   UNIVERSE
-========================================================= */
-
-.universe-card{
-  min-height:370px;
-
-  position:relative;
-
-  overflow:hidden;
-
-  border:1px solid var(--line);
-
-  border-radius:24px;
-
-  background:
-    radial-gradient(
-      circle at 72% 50%,
-      rgba(101,242,139,.14),
-      transparent 22%
-    ),
-
-    radial-gradient(
-      circle at 75% 50%,
-      rgba(255,255,255,.08) 0 3px,
-      transparent 4px
-    ),
-
-    linear-gradient(
-      145deg,
-      #0b1710,
-      #050a07
-    );
-}
-
-
-.universe-card::before{
-  content:"";
-
-  position:absolute;
-
-  width:260px;
-  height:260px;
-
-  right:9%;
-  top:55px;
-
-  border-radius:50%;
-
-  background:
-    radial-gradient(
-      circle at 35% 30%,
-      #dce9dd 0 2%,
-      #6a8d73 10%,
-      #1b3223 42%,
-      #07100b 70%
-    );
-
-  box-shadow:
-    0 0 60px rgba(101,242,139,.15),
-    inset -35px -25px 50px rgba(0,0,0,.6);
-}
-
-
-.universe-card::after{
-  content:"";
-
-  position:absolute;
-
-  width:410px;
-  height:120px;
-
-  right:2%;
-  top:125px;
-
-  border:1px solid rgba(101,242,139,.18);
-
-  border-radius:50%;
-
-  transform:rotate(-18deg);
-}
-
-
-.universe-content{
-  position:relative;
-
-  z-index:2;
-
-  max-width:650px;
-
-  padding:55px;
-}
-
-
-.universe-content h2{
-  font-family:Caveat,cursive;
-
-  text-transform:uppercase;
-
-  font-size:clamp(42px,6vw,70px);
-
-  line-height:.95;
-
-  margin-bottom:18px;
-}
-
-
-.universe-content p{
-  color:var(--muted);
-
-  font-size:13px;
-}
-
-
-/* =========================================================
-   FINAL CTA
-   LAST CONTENT ON PAGE
-========================================================= */
-
-.final-cta{
-  min-height:430px;
-
-  position:relative;
-
-  display:flex;
-
-  align-items:center;
-
-  overflow:hidden;
-
-  background:
-    linear-gradient(
-      90deg,
-      rgba(4,10,7,.96),
-      rgba(4,10,7,.78) 42%,
-      rgba(4,10,7,.35)
-    ),
-
-    url("https://res.cloudinary.com/eq1jpw1h/image/upload/v1789142393/file_0000000077248210abcd82248a2eccbe.png")
-
-    center/cover no-repeat;
-}
-
-
-.final-cta::after{
-  content:"";
-
-  position:absolute;
-
-  inset:0;
-
-  background:
-    linear-gradient(
-      0deg,
-      #07100b,
-      transparent 35%
-    );
-}
-
-
-.cta-content{
-  position:relative;
-
-  z-index:2;
-
-  max-width:650px;
-}
-
-
-.cta-content h2{
-  font-family:Caveat,cursive;
-
-  text-transform:uppercase;
-
-  font-size:clamp(48px,7vw,82px);
-
-  line-height:.9;
-
-  margin-bottom:18px;
-}
-
-
-.cta-content p{
-  color:#bec9c1;
-
-  font-size:14px;
-}
-
-
-.cta-caption{
-  position:absolute;
-
-  right:7%;
-  bottom:65px;
-
-  z-index:3;
-
-  font-family:Caveat,cursive;
-
-  font-size:24px;
-
-  transform:rotate(-5deg);
 }
 
 
 /* =========================================================
    RESPONSIVE
-========================================================= */
+   ========================================================= */
 
-@media(max-width:1100px){
+@media(max-width:1050px){
 
   .nav-links{
     display:none;
   }
 
-  .actions{
-    margin-left:auto;
-  }
-
-  .scenario-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-}
-
-
-@media(max-width:900px){
-
-  .container{
-    width:min(var(--max),calc(100% - 28px));
-  }
-
-  section{
-    padding:65px 0;
-  }
-
-  .hero{
-    min-height:570px;
-  }
-
-  .hero-content{
-    padding:70px 0;
-  }
-
-  .equation-grid{
-    grid-template-columns:1fr;
-  }
-
-  .universe-content{
-    padding:38px;
-  }
-
-  .universe-card::before{
-    opacity:.45;
-
-    right:-80px;
-  }
-
-  .universe-card::after{
-    opacity:.35;
-
-    right:-100px;
-  }
-
-  .simulation-next{
-    position:static;
-
-    margin-bottom:14px;
-  }
-
-}
-
-
-@media(max-width:600px){
-
-  .container{
-    width:min(var(--max),calc(100% - 18px));
-  }
-
-  .nav-inner{
-    min-height:68px;
-  }
-
-  .brand-icon{
-    width:38px;
-    height:38px;
-  }
-
-  .brand-title strong{
-    font-size:13px;
-  }
-
-  .brand-title small{
-    font-size:7px;
-  }
-
-  .actions{
-    gap:7px;
-  }
-
-  .lang{
-    padding:7px 10px;
-
-    font-size:10px;
-  }
 
   .icon-btn{
-    width:37px;
-    height:37px;
+    display:grid;
   }
 
-  .mobile-menu{
-    top:68px;
-  }
-
-  .hero{
-    min-height:540px;
-
-    background-position:62% center;
-  }
-
-  .hero-content{
-    padding:60px 0;
-  }
-
-  .hero h1{
-    font-size:68px;
-  }
-
-  .hero p{
-    font-size:14px;
-  }
-
-  .hero-caption{
-    right:20px;
-    bottom:30px;
-
-    font-size:18px;
-  }
-
-  section{
-    padding:55px 0;
-  }
-
-  .section-head h2{
-    font-size:50px;
-  }
-
-  .simulation-next{
-    width:100%;
-
-    text-align:center;
-
-    margin-bottom:12px;
-  }
 
   .scenario-grid{
-    grid-template-columns:1fr;
+
+    grid-template-columns:
+      repeat(2,1fr);
+
   }
 
-  .filters{
-    gap:7px;
+
+  .equation-grid{
+
+    grid-template-columns:
+      repeat(2,1fr);
+
   }
 
-  .filter-btn{
-    padding:8px 11px;
+
+  .universe-orbit{
+
+    right:-90px;
+
+    opacity:.45;
+
   }
 
-  .equation-card{
-    padding:19px;
+}
+
+
+@media(min-width:1051px){
+
+  .icon-btn{
+    display:grid;
   }
 
-  .formula{
-    min-height:78px;
+}
+
+
+@media(max-width:700px){
+
+  .container{
+
+    width:min(
+      var(--max),
+      calc(100% - 28px)
+    );
+
+  }
+
+
+  .nav-inner{
+
+    min-height:68px;
+
+  }
+
+
+  .brand{
+
+    gap:9px;
+
+  }
+
+
+  .brand-icon{
+
+    width:39px;
+    height:39px;
+
+  }
+
+
+  .brand-icon svg{
+
+    width:39px;
+    height:39px;
+
+  }
+
+
+  .brand-title strong{
+
+    font-size:14px;
+
+  }
+
+
+  .brand-title small{
+
+    font-size:15px;
+
+    margin-top:5px;
+
+  }
+
+
+  .lang{
+
+    padding:8px 10px;
+
+    font-size:10px;
+
+  }
+
+
+  .icon-btn{
+
+    width:38px;
+    height:38px;
+
+  }
+
+
+  .mobile-menu{
+
+    position:fixed;
+
+    z-index:999;
+
+    top:68px;
+
+    left:12px;
+    right:12px;
+
+    max-height:
+      calc(100vh - 82px);
+
+    overflow:auto;
+
+    padding:10px;
+
+    border:
+      1px solid var(--line);
+
+    border-radius:18px;
+
+    background:
+      rgba(6,14,9,.97);
+
+    box-shadow:var(--shadow);
+
+  }
+
+
+  .mobile-menu.open{
+
+    display:block;
+
+  }
+
+
+  .mobile-menu a{
+
+    display:block;
+
+    padding:13px 14px;
+
+    border-radius:10px;
+
+    color:#dbe4dc;
+
+    font-size:12px;
+
+  }
+
+
+  .mobile-menu a:hover{
+
+    background:var(--soft);
+
+    color:var(--green);
+
+  }
+
+
+  .hero{
+
+    min-height:520px;
+
+  }
+
+
+  .hero-content{
+
+    padding:70px 0;
+
+  }
+
+
+  .hero h1{
+
+    font-size:
+      clamp(65px,22vw,105px);
+
+  }
+
+
+  .hero p{
+
+    font-size:13px;
+
+  }
+
+
+  .hero-caption{
+
+    right:20px;
+
+    bottom:22px;
 
     font-size:21px;
+
   }
 
-  .universe-card{
-    min-height:430px;
+
+  section{
+
+    padding:70px 0;
+
   }
+
+
+  .simulation-intro{
+
+    display:block;
+
+  }
+
+
+  .simulation-caption{
+
+    margin-top:18px;
+
+  }
+
+
+  .scenario-grid{
+
+    grid-template-columns:1fr;
+
+  }
+
+
+  .equation-grid{
+
+    grid-template-columns:1fr;
+
+  }
+
+
+  .equation-card{
+
+    min-height:auto;
+
+  }
+
+
+  .universe-panel{
+
+    min-height:650px;
+
+  }
+
 
   .universe-content{
-    padding:28px;
+
+    padding:32px 24px;
+
+    align-self:flex-start;
+
   }
 
-  .universe-card::before{
-    width:190px;
-    height:190px;
 
-    top:205px;
+  .universe-extra{
 
-    right:-20px;
+    grid-template-columns:1fr;
+
   }
 
-  .universe-card::after{
-    width:300px;
 
-    top:250px;
+  .universe-orbit{
+
+    width:280px;
+    height:280px;
+
+    right:-105px;
+
+    top:75%;
+
   }
+
 
   .final-cta{
-    min-height:460px;
+
+    min-height:520px;
+
   }
 
-  .cta-caption{
-    right:20px;
-    bottom:35px;
 
-    font-size:19px;
+  .final-cta h2{
+
+    font-size:
+      clamp(55px,17vw,85px);
+
+  }
+
+
+  .cta-brand-line{
+
+    flex-wrap:wrap;
+
   }
 
 }
@@ -1430,12 +1903,12 @@ body.hindi .equation-desc.hi{
 
 @media(prefers-reduced-motion:reduce){
 
-  html{
-    scroll-behavior:auto;
-  }
-
   *{
-    transition:none !important;
+
+    scroll-behavior:auto!important;
+
+    transition:none!important;
+
   }
 
 }
@@ -1450,7 +1923,7 @@ body.hindi .equation-desc.hi{
 
 <!-- =========================================================
      NAVBAR
-========================================================= -->
+     ========================================================= -->
 
 <header class="nav">
 
@@ -1459,21 +1932,53 @@ body.hindi .equation-desc.hi{
 
     <a class="brand" href="../index.html">
 
+
+      <!-- Flask logo matching the reference image -->
+
       <div class="brand-icon">
-        ⚗
+
+        <svg
+          viewBox="0 0 64 64"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+        >
+
+          <path
+            d="M25 7H39"
+            stroke="currentColor"
+            stroke-width="4"
+            stroke-linecap="round"
+          />
+
+          <path
+            d="M28 7V25L17 44C12 53 18 58 32 58C46 58 52 53 47 44L36 25V7"
+            stroke="currentColor"
+            stroke-width="4"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+
+          <path
+            d="M18 44C23 41 28 43 32 45C37 48 42 48 47 44"
+            stroke="currentColor"
+            stroke-width="3"
+            stroke-linecap="round"
+          />
+
+        </svg>
+
       </div>
+
 
       <div class="brand-title">
 
-        <strong>
-          SCIENCE
-        </strong>
+        <strong>SCIENCE</strong>
 
-        <small>
-          BEYOND THE TEXTBOOK
-        </small>
+        <small>BEYOND THE TEXTBOOK</small>
 
       </div>
+
 
     </a>
 
@@ -1624,27 +2129,24 @@ body.hindi .equation-desc.hi{
     </nav>
 
 
-    <!-- RIGHT CORNER -->
-
     <div class="actions">
 
-      <button
-        class="lang"
-        id="langBtn"
-        type="button"
-      >
-        EN <span>|</span> <b>हिंदी</b>
+
+      <button class="lang" id="langBtn">
+
+        EN
+
+        <span>|</span>
+
+        <b>हिंदी</b>
+
       </button>
 
 
-      <button
-        class="icon-btn"
-        id="menuBtn"
-        type="button"
-        aria-label="Open menu"
-      >
+      <button class="icon-btn" id="menuBtn">
         ☰
       </button>
+
 
     </div>
 
@@ -1656,125 +2158,107 @@ body.hindi .equation-desc.hi{
 
 <!-- =========================================================
      MOBILE MENU
-========================================================= -->
+     ========================================================= -->
 
-<div
-  class="mobile-menu"
-  id="mobileMenu"
->
-
+<div class="mobile-menu" id="mobileMenu">
 
   <a href="../index.html">
     ⌂ Home
   </a>
 
-
   <a href="../physics/index.html">
     ⚛ Physics
   </a>
-
 
   <a href="../chemistry/index.html">
     🧪 Chemistry
   </a>
 
-
   <a href="../biology/index.html">
     🧬 Biology
   </a>
-
 
   <a href="../earth/index.html">
     🌍 Earth & Environment
   </a>
 
-
   <a href="../why/index.html">
     💡 Why Does This Happen?
   </a>
-
 
   <a href="../invisible-visible/index.html">
     👁 Make the Invisible Visible
   </a>
 
-
   <a href="../magic-science/index.html">
     ✨ Science That Looks Like Magic
   </a>
-
 
   <a href="index.html">
     ❓ What If?
   </a>
 
-
   <a href="../beyond-textbook/index.html">
     🚀 Beyond the Textbook
   </a>
-
 
   <a href="../lab/index.html">
     🧪 Virtual Lab
   </a>
 
-
   <a href="../games/index.html">
     🎮 Science Games
   </a>
-
 
   <a href="../real-world/index.html">
     🌐 Science in the Real World
   </a>
 
-
   <a href="../science-around-us/index.html">
     📰 Science Around Us
   </a>
-
 
 </div>
 
 
 <!-- =========================================================
      HERO
-========================================================= -->
+     ========================================================= -->
 
 <section class="hero">
 
 
-  <div class="container hero-content">
+  <div class="hero-content">
 
 
-    <div class="kicker">
-      IMAGINE. CHANGE ONE RULE.
+    <div class="eyebrow">
+      THOUGHT EXPERIMENTS
     </div>
 
 
     <h1>
-
-      WHAT<br>
-
-      <span>IF?</span>
-
+      WHAT IF?
     </h1>
 
 
     <p class="bilingual-en">
 
-      What if one fundamental rule of nature suddenly changed?
-      Explore the consequences, watch science unfold, and discover
-      the equations hiding behind the impossible.
+      Change one rule of nature.
+      Imagine the consequences.
+
+      What happens when the universe
+      plays by a different set of rules?
 
     </p>
 
 
     <p class="bilingual-hi">
 
-      अगर प्रकृति का कोई एक मूल नियम अचानक बदल जाए तो क्या होगा?
-      उसके परिणामों को खोजिए, विज्ञान को बदलते हुए देखिए और उन
-      समीकरणों को समझिए जो इस असंभव कल्पना के पीछे छिपे हैं।
+      प्रकृति के किसी एक नियम को बदलकर देखिए।
+      सोचिए कि उसके परिणाम क्या होंगे।
+
+      अगर ब्रह्मांड अलग नियमों के अनुसार काम करे
+      तो क्या होगा?
 
     </p>
 
@@ -1784,7 +2268,8 @@ body.hindi .equation-desc.hi{
 
   <div class="hero-caption">
 
-    Change the rule. Observe the universe.
+    Change the rule.
+    Watch the world react.
 
   </div>
 
@@ -1794,80 +2279,102 @@ body.hindi .equation-desc.hi{
 
 <!-- =========================================================
      SEE WHAT HAPPENS
-========================================================= -->
+     SIMULATION IS DIRECTLY HERE
+     ========================================================= -->
 
-<section class="simulation-section">
+<section
+  class="simulation-section"
+  id="see-what-happens"
+>
 
 
   <div class="container">
 
 
-    <div class="section-head">
+    <div class="simulation-intro">
 
 
-      <div class="eyebrow">
-        INTERACTIVE THOUGHT EXPERIMENT
+      <div
+        class="section-head"
+        style="margin-bottom:0"
+      >
+
+
+        <div class="section-kicker">
+          INTERACTIVE SCIENCE
+        </div>
+
+
+        <h2 class="section-title">
+          SEE WHAT HAPPENS
+        </h2>
+
+
+        <p class="section-description bilingual-en">
+
+          Don't just imagine the What If.
+
+          Watch the consequences unfold
+          through an interactive scientific visualization.
+
+        </p>
+
+
+        <p class="section-description bilingual-hi">
+
+          केवल कल्पना मत कीजिए।
+
+          इंटरैक्टिव वैज्ञानिक दृश्य के माध्यम से देखिए
+          कि परिस्थितियाँ कैसे बदलती हैं।
+
+        </p>
+
+
       </div>
 
 
-      <h2>
-        SEE WHAT HAPPENS
-      </h2>
+      <div class="simulation-caption">
 
+        Some questions are easier
+        to understand when you can see them move.
 
-      <p class="bilingual-en">
-
-        Change a fundamental condition of nature and observe how the
-        system responds. Each simulation focuses on a scientific idea.
-
-      </p>
-
-
-      <p class="bilingual-hi">
-
-        प्रकृति की किसी मूल स्थिति को बदलिए और देखिए कि पूरा तंत्र
-        कैसे प्रतिक्रिया करता है। हर simulation एक वैज्ञानिक विचार पर केंद्रित है।
-
-      </p>
+      </div>
 
 
     </div>
 
 
-    <div class="simulation-wrap">
+    <!-- =====================================================
+         ACTUAL SIMULATION
+         ===================================================== -->
 
+    <div id="whatIfSimulation"></div>
+
+
+    <div class="simulation-actions">
 
       <button
-        class="simulation-next"
+        class="next-simulation"
         id="nextSimulation"
-        type="button"
       >
-        Next Simulation →
+
+        ↻ Next Simulation
+
       </button>
-
-
-      <!--
-        IMPORTANT:
-        what-if-simulation.js expects this exact element.
-      -->
-
-      <div id="whatIfSimulation"></div>
-
 
     </div>
 
 
   </div>
 
-
 </section>
 
 
 <!-- =========================================================
-     35 WHAT IF SCENARIOS
-========================================================= -->
+     WHAT IF SCENARIOS
+     ========================================================= -->
 
-<section>
+<section class="scenario-section">
 
 
   <div class="container">
@@ -1876,28 +2383,30 @@ body.hindi .equation-desc.hi{
     <div class="section-head">
 
 
-      <div class="eyebrow">
-        EXPLORE POSSIBILITIES
+      <div class="section-kicker">
+        THOUGHT EXPERIMENTS
       </div>
 
 
-      <h2>
-        35 WHAT IF SCENARIOS
+      <h2 class="section-title">
+        WHAT IF SCENARIOS
       </h2>
 
 
-      <p class="bilingual-en">
+      <p class="section-description bilingual-en">
 
-        Ask impossible questions. Explore their consequences.
-        Then uncover the science behind them.
+        Explore questions that change one
+        condition of our universe and follow
+        the scientific consequences.
 
       </p>
 
 
-      <p class="bilingual-hi">
+      <p class="section-description bilingual-hi">
 
-        असंभव सवाल पूछिए। उनके परिणामों को खोजिए और फिर उनके पीछे
-        छिपे विज्ञान को समझिए।
+        ऐसे सवालों को explore कीजिए जिनमें
+        ब्रह्मांड की किसी एक परिस्थिति को बदलकर
+        उसके वैज्ञानिक परिणामों को समझा जाता है।
 
       </p>
 
@@ -1911,7 +2420,6 @@ body.hindi .equation-desc.hi{
       <button
         class="filter-btn active"
         data-filter="all"
-        type="button"
       >
         All
       </button>
@@ -1919,55 +2427,41 @@ body.hindi .equation-desc.hi{
 
       <button
         class="filter-btn"
-        data-filter="earth"
-        type="button"
+        data-filter="physics"
       >
-        🌍 Earth
+        Physics
       </button>
 
 
       <button
         class="filter-btn"
         data-filter="space"
-        type="button"
       >
-        🌌 Space
+        Space
       </button>
 
 
       <button
         class="filter-btn"
-        data-filter="physics"
-        type="button"
+        data-filter="earth"
       >
-        ⚛ Physics
+        Earth
       </button>
 
 
       <button
         class="filter-btn"
         data-filter="biology"
-        type="button"
       >
-        🧬 Biology
+        Biology
       </button>
 
 
       <button
         class="filter-btn"
-        data-filter="environment"
-        type="button"
+        data-filter="chemistry"
       >
-        🌿 Environment
-      </button>
-
-
-      <button
-        class="filter-btn"
-        data-filter="astronomy"
-        type="button"
-      >
-        🔭 Astronomy
+        Chemistry
       </button>
 
 
@@ -1982,15 +2476,14 @@ body.hindi .equation-desc.hi{
 
   </div>
 
-
 </section>
 
 
 <!-- =========================================================
      THE EQUATION BEHIND IT
-========================================================= -->
+     ========================================================= -->
 
-<section>
+<section class="equation-section">
 
 
   <div class="container">
@@ -1999,28 +2492,42 @@ body.hindi .equation-desc.hi{
     <div class="section-head">
 
 
-      <div class="eyebrow">
-        THE MATHEMATICS OF REALITY
+      <div class="section-kicker">
+        THE LANGUAGE OF NATURE
       </div>
 
 
-      <h2>
+      <h2 class="section-title">
         THE EQUATION BEHIND IT
       </h2>
 
 
-      <p class="bilingual-en">
+      <p class="section-description bilingual-en">
 
-        Nature may look mysterious, but many of its most surprising
-        behaviours can be described using a few powerful equations.
+        Behind every What If is a relationship
+        between physical quantities.
+
+        These equations allow scientists to move
+        from imagination to prediction.
+
+        By changing one variable and keeping the
+        others under control, we can understand
+        how a physical system should respond.
 
       </p>
 
 
-      <p class="bilingual-hi">
+      <p class="section-description bilingual-hi">
 
-        प्रकृति रहस्यमय लग सकती है, लेकिन इसके कई आश्चर्यजनक व्यवहारों
-        को कुछ शक्तिशाली समीकरणों की सहायता से समझाया जा सकता है।
+        हर What If के पीछे भौतिक राशियों के बीच
+        एक संबंध होता है।
+
+        ये समीकरण वैज्ञानिकों को कल्पना से
+        वैज्ञानिक prediction तक जाने में मदद करते हैं।
+
+        किसी एक variable को बदलकर और बाकी राशियों
+        को नियंत्रित रखकर हम समझ सकते हैं कि
+        कोई physical system कैसे प्रतिक्रिया करेगा।
 
       </p>
 
@@ -2031,45 +2538,85 @@ body.hindi .equation-desc.hi{
     <div class="equation-grid">
 
 
+      <!-- 01 -->
+
       <article class="equation-card">
+
 
         <div class="equation-number">
           01 · GRAVITY
         </div>
 
 
+        <div class="equation">
+          F = Gm₁m₂ / r²
+        </div>
+
+
         <div class="equation-name">
-          Newton's Law of Universal Gravitation
+          Newton's Law of Gravitation
         </div>
 
 
-        <div class="formula">
-          F = G m₁m₂ / r²
-        </div>
+        <p class="equation-description bilingual-en">
 
+          This equation describes the gravitational
+          attraction between two masses.
 
-        <p class="equation-desc en bilingual-en">
-
-          The gravitational force between two objects depends on their
-          masses and decreases with the square of the distance between them.
+          It shows that increasing either mass
+          increases the force, while increasing
+          the distance weakens it very rapidly.
 
         </p>
 
 
-        <p class="equation-desc hi">
+        <p class="equation-description bilingual-hi">
 
-          दो वस्तुओं के बीच गुरुत्वाकर्षण बल उनके द्रव्यमान पर निर्भर करता है
-          और उनके बीच की दूरी के वर्ग के साथ घटता है।
+          यह समीकरण दो द्रव्यमानों के बीच
+          गुरुत्वाकर्षण आकर्षण को दर्शाता है।
+
+          किसी भी द्रव्यमान को बढ़ाने पर बल बढ़ता है,
+          जबकि दूरी बढ़ने पर गुरुत्वाकर्षण बल
+          बहुत तेजी से कम होता है।
 
         </p>
+
+
+        <div class="equation-detail bilingual-en">
+
+          r is especially important because the
+          distance is squared. That is why small
+          changes in distance can produce a large
+          change in gravitational strength.
+
+        </div>
+
+
+        <div class="equation-detail bilingual-hi">
+
+          r का विशेष महत्व है क्योंकि दूरी का वर्ग
+          लिया जाता है। इसलिए दूरी में छोटा बदलाव
+          भी गुरुत्वाकर्षण की strength में बड़ा
+          बदलाव ला सकता है।
+
+        </div>
+
 
       </article>
 
 
+      <!-- 02 -->
+
       <article class="equation-card">
 
+
         <div class="equation-number">
-          02 · ORBIT
+          02 · ORBITS
+        </div>
+
+
+        <div class="equation">
+          v = √(GM / r)
         </div>
 
 
@@ -2078,33 +2625,63 @@ body.hindi .equation-desc.hi{
         </div>
 
 
-        <div class="formula">
-          v = √(GM / r)
+        <p class="equation-description bilingual-en">
+
+          Orbital velocity is the speed needed for
+          an object to maintain a circular orbit
+          around a much larger body.
+
+          The required speed depends on the mass
+          of the central body and the orbital distance.
+
+        </p>
+
+
+        <p class="equation-description bilingual-hi">
+
+          Orbital velocity वह गति है जिसकी सहायता से
+          कोई वस्तु किसी बड़े पिंड के चारों ओर
+          circular orbit बनाए रख सकती है।
+
+          यह गति केंद्रीय पिंड के द्रव्यमान और
+          orbital distance पर निर्भर करती है।
+
+        </p>
+
+
+        <div class="equation-detail bilingual-en">
+
+          Farther from the central body generally
+          means a lower orbital speed is required
+          for a circular orbit.
+
         </div>
 
 
-        <p class="equation-desc en bilingual-en">
+        <div class="equation-detail bilingual-hi">
 
-          An object's orbital speed depends on the mass of the body it
-          orbits and its distance from that body.
+          केंद्रीय पिंड से अधिक दूरी पर circular orbit
+          बनाए रखने के लिए सामान्यतः कम orbital
+          speed की आवश्यकता होती है।
 
-        </p>
+        </div>
 
-
-        <p class="equation-desc hi">
-
-          किसी वस्तु का कक्षीय वेग उस पिंड के द्रव्यमान और उससे उसकी दूरी
-          पर निर्भर करता है जिसके चारों ओर वह परिक्रमा करती है।
-
-        </p>
 
       </article>
 
 
+      <!-- 03 -->
+
       <article class="equation-card">
 
+
         <div class="equation-number">
-          03 · CIRCULAR MOTION
+          03 · MOTION
+        </div>
+
+
+        <div class="equation">
+          F = mv² / r
         </div>
 
 
@@ -2113,33 +2690,63 @@ body.hindi .equation-desc.hi{
         </div>
 
 
-        <div class="formula">
-          F = mv² / r
+        <p class="equation-description bilingual-en">
+
+          An object moving in a circular path is
+          constantly changing the direction of its
+          velocity.
+
+          That change requires an inward-directed
+          force called centripetal force.
+
+        </p>
+
+
+        <p class="equation-description bilingual-hi">
+
+          वृत्तीय पथ पर चलती वस्तु के वेग की दिशा
+          लगातार बदलती रहती है।
+
+          इस दिशा परिवर्तन के लिए केंद्र की ओर
+          निर्देशित बल आवश्यक होता है जिसे
+          centripetal force कहते हैं।
+
+        </p>
+
+
+        <div class="equation-detail bilingual-en">
+
+          Because velocity is squared, increasing
+          speed greatly increases the force needed
+          to maintain the same circular path.
+
         </div>
 
 
-        <p class="equation-desc en bilingual-en">
+        <div class="equation-detail bilingual-hi">
 
-          Circular motion requires an inward-directed force. The required
-          force increases with mass and the square of velocity.
+          क्योंकि velocity का वर्ग लिया जाता है,
+          इसलिए speed बढ़ने पर समान circular path
+          बनाए रखने के लिए आवश्यक force बहुत बढ़ जाता है।
 
-        </p>
+        </div>
 
-
-        <p class="equation-desc hi">
-
-          वृत्तीय गति के लिए अंदर की ओर निर्देशित बल आवश्यक होता है।
-          आवश्यक बल द्रव्यमान और वेग के वर्ग के साथ बढ़ता है।
-
-        </p>
 
       </article>
 
 
+      <!-- 04 -->
+
       <article class="equation-card">
 
+
         <div class="equation-number">
-          04 · MOTION
+          04 · FORCE
+        </div>
+
+
+        <div class="equation">
+          F = ma
         </div>
 
 
@@ -2148,33 +2755,61 @@ body.hindi .equation-desc.hi{
         </div>
 
 
-        <div class="formula">
-          F = ma
+        <p class="equation-description bilingual-en">
+
+          Newton's Second Law connects force,
+          mass and acceleration.
+
+          It tells us how strongly the motion of
+          an object responds when a net force acts
+          upon it.
+
+        </p>
+
+
+        <p class="equation-description bilingual-hi">
+
+          Newton's Second Law force, mass और
+          acceleration के बीच संबंध बताता है।
+
+          जब किसी वस्तु पर net force लगता है,
+          तो उसकी motion किस प्रकार बदलेगी,
+          यह equation हमें समझने में मदद करती है।
+
+        </p>
+
+
+        <div class="equation-detail bilingual-en">
+
+          For the same mass, a larger net force
+          produces a larger acceleration.
+
         </div>
 
 
-        <p class="equation-desc en bilingual-en">
+        <div class="equation-detail bilingual-hi">
 
-          Net force produces acceleration. A larger force gives greater
-          acceleration for the same mass.
+          समान mass के लिए अधिक net force
+          अधिक acceleration उत्पन्न करता है।
 
-        </p>
+        </div>
 
-
-        <p class="equation-desc hi">
-
-          परिणामी बल त्वरण उत्पन्न करता है। समान द्रव्यमान के लिए अधिक बल
-          अधिक त्वरण उत्पन्न करता है।
-
-        </p>
 
       </article>
 
 
+      <!-- 05 -->
+
       <article class="equation-card">
+
 
         <div class="equation-number">
           05 · ENERGY
+        </div>
+
+
+        <div class="equation">
+          K = ½mv²
         </div>
 
 
@@ -2183,33 +2818,63 @@ body.hindi .equation-desc.hi{
         </div>
 
 
-        <div class="formula">
-          K = ½mv²
+        <p class="equation-description bilingual-en">
+
+          Kinetic energy is the energy associated
+          with an object's motion.
+
+          Both mass and speed affect it, but speed
+          has a particularly strong effect because
+          velocity is squared.
+
+        </p>
+
+
+        <p class="equation-description bilingual-hi">
+
+          Kinetic energy किसी वस्तु की motion से
+          जुड़ी ऊर्जा होती है।
+
+          यह mass और speed दोनों पर निर्भर करती है,
+          लेकिन speed का प्रभाव अधिक होता है क्योंकि
+          velocity का square लिया जाता है।
+
+        </p>
+
+
+        <div class="equation-detail bilingual-en">
+
+          Doubling the speed does not merely double
+          kinetic energy; it changes it by a factor
+          of four.
+
         </div>
 
 
-        <p class="equation-desc en bilingual-en">
+        <div class="equation-detail bilingual-hi">
 
-          Moving objects possess kinetic energy. Because velocity is
-          squared, even a change in speed can strongly affect the energy.
+          Speed को double करने पर kinetic energy
+          केवल double नहीं होती, बल्कि चार गुना
+          हो जाती है।
 
-        </p>
+        </div>
 
-
-        <p class="equation-desc hi">
-
-          गतिशील वस्तुओं में गतिज ऊर्जा होती है। इसमें वेग का वर्ग होने के
-          कारण गति में परिवर्तन ऊर्जा को काफी प्रभावित कर सकता है।
-
-        </p>
 
       </article>
 
 
+      <!-- 06 -->
+
       <article class="equation-card">
+
 
         <div class="equation-number">
           06 · ESCAPE
+        </div>
+
+
+        <div class="equation">
+          vₑ = √(2GM / r)
         </div>
 
 
@@ -2218,68 +2883,123 @@ body.hindi .equation-desc.hi{
         </div>
 
 
-        <div class="formula">
-          vₑ = √(2GM / r)
+        <p class="equation-description bilingual-en">
+
+          Escape velocity is the minimum idealized
+          speed needed for an object to move away
+          from a body's gravitational influence
+          without requiring additional propulsion.
+
+        </p>
+
+
+        <p class="equation-description bilingual-hi">
+
+          Escape velocity वह न्यूनतम idealized speed
+          है जिससे कोई वस्तु बिना अतिरिक्त propulsion
+          के किसी पिंड के gravitational influence
+          से दूर जा सकती है।
+
+        </p>
+
+
+        <div class="equation-detail bilingual-en">
+
+          A more massive body has a stronger
+          gravitational field, so escaping from it
+          requires a greater velocity.
+
         </div>
 
 
-        <p class="equation-desc en bilingual-en">
+        <div class="equation-detail bilingual-hi">
 
-          Escape velocity is the minimum speed required to move away from
-          a massive body without continuous propulsion.
+          अधिक massive body का gravitational field
+          stronger होता है, इसलिए उससे escape करने
+          के लिए अधिक velocity चाहिए।
 
-        </p>
+        </div>
 
-
-        <p class="equation-desc hi">
-
-          पलायन वेग वह न्यूनतम गति है जो किसी विशाल पिंड के गुरुत्वीय
-          प्रभाव से दूर जाने के लिए आवश्यक होती है।
-
-        </p>
 
       </article>
 
 
+      <!-- 07 -->
+
       <article class="equation-card">
+
 
         <div class="equation-number">
           07 · WAVES
         </div>
 
 
-        <div class="equation-name">
-          Wave Relationship
-        </div>
-
-
-        <div class="formula">
+        <div class="equation">
           v = fλ
         </div>
 
 
-        <p class="equation-desc en bilingual-en">
+        <div class="equation-name">
+          Wave Equation
+        </div>
 
-          Wave speed equals frequency multiplied by wavelength. Changing
-          one quantity affects the relationship between the others.
+
+        <p class="equation-description bilingual-en">
+
+          The wave equation connects wave speed,
+          frequency and wavelength.
+
+          If the wave speed remains fixed,
+          changing frequency changes wavelength
+          in the opposite direction.
 
         </p>
 
 
-        <p class="equation-desc hi">
+        <p class="equation-description bilingual-hi">
 
-          तरंग की चाल आवृत्ति और तरंगदैर्ध्य के गुणनफल के बराबर होती है।
-          एक राशि बदलने पर दूसरी राशियों के साथ उसका संबंध भी बदलता है।
+          Wave equation wave speed, frequency और
+          wavelength के बीच संबंध बताती है।
+
+          यदि wave speed fixed रहे, तो frequency
+          बदलने पर wavelength विपरीत दिशा में बदलती है।
 
         </p>
+
+
+        <div class="equation-detail bilingual-en">
+
+          The same relationship helps us understand
+          many different wave phenomena, from sound
+          to electromagnetic radiation.
+
+        </div>
+
+
+        <div class="equation-detail bilingual-hi">
+
+          यही relationship sound से लेकर
+          electromagnetic radiation तक कई
+          wave phenomena को समझने में मदद करता है।
+
+        </div>
+
 
       </article>
 
 
+      <!-- 08 -->
+
       <article class="equation-card">
 
+
         <div class="equation-number">
-          08 · UNIVERSE
+          08 · MATTER
+        </div>
+
+
+        <div class="equation">
+          E = mc²
         </div>
 
 
@@ -2288,79 +3008,252 @@ body.hindi .equation-desc.hi{
         </div>
 
 
-        <div class="formula">
-          E = mc²
+        <p class="equation-description bilingual-en">
+
+          Einstein's famous equation expresses a
+          deep connection between mass and energy.
+
+          It shows that mass can be understood as
+          a concentrated form of energy.
+
+        </p>
+
+
+        <p class="equation-description bilingual-hi">
+
+          Einstein की प्रसिद्ध equation mass और
+          energy के बीच गहरे संबंध को दर्शाती है।
+
+          यह बताती है कि mass को energy के एक
+          concentrated form के रूप में समझा जा सकता है।
+
+        </p>
+
+
+        <div class="equation-detail bilingual-en">
+
+          The enormous value of c² means even a
+          small amount of mass corresponds to a
+          very large amount of energy.
+
         </div>
 
 
-        <p class="equation-desc en bilingual-en">
+        <div class="equation-detail bilingual-hi">
 
-          Mass and energy are deeply connected. A small amount of mass
-          corresponds to a very large amount of energy because c² is enormous.
+          c² का बहुत बड़ा मान बताता है कि mass की
+          बहुत छोटी मात्रा भी बहुत बड़ी amount of
+          energy के बराबर हो सकती है।
 
-        </p>
+        </div>
 
-
-        <p class="equation-desc hi">
-
-          द्रव्यमान और ऊर्जा आपस में गहराई से जुड़े हुए हैं। c² का मान बहुत
-          बड़ा होने के कारण थोड़े से द्रव्यमान के बराबर बहुत अधिक ऊर्जा हो सकती है।
-
-        </p>
 
       </article>
 
 
     </div>
 
-
   </div>
-
 
 </section>
 
 
 <!-- =========================================================
      WHAT IF... THE UNIVERSE?
-========================================================= -->
+     ========================================================= -->
 
-<section>
+<section class="universe-section">
 
 
   <div class="container">
 
 
-    <div class="universe-card">
+    <div class="universe-panel">
+
+
+      <div class="universe-stars"></div>
+
+
+      <div class="universe-orbit"></div>
 
 
       <div class="universe-content">
 
 
-        <div class="eyebrow">
-          GO BEYOND EARTH
+        <div class="section-kicker">
+          BEYOND THE KNOWN
         </div>
 
 
         <h2>
-          WHAT IF... THE UNIVERSE?
+
+          WHAT IF...<br>
+
+          THE UNIVERSE?
+
         </h2>
 
 
         <p class="bilingual-en">
 
-          The same questions that help us understand Earth can take us
-          much farther — to stars, galaxies, spacetime and the deepest
-          rules of the cosmos.
+          The biggest What If questions aren't
+          always about one object.
+
+          They ask what would happen if a
+          fundamental rule of the universe itself
+          changed.
+
+          Would gravity still shape galaxies?
+          Would stars still form?
+          Would matter behave the same way?
+
+          These questions take us beyond everyday
+          experience and into the deepest ideas
+          of physics and cosmology.
 
         </p>
 
 
         <p class="bilingual-hi">
 
-          वही सवाल जो हमें पृथ्वी को समझने में मदद करते हैं, हमें तारों,
-          आकाशगंगाओं, spacetime और ब्रह्मांड के गहरे नियमों तक ले जा सकते हैं।
+          सबसे बड़े What If सवाल केवल किसी एक
+          वस्तु के बारे में नहीं होते।
+
+          वे पूछते हैं कि अगर ब्रह्मांड का कोई
+          fundamental rule ही बदल जाए तो क्या होगा।
+
+          क्या gravity फिर भी galaxies को shape करेगी?
+          क्या stars फिर भी बनेंगे?
+          क्या matter उसी तरह behave करेगा?
+
+          ऐसे सवाल हमें रोज़मर्रा के अनुभव से आगे
+          physics और cosmology के गहरे विचारों
+          तक ले जाते हैं।
 
         </p>
+
+
+        <div class="universe-extra">
+
+
+          <div class="universe-fact">
+
+            <strong class="bilingual-en">
+              SCALE
+            </strong>
+
+            <strong class="bilingual-hi">
+              SCALE
+            </strong>
+
+            <span class="bilingual-en">
+
+              From particles to galaxies,
+              the same physical laws connect
+              different scales of nature.
+
+            </span>
+
+            <span class="bilingual-hi">
+
+              particles से लेकर galaxies तक,
+              प्रकृति के अलग-अलग scales को
+              physical laws आपस में जोड़ते हैं।
+
+            </span>
+
+          </div>
+
+
+          <div class="universe-fact">
+
+            <strong class="bilingual-en">
+              QUESTIONS
+            </strong>
+
+            <strong class="bilingual-hi">
+              QUESTIONS
+            </strong>
+
+            <span class="bilingual-en">
+
+              Changing one fundamental rule can
+              create consequences across an
+              entire cosmic system.
+
+            </span>
+
+            <span class="bilingual-hi">
+
+              किसी एक fundamental rule को बदलने पर
+              पूरे cosmic system में consequences
+              दिखाई दे सकते हैं।
+
+            </span>
+
+          </div>
+
+
+          <div class="universe-fact">
+
+            <strong class="bilingual-en">
+              COSMOS
+            </strong>
+
+            <strong class="bilingual-hi">
+              COSMOS
+            </strong>
+
+            <span class="bilingual-en">
+
+              Understanding extreme possibilities
+              helps us understand why our actual
+              universe behaves the way it does.
+
+            </span>
+
+            <span class="bilingual-hi">
+
+              extreme possibilities को समझने से हमें
+              यह समझने में मदद मिलती है कि हमारा
+              वास्तविक universe ऐसा क्यों behave करता है।
+
+            </span>
+
+          </div>
+
+
+          <div class="universe-fact">
+
+            <strong class="bilingual-en">
+              IMAGINE
+            </strong>
+
+            <strong class="bilingual-hi">
+              IMAGINE
+            </strong>
+
+            <span class="bilingual-en">
+
+              A What If is not just fantasy.
+              It can be a way of testing whether
+              our understanding of nature makes sense.
+
+            </span>
+
+            <span class="bilingual-hi">
+
+              What If केवल fantasy नहीं है।
+              यह यह जांचने का एक तरीका भी हो सकता है
+              कि nature की हमारी understanding कितनी
+              सही है।
+
+            </span>
+
+          </div>
+
+
+        </div>
 
 
       </div>
@@ -2368,54 +3261,87 @@ body.hindi .equation-desc.hi{
 
     </div>
 
-
   </div>
-
 
 </section>
 
 
 <!-- =========================================================
      FINAL CTA
-     NOTHING AFTER THIS
-========================================================= -->
+     THIS IS THE LAST VISIBLE SECTION
+     ========================================================= -->
 
 <section class="final-cta">
 
 
-  <div class="container cta-content">
+  <div class="final-cta-content">
 
 
-    <div class="eyebrow">
-      NEVER STOP QUESTIONING
+    <div class="section-kicker">
+      KEEP QUESTIONING
     </div>
 
 
     <h2>
-      WHAT IF YOU CHANGED THE QUESTION?
+
+      THE BEST SCIENCE
+
+      STARTS WITH
+
+      “WHAT IF?”
+
     </h2>
 
 
     <p class="bilingual-en">
 
-      Science begins when curiosity asks a question nobody has asked before.
+      Don't stop at knowing how the world works.
+
+      Ask what would happen if it worked differently.
+
+      Keep questioning, keep exploring,
+      and keep looking beyond the textbook.
 
     </p>
 
 
     <p class="bilingual-hi">
 
-      विज्ञान तब शुरू होता है जब जिज्ञासा ऐसा सवाल पूछती है
-      जिसे पहले किसी ने नहीं पूछा।
+      यह जानने तक सीमित मत रहिए कि दुनिया
+      कैसे काम करती है।
+
+      यह भी पूछिए कि अगर दुनिया अलग तरीके
+      से काम करे तो क्या होगा।
+
+      सवाल पूछते रहिए, explore करते रहिए और
+      textbook से आगे science को देखिए।
 
     </p>
 
 
-  </div>
+    <div class="cta-caption">
+
+      Question everything.
+      Explore the impossible.
+
+    </div>
 
 
-  <div class="cta-caption">
-    Question everything.
+    <!-- BEYOND THE TEXTBOOK LINE -->
+
+    <div class="cta-brand-line">
+
+      <span>
+        BEYOND THE TEXTBOOK
+      </span>
+
+      <b>
+        SCIENCE
+      </b>
+
+    </div>
+
+
   </div>
 
 
@@ -2423,129 +3349,143 @@ body.hindi .equation-desc.hi{
 
 
 <!-- =========================================================
-     IMPORTANT:
-     External data files are loaded BEFORE page logic.
-========================================================= -->
+     EXTERNAL DATA FILES
+     ========================================================= -->
 
 <script src="../data/what-if.js"></script>
 
 <script src="../data/what-if-simulation.js"></script>
 
 
+<!-- =========================================================
+     PAGE JAVASCRIPT
+     ========================================================= -->
+
 <script>
 
+
 /* =========================================================
-   LANGUAGE
-========================================================= */
+   MOBILE MENU
+   ========================================================= */
 
-let currentLanguage =
-  localStorage.getItem("scienceLanguage") || "en";
-
-
-function applyLanguage(){
-
-  document.documentElement.lang =
-    currentLanguage === "hi"
-      ? "hi"
-      : "en";
+const menuBtn =
+  document.getElementById("menuBtn");
 
 
-  document.body.classList.toggle(
-    "hindi",
-    currentLanguage === "hi"
-  );
+const mobileMenu =
+  document.getElementById("mobileMenu");
 
 
-  const langBtn =
-    document.getElementById("langBtn");
+menuBtn.addEventListener(
+  "click",
+  () => {
 
-
-  if(currentLanguage === "en"){
-
-    langBtn.innerHTML =
-      'EN <span>|</span> <b>हिंदी</b>';
-
-  }else{
-
-    langBtn.innerHTML =
-      '<b>EN</b> <span>|</span> हिंदी';
+    mobileMenu.classList.toggle("open");
 
   }
+);
 
 
-  renderScenarios(
-    currentFilter
-  );
+mobileMenu
+  .querySelectorAll("a")
+  .forEach(link => {
 
+    link.addEventListener(
+      "click",
+      () => {
 
-  updateSimulationLanguage();
+        mobileMenu.classList.remove("open");
 
-}
-
-
-document
-  .getElementById("langBtn")
-  .addEventListener("click",()=>{
-
-    currentLanguage =
-      currentLanguage === "en"
-        ? "hi"
-        : "en";
-
-
-    localStorage.setItem(
-      "scienceLanguage",
-      currentLanguage
+      }
     );
-
-
-    applyLanguage();
 
   });
 
 
+
 /* =========================================================
-   TEXT HELPER
-========================================================= */
+   LANGUAGE
+   ========================================================= */
 
-function textOf(value){
+const langBtn =
+  document.getElementById("langBtn");
 
-  if(!value){
-    return "";
+
+function applyLanguage(lang){
+
+  if(lang === "hi"){
+
+    document.body.classList.add("hindi");
+
+  }else{
+
+    document.body.classList.remove("hindi");
+
   }
 
 
-  if(typeof value === "string"){
-    return value;
-  }
+  try{
 
+    localStorage.setItem(
+      "scienceLanguage",
+      lang
+    );
 
-  return (
-    value[currentLanguage] ||
-    value.en ||
-    ""
-  );
+  }catch(e){}
 
 }
 
 
-/* =========================================================
-   WHAT IF DATA CONNECTION
-========================================================= */
+let savedLanguage = "en";
 
-function getWhatIfData(){
+
+try{
+
+  savedLanguage =
+    localStorage.getItem(
+      "scienceLanguage"
+    ) || "en";
+
+}catch(e){}
+
+
+applyLanguage(savedLanguage);
+
+
+langBtn.addEventListener(
+  "click",
+  () => {
+
+    const next =
+      document.body.classList.contains("hindi")
+        ? "en"
+        : "hi";
+
+    applyLanguage(next);
+
+  }
+);
+
+
+
+/* =========================================================
+   WHAT IF DATA
+   ========================================================= */
+
+const scenarioGrid =
+  document.getElementById("scenarioGrid");
+
+
+let allScenarios = [];
+
+let activeFilter = "all";
+
+
+function getScenarioData(){
 
   /*
-    Most versions of data/what-if.js use:
-      const whatIfData = [...]
-
-    Some versions may expose:
-      window.whatIfData
-      window.WhatIfData
-
-    We support all of them.
+     First check window properties.
   */
-
 
   if(
     Array.isArray(window.whatIfData)
@@ -2565,6 +3505,25 @@ function getWhatIfData(){
   }
 
 
+  if(
+    Array.isArray(window.whatIfScenarios)
+  ){
+
+    return window.whatIfScenarios;
+
+  }
+
+
+  /*
+     Important:
+     A classic external JS file using
+     const whatIfData creates a global
+     lexical binding.
+
+     typeof prevents an error if it does
+     not exist.
+  */
+
   try{
 
     if(
@@ -2576,7 +3535,7 @@ function getWhatIfData(){
 
     }
 
-  }catch(error){}
+  }catch(e){}
 
 
   return [];
@@ -2584,86 +3543,42 @@ function getWhatIfData(){
 }
 
 
-const scenarioData =
-  getWhatIfData();
 
+function inferCategory(item){
 
-/* =========================================================
-   CATEGORY
-========================================================= */
+  const text = [
 
-function getScenarioCategory(item){
+    item.title?.en || "",
 
-  /*
-    If data/what-if.js already has category,
-    use it directly.
-  */
+    item.whatIf?.en || "",
 
-  if(item.category){
+    item.changes?.en || "",
 
-    return String(
-      item.category
-    ).toLowerCase();
+    item.why?.en || "",
 
-  }
+    item.science?.en || ""
 
+  ]
 
-  const source = (
-
-    textOf(item.title) + " " +
-    textOf(item.whatIf) + " " +
-    textOf(item.changes) + " " +
-    textOf(item.why) + " " +
-    textOf(item.notice) + " " +
-    textOf(item.science)
-
-  ).toLowerCase();
+  .join(" ")
+  .toLowerCase();
 
 
   if(
-    source.includes("moon") ||
-    source.includes("sun") ||
-    source.includes("jupiter") ||
-    source.includes("saturn") ||
-    source.includes("universe") ||
-    source.includes("space") ||
-    source.includes("planet") ||
-    source.includes("orbit") ||
-    source.includes("black hole") ||
-    source.includes("galaxy")
+
+    /sun|moon|universe|planet|jupiter|mars|orbit|space|earth.*sun|gravity.*space/.test(text)
+
   ){
 
-    return "astronomy";
+    return "space";
 
   }
 
 
   if(
-    source.includes("gravity") ||
-    source.includes("light") ||
-    source.includes("electricity") ||
-    source.includes("electric") ||
-    source.includes("fire") ||
-    source.includes("temperature") ||
-    source.includes("motion") ||
-    source.includes("force") ||
-    source.includes("resistance") ||
-    source.includes("speed")
-  ){
 
-    return "physics";
+    /dna|human|oxygen|cell|biology|tree|organism|mutation|body/.test(text)
 
-  }
-
-
-  if(
-    source.includes("dna") ||
-    source.includes("human") ||
-    source.includes("oxygen") ||
-    source.includes("cell") ||
-    source.includes("plant") ||
-    source.includes("tree") ||
-    source.includes("biology")
   ){
 
     return "biology";
@@ -2672,13 +3587,31 @@ function getScenarioCategory(item){
 
 
   if(
-    source.includes("ocean") ||
-    source.includes("rain") ||
-    source.includes("atmosphere") ||
-    source.includes("earth") ||
-    source.includes("water") ||
-    source.includes("ice") ||
-    source.includes("climate")
+
+    /atom|molecule|chemical|reaction|salt|combustion/.test(text)
+
+  ){
+
+    return "chemistry";
+
+  }
+
+
+  if(
+
+    /force|velocity|speed|motion|magnetic|light|gravity|energy|wave|electric/.test(text)
+
+  ){
+
+    return "physics";
+
+  }
+
+
+  if(
+
+    /ocean|rain|cloud|climate|atmosphere|earth|weather|forest/.test(text)
+
   ){
 
     return "earth";
@@ -2686,72 +3619,85 @@ function getScenarioCategory(item){
   }
 
 
-  if(
-    source.includes("environment") ||
-    source.includes("forest") ||
-    source.includes("ecosystem") ||
-    source.includes("weather")
-  ){
-
-    return "environment";
-
-  }
-
-
-  return "space";
+  return "physics";
 
 }
 
 
-/* =========================================================
-   SCENARIO GRID
-========================================================= */
 
-const scenarioGrid =
-  document.getElementById(
-    "scenarioGrid"
-  );
+function getText(value){
 
+  if(!value){
 
-let currentFilter = "all";
+    return "";
+
+  }
 
 
-function renderScenarios(
-  filter = "all"
-){
+  if(typeof value === "string"){
 
-  const data =
-    getWhatIfData();
+    return value;
 
+  }
+
+
+  return value.en || "";
+
+}
+
+
+
+function getHindi(value){
+
+  if(!value){
+
+    return "";
+
+  }
+
+
+  if(typeof value === "string"){
+
+    return "";
+
+  }
+
+
+  return value.hi || "";
+
+}
+
+
+
+function renderScenarios(){
 
   scenarioGrid.innerHTML = "";
 
 
-  if(!data.length){
+  const filtered =
+
+    activeFilter === "all"
+
+      ? allScenarios
+
+      : allScenarios.filter(item => {
+
+          const category =
+            item.category ||
+            inferCategory(item);
+
+          return category === activeFilter;
+
+        });
+
+
+  if(!filtered.length){
 
     scenarioGrid.innerHTML = `
 
-      <div style="
-        grid-column:1/-1;
-        padding:28px;
-        border:1px solid rgba(255,255,255,.14);
-        border-radius:18px;
-        background:rgba(13,20,16,.8);
-        color:#aeb8af;
-        font-size:13px;
-      ">
+      <div class="data-message">
 
-        Could not load What If scenarios.
-
-        <br>
-
-        <small style="
-          display:block;
-          margin-top:7px;
-          opacity:.65;
-        ">
-          Check that data/what-if.js is present and loaded.
-        </small>
+        No scenarios found.
 
       </div>
 
@@ -2762,446 +3708,228 @@ function renderScenarios(
   }
 
 
-  data.forEach(
-    (item,index)=>{
+  filtered.forEach(item => {
 
-      const category =
-        getScenarioCategory(item);
 
+    const icon =
+      item.icon || "❓";
 
-      if(
-        filter !== "all" &&
-        category !== filter
-      ){
 
-        return;
+    const titleEn =
+      getText(item.title);
 
-      }
 
+    const titleHi =
+      getHindi(item.title);
 
-      const card =
-        document.createElement("article");
 
+    const whatIfEn =
+      getText(item.whatIf);
 
-      card.className =
-        "scenario-card";
 
+    const whatIfHi =
+      getHindi(item.whatIf);
 
-      const changesLabel =
-        currentLanguage === "hi"
-          ? "क्या बदलेगा"
-          : "Changes";
 
+    const card =
+      document.createElement("article");
 
-      const whyLabel =
-        currentLanguage === "hi"
-          ? "क्यों?"
-          : "Why?";
 
+    card.className =
+      "scenario-card";
 
-      const noticeLabel =
-        currentLanguage === "hi"
-          ? "क्या दिखाई देगा"
-          : "Notice";
 
+    card.dataset.category =
+      item.category ||
+      inferCategory(item);
 
-      const scienceLabel =
-        currentLanguage === "hi"
-          ? "विज्ञान"
-          : "Science";
 
+    card.innerHTML = `
 
-      card.innerHTML = `
 
-        <div
-          class="scenario-main"
-          role="button"
-          tabindex="0"
-        >
+      <div class="scenario-icon">
 
-          <div class="scenario-top">
+        ${icon}
 
-            <div class="scenario-icon">
+      </div>
 
-              ${item.icon || "❓"}
 
-            </div>
+      <h3 class="bilingual-en">
 
-            <div class="scenario-arrow">
-              ↗
-            </div>
+        ${titleEn}
 
-          </div>
+      </h3>
 
 
-          <h3>
+      <h3 class="bilingual-hi">
 
-            ${escapeHTML(
-              textOf(item.title)
-            )}
+        ${titleHi || titleEn}
 
-          </h3>
+      </h3>
 
 
-          <p class="whatif">
+      <p class="bilingual-en">
 
-            ${escapeHTML(
-              textOf(item.whatIf)
-            )}
+        ${whatIfEn}
 
-          </p>
+      </p>
 
-        </div>
 
+      <p class="bilingual-hi">
 
-        <div class="scenario-details">
+        ${whatIfHi || whatIfEn}
 
+      </p>
 
-          <div class="detail">
 
-            <strong>
-              ${changesLabel}
-            </strong>
+      <div class="scenario-label">
 
-            <p>
-              ${escapeHTML(
-                textOf(item.changes)
-              )}
-            </p>
+        Explore →
 
-          </div>
+      </div>
 
 
-          <div class="detail">
+    `;
 
-            <strong>
-              ${whyLabel}
-            </strong>
 
-            <p>
-              ${escapeHTML(
-                textOf(item.why)
-              )}
-            </p>
+    scenarioGrid.appendChild(card);
 
-          </div>
 
-
-          <div class="detail">
-
-            <strong>
-              ${noticeLabel}
-            </strong>
-
-            <p>
-              ${escapeHTML(
-                textOf(item.notice)
-              )}
-            </p>
-
-          </div>
-
-
-          <div class="detail">
-
-            <strong>
-              ${scienceLabel}
-            </strong>
-
-            <p>
-              ${escapeHTML(
-                textOf(item.science)
-              )}
-            </p>
-
-          </div>
-
-
-        </div>
-
-      `;
-
-
-      const main =
-        card.querySelector(
-          ".scenario-main"
-        );
-
-
-      function toggleCard(){
-
-        card.classList.toggle(
-          "open"
-        );
-
-      }
-
-
-      main.addEventListener(
-        "click",
-        toggleCard
-      );
-
-
-      main.addEventListener(
-        "keydown",
-        event=>{
-
-          if(
-            event.key === "Enter" ||
-            event.key === " "
-          ){
-
-            event.preventDefault();
-
-            toggleCard();
-
-          }
-
-        }
-      );
-
-
-      scenarioGrid.appendChild(
-        card
-      );
-
-    }
-  );
+  });
 
 }
 
 
-/* =========================================================
-   SAFE HTML
-========================================================= */
+allScenarios =
+  getScenarioData();
 
-function escapeHTML(value){
 
-  return String(value ?? "")
-    .replaceAll("&","&amp;")
-    .replaceAll("<","&lt;")
-    .replaceAll(">","&gt;")
-    .replaceAll('"',"&quot;")
-    .replaceAll("'","&#039;");
+renderScenarios();
 
-}
 
 
 /* =========================================================
    FILTERS
-========================================================= */
+   ========================================================= */
 
 document
   .querySelectorAll(".filter-btn")
-  .forEach(button=>{
+  .forEach(button => {
+
 
     button.addEventListener(
       "click",
-      ()=>{
+      () => {
+
 
         document
-          .querySelectorAll(
-            ".filter-btn"
-          )
-          .forEach(btn=>{
-
-            btn.classList.remove(
-              "active"
-            );
-
-          });
+          .querySelectorAll(".filter-btn")
+          .forEach(btn =>
+            btn.classList.remove("active")
+          );
 
 
-        button.classList.add(
-          "active"
-        );
+        button.classList.add("active");
 
 
-        currentFilter =
+        activeFilter =
           button.dataset.filter;
 
 
-        renderScenarios(
-          currentFilter
-        );
+        renderScenarios();
+
 
       }
     );
 
+
   });
 
 
+
 /* =========================================================
-   SIMULATION DATA
-========================================================= */
+   SIMULATION
+   ========================================================= */
 
-const simulationList = [
+const simulationKeys = [
 
-  {
-    key:"sun-disappeared",
+  "sun-disappeared",
 
-    title:{
-      en:"Sun Suddenly Disappeared",
-      hi:"सूर्य अचानक गायब हो जाए"
-    }
-  },
+  "earth-stopped-spinning",
 
+  "moon-disappeared",
 
-  {
-    key:"earth-stopped-spinning",
+  "magnetic-field-lost",
 
-    title:{
-      en:"Earth Stopped Spinning",
-      hi:"पृथ्वी घूमना बंद कर दे"
-    }
-  },
+  "half-gravity",
 
-
-  {
-    key:"moon-disappeared",
-
-    title:{
-      en:"Moon Disappeared",
-      hi:"चंद्रमा गायब हो जाए"
-    }
-  },
-
-
-  {
-    key:"magnetic-field-lost",
-
-    title:{
-      en:"Earth Lost Its Magnetic Field",
-      hi:"पृथ्वी का चुंबकीय क्षेत्र समाप्त हो जाए"
-    }
-  },
-
-
-  {
-    key:"half-gravity",
-
-    title:{
-      en:"Gravity Became Half as Strong",
-      hi:"गुरुत्वाकर्षण आधा हो जाए"
-    }
-  },
-
-
-  {
-    key:"jupiter-swapped-mars",
-
-    title:{
-      en:"Jupiter Swapped Places with Mars",
-      hi:"बृहस्पति और मंगल अपनी जगह बदल लें"
-    }
-  }
+  "jupiter-swapped-mars"
 
 ];
 
 
-let currentSimulationKey =
-  null;
+let currentSimulation = null;
 
 
-/* =========================================================
-   RANDOM DIFFERENT SIMULATION
-========================================================= */
 
 function randomSimulation(){
 
-  if(
-    simulationList.length === 1
-  ){
 
-    return simulationList[0];
+  let available =
+
+    simulationKeys.filter(
+      key =>
+        key !== currentSimulation
+    );
+
+
+  if(!available.length){
+
+    available =
+      simulationKeys.slice();
 
   }
 
 
-  let selected;
+  const key =
+
+    available[
+      Math.floor(
+        Math.random() *
+        available.length
+      )
+    ];
 
 
-  do{
+  currentSimulation =
+    key;
 
-    selected =
-      simulationList[
-        Math.floor(
-          Math.random() *
-          simulationList.length
-        )
-      ];
-
-  }while(
-    selected.key ===
-    currentSimulationKey
-  );
-
-
-  return selected;
-
-}
-
-
-/* =========================================================
-   OPEN RANDOM SIMULATION
-========================================================= */
-
-function openRandomSimulation(){
-
-  const selected =
-    randomSimulation();
-
-
-  currentSimulationKey =
-    selected.key;
-
-
-  /*
-    This is the actual connection to
-    data/what-if-simulation.js
-  */
 
   if(
+
     window.WhatIfSimulation &&
-    typeof window.WhatIfSimulation.open ===
-    "function"
+
+    typeof
+      window.WhatIfSimulation.open
+      === "function"
+
   ){
 
     window.WhatIfSimulation.open(
-      selected.key
+      key
     );
+
 
   }else{
 
-    const simulation =
-      document.getElementById(
-        "whatIfSimulation"
-      );
 
+    document.getElementById(
+      "whatIfSimulation"
+    ).innerHTML = `
 
-    simulation.innerHTML = `
+      <div class="data-message">
 
-      <div style="
-        padding:30px;
-        border:1px solid rgba(255,255,255,.14);
-        border-radius:20px;
-        background:rgba(13,20,16,.9);
-        color:#aeb8af;
-      ">
-
-        Simulation engine could not be loaded.
-
-        <br>
-
-        <small style="
-          display:block;
-          margin-top:7px;
-          opacity:.65;
-        ">
-          Check that data/what-if-simulation.js
-          is present and loaded.
-        </small>
+        Simulation could not be loaded.
 
       </div>
 
@@ -3212,92 +3940,65 @@ function openRandomSimulation(){
 }
 
 
-/* =========================================================
-   UPDATE SIMULATION LANGUAGE
-========================================================= */
-
-function updateSimulationLanguage(){
-
-  /*
-    The simulation engine itself is currently
-    English UI. The surrounding page content
-    changes language without changing section names.
-  */
-
-}
-
 
 /* =========================================================
    NEXT SIMULATION
-========================================================= */
+   ========================================================= */
 
 document
   .getElementById("nextSimulation")
   .addEventListener(
     "click",
-    ()=>{
+    () => {
 
-      openRandomSimulation();
+
+      randomSimulation();
+
+
+      document
+        .getElementById(
+          "see-what-happens"
+        )
+        .scrollIntoView({
+
+          behavior:"smooth",
+
+          block:"start"
+
+        });
+
 
     }
   );
 
 
-/* =========================================================
-   MOBILE MENU
-========================================================= */
-
-const mobileMenu =
-  document.getElementById(
-    "mobileMenu"
-  );
-
-
-document
-  .getElementById("menuBtn")
-  .addEventListener(
-    "click",
-    ()=>{
-
-      mobileMenu.classList.toggle(
-        "open"
-      );
-
-    }
-  );
-
-
-mobileMenu
-  .querySelectorAll("a")
-  .forEach(link=>{
-
-    link.addEventListener(
-      "click",
-      ()=>{
-
-        mobileMenu.classList.remove(
-          "open"
-        );
-
-      }
-    );
-
-  });
-
 
 /* =========================================================
-   INITIALIZATION
-========================================================= */
+   INITIAL RANDOM SIMULATION
+   ========================================================= */
 
-applyLanguage();
+function startSimulation(){
+
+  randomSimulation();
+
+}
 
 
-/*
-  Random simulation appears INSIDE
-  SEE WHAT HAPPENS section.
-*/
+if(
+  document.readyState === "loading"
+){
 
-openRandomSimulation();
+  document.addEventListener(
+    "DOMContentLoaded",
+    startSimulation,
+    {once:true}
+  );
+
+}else{
+
+  startSimulation();
+
+}
 
 
 </script>
