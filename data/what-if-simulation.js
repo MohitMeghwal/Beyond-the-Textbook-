@@ -20,6 +20,25 @@
    - magnetic-field-lost
    - half-gravity
    - jupiter-swapped-mars
+
+   ---------------------------------------------------------
+   BILINGUAL SUPPORT (EN / HI)
+   ---------------------------------------------------------
+   This file reads the current site language directly from
+   document.body.classList.contains("hindi") — the exact same
+   flag the page's language button (#langBtn) already sets.
+
+   A MutationObserver watches document.body for class changes,
+   so switching the language on what-if/index.html instantly
+   re-renders any open simulation in the new language, without
+   needing any changes to the HTML file and without restarting
+   the animation.
+
+   All translated text is either fully English or fully Hindi
+   (Devanagari script) — no English words are mixed into Hindi
+   sentences. The Play / Pause / Reset / Speed controls and the
+   "Normal World / What Changes? / The Science" card headers
+   are intentionally kept in English only, in both languages.
 ========================================================= */
 
 (() => {
@@ -41,99 +60,365 @@
   };
 
   /* =======================================================
+     LANGUAGE HELPERS
+  ======================================================= */
+
+  function getLang() {
+
+    try {
+
+      return document.body.classList.contains("hindi")
+        ? "hi"
+        : "en";
+
+    } catch (e) {
+
+      return "en";
+    }
+  }
+
+  /* Resolve a bilingual {en, hi} object to a plain string
+     for the current language, falling back to English. */
+
+  function t(entry) {
+
+    if (!entry) return "";
+
+    if (typeof entry === "string") return entry;
+
+    return entry[getLang()] || entry.en || "";
+  }
+
+  /* =======================================================
+     UI / LABEL TRANSLATIONS
+     ---------------------------------------------------------
+     NOTE: Play / Pause / Reset / Speed button labels and the
+     "Normal World / What Changes? / The Science" info-card
+     headers are NOT part of this dictionary — they stay in
+     English at all times, by request.
+  ======================================================= */
+
+  const translations = {
+
+    ui: {
+      whatIfPrefix: { en: "WHAT IF?", hi: "क्या हो अगर?" },
+      live: { en: "LIVE", hi: "प्रत्यक्ष" },
+      scientificModel: { en: "SCIENTIFIC MODEL", hi: "वैज्ञानिक मॉडल" },
+      simulationState: { en: "Simulation State", hi: "सिमुलेशन स्थिति" },
+      ready: { en: "Ready", hi: "तैयार" },
+      pressPlay: {
+        en: "Press Play to observe the change.",
+        hi: "बदलाव देखने के लिए नीचे दिया गया बटन दबाएँ।"
+      },
+      closeAria: { en: "Close simulation", hi: "सिमुलेशन बंद करें" }
+    },
+
+    categories: {
+      "Astronomy": { en: "Astronomy", hi: "खगोल विज्ञान" },
+      "Earth & Motion": { en: "Earth & Motion", hi: "पृथ्वी और गति" },
+      "Earth & Space": { en: "Earth & Space", hi: "पृथ्वी और अंतरिक्ष" },
+      "Physics": { en: "Physics", hi: "भौतिकी" },
+      "Solar System": { en: "Solar System", hi: "सौरमंडल" }
+    },
+
+    canvasLabels: {
+      SUN: { en: "SUN", hi: "सूर्य" },
+      EARTH: { en: "EARTH", hi: "पृथ्वी" },
+      TANGENT: {
+        en: "EARTH CONTINUES ALONG A TANGENT",
+        hi: "पृथ्वी अपनी पुरानी कक्षा की स्पर्श-रेखा दिशा में आगे बढ़ती रहती है"
+      },
+      ROTATING: { en: "ROTATING", hi: "घूम रहा है" },
+      ROTATION_STOPPED: { en: "ROTATION STOPPED", hi: "घूर्णन रुक गया" },
+      MOON: { en: "MOON", hi: "चंद्रमा" },
+      MOON_GONE: { en: "MOON GONE", hi: "चंद्रमा गायब" },
+      MAGNETIC_FIELD: { en: "MAGNETIC FIELD", hi: "चुंबकीय क्षेत्र" },
+      MAGNETIC_WEAK: {
+        en: "MAGNETIC SHIELD GREATLY WEAKENED",
+        hi: "चुंबकीय कवच बहुत कमजोर हो गया"
+      },
+      NORMAL_G: { en: "NORMAL g ≈ 9.8 m/s²", hi: "सामान्य g ≈ 9.8 मी/से²" },
+      HALF_G: { en: "HALF g ≈ 4.9 m/s²", hi: "आधा g ≈ 4.9 मी/से²" },
+      MARS: { en: "MARS", hi: "मंगल" },
+      JUPITER: { en: "JUPITER", hi: "बृहस्पति" },
+      SWAPPED: {
+        en: "ORBITAL POSITIONS SWAPPED",
+        hi: "कक्षीय स्थितियाँ बदल गईं"
+      }
+    }
+  };
+
+  function tu(key) {
+
+    return t(translations.ui[key]);
+  }
+
+  function tc(key) {
+
+    const entry = translations.categories[key];
+
+    return entry ? t(entry) : key;
+  }
+
+  function tl(key) {
+
+    return t(translations.canvasLabels[key]);
+  }
+
+  /* =======================================================
      SIMULATION DATA
+     (title / description / normal / whatIf / science
+      are all bilingual {en, hi} objects — Hindi text uses
+      standard Hindi scientific vocabulary, no English words
+      mixed in)
   ======================================================= */
 
   const simulations = {
 
     "sun-disappeared": {
       icon: "☀️",
-      title: "What If the Sun Suddenly Disappeared?",
+      title: {
+        en: "What If the Sun Suddenly Disappeared?",
+        hi: "अगर सूरज अचानक गायब हो जाए तो क्या होगा?"
+      },
       category: "Astronomy",
-      description:
-        "The Sun provides both light and the gravitational influence that keeps Earth in its orbit.",
-      normal:
-        "Earth continuously orbits the Sun because the Sun's gravity bends Earth's path into an orbit.",
-      whatIf:
-        "The Sun disappears. Earth would not immediately notice. Sunlight takes about 8 minutes 20 seconds to reach Earth, and the gravitational change would also propagate at the speed of light.",
-      science:
-        "After roughly 8 minutes 20 seconds, sunlight would vanish and Earth would no longer be held in its solar orbit. It would continue moving approximately along the tangent to its former orbit.",
+      description: {
+        en: "The Sun provides both light and the gravitational influence that keeps Earth in its orbit.",
+        hi: "सूर्य हमें प्रकाश देता है और अपने गुरुत्वाकर्षण प्रभाव से पृथ्वी को उसकी कक्षा में बनाए रखता है।"
+      },
+      normal: {
+        en: "Earth continuously orbits the Sun because the Sun's gravity bends Earth's path into an orbit.",
+        hi: "पृथ्वी लगातार सूर्य की परिक्रमा करती है क्योंकि सूर्य का गुरुत्वाकर्षण पृथ्वी के मार्ग को मोड़कर एक कक्षा बना देता है।"
+      },
+      whatIf: {
+        en: "The Sun disappears. Earth would not immediately notice. Sunlight takes about 8 minutes 20 seconds to reach Earth, and the gravitational change would also propagate at the speed of light.",
+        hi: "मान लीजिए सूर्य अचानक गायब हो जाए। पृथ्वी को तुरंत इसका पता नहीं चलेगा। सूर्य के प्रकाश को पृथ्वी तक पहुँचने में लगभग 8 मिनट 20 सेकंड लगते हैं, और गुरुत्वाकर्षण का यह बदलाव भी प्रकाश की गति से ही फैलेगा।"
+      },
+      science: {
+        en: "After roughly 8 minutes 20 seconds, sunlight would vanish and Earth would no longer be held in its solar orbit. It would continue moving approximately along the tangent to its former orbit.",
+        hi: "लगभग 8 मिनट 20 सेकंड बाद सूर्य का प्रकाश गायब हो जाएगा और पृथ्वी अब अपनी सौर कक्षा में बंधी नहीं रहेगी। यह लगभग अपनी पुरानी कक्षा की स्पर्श-रेखा की दिशा में आगे बढ़ती रहेगी।"
+      },
       controls: true
     },
 
     "earth-stopped-spinning": {
       icon: "🌍",
-      title: "What If Earth Suddenly Stopped Spinning?",
+      title: {
+        en: "What If Earth Suddenly Stopped Spinning?",
+        hi: "अगर पृथ्वी अचानक घूमना बंद कर दे तो क्या होगा?"
+      },
       category: "Earth & Motion",
-      description:
-        "Earth rotates once approximately every 24 hours, producing the cycle of day and night.",
-      normal:
-        "Earth's surface rotates eastward while Earth travels around the Sun.",
-      whatIf:
-        "Imagine Earth's rotation suddenly becoming zero while Earth continues orbiting the Sun.",
-      science:
-        "The length of the day would change dramatically. Earth's atmosphere and oceans would also respond to the sudden change in rotational motion.",
+      description: {
+        en: "Earth rotates once approximately every 24 hours, producing the cycle of day and night.",
+        hi: "पृथ्वी लगभग हर 24 घंटे में एक बार घूमती है, जिससे दिन और रात का चक्र बनता है।"
+      },
+      normal: {
+        en: "Earth's surface rotates eastward while Earth travels around the Sun.",
+        hi: "पृथ्वी की सतह पूर्व दिशा में घूमती है जबकि पृथ्वी सूर्य के चारों ओर भी परिक्रमा करती रहती है।"
+      },
+      whatIf: {
+        en: "Imagine Earth's rotation suddenly becoming zero while Earth continues orbiting the Sun.",
+        hi: "कल्पना कीजिए कि पृथ्वी का घूर्णन अचानक शून्य हो जाए, जबकि पृथ्वी सूर्य के चारों ओर परिक्रमा करती रहे।"
+      },
+      science: {
+        en: "The length of the day would change dramatically. Earth's atmosphere and oceans would also respond to the sudden change in rotational motion.",
+        hi: "दिन की अवधि बहुत ज्यादा बदल जाएगी। पृथ्वी का वायुमंडल और महासागर भी घूर्णी गति में इस अचानक बदलाव पर प्रतिक्रिया देंगे।"
+      },
       controls: true
     },
 
     "moon-disappeared": {
       icon: "🌙",
-      title: "What If the Moon Disappeared?",
+      title: {
+        en: "What If the Moon Disappeared?",
+        hi: "अगर चंद्रमा गायब हो जाए तो क्या होगा?"
+      },
       category: "Astronomy",
-      description:
-        "The Moon affects Earth's oceans and participates in the gravitational dance of the Earth–Moon system.",
-      normal:
-        "The Moon orbits Earth and its gravity contributes strongly to Earth's tides.",
-      whatIf:
-        "Imagine the Moon suddenly disappearing from the Earth–Moon system.",
-      science:
-        "The most noticeable changes would include major changes to tides and the removal of the Moon's contribution to Earth's orbital dynamics.",
+      description: {
+        en: "The Moon affects Earth's oceans and participates in the gravitational dance of the Earth–Moon system.",
+        hi: "चंद्रमा पृथ्वी के महासागरों को प्रभावित करता है और पृथ्वी-चंद्रमा प्रणाली के गुरुत्वाकर्षण संतुलन में अपनी भूमिका निभाता है।"
+      },
+      normal: {
+        en: "The Moon orbits Earth and its gravity contributes strongly to Earth's tides.",
+        hi: "चंद्रमा पृथ्वी की परिक्रमा करता है और उसका गुरुत्वाकर्षण पृथ्वी के ज्वार-भाटा में एक बड़ा योगदान देता है।"
+      },
+      whatIf: {
+        en: "Imagine the Moon suddenly disappearing from the Earth–Moon system.",
+        hi: "कल्पना कीजिए कि चंद्रमा पृथ्वी-चंद्रमा प्रणाली से अचानक गायब हो जाए।"
+      },
+      science: {
+        en: "The most noticeable changes would include major changes to tides and the removal of the Moon's contribution to Earth's orbital dynamics.",
+        hi: "सबसे ज्यादा ध्यान देने वाले बदलावों में ज्वार-भाटा में बड़ा परिवर्तन और पृथ्वी की कक्षीय गतिकी में चंद्रमा के योगदान का हट जाना शामिल होगा।"
+      },
       controls: true
     },
 
     "magnetic-field-lost": {
       icon: "🧲",
-      title: "What If Earth Lost Its Magnetic Field?",
+      title: {
+        en: "What If Earth Lost Its Magnetic Field?",
+        hi: "अगर पृथ्वी अपना चुंबकीय क्षेत्र खो दे तो क्या होगा?"
+      },
       category: "Earth & Space",
-      description:
-        "Earth's magnetic field forms a protective magnetic environment around our planet.",
-      normal:
-        "Charged particles from the Sun interact with Earth's magnetic environment and are guided around the planet.",
-      whatIf:
-        "Imagine Earth's large-scale magnetic field suddenly becoming extremely weak.",
-      science:
-        "Earth's interaction with the solar wind would change significantly. Auroral patterns and the space environment around Earth would also be affected.",
+      description: {
+        en: "Earth's magnetic field forms a protective magnetic environment around our planet.",
+        hi: "पृथ्वी का चुंबकीय क्षेत्र हमारे ग्रह के चारों ओर एक सुरक्षात्मक चुंबकीय वातावरण बनाता है।"
+      },
+      normal: {
+        en: "Charged particles from the Sun interact with Earth's magnetic environment and are guided around the planet.",
+        hi: "सूर्य से आने वाले आवेशित कण पृथ्वी के चुंबकीय वातावरण से टकराकर ग्रह के चारों ओर दिशा बदल लेते हैं।"
+      },
+      whatIf: {
+        en: "Imagine Earth's large-scale magnetic field suddenly becoming extremely weak.",
+        hi: "कल्पना कीजिए कि पृथ्वी का विशाल चुंबकीय क्षेत्र अचानक बहुत कमजोर हो जाए।"
+      },
+      science: {
+        en: "Earth's interaction with the solar wind would change significantly. Auroral patterns and the space environment around Earth would also be affected.",
+        hi: "पृथ्वी की सौर पवन के साथ अंतःक्रिया काफी बदल जाएगी। ध्रुवीय ज्योति के प्रतिरूप और पृथ्वी के आसपास का अंतरिक्षीय वातावरण भी प्रभावित होगा।"
+      },
       controls: true
     },
 
     "half-gravity": {
       icon: "🪶",
-      title: "What If Gravity Became Half as Strong?",
+      title: {
+        en: "What If Gravity Became Half as Strong?",
+        hi: "अगर गुरुत्वाकर्षण आधा हो जाए तो क्या होगा?"
+      },
       category: "Physics",
-      description:
-        "Gravity determines how strongly objects are attracted toward Earth.",
-      normal:
-        "Near Earth's surface, objects accelerate downward at approximately 9.8 m/s².",
-      whatIf:
-        "Imagine the gravitational acceleration near Earth's surface becoming approximately half its current value.",
-      science:
-        "Objects would accelerate downward more slowly, jumps would last longer, and the weight of objects would be reduced.",
+      description: {
+        en: "Gravity determines how strongly objects are attracted toward Earth.",
+        hi: "गुरुत्वाकर्षण यह तय करता है कि वस्तुएँ पृथ्वी की ओर कितनी ताकत से आकर्षित होती हैं।"
+      },
+      normal: {
+        en: "Near Earth's surface, objects accelerate downward at approximately 9.8 m/s².",
+        hi: "पृथ्वी की सतह के पास वस्तुएँ लगभग 9.8 मी/से² के त्वरण से नीचे गिरती हैं।"
+      },
+      whatIf: {
+        en: "Imagine the gravitational acceleration near Earth's surface becoming approximately half its current value.",
+        hi: "कल्पना कीजिए कि पृथ्वी की सतह के पास गुरुत्वीय त्वरण अपने वर्तमान मान का लगभग आधा हो जाए।"
+      },
+      science: {
+        en: "Objects would accelerate downward more slowly, jumps would last longer, and the weight of objects would be reduced.",
+        hi: "वस्तुएँ धीमी गति से नीचे गिरेंगी, कूदने पर हवा में ज्यादा देर तक रहेंगी, और वस्तुओं का भार भी कम हो जाएगा।"
+      },
       controls: true
     },
 
     "jupiter-swapped-mars": {
       icon: "🪐",
-      title: "What If Jupiter Swapped Places With Mars?",
+      title: {
+        en: "What If Jupiter Swapped Places With Mars?",
+        hi: "अगर बृहस्पति और मंगल अपनी जगह बदल लें तो क्या होगा?"
+      },
       category: "Solar System",
-      description:
-        "Jupiter is the largest planet in our Solar System, while Mars is much smaller and orbits farther from the Sun.",
-      normal:
-        "Mars orbits between Earth and Jupiter, while Jupiter follows a much larger orbit farther from the Sun.",
-      whatIf:
-        "Imagine Jupiter suddenly occupying Mars's orbital distance while Mars moved into Jupiter's original orbit.",
-      science:
-        "The gravitational architecture of the Solar System would change dramatically. The motion and stability of nearby planetary orbits would need to readjust.",
+      description: {
+        en: "Jupiter is the largest planet in our Solar System, while Mars is much smaller and orbits farther from the Sun.",
+        hi: "बृहस्पति हमारे सौरमंडल का सबसे बड़ा ग्रह है, जबकि मंगल इससे बहुत छोटा है।"
+      },
+      normal: {
+        en: "Mars orbits between Earth and Jupiter, while Jupiter follows a much larger orbit farther from the Sun.",
+        hi: "मंगल पृथ्वी और बृहस्पति के बीच की कक्षा में परिक्रमा करता है, जबकि बृहस्पति सूर्य से बहुत दूर एक बड़ी कक्षा में चक्कर लगाता है।"
+      },
+      whatIf: {
+        en: "Imagine Jupiter suddenly occupying Mars's orbital distance while Mars moved into Jupiter's original orbit.",
+        hi: "कल्पना कीजिए कि बृहस्पति अचानक मंगल की कक्षीय दूरी पर आ जाए और मंगल बृहस्पति की मूल कक्षा में चला जाए।"
+      },
+      science: {
+        en: "The gravitational architecture of the Solar System would change dramatically. The motion and stability of nearby planetary orbits would need to readjust.",
+        hi: "सौरमंडल की गुरुत्वाकर्षण संरचना बहुत ज्यादा बदल जाएगी। आसपास के ग्रहों की कक्षाओं की गति और स्थिरता को फिर से संतुलित होना पड़ेगा।"
+      },
       controls: true
+    }
+  };
+
+  /* =======================================================
+     READOUT MESSAGE TRANSLATIONS
+     (keyed exactly like the switch-cases in updateReadout)
+  ======================================================= */
+
+  const readoutMessages = {
+
+    "sun-disappeared": {
+      before: {
+        value: { en: "Normal Orbit", hi: "सामान्य कक्षा" },
+        small: {
+          en: "Earth still receives sunlight. The change has not reached Earth yet.",
+          hi: "पृथ्वी को अभी भी सूर्य का प्रकाश मिल रहा है। बदलाव अभी पृथ्वी तक नहीं पहुँचा है।"
+        }
+      },
+      after: {
+        value: { en: "Sunlight Lost", hi: "सूर्य का प्रकाश समाप्त" },
+        small: {
+          en: "Earth leaves its solar orbit and follows its existing motion.",
+          hi: "पृथ्वी अपनी सौर कक्षा छोड़कर अपनी मौजूदा गति की दिशा में आगे बढ़ती है।"
+        }
+      }
+    },
+
+    "earth-stopped-spinning": {
+      before: {
+        value: { en: "Rotation Active", hi: "घूर्णन सक्रिय" },
+        small: {
+          en: "Earth is rotating around its axis.",
+          hi: "पृथ्वी अपनी धुरी पर घूम रही है।"
+        }
+      },
+      after: {
+        value: { en: "Rotation = 0", hi: "घूर्णन = 0" },
+        small: {
+          en: "Earth's axial rotation has been stopped in the model.",
+          hi: "इस मॉडल में पृथ्वी के घूर्णन को रोक दिया गया है।"
+        }
+      }
+    },
+
+    "moon-disappeared": {
+      before: {
+        value: { en: "Moon Present", hi: "चंद्रमा मौजूद" },
+        small: {
+          en: "The Moon is orbiting Earth normally.",
+          hi: "चंद्रमा सामान्य रूप से पृथ्वी की परिक्रमा कर रहा है।"
+        }
+      },
+      after: {
+        value: { en: "Moon Removed", hi: "चंद्रमा हटाया गया" },
+        small: {
+          en: "The Moon's gravitational contribution is now absent.",
+          hi: "अब चंद्रमा का गुरुत्वाकर्षण योगदान मौजूद नहीं है।"
+        }
+      }
+    },
+
+    "magnetic-field-lost": {
+      small: {
+        en: "Illustrative magnetic-field strength.",
+        hi: "यह चुंबकीय क्षेत्र की शक्ति का एक उदाहरण मात्र है।"
+      }
+    },
+
+    "half-gravity": {
+      small: {
+        en: "The model compares normal gravity with half-strength gravity.",
+        hi: "यह मॉडल सामान्य गुरुत्वाकर्षण की तुलना आधी शक्ति वाले गुरुत्वाकर्षण से करता है।"
+      }
+    },
+
+    "jupiter-swapped-mars": {
+      before: {
+        value: { en: "Orbital Shift", hi: "कक्षीय बदलाव" },
+        small: {
+          en: "The two planets are moving toward their new orbital distances.",
+          hi: "दोनों ग्रह अपनी नई कक्षीय दूरियों की ओर बढ़ रहे हैं।"
+        }
+      },
+      after: {
+        value: { en: "Positions Swapped", hi: "स्थितियाँ बदल गईं" },
+        small: {
+          en: "The model now shows Jupiter near Mars's original distance.",
+          hi: "अब यह मॉडल बृहस्पति को मंगल की मूल दूरी के पास दिखा रहा है।"
+        }
+      }
     }
   };
 
@@ -154,6 +439,9 @@
   let root = null;
 
   let stars = [];
+
+  let resizeListenerAdded = false;
+  let langObserverStarted = false;
 
   /* =======================================================
      DOM CREATION
@@ -499,6 +787,9 @@
 
   /* =======================================================
      ROOT
+     (targets the #whatIfSimulation container that already
+      lives inside the "See What Happens" section, above the
+      "Next Simulation" button)
   ======================================================= */
 
   function createRoot() {
@@ -512,6 +803,54 @@
     }
 
     root.className = "wifs-root";
+  }
+
+  /* =======================================================
+     LANGUAGE SYNC
+     ---------------------------------------------------------
+     Watches document.body's class list. The page's own
+     language button toggles the "hindi" class — we simply
+     react to it, we never set it ourselves.
+  ======================================================= */
+
+  function ensureLanguageObserver() {
+
+    if (langObserverStarted) return;
+
+    langObserverStarted = true;
+
+    const observer = new MutationObserver(() => {
+
+      refreshLanguage();
+    });
+
+    observer.observe(document.body, {
+      attributes: true,
+      attributeFilter: ["class"]
+    });
+  }
+
+  function refreshLanguage() {
+
+    if (!root || !active) return;
+
+    const wasRunning = running;
+
+    renderInterface();
+    resizeCanvas();
+
+    if (wasRunning) {
+
+      running = true;
+
+      const btn = document.getElementById("wifsPlay");
+
+      if (btn) btn.textContent = "Ⅱ Pause";
+
+      lastTime = performance.now();
+
+      animationFrame = requestAnimationFrame(loop);
+    }
   }
 
   /* =======================================================
@@ -539,6 +878,8 @@
     resizeCanvas();
     generateStars();
 
+    ensureLanguageObserver();
+
     window.requestAnimationFrame(() => {
       draw();
     });
@@ -550,6 +891,9 @@
 
   function renderInterface() {
 
+    const playLabel =
+      running ? "Ⅱ Pause" : "▶ Play";
+
     root.innerHTML = `
       <div class="wifs-shell">
 
@@ -560,22 +904,22 @@
             <div class="wifs-title-area">
 
               <div class="wifs-kicker">
-                ${active.icon} WHAT IF? • ${active.category}
+                ${active.icon} ${tu("whatIfPrefix")} • ${tc(active.category)}
               </div>
 
               <h2 class="wifs-title">
-                ${escapeHTML(active.title)}
+                ${escapeHTML(t(active.title))}
               </h2>
 
               <p class="wifs-subtitle">
-                ${escapeHTML(active.description)}
+                ${escapeHTML(t(active.description))}
               </p>
 
             </div>
 
             <button class="wifs-close"
                     id="wifsClose"
-                    aria-label="Close simulation">
+                    aria-label="${tu('closeAria')}">
               ×
             </button>
 
@@ -590,11 +934,11 @@
             <div class="wifs-hud">
 
               <div class="wifs-badge">
-                <strong>LIVE</strong> SCIENTIFIC MODEL
+                <strong>${tu("live")}</strong> ${tu("scientificModel")}
               </div>
 
               <div class="wifs-badge">
-                ${active.icon} ${active.category}
+                ${active.icon} ${tc(active.category)}
               </div>
 
             </div>
@@ -602,17 +946,17 @@
             <div class="wifs-readout">
 
               <div class="wifs-readout-label">
-                Simulation State
+                ${tu("simulationState")}
               </div>
 
               <div class="wifs-readout-value"
                    id="wifsReadout">
-                Ready
+                ${tu("ready")}
               </div>
 
               <div class="wifs-readout-small"
                    id="wifsReadoutSmall">
-                Press Play to observe the change.
+                ${tu("pressPlay")}
               </div>
 
             </div>
@@ -623,7 +967,7 @@
 
             <button class="wifs-btn primary"
                     id="wifsPlay">
-              ▶ Play
+              ${playLabel}
             </button>
 
             <button class="wifs-btn"
@@ -662,7 +1006,7 @@
               <h3>🌍 Normal World</h3>
 
               <p>
-                ${escapeHTML(active.normal)}
+                ${escapeHTML(t(active.normal))}
               </p>
 
             </article>
@@ -672,7 +1016,7 @@
               <h3>❓ What Changes?</h3>
 
               <p>
-                ${escapeHTML(active.whatIf)}
+                ${escapeHTML(t(active.whatIf))}
               </p>
 
             </article>
@@ -682,7 +1026,7 @@
               <h3>🔬 The Science</h3>
 
               <p>
-                ${escapeHTML(active.science)}
+                ${escapeHTML(t(active.science))}
               </p>
 
             </article>
@@ -722,7 +1066,12 @@
 
       });
 
-    window.addEventListener("resize", resizeCanvas);
+    if (!resizeListenerAdded) {
+
+      window.addEventListener("resize", resizeCanvas);
+
+      resizeListenerAdded = true;
+    }
   }
 
   /* =======================================================
@@ -1338,7 +1687,7 @@
       );
 
       label(
-        "SUN",
+        tl("SUN"),
         sunX,
         sunY + Math.min(w,h) * .075 + 18
       );
@@ -1423,7 +1772,7 @@
       elapsed * .00015
     );
 
-    label("EARTH", ex, ey + Math.min(w,h)*.043 + 17);
+    label(tl("EARTH"), ex, ey + Math.min(w,h)*.043 + 17);
 
     /* Tangent path */
 
@@ -1468,7 +1817,7 @@
       ctx.restore();
 
       label(
-        "EARTH CONTINUES ALONG A TANGENT",
+        tl("TANGENT"),
         w * .5,
         h - 32
       );
@@ -1543,7 +1892,7 @@
       );
 
       label(
-        "ROTATING",
+        tl("ROTATING"),
         x,
         y + r * 1.55
       );
@@ -1551,7 +1900,7 @@
     } else {
 
       label(
-        "ROTATION STOPPED",
+        tl("ROTATION_STOPPED"),
         x,
         y + r * 1.55
       );
@@ -1573,22 +1922,22 @@
     const orbitR =
       Math.min(w,h) * .30;
 
-    const t =
+    const t2 =
       elapsed / 1000;
 
     const disappearance =
-      Math.min(t / 8, 1);
+      Math.min(t2 / 8, 1);
 
     planet(
       cx,
       cy,
       earthR,
       "earth",
-      t * .03
+      t2 * .03
     );
 
     label(
-      "EARTH",
+      tl("EARTH"),
       cx,
       cy + earthR + 18
     );
@@ -1606,7 +1955,7 @@
 
     if (moonVisible) {
 
-      const a = t * .3;
+      const a = t2 * .3;
 
       const mx =
         cx +
@@ -1624,13 +1973,13 @@
         my,
         Math.max(1, earthR * .42 * moonScale),
         "moon",
-        t * .02
+        t2 * .02
       );
 
       if (moonScale > .2) {
 
         label(
-          "MOON",
+          tl("MOON"),
           mx,
           my + earthR*.5
         );
@@ -1647,7 +1996,7 @@
       );
 
       label(
-        "MOON GONE",
+        tl("MOON_GONE"),
         cx,
         cy + earthR + 38
       );
@@ -1710,7 +2059,7 @@
     );
 
     label(
-      "EARTH",
+      tl("EARTH"),
       x,
       y + r + 18
     );
@@ -1770,7 +2119,7 @@
       }
 
       label(
-        "MAGNETIC FIELD",
+        tl("MAGNETIC_FIELD"),
         x,
         y - r * 2.65
       );
@@ -1806,7 +2155,7 @@
     if (strength < .25) {
 
       label(
-        "MAGNETIC SHIELD GREATLY WEAKENED",
+        tl("MAGNETIC_WEAK"),
         x,
         h - 32
       );
@@ -1825,11 +2174,11 @@
     const center =
       w * .5;
 
-    const t =
+    const t2 =
       elapsed / 1000;
 
     const cycle =
-      (t % 6);
+      (t2 % 6);
 
     const gNormal = 9.8;
     const gHalf = 4.9;
@@ -1893,13 +2242,13 @@
     );
 
     label(
-      "NORMAL g ≈ 9.8 m/s²",
+      tl("NORMAL_G"),
       center - 90,
       ground + 25
     );
 
     label(
-      "HALF g ≈ 4.9 m/s²",
+      tl("HALF_G"),
       center + 90,
       ground + 25
     );
@@ -2004,7 +2353,7 @@
     );
 
     label(
-      "SUN",
+      tl("SUN"),
       cx,
       cy + sunR + 17
     );
@@ -2018,7 +2367,7 @@
     const jupiterOrbit =
       scale * .39;
 
-    const t =
+    const t2 =
       elapsed / 1000;
 
     /* Normal */
@@ -2040,7 +2389,7 @@
     );
 
     const swap =
-      Math.min(t / 8, 1);
+      Math.min(t2 / 8, 1);
 
     const marsRadius =
       scale * .025;
@@ -2057,10 +2406,10 @@
       (jupiterOrbit - marsOrbit) * swap;
 
     const ma =
-      t * .45;
+      t2 * .45;
 
     const ja =
-      t * .22;
+      t2 * .22;
 
     const mx =
       cx +
@@ -2087,7 +2436,7 @@
       my,
       marsRadius,
       "mars",
-      t*.02
+      t2*.02
     );
 
     planet(
@@ -2095,17 +2444,17 @@
       jy,
       jupiterRadius,
       "jupiter",
-      t*.01
+      t2*.01
     );
 
     label(
-      "MARS",
+      tl("MARS"),
       mx,
       my + marsRadius + 15
     );
 
     label(
-      "JUPITER",
+      tl("JUPITER"),
       jx,
       jy + jupiterRadius + 17
     );
@@ -2113,7 +2462,7 @@
     if (swap >= 1) {
 
       label(
-        "ORBITAL POSITIONS SWAPPED",
+        tl("SWAPPED"),
         w*.5,
         h-30
       );
@@ -2298,72 +2647,47 @@
     const seconds =
       elapsed / 1000;
 
+    const msgs =
+      readoutMessages[activeKey];
+
+    if (!msgs) return;
+
     switch (activeKey) {
 
-      case "sun-disappeared":
+      case "sun-disappeared": {
 
-        if (seconds < 8.33) {
+        const phase =
+          seconds < 8.33 ? msgs.before : msgs.after;
 
-          value.textContent =
-            "Normal Orbit";
-
-          small.textContent =
-            "Earth still receives sunlight. The change has not reached Earth yet.";
-
-        } else {
-
-          value.textContent =
-            "Sunlight Lost";
-
-          small.textContent =
-            "Earth leaves its solar orbit and follows its existing motion.";
-        }
+        value.textContent = t(phase.value);
+        small.textContent = t(phase.small);
 
         break;
+      }
 
-      case "earth-stopped-spinning":
+      case "earth-stopped-spinning": {
 
-        if (seconds < 5) {
+        const phase =
+          seconds < 5 ? msgs.before : msgs.after;
 
-          value.textContent =
-            "Rotation Active";
-
-          small.textContent =
-            "Earth is rotating around its axis.";
-
-        } else {
-
-          value.textContent =
-            "Rotation = 0";
-
-          small.textContent =
-            "Earth's axial rotation has been stopped in the model.";
-        }
+        value.textContent = t(phase.value);
+        small.textContent = t(phase.small);
 
         break;
+      }
 
-      case "moon-disappeared":
+      case "moon-disappeared": {
 
-        if (seconds < 8) {
+        const phase =
+          seconds < 8 ? msgs.before : msgs.after;
 
-          value.textContent =
-            "Moon Present";
-
-          small.textContent =
-            "The Moon is orbiting Earth normally.";
-
-        } else {
-
-          value.textContent =
-            "Moon Removed";
-
-          small.textContent =
-            "The Moon's gravitational contribution is now absent.";
-        }
+        value.textContent = t(phase.value);
+        small.textContent = t(phase.small);
 
         break;
+      }
 
-      case "magnetic-field-lost":
+      case "magnetic-field-lost": {
 
         const magnetic =
           Math.max(
@@ -2375,39 +2699,29 @@
         value.textContent =
           Math.round(magnetic) + "%";
 
-        small.textContent =
-          "Illustrative magnetic-field strength.";
+        small.textContent = t(msgs.small);
         break;
+      }
 
-      case "half-gravity":
+      case "half-gravity": {
 
         value.textContent =
           "g ≈ 4.9 m/s²";
 
-        small.textContent =
-          "The model compares normal gravity with half-strength gravity.";
+        small.textContent = t(msgs.small);
         break;
+      }
 
-      case "jupiter-swapped-mars":
+      case "jupiter-swapped-mars": {
 
-        if (seconds < 8) {
+        const phase =
+          seconds < 8 ? msgs.before : msgs.after;
 
-          value.textContent =
-            "Orbital Shift";
-
-          small.textContent =
-            "The two planets are moving toward their new orbital distances.";
-
-        } else {
-
-          value.textContent =
-            "Positions Swapped";
-
-          small.textContent =
-            "The model now shows Jupiter near Mars's original distance.";
-        }
+        value.textContent = t(phase.value);
+        small.textContent = t(phase.small);
 
         break;
+      }
     }
   }
 
