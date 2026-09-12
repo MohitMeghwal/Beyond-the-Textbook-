@@ -503,11 +503,11 @@
 
   function createRoot() {
 
-    root = document.getElementById("what-if-simulation");
+    root = document.getElementById("whatIfSimulation");
 
     if (!root) {
       root = document.createElement("div");
-      root.id = "what-if-simulation";
+      root.id = "whatIfSimulation";
       document.body.appendChild(root);
     }
 
