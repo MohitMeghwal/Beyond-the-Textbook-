@@ -1912,6 +1912,123 @@ body.hindi .section-description.bilingual-hi{
   }
 
 }
+/* =========================================================
+   EXPANDABLE SCENARIO CARDS
+   ========================================================= */
+
+.scenario-card{
+  cursor:pointer;
+  overflow:hidden;
+}
+
+.scenario-card.expanded{
+  border-color:rgba(101,242,139,.55);
+  box-shadow:0 20px 55px rgba(0,0,0,.45);
+  grid-column:1 / -1;   /* पूरी width ले लेगा */
+}
+
+/* Explore button style */
+
+.scenario-label{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  margin-top:16px;
+  padding:8px 14px;
+  background:rgba(101,242,139,.08);
+  border:1px solid rgba(101,242,139,.35);
+  border-radius:999px;
+  color:var(--green);
+  font:inherit;
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  cursor:pointer;
+  transition:.2s ease;
+}
+
+.scenario-label:hover{
+  background:var(--green);
+  color:#061008;
+}
+
+.scenario-card.expanded .scenario-label{
+  background:var(--green);
+  color:#061008;
+}
+
+/* Hidden detail section */
+
+.scenario-detail{
+  display:none;
+  margin-top:22px;
+  padding-top:20px;
+  border-top:1px dashed rgba(101,242,139,.25);
+  animation:fadeSlide .35s ease;
+}
+
+.scenario-card.expanded .scenario-detail{
+  display:block;
+}
+
+@keyframes fadeSlide{
+
+  from{
+    opacity:0;
+    transform:translateY(-6px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+
+}
+
+.detail-block{
+  margin-bottom:20px;
+}
+
+.detail-block:last-child{
+  margin-bottom:0;
+}
+
+.detail-label{
+  display:inline-block;
+  padding:4px 11px;
+  margin-bottom:9px;
+  background:rgba(101,242,139,.12);
+  border:1px solid rgba(101,242,139,.28);
+  border-radius:999px;
+  color:var(--green);
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+}
+
+.detail-text{
+  color:#d5ddd6;
+  font-size:13px;
+  line-height:1.85;
+}
+
+.detail-block.science .detail-text{
+  color:#eaf3ec;
+  font-family:Georgia,serif;
+  font-size:13.5px;
+}
+
+/* Mobile: पूरी width वाले expanded card पर padding adjust */
+
+@media(max-width:700px){
+
+  .scenario-card.expanded{
+    padding:20px 18px;
+  }
+
+}
 
 </style>
 
@@ -3769,33 +3886,199 @@ function renderScenarios(){
 
 
       <p class="bilingual-en">
+function renderScenarios(){
 
-        ${whatIfEn}
-
-      </p>
-
-
-      <p class="bilingual-hi">
-
-        ${whatIfHi || whatIfEn}
-
-      </p>
+  scenarioGrid.innerHTML = "";
 
 
-      <div class="scenario-label">
+  const filtered =
 
-        Explore →
+    activeFilter === "all"
+
+      ? allScenarios
+
+      : allScenarios.filter(item => {
+
+          const category =
+            item.category ||
+            inferCategory(item);
+
+          return category === activeFilter;
+
+        });
+
+
+  if(!filtered.length){
+
+    scenarioGrid.innerHTML = `
+      <div class="data-message">No scenarios found.</div>
+    `;
+
+    return;
+
+  }
+
+
+  filtered.forEach(item => {
+
+    const icon = item.icon || "❓";
+
+    const titleEn  = getText(item.title);
+    const titleHi  = getHindi(item.title);
+
+    const whatIfEn = getText(item.whatIf);
+    const whatIfHi = getHindi(item.whatIf);
+
+    const changesEn = getText(item.changes);
+    const changesHi = getHindi(item.changes);
+
+    const whyEn = getText(item.why);
+    const whyHi = getHindi(item.why);
+
+    const noticeEn = getText(item.notice);
+    const noticeHi = getHindi(item.notice);
+
+    const scienceEn = getText(item.science);
+    const scienceHi = getHindi(item.science);
+
+
+    const card = document.createElement("article");
+
+    card.className = "scenario-card";
+
+    card.dataset.category =
+      item.category || inferCategory(item);
+
+
+    card.innerHTML = `
+
+      <div class="scenario-icon">${icon}</div>
+
+      <h3 class="bilingual-en">${titleEn}</h3>
+      <h3 class="bilingual-hi">${titleHi || titleEn}</h3>
+
+      <p class="bilingual-en">${whatIfEn}</p>
+      <p class="bilingual-hi">${whatIfHi || whatIfEn}</p>
+
+
+      <div class="scenario-detail">
+
+        <div class="detail-block">
+          <div class="detail-label bilingual-en">What Changes</div>
+          <div class="detail-label bilingual-hi">क्या बदलेगा</div>
+          <p class="detail-text bilingual-en">${changesEn}</p>
+          <p class="detail-text bilingual-hi">${changesHi || changesEn}</p>
+        </div>
+
+        <div class="detail-block">
+          <div class="detail-label bilingual-en">Why This Happens</div>
+          <div class="detail-label bilingual-hi">ऐसा क्यों होगा</div>
+          <p class="detail-text bilingual-en">${whyEn}</p>
+          <p class="detail-text bilingual-hi">${whyHi || whyEn}</p>
+        </div>
+
+        <div class="detail-block">
+          <div class="detail-label bilingual-en">What You Would Notice</div>
+          <div class="detail-label bilingual-hi">आप क्या देखेंगे</div>
+          <p class="detail-text bilingual-en">${noticeEn}</p>
+          <p class="detail-text bilingual-hi">${noticeHi || noticeEn}</p>
+        </div>
+
+        <div class="detail-block science">
+          <div class="detail-label bilingual-en">The Science Behind It</div>
+          <div class="detail-label bilingual-hi">इसके पीछे का विज्ञान</div>
+          <p class="detail-text bilingual-en">${scienceEn}</p>
+          <p class="detail-text bilingual-hi">${scienceHi || scienceEn}</p>
+        </div>
 
       </div>
 
 
+      <button class="scenario-label explore-btn" type="button">
+        <span class="explore-text-open bilingual-en">Explore →</span>
+        <span class="explore-text-open bilingual-hi">देखें →</span>
+        <span class="explore-text-close bilingual-en" style="display:none;">Show Less ↑</span>
+        <span class="explore-text-close bilingual-hi" style="display:none;">कम दिखाएँ ↑</span>
+      </button>
+
     `;
+
+
+    /* पूरा card tap करने पर expand/collapse */
+
+    card.addEventListener("click", (e) => {
+
+      e.stopPropagation();
+
+      toggleCard(card);
+
+    });
 
 
     scenarioGrid.appendChild(card);
 
-
   });
+
+}
+
+
+
+/* =========================================================
+   CARD EXPAND / COLLAPSE LOGIC
+   ========================================================= */
+
+function toggleCard(card){
+
+  const isOpen = card.classList.contains("expanded");
+
+
+  // बाकी सारे cards collapse कर दो
+  document
+    .querySelectorAll(".scenario-card.expanded")
+    .forEach(c => {
+
+      c.classList.remove("expanded");
+
+      const open = c.querySelector(".explore-text-open");
+      const close = c.querySelector(".explore-text-close");
+
+      if(open && close){
+        open.style.display = "";
+        close.style.display = "none";
+      }
+
+    });
+
+
+  // अगर जो tap हुआ वो पहले से खुला था, तो बस बंद करके return
+  if(isOpen){
+    return;
+  }
+
+
+  // इस card को expand करो
+  card.classList.add("expanded");
+
+  const open = card.querySelector(".explore-text-open");
+  const close = card.querySelector(".explore-text-close");
+
+  if(open && close){
+    open.style.display = "none";
+    close.style.display = "";
+  }
+
+
+  // Smooth scroll (थोड़ा delay के बाद)
+  setTimeout(() => {
+
+    const top = card.getBoundingClientRect().top + window.scrollY - 90;
+
+    window.scrollTo({
+      top: top,
+      behavior: "smooth"
+    });
+
+  }, 120);
 
 }
 
