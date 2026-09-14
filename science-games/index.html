@@ -1,0 +1,4187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="Science Games — learn physics, chemistry, biology and Earth science through interactive educational games.">
+
+<meta name="theme-color" content="#07100b">
+
+<title>Science Games | Science Beyond the Textbook</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+
+<style>
+
+/* =========================================================
+   SCIENCE BEYOND THE TEXTBOOK
+   SCIENCE GAMES
+
+   Visual reference:
+   invisible-visible/index.html
+   ========================================================= */
+
+
+/* =========================================================
+   VARIABLES
+   ========================================================= */
+
+:root{
+
+  --bg:#07100b;
+  --bg2:#0b1510;
+
+  --panel:rgba(13,20,16,.92);
+  --panel2:#111b15;
+
+  --green:#65f28b;
+  --green2:#35c968;
+
+  --text:#f4f5ef;
+  --muted:#aeb8af;
+
+  --line:rgba(255,255,255,.15);
+  --soft:rgba(101,242,139,.09);
+
+  --shadow:0 18px 50px rgba(0,0,0,.4);
+
+  --max:1280px;
+
+}
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+
+  min-height:100vh;
+
+  background:
+    radial-gradient(
+      circle at 15% 10%,
+      rgba(53,201,104,.10),
+      transparent 30%
+    ),
+
+    radial-gradient(
+      circle at 85% 30%,
+      rgba(101,242,139,.07),
+      transparent 30%
+    ),
+
+    linear-gradient(
+      180deg,
+      #07100b 0%,
+      #09130d 45%,
+      #07100b 100%
+    );
+
+  color:var(--text);
+
+  font-family:
+    Inter,
+    Arial,
+    sans-serif;
+
+  overflow-x:hidden;
+
+}
+
+
+/* =========================================================
+   ATMOSPHERE
+   ========================================================= */
+
+body::before{
+
+  content:"";
+
+  position:fixed;
+
+  inset:0;
+
+  pointer-events:none;
+
+  z-index:-2;
+
+  background-image:
+    radial-gradient(
+      circle,
+      rgba(255,255,255,.20) 1px,
+      transparent 1px
+    );
+
+  background-size:90px 90px;
+
+  opacity:.06;
+
+}
+
+
+body::after{
+
+  content:"";
+
+  position:fixed;
+
+  inset:0;
+
+  pointer-events:none;
+
+  z-index:-1;
+
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(101,242,139,.08),
+      transparent 45%
+    ),
+
+    linear-gradient(
+      180deg,
+      transparent,
+      rgba(0,0,0,.25)
+    );
+
+}
+
+
+/* =========================================================
+   GLOBAL
+   ========================================================= */
+
+.container{
+
+  width:
+    min(
+      var(--max),
+      calc(100% - 40px)
+    );
+
+  margin:auto;
+
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+button{
+  font:inherit;
+}
+
+section{
+  position:relative;
+}
+
+.caveat{
+  font-family:Caveat,cursive;
+}
+
+
+/* =========================================================
+   NAVBAR
+   ========================================================= */
+
+.nav{
+
+  position:sticky;
+
+  top:0;
+
+  z-index:1000;
+
+  background:
+    rgba(7,16,11,.82);
+
+  backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px);
+
+  border-bottom:
+    1px solid
+    rgba(255,255,255,.10);
+
+}
+
+
+.nav-inner{
+
+  min-height:76px;
+
+  display:flex;
+
+  align-items:center;
+
+  gap:24px;
+
+}
+
+
+.brand{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:11px;
+
+  flex-shrink:0;
+
+}
+
+
+.brand-icon{
+
+  width:42px;
+  height:42px;
+
+  display:grid;
+
+  place-items:center;
+
+  border:
+    1px solid
+    rgba(101,242,139,.45);
+
+  border-radius:13px;
+
+  background:
+    rgba(101,242,139,.08);
+
+  color:var(--green);
+
+  font-size:22px;
+
+  box-shadow:
+    0 0 30px
+    rgba(101,242,139,.06);
+
+}
+
+
+.brand-title{
+
+  display:flex;
+
+  flex-direction:column;
+
+  line-height:1;
+
+}
+
+
+.brand-title strong{
+
+  font-size:15px;
+
+  letter-spacing:2px;
+
+  font-weight:800;
+
+}
+
+
+.brand-title small{
+
+  margin-top:5px;
+
+  color:var(--muted);
+
+  font-size:8px;
+
+  letter-spacing:1.8px;
+
+  font-weight:700;
+
+}
+
+
+/* =========================================================
+   NAV LINKS
+   ========================================================= */
+
+/* Changed:
+   navigation stays after brand,
+   actions are pushed to the right corner.
+*/
+
+.nav-links{
+
+  margin-left:0;
+
+  display:flex;
+
+  align-items:center;
+
+  gap:5px;
+
+}
+
+
+.nav-links > a,
+.nav-drop{
+
+  position:relative;
+
+  padding:10px 11px;
+
+  color:#dfe6df;
+
+  font-size:13px;
+
+  font-weight:600;
+
+  border-radius:10px;
+
+  cursor:pointer;
+
+  transition:.25s ease;
+
+}
+
+
+.nav-links > a:hover,
+.nav-drop:hover{
+
+  color:var(--green);
+
+  background:
+    rgba(101,242,139,.07);
+
+}
+
+
+/* =========================================================
+   DROPDOWN
+   ========================================================= */
+
+.dropdown{
+
+  position:absolute;
+
+  top:calc(100% + 10px);
+
+  left:0;
+
+  min-width:220px;
+
+  padding:8px;
+
+  display:none;
+
+  background:
+    rgba(11,21,16,.97);
+
+  border:
+    1px solid
+    var(--line);
+
+  border-radius:15px;
+
+  box-shadow:var(--shadow);
+
+  backdrop-filter:blur(20px);
+
+}
+
+
+.nav-drop:hover .dropdown{
+  display:block;
+}
+
+
+.dropdown a{
+
+  display:block;
+
+  padding:11px 13px;
+
+  border-radius:9px;
+
+  color:#dfe6df;
+
+  font-size:13px;
+
+  transition:.2s;
+
+}
+
+
+.dropdown a:hover{
+
+  color:var(--green);
+
+  background:
+    rgba(101,242,139,.08);
+
+}
+
+
+/* =========================================================
+   ACTIONS
+   ========================================================= */
+
+/* Language + menu pushed to right corner */
+
+.actions{
+
+  margin-left:auto;
+
+  display:flex;
+
+  align-items:center;
+
+  gap:9px;
+
+}
+
+
+.lang{
+
+  border:
+    1px solid
+    var(--line);
+
+  background:
+    rgba(255,255,255,.035);
+
+  color:#e7eee8;
+
+  border-radius:10px;
+
+  padding:9px 12px;
+
+  font-size:12px;
+
+  font-weight:700;
+
+  cursor:pointer;
+
+  transition:.25s;
+
+}
+
+
+.lang:hover{
+
+  border-color:
+    rgba(101,242,139,.45);
+
+  color:var(--green);
+
+}
+
+
+.lang span{
+
+  opacity:.4;
+
+  margin:0 4px;
+
+}
+
+
+.icon-btn{
+
+  width:40px;
+
+  height:40px;
+
+  border-radius:50%;
+
+  border:
+    1px solid
+    var(--line);
+
+  background:
+    rgba(255,255,255,.035);
+
+  color:#eaf1eb;
+
+  cursor:pointer;
+
+  display:grid;
+
+  place-items:center;
+
+  font-size:18px;
+
+  transition:.25s;
+
+}
+
+
+.icon-btn:hover{
+
+  border-color:
+    rgba(101,242,139,.5);
+
+  color:var(--green);
+
+}
+
+
+/* =========================================================
+   MOBILE MENU
+   ========================================================= */
+
+.mobile-menu{
+
+  position:fixed;
+
+  top:76px;
+
+  left:15px;
+
+  right:15px;
+
+  z-index:999;
+
+  display:none;
+
+  padding:12px;
+
+  background:
+    rgba(8,18,12,.97);
+
+  border:
+    1px solid
+    var(--line);
+
+  border-radius:18px;
+
+  box-shadow:var(--shadow);
+
+  backdrop-filter:blur(20px);
+
+}
+
+
+.mobile-menu.open{
+  display:block;
+}
+
+
+.mobile-menu a{
+
+  display:block;
+
+  padding:13px 14px;
+
+  color:#e3e9e4;
+
+  border-radius:11px;
+
+  font-size:14px;
+
+  font-weight:600;
+
+}
+
+
+.mobile-menu a:hover{
+
+  color:var(--green);
+
+  background:
+    rgba(101,242,139,.08);
+
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero{
+
+  min-height:590px;
+
+  display:flex;
+
+  align-items:center;
+
+  overflow:hidden;
+
+  background:
+
+    linear-gradient(
+      90deg,
+      rgba(7,16,11,.97) 0%,
+      rgba(7,16,11,.90) 28%,
+      rgba(7,16,11,.45) 60%,
+      rgba(7,16,11,.20) 100%
+    ),
+
+    url("https://res.cloudinary.com/eq1jpw1h/image/upload/v1789361606/file_00000000d97082108f146c9c111b6e2d.png")
+
+    center center / cover no-repeat;
+
+}
+
+
+.hero::before{
+
+  content:"";
+
+  position:absolute;
+
+  inset:0;
+
+  background:
+
+    radial-gradient(
+      circle at 70% 50%,
+      rgba(101,242,139,.12),
+      transparent 35%
+    ),
+
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,.10),
+      rgba(0,0,0,.30)
+    );
+
+}
+
+
+.hero::after{
+
+  content:"";
+
+  position:absolute;
+
+  left:0;
+
+  right:0;
+
+  bottom:0;
+
+  height:130px;
+
+  background:
+    linear-gradient(
+      transparent,
+      var(--bg)
+    );
+
+  pointer-events:none;
+
+}
+
+
+.hero-content{
+
+  position:relative;
+
+  z-index:2;
+
+  max-width:650px;
+
+  padding:80px 0 100px;
+
+}
+
+
+.eyebrow{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:10px;
+
+  margin-bottom:18px;
+
+  color:var(--green);
+
+  font-size:11px;
+
+  letter-spacing:3px;
+
+  font-weight:800;
+
+  text-transform:uppercase;
+
+}
+
+
+.eyebrow::before{
+
+  content:"";
+
+  width:35px;
+
+  height:1px;
+
+  background:var(--green);
+
+}
+
+
+.hero h1{
+
+  max-width:650px;
+
+  font-family:Caveat,cursive;
+
+  font-size:
+    clamp(
+      64px,
+      8vw,
+      105px
+    );
+
+  line-height:.84;
+
+  text-transform:uppercase;
+
+  letter-spacing:1px;
+
+  color:#f5f7f2;
+
+  text-shadow:
+    0 8px 40px
+    rgba(0,0,0,.55);
+
+}
+
+
+.hero h1 span{
+  color:var(--green);
+}
+
+
+.hero-text{
+
+  max-width:550px;
+
+  margin-top:28px;
+
+  color:#d0d8d1;
+
+  font-size:16px;
+
+  line-height:1.8;
+
+}
+
+
+.hero-actions{
+
+  display:flex;
+
+  flex-wrap:wrap;
+
+  gap:12px;
+
+  margin-top:30px;
+
+}
+
+
+.btn{
+
+  border:
+    1px solid
+    rgba(101,242,139,.35);
+
+  background:
+    rgba(101,242,139,.10);
+
+  color:#effaf1;
+
+  border-radius:12px;
+
+  padding:13px 19px;
+
+  font-size:13px;
+
+  font-weight:800;
+
+  cursor:pointer;
+
+  transition:.25s;
+
+}
+
+
+.btn:hover{
+
+  transform:translateY(-2px);
+
+  background:
+    rgba(101,242,139,.18);
+
+  border-color:var(--green);
+
+  color:var(--green);
+
+}
+
+
+.btn.primary{
+
+  background:var(--green);
+
+  color:#07100b;
+
+  border-color:var(--green);
+
+}
+
+
+.btn.primary:hover{
+
+  background:#83f6a0;
+
+  color:#07100b;
+
+}
+
+
+.hero-caption{
+
+  position:absolute;
+
+  right:5%;
+
+  bottom:42px;
+
+  z-index:3;
+
+  font-family:Caveat,cursive;
+
+  font-size:24px;
+
+  color:
+    rgba(255,255,255,.75);
+
+  transform:rotate(-4deg);
+
+}
+
+
+/* =========================================================
+   SECTION
+   ========================================================= */
+
+.section{
+
+  padding:95px 0;
+
+}
+
+
+.section-head{
+
+  max-width:760px;
+
+  margin-bottom:38px;
+
+}
+
+
+.section-kicker{
+
+  margin-bottom:8px;
+
+  color:var(--green);
+
+  font-size:10px;
+
+  font-weight:800;
+
+  letter-spacing:3px;
+
+}
+
+
+.section-title{
+
+  font-family:Caveat,cursive;
+
+  font-size:
+    clamp(
+      43px,
+      6vw,
+      70px
+    );
+
+  line-height:.9;
+
+  text-transform:uppercase;
+
+}
+
+
+.section-description{
+
+  margin-top:18px;
+
+  max-width:680px;
+
+  color:var(--muted);
+
+  line-height:1.75;
+
+  font-size:15px;
+
+}
+
+
+/* =========================================================
+   FILTER BAR
+   ========================================================= */
+
+.game-controls{
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+  gap:15px;
+
+  margin-bottom:32px;
+
+  padding:12px;
+
+  background:
+    rgba(13,20,16,.78);
+
+  border:
+    1px solid
+    var(--line);
+
+  border-radius:17px;
+
+  box-shadow:
+    0 12px 35px
+    rgba(0,0,0,.20);
+
+}
+
+
+.filters{
+
+  display:flex;
+
+  flex-wrap:wrap;
+
+  gap:7px;
+
+}
+
+
+.filter{
+
+  border:
+    1px solid transparent;
+
+  background:transparent;
+
+  color:#b9c3bb;
+
+  padding:10px 13px;
+
+  border-radius:10px;
+
+  font-size:12px;
+
+  font-weight:700;
+
+  cursor:pointer;
+
+  transition:.2s;
+
+}
+
+
+.filter:hover{
+
+  color:var(--green);
+
+  background:
+    rgba(101,242,139,.06);
+
+}
+
+
+.filter.active{
+
+  background:
+    rgba(101,242,139,.12);
+
+  border-color:
+    rgba(101,242,139,.30);
+
+  color:var(--green);
+
+}
+
+
+.search{
+
+  width:230px;
+
+  padding:11px 13px;
+
+  border:
+    1px solid
+    var(--line);
+
+  border-radius:10px;
+
+  outline:none;
+
+  background:
+    rgba(0,0,0,.20);
+
+  color:var(--text);
+
+  font-size:13px;
+
+}
+
+
+.search::placeholder{
+  color:#7f8a81;
+}
+
+
+.search:focus{
+
+  border-color:
+    rgba(101,242,139,.45);
+
+}
+
+
+/* =========================================================
+   GAME GRID
+   ========================================================= */
+
+.games-grid{
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(3,1fr);
+
+  gap:18px;
+
+}
+
+
+.game-card{
+
+  position:relative;
+
+  min-height:260px;
+
+  display:flex;
+
+  flex-direction:column;
+
+  padding:24px;
+
+  overflow:hidden;
+
+  background:
+
+    linear-gradient(
+      145deg,
+      rgba(17,27,21,.98),
+      rgba(10,19,14,.95)
+    );
+
+  border:
+    1px solid
+    var(--line);
+
+  border-radius:20px;
+
+  box-shadow:
+    0 14px 40px
+    rgba(0,0,0,.25);
+
+  transition:
+
+    transform .3s ease,
+    border-color .3s ease,
+    box-shadow .3s ease;
+
+}
+
+
+.game-card::before{
+
+  content:"";
+
+  position:absolute;
+
+  width:160px;
+
+  height:160px;
+
+  top:-80px;
+
+  right:-60px;
+
+  border-radius:50%;
+
+  background:
+    rgba(101,242,139,.06);
+
+  filter:blur(4px);
+
+}
+
+
+.game-card:hover{
+
+  transform:translateY(-6px);
+
+  border-color:
+    rgba(101,242,139,.34);
+
+  box-shadow:
+
+    0 20px 50px
+    rgba(0,0,0,.40),
+
+    0 0 0 1px
+    rgba(101,242,139,.04);
+
+}
+
+
+.game-top{
+
+  display:flex;
+
+  align-items:flex-start;
+
+  justify-content:space-between;
+
+  gap:12px;
+
+}
+
+
+.game-icon{
+
+  width:52px;
+
+  height:52px;
+
+  display:grid;
+
+  place-items:center;
+
+  flex-shrink:0;
+
+  border-radius:15px;
+
+  background:
+    rgba(101,242,139,.09);
+
+  border:
+    1px solid
+    rgba(101,242,139,.20);
+
+  font-size:26px;
+
+}
+
+
+.game-status{
+
+  padding:6px 9px;
+
+  border-radius:8px;
+
+  font-size:9px;
+
+  letter-spacing:.7px;
+
+  font-weight:800;
+
+  text-transform:uppercase;
+
+  background:
+    rgba(101,242,139,.09);
+
+  color:var(--green);
+
+  border:
+    1px solid
+    rgba(101,242,139,.18);
+
+}
+
+
+.game-status.soon{
+
+  color:#aeb8af;
+
+  background:
+    rgba(255,255,255,.045);
+
+  border-color:
+    rgba(255,255,255,.10);
+
+}
+
+
+.game-title{
+
+  margin-top:20px;
+
+  font-size:20px;
+
+  line-height:1.2;
+
+  font-weight:800;
+
+}
+
+
+.game-description{
+
+  margin-top:10px;
+
+  color:var(--muted);
+
+  font-size:13px;
+
+  line-height:1.65;
+
+}
+
+
+.game-meta{
+
+  display:flex;
+
+  flex-wrap:wrap;
+
+  gap:7px;
+
+  margin-top:15px;
+
+}
+
+
+.meta{
+
+  padding:5px 8px;
+
+  border-radius:7px;
+
+  color:#9eaaa1;
+
+  background:
+    rgba(255,255,255,.035);
+
+  border:
+    1px solid
+    rgba(255,255,255,.07);
+
+  font-size:10px;
+
+  font-weight:700;
+
+}
+
+
+.game-bottom{
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+  margin-top:auto;
+
+  padding-top:22px;
+
+}
+
+
+.play-btn{
+
+  border:0;
+
+  padding:10px 14px;
+
+  border-radius:10px;
+
+  background:var(--green);
+
+  color:#07100b;
+
+  font-size:12px;
+
+  font-weight:800;
+
+  cursor:pointer;
+
+  transition:.2s;
+
+}
+
+
+.play-btn:hover{
+
+  transform:translateY(-2px);
+
+  background:#82f79f;
+
+}
+
+
+.play-btn.disabled{
+
+  background:
+    rgba(255,255,255,.07);
+
+  color:#79837b;
+
+  cursor:default;
+
+}
+
+
+.play-btn.disabled:hover{
+  transform:none;
+}
+
+
+.game-number{
+
+  color:#68736b;
+
+  font-family:Caveat,cursive;
+
+  font-size:22px;
+
+}
+
+
+/* =========================================================
+   EMPTY
+   ========================================================= */
+
+.empty{
+
+  display:none;
+
+  padding:60px 20px;
+
+  text-align:center;
+
+  border:
+    1px dashed
+    rgba(255,255,255,.15);
+
+  border-radius:20px;
+
+  color:var(--muted);
+
+}
+
+
+/* =========================================================
+   GAME MODAL
+   ========================================================= */
+
+.game-modal{
+
+  position:fixed;
+
+  inset:0;
+
+  z-index:2000;
+
+  display:none;
+
+  align-items:center;
+
+  justify-content:center;
+
+  padding:20px;
+
+  background:
+    rgba(2,7,4,.82);
+
+  backdrop-filter:blur(14px);
+
+}
+
+
+.game-modal.open{
+  display:flex;
+}
+
+
+.game-window{
+
+  position:relative;
+
+  width:
+    min(
+      920px,
+      100%
+    );
+
+  max-height:
+    calc(100vh - 40px);
+
+  overflow:auto;
+
+  border-radius:22px;
+
+  background:
+
+    linear-gradient(
+      145deg,
+      rgba(15,25,19,.98),
+      rgba(7,15,10,.99)
+    );
+
+  border:
+    1px solid
+    rgba(255,255,255,.15);
+
+  box-shadow:
+    0 30px 100px
+    rgba(0,0,0,.65);
+
+  animation:
+    modalIn .25s ease;
+
+}
+
+
+@keyframes modalIn{
+
+  from{
+
+    opacity:0;
+
+    transform:
+      translateY(15px)
+      scale(.98);
+
+  }
+
+  to{
+
+    opacity:1;
+
+    transform:none;
+
+  }
+
+}
+
+
+.modal-head{
+
+  position:sticky;
+
+  top:0;
+
+  z-index:5;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+  gap:15px;
+
+  padding:17px 20px;
+
+  background:
+    rgba(9,18,12,.94);
+
+  border-bottom:
+    1px solid
+    var(--line);
+
+  backdrop-filter:blur(16px);
+
+}
+
+
+.modal-title{
+
+  font-size:17px;
+
+  font-weight:800;
+
+}
+
+
+.modal-close{
+
+  width:38px;
+
+  height:38px;
+
+  border-radius:50%;
+
+  border:
+    1px solid
+    var(--line);
+
+  background:
+    rgba(255,255,255,.04);
+
+  color:#dce4dd;
+
+  cursor:pointer;
+
+  font-size:18px;
+
+}
+
+
+.modal-close:hover{
+
+  color:var(--green);
+
+  border-color:
+    rgba(101,242,139,.4);
+
+}
+
+
+.game-root{
+  padding:22px;
+}
+
+
+/* =========================================================
+   GAME INTERNAL UI
+   ========================================================= */
+
+.sg-shell{
+  color:var(--text);
+}
+
+
+.sg-shell button{
+  cursor:pointer;
+}
+
+
+.sg-panel{
+
+  padding:18px;
+
+  background:
+    rgba(255,255,255,.025);
+
+  border:
+    1px solid
+    rgba(255,255,255,.10);
+
+  border-radius:16px;
+
+}
+
+
+.sg-title{
+
+  font-family:Caveat,cursive;
+
+  font-size:34px;
+
+  line-height:1;
+
+}
+
+
+.sg-text{
+
+  margin-top:8px;
+
+  color:var(--muted);
+
+  font-size:13px;
+
+  line-height:1.6;
+
+}
+
+
+.sg-actions{
+
+  display:flex;
+
+  flex-wrap:wrap;
+
+  gap:8px;
+
+  margin-top:15px;
+
+}
+
+
+.sg-btn{
+
+  padding:10px 14px;
+
+  border:
+    1px solid
+    rgba(101,242,139,.28);
+
+  border-radius:10px;
+
+  background:
+    rgba(101,242,139,.08);
+
+  color:#dff8e5;
+
+  font-size:12px;
+
+  font-weight:800;
+
+}
+
+
+.sg-btn:hover{
+
+  background:
+    rgba(101,242,139,.15);
+
+  border-color:var(--green);
+
+}
+
+
+.sg-btn.primary{
+
+  background:var(--green);
+
+  color:#07100b;
+
+}
+
+
+.sg-result{
+
+  margin-top:14px;
+
+  min-height:20px;
+
+  color:var(--green);
+
+  font-weight:700;
+
+  font-size:13px;
+
+}
+
+
+/* =========================================================
+   FINAL CTA
+   ========================================================= */
+
+.cta{
+
+  min-height:440px;
+
+  display:flex;
+
+  align-items:center;
+
+  overflow:hidden;
+
+  background:
+
+    linear-gradient(
+      90deg,
+      rgba(7,16,11,.97) 0%,
+      rgba(7,16,11,.88) 35%,
+      rgba(7,16,11,.35) 75%,
+      rgba(7,16,11,.65) 100%
+    ),
+
+    url("https://res.cloudinary.com/eq1jpw1h/image/upload/v1789361606/file_00000000d97082108f146c9c111b6e2d.png")
+
+    center / cover no-repeat;
+
+}
+
+
+.cta::after{
+
+  content:"";
+
+  position:absolute;
+
+  inset:0;
+
+  background:
+
+    radial-gradient(
+      circle at 70% 50%,
+      rgba(101,242,139,.10),
+      transparent 40%
+    );
+
+}
+
+
+/* =========================================================
+   CTA CONTENT
+   ========================================================= */
+
+.cta-content{
+
+  position:relative;
+
+  z-index:2;
+
+  max-width:680px;
+
+  padding:85px 0;
+
+}
+
+
+.cta h2{
+
+  font-family:Caveat,cursive;
+
+  font-size:
+    clamp(
+      48px,
+      7vw,
+      80px
+    );
+
+  line-height:.9;
+
+  text-transform:uppercase;
+
+}
+
+
+.cta p{
+
+  max-width:580px;
+
+  margin-top:18px;
+
+  color:#bdc8bf;
+
+  line-height:1.7;
+
+}
+
+
+.cta-caption{
+
+  position:absolute;
+
+  right:7%;
+
+  bottom:35px;
+
+  z-index:3;
+
+  font-family:Caveat,cursive;
+
+  color:
+    rgba(255,255,255,.70);
+
+  font-size:25px;
+
+  transform:rotate(-4deg);
+
+}
+
+
+/* =========================================================
+   PROFESSIONAL CTA BOTTOM LINE
+   Same visual idea as the reference footer/CTA
+   ========================================================= */
+
+.cta-line{
+
+  position:absolute;
+
+  left:50%;
+
+  bottom:0;
+
+  width:
+    min(
+      540px,
+      42%
+    );
+
+  height:10px;
+
+  transform:
+    translateX(-50%);
+
+  border-radius:999px;
+
+  background:
+    rgba(255,255,255,.28);
+
+  box-shadow:
+    0 0 18px
+    rgba(255,255,255,.04);
+
+  z-index:5;
+
+}
+
+
+/* =========================================================
+   TOAST
+   ========================================================= */
+
+.toast{
+
+  position:fixed;
+
+  left:50%;
+
+  bottom:25px;
+
+  z-index:3000;
+
+  transform:
+    translate(-50%,20px);
+
+  padding:12px 17px;
+
+  background:
+    rgba(10,20,13,.95);
+
+  border:
+    1px solid
+    rgba(101,242,139,.30);
+
+  border-radius:12px;
+
+  color:#eaf4ec;
+
+  font-size:12px;
+
+  font-weight:700;
+
+  opacity:0;
+
+  pointer-events:none;
+
+  transition:.25s;
+
+  box-shadow:var(--shadow);
+
+}
+
+
+.toast.show{
+
+  opacity:1;
+
+  transform:
+    translate(-50%,0);
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media(max-width:1050px){
+
+  .nav-links{
+    display:none;
+  }
+
+
+  .games-grid{
+
+    grid-template-columns:
+      repeat(2,1fr);
+
+  }
+
+
+  .hero{
+    min-height:560px;
+  }
+
+}
+
+
+@media(max-width:700px){
+
+  .container{
+
+    width:
+      min(
+        var(--max),
+        calc(100% - 28px)
+      );
+
+  }
+
+
+  .nav-inner{
+    min-height:68px;
+  }
+
+
+  .brand-title strong{
+    font-size:13px;
+  }
+
+
+  .brand-title small{
+    font-size:7px;
+  }
+
+
+  .brand-icon{
+
+    width:38px;
+    height:38px;
+
+  }
+
+
+  .lang{
+    padding:8px 9px;
+  }
+
+
+  .icon-btn{
+
+    width:38px;
+    height:38px;
+
+  }
+
+
+  .mobile-menu{
+    top:68px;
+  }
+
+
+  .hero{
+
+    min-height:620px;
+
+    align-items:flex-end;
+
+    background:
+
+      linear-gradient(
+        180deg,
+        rgba(7,16,11,.15) 0%,
+        rgba(7,16,11,.48) 35%,
+        rgba(7,16,11,.96) 78%,
+        #07100b 100%
+      ),
+
+      url("https://res.cloudinary.com/eq1jpw1h/image/upload/v1789361606/file_00000000d97082108f146c9c111b6e2d.png")
+
+      center / cover no-repeat;
+
+  }
+
+
+  .hero-content{
+
+    padding:
+      80px 0 75px;
+
+  }
+
+
+  .hero h1{
+    font-size:66px;
+  }
+
+
+  .hero-text{
+    font-size:14px;
+  }
+
+
+  .hero-caption{
+
+    right:20px;
+
+    bottom:25px;
+
+    font-size:20px;
+
+  }
+
+
+  .section{
+    padding:70px 0;
+  }
+
+
+  .game-controls{
+
+    align-items:stretch;
+
+    flex-direction:column;
+
+  }
+
+
+  .search{
+    width:100%;
+  }
+
+
+  .games-grid{
+    grid-template-columns:1fr;
+  }
+
+
+  .game-card{
+    min-height:245px;
+  }
+
+
+  .game-window{
+
+    max-height:
+      calc(100vh - 20px);
+
+  }
+
+
+  .game-root{
+    padding:15px;
+  }
+
+
+  .cta{
+
+    min-height:480px;
+
+    background:
+
+      linear-gradient(
+        180deg,
+        rgba(7,16,11,.35),
+        rgba(7,16,11,.95)
+      ),
+
+      url("https://res.cloudinary.com/eq1jpw1h/image/upload/v1789361606/file_00000000d97082108f146c9c111b6e2d.png")
+
+      center / cover no-repeat;
+
+  }
+
+
+  .cta-content{
+    padding:75px 0;
+  }
+
+
+  .cta-caption{
+
+    right:20px;
+
+    bottom:25px;
+
+  }
+
+
+  /* CTA line on mobile */
+
+  .cta-line{
+
+    width:48%;
+
+    height:8px;
+
+  }
+
+}
+
+
+@media(prefers-reduced-motion:reduce){
+
+  html{
+    scroll-behavior:auto;
+  }
+
+
+  *,
+  *::before,
+  *::after{
+
+    animation-duration:.01ms!important;
+
+    transition-duration:.01ms!important;
+
+  }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- ======================================================
+     NAVIGATION
+     ====================================================== -->
+
+<header class="nav">
+
+  <div class="container nav-inner">
+
+
+    <a class="brand" href="../index.html">
+
+      <div class="brand-icon">
+        ⚗
+      </div>
+
+      <div class="brand-title">
+
+        <strong>
+          SCIENCE
+        </strong>
+
+        <small>
+          BEYOND THE TEXTBOOK
+        </small>
+
+      </div>
+
+    </a>
+
+
+    <nav class="nav-links">
+
+
+      <a href="../index.html">
+        ⌂ Home
+      </a>
+
+
+      <div class="nav-drop">
+
+        Subjects ˅
+
+        <div class="dropdown">
+
+          <a href="../physics/index.html">
+            Physics
+          </a>
+
+          <a href="../chemistry/index.html">
+            Chemistry
+          </a>
+
+          <a href="../biology/index.html">
+            Biology
+          </a>
+
+          <a href="../earth/index.html">
+            Earth & Environment
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="nav-drop">
+
+        Explore ˅
+
+        <div class="dropdown">
+
+          <a href="../why/index.html">
+            Why Does This Happen?
+          </a>
+
+          <a href="../invisible-visible/index.html">
+            Make the Invisible Visible
+          </a>
+
+          <a href="../magic-science/index.html">
+            Science That Looks Like Magic
+          </a>
+
+          <a href="../what-if/index.html">
+            What If?
+          </a>
+
+          <a href="../beyond-textbook/index.html">
+            Beyond the Textbook
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="nav-drop">
+
+        Games ˅
+
+        <div class="dropdown">
+
+          <a href="../games/index.html">
+            All Games
+          </a>
+
+          <a href="../games/circuit-builder.html">
+            Circuit Builder
+          </a>
+
+          <a href="../games/magnetic-maze.html">
+            Magnetic Maze
+          </a>
+
+          <a href="../games/build-a-cell.html">
+            Build a Cell
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="nav-drop">
+
+        Lab ˅
+
+        <div class="dropdown">
+
+          <a href="../lab/index.html">
+            Virtual Lab
+          </a>
+
+          <a href="../lab/ohms-law.html">
+            Ohm's Law
+          </a>
+
+          <a href="../lab/electric-circuit.html">
+            Electric Circuit
+          </a>
+
+          <a href="../lab/ray-optics.html">
+            Ray Optics
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="nav-drop">
+
+        More ˅
+
+        <div class="dropdown">
+
+          <a href="../science-around-us/index.html">
+            Science Around Us
+          </a>
+
+          <a href="../real-world/index.html">
+            Science in the Real World
+          </a>
+
+          <a href="../about.html">
+            About
+          </a>
+
+        </div>
+
+      </div>
+
+
+    </nav>
+
+
+    <!-- RIGHT CORNER -->
+
+    <div class="actions">
+
+
+      <button
+        class="lang"
+        id="langBtn">
+
+        EN
+        <span>|</span>
+        <b>हिंदी</b>
+
+      </button>
+
+
+      <button
+        class="icon-btn"
+        id="menuBtn"
+        aria-label="Open menu">
+
+        ☰
+
+      </button>
+
+
+    </div>
+
+
+  </div>
+
+</header>
+
+
+<!-- ======================================================
+     MOBILE MENU
+     ====================================================== -->
+
+<div
+  class="mobile-menu"
+  id="mobileMenu">
+
+
+  <a href="../index.html">
+    ⌂ Home
+  </a>
+
+
+  <a href="../physics/index.html">
+    ⚛ Physics
+  </a>
+
+
+  <a href="../chemistry/index.html">
+    🧪 Chemistry
+  </a>
+
+
+  <a href="../biology/index.html">
+    🧬 Biology
+  </a>
+
+
+  <a href="../earth/index.html">
+    🌍 Earth & Environment
+  </a>
+
+
+  <a href="../why/index.html">
+    💡 Why Does This Happen?
+  </a>
+
+
+  <a href="../invisible-visible/index.html">
+    👁 Make the Invisible Visible
+  </a>
+
+
+  <a href="../magic-science/index.html">
+    ✨ Science That Looks Like Magic
+  </a>
+
+
+  <a href="../what-if/index.html">
+    ❓ What If?
+  </a>
+
+
+  <a href="../beyond-textbook/index.html">
+    🚀 Beyond the Textbook
+  </a>
+
+
+  <a href="../lab/index.html">
+    🧪 Virtual Lab
+  </a>
+
+
+  <a href="../games/index.html">
+    🎮 Science Games
+  </a>
+
+
+  <a href="../real-world/index.html">
+    🌐 Science in the Real World
+  </a>
+
+
+  <a href="../science-around-us/index.html">
+    📰 Science Around Us
+  </a>
+
+
+</div>
+
+
+<!-- ======================================================
+     HERO
+     ====================================================== -->
+
+<section class="hero">
+
+
+  <div class="container">
+
+
+    <div class="hero-content">
+
+
+      <div class="eyebrow">
+
+        PLAY • EXPLORE • DISCOVER
+
+      </div>
+
+
+      <h1>
+
+        SCIENCE<br>
+
+        <span>
+          GAMES
+        </span>
+
+      </h1>
+
+
+      <p
+        class="hero-text"
+
+        data-en="Turn scientific ideas into interactive challenges. Build circuits, explore molecules, discover the human body, shape planets and solve science puzzles."
+
+        data-hi="वैज्ञानिक विचारों को इंटरैक्टिव चुनौतियों में बदलें। सर्किट बनाएं, अणुओं को समझें, मानव शरीर की खोज करें, ग्रह बनाएं और विज्ञान की पहेलियां हल करें।">
+
+        Turn scientific ideas into interactive challenges.
+        Build circuits, explore molecules, discover the human body,
+        shape planets and solve science puzzles.
+
+      </p>
+
+
+      <div class="hero-actions">
+
+
+        <button
+          class="btn primary"
+          id="exploreGames">
+
+          Explore Games ↓
+
+        </button>
+
+
+        <a
+          class="btn"
+          href="#howItWorks">
+
+          How It Works
+
+        </a>
+
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+  <div class="hero-caption">
+
+    LEARN BY PLAYING.
+
+  </div>
+
+
+</section>
+
+
+<!-- ======================================================
+     INTRO
+     ====================================================== -->
+
+<section
+  class="section"
+  id="howItWorks">
+
+
+  <div class="container">
+
+
+    <div class="section-head">
+
+
+      <div class="section-kicker">
+
+        SCIENCE THROUGH PLAY
+
+      </div>
+
+
+      <h2 class="section-title">
+
+        PLAY WITH<br>
+        IDEAS.
+
+      </h2>
+
+
+      <p
+        class="section-description"
+
+        data-en="Every game turns a scientific concept into something you can interact with. Instead of only reading the answer, you discover it by making decisions, solving problems and seeing what happens."
+
+        data-hi="हर गेम किसी वैज्ञानिक अवधारणा को ऐसी चीज़ में बदलता है जिसके साथ आप सीधे इंटरैक्ट कर सकते हैं। केवल उत्तर पढ़ने के बजाय, निर्णय लेकर, समस्याएं हल करके और परिणाम देखकर उसे समझें।">
+
+        Every game turns a scientific concept into something you can interact with.
+        Instead of only reading the answer, you discover it by making decisions,
+        solving problems and seeing what happens.
+
+      </p>
+
+
+    </div>
+
+
+    <div
+      class="games-grid"
+      style="grid-template-columns:repeat(3,1fr);">
+
+
+      <div class="game-card">
+
+
+        <div class="game-icon">
+          🧩
+        </div>
+
+
+        <h3
+          class="game-title"
+
+          data-en="Solve"
+
+          data-hi="हल करें">
+
+          Solve
+
+        </h3>
+
+
+        <p
+          class="game-description"
+
+          data-en="Use scientific reasoning to solve interactive challenges."
+
+          data-hi="इंटरैक्टिव चुनौतियों को हल करने के लिए वैज्ञानिक तर्क का उपयोग करें।">
+
+          Use scientific reasoning to solve interactive challenges.
+
+        </p>
+
+
+      </div>
+
+
+      <div class="game-card">
+
+
+        <div class="game-icon">
+          🔬
+        </div>
+
+
+        <h3
+          class="game-title"
+
+          data-en="Explore"
+
+          data-hi="खोजें">
+
+          Explore
+
+        </h3>
+
+
+        <p
+          class="game-description"
+
+          data-en="Discover how scientific systems behave by interacting with them."
+
+          data-hi="वैज्ञानिक प्रणालियों के साथ इंटरैक्ट करके जानें कि वे कैसे काम करती हैं।">
+
+          Discover how scientific systems behave by interacting with them.
+
+        </p>
+
+
+      </div>
+
+
+      <div class="game-card">
+
+
+        <div class="game-icon">
+          💡
+        </div>
+
+
+        <h3
+          class="game-title"
+
+          data-en="Understand"
+
+          data-hi="समझें">
+
+          Understand
+
+        </h3>
+
+
+        <p
+          class="game-description"
+
+          data-en="Turn every challenge into a deeper understanding of science."
+
+          data-hi="हर चुनौती को विज्ञान की गहरी समझ में बदलें।">
+
+          Turn every challenge into a deeper understanding of science.
+
+        </p>
+
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+<!-- ======================================================
+     ALL GAMES
+     ====================================================== -->
+
+<section
+  class="section"
+  id="games">
+
+
+  <div class="container">
+
+
+    <div class="section-head">
+
+
+      <div class="section-kicker">
+
+        THE SCIENCE GAME WORLD
+
+      </div>
+
+
+      <h2 class="section-title">
+
+        CHOOSE YOUR<br>
+        CHALLENGE.
+
+      </h2>
+
+
+      <p
+        class="section-description"
+
+        data-en="Explore games across Physics, Chemistry, Biology and Earth & Environment. Twelve games are ready to play, while more adventures are being developed."
+
+        data-hi="भौतिक विज्ञान, रसायन विज्ञान, जीव विज्ञान और पृथ्वी एवं पर्यावरण से जुड़े गेम्स खोजें। बारह गेम खेलने के लिए तैयार हैं और कई नए गेम विकसित किए जा रहे हैं।">
+
+        Explore games across Physics, Chemistry, Biology and Earth & Environment.
+        Twelve games are ready to play, while more adventures are being developed.
+
+      </p>
+
+
+    </div>
+
+
+    <!-- FILTER BAR -->
+
+    <div class="game-controls">
+
+
+      <div class="filters">
+
+
+        <button
+          class="filter active"
+          data-filter="all">
+
+          All Games
+
+        </button>
+
+
+        <button
+          class="filter"
+          data-filter="physics">
+
+          ⚛ Physics
+
+        </button>
+
+
+        <button
+          class="filter"
+          data-filter="chemistry">
+
+          🧪 Chemistry
+
+        </button>
+
+
+        <button
+          class="filter"
+          data-filter="biology">
+
+          🧬 Biology
+
+        </button>
+
+
+        <button
+          class="filter"
+          data-filter="earth">
+
+          🌍 Earth & Environment
+
+        </button>
+
+
+      </div>
+
+
+      <input
+
+        class="search"
+
+        id="gameSearch"
+
+        type="search"
+
+        placeholder="Search games..."
+
+        autocomplete="off"
+
+      >
+
+
+    </div>
+
+
+    <!-- GAME CARDS -->
+
+    <div
+      class="games-grid"
+      id="gamesGrid">
+
+    </div>
+
+
+    <div
+      class="empty"
+      id="emptyState">
+
+      No games found.
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+<!-- ======================================================
+     FINAL CTA
+     ====================================================== -->
+
+<section class="cta">
+
+
+  <div class="container">
+
+
+    <div class="cta-content">
+
+
+      <div class="section-kicker">
+
+        SCIENCE IS AN ADVENTURE
+
+      </div>
+
+
+      <h2>
+
+        DON'T JUST<br>
+
+        LEARN SCIENCE.<br>
+
+        <span style="color:var(--green);">
+
+          PLAY WITH IT.
+
+        </span>
+
+      </h2>
+
+
+      <p
+
+        data-en="Build. Explore. Solve. Discover. The next scientific idea is waiting for you."
+
+        data-hi="बनाएं। खोजें। हल करें। खोज करें। अगला वैज्ञानिक विचार आपका इंतजार कर रहा है।">
+
+        Build. Explore. Solve. Discover.
+        The next scientific idea is waiting for you.
+
+      </p>
+
+
+      <div class="hero-actions">
+
+
+        <button
+          class="btn primary"
+          id="backToGames">
+
+          Explore Games ↑
+
+        </button>
+
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+  <div class="cta-caption">
+
+    SCIENCE IS A GAME OF QUESTIONS.
+
+  </div>
+
+
+  <!-- Professional bottom line -->
+
+  <div class="cta-line"></div>
+<footer class="footer">
+    © <span id="year"></span>
+    Science Beyond the Textbook · Built for curious minds.
+  </footer>
+
+</main>
+
+
+</section>
+
+
+<!-- ======================================================
+     GAME MODAL
+     ====================================================== -->
+
+<div
+  class="game-modal"
+  id="gameModal">
+
+
+  <div class="game-window">
+
+
+    <div class="modal-head">
+
+
+      <div
+        class="modal-title"
+        id="modalTitle">
+
+        Science Game
+
+      </div>
+
+
+      <button
+        class="modal-close"
+        id="modalClose"
+        aria-label="Close game">
+
+        ×
+
+      </button>
+
+
+    </div>
+
+
+    <div
+      class="game-root"
+      id="gameRoot">
+
+    </div>
+
+
+  </div>
+
+
+</div>
+
+
+<!-- ======================================================
+     TOAST
+     ====================================================== -->
+
+<div
+  class="toast"
+  id="toast">
+
+</div>
+
+
+<!-- ======================================================
+     SCIENCE GAMES DATA
+     ====================================================== -->
+
+<script src="../data/science-games.js"></script>
+
+
+<script>
+
+/* =========================================================
+   SCIENCE GAMES PAGE ENGINE
+   ========================================================= */
+
+(() => {
+
+
+  const grid =
+    document.getElementById(
+      "gamesGrid"
+    );
+
+
+  const empty =
+    document.getElementById(
+      "emptyState"
+    );
+
+
+  const search =
+    document.getElementById(
+      "gameSearch"
+    );
+
+
+  const modal =
+    document.getElementById(
+      "gameModal"
+    );
+
+
+  const modalTitle =
+    document.getElementById(
+      "modalTitle"
+    );
+
+
+  const gameRoot =
+    document.getElementById(
+      "gameRoot"
+    );
+
+
+  const modalClose =
+    document.getElementById(
+      "modalClose"
+    );
+
+
+  const menuBtn =
+    document.getElementById(
+      "menuBtn"
+    );
+
+
+  const mobileMenu =
+    document.getElementById(
+      "mobileMenu"
+    );
+
+
+  const langBtn =
+    document.getElementById(
+      "langBtn"
+    );
+
+
+  let currentFilter = "all";
+
+
+  let currentLang =
+    localStorage.getItem(
+      "scienceLanguage"
+    ) || "en";
+
+
+  let games = [];
+
+
+  let cleanupGame = null;
+
+
+
+  /* =======================================================
+     DATA
+     ======================================================= */
+
+  function getGames(){
+
+
+    if(
+
+      window.scienceGames &&
+
+      Array.isArray(
+        window.scienceGames
+      )
+
+    ){
+
+      return window.scienceGames;
+
+    }
+
+
+    if(
+
+      window.ScienceGames &&
+
+      Array.isArray(
+        window.ScienceGames.games
+      )
+
+    ){
+
+      return window.ScienceGames.games;
+
+    }
+
+
+    return [];
+
+  }
+
+
+
+  /* =======================================================
+     TRANSLATION
+     ======================================================= */
+
+  function text(value){
+
+
+    if(value == null){
+      return "";
+    }
+
+
+    if(typeof value === "string"){
+      return value;
+    }
+
+
+    return (
+
+      value[currentLang] ||
+
+      value.en ||
+
+      value.hi ||
+
+      ""
+
+    );
+
+  }
+
+
+
+  function updateLanguage(){
+
+
+    document.documentElement.lang =
+
+      currentLang === "hi"
+        ? "hi"
+        : "en";
+
+
+    document
+      .querySelectorAll(
+        "[data-en]"
+      )
+      .forEach(el => {
+
+
+        const value =
+
+          currentLang === "hi"
+
+            ? el.getAttribute(
+                "data-hi"
+              )
+
+            : el.getAttribute(
+                "data-en"
+              );
+
+
+        if(value != null){
+
+          el.textContent = value;
+
+        }
+
+      });
+
+
+    langBtn.innerHTML =
+
+      currentLang === "en"
+
+        ? `EN <span>|</span> <b>हिंदी</b>`
+
+        : `हिंदी <span>|</span> <b>EN</b>`;
+
+
+    renderGames();
+
+  }
+
+
+
+  langBtn.addEventListener(
+    "click",
+    () => {
+
+
+      currentLang =
+
+        currentLang === "en"
+          ? "hi"
+          : "en";
+
+
+      localStorage.setItem(
+        "scienceLanguage",
+        currentLang
+      );
+
+
+      updateLanguage();
+
+    }
+  );
+
+
+
+  /* =======================================================
+     GAME CARDS
+     ======================================================= */
+
+  function renderGames(){
+
+
+    games = getGames();
+
+
+    const query =
+
+      search.value
+        .trim()
+        .toLowerCase();
+
+
+    const filtered = games.filter(
+      game => {
+
+
+        const subject =
+
+          String(
+            game.subject || ""
+          )
+          .toLowerCase();
+
+
+        const matchesFilter =
+
+          currentFilter === "all" ||
+
+          subject === currentFilter;
+
+
+        const searchable = [
+
+          text(game.title),
+
+          text(game.description),
+
+          text(game.concept),
+
+          game.subject || ""
+
+        ]
+
+        .join(" ")
+
+        .toLowerCase();
+
+
+        return (
+
+          matchesFilter &&
+
+          searchable.includes(
+            query
+          )
+
+        );
+
+      }
+    );
+
+
+    grid.innerHTML = "";
+
+
+    filtered.forEach(
+      (game,index) => {
+
+
+        const card =
+          document.createElement(
+            "article"
+          );
+
+
+        card.className =
+          "game-card";
+
+
+        const playable =
+          game.playable !== false;
+
+
+        const subjectName =
+          getSubjectName(
+            game.subject
+          );
+
+
+        card.innerHTML = `
+
+
+          <div class="game-top">
+
+
+            <div class="game-icon">
+
+              ${game.icon || "🔬"}
+
+            </div>
+
+
+            <div
+              class="game-status ${playable ? "" : "soon"}">
+
+              ${
+                playable
+                  ? "PLAY NOW"
+                  : "COMING SOON"
+              }
+
+            </div>
+
+
+          </div>
+
+
+          <h3 class="game-title">
+
+            ${escapeHTML(
+              text(game.title)
+            )}
+
+          </h3>
+
+
+          <p class="game-description">
+
+            ${escapeHTML(
+              text(game.description)
+            )}
+
+          </p>
+
+
+          <div class="game-meta">
+
+
+            <span class="meta">
+
+              ${escapeHTML(
+                subjectName
+              )}
+
+            </span>
+
+
+            ${
+              game.difficulty
+
+                ? `
+
+                  <span class="meta">
+
+                    ${escapeHTML(
+                      game.difficulty
+                    )}
+
+                  </span>
+
+                `
+
+                : ""
+
+            }
+
+
+          </div>
+
+
+          <div class="game-bottom">
+
+
+            ${
+              playable
+
+                ? `
+
+                  <button
+
+                    class="play-btn"
+
+                    data-game-id="${escapeHTML(
+                      game.id
+                    )}">
+
+                    ${
+                      currentLang === "hi"
+
+                        ? "खेलें →"
+
+                        : "Play →"
+
+                    }
+
+                  </button>
+
+                `
+
+                : `
+
+                  <button
+
+                    class="play-btn disabled"
+
+                    disabled>
+
+                    ${
+                      currentLang === "hi"
+
+                        ? "जल्द आ रहा है"
+
+                        : "Coming Soon"
+
+                    }
+
+                  </button>
+
+                `
+
+            }
+
+
+            <div class="game-number">
+
+              ${String(
+                index + 1
+              ).padStart(2,"0")}
+
+            </div>
+
+
+          </div>
+
+        `;
+
+
+        grid.appendChild(
+          card
+        );
+
+      }
+    );
+
+
+    empty.style.display =
+
+      filtered.length
+
+        ? "none"
+
+        : "block";
+
+
+    grid
+      .querySelectorAll(
+        ".play-btn[data-game-id]"
+      )
+      .forEach(button => {
+
+
+        button.addEventListener(
+          "click",
+          () => {
+
+
+            openGame(
+              button.dataset.gameId
+            );
+
+
+          }
+        );
+
+
+      });
+
+  }
+
+
+
+  function getSubjectName(
+    subject
+  ){
+
+
+    const names = {
+
+
+      physics:
+
+        currentLang === "hi"
+
+          ? "भौतिक विज्ञान"
+
+          : "Physics",
+
+
+      chemistry:
+
+        currentLang === "hi"
+
+          ? "रसायन विज्ञान"
+
+          : "Chemistry",
+
+
+      biology:
+
+        currentLang === "hi"
+
+          ? "जीव विज्ञान"
+
+          : "Biology",
+
+
+      earth:
+
+        currentLang === "hi"
+
+          ? "पृथ्वी एवं पर्यावरण"
+
+          : "Earth & Environment"
+
+
+    };
+
+
+    return (
+
+      names[
+        String(
+          subject
+        ).toLowerCase()
+      ]
+
+      ||
+
+      subject
+
+      ||
+
+      "Science"
+
+    );
+
+  }
+
+
+
+  /* =======================================================
+     FILTERS
+     ======================================================= */
+
+  document
+    .querySelectorAll(
+      ".filter"
+    )
+    .forEach(button => {
+
+
+      button.addEventListener(
+        "click",
+        () => {
+
+
+          document
+            .querySelectorAll(
+              ".filter"
+            )
+            .forEach(b => {
+
+              b.classList.remove(
+                "active"
+              );
+
+            });
+
+
+          button.classList.add(
+            "active"
+          );
+
+
+          currentFilter =
+            button.dataset.filter;
+
+
+          renderGames();
+
+        }
+      );
+
+    });
+
+
+
+  search.addEventListener(
+    "input",
+    renderGames
+  );
+
+
+
+  /* =======================================================
+     OPEN GAME
+     ======================================================= */
+
+  function openGame(id){
+
+
+    const game =
+      games.find(
+        item =>
+          String(item.id) ===
+          String(id)
+      );
+
+
+    if(!game){
+
+      showToast(
+
+        currentLang === "hi"
+
+          ? "गेम नहीं मिला।"
+
+          : "Game not found."
+
+      );
+
+      return;
+
+    }
+
+
+    if(game.playable === false){
+      return;
+    }
+
+
+    if(cleanupGame){
+
+      try{
+        cleanupGame();
+      }
+      catch(e){}
+
+      cleanupGame = null;
+
+    }
+
+
+    gameRoot.innerHTML = "";
+
+
+    modalTitle.textContent =
+      text(game.title);
+
+
+    modal.classList.add(
+      "open"
+    );
+
+
+    document.body.style.overflow =
+      "hidden";
+
+
+    try{
+
+
+      if(
+
+        window.ScienceGames &&
+
+        typeof
+        window.ScienceGames.open ===
+        "function"
+
+      ){
+
+
+        const result =
+
+          window.ScienceGames.open(
+
+            game.id,
+
+            currentLang,
+
+            gameRoot
+
+          );
+
+
+        if(
+          typeof result ===
+          "function"
+        ){
+
+          cleanupGame = result;
+
+        }
+
+
+      }
+
+
+      else if(
+        typeof game.play ===
+        "function"
+      ){
+
+
+        const result =
+
+          game.play(
+
+            gameRoot,
+
+            currentLang
+
+          );
+
+
+        if(
+          typeof result ===
+          "function"
+        ){
+
+          cleanupGame = result;
+
+        }
+
+
+      }
+
+
+      else{
+
+
+        gameRoot.innerHTML = `
+
+
+          <div class="sg-shell">
+
+
+            <div class="sg-panel">
+
+
+              <div class="sg-title">
+
+                ${escapeHTML(
+                  text(game.title)
+                )}
+
+              </div>
+
+
+              <p class="sg-text">
+
+                ${escapeHTML(
+                  text(
+                    game.description
+                  )
+                )}
+
+              </p>
+
+
+              <div class="sg-result">
+
+                Game engine is not connected yet.
+
+              </div>
+
+
+            </div>
+
+
+          </div>
+
+        `;
+
+      }
+
+
+    }
+
+    catch(error){
+
+
+      console.error(error);
+
+
+      gameRoot.innerHTML = `
+
+
+        <div class="sg-shell">
+
+
+          <div class="sg-panel">
+
+
+            <div class="sg-title">
+
+              ${escapeHTML(
+                text(game.title)
+              )}
+
+            </div>
+
+
+            <p class="sg-text">
+
+              ${
+                currentLang === "hi"
+
+                  ? "गेम लोड करते समय समस्या हुई।"
+
+                  : "There was a problem loading this game."
+
+              }
+
+            </p>
+
+
+          </div>
+
+
+        </div>
+
+      `;
+
+    }
+
+  }
+
+
+
+  /* =======================================================
+     CLOSE GAME
+     ======================================================= */
+
+  function closeGame(){
+
+
+    if(cleanupGame){
+
+      try{
+        cleanupGame();
+      }
+      catch(e){}
+
+      cleanupGame = null;
+
+    }
+
+
+    gameRoot.innerHTML = "";
+
+
+    modal.classList.remove(
+      "open"
+    );
+
+
+    document.body.style.overflow =
+      "";
+
+  }
+
+
+
+  modalClose.addEventListener(
+    "click",
+    closeGame
+  );
+
+
+  modal.addEventListener(
+    "click",
+    event => {
+
+
+      if(
+        event.target === modal
+      ){
+
+        closeGame();
+
+      }
+
+    }
+  );
+
+
+  document.addEventListener(
+    "keydown",
+    event => {
+
+
+      if(
+        event.key === "Escape"
+      ){
+
+        closeGame();
+
+      }
+
+    }
+  );
+
+
+
+  /* =======================================================
+     MOBILE MENU
+     ======================================================= */
+
+  menuBtn.addEventListener(
+    "click",
+    () => {
+
+
+      mobileMenu.classList.toggle(
+        "open"
+      );
+
+
+      menuBtn.textContent =
+
+        mobileMenu.classList.contains(
+          "open"
+        )
+
+          ? "×"
+
+          : "☰";
+
+    }
+  );
+
+
+  mobileMenu
+    .querySelectorAll("a")
+    .forEach(link => {
+
+
+      link.addEventListener(
+        "click",
+        () => {
+
+
+          mobileMenu.classList.remove(
+            "open"
+          );
+
+
+          menuBtn.textContent =
+            "☰";
+
+        }
+      );
+
+    });
+
+
+
+  /* =======================================================
+     HERO BUTTON
+     ======================================================= */
+
+  document
+    .getElementById(
+      "exploreGames"
+    )
+    .addEventListener(
+      "click",
+      () => {
+
+
+        document
+          .getElementById(
+            "games"
+          )
+          .scrollIntoView({
+            behavior:"smooth"
+          });
+
+      }
+    );
+
+
+
+  /* =======================================================
+     CTA BUTTON
+     ======================================================= */
+
+  document
+    .getElementById(
+      "backToGames"
+    )
+    .addEventListener(
+      "click",
+      () => {
+
+
+        document
+          .getElementById(
+            "games"
+          )
+          .scrollIntoView({
+            behavior:"smooth"
+          });
+
+      }
+    );
+
+
+
+  /* =======================================================
+     TOAST
+     ======================================================= */
+
+  let toastTimer;
+
+
+  function showToast(
+    message
+  ){
+
+
+    const toast =
+      document.getElementById(
+        "toast"
+      );
+
+
+    toast.textContent =
+      message;
+
+
+    toast.classList.add(
+      "show"
+    );
+
+
+    clearTimeout(
+      toastTimer
+    );
+
+
+    toastTimer =
+
+      setTimeout(
+        () => {
+
+          toast.classList.remove(
+            "show"
+          );
+
+        },
+
+        2500
+
+      );
+
+  }
+
+
+
+  /* =======================================================
+     ESCAPE HTML
+     ======================================================= */
+
+  function escapeHTML(
+    value
+  ){
+
+    return String(
+      value ?? ""
+    )
+
+      .replace(
+        /&/g,
+        "&amp;"
+      )
+
+      .replace(
+        /</g,
+        "&lt;"
+      )
+
+      .replace(
+        />/g,
+        "&gt;"
+      )
+
+      .replace(
+        /"/g,
+        "&quot;"
+      )
+
+      .replace(
+        /'/g,
+        "&#039;"
+      );
+
+  }
+
+
+
+  /* =======================================================
+     INITIALIZE
+     ======================================================= */
+
+  updateLanguage();
+
+
+})();
+
+</script>
+
+
+</body>
+  </html>
