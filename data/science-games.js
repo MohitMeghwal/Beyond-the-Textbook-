@@ -3259,3 +3259,2427 @@ const scienceGames = [
 
     "planet-builder":
       planetBuilder,
+
+    "weather-maker":
+      weatherMaker,
+
+    "moon-phases":
+      moonPhases
+
+  };
+
+
+  /* =========================================================
+     PUBLIC API
+     ========================================================= */
+
+  window.ScienceGames = {
+
+    all: function(){
+
+      return scienceGames;
+
+    },
+
+    playable: function(){
+
+      return scienceGames.filter(
+        game =>
+          game.status === "playable"
+      );
+
+    },
+
+    comingSoon: function(){
+
+      return scienceGames.filter(
+        game =>
+          game.status === "coming-soon"
+      );
+
+    },
+
+    bySubject: function(subject){
+
+      if(
+        !subject ||
+        subject === "all"
+      ){
+
+        return scienceGames;
+
+      }
+
+      return scienceGames.filter(
+        game =>
+          game.subject === subject
+      );
+
+    },
+
+    get: function(id){
+
+      return scienceGames.find(
+        game =>
+          game.id === id
+      );
+
+    },
+
+    setLanguage: function(language){
+
+      currentLanguage =
+        language === "hi"
+          ? "hi"
+          : "en";
+
+    },
+
+    open: function(id,language){
+
+      if(language){
+
+        this.setLanguage(
+          language
+        );
+
+      }
+
+      const game =
+        this.get(id);
+
+      if(!game){
+
+        console.warn(
+          "ScienceGames: Game not found:",
+          id
+        );
+
+        return false;
+
+      }
+
+      if(
+        game.status !==
+        "playable"
+      ){
+
+        return false;
+
+      }
+
+      const launcher =
+        gameLaunchers[id];
+
+      if(!launcher){
+
+        console.warn(
+          "ScienceGames: No launcher:",
+          id
+        );
+
+        return false;
+
+      }
+
+      launcher(game);
+
+      return true;
+
+    },
+
+    close: function(){
+
+      closeGame();
+
+    }
+
+  };
+
+
+  /* =========================================================
+     GLOBAL DATA ACCESS
+     ========================================================= */
+
+  window.scienceGames =
+    scienceGames;
+
+
+  /* =========================================================
+     GAME ENGINE CSS
+     ========================================================= */
+
+  function injectGameStyles(){
+
+    if(
+      document.getElementById(
+        "scienceGameStyles"
+      )
+    ){
+
+      return;
+
+    }
+
+    const style =
+      document.createElement(
+        "style"
+      );
+
+    style.id =
+      "scienceGameStyles";
+
+    style.textContent = `
+
+      #scienceGameOverlay{
+
+        position:fixed;
+        inset:0;
+        z-index:99999;
+
+        display:flex;
+        align-items:center;
+        justify-content:center;
+
+        padding:20px;
+
+        font-family:
+          Inter,
+          system-ui,
+          sans-serif;
+
+      }
+
+
+      body.sg-game-open{
+
+        overflow:hidden;
+
+      }
+
+
+      .sg-backdrop{
+
+        position:absolute;
+        inset:0;
+
+        background:
+          rgba(2,8,5,.88);
+
+        backdrop-filter:
+          blur(12px);
+
+      }
+
+
+      .sg-window{
+
+        position:relative;
+        z-index:2;
+
+        width:min(
+          920px,
+          100%
+        );
+
+        max-height:
+          min(
+            90vh,
+            850px
+          );
+
+        overflow:auto;
+
+        border:
+          1px solid
+          rgba(255,255,255,.14);
+
+        border-radius:24px;
+
+        background:
+          linear-gradient(
+            145deg,
+            #101b14,
+            #07100b
+          );
+
+        box-shadow:
+          0 30px 100px
+          rgba(0,0,0,.58);
+
+        color:#f4f5ef;
+
+      }
+
+
+      .sg-header{
+
+        position:sticky;
+        top:0;
+        z-index:5;
+
+        display:flex;
+
+        align-items:flex-start;
+
+        justify-content:space-between;
+
+        gap:20px;
+
+        padding:22px 24px;
+
+        background:
+          rgba(7,16,11,.94);
+
+        backdrop-filter:
+          blur(15px);
+
+        border-bottom:
+          1px solid
+          rgba(255,255,255,.09);
+
+      }
+
+
+      .sg-kicker{
+
+        color:#65f28b;
+
+        font-size:9px;
+        font-weight:800;
+
+        letter-spacing:.18em;
+
+        text-transform:uppercase;
+
+        margin-bottom:6px;
+
+      }
+
+
+      .sg-title{
+
+        margin:0;
+
+        font-family:
+          Caveat,
+          cursive;
+
+        font-size:35px;
+
+        line-height:1;
+
+      }
+
+
+      .sg-concept{
+
+        margin-top:7px;
+
+        color:#8e9c91;
+
+        font-size:11px;
+
+      }
+
+
+      .sg-close{
+
+        width:40px;
+        height:40px;
+
+        flex:0 0 auto;
+
+        border-radius:50%;
+
+        border:
+          1px solid
+          rgba(255,255,255,.14);
+
+        background:
+          rgba(255,255,255,.04);
+
+        color:#eaf0eb;
+
+        font-size:25px;
+
+        cursor:pointer;
+
+        transition:
+          .18s ease;
+
+      }
+
+
+      .sg-close:hover{
+
+        color:#65f28b;
+
+        border-color:
+          rgba(101,242,139,.45);
+
+        transform:
+          rotate(90deg);
+
+      }
+
+
+      .sg-content{
+
+        padding:28px;
+
+      }
+
+
+      .sg-intro{
+
+        color:#aeb8af;
+
+        font-size:13px;
+
+        line-height:1.7;
+
+        margin-bottom:22px;
+
+      }
+
+
+      .sg-button{
+
+        border:
+          1px solid
+          rgba(101,242,139,.34);
+
+        background:
+          rgba(101,242,139,.08);
+
+        color:#65f28b;
+
+        border-radius:11px;
+
+        padding:10px 15px;
+
+        font-size:11px;
+
+        font-weight:800;
+
+        cursor:pointer;
+
+        transition:
+          .18s ease;
+
+      }
+
+
+      .sg-button:hover,
+      .sg-button.selected{
+
+        background:#65f28b;
+
+        color:#061008;
+
+        transform:
+          translateY(-1px);
+
+      }
+
+
+      .sg-status{
+
+        margin-top:20px;
+
+        padding:13px 15px;
+
+        border:
+          1px solid
+          rgba(255,255,255,.10);
+
+        border-radius:12px;
+
+        background:
+          rgba(255,255,255,.025);
+
+        color:#aeb8af;
+
+        font-size:11px;
+
+        line-height:1.65;
+
+      }
+
+
+      .sg-status.success{
+
+        color:#65f28b;
+
+        border-color:
+          rgba(101,242,139,.30);
+
+        background:
+          rgba(101,242,139,.06);
+
+      }
+
+
+      /* =====================================================
+         CIRCUIT
+         ===================================================== */
+
+      .circuit-board{
+
+        position:relative;
+
+        min-height:260px;
+
+        display:flex;
+
+        align-items:center;
+
+        justify-content:space-around;
+
+        gap:20px;
+
+        padding:30px;
+
+        border:
+          1px solid
+          rgba(255,255,255,.10);
+
+        border-radius:20px;
+
+        background:
+          radial-gradient(
+            circle at center,
+            rgba(101,242,139,.06),
+            transparent 55%
+          ),
+          #09120d;
+
+      }
+
+
+      .circuit-wire-line{
+
+        position:absolute;
+
+        height:2px;
+
+        background:
+          rgba(101,242,139,.15);
+
+        left:10%;
+        right:10%;
+
+      }
+
+
+      .top-line{
+
+        top:25%;
+
+      }
+
+
+      .bottom-line{
+
+        bottom:25%;
+
+      }
+
+
+      .circuit-component{
+
+        position:relative;
+        z-index:2;
+
+        width:110px;
+        height:110px;
+
+        display:flex;
+
+        flex-direction:column;
+
+        align-items:center;
+
+        justify-content:center;
+
+        gap:7px;
+
+        border:
+          1px solid
+          rgba(255,255,255,.12);
+
+        border-radius:18px;
+
+        background:
+          #111d15;
+
+        font-size:40px;
+
+      }
+
+
+      .circuit-component small{
+
+        color:#8f9c92;
+
+        font-size:10px;
+
+      }
+
+
+      .bulb.lit{
+
+        border-color:#65f28b;
+
+        box-shadow:
+          0 0 35px
+          rgba(255,220,70,.48);
+
+      }
+
+
+      .circuit-controls{
+
+        display:flex;
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+        gap:8px;
+
+        margin-top:18px;
+
+      }
+
+
+      /* =====================================================
+         MAGNETIC MAZE
+         ===================================================== */
+
+      .magnetic-maze{
+
+        position:relative;
+
+        width:100%;
+
+        height:390px;
+
+        overflow:hidden;
+
+        border:
+          1px solid
+          rgba(255,255,255,.10);
+
+        border-radius:20px;
+
+        background:
+          radial-gradient(
+            circle at 50% 50%,
+            rgba(101,242,139,.05),
+            transparent 60%
+          ),
+          #08110c;
+
+      }
+
+
+      .maze-wall{
+
+        position:absolute;
+
+        border:
+          1px solid
+          rgba(101,242,139,.22);
+
+        border-radius:8px;
+
+        background:
+          rgba(101,242,139,.08);
+
+      }
+
+
+      .mw1{
+
+        left:22%;
+        top:12%;
+
+        width:8%;
+        height:52%;
+
+      }
+
+
+      .mw2{
+
+        left:39%;
+        top:63%;
+
+        width:30%;
+        height:7%;
+
+      }
+
+
+      .mw3{
+
+        left:58%;
+        top:25%;
+
+        width:8%;
+        height:45%;
+
+      }
+
+
+      .mw4{
+
+        left:76%;
+        top:12%;
+
+        width:7%;
+        height:42%;
+
+      }
+
+
+      .maze-magnet{
+
+        position:absolute;
+
+        width:46px;
+        height:46px;
+
+        display:grid;
+        place-items:center;
+
+        border-radius:50%;
+
+        background:
+          #17221b;
+
+        border:
+          1px solid
+          rgba(255,255,255,.18);
+
+        color:#65f28b;
+
+        font-weight:800;
+
+        box-shadow:
+          inset 0 0 20px
+          rgba(101,242,139,.05);
+
+      }
+
+
+      .magnet-n{
+
+        left:40%;
+        top:14%;
+
+      }
+
+
+      .magnet-s{
+
+        left:66%;
+        top:70%;
+
+      }
+
+
+      .maze-player{
+
+        position:absolute;
+
+        width:30px;
+        height:30px;
+
+        display:grid;
+        place-items:center;
+
+        color:#65f28b;
+
+        font-size:28px;
+
+        transform:
+          translate(-50%,-50%);
+
+        transition:
+          .12s ease;
+
+      }
+
+
+      .maze-target{
+
+        position:absolute;
+
+        color:#65f28b;
+
+        font-size:29px;
+
+        transform:
+          translate(-50%,-50%);
+
+      }
+
+
+      .maze-controls{
+
+        margin-top:15px;
+
+        text-align:center;
+
+      }
+
+
+      /* =====================================================
+         LENS
+         ===================================================== */
+
+      .lens-lab{
+
+        position:relative;
+
+        height:310px;
+
+        border:
+          1px solid
+          rgba(255,255,255,.10);
+
+        border-radius:20px;
+
+        background:
+          radial-gradient(
+            circle at 50% 50%,
+            rgba(101,242,139,.04),
+            transparent 65%
+          ),
+          #08110c;
+
+        overflow:hidden;
+
+      }
+
+
+      .lens-axis{
+
+        position:absolute;
+
+        left:7%;
+        right:7%;
+
+        top:50%;
+
+        height:1px;
+
+        background:
+          rgba(101,242,139,.35);
+
+      }
+
+
+      .lens-object,
+      .lens-image{
+
+        position:absolute;
+
+        top:50%;
+
+        color:#65f28b;
+
+        font-size:50px;
+
+        transform:
+          translate(-50%,-50%);
+
+      }
+
+
+      .convex-lens{
+
+        position:absolute;
+
+        left:50%;
+        top:50%;
+
+        transform:
+          translate(-50%,-50%);
+
+        color:#d9eee0;
+
+        font-size:100px;
+
+        opacity:.38;
+
+      }
+
+
+      .lens-focus{
+
+        position:absolute;
+
+        top:53%;
+
+        color:#8ba695;
+
+        font-size:10px;
+
+      }
+
+
+      .left-focus{
+
+        left:38%;
+
+      }
+
+
+      .right-focus{
+
+        right:38%;
+
+      }
+
+
+      .sg-slider-label{
+
+        display:block;
+
+        margin-top:18px;
+
+        color:#aeb8af;
+
+        font-size:11px;
+
+      }
+
+
+      .sg-slider-label span{
+
+        display:block;
+
+        margin-bottom:8px;
+
+      }
+
+
+      .sg-slider-label input{
+
+        display:block;
+
+        width:100%;
+
+        accent-color:#65f28b;
+
+      }
+
+
+      .lens-reading,
+      .planet-reading,
+      .weather-reading{
+
+        margin-top:13px;
+
+        padding:10px 12px;
+
+        border-radius:10px;
+
+        background:
+          rgba(101,242,139,.045);
+
+        color:#65f28b;
+
+        font-size:11px;
+
+        border:
+          1px solid
+          rgba(101,242,139,.14);
+
+      }
+
+
+      /* =====================================================
+         MOLECULE
+         ===================================================== */
+
+      .molecule-target{
+
+        display:flex;
+
+        align-items:center;
+
+        justify-content:space-between;
+
+        gap:20px;
+
+        padding:17px;
+
+        border:
+          1px solid
+          rgba(255,255,255,.10);
+
+        border-radius:14px;
+
+        background:
+          rgba(101,242,139,.04);
+
+      }
+
+
+      .molecule-target small{
+
+        display:block;
+
+        color:#7f9085;
+
+        font-size:8px;
+
+        letter-spacing:.15em;
+
+        margin-bottom:4px;
+
+      }
+
+
+      .molecule-target strong{
+
+        display:block;
+
+        color:#65f28b;
+
+        font-size:18px;
+
+      }
+
+
+      .molecule-target span{
+
+        font-size:23px;
+
+        font-weight:800;
+
+        color:#f4f5ef;
+
+      }
+
+
+      .atom-options,
+      .molecule-slots{
+
+        display:flex;
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+        gap:10px;
+
+        margin-top:20px;
+
+        min-height:60px;
+
+      }
+
+
+      .atom-button{
+
+        width:56px;
+        height:56px;
+
+        border-radius:50%;
+
+        border:
+          1px solid
+          rgba(101,242,139,.30);
+
+        background:
+          rgba(101,242,139,.08);
+
+        color:#65f28b;
+
+        font-size:18px;
+
+        font-weight:800;
+
+        cursor:pointer;
+
+        transition:.18s ease;
+
+      }
+
+
+      .atom-button:hover{
+
+        background:#65f28b;
+
+        color:#061008;
+
+        transform:
+          translateY(-2px);
+
+      }
+
+
+      .molecule-slots span{
+
+        width:58px;
+        height:58px;
+
+        display:grid;
+        place-items:center;
+
+        border:
+          1px solid
+          rgba(255,255,255,.15);
+
+        border-radius:50%;
+
+        background:#111b15;
+
+        color:#f4f5ef;
+
+        font-weight:800;
+
+      }
+
+
+      /* =====================================================
+         REACTION
+         ===================================================== */
+
+      .reaction-score{
+
+        text-align:right;
+
+        color:#8e9c91;
+
+        font-size:10px;
+
+        font-weight:800;
+
+        margin-bottom:8px;
+
+      }
+
+
+      .reaction-question{
+
+        padding:30px;
+
+        text-align:center;
+
+        border:
+          1px solid
+          rgba(255,255,255,.10);
+
+        border-radius:18px;
+
+        color:#65f28b;
+
+        font-size:28px;
+
+        font-weight:700;
+
+      }
+
+
+      .reaction-options{
+
+        display:grid;
+
+        grid-template-columns:
+          repeat(3,1fr);
+
+        gap:10px;
+
+        margin-top:16px;
+
+      }
+
+
+      .reaction-option{
+
+        min-height:60px;
+
+        padding:14px;
+
+        border:
+          1px solid
+          rgba(255,255,255,.12);
+
+        border-radius:12px;
+
+        background:
+          rgba(255,255,255,.035);
+
+        color:#dfe7e1;
+
+        font-size:13px;
+
+        font-weight:700;
+
+        cursor:pointer;
+
+        transition:.18s ease;
+
+      }
+
+
+      .reaction-option:hover{
+
+        border-color:
+          rgba(101,242,139,.42);
+
+        background:
+          rgba(101,242,139,.08);
+
+        color:#65f28b;
+
+      }
+
+
+      /* =====================================================
+         ATOMIC STRUCTURE
+         ===================================================== */
+
+      .atom-target-card{
+
+        display:grid;
+
+        grid-template-columns:
+          1fr auto auto;
+
+        align-items:center;
+
+        gap:20px;
+
+        padding:20px;
+
+        border:
+          1px solid
+          rgba(101,242,139,.18);
+
+        border-radius:18px;
+
+        background:
+          rgba(101,242,139,.045);
+
+      }
+
+
+      .atom-target-card span{
+
+        color:#7e8e83;
+
+        font-size:9px;
+
+        letter-spacing:.16em;
+
+        font-weight:800;
+
+      }
+
+
+      .atom-target-card strong{
+
+        color:#65f28b;
+
+        font-size:18px;
+
+      }
+
+
+      .atom-target-card b{
+
+        width:48px;
+        height:48px;
+
+        display:grid;
+        place-items:center;
+
+        border-radius:50%;
+
+        background:
+          #101c14;
+
+        border:
+          1px solid
+          rgba(101,242,139,.24);
+
+        font-size:18px;
+
+      }
+
+
+      .particle-controls{
+
+        display:grid;
+
+        grid-template-columns:
+          repeat(3,1fr);
+
+        gap:12px;
+
+        margin:20px 0;
+
+      }
+
+
+      .particle-controls label{
+
+        color:#aeb8af;
+
+        font-size:10px;
+
+        text-align:center;
+
+      }
+
+
+      .number-control{
+
+        display:flex;
+
+        align-items:center;
+
+        justify-content:center;
+
+        gap:10px;
+
+        margin-top:8px;
+
+      }
+
+
+      .number-control button{
+
+        width:34px;
+        height:34px;
+
+        border-radius:50%;
+
+        border:
+          1px solid
+          rgba(101,242,139,.30);
+
+        background:
+          rgba(101,242,139,.07);
+
+        color:#65f28b;
+
+        cursor:pointer;
+
+        font-size:18px;
+
+      }
+
+
+      .number-control span{
+
+        min-width:30px;
+
+        color:#f4f5ef;
+
+        font-size:16px;
+
+        font-weight:800;
+
+      }
+
+
+      /* =====================================================
+         CELL
+         ===================================================== */
+
+      .cell-board{
+
+        display:flex;
+
+        align-items:center;
+
+        justify-content:center;
+
+        min-height:290px;
+
+      }
+
+
+      .cell-membrane{
+
+        position:relative;
+
+        width:290px;
+        height:210px;
+
+        border-radius:
+          48% 52% 55% 45% /
+          48% 42% 58% 52%;
+
+        border:
+          2px solid
+          rgba(101,242,139,.45);
+
+        background:
+          radial-gradient(
+            circle at 50% 45%,
+            rgba(101,242,139,.09),
+            rgba(8,18,12,.92)
+          );
+
+        box-shadow:
+          inset 0 0 45px
+          rgba(101,242,139,.08);
+
+      }
+
+
+      .cell-organelle{
+
+        position:absolute;
+
+        display:grid;
+        place-items:center;
+
+        border-radius:50%;
+
+        border:
+          1px solid
+          rgba(255,255,255,.14);
+
+        background:
+          #111b15;
+
+        color:#6d7e72;
+
+        font-weight:800;
+
+        transition:.2s ease;
+
+      }
+
+
+      .cell-organelle.active{
+
+        color:#65f28b;
+
+        border-color:
+          rgba(101,242,139,.50);
+
+        background:
+          rgba(101,242,139,.10);
+
+        box-shadow:
+          0 0 22px
+          rgba(101,242,139,.12);
+
+      }
+
+
+      .nucleus-zone{
+
+        width:85px;
+        height:85px;
+
+        left:103px;
+        top:62px;
+
+      }
+
+
+      .mito-zone{
+
+        width:48px;
+        height:28px;
+
+        left:40px;
+        top:48px;
+
+        border-radius:50%;
+
+      }
+
+
+      .ribo-zone{
+
+        width:30px;
+        height:30px;
+
+        right:45px;
+        top:45px;
+
+      }
+
+
+      .vacuole-zone{
+
+        width:45px;
+        height:45px;
+
+        right:40px;
+        bottom:35px;
+
+      }
+
+
+      .cell-options{
+
+        display:flex;
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+        gap:9px;
+
+      }
+
+
+      .cell-option{
+
+        padding:10px 13px;
+
+        border-radius:11px;
+
+        border:
+          1px solid
+          rgba(101,242,139,.25);
+
+        background:
+          rgba(101,242,139,.05);
+
+        color:#aeb8af;
+
+        cursor:pointer;
+
+        font-size:10px;
+
+        font-weight:700;
+
+      }
+
+
+      .cell-option.selected{
+
+        background:#65f28b;
+
+        color:#061008;
+
+      }
+
+
+      /* =====================================================
+         BODY
+         ===================================================== */
+
+      .body-explorer{
+
+        display:grid;
+
+        grid-template-columns:
+          220px 1fr;
+
+        gap:20px;
+
+        align-items:center;
+
+      }
+
+
+      .body-figure{
+
+        position:relative;
+
+        height:310px;
+
+        display:flex;
+
+        flex-direction:column;
+
+        align-items:center;
+
+        color:#65f28b;
+
+      }
+
+
+      .body-head{
+
+        font-size:70px;
+
+        line-height:1;
+
+      }
+
+
+      .body-torso{
+
+        font-size:145px;
+
+        line-height:.75;
+
+        opacity:.45;
+
+      }
+
+
+      .body-heart{
+
+        position:absolute;
+
+        top:130px;
+
+        font-size:32px;
+
+      }
+
+
+      .body-lung{
+
+        position:absolute;
+
+        top:125px;
+
+        font-size:25px;
+
+        opacity:.65;
+
+      }
+
+
+      .body-lung.left{
+
+        margin-left:-55px;
+
+      }
+
+
+      .body-lung.right{
+
+        margin-left:55px;
+
+      }
+
+
+      .body-system-grid{
+
+        display:grid;
+
+        grid-template-columns:
+          repeat(2,1fr);
+
+        gap:10px;
+
+      }
+
+
+      .body-system{
+
+        padding:15px;
+
+        display:flex;
+
+        align-items:center;
+
+        gap:10px;
+
+        text-align:left;
+
+        border:
+          1px solid
+          rgba(255,255,255,.10);
+
+        border-radius:14px;
+
+        background:
+          rgba(255,255,255,.025);
+
+        color:#dfe7e1;
+
+        cursor:pointer;
+
+        transition:.18s ease;
+
+      }
+
+
+      .body-system:hover,
+      .body-system.active{
+
+        border-color:
+          rgba(101,242,139,.35);
+
+        background:
+          rgba(101,242,139,.07);
+
+      }
+
+
+      .body-system-icon{
+
+        font-size:22px;
+
+      }
+
+
+      .body-system strong{
+
+        font-size:11px;
+
+      }
+
+
+      .body-info{
+
+        margin-top:18px;
+
+        padding:17px;
+
+        border:
+          1px solid
+          rgba(255,255,255,.10);
+
+        border-radius:14px;
+
+        background:
+          rgba(255,255,255,.025);
+
+        color:#aeb8af;
+
+        font-size:11px;
+
+        line-height:1.7;
+
+      }
+
+
+      .body-info strong{
+
+        color:#65f28b;
+
+        font-size:14px;
+
+      }
+
+
+      .body-info p{
+
+        margin:
+          7px 0 0;
+
+      }
+
+
+      /* =====================================================
+         PLANT
+         ===================================================== */
+
+      .plant-lab{
+
+        position:relative;
+
+        height:330px;
+
+        display:flex;
+
+        flex-direction:column;
+
+        align-items:center;
+
+        justify-content:flex-end;
+
+      }
+
+
+      .plant-canopy{
+
+        font-size:80px;
+
+        margin-bottom:-5px;
+
+      }
+
+
+      .plant-stem{
+
+        position:relative;
+
+        width:55px;
+
+        height:190px;
+
+        border-radius:30px;
+
+        background:
+          rgba(101,242,139,.10);
+
+        border:
+          1px solid
+          rgba(101,242,139,.24);
+
+      }
+
+
+      .xylem-line{
+
+        position:absolute;
+
+        left:50%;
+
+        top:5%;
+
+        bottom:5%;
+
+        width:4px;
+
+        transform:
+          translateX(-50%);
+
+        border-radius:10px;
+
+        background:
+          rgba(101,242,139,.28);
+
+      }
+
+
+      .water-particle{
+
+        position:absolute;
+
+        left:50%;
+
+        bottom:0;
+
+        transform:
+          translate(-50%,50%);
+
+        font-size:24px;
+
+        transition:
+          .35s ease;
+
+      }
+
+
+      .plant-roots{
+
+        font-size:65px;
+
+        line-height:.8;
+
+      }
+
+
+      .plant-progress{
+
+        height:7px;
+
+        margin:
+          10px 0 16px;
+
+        overflow:hidden;
+
+        border-radius:10px;
+
+        background:
+          rgba(255,255,255,.07);
+
+      }
+
+
+      .plant-progress div{
+
+        width:0;
+
+        height:100%;
+
+        background:#65f28b;
+
+        transition:.3s ease;
+
+      }
+
+
+      /* =====================================================
+         PLANET
+         ===================================================== */
+
+      .planet-preview{
+
+        height:230px;
+
+        display:grid;
+
+        place-items:center;
+
+        border:
+          1px solid
+          rgba(255,255,255,.10);
+
+        border-radius:20px;
+
+        background:
+          radial-gradient(
+            circle at center,
+            rgba(101,242,139,.08),
+            transparent 55%
+          ),
+          #08110c;
+
+        transition:
+          .3s ease;
+
+      }
+
+
+      .planet-globe{
+
+        font-size:110px;
+
+        filter:
+          drop-shadow(
+            0 0 25px
+            rgba(101,242,139,.15)
+          );
+
+        transition:.3s ease;
+
+      }
+
+
+      .planet-preview.planet-dry
+      .planet-globe{
+
+        filter:
+          grayscale(.55)
+          saturate(.55);
+
+      }
+
+
+      .planet-preview.planet-hot
+      .planet-globe{
+
+        transform:
+          scale(1.06);
+
+      }
+
+
+      .planet-preview.planet-cold
+      .planet-globe{
+
+        opacity:.72;
+
+      }
+
+
+      .planet-preview.planet-thick
+      .planet-globe{
+
+        filter:
+          drop-shadow(
+            0 0 35px
+            rgba(101,242,139,.28)
+          );
+
+      }
+
+
+      .planet-controls{
+
+        display:grid;
+
+        grid-template-columns:
+          repeat(3,1fr);
+
+        gap:13px;
+
+        margin-top:18px;
+
+      }
+
+
+      .planet-controls label,
+      .weather-controls label{
+
+        display:block;
+
+        color:#aeb8af;
+
+        font-size:10px;
+
+      }
+
+
+      .planet-controls span,
+      .weather-controls span{
+
+        display:block;
+
+        margin-bottom:8px;
+
+      }
+
+
+      .planet-controls input,
+      .weather-controls input{
+
+        width:100%;
+
+        accent-color:#65f28b;
+
+      }
+
+
+      /* =====================================================
+         WEATHER
+         ===================================================== */
+
+      .weather-sky{
+
+        position:relative;
+
+        height:250px;
+
+        overflow:hidden;
+
+        border:
+          1px solid
+          rgba(255,255,255,.10);
+
+        border-radius:20px;
+
+        background:
+          linear-gradient(
+            180deg,
+            #0c1a13,
+            #07100b
+          );
+
+      }
+
+
+      .weather-sun{
+
+        position:absolute;
+
+        right:12%;
+
+        top:15%;
+
+        font-size:58px;
+
+        transition:
+          opacity .25s;
+
+      }
+
+
+      .weather-cloud{
+
+        position:absolute;
+
+        left:25%;
+
+        top:30%;
+
+        font-size:70px;
+
+        transition:
+          opacity .25s;
+
+      }
+
+
+      .weather-rain{
+
+        position:absolute;
+
+        left:28%;
+
+        top:58%;
+
+        color:#65f28b;
+
+        letter-spacing:14px;
+
+        transition:
+          opacity .25s;
+
+      }
+
+
+      .weather-controls{
+
+        display:grid;
+
+        grid-template-columns:
+          repeat(3,1fr);
+
+        gap:13px;
+
+        margin-top:18px;
+
+      }
+
+
+      /* =====================================================
+         MOON
+         ===================================================== */
+
+      .moon-lab{
+
+        position:relative;
+
+        width:100%;
+
+        height:330px;
+
+        display:grid;
+
+        place-items:center;
+
+        overflow:hidden;
+
+        border:
+          1px solid
+          rgba(255,255,255,.10);
+
+        border-radius:20px;
+
+        background:
+          radial-gradient(
+            circle at center,
+            rgba(101,242,139,.05),
+            transparent 55%
+          ),
+          #07100b;
+
+      }
+
+
+      .moon-sun{
+
+        position:absolute;
+
+        left:8%;
+
+        top:40%;
+
+        font-size:50px;
+
+      }
+
+
+      .moon-earth{
+
+        position:absolute;
+
+        left:50%;
+        top:50%;
+
+        transform:
+          translate(-50%,-50%);
+
+        font-size:58px;
+
+        z-index:2;
+
+      }
+
+
+      .moon-orbit{
+
+        position:absolute;
+
+        left:50%;
+        top:50%;
+
+        width:220px;
+        height:220px;
+
+        transform:
+          translate(-50%,-50%);
+
+        border:
+          1px dashed
+          rgba(101,242,139,.24);
+
+        border-radius:50%;
+
+      }
+
+
+      .moving-moon{
+
+        position:absolute;
+
+        left:50%;
+        top:50%;
+
+        font-size:29px;
+
+        transform:
+          translate(-50%,-50%);
+
+        transition:
+          .12s linear;
+
+      }
+
+
+      .moon-phase-name{
+
+        margin-top:15px;
+
+        text-align:center;
+
+        color:#65f28b;
+
+        font-family:
+          Caveat,
+          cursive;
+
+        font-size:25px;
+
+      }
+
+
+      /* =====================================================
+         MOBILE
+         ===================================================== */
+
+      @media(max-width:700px){
+
+        #scienceGameOverlay{
+
+          padding:10px;
+
+          align-items:flex-end;
+
+        }
+
+
+        .sg-window{
+
+          width:100%;
+
+          max-height:94vh;
+
+          border-radius:
+            20px 20px 0 0;
+
+        }
+
+
+        .sg-header{
+
+          padding:17px;
+
+        }
+
+
+        .sg-content{
+
+          padding:18px;
+
+        }
+
+
+        .sg-title{
+
+          font-size:29px;
+
+        }
+
+
+        .circuit-board{
+
+          min-height:210px;
+
+          padding:18px;
+
+          gap:8px;
+
+        }
+
+
+        .circuit-component{
+
+          width:82px;
+          height:82px;
+
+          font-size:30px;
+
+        }
+
+
+        .circuit-component small{
+
+          font-size:8px;
+
+        }
+
+
+        .magnetic-maze{
+
+          height:300px;
+
+        }
+
+
+        .lens-lab{
+
+          height:250px;
+
+        }
+
+
+        .reaction-options{
+
+          grid-template-columns:
+            1fr;
+
+        }
+
+
+        .particle-controls{
+
+          grid-template-columns:
+            1fr;
+
+        }
+
+
+        .atom-target-card{
+
+          grid-template-columns:
+            1fr auto;
+
+        }
+
+
+        .atom-target-card span{
+
+          grid-column:
+            1 / -1;
+
+        }
+
+
+        .body-explorer{
+
+          grid-template-columns:
+            1fr;
+
+        }
+
+
+        .body-figure{
+
+          height:210px;
+
+        }
+
+
+        .body-system-grid{
+
+          grid-template-columns:
+            1fr;
+
+        }
+
+
+        .body-torso{
+
+          font-size:110px;
+
+        }
+
+
+        .plant-lab{
+
+          height:280px;
+
+        }
+
+
+        .planet-preview{
+
+          height:190px;
+
+        }
+
+
+        .planet-globe{
+
+          font-size:85px;
+
+        }
+
+
+        .planet-controls,
+        .weather-controls{
+
+          grid-template-columns:
+            1fr;
+
+        }
+
+
+        .weather-sky{
+
+          height:210px;
+
+        }
+
+
+        .moon-lab{
+
+          height:270px;
+
+        }
+
+
+        .moon-orbit{
+
+          width:180px;
+          height:180px;
+
+        }
+
+      }
+
+
+      @media(prefers-reduced-motion:reduce){
+
+        *{
+
+          scroll-behavior:auto !important;
+          transition:none !important;
+          animation:none !important;
+
+        }
+
+      }
+
+    `;
+
+    document.head.appendChild(
+      style
+    );
+
+  }
+
+})();
+
+
+/* =========================================================
+   END OF SCIENCE GAMES ENGINE
+   ========================================================= */
