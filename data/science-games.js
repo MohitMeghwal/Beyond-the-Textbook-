@@ -946,7 +946,295 @@ const scienceGames = [
       });
 
   }
+function circuitBuilder(game){
 
+    createShell(game);
+
+    /* ---- terminal coordinates on a 400x300 board ---- */
+
+    const T = {
+      battPos:    { x: 70,  y: 145 },
+      battNeg:    { x: 70,  y: 235 },
+      swLeft:     { x: 150, y: 60  },
+      swRight:    { x: 250, y: 60  },
+      bulbTop:    { x: 330, y: 145 },
+      bulbBottom: { x: 330, y: 235 }
+    };
+
+    function pairKey(a,b){
+      return [a,b].sort().join("|");
+    }
+
+    const REQUIRED = [
+      pairKey("battPos","swLeft"),
+      pairKey("swRight","bulbTop"),
+      pairKey("bulbBottom","battNeg")
+    ];
+
+    const LEVELS = [
+      {
+        instruction: makeText(
+          "Terminal (gol bindu) par tap karo, phir doosre terminal par tap karo — battery, switch aur bulb ko jodkar circuit poora karo.",
+          "टर्मिनल (गोल बिंदु) पर टैप करो, फिर दूसरे टर्मिनल पर टैप करो — बैटरी, स्विच और बल्ब को जोड़कर परिपथ पूरा करो।"
+        ),
+        initialGood: [],
+        initialBroken: [],
+        switchLocked: true,
+        switchStart: true
+      },
+      {
+        instruction: makeText(
+          "Pehle circuit poora jodo, phir neeche diye switch button se use band (close) karo — tabhi bulb jalega.",
+          "पहले परिपथ पूरा जोड़ो, फिर नीचे दिए स्विच बटन से उसे बंद करो — तभी बल्ब जलेगा।"
+        ),
+        initialGood: [],
+        initialBroken: [],
+        switchLocked: false,
+        switchStart: false
+      },
+      {
+        instruction: makeText(
+          "Do connections theek hain, ek toota (broken) hai — use dhoondo aur wahi terminal jodkar theek karo.",
+          "दो कनेक्शन ठीक हैं, एक टूटा है — उसे ढूंढो और वही टर्मिनल जोड़कर ठीक करो।"
+        ),
+        initialGood: [
+          pairKey("battPos","swLeft"),
+          pairKey("bulbBottom","battNeg")
+        ],
+        initialBroken: [
+          pairKey("swRight","bulbTop")
+        ],
+        switchLocked: true,
+        switchStart: true
+      }
+    ];
+
+    let levelIndex = 0;
+    let connections = {};
+    let switchClosed = true;
+    let selected = null;
+    let wrongAttempt = false;
+
+    function loadLevel(index){
+
+      const level = LEVELS[index];
+
+      connections = {};
+
+      level.initialGood.forEach(key => { connections[key] = "good"; });
+      level.initialBroken.forEach(key => { connections[key] = "broken"; });
+
+      switchClosed = level.switchStart;
+      selected = null;
+      wrongAttempt = false;
+
+      render();
+
+    }
+
+    function isComplete(){
+
+      const wiresDone = REQUIRED.every(key => connections[key] === "good");
+
+      return wiresDone && switchClosed;
+
+    }
+
+    function line(p1,p2,cls){
+
+      return `<line x1="${T[p1].x}" y1="${T[p1].y}" x2="${T[p2].x}" y2="${T[p2].y}" class="${cls}"/>`;
+
+    }
+
+    function render(){
+
+      const level = LEVELS[levelIndex];
+
+      let wiresSvg = "";
+
+      REQUIRED.forEach(key => {
+
+        const [a,b] = key.split("|");
+        const state = connections[key];
+
+        if(state === "good"){
+          wiresSvg += line(a,b,"circuit-wire wire-good");
+        }else if(state === "broken"){
+          wiresSvg += line(a,b,"circuit-wire wire-broken");
+        }
+
+      });
+
+      const complete = isComplete();
+
+      gameRoot.innerHTML = `
+
+        <div class="sg-intro">${text(level.instruction)}</div>
+
+        <div class="circuit-level-bar">
+          ${LEVELS.map((l,i)=>`<span class="circuit-dot ${i===levelIndex?'active':''} ${i<levelIndex?'done':''}"></span>`).join("")}
+          <small>${text(makeText("Level","स्तर"))} ${levelIndex+1} / ${LEVELS.length}</small>
+        </div>
+
+        <div class="circuit-board-v2">
+
+          <svg viewBox="0 0 400 300" class="circuit-svg">
+
+            ${wiresSvg}
+
+            <line x1="${T.swLeft.x}" y1="${T.swLeft.y}" x2="${T.swRight.x}" y2="${T.swRight.y}"
+              class="switch-lever ${switchClosed ? 'closed' : 'open'}"/>
+
+            <text x="70" y="192" class="circuit-emoji" text-anchor="middle">🔋</text>
+            <text x="330" y="192" class="circuit-emoji ${complete ? 'bulb-lit':''}" text-anchor="middle">💡</text>
+
+            ${Object.keys(T).map(id => `
+              <g class="term-group" data-id="${id}">
+                <circle cx="${T[id].x}" cy="${T[id].y}" r="24" class="term-hit"></circle>
+                <circle cx="${T[id].x}" cy="${T[id].y}" r="10" class="term-dot ${selected===id?'selected':''}"></circle>
+              </g>
+            `).join("")}
+
+          </svg>
+
+        </div>
+
+        ${level.switchLocked ? "" : `
+          <button class="sg-button circuit-switch-btn" id="switchToggle">
+            ${switchClosed
+              ? text(makeText("Switch: ON — tap to open","स्विच: चालू — बंद करने के लिए टैप करो"))
+              : text(makeText("Switch: OFF — tap to close","स्विच: बंद — चालू करने के लिए टैप करो"))
+            }
+          </button>
+        `}
+
+        ${statusBox()}
+
+      `;
+
+      gameRoot.querySelectorAll(".term-group").forEach(group => {
+
+        group.addEventListener("click", function(){
+          handleTerminalTap(this.dataset.id);
+        });
+
+      });
+
+      const toggleBtn = gameRoot.querySelector("#switchToggle");
+
+      if(toggleBtn){
+
+        toggleBtn.addEventListener("click", function(){
+          switchClosed = !switchClosed;
+          render();
+        });
+
+      }
+
+      if(complete){
+
+        if(levelIndex === LEVELS.length - 1){
+
+          setStatus(
+            text(makeText(
+              "Circuit poora! Sabhi levels complete — tumne current, switch aur broken wire dhoondna seekh liya.",
+              "परिपथ पूरा! सभी स्तर पूरे — तुमने धारा, स्विच और टूटा तार ढूंढना सीख लिया।"
+            )),
+            true
+          );
+
+        }else{
+
+          setStatus(
+            text(makeText(
+              "Circuit poora! Current bulb tak pahunch raha hai.",
+              "परिपथ पूरा! धारा बल्ब तक पहुँच रही है।"
+            )),
+            true
+          );
+
+          setTimeout(showNextButton, 600);
+
+        }
+
+      }else if(wrongAttempt){
+
+        setStatus(
+          text(makeText(
+            "Ye connection sahi nahi hai. Dusra terminal try karo.",
+            "यह कनेक्शन सही नहीं है। दूसरा टर्मिनल आज़माओ।"
+          ))
+        );
+
+        wrongAttempt = false;
+
+      }else{
+
+        setStatus(
+          text(makeText(
+            "Terminal (bindu) par tap karke connections jodo.",
+            "टर्मिनल (बिंदु) पर टैप करके कनेक्शन जोड़ो।"
+          ))
+        );
+
+      }
+
+    }
+
+    function showNextButton(){
+
+      const box = gameRoot.querySelector(".sg-status");
+
+      if(!box) return;
+
+      const btn = document.createElement("button");
+
+      btn.className = "sg-button circuit-next-btn";
+      btn.textContent = text(makeText("Next Level →","अगला स्तर →"));
+
+      btn.addEventListener("click", function(){
+        levelIndex++;
+        loadLevel(levelIndex);
+      });
+
+      box.insertAdjacentElement("afterend", btn);
+
+    }
+
+    function handleTerminalTap(id){
+
+      if(isComplete()) return;
+
+      if(selected === null){
+        selected = id;
+        render();
+        return;
+      }
+
+      if(selected === id){
+        selected = null;
+        render();
+        return;
+      }
+
+      const key = pairKey(selected, id);
+
+      if(REQUIRED.includes(key)){
+        connections[key] = "good";
+        wrongAttempt = false;
+      }else{
+        wrongAttempt = true;
+      }
+
+      selected = null;
+
+      render();
+
+    }
+
+    loadLevel(0);
+
+}
 
   /* =======================================================
      2. MAGNETIC MAZE
@@ -3852,6 +4140,113 @@ const scienceGames = [
         margin-top:18px;
 
       }
+      /*
+
+  .circuit-level-bar{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    margin-bottom:14px;
+    color:#8e9c91;
+    font-size:10px;
+  }
+
+  .circuit-level-bar small{
+    margin-left:6px;
+  }
+
+  .circuit-dot{
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    background:rgba(255,255,255,.15);
+  }
+
+  .circuit-dot.active{
+    background:#65f28b;
+  }
+
+  .circuit-dot.done{
+    background:rgba(101,242,139,.5);
+  }
+
+  .circuit-board-v2{
+    border:1px solid rgba(255,255,255,.10);
+    border-radius:20px;
+    background:radial-gradient(circle at center, rgba(101,242,139,.06), transparent 55%), #09120d;
+    padding:10px;
+  }
+
+  .circuit-svg{
+    width:100%;
+    height:auto;
+    display:block;
+  }
+
+  .term-hit{
+    fill:rgba(0,0,0,.01);
+    cursor:pointer;
+  }
+
+  .term-dot{
+    fill:#111d15;
+    stroke:rgba(255,255,255,.35);
+    stroke-width:2;
+    transition:.15s ease;
+  }
+
+  .term-dot.selected{
+    fill:#65f28b;
+    stroke:#65f28b;
+  }
+
+  .circuit-wire{
+    stroke-linecap:round;
+  }
+
+  .wire-good{
+    stroke:#65f28b;
+    stroke-width:4;
+  }
+
+  .wire-broken{
+    stroke:#ff6b6b;
+    stroke-width:3;
+    stroke-dasharray:6 6;
+  }
+
+  .switch-lever{
+    stroke-width:4;
+    stroke-linecap:round;
+    transition:.2s ease;
+  }
+
+  .switch-lever.closed{
+    stroke:#65f28b;
+  }
+
+  .switch-lever.open{
+    stroke:#ff6b6b;
+    stroke-dasharray:4 10;
+  }
+
+  .circuit-emoji{
+    font-size:40px;
+  }
+
+  .bulb-lit{
+    filter:drop-shadow(0 0 14px rgba(255,220,70,.9));
+  }
+
+  .circuit-switch-btn,
+  .circuit-next-btn{
+    display:block;
+    width:100%;
+    text-align:center;
+    margin-top:14px;
+  }
+
+*/
 
 
       /* =====================================================
