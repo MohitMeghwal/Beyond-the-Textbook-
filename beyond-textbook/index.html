@@ -1310,17 +1310,10 @@ section{
 }
 
 .space-visual{
-  font-size:60px;
-
-  line-height:1;
-
-  filter:
-    drop-shadow(
-      0 10px 22px
-      rgba(0,0,0,.35)
-    );
+  font-size:40px;
+  line-height:1.2;
+  overflow-wrap:anywhere;
 }
-
 .space-label{
   color:var(--green);
 
@@ -1872,7 +1865,7 @@ body.hindi small[data-lang="hi"]{
         rgba(5,13,8,.70),
         rgba(5,13,8,.88)
       ),
-      url("https://res.cloudinary.com/eq1jpw1h/image/upload/v1789361606/file_00000000d97082108f146c9c111b6e2d.png")
+      url("https://res.cloudinary.com/eq1jpw1h/image/upload/v1789914786/file_0000000038008208ab3789b135a73e77.png")
       67% center/cover no-repeat;
   }
 
@@ -3492,9 +3485,9 @@ function renderSpaceFacts(){
     (fact,index) => {
 
       const visual =
-        fact.visual ??
-        fact.icon ??
-        ["☀️","🌍","⭐","🕳️","🌌","🪐","🔥","🌙"][index % 8];
+  getText(fact.visual) ||
+  getText(fact.icon) ||
+  ["☀️","🌍","⭐","🕳️","🌌","🪐","🔥","🌙"][index % 8];
 
       const label =
         getText(
