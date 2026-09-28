@@ -1,24 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
-<title>Science Beyond Earth | Science Beyond the Textbook</title>
+<meta name="description" content="Beyond the Textbook — challenge your scientific thinking, explore discoveries, look beyond Earth, and discover scientific fields.">
+<meta name="theme-color" content="#07100b">
 
-<meta
-  name="description"
-  content="Explore the universe beyond Earth through visual science facts, scientific fields, and curiosity-driven exploration."
->
+<title>Beyond the Textbook | Science Beyond the Textbook</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <style>
-
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&display=swap');
-
 
 /* =========================================================
    ROOT
@@ -42,8 +37,8 @@
   --shadow:0 18px 50px rgba(0,0,0,.4);
 
   --max:1280px;
+  --radius:20px;
 }
-
 
 /* =========================================================
    RESET
@@ -61,62 +56,61 @@ html{
 
 body{
   min-height:100vh;
-
-  background:
-    radial-gradient(circle at 15% 10%,rgba(101,242,139,.08),transparent 28%),
-    radial-gradient(circle at 85% 35%,rgba(53,201,104,.06),transparent 30%),
-    linear-gradient(180deg,#07100b,#09120d 45%,#07100b);
-
   color:var(--text);
 
-  font-family:"Inter","Noto Sans Devanagari",sans-serif;
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(53,130,73,.22),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 10% 40%,
+      rgba(53,130,73,.08),
+      transparent 25%
+    ),
+    linear-gradient(
+      180deg,
+      #07100b 0%,
+      #0a130e 45%,
+      #060b08 100%
+    );
+
+  font-family:
+    Inter,
+    "Noto Sans Devanagari",
+    sans-serif;
 
   overflow-x:hidden;
 }
 
 body::before{
   content:"";
-
   position:fixed;
   inset:0;
-
-  pointer-events:none;
-  z-index:-2;
-
-  background:
-    radial-gradient(circle at 20% 20%,rgba(101,242,139,.04) 1px,transparent 1px),
-    radial-gradient(circle at 80% 70%,rgba(255,255,255,.035) 1px,transparent 1px);
-
-  background-size:100px 100px,140px 140px;
-
-  opacity:.7;
-}
-
-body::after{
-  content:"";
-
-  position:fixed;
-  inset:0;
-
   pointer-events:none;
   z-index:100;
 
-  opacity:.025;
+  opacity:.11;
 
   background-image:
-    repeating-linear-gradient(
-      0deg,
-      rgba(255,255,255,.5) 0,
-      rgba(255,255,255,.5) 1px,
-      transparent 1px,
-      transparent 4px
+    radial-gradient(
+      circle at 20% 20%,
+      #fff 0 1px,
+      transparent 1.5px
+    ),
+    radial-gradient(
+      circle at 80% 70%,
+      #fff 0 1px,
+      transparent 1.5px
     );
+
+  background-size:
+    180px 180px,
+    240px 240px;
+
+  mix-blend-mode:screen;
 }
-
-
-/* =========================================================
-   COMMON
-========================================================= */
 
 a{
   color:inherit;
@@ -127,11 +121,42 @@ button{
   font:inherit;
 }
 
-.container{
-  width:min(var(--max),calc(100% - 40px));
-  margin:auto;
+button,
+a{
+  -webkit-tap-highlight-color:transparent;
 }
 
+img{
+  display:block;
+  max-width:100%;
+}
+
+.container{
+  width:min(
+    calc(100% - 28px),
+    var(--max)
+  );
+
+  margin-inline:auto;
+}
+
+.caveat{
+  font-family:Caveat,cursive;
+}
+
+.hi{
+  font-family:"Noto Sans Devanagari",sans-serif;
+}
+
+::selection{
+  background:rgba(101,242,139,.25);
+  color:#fff;
+}
+
+:focus-visible{
+  outline:2px solid var(--green);
+  outline-offset:3px;
+}
 
 /* =========================================================
    NAVBAR
@@ -140,33 +165,30 @@ button{
 .nav{
   position:sticky;
   top:0;
-  z-index:1000;
+  z-index:80;
+
+  width:100%;
 
   background:rgba(7,16,11,.82);
 
   backdrop-filter:blur(18px);
   -webkit-backdrop-filter:blur(18px);
 
-  border-bottom:1px solid rgba(255,255,255,.08);
+  border-bottom:1px solid rgba(255,255,255,.10);
 }
 
 .nav-inner{
-  min-height:76px;
+  min-height:72px;
 
   display:flex;
   align-items:center;
-
-  gap:24px;
+  gap:20px;
 }
-
-
-/* BRAND */
 
 .brand{
   display:flex;
   align-items:center;
-
-  gap:12px;
+  gap:10px;
 
   flex-shrink:0;
 }
@@ -178,45 +200,46 @@ button{
   display:grid;
   place-items:center;
 
-  border-radius:12px;
+  border-radius:13px;
 
-  background:rgba(101,242,139,.09);
+  background:
+    linear-gradient(
+      145deg,
+      rgba(101,242,139,.16),
+      rgba(101,242,139,.04)
+    );
 
-  border:1px solid rgba(101,242,139,.25);
+  border:1px solid rgba(101,242,139,.28);
 
-  font-size:21px;
+  color:var(--green);
+
+  font-size:22px;
 }
 
 .brand-title{
   display:flex;
   flex-direction:column;
-
   line-height:1;
 }
 
 .brand-title strong{
-  font-size:14px;
-  letter-spacing:.14em;
-  font-weight:800;
+  font-size:15px;
+  letter-spacing:1.5px;
 }
 
 .brand-title small{
   margin-top:5px;
 
-  font-size:8px;
-  letter-spacing:.17em;
-
   color:var(--muted);
+
+  font-size:8px;
+  letter-spacing:1.7px;
 }
-
-
-/* NAV LINKS */
 
 .nav-links{
   display:flex;
   align-items:center;
-
-  gap:5px;
+  gap:4px;
 
   margin-left:0;
 }
@@ -225,32 +248,32 @@ button{
 .nav-drop{
   position:relative;
 
-  padding:10px 11px;
+  padding:9px 10px;
 
   border-radius:10px;
 
-  color:#d8ddd8;
+  color:#dce4de;
 
-  font-size:13px;
-  font-weight:500;
+  font-size:12px;
+  font-weight:600;
 
-  white-space:nowrap;
+  cursor:pointer;
 
-  transition:.2s ease;
+  transition:
+    background .2s ease,
+    color .2s ease;
 }
 
 .nav-links > a:hover,
 .nav-drop:hover{
+  background:rgba(101,242,139,.08);
   color:var(--green);
-
-  background:rgba(101,242,139,.06);
 }
 
-
-/* DROPDOWN */
-
 .nav-drop{
-  cursor:pointer;
+  display:flex;
+  align-items:center;
+  gap:4px;
 }
 
 .dropdown{
@@ -259,126 +282,134 @@ button{
   top:calc(100% + 8px);
   left:0;
 
-  min-width:220px;
+  min-width:205px;
 
   padding:8px;
 
-  border-radius:15px;
+  background:rgba(11,20,15,.97);
 
-  background:rgba(10,18,13,.97);
+  border:1px solid rgba(255,255,255,.13);
 
-  border:1px solid var(--line);
+  border-radius:14px;
 
   box-shadow:var(--shadow);
+
+  backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px);
 
   opacity:0;
   visibility:hidden;
 
-  transform:translateY(-6px);
+  transform:
+    translateY(-5px);
 
-  transition:.2s ease;
+  transition:
+    opacity .18s ease,
+    transform .18s ease,
+    visibility .18s ease;
 }
 
 .nav-drop:hover > .dropdown{
   opacity:1;
   visibility:visible;
-
   transform:translateY(0);
 }
 
 .dropdown a{
   display:block;
 
-  padding:10px 12px;
+  padding:10px 11px;
 
   border-radius:9px;
 
+  color:#d6ddd8;
+
   font-size:12px;
 
-  color:#d7ddd8;
-
-  transition:.2s ease;
+  transition:
+    background .18s ease,
+    color .18s ease;
 }
 
 .dropdown a:hover{
+  background:rgba(101,242,139,.10);
   color:var(--green);
-
-  background:rgba(101,242,139,.08);
 }
-
-
-/* ACTIONS */
 
 .actions{
   margin-left:auto;
 
   display:flex;
   align-items:center;
-
-  gap:9px;
+  gap:8px;
 }
 
 .lang{
-  border:1px solid var(--line);
+  height:38px;
 
-  background:rgba(255,255,255,.035);
+  padding:0 13px;
 
-  color:#dfe5df;
+  border:1px solid rgba(255,255,255,.14);
+  border-radius:11px;
 
-  padding:9px 13px;
+  background:rgba(255,255,255,.045);
 
-  border-radius:999px;
+  color:#e5ebe6;
+
+  font-size:11px;
+  font-weight:700;
 
   cursor:pointer;
 
-  font-size:12px;
-
-  transition:.2s ease;
+  transition:
+    background .2s ease,
+    border-color .2s ease;
 }
 
 .lang:hover{
-  border-color:rgba(101,242,139,.4);
-
-  color:var(--green);
+  background:rgba(101,242,139,.08);
+  border-color:rgba(101,242,139,.30);
 }
 
 .lang span{
-  opacity:.4;
-  margin:0 4px;
+  color:#68736c;
+  margin:0 3px;
 }
 
 .lang b{
-  font-weight:600;
+  color:var(--green);
 }
 
 .icon-btn{
-  width:40px;
-  height:40px;
+  width:38px;
+  height:38px;
 
   display:grid;
   place-items:center;
 
-  border-radius:50%;
+  border:1px solid rgba(255,255,255,.14);
+  border-radius:11px;
 
-  border:1px solid var(--line);
+  background:rgba(255,255,255,.045);
 
-  background:rgba(255,255,255,.035);
-
-  color:#e9eee9;
+  color:#e7eee9;
 
   cursor:pointer;
 
-  font-size:18px;
-
-  transition:.2s ease;
+  transition:
+    background .2s ease,
+    border-color .2s ease,
+    transform .2s ease;
 }
 
 .icon-btn:hover{
-  border-color:rgba(101,242,139,.4);
-
-  color:var(--green);
+  background:rgba(101,242,139,.08);
+  border-color:rgba(101,242,139,.30);
 }
 
+.menu-btn{
+  display:none;
+}
 
 /* =========================================================
    MOBILE MENU
@@ -387,39 +418,41 @@ button{
 .mobile-menu{
   position:fixed;
 
-  top:84px;
-  right:20px;
+  top:72px;
+  left:14px;
+  right:14px;
 
-  width:min(330px,calc(100% - 40px));
+  z-index:70;
 
-  max-height:calc(100vh - 105px);
+  max-height:calc(100vh - 90px);
+  overflow:auto;
 
-  overflow-y:auto;
-
-  padding:12px;
+  padding:10px;
 
   background:rgba(8,17,12,.97);
 
-  border:1px solid var(--line);
+  border:1px solid rgba(255,255,255,.13);
 
-  border-radius:20px;
+  border-radius:16px;
 
   box-shadow:var(--shadow);
 
+  backdrop-filter:blur(20px);
+  -webkit-backdrop-filter:blur(20px);
+
   opacity:0;
   visibility:hidden;
-
   transform:translateY(-10px);
 
-  transition:.22s ease;
-
-  z-index:999;
+  transition:
+    opacity .2s ease,
+    transform .2s ease,
+    visibility .2s ease;
 }
 
 .mobile-menu.open{
   opacity:1;
   visibility:visible;
-
   transform:translateY(0);
 }
 
@@ -428,21 +461,18 @@ button{
 
   padding:13px 14px;
 
-  border-radius:11px;
+  border-radius:10px;
 
-  color:#dce2dc;
+  color:#dce5df;
 
   font-size:13px;
-
-  transition:.2s ease;
+  font-weight:600;
 }
 
 .mobile-menu a:hover{
+  background:rgba(101,242,139,.08);
   color:var(--green);
-
-  background:rgba(101,242,139,.07);
 }
-
 
 /* =========================================================
    HERO
@@ -451,263 +481,714 @@ button{
 .hero{
   position:relative;
 
-  min-height:640px;
+  min-height:570px;
 
   display:flex;
   align-items:center;
 
   overflow:hidden;
 
-  background-image:
+  background:
     linear-gradient(
       90deg,
-      rgba(7,16,11,.94) 0%,
-      rgba(7,16,11,.76) 36%,
-      rgba(7,16,11,.25) 70%,
-      rgba(7,16,11,.48) 100%
-    ),
-    linear-gradient(
-      180deg,
-      rgba(7,16,11,.18),
-      rgba(7,16,11,.68)
-    ),
-    url("https://res.cloudinary.com/eq1jpw1h/image/upload/v1789914786/file_0000000038008208ab3789b135a73e77.png");
-
-  background-size:cover;
-  background-position:center;
-  background-repeat:no-repeat;
+      rgba(5,13,8,.94) 0%,
+      rgba(5,13,8,.74) 42%,
+      rgba(5,13,8,.30) 100%
+      ),
+    url("https://res.cloudinary.com/eq1jpw1h/image/upload/v1789914786/file_0000000038008208ab3789b135a73e77.png")
+    center/cover no-repeat;
 }
 
-.hero::after{
+.hero::before{
   content:"";
 
   position:absolute;
-
-  inset:auto 0 0;
-
-  height:180px;
+  inset:0;
 
   background:
+    radial-gradient(
+      circle at 70% 50%,
+      rgba(101,242,139,.12),
+      transparent 34%
+    ),
     linear-gradient(
-      to bottom,
-      transparent,
-      #07100b
+      180deg,
+      rgba(7,16,11,.20),
+      rgba(7,16,11,.88)
     );
-
-  pointer-events:none;
 }
 
-.hero-inner{
+.hero-content{
   position:relative;
-
   z-index:2;
 
-  width:min(var(--max),calc(100% - 40px));
+  max-width:760px;
 
-  margin:auto;
-
-  padding:100px 0 130px;
+  padding:90px 0 100px;
 }
 
-.hero-copy{
-  width:min(650px,100%);
-}
-
-.eyebrow{
+.hero-kicker{
   display:inline-flex;
   align-items:center;
-
   gap:9px;
+
+  margin-bottom:18px;
 
   color:var(--green);
 
   font-size:11px;
   font-weight:700;
-
-  letter-spacing:.16em;
-
+  letter-spacing:2px;
   text-transform:uppercase;
-
-  margin-bottom:20px;
 }
 
-.eyebrow::before{
+.hero-kicker::before{
   content:"";
 
-  width:30px;
+  width:27px;
   height:1px;
 
   background:var(--green);
 }
 
 .hero h1{
-  font-family:"Caveat",cursive;
+  font-family:Caveat,cursive;
 
-  font-size:clamp(64px,8vw,112px);
+  font-size:clamp(
+    68px,
+    10vw,
+    132px
+  );
 
-  line-height:.82;
+  line-height:.78;
 
   text-transform:uppercase;
+  letter-spacing:-3px;
 
-  color:#f5f7f2;
+  margin-bottom:28px;
 }
 
 .hero h1 span{
+  display:block;
+}
+
+.hero h1 .green{
   color:var(--green);
 }
 
 .hero-description{
-  margin-top:30px;
+  max-width:620px;
 
-  max-width:560px;
+  color:#d2d9d3;
 
-  color:#d1d8d1;
-
-  font-size:16px;
-
+  font-size:17px;
   line-height:1.75;
 }
 
-.hero-actions{
-  margin-top:30px;
-
-  display:flex;
-  flex-wrap:wrap;
-
-  gap:12px;
+.hero-description [data-lang="hi"]{
+  font-family:"Noto Sans Devanagari",sans-serif;
 }
 
-.primary-btn,
-.secondary-btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-
-  min-height:46px;
-
-  padding:0 19px;
-
-  border-radius:12px;
-
-  font-size:13px;
-  font-weight:700;
-
-  transition:.22s ease;
-}
-
-.primary-btn{
-  background:var(--green);
-
-  color:#061009;
-
-  border:1px solid var(--green);
-}
-
-.primary-btn:hover{
-  transform:translateY(-2px);
-
-  background:#7af99a;
-}
-
-.secondary-btn{
-  color:#e7ece7;
-
-  background:rgba(255,255,255,.05);
-
-  border:1px solid rgba(255,255,255,.16);
-}
-
-.secondary-btn:hover{
-  border-color:rgba(101,242,139,.45);
-
-  color:var(--green);
-
-  transform:translateY(-2px);
-}
-
-.hero-note{
+.hero-caption{
   position:absolute;
 
-  right:0;
-  bottom:70px;
+  right:4%;
+  bottom:34px;
 
-  font-family:"Caveat",cursive;
+  color:rgba(255,255,255,.65);
 
-  font-size:22px;
+  font-family:Caveat,cursive;
 
-  color:rgba(255,255,255,.78);
+  font-size:25px;
 
   transform:rotate(-4deg);
 }
 
+.hero-caption::after{
+  content:"";
 
-/* =========================================================
-   SECTION
-========================================================= */
+  display:block;
 
-.section{
-  padding:105px 0;
+  width:90px;
+  height:1px;
+
+  margin-top:5px;
+  margin-left:auto;
+
+  background:rgba(101,242,139,.65);
 }
 
-.section-head{
-  display:flex;
-  justify-content:space-between;
-  align-items:flex-end;
+/* =========================================================
+   COMMON SECTION
+========================================================= */
 
-  gap:30px;
+section{
+  position:relative;
+}
 
-  margin-bottom:38px;
+.section{
+  padding:100px 0;
+}
+
+.section-header{
+  max-width:760px;
+
+  margin-bottom:40px;
 }
 
 .section-kicker{
-  font-size:10px;
-
-  letter-spacing:.18em;
-
-  text-transform:uppercase;
+  margin-bottom:8px;
 
   color:var(--green);
 
-  font-weight:700;
+  font-size:10px;
+  font-weight:800;
 
-  margin-bottom:10px;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
 }
 
 .section-title{
-  font-family:"Caveat",cursive;
+  font-family:Caveat,cursive;
 
-  font-size:clamp(42px,5vw,68px);
+  font-size:clamp(
+    45px,
+    6vw,
+    75px
+  );
 
-  line-height:.95;
+  line-height:.9;
 
   text-transform:uppercase;
 }
 
 .section-description{
-  max-width:530px;
+  margin-top:18px;
 
   color:var(--muted);
 
-  font-size:14px;
+  max-width:680px;
 
+  font-size:15px;
   line-height:1.75;
 }
 
+.section-line{
+  width:100%;
+  height:1px;
+
+  margin:30px 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(101,242,139,.45),
+      transparent
+    );
+}
 
 /* =========================================================
-   SPACE FACTS
+   SCIENCE CHALLENGES
+========================================================= */
+
+.challenge-wrap{
+  position:relative;
+
+  padding:28px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(18,29,22,.96),
+      rgba(9,16,12,.96)
+    );
+
+  border:1px solid var(--line);
+
+  border-radius:var(--radius);
+
+  box-shadow:var(--shadow);
+
+  overflow:hidden;
+}
+
+.challenge-wrap::before{
+  content:"";
+
+  position:absolute;
+
+  width:300px;
+  height:300px;
+
+  right:-120px;
+  top:-150px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(101,242,139,.13),
+      transparent 70%
+    );
+
+  pointer-events:none;
+}
+
+.challenge-top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  gap:20px;
+
+  margin-bottom:22px;
+}
+
+.challenge-count{
+  color:var(--muted);
+
+  font-size:11px;
+  font-weight:700;
+
+  letter-spacing:1px;
+  text-transform:uppercase;
+}
+
+.challenge-progress{
+  width:190px;
+  height:4px;
+
+  background:rgba(255,255,255,.08);
+
+  border-radius:99px;
+
+  overflow:hidden;
+}
+
+.challenge-progress span{
+  display:block;
+
+  width:0;
+  height:100%;
+
+  background:var(--green);
+
+  transition:width .35s ease;
+}
+
+.challenge-question{
+  position:relative;
+  z-index:1;
+
+  font-size:clamp(
+    21px,
+    3vw,
+    31px
+  );
+
+  line-height:1.4;
+
+  font-weight:700;
+
+  max-width:900px;
+}
+
+.challenge-options{
+  display:grid;
+
+  grid-template-columns:
+    repeat(2,minmax(0,1fr));
+
+  gap:12px;
+
+  margin-top:28px;
+}
+
+.challenge-option{
+  position:relative;
+
+  min-height:60px;
+
+  padding:15px 17px;
+
+  display:flex;
+  align-items:center;
+
+  gap:12px;
+
+  border:1px solid rgba(255,255,255,.12);
+
+  border-radius:14px;
+
+  background:rgba(255,255,255,.035);
+
+  color:#dfe6e0;
+
+  text-align:left;
+
+  cursor:pointer;
+
+  transition:
+    border-color .2s ease,
+    background .2s ease,
+    transform .2s ease;
+}
+
+.challenge-option:hover{
+  border-color:rgba(101,242,139,.38);
+
+  background:rgba(101,242,139,.07);
+
+  transform:translateY(-2px);
+}
+
+.option-letter{
+  flex-shrink:0;
+
+  width:32px;
+  height:32px;
+
+  display:grid;
+  place-items:center;
+
+  border-radius:9px;
+
+  background:rgba(101,242,139,.09);
+
+  border:1px solid rgba(101,242,139,.20);
+
+  color:var(--green);
+
+  font-size:12px;
+  font-weight:800;
+}
+
+.challenge-option.correct{
+  background:rgba(101,242,139,.13);
+  border-color:rgba(101,242,139,.65);
+}
+
+.challenge-option.wrong{
+  background:rgba(255,90,90,.08);
+  border-color:rgba(255,110,110,.45);
+}
+
+.challenge-option.disabled{
+  cursor:default;
+}
+
+.challenge-feedback{
+  display:none;
+
+  margin-top:20px;
+
+  padding:18px;
+
+  border-radius:14px;
+
+  background:rgba(101,242,139,.055);
+
+  border:1px solid rgba(101,242,139,.18);
+}
+
+.challenge-feedback.show{
+  display:block;
+}
+
+.feedback-title{
+  color:var(--green);
+
+  font-size:14px;
+  font-weight:800;
+
+  margin-bottom:8px;
+}
+
+.feedback-text{
+  color:#d2dad4;
+
+  font-size:14px;
+  line-height:1.7;
+}
+
+.challenge-bottom{
+  display:flex;
+  justify-content:flex-end;
+
+  margin-top:22px;
+}
+
+.primary-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:9px;
+
+  min-height:45px;
+
+  padding:0 19px;
+
+  border:1px solid rgba(101,242,139,.42);
+
+  border-radius:12px;
+
+  background:rgba(101,242,139,.10);
+
+  color:var(--green);
+
+  font-size:12px;
+  font-weight:800;
+
+  cursor:pointer;
+
+  transition:
+    background .2s ease,
+    transform .2s ease;
+}
+
+.primary-btn:hover{
+  background:rgba(101,242,139,.18);
+  transform:translateY(-2px);
+}
+
+.primary-btn:disabled{
+  opacity:.45;
+  cursor:not-allowed;
+  transform:none;
+}
+
+/* =========================================================
+   THINK LIKE A SCIENTIST
+========================================================= */
+
+.scientist-grid{
+  display:grid;
+
+  grid-template-columns:
+    repeat(2,minmax(0,1fr));
+
+  gap:16px;
+}
+
+.story{
+  border:1px solid var(--line);
+
+  border-radius:18px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(16,26,20,.94),
+      rgba(9,15,11,.94)
+    );
+
+  overflow:hidden;
+
+  box-shadow:
+    0 12px 35px rgba(0,0,0,.20);
+
+  transition:
+    border-color .2s ease,
+    transform .2s ease;
+}
+
+.story:hover{
+  border-color:rgba(101,242,139,.28);
+}
+
+.story.open{
+  border-color:rgba(101,242,139,.35);
+}
+
+.story-head{
+  width:100%;
+
+  padding:20px;
+
+  display:flex;
+  align-items:center;
+
+  gap:15px;
+
+  border:0;
+
+  background:transparent;
+
+  color:inherit;
+
+  text-align:left;
+
+  cursor:pointer;
+}
+
+.story-number{
+  width:42px;
+  height:42px;
+
+  flex-shrink:0;
+
+  display:grid;
+  place-items:center;
+
+  border-radius:12px;
+
+  background:rgba(101,242,139,.08);
+
+  border:1px solid rgba(101,242,139,.20);
+
+  color:var(--green);
+
+  font-size:12px;
+  font-weight:800;
+}
+
+.story-heading{
+  flex:1;
+}
+
+.story-scientist{
+  color:var(--green);
+
+  font-size:11px;
+  font-weight:800;
+
+  letter-spacing:1px;
+
+  text-transform:uppercase;
+}
+
+.story-title{
+  margin-top:4px;
+
+  font-size:18px;
+  font-weight:700;
+}
+
+.story-arrow{
+  width:30px;
+  height:30px;
+
+  display:grid;
+  place-items:center;
+
+  border-radius:50%;
+
+  background:rgba(255,255,255,.05);
+
+  color:var(--muted);
+
+  transition:
+    transform .25s ease,
+    color .25s ease;
+}
+
+.story.open .story-arrow{
+  transform:rotate(180deg);
+  color:var(--green);
+}
+
+.story-body{
+  display:grid;
+
+  grid-template-rows:0fr;
+
+  transition:grid-template-rows .4s ease;
+}
+
+.story.open .story-body{
+  grid-template-rows:1fr;
+}
+
+.story-body-inner{
+  overflow:hidden;
+}
+
+.story-content{
+  padding:0 20px 22px;
+
+  border-top:1px solid rgba(255,255,255,.07);
+}
+
+.story-step{
+  position:relative;
+
+  padding:19px 0 4px 27px;
+}
+
+.story-step::before{
+  content:"";
+
+  position:absolute;
+
+  left:4px;
+  top:24px;
+
+  width:9px;
+  height:9px;
+
+  border-radius:50%;
+
+  background:var(--green);
+
+  box-shadow:
+    0 0 0 5px rgba(101,242,139,.07);
+}
+
+.story-step::after{
+  content:"";
+
+  position:absolute;
+
+  left:8px;
+  top:38px;
+
+  bottom:-4px;
+
+  width:1px;
+
+  background:rgba(101,242,139,.20);
+}
+
+.story-step:last-child::after{
+  display:none;
+}
+
+.story-step-label{
+  color:var(--green);
+
+  font-size:10px;
+  font-weight:800;
+
+  letter-spacing:1.5px;
+
+  text-transform:uppercase;
+}
+
+.story-step-text{
+  margin-top:7px;
+
+  color:#c7d0c9;
+
+  font-size:13px;
+  line-height:1.7;
+}
+
+/* =========================================================
+   SCIENCE BEYOND EARTH
 ========================================================= */
 
 .space-section{
-  position:relative;
-
   overflow:hidden;
 
   background:
     radial-gradient(
-      circle at 50% 0%,
-      rgba(101,242,139,.06),
-      transparent 40%
+      circle at 50% 50%,
+      rgba(25,83,45,.20),
+      transparent 42%
+    ),
+    linear-gradient(
+      180deg,
+      #07100b,
+      #050b08
     );
 }
 
@@ -715,165 +1196,184 @@ button{
   content:"";
 
   position:absolute;
+  inset:0;
 
-  width:500px;
-  height:500px;
+  opacity:.35;
 
-  left:-250px;
-  top:100px;
+  background-image:
+    radial-gradient(circle,#fff 0 1px,transparent 1.5px),
+    radial-gradient(circle,#fff 0 .7px,transparent 1px);
 
-  border-radius:50%;
+  background-size:
+    210px 210px,
+    130px 130px;
 
-  background:rgba(101,242,139,.035);
-
-  filter:blur(80px);
+  background-position:
+    20px 30px,
+    70px 100px;
 
   pointer-events:none;
 }
 
-.space-grid{
+.space-intro{
+  position:relative;
+  z-index:2;
+
+  text-align:center;
+
+  max-width:850px;
+
+  margin:0 auto 45px;
+}
+
+.space-big{
+  font-family:Caveat,cursive;
+
+  font-size:clamp(
+    52px,
+    8vw,
+    100px
+  );
+
+  line-height:.8;
+
+  text-transform:uppercase;
+}
+
+.space-big .green{
+  color:var(--green);
+}
+
+.space-sub{
+  margin-top:22px;
+
+  color:var(--muted);
+
+  font-size:14px;
+}
+
+.space-facts{
+  position:relative;
+  z-index:2;
+
   display:grid;
 
   grid-template-columns:
     repeat(4,minmax(0,1fr));
 
-  gap:15px;
+  gap:16px;
 }
 
-.space-card{
+.space-fact{
   position:relative;
 
-  min-height:280px;
+  min-height:250px;
 
-  padding:28px;
+  padding:25px;
 
   display:flex;
   flex-direction:column;
-
   justify-content:space-between;
 
-  overflow:hidden;
+  border:1px solid rgba(255,255,255,.10);
 
   border-radius:20px;
-
-  border:1px solid var(--line);
 
   background:
     linear-gradient(
       145deg,
-      rgba(17,27,21,.95),
-      rgba(9,17,12,.95)
+      rgba(15,28,20,.84),
+      rgba(7,14,10,.80)
     );
 
-  box-shadow:var(--shadow);
+  cursor:pointer;
 
-  transition:.25s ease;
+  overflow:hidden;
+
+  transition:
+    transform .25s ease,
+    border-color .25s ease,
+    background .25s ease;
 }
 
-.space-card:hover{
+.space-fact:hover{
   transform:translateY(-5px);
 
   border-color:rgba(101,242,139,.35);
-}
 
-.space-card::after{
-  content:"";
-
-  position:absolute;
-
-  width:180px;
-  height:180px;
-
-  right:-70px;
-  top:-70px;
-
-  border-radius:50%;
-
-  background:rgba(101,242,139,.045);
-
-  filter:blur(20px);
+  background:
+    linear-gradient(
+      145deg,
+      rgba(18,35,24,.92),
+      rgba(7,14,10,.88)
+    );
 }
 
 .space-visual{
-  font-size:54px;
+  font-size:60px;
 
   line-height:1;
 
-  transition:.25s ease;
-}
-
-.space-card:hover .space-visual{
-  transform:scale(1.06) rotate(-2deg);
-}
-
-.space-number{
-  position:absolute;
-
-  top:23px;
-  right:25px;
-
-  color:rgba(255,255,255,.2);
-
-  font-size:11px;
-
-  font-weight:700;
-
-  letter-spacing:.1em;
+  filter:
+    drop-shadow(
+      0 10px 22px
+      rgba(0,0,0,.35)
+    );
 }
 
 .space-label{
-  margin-top:auto;
-
-  padding-top:45px;
-}
-
-.space-label small{
-  display:block;
-
-  margin-bottom:8px;
-
   color:var(--green);
 
   font-size:10px;
+  font-weight:800;
+
+  letter-spacing:1.5px;
 
   text-transform:uppercase;
+}
 
-  letter-spacing:.13em;
+.space-fact-title{
+  margin-top:6px;
 
+  font-size:19px;
+  font-weight:800;
+}
+
+.space-expand{
+  margin-top:14px;
+
+  color:var(--muted);
+
+  font-size:11px;
   font-weight:700;
 }
 
-.space-label h3{
-  font-family:"Caveat",cursive;
+.space-detail{
+  display:none;
 
-  font-size:29px;
+  margin-top:15px;
 
-  line-height:1.05;
+  padding-top:14px;
 
-  margin-bottom:9px;
+  border-top:1px solid rgba(255,255,255,.10);
+
+  color:#cbd4ce;
+
+  font-size:13px;
+  line-height:1.65;
 }
 
-.space-label p{
-  color:var(--muted);
-
-  font-size:12px;
-
-  line-height:1.6;
+.space-fact.open .space-detail{
+  display:block;
 }
 
+.space-fact.open .space-expand{
+  color:var(--green);
+}
 
 /* =========================================================
    SCIENTIFIC FIELDS
 ========================================================= */
-
-.fields-section{
-  background:
-    linear-gradient(
-      180deg,
-      rgba(255,255,255,.01),
-      rgba(101,242,139,.025)
-    );
-}
 
 .fields-grid{
   display:grid;
@@ -881,135 +1381,157 @@ button{
   grid-template-columns:
     repeat(2,minmax(0,1fr));
 
-  gap:15px;
+  gap:14px;
 }
 
-.field-card{
+.field{
   border:1px solid var(--line);
+
+  border-radius:17px;
 
   background:
     linear-gradient(
       145deg,
-      rgba(17,27,21,.96),
-      rgba(9,16,12,.96)
+      rgba(16,26,20,.94),
+      rgba(9,15,11,.94)
     );
-
-  border-radius:20px;
 
   overflow:hidden;
 
-  box-shadow:var(--shadow);
+  transition:
+    border-color .2s ease;
 }
 
-.field-main{
+.field.open{
+  border-color:rgba(101,242,139,.35);
+}
+
+.field-head{
+  width:100%;
+
+  padding:19px;
+
   display:flex;
   align-items:center;
 
-  gap:17px;
+  gap:14px;
 
-  padding:23px;
+  border:0;
+
+  background:transparent;
+
+  color:inherit;
+
+  text-align:left;
 
   cursor:pointer;
 }
 
 .field-icon{
-  width:54px;
-  height:54px;
+  width:46px;
+  height:46px;
 
   flex-shrink:0;
 
   display:grid;
   place-items:center;
 
-  border-radius:15px;
+  border-radius:13px;
 
   background:rgba(101,242,139,.08);
 
-  border:1px solid rgba(101,242,139,.18);
+  border:1px solid rgba(101,242,139,.19);
 
-  font-size:27px;
+  font-size:23px;
 }
 
-.field-info{
-  min-width:0;
+.field-main{
+  flex:1;
 }
 
-.field-info h3{
+.field-title{
   font-size:17px;
-
-  margin-bottom:5px;
+  font-weight:800;
 }
 
-.field-info p{
+.field-tagline{
+  margin-top:4px;
+
   color:var(--muted);
 
   font-size:12px;
-
   line-height:1.5;
 }
 
 .field-arrow{
-  margin-left:auto;
-
-  width:34px;
-  height:34px;
-
-  flex-shrink:0;
+  width:30px;
+  height:30px;
 
   display:grid;
   place-items:center;
 
   border-radius:50%;
 
-  color:var(--green);
+  background:rgba(255,255,255,.05);
 
-  border:1px solid rgba(101,242,139,.2);
+  color:var(--muted);
 
-  transition:.25s ease;
+  transition:
+    transform .25s ease,
+    color .25s ease;
 }
 
-.field-card.open .field-arrow{
+.field.open .field-arrow{
   transform:rotate(180deg);
+  color:var(--green);
 }
 
-.field-details{
-  display:none;
+.field-body{
+  display:grid;
 
-  padding:0 23px 24px;
+  grid-template-rows:0fr;
+
+  transition:grid-template-rows .4s ease;
+}
+
+.field.open .field-body{
+  grid-template-rows:1fr;
+}
+
+.field-body-inner{
+  overflow:hidden;
+}
+
+.field-content{
+  padding:0 19px 20px;
 
   border-top:1px solid rgba(255,255,255,.07);
 }
 
-.field-card.open .field-details{
-  display:block;
+.field-detail{
+  padding-top:16px;
 }
 
-.detail{
-  padding-top:18px;
-}
-
-.detail strong{
+.field-detail strong{
   display:block;
 
-  margin-bottom:6px;
+  margin-bottom:5px;
 
   color:var(--green);
 
   font-size:10px;
 
-  text-transform:uppercase;
+  letter-spacing:1.2px;
 
-  letter-spacing:.12em;
+  text-transform:uppercase;
 }
 
-.detail p{
-  color:#cbd3cc;
+.field-detail p{
+  color:#c9d2cc;
 
-  font-size:12px;
-
+  font-size:13px;
   line-height:1.7;
 }
-
 
 /* =========================================================
    FINAL CTA
@@ -1018,30 +1540,22 @@ button{
 .final-cta{
   position:relative;
 
-  min-height:500px;
+  min-height:470px;
 
   display:flex;
   align-items:center;
 
   overflow:hidden;
 
-  background-image:
+  background:
     linear-gradient(
       90deg,
-      rgba(7,16,11,.95),
-      rgba(7,16,11,.63),
-      rgba(7,16,11,.28)
+      rgba(5,13,8,.94),
+      rgba(5,13,8,.70),
+      rgba(5,13,8,.38)
     ),
-    linear-gradient(
-      180deg,
-      rgba(7,16,11,.25),
-      rgba(7,16,11,.72)
-    ),
-    url("https://res.cloudinary.com/eq1jpw1h/image/upload/v1789914786/file_0000000038008208ab3789b135a73e77.png");
-
-  background-size:cover;
-
-  background-position:center;
+    url("https://res.cloudinary.com/eq1jpw1h/image/upload/v1789914786/file_0000000038008208ab3789b135a73e77.png")
+    center/cover no-repeat;
 }
 
 .final-cta::after{
@@ -1052,71 +1566,170 @@ button{
 
   background:
     linear-gradient(
-      to top,
-      #07100b 0%,
-      transparent 25%
+      180deg,
+      rgba(7,16,11,.15),
+      rgba(7,16,11,.85)
     );
 }
 
-.cta-inner{
+.final-content{
   position:relative;
-
   z-index:2;
 
-  width:min(var(--max),calc(100% - 40px));
+  max-width:750px;
 
-  margin:auto;
+  padding:90px 0;
 }
 
-.cta-copy{
-  max-width:650px;
-}
-
-.cta-copy .section-kicker{
+.final-caption{
   margin-bottom:15px;
-}
 
-.cta-title{
-  font-family:"Caveat",cursive;
+  color:var(--green);
 
-  font-size:clamp(55px,7vw,94px);
+  font-size:10px;
+  font-weight:800;
 
-  line-height:.88;
+  letter-spacing:2px;
 
   text-transform:uppercase;
 }
 
-.cta-title .green{
+.final-content h2{
+  font-family:Caveat,cursive;
+
+  font-size:clamp(
+    55px,
+    8vw,
+    100px
+  );
+
+  line-height:.82;
+
+  text-transform:uppercase;
+}
+
+.final-content p{
+  max-width:620px;
+
+  margin:22px 0;
+
+  color:#cbd4cd;
+
+  font-size:15px;
+  line-height:1.7;
+}
+
+.final-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+
+  min-height:48px;
+
+  padding:0 20px;
+
+  border:1px solid rgba(101,242,139,.45);
+
+  border-radius:13px;
+
+  background:rgba(101,242,139,.11);
+
   color:var(--green);
+
+  font-size:12px;
+  font-weight:800;
+
+  transition:
+    background .2s ease,
+    transform .2s ease;
 }
 
-.cta-text{
-  max-width:520px;
-
-  margin-top:24px;
-
-  color:#d0d8d1;
-
-  font-size:14px;
-
-  line-height:1.75;
+.final-btn:hover{
+  background:rgba(101,242,139,.20);
+  transform:translateY(-2px);
 }
 
-.cta-caption{
+.final-decoration{
   position:absolute;
 
-  right:0;
-  bottom:25px;
+  right:5%;
+  bottom:32px;
 
-  font-family:"Caveat",cursive;
+  z-index:2;
 
-  font-size:25px;
+  color:rgba(255,255,255,.62);
 
-  color:rgba(255,255,255,.75);
+  font-family:Caveat,cursive;
 
-  transform:rotate(-3deg);
+  font-size:26px;
+
+  transform:rotate(-5deg);
 }
 
+/* =========================================================
+   TOAST
+========================================================= */
+
+.toast{
+  position:fixed;
+
+  left:50%;
+  bottom:24px;
+
+  z-index:200;
+
+  padding:12px 17px;
+
+  border-radius:12px;
+
+  background:rgba(9,18,13,.96);
+
+  border:1px solid rgba(101,242,139,.25);
+
+  color:#e5ece7;
+
+  font-size:12px;
+
+  box-shadow:var(--shadow);
+
+  transform:
+    translate(-50%,20px);
+
+  opacity:0;
+  visibility:hidden;
+
+  transition:
+    opacity .25s ease,
+    transform .25s ease,
+    visibility .25s ease;
+}
+
+.toast.show{
+  opacity:1;
+  visibility:visible;
+
+  transform:translate(-50%,0);
+}
+
+/* =========================================================
+   EMPTY / ERROR
+========================================================= */
+
+.data-error{
+  padding:25px;
+
+  border:1px dashed rgba(255,255,255,.16);
+
+  border-radius:16px;
+
+  color:var(--muted);
+
+  background:rgba(255,255,255,.025);
+
+  text-align:center;
+
+  font-size:13px;
+}
 
 /* =========================================================
    LANGUAGE
@@ -1144,7 +1757,6 @@ body.hindi small[data-lang="hi"]{
   display:inline;
 }
 
-
 /* =========================================================
    RESPONSIVE
 ========================================================= */
@@ -1152,63 +1764,70 @@ body.hindi small[data-lang="hi"]{
 @media(max-width:1100px){
 
   .nav-links{
-    display:none;
+    gap:0;
   }
 
-  .space-grid{
+  .nav-links > a,
+  .nav-drop{
+    padding:8px 7px;
+    font-size:11px;
+  }
+
+  .space-facts{
     grid-template-columns:
       repeat(2,minmax(0,1fr));
   }
-
 }
 
 @media(max-width:900px){
 
+  .nav-links{
+    display:none;
+  }
+
+  .menu-btn{
+    display:grid;
+  }
+
   .hero{
-    min-height:620px;
+    min-height:600px;
 
-    background-position:62% center;
+    background-position:
+      62% center;
   }
 
-  .hero-inner{
-    padding:90px 0 130px;
+  .hero-content{
+    padding:
+      85px 0
+      105px;
   }
 
-  .hero-copy{
-    max-width:600px;
+  .hero-description{
+    max-width:550px;
   }
 
-  .hero-note{
-    right:20px;
-    bottom:45px;
-  }
-
+  .scientist-grid,
   .fields-grid{
     grid-template-columns:1fr;
   }
 
-  .section{
-    padding:85px 0;
+  .space-facts{
+    grid-template-columns:
+      repeat(2,minmax(0,1fr));
   }
-
 }
 
 @media(max-width:600px){
 
   .container{
-    width:min(var(--max),calc(100% - 28px));
+    width:min(
+      calc(100% - 20px),
+      var(--max)
+    );
   }
 
   .nav-inner{
-    min-height:70px;
-  }
-
-  .brand-title strong{
-    font-size:12px;
-  }
-
-  .brand-title small{
-    font-size:7px;
+    min-height:64px;
   }
 
   .brand-icon{
@@ -1216,143 +1835,172 @@ body.hindi small[data-lang="hi"]{
     height:38px;
   }
 
+  .brand-title strong{
+    font-size:13px;
+  }
+
+  .brand-title small{
+    font-size:7px;
+  }
+
+  .actions{
+    gap:5px;
+  }
+
   .lang{
-    padding:8px 10px;
-    font-size:11px;
+    padding:0 9px;
+    font-size:10px;
   }
 
   .icon-btn{
-    width:37px;
-    height:37px;
+    width:36px;
+    height:36px;
   }
 
   .mobile-menu{
-    top:76px;
-    right:14px;
-
-    width:calc(100% - 28px);
+    top:66px;
+    left:10px;
+    right:10px;
   }
 
   .hero{
-    min-height:650px;
+    min-height:610px;
 
-    align-items:flex-end;
-
-    background-position:62% center;
-
-    background-image:
+    background:
       linear-gradient(
         180deg,
-        rgba(7,16,11,.18) 0%,
-        rgba(7,16,11,.40) 38%,
-        rgba(7,16,11,.96) 88%
+        rgba(5,13,8,.70),
+        rgba(5,13,8,.88)
       ),
-      url("https://res.cloudinary.com/eq1jpw1h/image/upload/v1789914786/file_0000000038008208ab3789b135a73e77.png");
+      url("https://res.cloudinary.com/eq1jpw1h/image/upload/v1789361606/file_00000000d97082108f146c9c111b6e2d.png")
+      67% center/cover no-repeat;
   }
 
-  .hero-inner{
-    width:calc(100% - 28px);
-
-    padding:80px 0 85px;
+  .hero-content{
+    padding:
+      80px 0
+      100px;
   }
 
   .hero h1{
-    font-size:68px;
+    font-size:
+      clamp(61px,18vw,88px);
+
+    letter-spacing:-2px;
   }
 
   .hero-description{
     font-size:14px;
-    margin-top:23px;
   }
 
-  .hero-note{
-    display:none;
-  }
+  .hero-caption{
+    right:20px;
+    bottom:28px;
 
-  .hero-actions{
-    margin-top:25px;
-  }
-
-  .primary-btn,
-  .secondary-btn{
-    width:100%;
+    font-size:21px;
   }
 
   .section{
     padding:72px 0;
   }
 
-  .section-head{
-    display:block;
-
-    margin-bottom:28px;
-  }
-
   .section-title{
-    font-size:50px;
+    font-size:
+      clamp(47px,15vw,70px);
   }
 
   .section-description{
-    margin-top:17px;
-
     font-size:13px;
   }
 
-  .space-grid{
-    grid-template-columns:1fr;
-  }
-
-  .space-card{
-    min-height:245px;
-  }
-
-  .space-visual{
-    font-size:48px;
-  }
-
-  .field-main{
+  .challenge-wrap{
     padding:18px;
   }
 
-  .field-icon{
-    width:48px;
-    height:48px;
-
-    font-size:24px;
+  .challenge-top{
+    align-items:flex-start;
   }
 
-  .field-info h3{
-    font-size:15px;
+  .challenge-progress{
+    width:100px;
   }
 
-  .field-info p{
-    font-size:11px;
+  .challenge-question{
+    font-size:20px;
   }
 
-  .field-details{
-    padding:0 18px 20px;
+  .challenge-options{
+    grid-template-columns:1fr;
+  }
+
+  .challenge-option{
+    min-height:55px;
+  }
+
+  .scientist-grid{
+    gap:12px;
+  }
+
+  .story-head{
+    padding:16px;
+  }
+
+  .story-content{
+    padding:
+      0 16px
+      18px;
+  }
+
+  .space-intro{
+    margin-bottom:30px;
+  }
+
+  .space-big{
+    font-size:
+      clamp(54px,17vw,85px);
+  }
+
+  .space-facts{
+    grid-template-columns:1fr;
+  }
+
+  .space-fact{
+    min-height:230px;
+  }
+
+  .field-head{
+    padding:15px;
+  }
+
+  .field-content{
+    padding:
+      0 15px
+      18px;
   }
 
   .final-cta{
-    min-height:570px;
+    min-height:510px;
 
-    background-position:60% center;
+    background-position:
+      60% center;
   }
 
-  .cta-inner{
-    width:calc(100% - 28px);
-
-    padding-bottom:55px;
+  .final-content{
+    padding:
+      80px 0
+      105px;
   }
 
-  .cta-title{
-    font-size:62px;
+  .final-content h2{
+    font-size:
+      clamp(58px,17vw,90px);
   }
 
-  .cta-caption{
-    display:none;
+  .final-decoration{
+    right:20px;
+    bottom:28px;
+    font-size:22px;
   }
-
 }
 
 @media(prefers-reduced-motion:reduce){
@@ -1361,25 +2009,21 @@ body.hindi small[data-lang="hi"]{
   *::before,
   *::after{
     scroll-behavior:auto !important;
-    transition:none !important;
-    animation:none !important;
+    transition-duration:.01ms !important;
+    animation-duration:.01ms !important;
+    animation-iteration-count:1 !important;
   }
-
 }
-
 </style>
 </head>
 
-
 <body>
 
-
-<!-- ======================================================
+<!-- =======================================================
      NAVBAR
-====================================================== -->
+======================================================== -->
 
 <header class="nav">
-
   <div class="container nav-inner">
 
     <a class="brand" href="../index.html">
@@ -1392,7 +2036,6 @@ body.hindi small[data-lang="hi"]{
       </div>
 
     </a>
-
 
     <nav class="nav-links">
 
@@ -1409,7 +2052,6 @@ body.hindi small[data-lang="hi"]{
         </div>
       </div>
 
-
       <div class="nav-drop">
         Explore ˅
 
@@ -1422,7 +2064,6 @@ body.hindi small[data-lang="hi"]{
         </div>
       </div>
 
-
       <div class="nav-drop">
         Games ˅
 
@@ -1434,15 +2075,16 @@ body.hindi small[data-lang="hi"]{
         </div>
       </div>
 
-
       <div class="nav-drop">
         Lab ˅
 
         <div class="dropdown">
           <a href="../lab/index.html">Virtual Lab</a>
+          <a href="../lab/ohms-law.html">Ohm's Law</a>
+          <a href="../lab/electric-circuit.html">Electric Circuit</a>
+          <a href="../lab/ray-optics.html">Ray Optics</a>
         </div>
       </div>
-
 
       <div class="nav-drop">
         More ˅
@@ -1456,30 +2098,38 @@ body.hindi small[data-lang="hi"]{
 
     </nav>
 
-
     <div class="actions">
 
-      <button class="lang" id="langBtn">
+      <button
+        class="lang"
+        id="langBtn"
+        type="button"
+        aria-label="Change language"
+      >
         EN <span>|</span> <b>हिंदी</b>
       </button>
 
-      <button class="icon-btn" id="menuBtn">☰</button>
+      <button
+        class="icon-btn menu-btn"
+        id="menuBtn"
+        type="button"
+        aria-label="Open menu"
+      >
+        ☰
+      </button>
 
     </div>
 
   </div>
-
 </header>
 
-
-<!-- ======================================================
+<!-- =======================================================
      MOBILE MENU
-====================================================== -->
+======================================================== -->
 
 <div class="mobile-menu" id="mobileMenu">
 
   <a href="../index.html">⌂ Home</a>
-
   <a href="../physics/index.html">⚛ Physics</a>
   <a href="../chemistry/index.html">🧪 Chemistry</a>
   <a href="../biology/index.html">🧬 Biology</a>
@@ -1491,8 +2141,8 @@ body.hindi small[data-lang="hi"]{
   <a href="../what-if/index.html">❓ What If?</a>
   <a href="../beyond-textbook/index.html">🚀 Beyond the Textbook</a>
 
-  <a href="../lab/index.html">🧪 Virtual Lab</a>
   <a href="../games/index.html">🎮 Science Games</a>
+  <a href="../lab/index.html">🧪 Virtual Lab</a>
 
   <a href="../real-world/index.html">🌐 Science in the Real World</a>
   <a href="../science-around-us/index.html">📰 Science Around Us</a>
@@ -1500,63 +2150,267 @@ body.hindi small[data-lang="hi"]{
 </div>
 
 
-<!-- ======================================================
+<main>
+
+<!-- =======================================================
      HERO
-====================================================== -->
+======================================================== -->
 
 <section class="hero">
 
-  <div class="hero-inner">
+  <div class="container">
 
-    <div class="hero-copy">
+    <div class="hero-content">
 
-      <div class="eyebrow">
+      <div class="hero-kicker">
+        SCIENCE EXPLORATION
+      </div>
+
+      <!-- Decorative title intentionally English-only -->
+      <h1>
+        <span>BEYOND</span>
+        <span class="green">THE</span>
+        <span>TEXTBOOK</span>
+      </h1>
+
+      <div class="hero-description">
+
+        <div data-lang="en">
+          Science does not end when the textbook closes.
+          Question what you see, challenge what you know,
+          follow the evidence, and explore ideas that take
+          you beyond the classroom.
+        </div>
+
+        <div data-lang="hi">
+          विज्ञान तब खत्म नहीं होता जब किताब बंद हो जाती है।
+          जो देखते हो उस पर सवाल करो, जो जानते हो उसे चुनौती दो,
+          प्रमाण को समझो और उन विचारों को खोजो जो तुम्हें
+          कक्षा से आगे ले जाएँ।
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="hero-caption">
+      Ask. Explore. Discover.
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =======================================================
+     1. SCIENCE CHALLENGES
+======================================================== -->
+
+<section class="section" id="science-challenges">
+
+  <div class="container">
+
+    <div class="section-header">
+
+      <div class="section-kicker">
+        THINK BEYOND THE ANSWER
+      </div>
+
+      <h2 class="section-title">
+        SCIENCE CHALLENGES
+      </h2>
+
+      <div class="section-description">
+
+        <div data-lang="en">
+          Science is not only about remembering facts.
+          Test your reasoning with everyday scientific questions
+          and discover why the answer works.
+        </div>
+
+        <div data-lang="hi">
+          विज्ञान केवल तथ्यों को याद रखने के बारे में नहीं है।
+          रोज़मर्रा की वैज्ञानिक परिस्थितियों से अपनी सोच को
+          चुनौती दो और जानो कि उत्तर सही क्यों है।
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="challenge-wrap" id="challengeRoot">
+
+      <div class="challenge-top">
+
+        <div
+          class="challenge-count"
+          id="challengeCount"
+        >
+          Challenge 1
+        </div>
+
+        <div class="challenge-progress">
+          <span id="challengeProgress"></span>
+        </div>
+
+      </div>
+
+
+      <div
+        class="challenge-question"
+        id="challengeQuestion"
+      >
+        Loading challenge...
+      </div>
+
+
+      <div
+        class="challenge-options"
+        id="challengeOptions"
+      ></div>
+
+
+      <div
+        class="challenge-feedback"
+        id="challengeFeedback"
+      >
+
+        <div
+          class="feedback-title"
+          id="feedbackTitle"
+        ></div>
+
+        <div
+          class="feedback-text"
+          id="feedbackText"
+        ></div>
+
+      </div>
+
+
+      <div class="challenge-bottom">
+
+        <button
+          class="primary-btn"
+          id="nextChallenge"
+          type="button"
+          disabled
+        >
+          Next Challenge →
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =======================================================
+     2. THINK LIKE A SCIENTIST
+======================================================== -->
+
+<section class="section" id="think-like-scientist">
+
+  <div class="container">
+
+    <div class="section-header">
+
+      <div class="section-kicker">
+        OBSERVE • HYPOTHESIZE • TEST
+      </div>
+
+      <h2 class="section-title">
+        THINK LIKE A SCIENTIST
+      </h2>
+
+      <div class="section-description">
+
+        <div data-lang="en">
+          Scientific discoveries often begin with something simple:
+          someone notices something unusual and asks a question.
+          Explore how observations became experiments and discoveries.
+        </div>
+
+        <div data-lang="hi">
+          वैज्ञानिक खोज अक्सर एक साधारण चीज़ से शुरू होती है:
+          कोई व्यक्ति कुछ असामान्य देखता है और सवाल पूछता है।
+          जानो कि कैसे observations से experiments और discoveries बनीं।
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div
+      class="scientist-grid"
+      id="scientistGrid"
+    >
+
+      <div class="data-error">
+        Loading scientific discoveries...
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =======================================================
+     3. SCIENCE BEYOND EARTH
+======================================================== -->
+
+<section
+  class="section space-section"
+  id="science-beyond-earth"
+>
+
+  <div class="container">
+
+    <div class="space-intro">
+
+      <div class="section-kicker">
         LOOK BEYOND EARTH
       </div>
 
+      <!-- English-only decorative typography -->
+      <div class="space-big">
+        THE UNIVERSE
+        <span class="green">IS HUGE.</span>
+      </div>
 
-      <h1>
-        <span>SCIENCE</span><br>
-        BEYOND<br>
-        EARTH
-      </h1>
-
-
-      <p class="hero-description">
+      <div class="space-sub">
 
         <span data-lang="en">
-          Earth is only a tiny part of something unimaginably huge.
-          Look beyond our planet and explore the scale, mystery,
-          and strange beauty of the universe.
+          Some scientific questions are bigger than our planet.
+          Look up. Wonder. Keep exploring.
         </span>
 
         <span data-lang="hi">
-          पृथ्वी किसी अकल्पनीय रूप से विशाल ब्रह्मांड का केवल एक छोटा सा हिस्सा है।
-          हमारे ग्रह से आगे देखो और ब्रह्मांड के पैमाने, रहस्यों और अद्भुत सुंदरता को खोजो।
+          कुछ वैज्ञानिक सवाल हमारे ग्रह से भी बड़े हैं।
+          ऊपर देखो। जिज्ञासु बनो। खोजते रहो।
         </span>
-
-      </p>
-
-
-      <div class="hero-actions">
-
-        <a href="#explore-space" class="primary-btn">
-          <span data-lang="en">Explore Space ↓</span>
-          <span data-lang="hi">अंतरिक्ष देखें ↓</span>
-        </a>
-
-        <a href="#scientific-fields" class="secondary-btn">
-          <span data-lang="en">Explore Scientific Fields</span>
-          <span data-lang="hi">वैज्ञानिक क्षेत्र देखें</span>
-        </a>
 
       </div>
 
     </div>
 
 
-    <div class="hero-note">
-      There is always more beyond.
+    <div
+      class="space-facts"
+      id="spaceFacts"
+    >
+
+      <div class="data-error">
+        Loading space facts...
+      </div>
+
     </div>
 
   </div>
@@ -1564,227 +2418,249 @@ body.hindi small[data-lang="hi"]{
 </section>
 
 
-<!-- ======================================================
-     SPACE FACTS
-====================================================== -->
+<!-- =======================================================
+     4. EXPLORE A SCIENTIFIC FIELD
+======================================================== -->
 
-<section class="section space-section" id="explore-space">
+<section class="section" id="scientific-fields">
 
   <div class="container">
 
-    <div class="section-head">
+    <div class="section-header">
 
-      <div>
-
-        <div class="section-kicker">
-          SCIENCE BEYOND EARTH
-        </div>
-
-        <!-- ALWAYS ENGLISH -->
-        <h2 class="section-title">
-          THE UNIVERSE<br>
-          IS HUGE.
-        </h2>
-
+      <div class="section-kicker">
+        FIND YOUR DIRECTION
       </div>
 
+      <h2 class="section-title">
+        EXPLORE A SCIENTIFIC FIELD
+      </h2>
 
-      <p class="section-description">
+      <div class="section-description">
 
-        <span data-lang="en">
-          A few facts that make the scale of the universe
-          feel a little more real.
-        </span>
+        <div data-lang="en">
+          Science is not one subject. Explore different fields,
+          see where they appear in the real world, and discover
+          where your curiosity could take you.
+        </div>
 
-        <span data-lang="hi">
-          कुछ तथ्य जो ब्रह्मांड के विशाल पैमाने को
-          थोड़ा और वास्तविक महसूस कराते हैं।
-        </span>
+        <div data-lang="hi">
+          विज्ञान केवल एक विषय नहीं है। अलग-अलग fields को explore करो,
+          देखो कि वे वास्तविक दुनिया में कहाँ दिखाई देते हैं और जानो
+          कि तुम्हारी जिज्ञासा तुम्हें कहाँ ले जा सकती है।
+        </div>
 
-      </p>
+      </div>
 
     </div>
 
 
-    <div class="space-grid" id="spaceGrid"></div>
+    <div
+      class="fields-grid"
+      id="fieldsGrid"
+    >
+
+      <div class="data-error">
+        Loading scientific fields...
+      </div>
+
+    </div>
 
   </div>
 
 </section>
 
 
-<!-- ======================================================
-     SCIENTIFIC FIELDS
-====================================================== -->
-
-<section class="section fields-section" id="scientific-fields">
-
-  <div class="container">
-
-    <div class="section-head">
-
-      <div>
-
-        <div class="section-kicker">
-          EXPLORE A SCIENTIFIC FIELD
-        </div>
-
-        <!-- ALWAYS ENGLISH -->
-        <h2 class="section-title">
-          FIND YOUR<br>
-          QUESTION.
-        </h2>
-
-      </div>
-
-
-      <p class="section-description">
-
-        <span data-lang="en">
-          Science is much bigger than a single subject.
-          Explore different fields and see where each one
-          takes you.
-        </span>
-
-        <span data-lang="hi">
-          विज्ञान केवल एक विषय तक सीमित नहीं है।
-          अलग-अलग वैज्ञानिक क्षेत्रों को देखो और जानो
-          कि प्रत्येक क्षेत्र तुम्हें कहाँ ले जा सकता है।
-        </span>
-
-      </p>
-
-    </div>
-
-
-    <div class="fields-grid" id="fieldsGrid"></div>
-
-  </div>
-
-</section>
-
-
-<!-- ======================================================
+<!-- =======================================================
      FINAL CTA
-====================================================== -->
+======================================================== -->
 
 <section class="final-cta">
 
-  <div class="cta-inner">
+  <div class="container">
 
-    <div class="cta-copy">
+    <div class="final-content">
 
-      <div class="section-kicker">
-        LOOK UP
+      <div class="final-caption">
+        KEEP GOING
       </div>
 
-
-      <!-- ALWAYS ENGLISH -->
-      <h2 class="cta-title">
-        THERE'S<br>
-        MORE<br>
-        <span class="green">OUT THERE.</span>
+      <!-- English-only decorative typography -->
+      <h2>
+        KEEP
+        <span style="color:var(--green)">
+          EXPLORING.
+        </span>
       </h2>
 
+      <div>
 
-      <p class="cta-text">
+        <p data-lang="en">
+          The textbook is only the beginning.
+          Keep asking questions, follow your curiosity,
+          and discover the science waiting beyond the page.
+        </p>
 
-        <span data-lang="en">
-          Keep asking questions. Keep looking beyond
-          what you already know.
-        </span>
+        <p data-lang="hi">
+          किताब केवल शुरुआत है। सवाल पूछते रहो,
+          अपनी जिज्ञासा का पीछा करो और उस विज्ञान को खोजो
+          जो किताब के पन्नों से आगे मौजूद है।
+        </p>
 
-        <span data-lang="hi">
-          सवाल पूछते रहो। जो जानते हो, उसके आगे भी
-          देखना जारी रखो।
-        </span>
+      </div>
 
-      </p>
+      <a
+        class="final-btn"
+        href="../index.html"
+      >
+        Explore More →
+      </a>
 
     </div>
 
-
-    <!-- ALWAYS ENGLISH -->
-    <div class="cta-caption">
-      THE UNIVERSE IS WAITING.
+    <div class="final-decoration">
+      THERE'S MORE OUT THERE.
     </div>
 
   </div>
 
 </section>
 
+</main>
 
-<!-- ======================================================
+
+<!-- =======================================================
+     TOAST
+======================================================== -->
+
+<div
+  class="toast"
+  id="toast"
+  role="status"
+  aria-live="polite"
+></div>
+
+
+<!-- =======================================================
      DATA FILES
-======================================================
+======================================================== -->
 
-     Folder structure:
-
-     science/
-     ├── index.html
-     ├── data/
-     │   ├── science-beyond-earth.js
-     │   ├── explore-scientific-field.js
-     │   ├── science-challenges.js
-     │   └── think-like-a-scientist.js
-     │
-     └── science-beyond-earth/
-         └── index.html
-
-====================================================== -->
-
+<script src="../data/science-challenges.js"></script>
+<script src="../data/think-like-a-scientist.js"></script>
 <script src="../data/science-beyond-earth.js"></script>
 <script src="../data/explore-scientific-field.js"></script>
 
 
 <script>
-
 /* =========================================================
-   LANGUAGE SYSTEM
+   BEYOND THE TEXTBOOK
+   MAIN JAVASCRIPT
 ========================================================= */
 
-const langBtn =
-  document.getElementById("langBtn");
+(function(){
 
-let currentLanguage =
-  localStorage.getItem("scienceLanguage") || "en";
+"use strict";
 
+/* =========================================================
+   LANGUAGE
+========================================================= */
 
-function applyLanguage(language){
+const LANGUAGE_KEY = "scienceLanguage";
 
-  currentLanguage =
-    language === "hi" ? "hi" : "en";
+let language =
+  localStorage.getItem(LANGUAGE_KEY) || "en";
 
-  document.body.classList.toggle(
-    "hindi",
-    currentLanguage === "hi"
-  );
+function setLanguage(lang){
 
-  document.documentElement.lang =
-    currentLanguage === "hi"
+  language =
+    lang === "hi"
       ? "hi"
       : "en";
 
   localStorage.setItem(
-    "scienceLanguage",
-    currentLanguage
+    LANGUAGE_KEY,
+    language
   );
 
-  renderSpaceFacts();
-  renderFields();
+  document.body.classList.toggle(
+    "hindi",
+    language === "hi"
+  );
 
+  document.documentElement.lang =
+    language === "hi"
+      ? "hi"
+      : "en";
+
+  renderCurrentChallenge();
+
+  renderScientists();
+
+  renderSpaceFacts();
+
+  renderFields();
 }
 
 
-langBtn.addEventListener("click",()=>{
+/* =========================================================
+   HELPERS
+========================================================= */
 
-  applyLanguage(
-    currentLanguage === "en"
-      ? "hi"
-      : "en"
+function getText(value){
+
+  if(value == null){
+    return "";
+  }
+
+  if(typeof value === "string"){
+    return value;
+  }
+
+  if(typeof value === "object"){
+
+    return (
+      value[language] ??
+      value.en ??
+      value.hi ??
+      ""
+    );
+
+  }
+
+  return String(value);
+}
+
+
+function escapeHTML(value){
+
+  return String(value ?? "")
+    .replace(/&/g,"&amp;")
+    .replace(/</g,"&lt;")
+    .replace(/>/g,"&gt;")
+    .replace(/"/g,"&quot;")
+    .replace(/'/g,"&#039;");
+}
+
+
+function showToast(message){
+
+  const toast =
+    document.getElementById("toast");
+
+  toast.textContent = message;
+
+  toast.classList.add("show");
+
+  clearTimeout(
+    window.__scienceToast
   );
 
-});
+  window.__scienceToast =
+    setTimeout(
+      () => toast.classList.remove("show"),
+      2200
+    );
+}
 
 
 /* =========================================================
@@ -1797,379 +2673,1194 @@ const menuBtn =
 const mobileMenu =
   document.getElementById("mobileMenu");
 
+if(menuBtn){
 
-menuBtn.addEventListener("click",()=>{
+  menuBtn.addEventListener(
+    "click",
+    function(){
 
-  mobileMenu.classList.toggle("open");
+      const open =
+        mobileMenu.classList.toggle("open");
 
-});
+      menuBtn.textContent =
+        open ? "×" : "☰";
+
+      menuBtn.setAttribute(
+        "aria-label",
+        open
+          ? "Close menu"
+          : "Open menu"
+      );
+
+    }
+  );
+}
 
 
-mobileMenu.querySelectorAll("a").forEach(link=>{
+mobileMenu
+  .querySelectorAll("a")
+  .forEach(link => {
 
-  link.addEventListener("click",()=>{
+    link.addEventListener(
+      "click",
+      () => {
 
-    mobileMenu.classList.remove("open");
+        mobileMenu.classList.remove("open");
+
+        menuBtn.textContent = "☰";
+
+      }
+    );
 
   });
 
-});
 
+/* =========================================================
+   LANGUAGE BUTTON
+========================================================= */
 
-document.addEventListener("click",(event)=>{
+const langBtn =
+  document.getElementById("langBtn");
 
-  if(
-    !mobileMenu.contains(event.target) &&
-    !menuBtn.contains(event.target)
-  ){
+langBtn.addEventListener(
+  "click",
+  function(){
 
-    mobileMenu.classList.remove("open");
+    setLanguage(
+      language === "en"
+        ? "hi"
+        : "en"
+    );
 
   }
-
-});
+);
 
 
 /* =========================================================
-   SCIENCE BEYOND EARTH DATA
+   SCIENCE CHALLENGES
 ========================================================= */
 
-const spaceGrid =
-  document.getElementById("spaceGrid");
+let challengeData = [];
+
+let challengeIndex = 0;
+
+let challengeAnswered = false;
 
 
-function getSpaceData(){
+/*
+  Supports:
+  ScienceChallenges.all()
+  scienceChallenges
+*/
 
-  if(
-    window.ScienceBeyondEarth &&
-    typeof window.ScienceBeyondEarth.all === "function"
-  ){
+function getChallengeData(){
 
-    return window.ScienceBeyondEarth.all();
+  try{
 
-  }
+    if(
+      window.ScienceChallenges &&
+      typeof window.ScienceChallenges.all === "function"
+    ){
 
-  if(
-    Array.isArray(window.scienceBeyondEarth)
-  ){
+      return window.ScienceChallenges.all() || [];
 
-    return window.scienceBeyondEarth;
+    }
+
+    if(
+      Array.isArray(window.scienceChallenges)
+    ){
+
+      return window.scienceChallenges;
+
+    }
+
+  }catch(error){
+
+    console.error(
+      "Science Challenges error:",
+      error
+    );
 
   }
 
   return [];
+}
+
+
+const challengeQuestion =
+  document.getElementById(
+    "challengeQuestion"
+  );
+
+const challengeOptions =
+  document.getElementById(
+    "challengeOptions"
+  );
+
+const challengeFeedback =
+  document.getElementById(
+    "challengeFeedback"
+  );
+
+const feedbackTitle =
+  document.getElementById(
+    "feedbackTitle"
+  );
+
+const feedbackText =
+  document.getElementById(
+    "feedbackText"
+  );
+
+const nextChallenge =
+  document.getElementById(
+    "nextChallenge"
+  );
+
+const challengeCount =
+  document.getElementById(
+    "challengeCount"
+  );
+
+const challengeProgress =
+  document.getElementById(
+    "challengeProgress"
+  );
+
+
+function getCorrectIndex(question){
+
+  /*
+    Existing data uses:
+    A = 0
+    B = 1
+    C = 2
+    D = 3
+  */
+
+  if(
+    typeof question.answer === "number"
+  ){
+
+    return question.answer;
+
+  }
+
+  if(
+    typeof question.answer === "string"
+  ){
+
+    const normalized =
+      question.answer
+        .trim()
+        .toUpperCase();
+
+    if(
+      ["A","B","C","D"].includes(
+        normalized
+      )
+    ){
+
+      return (
+        normalized.charCodeAt(0)
+        - 65
+      );
+
+    }
+
+    const number =
+      Number(normalized);
+
+    if(
+      Number.isInteger(number)
+    ){
+
+      return number;
+
+    }
+
+  }
+
+  if(
+    typeof question.correctAnswer === "number"
+  ){
+
+    return question.correctAnswer;
+
+  }
+
+  return 0;
+}
+
+
+function getOptions(question){
+
+  const source =
+    question.options;
+
+  if(
+    source &&
+    !Array.isArray(source) &&
+    typeof source === "object"
+  ){
+
+    return (
+      source[language] ??
+      source.en ??
+      source.hi ??
+      []
+    );
+
+  }
+
+  return Array.isArray(source)
+    ? source
+    : [];
 
 }
+
+
+function getExplanation(question){
+
+  return getText(
+    question.explanation ??
+    question.answerExplanation ??
+    ""
+  );
+
+}
+
+
+function renderCurrentChallenge(){
+
+  challengeData =
+    getChallengeData();
+
+  if(!challengeData.length){
+
+    challengeQuestion.textContent =
+      language === "hi"
+        ? "Challenges उपलब्ध नहीं हैं।"
+        : "No challenges available.";
+
+    challengeOptions.innerHTML = "";
+
+    challengeFeedback.classList.remove(
+      "show"
+    );
+
+    nextChallenge.disabled = true;
+
+    return;
+  }
+
+  if(
+    challengeIndex >= challengeData.length
+  ){
+
+    challengeIndex = 0;
+
+  }
+
+  const question =
+    challengeData[challengeIndex];
+
+  challengeAnswered = false;
+
+  challengeCount.textContent =
+    language === "hi"
+      ? `चैलेंज ${challengeIndex + 1} / ${challengeData.length}`
+      : `Challenge ${challengeIndex + 1} / ${challengeData.length}`;
+
+  challengeProgress.style.width =
+    (
+      (
+        challengeIndex + 1
+      )
+      /
+      challengeData.length
+      *
+      100
+    ) + "%";
+
+  challengeQuestion.textContent =
+    getText(question.question);
+
+  challengeOptions.innerHTML = "";
+
+  challengeFeedback.classList.remove(
+    "show"
+  );
+
+  nextChallenge.disabled = true;
+
+  const options =
+    getOptions(question);
+
+  options.forEach(
+    (option,index) => {
+
+      const button =
+        document.createElement("button");
+
+      button.type = "button";
+
+      button.className =
+        "challenge-option";
+
+      button.innerHTML = `
+        <span class="option-letter">
+          ${String.fromCharCode(65 + index)}
+        </span>
+        <span>
+          ${escapeHTML(
+            getText(option)
+          )}
+        </span>
+      `;
+
+      button.addEventListener(
+        "click",
+        () => answerChallenge(index)
+      );
+
+      challengeOptions.appendChild(
+        button
+      );
+
+    }
+  );
+}
+
+
+function answerChallenge(selectedIndex){
+
+  if(challengeAnswered){
+    return;
+  }
+
+  const question =
+    challengeData[challengeIndex];
+
+  if(!question){
+    return;
+  }
+
+  challengeAnswered = true;
+
+  const correctIndex =
+    getCorrectIndex(question);
+
+  const buttons =
+    [
+      ...challengeOptions
+        .querySelectorAll(
+          ".challenge-option"
+        )
+    ];
+
+  buttons.forEach(
+    (button,index) => {
+
+      button.classList.add(
+        "disabled"
+      );
+
+      button.disabled = true;
+
+      if(index === correctIndex){
+
+        button.classList.add(
+          "correct"
+        );
+
+      }
+
+      if(
+        index === selectedIndex &&
+        index !== correctIndex
+      ){
+
+        button.classList.add(
+          "wrong"
+        );
+
+      }
+
+    }
+  );
+
+  const correct =
+    selectedIndex === correctIndex;
+
+  feedbackTitle.textContent =
+    correct
+      ? (
+          language === "hi"
+            ? "✓ सही उत्तर"
+            : "✓ Correct Answer"
+        )
+      : (
+          language === "hi"
+            ? "✕ सही उत्तर ऊपर दिखाया गया है"
+            : "✕ The correct answer is highlighted"
+        );
+
+  feedbackText.textContent =
+    getExplanation(question);
+
+  challengeFeedback.classList.add(
+    "show"
+  );
+
+  nextChallenge.disabled = false;
+
+  nextChallenge.textContent =
+    challengeIndex === challengeData.length - 1
+      ? (
+          language === "hi"
+            ? "पहला Challenge फिर से →"
+            : "Start Again →"
+        )
+      : (
+          language === "hi"
+            ? "अगला Challenge →"
+            : "Next Challenge →"
+        );
+}
+
+
+nextChallenge.addEventListener(
+  "click",
+  function(){
+
+    if(!challengeAnswered){
+      return;
+    }
+
+    challengeIndex++;
+
+    if(
+      challengeIndex >= challengeData.length
+    ){
+
+      challengeIndex = 0;
+
+      showToast(
+        language === "hi"
+          ? "Challenges फिर से शुरू!"
+          : "Challenges restarted!"
+      );
+
+    }
+
+    renderCurrentChallenge();
+
+    document
+      .getElementById("science-challenges")
+      .scrollIntoView({
+        behavior:"smooth",
+        block:"center"
+      });
+
+  }
+);
+
+
+/* =========================================================
+   THINK LIKE A SCIENTIST
+========================================================= */
+
+function getScientistData(){
+
+  try{
+
+    if(
+      window.ThinkLikeAScientist &&
+      typeof window.ThinkLikeAScientist.all === "function"
+    ){
+
+      return (
+        window.ThinkLikeAScientist.all()
+        || []
+      );
+
+    }
+
+    if(
+      Array.isArray(
+        window.thinkLikeAScientist
+      )
+    ){
+
+      return window.thinkLikeAScientist;
+
+    }
+
+  }catch(error){
+
+    console.error(
+      "Think Like a Scientist error:",
+      error
+    );
+
+  }
+
+  return [];
+}
+
+
+const scientistGrid =
+  document.getElementById(
+    "scientistGrid"
+  );
+
+
+function getStoryValue(
+  story,
+  key
+){
+
+  return getText(
+    story[key]
+  );
+
+}
+
+
+function renderScientists(){
+
+  const stories =
+    getScientistData();
+
+  if(!stories.length){
+
+    scientistGrid.innerHTML = `
+      <div class="data-error">
+        ${
+          language === "hi"
+            ? "Scientific stories उपलब्ध नहीं हैं।"
+            : "Scientific stories are not available."
+        }
+      </div>
+    `;
+
+    return;
+  }
+
+  scientistGrid.innerHTML = "";
+
+  stories.forEach(
+    (story,index) => {
+
+      const scientist =
+        getStoryValue(
+          story,
+          "scientist"
+        );
+
+      const title =
+        getStoryValue(
+          story,
+          "title"
+        );
+
+      const steps = [
+        {
+          key:"scene",
+          label:"Scene",
+          hi:"परिदृश्य"
+        },
+        {
+          key:"observation",
+          label:"Observation",
+          hi:"अवलोकन"
+        },
+        {
+          key:"hypothesis",
+          label:"Hypothesis",
+          hi:"परिकल्पना"
+        },
+        {
+          key:"experiment",
+          label:"Experiment",
+          hi:"प्रयोग"
+        },
+        {
+          key:"conclusion",
+          label:"Conclusion",
+          hi:"निष्कर्ष"
+        }
+      ];
+
+      const storyElement =
+        document.createElement("article");
+
+      storyElement.className = "story";
+
+      storyElement.innerHTML = `
+
+        <button
+          class="story-head"
+          type="button"
+          aria-expanded="false"
+        >
+
+          <div class="story-number">
+            ${String(index + 1).padStart(2,"0")}
+          </div>
+
+          <div class="story-heading">
+
+            <div class="story-scientist">
+              ${escapeHTML(scientist)}
+            </div>
+
+            <div class="story-title">
+              ${escapeHTML(title)}
+            </div>
+
+          </div>
+
+          <div class="story-arrow">
+            ↓
+          </div>
+
+        </button>
+
+
+        <div class="story-body">
+
+          <div class="story-body-inner">
+
+            <div class="story-content">
+
+              ${
+                steps.map(
+                  step => `
+
+                    <div class="story-step">
+
+                      <div class="story-step-label">
+
+                        ${
+                          language === "hi"
+                            ? step.hi
+                            : step.label
+                        }
+
+                      </div>
+
+                      <div class="story-step-text">
+
+                        ${escapeHTML(
+                          getStoryValue(
+                            story,
+                            step.key
+                          )
+                        )}
+
+                      </div>
+
+                    </div>
+
+                  `
+                ).join("")
+              }
+
+            </div>
+
+          </div>
+
+        </div>
+
+      `;
+
+      const head =
+        storyElement.querySelector(
+          ".story-head"
+        );
+
+      head.addEventListener(
+        "click",
+        function(){
+
+          const currentlyOpen =
+            storyElement.classList.contains(
+              "open"
+            );
+
+          /*
+            Allow multiple stories to remain open.
+            This makes exploration easier on desktop.
+          */
+
+          storyElement.classList.toggle(
+            "open",
+            !currentlyOpen
+          );
+
+          head.setAttribute(
+            "aria-expanded",
+            String(!currentlyOpen)
+          );
+
+        }
+      );
+
+      scientistGrid.appendChild(
+        storyElement
+      );
+
+    }
+  );
+}
+
+
+/* =========================================================
+   SCIENCE BEYOND EARTH
+========================================================= */
+
+function getSpaceData(){
+
+  try{
+
+    if(
+      window.ScienceBeyondEarth &&
+      typeof window.ScienceBeyondEarth.all === "function"
+    ){
+
+      return (
+        window.ScienceBeyondEarth.all()
+        || []
+      );
+
+    }
+
+    if(
+      Array.isArray(
+        window.scienceBeyondEarth
+      )
+    ){
+
+      return window.scienceBeyondEarth;
+
+    }
+
+  }catch(error){
+
+    console.error(
+      "Science Beyond Earth error:",
+      error
+    );
+
+  }
+
+  return [];
+}
+
+
+const spaceFacts =
+  document.getElementById(
+    "spaceFacts"
+  );
 
 
 function renderSpaceFacts(){
 
-  const facts = getSpaceData();
-
+  const facts =
+    getSpaceData();
 
   if(!facts.length){
 
-    spaceGrid.innerHTML = `
-      <article class="space-card">
-
-        <div class="space-visual">
-          🌌
-        </div>
-
-        <div class="space-label">
-
-          <small>SPACE</small>
-
-          <h3>
-            ${
-              currentLanguage === "hi"
-                ? "ब्रह्मांड की खोज जारी है"
-                : "The universe is waiting to be explored"
-            }
-          </h3>
-
-        </div>
-
-      </article>
+    spaceFacts.innerHTML = `
+      <div class="data-error">
+        ${
+          language === "hi"
+            ? "Space facts उपलब्ध नहीं हैं।"
+            : "Space facts are not available."
+        }
+      </div>
     `;
 
     return;
-
   }
 
+  spaceFacts.innerHTML = "";
 
-  spaceGrid.innerHTML =
-    facts.map((fact,index)=>{
+  facts.forEach(
+    (fact,index) => {
+
+      const visual =
+        fact.visual ??
+        fact.icon ??
+        ["☀️","🌍","⭐","🕳️","🌌","🪐","🔥","🌙"][index % 8];
+
+      const label =
+        getText(
+          fact.label ??
+          fact.title ??
+          fact.name
+        );
 
       const title =
-        fact.title?.[currentLanguage]
-        || fact.label?.[currentLanguage]
-        || fact.title?.en
-        || fact.label?.en
-        || "";
+        getText(
+          fact.title ??
+          fact.fact ??
+          fact.name
+        );
 
       const description =
-        fact.description?.[currentLanguage]
-        || fact.explanation?.[currentLanguage]
-        || fact.description?.en
-        || fact.explanation?.en
-        || "";
+        getText(
+          fact.explanation ??
+          fact.description ??
+          fact.detail ??
+          ""
+        );
 
-      const icon =
-        fact.visual
-        || fact.icon
-        || "🌌";
+      const card =
+        document.createElement("article");
 
+      card.className = "space-fact";
 
-      return `
+      card.tabIndex = 0;
 
-        <article class="space-card">
+      card.setAttribute(
+        "role",
+        "button"
+      );
 
-          <div class="space-number">
-            ${String(index + 1).padStart(2,"0")}
-          </div>
+      card.setAttribute(
+        "aria-expanded",
+        "false"
+      );
 
-          <div class="space-visual">
-            ${icon}
-          </div>
+      card.innerHTML = `
+
+        <div class="space-visual">
+          ${escapeHTML(visual)}
+        </div>
+
+        <div>
 
           <div class="space-label">
+            ${escapeHTML(label)}
+          </div>
 
-            <small>
-              ${
-                fact.label?.[currentLanguage]
-                || fact.label?.en
-                || "SPACE"
-              }
-            </small>
+          <div class="space-fact-title">
+            ${escapeHTML(title)}
+          </div>
 
-            <h3>
-              ${title}
-            </h3>
+          <div class="space-expand">
 
-            <p>
-              ${description}
-            </p>
+            ${
+              language === "hi"
+                ? "जानें और →"
+                : "Explore the fact →"
+            }
 
           </div>
 
-        </article>
+          <div class="space-detail">
+            ${escapeHTML(description)}
+          </div>
+
+        </div>
 
       `;
 
-    }).join("");
+      function toggleFact(){
 
+        const open =
+          card.classList.toggle(
+            "open"
+          );
+
+        card.setAttribute(
+          "aria-expanded",
+          String(open)
+        );
+
+      }
+
+      card.addEventListener(
+        "click",
+        toggleFact
+      );
+
+      card.addEventListener(
+        "keydown",
+        function(event){
+
+          if(
+            event.key === "Enter" ||
+            event.key === " "
+          ){
+
+            event.preventDefault();
+
+            toggleFact();
+
+          }
+
+        }
+      );
+
+      spaceFacts.appendChild(
+        card
+      );
+
+    }
+  );
 }
 
 
 /* =========================================================
-   SCIENTIFIC FIELD DATA
+   EXPLORE SCIENTIFIC FIELD
 ========================================================= */
-
-const fieldsGrid =
-  document.getElementById("fieldsGrid");
-
 
 function getFieldData(){
 
-  if(
-    window.ExploreScientificField &&
-    typeof window.ExploreScientificField.all === "function"
-  ){
+  try{
 
-    return window.ExploreScientificField.all();
+    if(
+      window.ExploreScientificField &&
+      typeof window.ExploreScientificField.all === "function"
+    ){
 
-  }
+      return (
+        window.ExploreScientificField.all()
+        || []
+      );
 
-  if(
-    Array.isArray(window.exploreScientificFields)
-  ){
+    }
 
-    return window.exploreScientificFields;
+    if(
+      Array.isArray(
+        window.exploreScientificFields
+      )
+    ){
+
+      return window.exploreScientificFields;
+
+    }
+
+  }catch(error){
+
+    console.error(
+      "Scientific field error:",
+      error
+    );
 
   }
 
   return [];
-
 }
+
+
+const fieldsGrid =
+  document.getElementById(
+    "fieldsGrid"
+  );
 
 
 function renderFields(){
 
-  const fields = getFieldData();
+  const fields =
+    getFieldData();
 
-  const lang =
-    currentLanguage === "hi"
-      ? "hi"
-      : "en";
+  if(!fields.length){
 
+    fieldsGrid.innerHTML = `
+      <div class="data-error">
+        ${
+          language === "hi"
+            ? "Scientific fields उपलब्ध नहीं हैं।"
+            : "Scientific fields are not available."
+        }
+      </div>
+    `;
 
-  fieldsGrid.innerHTML =
-    fields.map(field=>{
+    return;
+  }
+
+  fieldsGrid.innerHTML = "";
+
+  fields.forEach(
+    field => {
+
+      const icon =
+        field.icon ??
+        "🔬";
 
       const title =
-        field.title?.[lang] || "";
+        getText(
+          field.title
+        );
 
       const tagline =
-        field.tagline?.[lang] || "";
+        getText(
+          field.tagline
+        );
 
       const details =
-        field.details?.[lang] || {};
+        field.details &&
+        typeof field.details === "object"
+          ? (
+              field.details[language]
+              ??
+              field.details.en
+              ??
+              field.details.hi
+              ??
+              {}
+            )
+          : {};
 
+      const detailItems = [
 
-      return `
+        {
+          label:
+            language === "hi"
+              ? "यह क्या है"
+              : "What it is",
 
-        <article class="field-card">
+          value:
+            details.whatItIs
+        },
+
+        {
+          label:
+            language === "hi"
+              ? "यह क्या खोजता है"
+              : "What it explores",
+
+          value:
+            details.whatItExplores
+        },
+
+        {
+          label:
+            language === "hi"
+              ? "आप इसे कहाँ देखते हैं"
+              : "Where you see it",
+
+          value:
+            details.whereYouSeeIt
+        },
+
+        {
+          label:
+            language === "hi"
+              ? "Career options"
+              : "Career options",
+
+          value:
+            details.careerOptions
+        }
+
+      ];
+
+      const element =
+        document.createElement("article");
+
+      element.className = "field";
+
+      element.innerHTML = `
+
+        <button
+          class="field-head"
+          type="button"
+          aria-expanded="false"
+        >
+
+          <div class="field-icon">
+            ${escapeHTML(icon)}
+          </div>
 
           <div class="field-main">
 
-            <div class="field-icon">
-              ${field.icon || "🔬"}
+            <div class="field-title">
+              ${escapeHTML(title)}
             </div>
 
-
-            <div class="field-info">
-
-              <h3>
-                ${title}
-              </h3>
-
-              <p>
-                ${tagline}
-              </p>
-
-            </div>
-
-
-            <div class="field-arrow">
-              ↓
+            <div class="field-tagline">
+              ${escapeHTML(tagline)}
             </div>
 
           </div>
 
+          <div class="field-arrow">
+            ↓
+          </div>
 
-          <div class="field-details">
-
-            <div class="detail">
-
-              <strong>
-                ${
-                  lang === "hi"
-                    ? "यह क्या है"
-                    : "What it is"
-                }
-              </strong>
-
-              <p>
-                ${details.whatItIs || ""}
-              </p>
-
-            </div>
+        </button>
 
 
-            <div class="detail">
+        <div class="field-body">
 
-              <strong>
-                ${
-                  lang === "hi"
-                    ? "यह क्या समझाता है"
-                    : "What it explores"
-                }
-              </strong>
+          <div class="field-body-inner">
 
-              <p>
-                ${details.whatItExplores || ""}
-              </p>
+            <div class="field-content">
 
-            </div>
+              ${
+                detailItems.map(
+                  item => `
 
+                    <div class="field-detail">
 
-            <div class="detail">
+                      <strong>
+                        ${escapeHTML(item.label)}
+                      </strong>
 
-              <strong>
-                ${
-                  lang === "hi"
-                    ? "यह कहाँ दिखता है"
-                    : "Where you see it"
-                }
-              </strong>
+                      <p>
+                        ${escapeHTML(
+                          item.value ?? ""
+                        )}
+                      </p>
 
-              <p>
-                ${details.whereYouSeeIt || ""}
-              </p>
+                    </div>
 
-            </div>
-
-
-            <div class="detail">
-
-              <strong>
-                ${
-                  lang === "hi"
-                    ? "करियर विकल्प"
-                    : "Career options"
-                }
-              </strong>
-
-              <p>
-                ${details.careerOptions || ""}
-              </p>
+                  `
+                ).join("")
+              }
 
             </div>
 
           </div>
 
-        </article>
+        </div>
 
       `;
 
-    }).join("");
+      const head =
+        element.querySelector(
+          ".field-head"
+        );
 
+      head.addEventListener(
+        "click",
+        function(){
 
-  attachFieldEvents();
+          const open =
+            element.classList.toggle(
+              "open"
+            );
 
-}
-
-
-/* =========================================================
-   FIELD ACCORDION
-========================================================= */
-
-function attachFieldEvents(){
-
-  document
-    .querySelectorAll(".field-card")
-    .forEach(card=>{
-
-      const main =
-        card.querySelector(".field-main");
-
-
-      main.addEventListener("click",()=>{
-
-        const isOpen =
-          card.classList.contains("open");
-
-
-        document
-          .querySelectorAll(".field-card.open")
-          .forEach(other=>{
-
-            other.classList.remove("open");
-
-          });
-
-
-        if(!isOpen){
-
-          card.classList.add("open");
+          head.setAttribute(
+            "aria-expanded",
+            String(open)
+          );
 
         }
+      );
 
-      });
+      fieldsGrid.appendChild(
+        element
+      );
 
-    });
-
+    }
+  );
 }
 
 
@@ -2177,41 +3868,50 @@ function attachFieldEvents(){
    INITIALIZE
 ========================================================= */
 
-applyLanguage(currentLanguage);
+function init(){
+
+  /*
+    Apply saved language first.
+  */
+
+  setLanguage(language);
+
+  /*
+    Render all data-driven sections.
+  */
+
+  renderCurrentChallenge();
+
+  renderScientists();
+
+  renderSpaceFacts();
+
+  renderFields();
+
+}
 
 
 /* =========================================================
-   SMOOTH SCROLL
+   START
 ========================================================= */
 
-document
-  .querySelectorAll('a[href^="#"]')
-  .forEach(link=>{
+if(
+  document.readyState === "loading"
+){
 
-    link.addEventListener("click",(event)=>{
+  document.addEventListener(
+    "DOMContentLoaded",
+    init
+  );
 
-      const target =
-        document.querySelector(
-          link.getAttribute("href")
-        );
+}else{
 
-      if(target){
+  init();
 
-        event.preventDefault();
+}
 
-        target.scrollIntoView({
-          behavior:"smooth",
-          block:"start"
-        });
-
-      }
-
-    });
-
-  });
-
+})();
 </script>
-
 
 </body>
   </html>
