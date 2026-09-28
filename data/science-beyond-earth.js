@@ -116,8 +116,8 @@ const scienceBeyondEarth = [
     },
 
     visual: {
-      en: "⭐ 🥄",
-      hi: "⭐ 🥄"
+      en: "⭐ ",
+      hi: "⭐ "
     },
 
     label: {
@@ -284,8 +284,8 @@ const scienceBeyondEarth = [
     },
 
     visual: {
-      en: "☀️ → ☿️ 🔥 → ♀️ 🔥🔥",
-      hi: "☀️ → ☿️ 🔥 → ♀️ 🔥🔥"
+      en: "☀️ → 🔥 → 🔥🔥",
+      hi: "☀️ → 🔥 → 🔥🔥"
     },
 
     label: {
