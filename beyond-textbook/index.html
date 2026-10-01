@@ -1171,7 +1171,58 @@ section{
   font-size:13px;
   line-height:1.7;
 }
+.story-question{
+  color:#e4ebe6;
+  font-weight:600;
+}
 
+.story-options{
+  display:grid;
+  gap:8px;
+  margin-top:10px;
+}
+
+.story-option{
+  display:flex;
+  gap:10px;
+  padding:10px 12px;
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:10px;
+  background:rgba(255,255,255,.035);
+  cursor:pointer;
+  transition:background .2s ease, border-color .2s ease;
+}
+
+.story-option:hover{
+  border-color:rgba(101,242,139,.38);
+}
+
+.story-option-letter{
+  flex-shrink:0;
+  width:24px;
+  height:24px;
+  display:grid;
+  place-items:center;
+  border-radius:7px;
+  background:rgba(101,242,139,.09);
+  color:var(--green);
+  font-size:11px;
+  font-weight:800;
+}
+
+.story-options.answered .story-option{
+  cursor:default;
+}
+
+.story-option.correct{
+  background:rgba(101,242,139,.13);
+  border-color:rgba(101,242,139,.65);
+}
+
+.story-option.wrong{
+  background:rgba(255,90,90,.08);
+  border-color:rgba(255,110,110,.45);
+  }
 /* =========================================================
    SCIENCE BEYOND EARTH
 ========================================================= */
@@ -3219,6 +3270,34 @@ function getStoryValue(
   );
 
 }
+  function getStepContent(story, key){
+
+  const value = story[key];
+
+  const data =
+    value && typeof value === "object"
+      ? (value[language] ?? value.en ?? value.hi)
+      : value;
+
+  if(data && typeof data === "object" && data.question){
+
+    const options = (data.options || []).map(
+      (opt, i) => `
+        <div class="story-option" data-answer="${i === data.answer}">
+          <span class="story-option-letter">${String.fromCharCode(65 + i)}</span>
+          <span>${escapeHTML(opt)}</span>
+        </div>
+      `
+    ).join("");
+
+    return `
+      <div class="story-question">${escapeHTML(data.question)}</div>
+      <div class="story-options">${options}</div>
+    `;
+  }
+
+  return escapeHTML(typeof data === "string" ? data : "");
+  }
 
 
 function renderScientists(){
@@ -3346,12 +3425,7 @@ function renderScientists(){
 
                       <div class="story-step-text">
 
-                        ${escapeHTML(
-                          getStoryValue(
-                            story,
-                            step.key
-                          )
-                        )}
+                        ${getStepContent(story, step.key)}
 
                       </div>
 
@@ -3400,6 +3474,22 @@ function renderScientists(){
 
         }
       );
+      storyElement.querySelectorAll(".story-options").forEach(group => {
+  group.querySelectorAll(".story-option").forEach(opt => {
+    opt.addEventListener("click", () => {
+
+      if(group.classList.contains("answered")) return;
+      group.classList.add("answered");
+
+      group.querySelectorAll(".story-option").forEach(o => {
+        if(o.dataset.answer === "true") o.classList.add("correct");
+      });
+
+      if(opt.dataset.answer !== "true") opt.classList.add("wrong");
+
+    });
+  });
+});
 
       scientistGrid.appendChild(
         storyElement
@@ -3907,4 +3997,4 @@ if(
 </script>
 
 </body>
-  </html>
+   </html>
