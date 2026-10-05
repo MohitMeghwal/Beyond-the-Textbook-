@@ -1,0 +1,4051 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<meta name="description"
+      content="Science in the Real World — discover how scientific ideas become real technologies, solutions, and everyday applications.">
+
+<meta name="theme-color" content="#07100b">
+
+<title>Science in the Real World | Science Beyond the Textbook</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet">
+
+<style>
+
+/* =========================================================
+   ROOT
+========================================================= */
+
+:root{
+  --bg:#07100b;
+  --bg2:#0b1510;
+
+  --panel:rgba(13,20,16,.94);
+  --panel2:#111b15;
+
+  --green:#65f28b;
+  --green2:#35c968;
+
+  --text:#f4f5ef;
+  --muted:#aeb8af;
+
+  --line:rgba(255,255,255,.15);
+  --soft:rgba(101,242,139,.09);
+
+  --shadow:0 18px 50px rgba(0,0,0,.4);
+
+  --max:1280px;
+}
+
+/* =========================================================
+   RESET
+========================================================= */
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  min-height:100vh;
+  background:
+    radial-gradient(circle at 15% 15%, rgba(55,130,76,.10), transparent 28%),
+    radial-gradient(circle at 85% 35%, rgba(50,120,70,.08), transparent 30%),
+    linear-gradient(180deg,#07100b 0%,#08110c 45%,#07100b 100%);
+
+  color:var(--text);
+
+  font-family:
+    Inter,
+    "Noto Sans Devanagari",
+    sans-serif;
+
+  overflow-x:hidden;
+}
+
+body.hindi{
+  font-family:
+    "Noto Sans Devanagari",
+    Inter,
+    sans-serif;
+}
+
+button,
+a{
+  font:inherit;
+}
+
+button{
+  cursor:pointer;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+/* =========================================================
+   BACKGROUND WORLD
+========================================================= */
+
+.world{
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:-2;
+  overflow:hidden;
+
+  background:
+    radial-gradient(circle at 10% 20%,rgba(101,242,139,.06),transparent 22%),
+    radial-gradient(circle at 90% 70%,rgba(101,242,139,.04),transparent 24%);
+}
+
+.world::before{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background-image:
+    radial-gradient(circle,rgba(255,255,255,.14) 1px,transparent 1px);
+
+  background-size:95px 95px;
+  opacity:.13;
+}
+
+.world::after{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(101,242,139,.025) 50%,
+      transparent 100%
+    );
+}
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.container{
+  width:min(var(--max),calc(100% - 48px));
+  margin:auto;
+}
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.nav{
+  position:sticky;
+  top:0;
+  z-index:1000;
+
+  height:74px;
+
+  background:rgba(5,13,9,.88);
+
+  backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px);
+
+  border-bottom:1px solid rgba(255,255,255,.12);
+}
+
+.nav-inner{
+  height:100%;
+
+  display:flex;
+  align-items:center;
+}
+
+/* LOGO */
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+
+  flex-shrink:0;
+}
+
+.brand-icon{
+  width:42px;
+  height:42px;
+
+  display:grid;
+  place-items:center;
+
+  border-radius:13px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(101,242,139,.16),
+      rgba(101,242,139,.04)
+    );
+
+  border:1px solid rgba(101,242,139,.35);
+
+  box-shadow:
+    0 0 24px rgba(101,242,139,.08);
+}
+
+.brand-icon svg{
+  width:30px;
+  height:30px;
+}
+
+.brand-title{
+  display:flex;
+  flex-direction:column;
+  line-height:1;
+}
+
+.brand-title strong{
+  font-size:17px;
+  letter-spacing:4px;
+  font-weight:800;
+}
+
+.brand-title small{
+  margin-top:7px;
+
+  font-size:8px;
+  letter-spacing:2.7px;
+
+  color:#9ca69e;
+}
+
+/* NAV LINKS */
+
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:25px;
+
+  margin-left:auto;
+  margin-right:26px;
+
+  height:100%;
+}
+
+.nav-links>a,
+.nav-drop{
+  position:relative;
+
+  display:flex;
+  align-items:center;
+
+  height:100%;
+
+  color:#f1f4ef;
+
+  font-size:13px;
+  font-weight:600;
+
+  white-space:nowrap;
+}
+
+.nav-links>a:hover,
+.nav-drop:hover{
+  color:var(--green);
+}
+
+.nav-drop{
+  cursor:pointer;
+}
+
+.dropdown{
+  position:absolute;
+
+  top:calc(100% + 8px);
+  left:-14px;
+
+  min-width:210px;
+
+  padding:9px;
+
+  border-radius:15px;
+
+  background:rgba(9,17,12,.97);
+
+  border:1px solid rgba(101,242,139,.18);
+
+  box-shadow:var(--shadow);
+
+  opacity:0;
+  visibility:hidden;
+
+  transform:translateY(-7px);
+
+  transition:.2s ease;
+}
+
+.nav-drop:hover>.dropdown{
+  opacity:1;
+  visibility:visible;
+  transform:translateY(0);
+}
+
+.dropdown a{
+  display:block;
+
+  padding:10px 12px;
+
+  border-radius:9px;
+
+  color:#dce2dd;
+
+  font-size:13px;
+}
+
+.dropdown a:hover{
+  background:rgba(101,242,139,.08);
+  color:var(--green);
+}
+
+/* ACTIONS */
+
+.actions{
+  display:flex;
+  align-items:center;
+  gap:9px;
+
+  margin-left:0;
+}
+
+.lang{
+  height:42px;
+
+  padding:0 15px;
+
+  border-radius:15px;
+
+  background:rgba(255,255,255,.025);
+
+  border:1px solid rgba(255,255,255,.14);
+
+  color:#f0f3ef;
+
+  font-weight:700;
+}
+
+.lang b{
+  color:var(--green);
+}
+
+.lang span{
+  color:#68716b;
+  margin:0 5px;
+}
+
+.icon-btn{
+  width:44px;
+  height:44px;
+
+  display:grid;
+  place-items:center;
+
+  border-radius:15px;
+
+  background:rgba(255,255,255,.025);
+
+  border:1px solid rgba(255,255,255,.14);
+
+  color:#e8eee9;
+
+  font-size:25px;
+}
+
+.icon-btn:hover,
+.lang:hover{
+  border-color:rgba(101,242,139,.4);
+  background:rgba(101,242,139,.06);
+}
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+.mobile-menu{
+  position:fixed;
+
+  top:74px;
+  right:18px;
+  left:18px;
+
+  z-index:2000;
+
+  max-height:calc(100vh - 95px);
+
+  overflow:auto;
+
+  padding:12px;
+
+  border-radius:20px;
+
+  background:rgba(7,15,10,.98);
+
+  border:1px solid rgba(101,242,139,.2);
+
+  box-shadow:0 25px 70px rgba(0,0,0,.55);
+
+  transform:translateY(-15px);
+  opacity:0;
+  visibility:hidden;
+
+  transition:.22s ease;
+}
+
+.mobile-menu.open{
+  transform:translateY(0);
+  opacity:1;
+  visibility:visible;
+}
+
+.mobile-menu a{
+  display:block;
+
+  padding:14px 15px;
+
+  border-radius:11px;
+
+  color:#e5ebe6;
+
+  font-size:14px;
+  font-weight:600;
+}
+
+.mobile-menu a:hover{
+  background:rgba(101,242,139,.08);
+  color:var(--green);
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+  position:relative;
+
+  min-height:510px;
+
+  display:flex;
+  align-items:center;
+
+  overflow:hidden;
+
+  border-bottom:1px solid rgba(101,242,139,.18);
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(4,12,7,.98) 0%,
+      rgba(4,12,7,.88) 35%,
+      rgba(4,12,7,.35) 65%,
+      rgba(4,12,7,.18) 100%
+    ),
+    url("https://res.cloudinary.com/eq1jpw1h/image/upload/v1791127533/file_00000000c94c8211a59f489def3484a2.png")
+    center/cover no-repeat;
+}
+
+.hero::after{
+  content:"";
+
+  position:absolute;
+  inset:0;
+
+  pointer-events:none;
+
+  background:
+    linear-gradient(
+      0deg,
+      rgba(7,16,11,.95),
+      transparent 22%,
+      transparent 75%,
+      rgba(7,16,11,.2)
+    );
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+
+  max-width:590px;
+
+  padding:75px 0 70px;
+}
+
+.kicker{
+  display:flex;
+  align-items:center;
+  gap:10px;
+
+  color:var(--green);
+
+  font-size:12px;
+  font-weight:800;
+
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.kicker::before{
+  content:"";
+  width:24px;
+  height:2px;
+
+  background:var(--green);
+}
+
+.hero h1{
+  margin-top:14px;
+
+  font-family:Caveat,cursive;
+
+  font-size:clamp(58px,7vw,96px);
+
+  line-height:.82;
+
+  text-transform:uppercase;
+
+  letter-spacing:-2px;
+}
+
+.hero h1 span{
+  color:var(--green);
+}
+
+.hero-tagline{
+  margin-top:23px;
+
+  color:var(--green);
+
+  font-size:17px;
+  font-weight:800;
+
+  letter-spacing:1.7px;
+  text-transform:uppercase;
+}
+
+.hero-description{
+  margin-top:19px;
+
+  max-width:530px;
+
+  color:#d0d7d1;
+
+  font-size:16px;
+  line-height:1.75;
+}
+
+.hero-caption{
+  position:absolute;
+
+  right:5%;
+  bottom:40px;
+
+  z-index:3;
+
+  font-family:Caveat,cursive;
+
+  font-size:30px;
+
+  color:#fff;
+
+  transform:rotate(-4deg);
+}
+
+.hero-caption span{
+  display:block;
+  color:var(--green);
+}
+
+/* =========================================================
+   SECTIONS
+========================================================= */
+
+.section{
+  padding:72px 0;
+
+  border-bottom:1px solid rgba(255,255,255,.09);
+}
+
+.section-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+
+  gap:30px;
+
+  margin-bottom:30px;
+}
+
+.section-kicker{
+  color:var(--green);
+
+  font-size:11px;
+  font-weight:800;
+
+  letter-spacing:2px;
+
+  text-transform:uppercase;
+}
+
+.section-title{
+  margin-top:7px;
+
+  font-family:Caveat,cursive;
+
+  font-size:48px;
+
+  line-height:.95;
+
+  text-transform:uppercase;
+}
+
+.section-title span{
+  color:var(--green);
+}
+
+.section-description{
+  margin-top:12px;
+
+  max-width:670px;
+
+  color:var(--muted);
+
+  font-size:15px;
+  line-height:1.7;
+}
+
+.section-side-note{
+  color:var(--green);
+
+  font-size:12px;
+  font-weight:700;
+
+  white-space:nowrap;
+}
+
+/* =========================================================
+   DOMAIN GRID
+========================================================= */
+
+.domain-grid{
+  display:grid;
+
+  grid-template-columns:repeat(7,1fr);
+
+  gap:14px;
+}
+
+/* DOMAIN CARD */
+
+.domain-card{
+  position:relative;
+
+  min-height:170px;
+
+  padding:17px 13px 15px;
+
+  display:flex;
+  flex-direction:column;
+
+  justify-content:space-between;
+
+  border-radius:17px;
+
+  background:
+    linear-gradient(
+      160deg,
+      rgba(15,28,20,.96),
+      rgba(8,18,12,.96)
+    );
+
+  border:1px solid rgba(101,242,139,.20);
+
+  transition:
+    transform .25s ease,
+    border-color .25s ease,
+    box-shadow .25s ease,
+    background .25s ease;
+}
+
+.domain-card::before{
+  content:"";
+
+  position:absolute;
+
+  inset:0;
+
+  border-radius:inherit;
+
+  background:
+    radial-gradient(
+      circle at 50% 20%,
+      rgba(101,242,139,.12),
+      transparent 48%
+    );
+
+  opacity:0;
+
+  transition:.25s ease;
+
+  pointer-events:none;
+}
+
+.domain-card:hover{
+  transform:translateY(-4px);
+
+  border-color:rgba(101,242,139,.45);
+
+  box-shadow:
+    0 16px 40px rgba(0,0,0,.35),
+    0 0 25px rgba(101,242,139,.07);
+}
+
+.domain-card.active{
+  transform:translateY(-7px);
+
+  background:
+    linear-gradient(
+      160deg,
+      rgba(21,50,31,.98),
+      rgba(8,22,13,.98)
+    );
+
+  border-color:var(--green);
+
+  box-shadow:
+    0 14px 35px rgba(0,0,0,.45),
+    0 0 32px rgba(101,242,139,.16);
+}
+
+.domain-card.active::before{
+  opacity:1;
+}
+
+.domain-visual{
+  position:relative;
+  z-index:1;
+
+  width:56px;
+  height:56px;
+
+  display:grid;
+  place-items:center;
+
+  border-radius:17px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(101,242,139,.16),
+      rgba(101,242,139,.04)
+    );
+
+  border:1px solid rgba(101,242,139,.22);
+
+  font-size:29px;
+
+  box-shadow:
+    inset 0 0 25px rgba(101,242,139,.04);
+}
+
+.domain-card.active .domain-visual{
+  border-color:rgba(101,242,139,.55);
+
+  box-shadow:
+    0 0 25px rgba(101,242,139,.15);
+}
+
+.domain-name{
+  position:relative;
+  z-index:1;
+
+  margin-top:13px;
+
+  font-size:13px;
+  font-weight:800;
+
+  line-height:1.25;
+}
+
+.domain-name-hi{
+  margin-top:5px;
+
+  color:var(--muted);
+
+  font-size:12px;
+}
+
+.domain-arrow{
+  position:relative;
+  z-index:1;
+
+  margin-top:12px;
+
+  color:var(--green);
+
+  font-size:18px;
+}
+
+/* =========================================================
+   DOMAIN EXPANSION
+   This visually belongs to selected domain.
+========================================================= */
+
+.domain-explorer{
+  display:none;
+
+  margin-top:0;
+
+  padding:22px;
+
+  border:
+    1px solid rgba(101,242,139,.34);
+
+  border-top:none;
+
+  border-radius:
+    0 0 22px 22px;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(16,39,24,.97),
+      rgba(8,20,12,.98)
+    );
+
+  box-shadow:
+    0 25px 55px rgba(0,0,0,.42),
+    inset 0 1px 0 rgba(101,242,139,.08);
+}
+
+.domain-explorer.open{
+  display:block;
+
+  animation:
+    domainOpen .28s ease both;
+}
+
+@keyframes domainOpen{
+  from{
+    opacity:0;
+    transform:translateY(-8px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+.domain-explorer-head{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  gap:20px;
+
+  margin-bottom:17px;
+}
+
+.domain-explorer-title{
+  display:flex;
+  align-items:center;
+  gap:10px;
+
+  color:#fff;
+
+  font-size:15px;
+  font-weight:800;
+}
+
+.domain-explorer-title .active-icon{
+  font-size:24px;
+}
+
+.domain-close{
+  width:35px;
+  height:35px;
+
+  border-radius:10px;
+
+  border:1px solid rgba(255,255,255,.12);
+
+  background:rgba(255,255,255,.04);
+
+  color:#dfe6e0;
+
+  font-size:17px;
+}
+
+.domain-close:hover{
+  border-color:rgba(101,242,139,.4);
+  color:var(--green);
+}
+
+.topic-grid{
+  display:grid;
+
+  grid-template-columns:repeat(2,1fr);
+
+  gap:12px;
+}
+
+/* TOPIC CARD */
+
+.topic-card{
+  overflow:hidden;
+
+  border-radius:15px;
+
+  border:1px solid rgba(255,255,255,.11);
+
+  background:
+    rgba(4,14,8,.58);
+
+  transition:
+    border-color .2s ease,
+    background .2s ease;
+}
+
+.topic-card.open{
+  border-color:rgba(101,242,139,.35);
+
+  background:
+    rgba(5,18,10,.82);
+}
+
+.topic-summary{
+  width:100%;
+
+  padding:15px;
+
+  display:flex;
+  align-items:center;
+
+  gap:13px;
+
+  background:transparent;
+
+  border:0;
+
+  color:inherit;
+
+  text-align:left;
+}
+
+.topic-visual{
+  width:46px;
+  height:46px;
+
+  flex:0 0 46px;
+
+  display:grid;
+  place-items:center;
+
+  border-radius:13px;
+
+  background:rgba(101,242,139,.07);
+
+  border:1px solid rgba(101,242,139,.15);
+
+  font-size:23px;
+}
+
+.topic-summary-main{
+  min-width:0;
+  flex:1;
+}
+
+.topic-title{
+  color:#f3f6f3;
+
+  font-size:14px;
+  font-weight:800;
+
+  line-height:1.3;
+}
+
+.topic-hook{
+  margin-top:5px;
+
+  color:#aab5ad;
+
+  font-size:12px;
+  line-height:1.45;
+}
+
+.topic-plus{
+  color:var(--green);
+
+  font-size:20px;
+
+  transition:.2s ease;
+}
+
+.topic-card.open .topic-plus{
+  transform:rotate(45deg);
+}
+
+.topic-details{
+  display:none;
+
+  padding:
+    0 15px 17px 74px;
+}
+
+.topic-card.open .topic-details{
+  display:block;
+}
+
+.detail-block{
+  margin-top:13px;
+}
+
+.detail-label{
+  color:var(--green);
+
+  font-size:10px;
+  font-weight:800;
+
+  letter-spacing:1.3px;
+
+  text-transform:uppercase;
+}
+
+.detail-text{
+  margin-top:5px;
+
+  color:#cbd3cd;
+
+  font-size:13px;
+  line-height:1.65;
+}
+
+/* =========================================================
+   HOW SCIENCE CHANGES OUR WORLD
+========================================================= */
+
+.stories-layout{
+  display:grid;
+
+  grid-template-columns:280px 1fr;
+
+  gap:30px;
+
+  align-items:start;
+}
+
+.stories-intro{
+  position:sticky;
+  top:105px;
+}
+
+.story-viewer{
+  min-width:0;
+}
+
+.story-grid{
+  display:grid;
+
+  grid-template-columns:repeat(3,1fr);
+
+  gap:15px;
+}
+
+.story-card{
+  position:relative;
+
+  min-height:330px;
+
+  overflow:hidden;
+
+  padding:18px;
+
+  display:flex;
+  flex-direction:column;
+
+  justify-content:flex-end;
+
+  border-radius:18px;
+
+  border:1px solid rgba(101,242,139,.18);
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(16,36,23,.90),
+      rgba(7,16,10,.98)
+    );
+
+  transition:.25s ease;
+}
+
+.story-card:hover{
+  transform:translateY(-5px);
+
+  border-color:rgba(101,242,139,.42);
+
+  box-shadow:
+    0 18px 45px rgba(0,0,0,.35);
+}
+
+.story-visual{
+  position:absolute;
+
+  top:20px;
+  right:20px;
+
+  width:100px;
+  height:100px;
+
+  display:grid;
+  place-items:center;
+
+  border-radius:50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(101,242,139,.17),
+      rgba(101,242,139,.025) 65%,
+      transparent 66%
+    );
+
+  border:1px solid rgba(101,242,139,.15);
+
+  font-size:55px;
+}
+
+.story-index{
+  color:var(--green);
+
+  font-size:10px;
+  font-weight:800;
+
+  letter-spacing:2px;
+}
+
+.story-title{
+  margin-top:9px;
+
+  font-family:Caveat,cursive;
+
+  font-size:31px;
+
+  line-height:.95;
+}
+
+.story-description{
+  margin-top:11px;
+
+  color:#c3ccc5;
+
+  font-size:13px;
+
+  line-height:1.6;
+
+  display:-webkit-box;
+  -webkit-line-clamp:4;
+  -webkit-box-orient:vertical;
+  overflow:hidden;
+}
+
+.story-button{
+  margin-top:15px;
+
+  align-self:flex-start;
+
+  padding:8px 13px;
+
+  border-radius:999px;
+
+  border:1px solid rgba(101,242,139,.35);
+
+  background:rgba(101,242,139,.06);
+
+  color:var(--green);
+
+  font-size:11px;
+  font-weight:800;
+}
+
+.story-button:hover{
+  background:rgba(101,242,139,.12);
+}
+
+.story-controls{
+  display:flex;
+  justify-content:flex-end;
+
+  margin-top:17px;
+}
+
+.next-story{
+  display:flex;
+  align-items:center;
+  gap:8px;
+
+  padding:10px 16px;
+
+  border-radius:999px;
+
+  border:1px solid rgba(101,242,139,.35);
+
+  background:rgba(101,242,139,.06);
+
+  color:var(--green);
+
+  font-weight:800;
+
+  font-size:12px;
+}
+
+.next-story:hover{
+  background:rgba(101,242,139,.12);
+}
+
+/* =========================================================
+   CLASSROOM TO REAL LIFE
+========================================================= */
+
+.classroom-layout{
+  display:grid;
+
+  grid-template-columns:1fr 1.1fr;
+
+  gap:35px;
+
+  align-items:center;
+}
+
+.flow{
+  display:flex;
+  align-items:center;
+
+  gap:12px;
+
+  flex-wrap:wrap;
+}
+
+.flow-item{
+  text-align:center;
+
+  min-width:92px;
+}
+
+.flow-icon{
+  width:68px;
+  height:68px;
+
+  margin:auto;
+
+  display:grid;
+  place-items:center;
+
+  border-radius:20px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(101,242,139,.15),
+      rgba(101,242,139,.03)
+    );
+
+  border:1px solid rgba(101,242,139,.28);
+
+  font-size:32px;
+}
+
+.flow-label{
+  margin-top:8px;
+
+  color:#edf2ed;
+
+  font-size:11px;
+  font-weight:800;
+}
+
+.flow-arrow{
+  color:var(--green);
+
+  font-size:23px;
+}
+
+.classroom-card{
+  position:relative;
+
+  min-height:275px;
+
+  padding:24px;
+
+  display:grid;
+
+  grid-template-columns:145px 1fr;
+
+  gap:24px;
+
+  align-items:center;
+
+  border-radius:21px;
+
+  border:1px solid rgba(101,242,139,.22);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(15,34,21,.95),
+      rgba(7,17,10,.96)
+    );
+
+  box-shadow:var(--shadow);
+}
+
+.classroom-visual{
+  width:145px;
+  height:180px;
+
+  display:grid;
+  place-items:center;
+
+  border-radius:18px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(101,242,139,.18),
+      rgba(101,242,139,.03) 65%,
+      transparent 66%
+    );
+
+  border:1px solid rgba(101,242,139,.18);
+
+  font-size:75px;
+}
+
+.classroom-kicker{
+  color:var(--green);
+
+  font-size:10px;
+  font-weight:800;
+
+  letter-spacing:1.4px;
+
+  text-transform:uppercase;
+}
+
+.classroom-title{
+  margin-top:7px;
+
+  font-family:Caveat,cursive;
+
+  font-size:34px;
+
+  line-height:.95;
+}
+
+.classroom-text{
+  margin-top:12px;
+
+  color:#c3ccc5;
+
+  font-size:13px;
+
+  line-height:1.65;
+}
+
+.classroom-button{
+  margin-top:15px;
+
+  padding:10px 15px;
+
+  border-radius:999px;
+
+  border:1px solid rgba(101,242,139,.35);
+
+  background:rgba(101,242,139,.07);
+
+  color:var(--green);
+
+  font-size:12px;
+  font-weight:800;
+}
+
+/* =========================================================
+   FINAL CTA
+========================================================= */
+
+.final-cta{
+  position:relative;
+
+  min-height:380px;
+
+  display:flex;
+  align-items:center;
+
+  overflow:hidden;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(4,12,7,.96),
+      rgba(4,12,7,.65),
+      rgba(4,12,7,.25)
+    ),
+    url("https://res.cloudinary.com/eq1jpw1h/image/upload/v1791127533/file_00000000c94c8211a59f489def3484a2.png")
+    center/cover no-repeat;
+}
+
+.final-cta::after{
+  content:"";
+
+  position:absolute;
+  inset:0;
+
+  background:
+    linear-gradient(
+      0deg,
+      rgba(7,16,11,.9),
+      transparent 40%,
+      rgba(7,16,11,.4)
+    );
+}
+
+.final-content{
+  position:relative;
+  z-index:2;
+
+  max-width:600px;
+
+  padding:80px 0;
+}
+
+.final-content h2{
+  font-family:Caveat,cursive;
+
+  font-size:65px;
+
+  line-height:.88;
+
+  text-transform:uppercase;
+}
+
+.final-content h2 span{
+  color:var(--green);
+}
+
+.final-description{
+  margin-top:17px;
+
+  color:#d1d8d2;
+
+  font-size:15px;
+  line-height:1.7;
+}
+
+.final-button{
+  display:inline-flex;
+
+  margin-top:20px;
+
+  padding:12px 20px;
+
+  border-radius:999px;
+
+  border:1px solid rgba(101,242,139,.5);
+
+  background:rgba(101,242,139,.10);
+
+  color:var(--green);
+
+  font-size:13px;
+  font-weight:800;
+}
+
+.final-button:hover{
+  background:rgba(101,242,139,.18);
+}
+
+/* =========================================================
+   LANGUAGE VISIBILITY
+========================================================= */
+
+.lang-hi{
+  display:none;
+}
+
+body.hindi .lang-en{
+  display:none;
+}
+
+body.hindi .lang-hi{
+  display:block;
+}
+
+body.hindi span.lang-hi,
+body.hindi small.lang-hi{
+  display:inline;
+}
+
+/* =========================================================
+   TOAST
+========================================================= */
+
+.toast{
+  position:fixed;
+
+  left:50%;
+  bottom:24px;
+
+  z-index:5000;
+
+  transform:
+    translate(-50%,20px);
+
+  opacity:0;
+  visibility:hidden;
+
+  padding:11px 16px;
+
+  border-radius:999px;
+
+  background:rgba(8,18,11,.95);
+
+  border:1px solid rgba(101,242,139,.35);
+
+  color:#e9f2eb;
+
+  font-size:12px;
+
+  transition:.25s ease;
+}
+
+.toast.show{
+  opacity:1;
+  visibility:visible;
+
+  transform:
+    translate(-50%,0);
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:1100px){
+
+  .nav-links{
+    gap:17px;
+    margin-right:15px;
+  }
+
+  .nav-links>a,
+  .nav-drop{
+    font-size:12px;
+  }
+
+  .domain-grid{
+    grid-template-columns:
+      repeat(4,1fr);
+  }
+
+}
+
+@media(max-width:900px){
+
+  .nav{
+    height:68px;
+  }
+
+  .nav-links{
+    display:none;
+  }
+
+  .actions{
+    margin-left:auto;
+  }
+
+  .container{
+    width:min(
+      var(--max),
+      calc(100% - 34px)
+    );
+  }
+
+  .hero{
+    min-height:580px;
+
+    background-position:
+      64% center;
+  }
+
+  .hero::before{
+    content:"";
+
+    position:absolute;
+    inset:0;
+
+    background:
+      linear-gradient(
+        90deg,
+        rgba(4,12,7,.96),
+        rgba(4,12,7,.72)
+      );
+
+    z-index:1;
+  }
+
+  .hero-content{
+    padding-top:80px;
+  }
+
+  .domain-grid{
+    grid-template-columns:
+      repeat(2,1fr);
+  }
+
+  .topic-grid{
+    grid-template-columns:1fr;
+  }
+
+  .stories-layout{
+    grid-template-columns:1fr;
+  }
+
+  .stories-intro{
+    position:static;
+  }
+
+  .story-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .classroom-layout{
+    grid-template-columns:1fr;
+  }
+
+}
+
+@media(max-width:600px){
+
+  .container{
+    width:calc(100% - 28px);
+  }
+
+  .brand-icon{
+    width:42px;
+    height:42px;
+  }
+
+  .brand-title strong{
+    font-size:15px;
+    letter-spacing:3px;
+  }
+
+  .brand-title small{
+    font-size:7px;
+    letter-spacing:2px;
+  }
+
+  .lang{
+    height:40px;
+
+    padding:0 11px;
+
+    border-radius:14px;
+
+    font-size:12px;
+  }
+
+  .icon-btn{
+    width:42px;
+    height:42px;
+  }
+
+  .hero{
+    min-height:570px;
+
+    background-position:
+      67% center;
+  }
+
+  .hero-content{
+    padding:
+      70px 0
+      70px;
+  }
+
+  .hero h1{
+    font-size:61px;
+  }
+
+  .hero-tagline{
+    font-size:14px;
+
+    line-height:1.4;
+  }
+
+  .hero-description{
+    font-size:14px;
+
+    max-width:100%;
+  }
+
+  .hero-caption{
+    display:none;
+  }
+
+  .section{
+    padding:58px 0;
+  }
+
+  .section-head{
+    display:block;
+  }
+
+  .section-title{
+    font-size:42px;
+  }
+
+  .section-side-note{
+    display:block;
+
+    margin-top:13px;
+  }
+
+  .domain-grid{
+    grid-template-columns:
+      repeat(2,1fr);
+
+    gap:10px;
+  }
+
+  .domain-card{
+    min-height:155px;
+
+    padding:14px 11px;
+  }
+
+  .domain-visual{
+    width:49px;
+    height:49px;
+
+    font-size:25px;
+  }
+
+  .domain-name{
+    font-size:12px;
+  }
+
+  .domain-name-hi{
+    font-size:11px;
+  }
+
+  .domain-explorer{
+    padding:13px;
+
+    border-radius:
+      0 0 17px 17px;
+  }
+
+  .domain-explorer-head{
+    align-items:flex-start;
+  }
+
+  .topic-summary{
+    padding:12px;
+  }
+
+  .topic-details{
+    padding:
+      0 13px 15px 70px;
+  }
+
+  .story-grid{
+    grid-template-columns:1fr;
+  }
+
+  .story-card{
+    min-height:300px;
+  }
+
+  .classroom-card{
+    grid-template-columns:1fr;
+
+    text-align:center;
+
+    padding:20px;
+  }
+
+  .classroom-visual{
+    width:100%;
+    height:150px;
+  }
+
+  .flow{
+    justify-content:center;
+  }
+
+  .flow-arrow{
+    display:none;
+  }
+
+  .final-content h2{
+    font-size:52px;
+  }
+
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media(prefers-reduced-motion:reduce){
+
+  *,
+  *::before,
+  *::after{
+    scroll-behavior:auto !important;
+    animation-duration:.01ms !important;
+    transition-duration:.01ms !important;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="world"></div>
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<header class="nav">
+
+  <div class="container nav-inner">
+
+    <a class="brand" href="../index.html">
+
+      <div class="brand-icon">
+
+        <!-- PERMANENT SCIENCE BEYOND THE TEXTBOOK LOGO -->
+
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="40"
+          height="40"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="#75e590"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          style="filter:drop-shadow(0px 0px 6px rgba(117,229,144,.4));">
+
+          <path d="M10 2v7.31"/>
+          <path d="M14 9.3V1.99"/>
+          <path d="M8.5 2h7"/>
+          <path d="M14 9.3a6.5 6.5 0 1 1-4 0"/>
+          <path d="M5.52 16h12.96"/>
+
+        </svg>
+
+      </div>
+
+      <div class="brand-title">
+
+        <strong>SCIENCE</strong>
+
+        <small>BEYOND THE TEXTBOOK</small>
+
+      </div>
+
+    </a>
+
+
+    <nav class="nav-links">
+
+      <a href="../index.html">⌂ Home</a>
+
+      <div class="nav-drop">
+
+        Subjects ˅
+
+        <div class="dropdown">
+
+          <a href="../physics/index.html">Physics</a>
+          <a href="../chemistry/index.html">Chemistry</a>
+          <a href="../biology/index.html">Biology</a>
+          <a href="../earth/index.html">Earth & Environment</a>
+
+        </div>
+
+      </div>
+
+
+      <div class="nav-drop">
+
+        Explore ˅
+
+        <div class="dropdown">
+
+          <a href="../why/index.html">Why Does This Happen?</a>
+          <a href="../invisible-visible/index.html">Make the Invisible Visible</a>
+          <a href="../magic-science/index.html">Science That Looks Like Magic</a>
+          <a href="../what-if/index.html">What If?</a>
+          <a href="../beyond-textbook/index.html">Beyond the Textbook</a>
+
+        </div>
+
+      </div>
+
+
+      <div class="nav-drop">
+
+        Games ˅
+
+        <div class="dropdown">
+
+          <a href="../games/index.html">All Games</a>
+          <a href="../games/circuit-builder.html">Circuit Builder</a>
+          <a href="../games/magnetic-maze.html">Magnetic Maze</a>
+          <a href="../games/build-a-cell.html">Build a Cell</a>
+
+        </div>
+
+      </div>
+
+
+      <div class="nav-drop">
+
+        Lab ˅
+
+        <div class="dropdown">
+
+          <a href="../lab/index.html">Virtual Lab</a>
+
+        </div>
+
+      </div>
+
+
+      <div class="nav-drop">
+
+        More ˅
+
+        <div class="dropdown">
+
+          <a href="../science-around-us/index.html">Science Around Us</a>
+          <a href="../real-world/index.html">Science in the Real World</a>
+          <a href="../about.html">About</a>
+
+        </div>
+
+      </div>
+
+    </nav>
+
+
+    <div class="actions">
+
+      <button
+        class="lang"
+        id="langBtn"
+        type="button">
+
+        EN <span>|</span> <b>हिंदी</b>
+
+      </button>
+
+      <button
+        class="icon-btn"
+        id="menuBtn"
+        type="button"
+        aria-label="Open menu">
+
+        ☰
+
+      </button>
+
+    </div>
+
+  </div>
+
+</header>
+
+
+<!-- =====================================================
+     MOBILE MENU
+===================================================== -->
+
+<div class="mobile-menu" id="mobileMenu">
+
+  <a href="../index.html">⌂ Home</a>
+
+  <a href="../physics/index.html">⚛ Physics</a>
+  <a href="../chemistry/index.html">🧪 Chemistry</a>
+  <a href="../biology/index.html">🧬 Biology</a>
+  <a href="../earth/index.html">🌍 Earth & Environment</a>
+
+  <a href="../why/index.html">💡 Why Does This Happen?</a>
+  <a href="../invisible-visible/index.html">👁 Make the Invisible Visible</a>
+  <a href="../magic-science/index.html">✨ Science That Looks Like Magic</a>
+  <a href="../what-if/index.html">❓ What If?</a>
+  <a href="../beyond-textbook/index.html">🚀 Beyond the Textbook</a>
+
+  <a href="../lab/index.html">🧪 Virtual Lab</a>
+  <a href="../games/index.html">🎮 Science Games</a>
+
+  <a href="../real-world/index.html">🌐 Science in the Real World</a>
+  <a href="../science-around-us/index.html">📰 Science Around Us</a>
+
+</div>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero">
+
+  <div class="container">
+
+    <div class="hero-content">
+
+      <div class="kicker">
+        REAL WORLD IMPACT
+      </div>
+
+      <!-- Decorative / large heading stays English -->
+
+      <h1>
+        SCIENCE IN THE
+        <br>
+        <span>REAL WORLD</span>
+      </h1>
+
+      <div class="hero-tagline">
+        SCIENCE IS NOT JUST IN THE LAB.
+      </div>
+
+      <p class="hero-description">
+
+        <span class="lang-en">
+          Science is not only something you learn from books.
+          It is all around you — shaping our lives, solving
+          problems, and building the future.
+        </span>
+
+        <span class="lang-hi">
+          विज्ञान सिर्फ किताबों में पढ़ने वाली चीज़ नहीं है।
+          यह हमारे चारों ओर है — हमारे जीवन को बेहतर बनाने,
+          समस्याओं को हल करने और भविष्य बनाने में काम आता है।
+        </span>
+
+      </p>
+
+    </div>
+
+  </div>
+
+  <div class="hero-caption">
+
+    Real Problems.
+    <span>Real Solutions.</span>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     SECTION 1
+     REAL WORLD APPLICATIONS
+===================================================== -->
+
+<section class="section" id="applications">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <div>
+
+        <div class="section-kicker">
+          AREAS OF IMPACT
+        </div>
+
+        <h2 class="section-title">
+          REAL WORLD <span>APPLICATIONS</span>
+        </h2>
+
+        <p class="section-description">
+
+          <span class="lang-en">
+            Science works across many fields to make life
+            safer, healthier, easier and more connected.
+            Explore what happens when you look closer.
+          </span>
+
+          <span class="lang-hi">
+            विज्ञान कई क्षेत्रों में हमारे जीवन को आसान,
+            सुरक्षित, स्वस्थ और अधिक तकनीकी बनाता है।
+            किसी भी क्षेत्र को चुनकर उसके पीछे की विज्ञान
+            को करीब से देखो।
+          </span>
+
+        </p>
+
+      </div>
+
+      <div class="section-side-note">
+
+        <span class="lang-en">
+          Explore each area →
+        </span>
+
+        <span class="lang-hi">
+          हर क्षेत्र देखें →
+        </span>
+
+      </div>
+
+    </div>
+
+
+    <!-- DOMAIN CARDS -->
+
+    <div
+      class="domain-grid"
+      id="domainGrid">
+    </div>
+
+
+    <!-- SELECTED DOMAIN CONTENT -->
+
+    <div
+      class="domain-explorer"
+      id="domainExplorer">
+
+      <div
+        class="domain-explorer-head">
+
+        <div
+          class="domain-explorer-title"
+          id="domainExplorerTitle">
+        </div>
+
+        <button
+          class="domain-close"
+          id="domainClose"
+          type="button"
+          aria-label="Close">
+
+          ×
+
+        </button>
+
+      </div>
+
+      <div
+        class="topic-grid"
+        id="topicGrid">
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     SECTION 2
+     HOW SCIENCE CHANGES OUR WORLD
+===================================================== -->
+
+<section class="section" id="real-stories">
+
+  <div class="container">
+
+    <div class="stories-layout">
+
+      <div class="stories-intro">
+
+        <div class="section-kicker">
+          REAL STORIES
+        </div>
+
+        <h2 class="section-title">
+          HOW SCIENCE
+          <br>
+          CHANGES OUR
+          <span>WORLD</span>
+        </h2>
+
+        <p class="section-description">
+
+          <span class="lang-en">
+            Science becomes powerful when an idea leaves
+            the textbook and starts doing something useful
+            in the real world.
+          </span>
+
+          <span class="lang-hi">
+            विज्ञान तब शक्तिशाली बनता है जब कोई विचार
+            किताब से निकलकर वास्तविक दुनिया में उपयोगी
+            काम करना शुरू करता है।
+          </span>
+
+        </p>
+
+      </div>
+
+
+      <div class="story-viewer">
+
+        <div
+          class="story-grid"
+          id="storyGrid">
+        </div>
+
+        <div class="story-controls">
+
+          <button
+            class="next-story"
+            id="nextStory"
+            type="button">
+
+            <span class="lang-en">
+              Next topics →
+            </span>
+
+            <span class="lang-hi">
+              अगले विषय →
+            </span>
+
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     SECTION 3
+     FROM CLASSROOM TO REAL LIFE
+===================================================== -->
+
+<section class="section" id="classroom">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <div>
+
+        <div class="section-kicker">
+          SCIENCE IN ACTION
+        </div>
+
+        <h2 class="section-title">
+          FROM CLASSROOM
+          <br>
+          TO <span>REAL LIFE</span>
+        </h2>
+
+        <p class="section-description">
+
+          <span class="lang-en">
+            What you learn today can change the world
+            tomorrow.
+          </span>
+
+          <span class="lang-hi">
+            जो तुम आज सीखते हो, वही कल की दुनिया
+            को बदल सकता है।
+          </span>
+
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <div class="classroom-layout">
+
+      <div>
+
+        <div class="flow">
+
+          <div class="flow-item">
+
+            <div class="flow-icon">
+              ⚛️
+            </div>
+
+            <div class="flow-label">
+
+              <span class="lang-en">
+                Science Concept
+              </span>
+
+              <span class="lang-hi">
+                वैज्ञानिक सिद्धांत
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <div class="flow-arrow">
+            →
+          </div>
+
+
+          <div class="flow-item">
+
+            <div class="flow-icon">
+              💡
+            </div>
+
+            <div class="flow-label">
+
+              <span class="lang-en">
+                Real World Use
+              </span>
+
+              <span class="lang-hi">
+                वास्तविक उपयोग
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <div class="flow-arrow">
+            →
+          </div>
+
+
+          <div class="flow-item">
+
+            <div class="flow-icon">
+              🌍
+            </div>
+
+            <div class="flow-label">
+
+              <span class="lang-en">
+                Better Future
+              </span>
+
+              <span class="lang-hi">
+                बेहतर भविष्य
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- THIS CARD IS FILLED FROM
+           science-classroom-to-real-life.js -->
+
+      <div
+        id="classroomCard"
+        class="classroom-card">
+
+        <div class="classroom-visual" id="classroomVisual">
+          🔬
+        </div>
+
+        <div>
+
+          <div
+            class="classroom-kicker"
+            id="classroomKicker">
+
+            SCIENCE IN ACTION
+
+          </div>
+
+          <h3
+            class="classroom-title"
+            id="classroomTitle">
+
+            Loading...
+
+          </h3>
+
+          <p
+            class="classroom-text"
+            id="classroomText">
+
+            Loading...
+
+          </p>
+
+          <button
+            class="classroom-button"
+            id="classroomNext"
+            type="button">
+
+            <span class="lang-en">
+              Next example →
+            </span>
+
+            <span class="lang-hi">
+              अगला उदाहरण →
+            </span>
+
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     FINAL CTA
+===================================================== -->
+
+<section class="final-cta">
+
+  <div class="container">
+
+    <div class="final-content">
+
+      <div class="section-kicker">
+        LOOK AROUND
+      </div>
+
+      <h2>
+        SCIENCE IS
+        <br>
+        ALREADY
+        <span>THERE.</span>
+      </h2>
+
+      <p class="final-description">
+
+        <span class="lang-en">
+          Look around. From the phone in your hand to
+          the world outside your window — science is already
+          working everywhere.
+        </span>
+
+        <span class="lang-hi">
+          अपने आसपास देखो। तुम्हारे हाथ में मौजूद फोन से
+          लेकर खिड़की के बाहर की दुनिया तक — विज्ञान
+          हर जगह काम कर रहा है।
+        </span>
+
+      </p>
+
+      <a
+        href="#applications"
+        class="final-button">
+
+        <span class="lang-en">
+          Explore More →
+        </span>
+
+        <span class="lang-hi">
+          और देखें →
+        </span>
+
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<div
+  class="toast"
+  id="toast">
+</div>
+
+
+<!-- =====================================================
+     DATA FILES
+===================================================== -->
+
+<script src="../data/science-real-world.js"></script>
+
+<script src="../data/science-classroom-to-real-life.js"></script>
+
+
+<!-- =====================================================
+     PAGE JAVASCRIPT
+===================================================== -->
+
+<script>
+
+/* =========================================================
+   SAFE START
+========================================================= */
+
+document.addEventListener("DOMContentLoaded", function(){
+
+  "use strict";
+
+
+  /* =======================================================
+     ELEMENTS
+  ======================================================= */
+
+  const domainGrid =
+    document.getElementById("domainGrid");
+
+  const domainExplorer =
+    document.getElementById("domainExplorer");
+
+  const domainExplorerTitle =
+    document.getElementById("domainExplorerTitle");
+
+  const topicGrid =
+    document.getElementById("topicGrid");
+
+  const domainClose =
+    document.getElementById("domainClose");
+
+  const storyGrid =
+    document.getElementById("storyGrid");
+
+  const nextStory =
+    document.getElementById("nextStory");
+
+  const classroomVisual =
+    document.getElementById("classroomVisual");
+
+  const classroomKicker =
+    document.getElementById("classroomKicker");
+
+  const classroomTitle =
+    document.getElementById("classroomTitle");
+
+  const classroomText =
+    document.getElementById("classroomText");
+
+  const classroomNext =
+    document.getElementById("classroomNext");
+
+  const langBtn =
+    document.getElementById("langBtn");
+
+  const menuBtn =
+    document.getElementById("menuBtn");
+
+  const mobileMenu =
+    document.getElementById("mobileMenu");
+
+  const toast =
+    document.getElementById("toast");
+
+
+  /* =======================================================
+     LANGUAGE
+  ======================================================= */
+
+  let currentLanguage =
+    localStorage.getItem("scienceLanguage") === "hi"
+      ? "hi"
+      : "en";
+
+
+  function applyLanguage(){
+
+    document.body.classList.toggle(
+      "hindi",
+      currentLanguage === "hi"
+    );
+
+    localStorage.setItem(
+      "scienceLanguage",
+      currentLanguage
+    );
+
+    renderDomains();
+
+    if(activeDomain){
+
+      renderDomainTopics(
+        activeDomain
+      );
+
+    }
+
+    renderStories();
+
+    renderClassroom();
+
+  }
+
+
+  langBtn.addEventListener(
+    "click",
+    function(){
+
+      currentLanguage =
+        currentLanguage === "en"
+          ? "hi"
+          : "en";
+
+      applyLanguage();
+
+    }
+  );
+
+
+  /* =======================================================
+     MOBILE MENU
+  ======================================================= */
+
+  menuBtn.addEventListener(
+    "click",
+    function(){
+
+      mobileMenu.classList.toggle(
+        "open"
+      );
+
+      menuBtn.textContent =
+        mobileMenu.classList.contains("open")
+          ? "×"
+          : "☰";
+
+    }
+  );
+
+
+  mobileMenu
+    .querySelectorAll("a")
+    .forEach(function(link){
+
+      link.addEventListener(
+        "click",
+        function(){
+
+          mobileMenu.classList.remove(
+            "open"
+          );
+
+          menuBtn.textContent = "☰";
+
+        }
+      );
+
+    });
+
+
+  /* =======================================================
+     DATA VALIDATION
+  ======================================================= */
+
+  const realWorldAPI =
+    window.ScienceRealWorld;
+
+  if(
+    !realWorldAPI ||
+    typeof realWorldAPI.all !== "function"
+  ){
+
+    domainGrid.innerHTML = `
+      <div style="
+        grid-column:1/-1;
+        padding:25px;
+        border:1px solid rgba(255,100,100,.25);
+        border-radius:16px;
+        color:#ffb4b4;
+        background:rgba(100,20,20,.12);
+      ">
+        Science real-world data could not be loaded.
+        Please check:
+        <strong>../data/science-real-world.js</strong>
+      </div>
+    `;
+
+    return;
+
+  }
+
+
+  /* =======================================================
+     DOMAIN STATE
+
+     IMPORTANT:
+     Declared BEFORE any function uses it.
+     This prevents:
+     Cannot access 'activeDomain'
+     before initialization
+  ======================================================= */
+
+  let activeDomain = null;
+
+
+  /* =======================================================
+     GET DOMAINS
+  ======================================================= */
+
+  const domains =
+    typeof realWorldAPI.domains === "function"
+      ? realWorldAPI.domains()
+      : [
+          ...new Set(
+            realWorldAPI
+              .all()
+              .map(function(topic){
+                return topic.domain;
+              })
+          )
+        ];
+
+
+  /* =======================================================
+     DOMAIN ICONS
+  ======================================================= */
+
+  const domainIcons = {
+
+    "Space & Exploration":"🪐",
+
+    "Medical Technology":"🩺",
+
+    "Renewable Energy":"☀️",
+
+    "Transportation":"🚆",
+
+    "Communication":"📡",
+
+    "AI & Robotics":"🤖",
+
+    "Biotechnology":"🧬"
+
+  };
+
+
+  const domainHindi = {
+
+    "Space & Exploration":
+      "अंतरिक्ष और अन्वेषण",
+
+    "Medical Technology":
+      "चिकित्सा तकनीक",
+
+    "Renewable Energy":
+      "नवीकरणीय ऊर्जा",
+
+    "Transportation":
+      "परिवहन",
+
+    "Communication":
+      "संचार",
+
+    "AI & Robotics":
+      "AI और रोबोटिक्स",
+
+    "Biotechnology":
+      "जैव प्रौद्योगिकी"
+
+  };
+
+
+  /* =======================================================
+     ESCAPE HTML
+  ======================================================= */
+
+  function escapeHTML(value){
+
+    return String(
+      value ?? ""
+    )
+    .replace(/&/g,"&amp;")
+    .replace(/</g,"&lt;")
+    .replace(/>/g,"&gt;")
+    .replace(/"/g,"&quot;")
+    .replace(/'/g,"&#039;");
+
+  }
+
+
+  /* =======================================================
+     GET LANGUAGE VALUE
+  ======================================================= */
+
+  function textValue(value){
+
+    if(
+      value &&
+      typeof value === "object"
+    ){
+
+      return value[currentLanguage]
+        ?? value.en
+        ?? value.hi
+        ?? "";
+
+    }
+
+    return value ?? "";
+
+  }
+
+
+  /* =======================================================
+     RENDER DOMAIN CARDS
+  ======================================================= */
+
+  function renderDomains(){
+
+    domainGrid.innerHTML = "";
+
+    domains.forEach(
+      function(domain){
+
+        const card =
+          document.createElement("button");
+
+        card.type = "button";
+
+        card.className =
+          "domain-card" +
+          (
+            activeDomain === domain
+              ? " active"
+              : ""
+          );
+
+        const icon =
+          domainIcons[domain] ||
+          "🔬";
+
+        const hi =
+          domainHindi[domain] ||
+          domain;
+
+
+        card.innerHTML = `
+
+          <div>
+
+            <div class="domain-visual">
+              ${icon}
+            </div>
+
+            <div class="domain-name">
+              ${escapeHTML(domain)}
+            </div>
+
+            <div class="domain-name-hi">
+              ${escapeHTML(hi)}
+            </div>
+
+          </div>
+
+          <div class="domain-arrow">
+            →
+          </div>
+
+        `;
+
+
+        card.addEventListener(
+          "click",
+          function(){
+
+            if(activeDomain === domain){
+
+              closeDomain();
+
+              return;
+
+            }
+
+            openDomain(domain);
+
+          }
+        );
+
+
+        domainGrid.appendChild(card);
+
+      }
+    );
+
+  }
+
+
+  /* =======================================================
+     OPEN DOMAIN
+  ======================================================= */
+
+  function openDomain(domain){
+
+    activeDomain = domain;
+
+    renderDomains();
+
+    renderDomainTopics(
+      domain
+    );
+
+    domainExplorer.classList.add(
+      "open"
+    );
+
+    requestAnimationFrame(
+      function(){
+
+        domainExplorer.scrollIntoView({
+          behavior:"smooth",
+          block:"nearest"
+        });
+
+      }
+    );
+
+  }
+
+
+  /* =======================================================
+     CLOSE DOMAIN
+  ======================================================= */
+
+  function closeDomain(){
+
+    activeDomain = null;
+
+    domainExplorer.classList.remove(
+      "open"
+    );
+
+    topicGrid.innerHTML = "";
+
+    domainExplorerTitle.innerHTML = "";
+
+    renderDomains();
+
+  }
+
+
+  domainClose.addEventListener(
+    "click",
+    closeDomain
+  );
+
+
+  /* =======================================================
+     RENDER TOPICS FOR SELECTED DOMAIN
+  ======================================================= */
+
+  function renderDomainTopics(domain){
+
+    const topics =
+      typeof realWorldAPI.byDomain === "function"
+        ? realWorldAPI.byDomain(domain)
+        : realWorldAPI
+            .all()
+            .filter(function(topic){
+              return topic.domain === domain;
+            });
+
+
+    domainExplorerTitle.innerHTML = `
+
+      <span class="active-icon">
+        ${domainIcons[domain] || "🔬"}
+      </span>
+
+      <span>
+        ${escapeHTML(
+          currentLanguage === "hi"
+            ? domainHindi[domain] || domain
+            : domain
+        )}
+      </span>
+
+      <span style="
+        color:#7f8c83;
+        font-size:12px;
+        font-weight:600;
+      ">
+        ${topics.length} topics
+      </span>
+
+    `;
+
+
+    topicGrid.innerHTML = "";
+
+
+    topics.forEach(
+      function(topic){
+
+        const card =
+          document.createElement("article");
+
+        card.className =
+          "topic-card";
+
+
+        const title =
+          textValue(topic.title);
+
+        const hook =
+          textValue(topic.hook);
+
+        const details =
+          topic.details &&
+          (
+            topic.details[currentLanguage]
+            || topic.details.en
+            || topic.details.hi
+          );
+
+
+        card.innerHTML = `
+
+          <button
+            class="topic-summary"
+            type="button">
+
+            <div class="topic-visual">
+              ${escapeHTML(
+                topic.visual || "🔬"
+              )}
+            </div>
+
+            <div class="topic-summary-main">
+
+              <div class="topic-title">
+                ${escapeHTML(title)}
+              </div>
+
+              <div class="topic-hook">
+                ${escapeHTML(hook)}
+              </div>
+
+            </div>
+
+            <div class="topic-plus">
+              +
+            </div>
+
+          </button>
+
+
+          <div class="topic-details">
+
+            <div class="detail-block">
+
+              <div class="detail-label">
+
+                ${
+                  currentLanguage === "hi"
+                    ? "तुम क्या देखते हो"
+                    : "What you see"
+                }
+
+              </div>
+
+              <div class="detail-text">
+                ${escapeHTML(
+                  details?.whatYouSee || ""
+                )}
+              </div>
+
+            </div>
+
+
+            <div class="detail-block">
+
+              <div class="detail-label">
+
+                ${
+                  currentLanguage === "hi"
+                    ? "इसके पीछे का विज्ञान"
+                    : "The science behind it"
+                }
+
+              </div>
+
+              <div class="detail-text">
+                ${escapeHTML(
+                  details?.science || ""
+                )}
+              </div>
+
+            </div>
+
+
+            <div class="detail-block">
+
+              <div class="detail-label">
+
+                ${
+                  currentLanguage === "hi"
+                    ? "यह क्यों महत्वपूर्ण है"
+                    : "Why it matters"
+                }
+
+              </div>
+
+              <div class="detail-text">
+                ${escapeHTML(
+                  details?.whyItMatters || ""
+                )}
+              </div>
+
+            </div>
+
+          </div>
+
+        `;
+
+
+        const summary =
+          card.querySelector(
+            ".topic-summary"
+          );
+
+
+        summary.addEventListener(
+          "click",
+          function(){
+
+            const wasOpen =
+              card.classList.contains("open");
+
+
+            /* only one topic open at a time */
+
+            topicGrid
+              .querySelectorAll(
+                ".topic-card.open"
+              )
+              .forEach(
+                function(openCard){
+
+                  openCard.classList.remove(
+                    "open"
+                  );
+
+                }
+              );
+
+
+            if(!wasOpen){
+
+              card.classList.add(
+                "open"
+              );
+
+            }
+
+          }
+        );
+
+
+        topicGrid.appendChild(card);
+
+      }
+    );
+
+  }
+
+
+  /* =======================================================
+     STORIES / HOW SCIENCE CHANGES OUR WORLD
+  =======================================================
+
+     We intentionally use the real-world data here.
+
+     Three cards are visible at a time.
+     Next replaces them with another group.
+  ======================================================= */
+
+  const allStories =
+    realWorldAPI.all();
+
+
+  let storyStart = 0;
+
+  const STORIES_PER_PAGE = 3;
+
+
+  function getStorySet(){
+
+    if(!allStories.length){
+      return [];
+    }
+
+
+    const result = [];
+
+
+    for(
+      let i = 0;
+      i < STORIES_PER_PAGE;
+      i++
+    ){
+
+      result.push(
+        allStories[
+          (storyStart + i) %
+          allStories.length
+        ]
+      );
+
+    }
+
+
+    return result;
+
+  }
+
+
+  function renderStories(){
+
+    const stories =
+      getStorySet();
+
+
+    storyGrid.innerHTML = "";
+
+
+    stories.forEach(
+      function(topic,index){
+
+        const details =
+          topic.details &&
+          (
+            topic.details[currentLanguage]
+            || topic.details.en
+            || topic.details.hi
+          );
+
+
+        const card =
+          document.createElement("article");
+
+        card.className =
+          "story-card";
+
+
+        card.innerHTML = `
+
+          <div class="story-visual">
+
+            ${escapeHTML(
+              topic.visual || "🔬"
+            )}
+
+          </div>
+
+
+          <div class="story-index">
+            ${String(index + 1).padStart(2,"0")}
+            &nbsp; / &nbsp;
+            ${String(allStories.length).padStart(2,"0")}
+          </div>
+
+
+          <h3 class="story-title">
+
+            ${escapeHTML(
+              textValue(topic.title)
+            )}
+
+          </h3>
+
+
+          <p class="story-description">
+
+            ${escapeHTML(
+              details?.whyItMatters ||
+              textValue(topic.hook)
+            )}
+
+          </p>
+
+
+          <button
+            class="story-button"
+            type="button">
+
+            ${
+              currentLanguage === "hi"
+                ? "जानें और →"
+                : "Learn more →"
+            }
+
+          </button>
+
+        `;
+
+
+        const button =
+          card.querySelector(
+            ".story-button"
+          );
+
+
+        button.addEventListener(
+          "click",
+          function(){
+
+            openStoryDetails(
+              topic
+            );
+
+          }
+        );
+
+
+        storyGrid.appendChild(card);
+
+      }
+    );
+
+  }
+
+
+  /* =======================================================
+     STORY NEXT BUTTON
+  ======================================================= */
+
+  nextStory.addEventListener(
+    "click",
+    function(){
+
+      if(
+        allStories.length <=
+        STORIES_PER_PAGE
+      ){
+
+        showToast(
+          currentLanguage === "hi"
+            ? "सभी विषय पहले से दिख रहे हैं।"
+            : "All available topics are already visible."
+        );
+
+        return;
+
+      }
+
+
+      storyStart =
+        (
+          storyStart +
+          STORIES_PER_PAGE
+        ) %
+        allStories.length;
+
+
+      renderStories();
+
+    }
+  );
+
+
+  /* =======================================================
+     STORY DETAILS
+  ======================================================= */
+
+  function openStoryDetails(topic){
+
+    const details =
+      topic.details &&
+      (
+        topic.details[currentLanguage]
+        || topic.details.en
+        || topic.details.hi
+      );
+
+
+    const message = `
+
+      <div style="
+        position:fixed;
+        inset:0;
+        z-index:6000;
+        display:grid;
+        place-items:center;
+        padding:18px;
+        background:rgba(0,0,0,.72);
+        backdrop-filter:blur(8px);
+      ">
+
+        <div style="
+          width:min(700px,100%);
+          max-height:90vh;
+          overflow:auto;
+          padding:24px;
+          border-radius:22px;
+          background:#0b1710;
+          border:1px solid rgba(101,242,139,.3);
+          box-shadow:0 30px 80px rgba(0,0,0,.6);
+        ">
+
+          <div style="
+            color:#65f28b;
+            font-size:11px;
+            font-weight:800;
+            letter-spacing:2px;
+            text-transform:uppercase;
+          ">
+
+            ${escapeHTML(
+              topic.domain
+            )}
+
+          </div>
+
+
+          <h2 style="
+            margin-top:8px;
+            font-family:Caveat,cursive;
+            font-size:42px;
+            line-height:.95;
+          ">
+
+            ${escapeHTML(
+              textValue(topic.title)
+            )}
+
+          </h2>
+
+
+          <div style="
+            margin-top:20px;
+          ">
+
+            <strong style="
+              color:#65f28b;
+              font-size:11px;
+              letter-spacing:1px;
+              text-transform:uppercase;
+            ">
+
+              ${
+                currentLanguage === "hi"
+                  ? "तुम क्या देखते हो"
+                  : "What you see"
+              }
+
+            </strong>
+
+            <p style="
+              margin-top:6px;
+              color:#c9d2cc;
+              line-height:1.7;
+              font-size:14px;
+            ">
+
+              ${escapeHTML(
+                details?.whatYouSee || ""
+              )}
+
+            </p>
+
+          </div>
+
+
+          <div style="
+            margin-top:18px;
+          ">
+
+            <strong style="
+              color:#65f28b;
+              font-size:11px;
+              letter-spacing:1px;
+              text-transform:uppercase;
+            ">
+
+              ${
+                currentLanguage === "hi"
+                  ? "इसके पीछे का विज्ञान"
+                  : "The science behind it"
+              }
+
+            </strong>
+
+            <p style="
+              margin-top:6px;
+              color:#c9d2cc;
+              line-height:1.7;
+              font-size:14px;
+            ">
+
+              ${escapeHTML(
+                details?.science || ""
+              )}
+
+            </p>
+
+          </div>
+
+
+          <div style="
+            margin-top:18px;
+          ">
+
+            <strong style="
+              color:#65f28b;
+              font-size:11px;
+              letter-spacing:1px;
+              text-transform:uppercase;
+            ">
+
+              ${
+                currentLanguage === "hi"
+                  ? "यह क्यों महत्वपूर्ण है"
+                  : "Why it matters"
+              }
+
+            </strong>
+
+            <p style="
+              margin-top:6px;
+              color:#c9d2cc;
+              line-height:1.7;
+              font-size:14px;
+            ">
+
+              ${escapeHTML(
+                details?.whyItMatters || ""
+              )}
+
+            </p>
+
+          </div>
+
+
+          <button
+            type="button"
+            style="
+              margin-top:22px;
+              padding:10px 17px;
+              border-radius:999px;
+              border:1px solid rgba(101,242,139,.35);
+              background:rgba(101,242,139,.07);
+              color:#65f28b;
+              font-weight:800;
+            "
+            data-close-story>
+
+            ${
+              currentLanguage === "hi"
+                ? "बंद करें"
+                : "Close"
+            }
+
+          </button>
+
+        </div>
+
+      </div>
+
+    `;
+
+
+    document.body.insertAdjacentHTML(
+      "beforeend",
+      message
+    );
+
+
+    const modal =
+      document.body.lastElementChild;
+
+
+    modal
+      .querySelector(
+        "[data-close-story]"
+      )
+      .addEventListener(
+        "click",
+        function(){
+
+          modal.remove();
+
+        }
+      );
+
+
+    modal.addEventListener(
+      "click",
+      function(event){
+
+        if(
+          event.target === modal
+        ){
+
+          modal.remove();
+
+        }
+
+      }
+    );
+
+  }
+
+
+  /* =======================================================
+     CLASSROOM TO REAL LIFE DATA
+  =======================================================
+
+     We do NOT hard-code a permanent topic here.
+
+     The section reads from:
+     data/science-classroom-to-real-life.js
+
+     The code accepts a few possible API naming styles
+     so the page remains robust.
+  ======================================================= */
+
+  function getClassroomData(){
+
+    const api =
+      window.ScienceClassroomToRealLife
+      || window.scienceClassroomToRealLife
+      || window.ScienceClassroom
+      || null;
+
+
+    if(!api){
+
+      return [];
+
+    }
+
+
+    if(
+      typeof api.all === "function"
+    ){
+
+      return api.all();
+
+    }
+
+
+    if(
+      Array.isArray(api)
+    ){
+
+      return api;
+
+    }
+
+
+    if(
+      Array.isArray(
+        api.data
+      )
+    ){
+
+      return api.data;
+
+    }
+
+
+    return [];
+
+  }
+
+
+  const classroomData =
+    getClassroomData();
+
+
+  let classroomIndex = 0;
+
+
+  function getClassroomTopic(){
+
+    if(
+      !classroomData.length
+    ){
+
+      return null;
+
+    }
+
+
+    return classroomData[
+      classroomIndex %
+      classroomData.length
+    ];
+
+  }
+
+
+  function classroomTextValue(
+    topic,
+    key
+  ){
+
+    if(!topic){
+
+      return "";
+
+    }
+
+
+    const direct =
+      topic[key];
+
+
+    if(
+      direct &&
+      typeof direct === "object"
+    ){
+
+      return (
+        direct[currentLanguage]
+        ??
+        direct.en
+        ??
+        direct.hi
+        ??
+        ""
+      );
+
+    }
+
+
+    const nested =
+      topic.details &&
+      topic.details[currentLanguage] &&
+      topic.details[currentLanguage][key];
+
+
+    if(nested){
+
+      return nested;
+
+    }
+
+
+    return direct || "";
+
+  }
+
+
+  function renderClassroom(){
+
+    const topic =
+      getClassroomTopic();
+
+
+    if(!topic){
+
+      classroomVisual.textContent =
+        "🔬";
+
+      classroomKicker.textContent =
+        "SCIENCE IN ACTION";
+
+      classroomTitle.textContent =
+        currentLanguage === "hi"
+          ? "डेटा लोड नहीं हुआ"
+          : "Data not loaded";
+
+      classroomText.textContent =
+        currentLanguage === "hi"
+          ? "कृपया data/science-classroom-to-real-life.js की जाँच करें।"
+          : "Please check data/science-classroom-to-real-life.js.";
+
+      return;
+
+    }
+
+
+    /* Flexible field support */
+
+    const title =
+      topic.title
+      ? textValue(topic.title)
+      : classroomTextValue(
+          topic,
+          "example"
+        );
+
+
+    const concept =
+      classroomTextValue(
+        topic,
+        "concept"
+      );
+
+
+    const realWorldUse =
+      classroomTextValue(
+        topic,
+        "realWorldUse"
+      );
+
+
+    const visual =
+      topic.visual
+      || topic.icon
+      || topic.emoji
+      || "🔬";
+
+
+    classroomVisual.textContent =
+      visual;
+
+
+    classroomKicker.textContent =
+      topic.domain
+      || "SCIENCE IN ACTION";
+
+
+    classroomTitle.textContent =
+      title
+      || (
+        currentLanguage === "hi"
+          ? "विज्ञान का वास्तविक उपयोग"
+          : "Science in the Real World"
+      );
+
+
+    /* English/Hindi details are always rendered
+       from the selected language. */
+
+    if(
+      concept ||
+      realWorldUse
+    ){
+
+      classroomText.innerHTML = `
+
+        ${
+          concept
+            ? `
+              <strong style="
+                color:#65f28b;
+              ">
+                ${
+                  currentLanguage === "hi"
+                    ? "संकल्पना:"
+                    : "Concept:"
+                }
+              </strong>
+
+              ${escapeHTML(concept)}
+            `
+            : ""
+        }
+
+        ${
+          realWorldUse
+            ? `
+              <br><br>
+
+              <strong style="
+                color:#65f28b;
+              ">
+                ${
+                  currentLanguage === "hi"
+                    ? "वास्तविक उपयोग:"
+                    : "Real World Use:"
+                }
+              </strong>
+
+              ${escapeHTML(realWorldUse)}
+            `
+            : ""
+        }
+
+      `;
+
+    }else{
+
+      classroomText.textContent =
+        classroomTextValue(
+          topic,
+          "description"
+        );
+
+    }
+
+  }
+
+
+  classroomNext.addEventListener(
+    "click",
+    function(){
+
+      if(
+        classroomData.length <= 1
+      ){
+
+        showToast(
+          currentLanguage === "hi"
+            ? "और उदाहरण उपलब्ध नहीं हैं।"
+            : "No more examples available."
+        );
+
+        return;
+
+      }
+
+
+      classroomIndex =
+        (
+          classroomIndex + 1
+        ) %
+        classroomData.length;
+
+
+      renderClassroom();
+
+    }
+  );
+
+
+  /* =======================================================
+     TOAST
+  ======================================================= */
+
+  let toastTimer = null;
+
+
+  function showToast(message){
+
+    toast.textContent =
+      message;
+
+    toast.classList.add(
+      "show"
+    );
+
+
+    clearTimeout(
+      toastTimer
+    );
+
+
+    toastTimer =
+      setTimeout(
+        function(){
+
+          toast.classList.remove(
+            "show"
+          );
+
+        },
+        2200
+      );
+
+  }
+
+
+  /* =======================================================
+     INITIAL RENDER
+  ======================================================= */
+
+  document.body.classList.toggle(
+    "hindi",
+    currentLanguage === "hi"
+  );
+
+
+  renderDomains();
+
+  renderStories();
+
+  renderClassroom();
+
+
+  /* =======================================================
+     CLOSE MOBILE MENU WHEN CLICKING OUTSIDE
+  ======================================================= */
+
+  document.addEventListener(
+    "click",
+    function(event){
+
+      const clickedInsideMenu =
+        mobileMenu.contains(
+          event.target
+        );
+
+      const clickedMenuButton =
+        menuBtn.contains(
+          event.target
+        );
+
+
+      if(
+        !clickedInsideMenu &&
+        !clickedMenuButton
+      ){
+
+        mobileMenu.classList.remove(
+          "open"
+        );
+
+        menuBtn.textContent =
+          "☰";
+
+      }
+
+    }
+  );
+
+});
+
+</script>
+
+</body>
+  </html>
