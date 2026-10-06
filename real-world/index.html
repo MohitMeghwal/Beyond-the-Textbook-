@@ -2,1257 +2,853 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="description" content="Science in the Real World — discover how science shapes technology, medicine, energy, communication and everyday life.">
-<title>Science in the Real World | Science Beyond the Textbook</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Science in the Real World — Science Beyond the Textbook</title>
+<meta name="description" content="Discover how science shapes our world — real-world applications, real stories and classroom-to-life connections.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700;1,800;1,900&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
---bg:#07100b;
---bg2:#0b1510;
---panel:rgba(13,20,16,.92);
---panel2:#111b15;
---green:#65f28b;
---green2:#35c968;
---text:#f4f5ef;
---muted:#aeb8af;
---line:rgba(255,255,255,.13);
---soft:rgba(101,242,139,.08);
---shadow:0 18px 50px rgba(0,0,0,.4);
---max:1280px;
+  --bg:#07100b;--bg2:#0b1510;--panel:rgba(13,20,16,.92);--panel2:#111b15;
+  --green:#65f28b;--green2:#35c968;--text:#f4f5ef;--muted:#aeb8af;--line:rgba(255,255,255,.15);
+  --radius:18px;--maxw:1240px;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{
-margin:0;
-background:
-radial-gradient(circle at 80% 15%,rgba(45,170,90,.09),transparent 28%),
-radial-gradient(circle at 15% 55%,rgba(20,120,60,.07),transparent 30%),
-linear-gradient(180deg,#07100b,#08130d 45%,#061009);
-color:var(--text);
-font-family:Inter,"Noto Sans Devanagari",sans-serif;
-overflow-x:hidden;
+  margin:0;background:var(--bg);color:var(--text);
+  font-family:'Inter','Noto Sans Devanagari',system-ui,-apple-system,'Segoe UI',sans-serif;
+  font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;
+  background-image:
+    radial-gradient(1100px 560px at 82% -8%,rgba(53,201,104,.10),transparent 62%),
+    radial-gradient(820px 480px at -12% 26%,rgba(53,201,104,.06),transparent 62%),
+    linear-gradient(180deg,#07100b 0%,#0b1510 42%,#07100b 100%);
 }
-body:before{
-content:"";
-position:fixed;
-inset:0;
-pointer-events:none;
-opacity:.16;
-background-image:radial-gradient(rgba(255,255,255,.18) .6px,transparent .7px);
-background-size:6px 6px;
-z-index:-1;
-}
-a{text-decoration:none;color:inherit}
-button{font:inherit}
-.container{width:min(var(--max),calc(100% - 48px));margin:auto}
-.nav{
-position:sticky;
-top:0;
-z-index:1000;
-height:64px;
-background:rgba(5,13,9,.91);
-backdrop-filter:blur(16px);
--webkit-backdrop-filter:blur(16px);
-border-bottom:1px solid var(--line);
-}
-.nav-inner{
-height:64px;
-display:flex;
-align-items:center;
-gap:26px;
-}
-.brand{
-display:flex;
-align-items:center;
-gap:11px;
-min-width:max-content;
-}
-.brand-icon{
-width:40px;
-height:40px;
-border:1px solid rgba(117,229,144,.35);
-border-radius:11px;
-display:grid;
-place-items:center;
-background:rgba(30,110,60,.17);
-}
-.brand-icon svg{
-width:32px;
-height:32px;
-}
-.brand-title{
-display:flex;
-flex-direction:column;
-line-height:1;
-}
-.brand-title strong{
-font-size:14px;
-letter-spacing:3px;
-}
-.brand-title small{
-margin-top:4px;
-font-size:7px;
-letter-spacing:2px;
-color:#819188;
-}
-.nav-links{
-display:flex;
-align-items:center;
-gap:26px;
-margin-left:auto;
-font-size:12px;
-font-weight:600;
-}
-.nav-links>a,.nav-drop{
-position:relative;
-white-space:nowrap;
-cursor:pointer;
-color:#e6ebe7;
-}
-.nav-links>a:after{
-content:"";
-position:absolute;
-height:2px;
-left:0;
-right:0;
-bottom:-23px;
-background:var(--green);
-opacity:0;
-}
-.nav-links>a:hover:after{opacity:1}
-.nav-drop>span{display:inline-flex;gap:4px}
-.dropdown{
-position:absolute;
-top:28px;
-left:-14px;
-min-width:190px;
-padding:9px;
-border:1px solid var(--line);
-border-radius:14px;
-background:rgba(8,17,12,.97);
-box-shadow:var(--shadow);
-opacity:0;
-visibility:hidden;
-transform:translateY(7px);
-transition:.2s;
-}
-.nav-drop:hover>.dropdown{
-opacity:1;
-visibility:visible;
-transform:none;
-}
-.dropdown a{
-display:block;
-padding:10px 11px;
-border-radius:9px;
-font-size:12px;
-}
-.dropdown a:hover{background:var(--soft);color:var(--green)}
-.actions{
-display:flex;
-align-items:center;
-gap:10px;
-margin-left:0;
-}
-.lang{
-border:1px solid rgba(101,242,139,.25);
-background:rgba(24,90,48,.18);
-color:#fff;
-border-radius:20px;
-padding:8px 13px;
-cursor:pointer;
-font-size:12px;
-}
-.lang b{color:var(--green)}
-.icon-btn{
-width:38px;
-height:38px;
-border-radius:50%;
-border:1px solid rgba(101,242,139,.25);
-background:rgba(24,90,48,.16);
-color:white;
-cursor:pointer;
-font-size:20px;
-}
-.mobile-menu{
-display:none;
-position:fixed;
-z-index:999;
-top:64px;
-right:16px;
-left:16px;
-padding:10px;
-border:1px solid var(--line);
-border-radius:16px;
-background:rgba(5,14,9,.98);
-box-shadow:var(--shadow);
-}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+h1,h2,h3,h4,p{margin:0}
+ul{margin:0;padding:0;list-style:none}
+.container{width:min(var(--maxw),100% - 40px);margin-inline:auto}
+.eyebrow{font-size:11.5px;font-weight:700;letter-spacing:.22em;color:var(--green);text-transform:uppercase}
+.accent{color:var(--green)}
+.hi-font, [lang="hi"]{font-family:'Inter','Noto Sans Devanagari',sans-serif}
+
+/* ---------- NAVBAR ---------- */
+.nav{position:sticky;top:0;z-index:200;background:rgba(7,16,11,.9);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;height:66px;width:min(var(--maxw),100% - 32px);margin-inline:auto}
+.brand{display:flex;align-items:center;gap:10px;flex:none}
+.brand svg{flex:none}
+.brand-text{display:flex;flex-direction:column;line-height:1.05}
+.brand-text strong{font-size:14.5px;font-weight:800;letter-spacing:.15em}
+.brand-text em{font-size:8px;font-style:normal;letter-spacing:.16em;color:var(--muted);margin-top:2px}
+.nav-links{display:flex;align-items:center;gap:2px;margin:0 auto}
+.nav-links > a,.drop-btn{display:inline-flex;align-items:center;gap:5px;padding:8px 12px;border-radius:9px;font-size:13.5px;font-weight:500;color:var(--muted);transition:color .2s,background .2s}
+.nav-links > a:hover,.drop-btn:hover,.nav-drop.open .drop-btn{color:var(--text);background:rgba(255,255,255,.06)}
+.nav-drop{position:relative}
+.drop-btn .chev{width:9px;height:9px;border-right:1.6px solid currentColor;border-bottom:1.6px solid currentColor;transform:rotate(45deg) translateY(-2px);transition:transform .2s}
+.nav-drop.open .drop-btn .chev{transform:rotate(225deg) translateY(-1px)}
+.drop-panel{position:absolute;top:calc(100% + 8px);left:0;min-width:200px;padding:8px;border-radius:14px;background:rgba(13,22,17,.98);border:1px solid var(--line);box-shadow:0 20px 44px rgba(0,0,0,.55);display:none;z-index:50}
+.nav-drop.open .drop-panel{display:block}
+.drop-panel a{display:block;padding:9px 12px;border-radius:9px;font-size:13.5px;color:var(--muted)}
+.drop-panel a:hover{color:var(--green);background:rgba(101,242,139,.08)}
+.nav-actions{display:flex;align-items:center;gap:10px;flex:none}
+.lang-toggle{display:inline-flex;align-items:center;gap:7px;padding:7px 13px;border-radius:999px;border:1px solid var(--line);font-size:12.5px;color:var(--muted);transition:border-color .2s}
+.lang-toggle:hover{border-color:rgba(101,242,139,.5)}
+.lang-toggle .on{color:var(--green);font-weight:700}
+.lang-toggle .sep{opacity:.35}
+.menu-btn{display:none;width:40px;height:40px;border-radius:11px;border:1px solid var(--line);align-items:center;justify-content:center}
+.menu-btn span{display:block;width:17px;height:1.7px;background:var(--text);position:relative}
+.menu-btn span::before,.menu-btn span::after{content:'';position:absolute;left:0;width:17px;height:1.7px;background:var(--text)}
+.menu-btn span::before{top:-5.5px}.menu-btn span::after{top:5.5px}
+.mobile-menu{display:none;border-top:1px solid var(--line);background:rgba(9,17,12,.99);padding:8px 0 14px}
 .mobile-menu.open{display:block}
-.mobile-menu a{
-display:block;
-padding:13px 14px;
-border-radius:10px;
-font-size:13px;
+.mobile-menu a{display:block;padding:12px 22px;font-size:14.5px;color:var(--muted);border-bottom:1px solid rgba(255,255,255,.05)}
+.mobile-menu a:last-child{border-bottom:0}
+.mobile-menu a:hover{color:var(--green)}
+@media(max-width:1040px){
+  .nav-links{display:none}
+  .menu-btn{display:flex}
 }
-.mobile-menu a:hover{background:var(--soft);color:var(--green)}
-.hero{
-min-height:510px;
-position:relative;
-display:flex;
-align-items:center;
-overflow:hidden;
-background:
-linear-gradient(90deg,rgba(4,13,8,.97) 0%,rgba(4,13,8,.82) 32%,rgba(4,13,8,.27) 70%,rgba(4,13,8,.42)),
-url("https://res.cloudinary.com/eq1jpw1h/image/upload/v1791127533/file_00000000c94c8211a59f489def3484a2.png") center/cover no-repeat;
-border-bottom:1px solid var(--line);
+@media(min-width:1041px){.mobile-menu{display:none !important}}
+
+/* ---------- HERO ---------- */
+.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line);isolation:isolate}
+.hero-media{position:absolute;inset:0;z-index:0}
+.hero-media img{width:100%;height:100%;object-fit:cover;object-position:74% center}
+.hero-media::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,#07100b 0%,rgba(7,16,11,.95) 26%,rgba(7,16,11,.6) 52%,rgba(7,16,11,.18) 76%,rgba(7,16,11,.62) 100%)}
+.hero-inner{position:relative;z-index:2;min-height:clamp(430px,52vw,570px);display:flex;flex-direction:column;justify-content:center;padding:70px 0 78px}
+.hero-copy{max-width:640px}
+.hero h1{font-size:clamp(36px,6.2vw,72px);line-height:.97;font-weight:800;font-style:italic;letter-spacing:-.022em;text-transform:uppercase;margin:14px 0 14px}
+.hero .accent{text-shadow:0 0 30px rgba(101,242,139,.35)}
+.hero-sub{font-size:clamp(12.5px,1.5vw,15.5px);font-weight:600;letter-spacing:.09em;color:#dbe4d9;text-transform:uppercase;margin-bottom:12px}
+.hero-desc{max-width:520px;color:var(--muted);font-size:15.5px;line-height:1.72}
+.hero-note{position:absolute;right:26px;bottom:38px;z-index:3;font-family:'Caveat',cursive;font-size:31px;line-height:1.02;text-align:right;transform:rotate(-3.5deg);text-shadow:0 3px 18px rgba(0,0,0,.8)}
+.hero-note .u{display:block;height:8px;margin-top:4px;border-bottom:2.5px solid var(--green);border-radius:50%}
+@media(max-width:820px){
+  .hero-media img{object-position:66% center}
+  .hero-media::after{background:linear-gradient(180deg,rgba(7,16,11,.9) 0%,rgba(7,16,11,.72) 45%,rgba(7,16,11,.94) 100%)}
+  .hero-inner{min-height:0;padding:56px 0 60px}
+  .hero-note{display:none}
 }
-.hero:after{
-content:"";
-position:absolute;
-inset:0;
-background:linear-gradient(180deg,transparent 65%,rgba(7,16,11,.7));
-pointer-events:none;
-}
-.hero-content{
-position:relative;
-z-index:2;
-width:min(760px,100%);
-padding:70px 0;
-}
-.eyebrow{
-display:flex;
-align-items:center;
-gap:8px;
-font-size:11px;
-letter-spacing:2px;
-font-weight:800;
-color:var(--green);
-text-transform:uppercase;
-margin-bottom:12px;
-}
-.eyebrow:before{
-content:"";
-width:25px;
-height:2px;
-background:var(--green);
-}
-.hero h1{
-margin:0;
-font-family:Caveat,cursive;
-font-size:clamp(58px,7vw,96px);
-line-height:.88;
-font-weight:600;
-letter-spacing:-1px;
-text-transform:uppercase;
-max-width:700px;
-}
-.hero h1 span{color:var(--green)}
-.hero-sub{
-font-size:15px;
-font-weight:800;
-letter-spacing:1.5px;
-color:var(--green);
-margin:20px 0 13px;
-}
-.hero-text{
-max-width:560px;
-font-size:15px;
-line-height:1.8;
-color:#e2e7e3;
-}
-.hero-caption{
-position:absolute;
-right:6%;
-bottom:35px;
-z-index:3;
-font-family:Caveat,cursive;
-font-size:26px;
-line-height:1;
-transform:rotate(-5deg);
-}
-.hero-caption span{color:var(--green)}
-.section{
-padding:64px 0;
-border-bottom:1px solid var(--line);
-}
-.section-head{
-display:flex;
-justify-content:space-between;
-align-items:flex-end;
-gap:25px;
-margin-bottom:28px;
-}
-.section-title-wrap{max-width:850px}
-.section h2{
-font-family:Caveat,cursive;
-font-size:48px;
-line-height:.95;
-font-weight:600;
-margin:0 0 10px;
-text-transform:uppercase;
-}
-.section h2 span{color:var(--green)}
-.section-desc{
-margin:0;
-max-width:700px;
-font-size:14px;
-line-height:1.7;
-color:var(--muted);
-}
-.section-action{
-border:0;
-background:none;
-color:var(--green);
-font-size:12px;
-font-weight:700;
-white-space:nowrap;
-cursor:pointer;
-}
-.domain-grid{
-display:grid;
-grid-template-columns:repeat(7,1fr);
-gap:14px;
-}
-.domain-card{
-min-height:170px;
-border:1px solid rgba(101,242,139,.25);
-border-radius:17px;
-background:
-radial-gradient(circle at 50% 20%,rgba(101,242,139,.12),transparent 45%),
-linear-gradient(180deg,rgba(13,34,20,.88),rgba(7,20,12,.94));
-padding:16px;
-cursor:pointer;
-transition:.25s;
-display:flex;
-flex-direction:column;
-justify-content:space-between;
-}
-.domain-card:hover,.domain-card.active{
-border-color:rgba(101,242,139,.65);
-transform:translateY(-3px);
-box-shadow:0 12px 30px rgba(0,0,0,.25),inset 0 0 25px rgba(101,242,139,.04);
-}
-.domain-icon{
-width:54px;
-height:54px;
-border-radius:14px;
-display:grid;
-place-items:center;
-font-size:30px;
-background:rgba(101,242,139,.08);
-border:1px solid rgba(101,242,139,.2);
-}
-.domain-name{
-font-size:12px;
-font-weight:700;
-line-height:1.35;
-}
-.domain-arrow{color:var(--green);font-size:16px}
-.domain-topics{
-display:none;
-margin-top:18px;
-padding:20px;
-border:1px solid rgba(101,242,139,.2);
-border-radius:18px;
-background:rgba(8,23,14,.7);
-}
-.domain-topics.open{display:block}
-.domain-topics-head{
-display:flex;
-justify-content:space-between;
-align-items:center;
-margin-bottom:15px;
-}
-.domain-topics-head strong{font-size:14px}
-.close-domain{
-border:1px solid var(--line);
-background:transparent;
-color:#fff;
-border-radius:50%;
-width:32px;
-height:32px;
-cursor:pointer;
-}
-.topic-list{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:9px;
-}
-.topic-item{
-border:1px solid rgba(255,255,255,.09);
-background:rgba(255,255,255,.025);
-border-radius:11px;
-padding:12px;
-font-size:12px;
-color:#dce3de;
-}
-.topic-item b{color:var(--green);font-weight:600}
-.stories-section{padding-top:72px}
-.stories-layout{
-display:grid;
-grid-template-columns:260px 1fr;
-gap:34px;
-align-items:start;
-}
-.story-intro h2{font-size:52px}
-.story-intro p{
-font-size:13px;
-line-height:1.7;
-color:var(--muted);
-}
-.story-controls{
-display:flex;
-align-items:center;
-gap:10px;
-margin-top:20px;
-}
-.next-btn{
-border:1px solid rgba(101,242,139,.4);
-background:rgba(25,104,52,.18);
-color:var(--green);
-border-radius:20px;
-padding:9px 14px;
-font-size:11px;
-font-weight:700;
-cursor:pointer;
-}
-.counter{
-font-size:10px;
-color:#829087;
-}
-.story-grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:14px;
-}
-.story-card{
-border:1px solid rgba(101,242,139,.18);
-border-radius:17px;
-overflow:hidden;
-background:linear-gradient(180deg,rgba(11,30,18,.9),rgba(6,17,10,.95));
-display:flex;
-flex-direction:column;
-min-width:0;
-}
-.story-visual{
-height:145px;
-display:grid;
-place-items:center;
-background:
-radial-gradient(circle,rgba(101,242,139,.13),transparent 48%),
-rgba(9,25,15,.9);
-border-bottom:1px solid rgba(255,255,255,.08);
-font-size:60px;
-}
-.story-content{
-padding:16px;
-}
-.story-label{
-font-size:9px;
-font-weight:800;
-letter-spacing:2px;
-color:var(--green);
-margin-bottom:9px;
-}
-.story-title{
-font-size:19px;
-line-height:1.2;
-font-weight:500;
-margin-bottom:10px;
-font-family:Inter,"Noto Sans Devanagari",sans-serif;
-}
-.story-description{
-font-family:Inter,"Noto Sans Devanagari",sans-serif;
-font-size:12px;
-line-height:1.65;
-color:#cbd4cd;
-margin-bottom:12px;
-}
-.learn-btn{
-border:1px solid rgba(101,242,139,.35);
-background:rgba(101,242,139,.07);
-color:var(--green);
-border-radius:20px;
-padding:8px 12px;
-font-size:10px;
-font-weight:700;
-cursor:pointer;
-}
-.story-more{
-display:none;
-margin-top:14px;
-padding-top:13px;
-border-top:1px solid rgba(255,255,255,.09);
-}
-.story-card.expanded .story-more{display:block}
-.more-block{margin-bottom:13px}
-.more-block:last-child{margin-bottom:0}
-.more-label{
-font-size:9px;
-letter-spacing:1.6px;
-font-weight:800;
-color:var(--green);
-margin-bottom:5px;
-text-transform:uppercase;
-}
-.more-text{
-font-family:Inter,"Noto Sans Devanagari",sans-serif;
-font-size:11px;
-line-height:1.7;
-color:#d5ddd7;
-}
-.stories-bottom{
-display:flex;
-justify-content:flex-end;
-margin-top:18px;
-}
-.action-section{
-background:
-radial-gradient(circle at 75% 45%,rgba(60,160,90,.07),transparent 30%);
-}
-.action-layout{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:45px;
-align-items:center;
-}
-.flow{
-display:flex;
-align-items:center;
-justify-content:flex-start;
-gap:14px;
-margin-top:40px;
-}
-.flow-item{text-align:center}
-.flow-icon{
-width:58px;
-height:58px;
-border-radius:15px;
-display:grid;
-place-items:center;
-font-size:29px;
-background:rgba(20,76,39,.25);
-border:1px solid rgba(101,242,139,.25);
-}
-.flow-label{
-font-size:10px;
-margin-top:8px;
-color:#cbd4cd;
-max-width:85px;
-}
-.flow-arrow{
-color:var(--green);
-font-size:23px;
-}
-.example-card{
-border:1px solid rgba(101,242,139,.22);
-border-radius:20px;
-padding:16px;
-background:linear-gradient(135deg,rgba(13,32,20,.92),rgba(7,18,11,.94));
-display:grid;
-grid-template-columns:130px 1fr;
-gap:18px;
-align-items:center;
-}
-.example-visual{
-height:150px;
-border-radius:14px;
-border:1px solid rgba(101,242,139,.16);
-background:
-radial-gradient(circle,rgba(101,242,139,.14),transparent 50%),
-rgba(5,18,10,.8);
-display:grid;
-place-items:center;
-font-size:64px;
-}
-.example-label{
-font-size:9px;
-font-weight:800;
-letter-spacing:1.7px;
-color:var(--green);
-}
-.example-title{
-font-family:Inter,"Noto Sans Devanagari",sans-serif;
-font-size:20px;
-font-weight:600;
-margin:7px 0 12px;
-}
-.example-text{
-font-family:Inter,"Noto Sans Devanagari",sans-serif;
-font-size:11px;
-line-height:1.65;
-color:#d2dad4;
-}
-.example-text b{color:var(--green)}
-.example-controls{
-display:flex;
-justify-content:flex-end;
-margin-top:14px;
-}
-.final-cta{
-min-height:340px;
-position:relative;
-display:flex;
-align-items:center;
-overflow:hidden;
-background:
-linear-gradient(90deg,rgba(4,13,8,.96),rgba(4,13,8,.72),rgba(4,13,8,.25)),
-url("https://res.cloudinary.com/eq1jpw1h/image/upload/v1791127533/file_00000000c94c8211a59f489def3484a2.png") center/cover no-repeat;
-}
-.final-cta-content{
-padding:70px 0;
-max-width:650px;
-}
-.final-cta h2{
-font-family:Caveat,cursive;
-font-size:55px;
-line-height:.95;
-margin:0 0 12px;
-text-transform:uppercase;
-}
-.final-cta h2 span{color:var(--green)}
-.final-cta p{
-font-size:14px;
-line-height:1.7;
-color:#d2d9d4;
-max-width:550px;
-}
-.cta-btn{
-display:inline-block;
-margin-top:14px;
-border:1px solid rgba(101,242,139,.45);
-background:rgba(21,103,51,.25);
-color:var(--green);
-padding:10px 17px;
-border-radius:22px;
-font-size:12px;
-font-weight:700;
-}
-.toast{
-position:fixed;
-bottom:20px;
-left:50%;
-transform:translate(-50%,20px);
-opacity:0;
-pointer-events:none;
-z-index:2000;
-background:#102217;
-border:1px solid rgba(101,242,139,.3);
-color:#fff;
-padding:11px 16px;
-border-radius:12px;
-font-size:12px;
-transition:.25s;
-}
-.toast.show{
-opacity:1;
-transform:translate(-50%,0);
-}
-[data-lang="hi"]{display:none}
-body.hindi [data-lang="en"]{display:none}
-body.hindi [data-lang="hi"]{display:block}
-span[data-lang="hi"],small[data-lang="hi"]{display:none}
-body.hindi span[data-lang="hi"],body.hindi small[data-lang="hi"]{display:inline}
-@media(max-width:1050px){
-.nav-links{gap:16px}
-.domain-grid{grid-template-columns:repeat(4,1fr)}
-}
-@media(max-width:800px){
-.container{width:min(100% - 30px,var(--max))}
-.nav-links{display:none}
-.nav-inner{justify-content:space-between}
-.actions{margin-left:auto}
-.hero{
-min-height:500px;
-background:
-linear-gradient(90deg,rgba(4,13,8,.96),rgba(4,13,8,.64),rgba(4,13,8,.3)),
-url("https://res.cloudinary.com/eq1jpw1h/image/upload/v1791127533/file_00000000c94c8211a59f489def3484a2.png") 62% center/cover no-repeat;
-}
-.hero-content{padding:55px 0}
-.hero h1{font-size:58px;max-width:540px}
-.hero-text{font-size:13px;max-width:460px}
-.hero-caption{right:18px;bottom:25px;font-size:21px}
-.section{padding:48px 0}
-.section-head{display:block}
-.section-action{display:block;margin-top:14px}
-.section h2{font-size:43px}
-.domain-grid{grid-template-columns:repeat(2,1fr)}
-.domain-card{min-height:150px}
-.stories-layout{grid-template-columns:1fr;gap:25px}
-.story-intro{max-width:580px}
-.story-intro h2{font-size:48px}
-.story-grid{grid-template-columns:repeat(3,1fr)}
-.action-layout{grid-template-columns:1fr;gap:28px}
+
+/* ---------- SECTION SHELL ---------- */
+.section{padding:62px 0}
+.sec-head{margin-bottom:28px}
+.sec-head h2{font-size:clamp(25px,3.5vw,41px);font-weight:800;font-style:italic;letter-spacing:-.015em;line-height:1.04;text-transform:uppercase;margin:10px 0 10px}
+.sec-desc{color:var(--muted);font-size:15px;line-height:1.7;max-width:780px}
+.head-row{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.sec-link{font-size:12.5px;font-weight:600;letter-spacing:.06em;color:var(--green);white-space:nowrap;padding-bottom:8px;transition:opacity .2s}
+.sec-link:hover{opacity:.75}
+
+/* ---------- DOMAIN GRID ---------- */
+.domain-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:14px}
+.domain-card{display:flex;flex-direction:column;align-items:center;gap:10px;padding:20px 10px 16px;border-radius:var(--radius);border:1px solid var(--line);background:linear-gradient(180deg,rgba(17,27,21,.9),rgba(10,18,13,.9));text-align:center;transition:transform .22s,border-color .22s,box-shadow .22s,background .22s;height:100%}
+.domain-card:hover{transform:translateY(-3px);border-color:rgba(101,242,139,.42);box-shadow:0 14px 32px rgba(0,0,0,.42)}
+.domain-card.active{border-color:var(--green);background:linear-gradient(180deg,rgba(24,44,32,.96),rgba(12,24,18,.96));box-shadow:0 0 0 1px rgba(101,242,139,.3),0 18px 38px rgba(0,0,0,.5)}
+.domain-title{font-size:12.6px;font-weight:600;line-height:1.32}
+.domain-sub{font-size:11px;color:var(--muted);line-height:1.35}
+.domain-arrow{margin-top:auto;padding-top:6px;color:var(--green);font-size:14px;line-height:1}
+.hex{width:62px;height:62px;display:grid;place-items:center;flex:none;background:linear-gradient(160deg,rgba(101,242,139,.9),rgba(53,201,104,.28));clip-path:polygon(50% 0%,93% 25%,93% 75%,50% 100%,7% 75%,7% 25%)}
+.hex-in{width:58px;height:58px;display:grid;place-items:center;background:#0d1712;clip-path:polygon(50% 0%,93% 25%,93% 75%,50% 100%,7% 75%,7% 25%);font-size:26px;line-height:1}
+.hex.sm{width:52px;height:52px}
+.hex.sm .hex-in{width:48px;height:48px;font-size:22px}
+@media(max-width:1080px){.domain-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(max-width:700px){.domain-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}}
+
+/* ---------- DOMAIN PANEL ---------- */
+.domain-panel{grid-column:1/-1;border-radius:20px;border:1px solid rgba(101,242,139,.45);background:linear-gradient(180deg,rgba(20,34,26,.96),rgba(11,21,16,.97));box-shadow:0 26px 54px rgba(0,0,0,.55);padding:22px 24px;margin-top:4px;position:relative;overflow:hidden}
+.domain-panel::before{content:'';position:absolute;top:0;left:0;width:120px;height:2px;background:linear-gradient(90deg,var(--green),transparent)}
+.panel-head{display:flex;align-items:center;gap:14px;margin-bottom:16px}
+.panel-emoji{font-size:30px;line-height:1}
+.panel-head h3{font-size:19px;font-weight:700;line-height:1.25}
+.panel-sub{font-size:13px;color:var(--muted);margin-top:2px}
+.panel-close{margin-left:auto;flex:none;width:34px;height:34px;border-radius:10px;border:1px solid var(--line);color:var(--muted);font-size:13px;transition:.2s}
+.panel-close:hover{color:var(--green);border-color:rgba(101,242,139,.5)}
+.panel-body{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px 26px}
+.field h4{font-size:10.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--green);margin-bottom:6px}
+.field p,.field li{color:#cfd8ce;font-size:14.5px;line-height:1.72}
+.field-list{padding-left:17px;list-style:disc}
+.field-list li{margin-bottom:4px}
+.field-list li::marker{color:var(--green2)}
+@media(max-width:600px){.domain-panel{padding:18px 16px}}
+
+/* ---------- STORY GRID ---------- */
+.story-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;align-items:start}
+.story-card{display:flex;flex-direction:column;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);background:linear-gradient(180deg,rgba(17,27,21,.92),rgba(9,17,12,.94));transition:border-color .22s,box-shadow .22s}
+.story-card:hover{border-color:rgba(101,242,139,.34)}
+.story-card.open{border-color:rgba(101,242,139,.55);box-shadow:0 20px 44px rgba(0,0,0,.48)}
+.story-visual{height:146px;display:grid;place-items:center;font-size:56px;line-height:1;border-bottom:1px solid var(--line);background:radial-gradient(circle at 50% 62%,rgba(53,201,104,.22),rgba(7,16,11,0) 72%),linear-gradient(160deg,#12241a,#0a130e)}
+.story-body{padding:16px 18px 18px;display:flex;flex-direction:column;gap:10px;flex:1}
+.story-cat{font-size:10.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--green)}
+.story-title{font-size:17px;font-weight:700;line-height:1.28}
+.story-desc{font-size:14px;color:var(--muted);line-height:1.66}
+.story-more{display:flex;flex-direction:column;gap:12px;border-top:1px dashed rgba(101,242,139,.32);padding-top:13px;margin-top:2px}
+.story-more[hidden]{display:none}
+.story-more .field p,.story-more .field li{font-size:13.8px;line-height:1.7}
+.learn-btn{align-self:flex-start;margin-top:auto}
+@media(max-width:980px){.story-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:640px){.story-grid{grid-template-columns:1fr}}
+
+/* ---------- BUTTONS ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:11px 19px;border-radius:999px;font-size:12.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border:1px solid rgba(101,242,139,.45);color:var(--green);background:rgba(101,242,139,.06);transition:background .2s,border-color .2s,transform .2s}
+.btn:hover{background:rgba(101,242,139,.14);border-color:var(--green)}
+.btn:active{transform:scale(.98)}
+.btn-primary{background:var(--green);border-color:var(--green);color:#05130a}
+.btn-primary:hover{background:#7dffa0;border-color:#7dffa0}
+.btn-sm{padding:9px 15px;font-size:11.5px}
+.story-nav{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:22px;flex-wrap:wrap}
+.story-counter{font-size:12.5px;letter-spacing:.06em;color:var(--muted)}
+
+/* ---------- CLASSROOM ---------- */
+.classroom-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:28px;align-items:start}
+.flow{display:flex;align-items:stretch;gap:12px}
+.flow-step{flex:1 1 0;min-width:0;display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center;padding:18px 12px;border-radius:16px;border:1px solid var(--line);background:linear-gradient(180deg,rgba(15,25,19,.85),rgba(10,18,13,.8))}
+.flow-step strong{font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;line-height:1.3}
+.flow-step em{font-size:11.5px;font-style:normal;color:var(--muted);line-height:1.35}
+.flow-arrow{align-self:center;color:var(--green);font-size:19px;flex:none}
+.ar-m{display:none}
+@media(max-width:900px){
+  .classroom-grid{grid-template-columns:1fr;gap:22px}
 }
 @media(max-width:560px){
-.nav{height:58px}
-.nav-inner{height:58px}
-.brand-icon{width:36px;height:36px}
-.brand-icon svg{width:28px;height:28px}
-.brand-title strong{font-size:12px;letter-spacing:2.5px}
-.brand-title small{font-size:6px}
-.lang{padding:7px 10px}
-.icon-btn{width:36px;height:36px}
-.mobile-menu{top:58px}
-.hero{
-min-height:520px;
-background:
-linear-gradient(90deg,rgba(4,13,8,.97) 0%,rgba(4,13,8,.82) 50%,rgba(4,13,8,.3)),
-url("https://res.cloudinary.com/eq1jpw1h/image/upload/v1791127533/file_00000000c94c8211a59f489def3484a2.png") 65% center/cover no-repeat;
+  .flow{flex-direction:column;align-items:stretch}
+  .flow-step{flex-direction:row;justify-content:flex-start;text-align:left;gap:14px;padding:14px}
+  .flow-step .hex{flex:none}
+  .flow-step div{display:flex;flex-direction:column;align-items:flex-start;min-width:0}
+  .flow-arrow{align-self:center}
+  .ar-d{display:none}.ar-m{display:inline}
 }
-.hero h1{font-size:53px}
-.hero-sub{font-size:12px}
-.hero-text{font-size:12px;line-height:1.7}
-.hero-caption{font-size:19px}
-.domain-grid{grid-template-columns:repeat(2,1fr);gap:10px}
-.domain-card{padding:13px;min-height:140px}
-.domain-icon{width:46px;height:46px;font-size:25px}
-.domain-name{font-size:11px}
-.topic-list{grid-template-columns:1fr}
-.story-grid{grid-template-columns:1fr}
-.story-card{min-height:0}
-.story-visual{height:125px}
-.story-title{font-size:20px}
-.story-description{font-size:12px}
-.story-intro h2{font-size:45px}
-.example-card{grid-template-columns:92px 1fr;gap:13px}
-.example-visual{height:120px;font-size:48px}
-.example-title{font-size:17px}
-.flow{gap:7px;justify-content:space-between}
-.flow-arrow{font-size:18px}
-.flow-icon{width:48px;height:48px;font-size:24px}
-.flow-label{font-size:8px}
-.final-cta{min-height:380px}
-.final-cta h2{font-size:48px}
+.classroom-card{border-radius:var(--radius);border:1px solid rgba(101,242,139,.4);background:linear-gradient(180deg,rgba(20,34,26,.92),rgba(11,21,16,.96));box-shadow:0 20px 44px rgba(0,0,0,.45);padding:20px 22px}
+.cc-head{display:flex;align-items:center;gap:14px;padding-bottom:14px;margin-bottom:14px;border-bottom:1px solid rgba(255,255,255,.09)}
+.cc-emoji{font-size:32px;line-height:1}
+.cc-label{font-size:10.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--green);margin-bottom:2px}
+.cc-head h3{font-size:17.5px;font-weight:700;line-height:1.28}
+.cc-body{display:flex;flex-direction:column;gap:14px}
+.classroom-actions{margin-top:18px;display:flex;justify-content:flex-start}
+
+/* ---------- CTA ---------- */
+.cta{position:relative;overflow:hidden;border-top:1px solid var(--line);margin-top:14px;isolation:isolate}
+.cta-media{position:absolute;inset:0;z-index:0}
+.cta-media img{width:100%;height:100%;object-fit:cover;object-position:center 42%}
+.cta-media::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,16,11,.97) 0%,rgba(7,16,11,.85) 42%,rgba(7,16,11,.35) 100%)}
+.cta-inner{position:relative;z-index:2;min-height:330px;display:flex;flex-direction:column;justify-content:center;padding:68px 0;max-width:640px}
+.cta h2{font-size:clamp(26px,4vw,46px);font-weight:800;font-style:italic;letter-spacing:-.015em;line-height:1.03;text-transform:uppercase;margin:12px 0 12px}
+.cta p{color:var(--muted);font-size:15.5px;line-height:1.7;margin-bottom:22px;max-width:480px}
+.cta-note{position:absolute;right:26px;bottom:44px;z-index:3;font-family:'Caveat',cursive;font-size:30px;line-height:1.03;text-align:right;transform:rotate(-3deg);text-shadow:0 3px 18px rgba(0,0,0,.85)}
+.cta-note .u{display:block;height:8px;margin-top:3px;border-bottom:2.5px solid var(--green);border-radius:50%}
+@media(max-width:820px){
+  .cta-media::after{background:linear-gradient(180deg,rgba(7,16,11,.93) 0%,rgba(7,16,11,.8) 55%,rgba(7,16,11,.95) 100%)}
+  .cta-inner{min-height:0;padding:56px 0}
+  .cta-note{display:none}
 }
-@media(prefers-reduced-motion:reduce){
-*{scroll-behavior:auto!important;transition:none!important}
-}
+
+/* ---------- FOOTER / STATES ---------- */
+.foot{border-top:1px solid var(--line);padding:26px 0;color:var(--muted);font-size:12.5px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.foot .container{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;align-items:center}
+.empty{padding:22px;border:1px dashed var(--line);border-radius:14px;color:var(--muted);font-size:14px;text-align:left}
 </style>
 </head>
 <body>
+
 <header class="nav">
-<div class="container nav-inner">
-<a class="brand" href="../index.html">
-<div class="brand-icon">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#75e590" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-<path d="M10 2v7.31"/>
-<path d="M14 9.3V1.99"/>
-<path d="M8.5 2h7"/>
-<path d="M14 9.3a6.5 6.5 0 1 1-4 0"/>
-<path d="M5.52 16h12.96"/>
-</svg>
-</div>
-<div class="brand-title">
-<strong>SCIENCE</strong>
-<small>BEYOND THE TEXTBOOK</small>
-</div>
-</a>
-<nav class="nav-links">
-<a href="../index.html">⌂ Home</a>
-<div class="nav-drop">Subjects⌄<div class="dropdown">
-<a href="../physics/index.html">Physics</a>
-<a href="../chemistry/index.html">Chemistry</a>
-<a href="../biology/index.html">Biology</a>
-<a href="../earth/index.html">Earth & Environment</a>
-</div></div>
-<div class="nav-drop">Explore⌄<div class="dropdown">
-<a href="../why/index.html">Why Does This Happen?</a>
-<a href="../invisible-visible/index.html">Make the Invisible Visible</a>
-<a href="../magic-science/index.html">Science That Looks Like Magic</a>
-<a href="../what-if/index.html">What If?</a>
-<a href="../beyond-textbook/index.html">Beyond the Textbook</a>
-</div></div>
-<div class="nav-drop">Games⌄<div class="dropdown">
-<a href="../games/index.html">All Games</a>
-<a href="../games/circuit-builder.html">Circuit Builder</a>
-<a href="../games/magnetic-maze.html">Magnetic Maze</a>
-<a href="../games/build-a-cell.html">Build a Cell</a>
-</div></div>
-<div class="nav-drop">Lab⌄<div class="dropdown">
-<a href="../lab/index.html">Virtual Lab</a>
-</div></div>
-<div class="nav-drop">More⌄<div class="dropdown">
-<a href="../science-around-us/index.html">Science Around Us</a>
-<a href="../real-world/index.html">Science in the Real World</a>
-<a href="../about.html">About</a>
-</div></div>
-</nav>
-<div class="actions">
-<button class="lang" id="langBtn">EN <span>|</span> <b>हिंदी</b></button>
-<button class="icon-btn" id="menuBtn">☰</button>
-</div>
-</div>
+  <div class="nav-inner">
+    <a class="brand" href="../index.html" aria-label="Science Beyond the Textbook — Home">
+      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#75e590" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="filter: drop-shadow(0px 0px 6px rgba(117, 229, 144, 0.4));" aria-hidden="true">
+        <path d="M10 2v7.31"/>
+        <path d="M14 9.3V1.99"/>
+        <path d="M8.5 2h7"/>
+        <path d="M14 9.3a6.5 6.5 0 1 1-4 0"/>
+        <path d="M5.52 16h12.96"/>
+      </svg>
+      <span class="brand-text"><strong>SCIENCE</strong><em>BEYOND THE TEXTBOOK</em></span>
+    </a>
+
+    <nav class="nav-links" aria-label="Main">
+      <a href="../index.html">Home</a>
+      <div class="nav-drop">
+        <button type="button" class="drop-btn" aria-expanded="false" aria-haspopup="true">Subjects <i class="chev"></i></button>
+        <div class="drop-panel">
+          <a href="../physics/">Physics</a>
+          <a href="../chemistry/">Chemistry</a>
+          <a href="../biology/">Biology</a>
+          <a href="../maths/">Maths</a>
+        </div>
+      </div>
+      <a href="../explore/">Explore</a>
+      <a href="../games/">Games</a>
+      <a href="../lab/">Lab</a>
+      <div class="nav-drop">
+        <button type="button" class="drop-btn" aria-expanded="false" aria-haspopup="true">More <i class="chev"></i></button>
+        <div class="drop-panel">
+          <a href="./index.html">Science in the Real World</a>
+          <a href="../about/">About</a>
+          <a href="../contact/">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="nav-actions">
+      <button type="button" class="lang-toggle" id="langToggle" aria-label="Switch language">
+        <span id="langEn" class="on">EN</span><span class="sep">|</span><span id="langHi">हिंदी</span>
+      </button>
+      <button type="button" class="menu-btn" id="menuBtn" aria-label="Menu" aria-expanded="false" aria-controls="mobileMenu"><span></span></button>
+    </div>
+  </div>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="../index.html">Home</a>
+    <a href="../physics/">Subjects — Physics</a>
+    <a href="../chemistry/">Subjects — Chemistry</a>
+    <a href="../biology/">Subjects — Biology</a>
+    <a href="../explore/">Explore</a>
+    <a href="../games/">Games</a>
+    <a href="../lab/">Lab</a>
+    <a href="./index.html">Science in the Real World</a>
+    <a href="../about/">About</a>
+    <a href="../contact/">Contact</a>
+  </div>
 </header>
 
-<div class="mobile-menu" id="mobileMenu">
-<a href="../index.html">⌂ Home</a>
-<a href="../physics/index.html">⚛ Physics</a>
-<a href="../chemistry/index.html">🧪 Chemistry</a>
-<a href="../biology/index.html">🧬 Biology</a>
-<a href="../earth/index.html">🌍 Earth & Environment</a>
-<a href="../why/index.html">💡 Why Does This Happen?</a>
-<a href="../invisible-visible/index.html">👁 Make the Invisible Visible</a>
-<a href="../magic-science/index.html">✨ Science That Looks Like Magic</a>
-<a href="../what-if/index.html">❓ What If?</a>
-<a href="../beyond-textbook/index.html">🚀 Beyond the Textbook</a>
-<a href="../lab/index.html">🧪 Virtual Lab</a>
-<a href="../games/index.html">🎮 Science Games</a>
-<a href="../science-around-us/index.html">📰 Science Around Us</a>
-</div>
+<main>
 
-<section class="hero">
-<div class="container hero-content">
-<div class="eyebrow">REAL WORLD IMPACT</div>
-<h1>SCIENCE IN THE <span>REAL WORLD</span></h1>
-<div class="hero-sub">SCIENCE IS NOT JUST IN THE LAB.</div>
-<p class="hero-text">
-<span data-lang="en">The science you learn in books is already working around you — shaping our lives, solving problems and building the future.</span>
-<span data-lang="hi">जो विज्ञान तुम किताबों में पढ़ते हो, वह असल दुनिया में हमारे आसपास काम कर रहा है — हमारे जीवन को बेहतर बना रहा है, समस्याएँ हल कर रहा है और भविष्य बना रहा है।</span>
-</p>
-</div>
-<div class="hero-caption">Real Problems.<br><span>Real Solutions.</span></div>
-</section>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-media">
+      <img src="https://res.cloudinary.com/eq1jpw1h/image/upload/v1791127533/file_00000000c94c8211a59f489def3484a2.png" alt="" fetchpriority="high">
+    </div>
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <div class="eyebrow">— Real World Impact</div>
+        <h1>Science in the<br><span class="accent">Real World</span></h1>
+        <p class="hero-sub">Science is not just in the lab.</p>
+        <p class="hero-desc" data-i18n="heroDesc"></p>
+      </div>
+    </div>
+    <div class="hero-note" aria-hidden="true">Real Problems.<br>Real Solutions.<span class="u"></span></div>
+  </section>
 
-<section class="section" id="applications">
-<div class="container">
-<div class="section-head">
-<div class="section-title-wrap">
-<div class="eyebrow">AREAS OF IMPACT</div>
-<h2>REAL WORLD <span>APPLICATIONS</span></h2>
-<p class="section-desc">
-<span data-lang="en">Science makes our lives easier, safer, healthier and more connected. Explore the science behind important real-world applications.</span>
-<span data-lang="hi">विज्ञान हमारे जीवन को आसान, सुरक्षित, स्वस्थ और अधिक जुड़ा हुआ बनाता है। अपने आसपास की दुनिया में छिपे विज्ञान को जानो।</span>
-</p>
-</div>
-<button class="section-action" id="exploreDomains">Explore each area →</button>
-</div>
-<div class="domain-grid" id="domainGrid"></div>
-<div class="domain-topics" id="domainTopics"></div>
-</div>
-</section>
+  <!-- SECTION 1 -->
+  <section class="section" id="applications">
+    <div class="container">
+      <div class="sec-head">
+        <div class="eyebrow">— Areas of Impact</div>
+        <div class="head-row">
+          <h2>Real World Applications</h2>
+          <a class="sec-link" href="#applications">Explore each area →</a>
+        </div>
+        <p class="sec-desc" data-i18n="appsDesc" style="margin-top:12px"></p>
+      </div>
+      <div class="domain-grid" id="domainGrid"></div>
+    </div>
+  </section>
 
-<section class="section stories-section" id="stories">
-<div class="container">
-<div class="stories-layout">
-<div class="story-intro">
-<div class="eyebrow">REAL STORIES</div>
-<h2>HOW SCIENCE CHANGES OUR <span>WORLD</span></h2>
-<p>
-<span data-lang="en">These examples show how scientific ideas become real solutions that change the way we live.</span>
-<span data-lang="hi">ये उदाहरण दिखाते हैं कि वैज्ञानिक विचार कैसे वास्तविक समाधान बनकर हमारे जीवन को बदलते हैं।</span>
-</p>
-<div class="story-controls">
-<button class="next-btn" id="nextStoriesTop">Next Topics →</button>
-<span class="counter" id="storyCounterTop">1–3 / 18</span>
-</div>
-</div>
-<div>
-<div class="story-grid" id="storyGrid"></div>
-<div class="stories-bottom">
-<button class="next-btn" id="nextStoriesBottom">Next Topics →</button>
-</div>
-</div>
-</div>
-</div>
-</section>
+  <!-- SECTION 2 -->
+  <section class="section" id="stories">
+    <div class="container">
+      <div class="sec-head">
+        <div class="eyebrow">— Real Stories</div>
+        <h2>How Science Changes<br>Our World</h2>
+        <p class="sec-desc" data-i18n="storiesDesc" style="margin-top:12px"></p>
+      </div>
+      <div class="story-grid" id="storyGrid"></div>
+      <div class="story-nav">
+        <span class="story-counter" id="storyCounter"></span>
+        <button type="button" class="btn" id="nextStories" data-i18n="nextTopics"></button>
+      </div>
+    </div>
+  </section>
 
-<section class="section action-section" id="classroom">
-<div class="container">
-<div class="section-head">
-<div class="section-title-wrap">
-<div class="eyebrow">SCIENCE IN ACTION</div>
-<h2>FROM CLASSROOM TO <span>REAL LIFE</span></h2>
-<p class="section-desc">
-<span data-lang="en">What you learn today can change the world tomorrow.</span>
-<span data-lang="hi">जो तुम आज सीखते हो, वही कल की दुनिया को बदल सकता है।</span>
-</p>
-</div>
-</div>
-<div class="action-layout">
-<div>
-<div class="flow">
-<div class="flow-item">
-<div class="flow-icon">⚛️</div>
-<div class="flow-label">
-<span data-lang="en">Science Concept</span>
-<span data-lang="hi">वैज्ञानिक सिद्धांत</span>
-</div>
-</div>
-<div class="flow-arrow">→</div>
-<div class="flow-item">
-<div class="flow-icon">💡</div>
-<div class="flow-label">
-<span data-lang="en">Real World Use</span>
-<span data-lang="hi">वास्तविक उपयोग</span>
-</div>
-</div>
-<div class="flow-arrow">→</div>
-<div class="flow-item">
-<div class="flow-icon">🌍</div>
-<div class="flow-label">
-<span data-lang="en">Better Future</span>
-<span data-lang="hi">एक बेहतर कल</span>
-</div>
-</div>
-</div>
-</div>
-<div>
-<div class="example-card" id="exampleCard"></div>
-<div class="example-controls">
-<button class="next-btn" id="nextExample">Next Example →</button>
-</div>
-</div>
-</div>
-</div>
-</section>
+  <!-- SECTION 3 -->
+  <section class="section" id="classroom">
+    <div class="container">
+      <div class="sec-head">
+        <div class="eyebrow">— Science in Action</div>
+        <h2>From Classroom<br>to Real Life</h2>
+        <p class="sec-desc" data-i18n="classroomDesc" style="margin-top:12px"></p>
+      </div>
+      <div class="classroom-grid">
+        <div class="flow">
+          <div class="flow-step">
+            <span class="hex sm"><span class="hex-in">⚛️</span></span>
+            <div><strong>Science Concept</strong><em>वैज्ञानिक सिद्धांत</em></div>
+          </div>
+          <div class="flow-arrow"><span class="ar-d">→</span><span class="ar-m">↓</span></div>
+          <div class="flow-step">
+            <span class="hex sm"><span class="hex-in">💡</span></span>
+            <div><strong>Real World Use</strong><em>वास्तविक उपयोग</em></div>
+          </div>
+          <div class="flow-arrow"><span class="ar-d">→</span><span class="ar-m">↓</span></div>
+          <div class="flow-step">
+            <span class="hex sm"><span class="hex-in">🌍</span></span>
+            <div><strong>Better Future</strong><em>बेहतर भविष्य</em></div>
+          </div>
+        </div>
+        <div>
+          <div class="classroom-card" id="classroomCard"></div>
+          <div class="classroom-actions">
+            <button type="button" class="btn" id="nextExample" data-i18n="nextExample"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<section class="final-cta">
-<div class="container final-cta-content">
-<div class="eyebrow">LOOK AROUND</div>
-<h2>SCIENCE IS ALREADY <span>THERE.</span></h2>
-<p>
-<span data-lang="en">Look around you. Science is not somewhere far away — it is already shaping the world you live in.</span>
-<span data-lang="hi">अपने आसपास देखो। विज्ञान कहीं दूर नहीं है — यह पहले से ही उस दुनिया को आकार दे रहा है जिसमें तुम रहते हो।</span>
-</p>
-<a class="cta-btn" href="../index.html">Explore More →</a>
-</div>
-</section>
+  <!-- CTA -->
+  <section class="cta">
+    <div class="cta-media">
+      <img src="https://res.cloudinary.com/eq1jpw1h/image/upload/v1791127533/file_00000000c94c8211a59f489def3484a2.png" alt="" loading="lazy">
+    </div>
+    <div class="container cta-inner">
+      <div class="eyebrow">— Look Around</div>
+      <h2>Science is already <span class="accent">there.</span></h2>
+      <p data-i18n="ctaDesc"></p>
+      <div><a class="btn btn-primary" href="../explore/" data-i18n="exploreMore"></a></div>
+    </div>
+    <div class="cta-note" aria-hidden="true">Small Steps.<br>Big Changes.<span class="u"></span></div>
+  </section>
 
-<div class="toast" id="toast"></div>
+</main>
+
+<footer class="foot">
+  <div class="container">
+    <span>© <span id="year"></span> Science Beyond the Textbook</span>
+    <span>Science in the Real World</span>
+  </div>
+</footer>
 
 <script src="../data/science-real-world.js"></script>
 <script src="../data/how-science-changes-world.js"></script>
 <script src="../data/science-classroom-to-real-life.js"></script>
-
 <script>
 (function(){
-"use strict";
+'use strict';
 
-const $=s=>document.querySelector(s);
-const $$=s=>document.querySelectorAll(s);
+/* ---------------- STATE (declared before any function uses it) ---------------- */
+var lang = 'en';
+var domains = [];
+var stories = [];
+var classroom = [];
+var activeDomain = null;
+var storyStartIndex = 0;
+var expandedStoryId = null;
+var classroomIndex = 0;
+var STORIES_PER_PAGE = 3;
 
-let language=localStorage.getItem("scienceLanguage")==="hi"?"hi":"en";
-
-function applyLanguage(){
-document.body.classList.toggle("hindi",language==="hi");
-document.documentElement.lang=language==="hi"?"hi":"en";
-localStorage.setItem("scienceLanguage",language);
-}
-
-function getDataArray(globalObject,names){
-for(const name of names){
-if(globalObject&&Array.isArray(globalObject[name]))return globalObject[name];
-}
-return [];
-}
-
-function getApiArray(api,names){
-for(const name of names){
-if(api&&typeof api[name]==="function"){
-const result=api[name]();
-if(Array.isArray(result))return result;
-}
-}
-return [];
-}
-
-function textValue(value){
-if(value==null)return "";
-if(typeof value==="string")return value;
-if(typeof value==="object"){
-return value[language]||value.en||value.hi||Object.values(value)[0]||"";
-}
-return String(value);
-}
-
-function field(obj,names){
-for(const name of names){
-if(obj&&obj[name]!==undefined)return obj[name];
-}
-return "";
-}
-
-function normalizeStory(item){
-const title=field(item,["title","name","topic"]);
-const description=field(item,["description","desc","summary"]);
-const details=field(item,["details","learnMore"]);
-const how=field(item,["howItWorks","how","working"]);
-const impact=field(item,["impact","theImpact"]);
-return{
-id:field(item,["id"])||Math.random().toString(36).slice(2),
-icon:field(item,["icon","visual","emoji"])||"🔬",
-title:textValue(title),
-description:textValue(description),
-how:textValue(how)||textValue(details&&field(details,["howItWorks","how","working"])),
-impact:textValue(impact)||textValue(details&&field(details,["impact","theImpact"]))
+/* ---------------- I18N (static / descriptive page copy) ---------------- */
+var I18N = {
+  heroDesc:{
+    en:'Science is not just something you read in books — it is at work all around us, improving our lives and building a better future.',
+    hi:'जो विज्ञान तुम किताबों में पढ़ते हो, वह असल दुनिया में हमारे आसपास, हमारे जीवन और हमारे भविष्य को बेहतर बनाने में काम आता है।'
+  },
+  appsDesc:{
+    en:'Science makes our lives easier, safer, healthier and more sustainable across many areas. Here are some of the main ones.',
+    hi:'विज्ञान कई क्षेत्रों में हमारे जीवन को आसान, सुरक्षित, स्वस्थ और अधिक टिकाऊ बनाता है। यहाँ कुछ प्रमुख उदाहरण हैं।'
+  },
+  storiesDesc:{
+    en:'These examples show that science is not just a school subject — it is the foundation of a better tomorrow.',
+    hi:'ये उदाहरण दिखाते हैं कि विज्ञान सिर्फ़ एक विषय नहीं, बल्कि एक बेहतर कल की नींव है।'
+  },
+  classroomDesc:{
+    en:'What you learn today can change the world tomorrow.',
+    hi:'जो तुम आज सीखते हो, वही कल की दुनिया बदल सकता है।'
+  },
+  ctaDesc:{
+    en:'Look around you — science is everywhere, in everything, every day.',
+    hi:'अपने आसपास देखो — विज्ञान हर जगह है, हर चीज़ में, हर दिन।'
+  },
+  learnMore:{en:'Learn More →',hi:'और जानें →'},
+  showLess:{en:'Show Less ↑',hi:'कम दिखाएँ ↑'},
+  nextTopics:{en:'Next Topics →',hi:'अगले विषय →'},
+  nextExample:{en:'Next Example →',hi:'और उदाहरण देखें →'},
+  exploreMore:{en:'Explore More →',hi:'और देखें →'},
+  example:{en:'Example',hi:'उदाहरण'},
+  counter:{en:'Showing',hi:'दिखा रहे हैं'},
+  of:{en:'of',hi:'में से'},
+  emptyDomains:{en:'Real-world application data could not be loaded.',hi:'वास्तविक दुनिया के अनुप्रयोग डेटा लोड नहीं हो सका।'},
+  emptyStories:{en:'Story data could not be loaded.',hi:'कहानी डेटा लोड नहीं हो सका।'},
+  emptyClassroom:{en:'Classroom example data could not be loaded.',hi:'कक्षा उदाहरण डेटा लोड नहीं हो सका।'}
 };
-}
 
-function normalizeClassroom(item){
-const example=field(item,["example","title","name"]);
-const concept=field(item,["concept"]);
-const use=field(item,["realWorldUse","real_world_use","realWorld"]);
-return{
-id:field(item,["id"])||Math.random().toString(36).slice(2),
-icon:field(item,["icon","visual","emoji"])||"🔬",
-example:textValue(example),
-concept:textValue(concept),
-use:textValue(use)
+/* ---------------- DATA FIELD LABELS ---------------- */
+var LABELS = {
+  description:{en:'Overview',hi:'परिचय'},
+  desc:{en:'Overview',hi:'परिचय'},
+  summary:{en:'Summary',hi:'सारांश'},
+  content:{en:'Details',hi:'विवरण'},
+  details:{en:'Details',hi:'विवरण'},
+  explanation:{en:'Explanation',hi:'व्याख्या'},
+  concept:{en:'Science Concept',hi:'वैज्ञानिक सिद्धांत'},
+  realWorldUse:{en:'Real World Use',hi:'वास्तविक उपयोग'},
+  realLifeUse:{en:'Real World Use',hi:'वास्तविक उपयोग'},
+  realWorldApplication:{en:'Real World Use',hi:'वास्तविक उपयोग'},
+  use:{en:'Real World Use',hi:'वास्तविक उपयोग'},
+  betterFuture:{en:'Better Future',hi:'बेहतर भविष्य'},
+  future:{en:'Better Future',hi:'बेहतर भविष्य'},
+  howItWorks:{en:'How It Works',hi:'यह कैसे काम करता है'},
+  impact:{en:'The Impact',hi:'प्रभाव'},
+  examples:{en:'Examples',hi:'उदाहरण'},
+  applications:{en:'Applications',hi:'उपयोग'},
+  uses:{en:'Real-World Uses',hi:'वास्तविक उपयोग'},
+  facts:{en:'Key Facts',hi:'मुख्य तथ्य'},
+  funFact:{en:'Did You Know?',hi:'क्या आप जानते हैं?'},
+  benefits:{en:'Benefits',hi:'लाभ'},
+  subject:{en:'Subject',hi:'विषय'}
 };
+
+var SKIP_KEYS = ['id','slug','key','emoji','icon','image','img','images','color','accent','bg','title','name','category','label','tag','type','order','sort'];
+var STORY_EXTRA_SKIP = ['description','desc','summary'];
+
+/* ---------------- HELPERS ---------------- */
+function esc(s){
+  return String(s == null ? '' : s).replace(/[&<>"']/g,function(c){
+    return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];
+  });
+}
+function t(key){
+  var v = I18N[key];
+  return v ? (v[lang] || v.en) : key;
+}
+function other(l){ return l === 'hi' ? 'en' : 'hi'; }
+function hasBoth(v){ return v && typeof v === 'object' && !Array.isArray(v) && (v.en || v.hi); }
+
+/* Resolve a value that may be a string, {en,hi} object, or array of either. */
+function tx(v, language){
+  if (v == null) return '';
+  if (typeof v === 'string') return v;
+  if (typeof v === 'number' || typeof v === 'boolean') return String(v);
+  if (Array.isArray(v)){
+    var out = [];
+    for (var i = 0; i < v.length; i++){
+      var s = tx(v[i], language);
+      if (s) out.push(s);
+    }
+    return out.join(' ');
+  }
+  if (typeof v === 'object'){
+    if (v[language]) return tx(v[language], language);
+    if (v.en) return tx(v.en, language);
+    if (v.hi) return tx(v.hi, language);
+    if (v.text) return tx(v.text, language);
+    return '';
+  }
+  return '';
 }
 
-function showToast(message){
-const t=$("#toast");
-t.textContent=message;
-t.classList.add("show");
-clearTimeout(showToast.timer);
-showToast.timer=setTimeout(()=>t.classList.remove("show"),2200);
+function labelFor(key){
+  var l = LABELS[key];
+  if (l) return l[lang] || l.en;
+  return key.replace(/([A-Z])/g,' $1').replace(/^./,function(c){ return c.toUpperCase(); });
 }
 
-applyLanguage();
-
-$("#langBtn").addEventListener("click",()=>{
-language=language==="en"?"hi":"en";
-applyLanguage();
-renderDomains();
-renderStories();
-renderClassroom();
-});
-
-$("#menuBtn").addEventListener("click",()=>{
-$("#mobileMenu").classList.toggle("open");
-});
-
-$$(".mobile-menu a").forEach(a=>{
-a.addEventListener("click",()=>$("#mobileMenu").classList.remove("open"));
-});
-
-/* SECTION 1 */
-
-let realWorldData=[];
-let activeDomain=null;
-
-function loadRealWorld(){
-if(window.ScienceRealWorld&&typeof window.ScienceRealWorld.all==="function"){
-realWorldData=window.ScienceRealWorld.all();
-}else if(Array.isArray(window.scienceRealWorld)){
-realWorldData=window.scienceRealWorld;
-}else{
-realWorldData=[];
-}
+/* Safely read a global set by a classic script (works for var, let and const). */
+function globalGet(name){
+  try{ if (name in window && window[name] != null) return window[name]; }catch(e){}
+  try{
+    return (new Function('try{return typeof ' + name + ' !== "undefined" ? ' + name + ' : undefined;}catch(e){return undefined;}'))();
+  }catch(e){ return undefined; }
 }
 
-function getDomains(){
-const map=new Map();
-realWorldData.forEach(item=>{
-const domain=item.domain||"Other";
-if(!map.has(domain)){
-map.set(domain,{
-name:domain,
-icon:item.domainIcon||"🔬",
-topics:[]
-});
+function resolveData(names){
+  var listKeys = ['domains','topics','items','data','list','applications','areas','stories','examples','cards','entries'];
+  for (var i = 0; i < names.length; i++){
+    var v = globalGet(names[i]);
+    if (!v) continue;
+    if (Array.isArray(v)) return v;
+    if (typeof v === 'object'){
+      for (var k = 0; k < listKeys.length; k++){
+        if (Array.isArray(v[listKeys[k]])) return v[listKeys[k]];
+      }
+      var arrays = Object.keys(v).filter(function(key){ return Array.isArray(v[key]); });
+      if (arrays.length === 1) return v[arrays[0]];
+    }
+  }
+  return [];
 }
-map.get(domain).topics.push(item);
-});
-return [...map.values()];
+
+function itemId(item, index){
+  return String(item && (item.id != null ? item.id : (item.slug != null ? item.slug : index)));
+}
+function itemEmoji(item, fallback){
+  if (!item) return fallback;
+  var e = item.emoji || item.icon || item.visual || item.symbol;
+  if (!e) return fallback;
+  if (typeof e === 'string') return e;
+  return tx(e, lang) || fallback;
+}
+
+/* ---------------- GENERIC FIELD RENDERING ---------------- */
+function valueHTML(v){
+  if (v == null || v === '') return '';
+  if (Array.isArray(v)){
+    var items = [];
+    for (var i = 0; i < v.length; i++){
+      var s = tx(v[i], lang);
+      if (s) items.push('<li>' + esc(s) + '</li>');
+    }
+    return items.length ? '<ul class="field-list">' + items.join('') + '</ul>' : '';
+  }
+  if (typeof v === 'object'){
+    var str = tx(v, lang);
+    return str ? '<p>' + esc(str) + '</p>' : '';
+  }
+  var text = tx(v, lang);
+  return text ? '<p>' + esc(text) + '</p>' : '';
+}
+
+function detailHTML(obj, extraSkip){
+  if (!obj) return '';
+  var skip = SKIP_KEYS.slice();
+  if (extraSkip) skip = skip.concat(extraSkip);
+  var out = [];
+  Object.keys(obj).forEach(function(key){
+    if (skip.indexOf(key) !== -1) return;
+    var html = valueHTML(obj[key]);
+    if (!html) return;
+    out.push('<div class="field"><h4>' + esc(labelFor(key)) + '</h4>' + html + '</div>');
+  });
+  return out.join('');
+}
+
+/* ---------------- DOMAIN SECTION ---------------- */
+function domainCardHTML(item, id, active){
+  var rawTitle = item.title != null ? item.title : item.name;
+  var primary = tx(rawTitle, lang);
+  var secondary = hasBoth(rawTitle) ? tx(rawTitle, other(lang)) : '';
+  var emoji = itemEmoji(item, '🔬');
+  return '<button type="button" class="domain-card' + (active ? ' active' : '') + '" data-id="' + esc(id) + '" aria-expanded="' + (active ? 'true' : 'false') + '">' +
+    '<span class="hex"><span class="hex-in">' + esc(emoji) + '</span></span>' +
+    '<span class="domain-title">' + esc(primary) + '</span>' +
+    (secondary ? '<span class="domain-sub">' + esc(secondary) + '</span>' : '') +
+    '<span class="domain-arrow">' + (active ? '↑' : '→') + '</span>' +
+  '</button>';
+}
+
+function domainPanelHTML(item){
+  var rawTitle = item.title != null ? item.title : item.name;
+  var emoji = itemEmoji(item, '🔬');
+  var body = detailHTML(item, []);
+  return '<div class="domain-panel">' +
+    '<div class="panel-head">' +
+      '<span class="panel-emoji">' + esc(emoji) + '</span>' +
+      '<div><h3>' + esc(tx(rawTitle, lang)) + '</h3></div>' +
+      '<button type="button" class="panel-close" data-close aria-label="Close">✕</button>' +
+    '</div>' +
+    '<div class="panel-body">' + (body || '') + '</div>' +
+  '</div>';
 }
 
 function renderDomains(){
-loadRealWorld();
-const grid=$("#domainGrid");
-const domains=getDomains();
-grid.innerHTML="";
-
-if(!domains.length){
-grid.innerHTML='<div class="topic-item">Science real-world data could not be loaded. Check <b>../data/science-real-world.js</b>.</div>';
-return;
+  var grid = document.getElementById('domainGrid');
+  if (!grid) return;
+  if (!domains.length){
+    grid.innerHTML = '<p class="empty">' + esc(t('emptyDomains')) + '</p>';
+    return;
+  }
+  var html = '';
+  domains.forEach(function(item, i){
+    var id = itemId(item, i);
+    var active = (activeDomain !== null && activeDomain === id);
+    html += domainCardHTML(item, id, active);
+    if (active) html += domainPanelHTML(item);
+  });
+  grid.innerHTML = html;
 }
 
-domains.forEach(domain=>{
-const card=document.createElement("div");
-card.className="domain-card"+(activeDomain===domain.name?" active":"");
-card.innerHTML=
-'<div class="domain-icon">'+domain.icon+'</div>'+
-'<div class="domain-name">'+domain.name+'</div>'+
-'<div class="domain-arrow">→</div>';
-card.addEventListener("click",()=>openDomain(domain));
-grid.appendChild(card);
-});
-}
-
-function openDomain(domain){
-activeDomain=domain.name;
-const box=$("#domainTopics");
-box.classList.add("open");
-box.innerHTML=
-'<div class="domain-topics-head">'+
-'<strong>'+domain.icon+" "+domain.name+" — "+domain.topics.length+' topics</strong>'+
-'<button class="close-domain" id="closeDomain">×</button>'+
-'</div>'+
-'<div class="topic-list">'+
-domain.topics.map(item=>
-'<div class="topic-item"><b>'+item.visual+" "+textValue(item.title)+'</b><br><span style="display:block;margin-top:5px;color:#8f9c93;font-size:10px">'+textValue(item.hook)+'</span></div>'
-).join("")+
-'</div>';
-$("#closeDomain").addEventListener("click",()=>{
-activeDomain=null;
-box.classList.remove("open");
-renderDomains();
-});
-renderDomains();
-box.scrollIntoView({behavior:"smooth",block:"nearest"});
-}
-
-$("#exploreDomains").addEventListener("click",()=>{
-const first=getDomains()[0];
-if(first)openDomain(first);
-});
-
-/* SECTION 2 */
-
-let stories=[];
-let storyStart=0;
-
-function loadStories(){
-let source=null;
-
-if(window.HowScienceChangesWorld&&typeof window.HowScienceChangesWorld.all==="function"){
-source=window.HowScienceChangesWorld.all();
-}else if(Array.isArray(window.howScienceChangesWorld)){
-source=window.howScienceChangesWorld;
-}else if(Array.isArray(window.howScienceChangesWorldData)){
-source=window.howScienceChangesWorldData;
-}
-
-stories=Array.isArray(source)?source.map(normalizeStory):[];
+/* ---------------- STORIES SECTION ---------------- */
+function storyCardHTML(item, index){
+  var open = (expandedStoryId === index);
+  var emoji = itemEmoji(item, '🔬');
+  var rawCat = item.category != null ? item.category : (item.label != null ? item.label : item.tag);
+  var cat = tx(rawCat, lang);
+  var rawTitle = item.title != null ? item.title : item.name;
+  var title = tx(rawTitle, lang);
+  var rawDesc = item.description != null ? item.description : (item.desc != null ? item.desc : item.summary);
+  var desc = tx(rawDesc, lang);
+  var detail = detailHTML(item, STORY_EXTRA_SKIP);
+  return '<article class="story-card' + (open ? ' open' : '') + '">' +
+    '<div class="story-visual"><span>' + esc(emoji) + '</span></div>' +
+    '<div class="story-body">' +
+      (cat ? '<div class="story-cat">' + esc(cat) + '</div>' : '') +
+      (title ? '<h3 class="story-title">' + esc(title) + '</h3>' : '') +
+      (desc ? '<p class="story-desc">' + esc(desc) + '</p>' : '') +
+      (detail ? '<div class="story-more"' + (open ? '' : ' hidden') + '>' + detail + '</div>' : '') +
+      (detail ? '<button type="button" class="btn btn-sm learn-btn" data-story="' + index + '">' + esc(open ? t('showLess') : t('learnMore')) + '</button>' : '') +
+    '</div>' +
+  '</article>';
 }
 
 function renderStories(){
-loadStories();
-const grid=$("#storyGrid");
-grid.innerHTML="";
-
-if(!stories.length){
-grid.innerHTML='<div class="topic-item">How Science Changes Our World data could not be loaded. Check <b>../data/how-science-changes-world.js</b>.</div>';
-$("#storyCounterTop").textContent="0 / 0";
-return;
+  var grid = document.getElementById('storyGrid');
+  var counter = document.getElementById('storyCounter');
+  if (!grid) return;
+  var total = stories.length;
+  if (!total){
+    grid.innerHTML = '<p class="empty">' + esc(t('emptyStories')) + '</p>';
+    if (counter) counter.textContent = '';
+    return;
+  }
+  var count = Math.min(STORIES_PER_PAGE, total);
+  var start = ((storyStartIndex % total) + total) % total;
+  var html = '';
+  for (var i = 0; i < count; i++){
+    var idx = (start + i) % total;
+    html += storyCardHTML(stories[idx], idx);
+  }
+  grid.innerHTML = html;
+  if (counter){
+    counter.textContent = t('counter') + ' ' + (start + 1) + '–' + (start + count) + ' ' + t('of') + ' ' + total;
+  }
 }
 
-if(storyStart>=stories.length)storyStart=0;
-
-const visible=[];
-for(let i=0;i<3&&i<stories.length;i++){
-visible.push(stories[(storyStart+i)%stories.length]);
-}
-
-visible.forEach(item=>{
-const card=document.createElement("article");
-card.className="story-card";
-card.innerHTML=
-'<div class="story-visual">'+item.icon+'</div>'+
-'<div class="story-content">'+
-'<div class="story-label">REAL STORY</div>'+
-'<div class="story-title">'+item.title+'</div>'+
-'<div class="story-description">'+item.description+'</div>'+
-'<button class="learn-btn">Learn More →</button>'+
-'<div class="story-more">'+
-'<div class="more-block">'+
-'<div class="more-label">HOW IT WORKS</div>'+
-'<div class="more-text">'+(item.how||"")+'</div>'+
-'</div>'+
-'<div class="more-block">'+
-'<div class="more-label">THE IMPACT</div>'+
-'<div class="more-text">'+(item.impact||"")+'</div>'+
-'</div>'+
-'</div>'+
-'</div>';
-card.querySelector(".learn-btn").addEventListener("click",e=>{
-card.classList.toggle("expanded");
-e.currentTarget.textContent=card.classList.contains("expanded")?"Show Less ↑":"Learn More →";
-});
-grid.appendChild(card);
-});
-
-const end=Math.min(storyStart+3,stories.length);
-const shown=storyStart+1+"–"+end;
-$("#storyCounterTop").textContent=shown+" / "+stories.length;
-}
-
-function nextStories(){
-if(!stories.length)return;
-storyStart=(storyStart+3)%stories.length;
-renderStories();
-$("#stories").scrollIntoView({behavior:"smooth",block:"start"});
-}
-
-$("#nextStoriesTop").addEventListener("click",nextStories);
-$("#nextStoriesBottom").addEventListener("click",nextStories);
-
-/* SECTION 3 */
-
-let classroom=[];
-let classroomIndex=0;
-
-function loadClassroom(){
-let source=null;
-
-if(window.ScienceClassroomToRealLife&&typeof window.ScienceClassroomToRealLife.all==="function"){
-source=window.ScienceClassroomToRealLife.all();
-}else if(Array.isArray(window.scienceClassroomToRealLife)){
-source=window.scienceClassroomToRealLife;
-}else if(Array.isArray(window.scienceClassroomToRealLifeData)){
-source=window.scienceClassroomToRealLifeData;
-}
-
-classroom=Array.isArray(source)?source.map(normalizeClassroom):[];
-}
-
+/* ---------------- CLASSROOM SECTION ---------------- */
 function renderClassroom(){
-loadClassroom();
-const box=$("#exampleCard");
-
-if(!classroom.length){
-box.innerHTML=
-'<div class="example-visual">🔬</div>'+
-'<div><div class="example-label">SCIENCE IN ACTION</div>'+
-'<div class="example-title">Data could not be loaded</div>'+
-'<div class="example-text">Please check <b>../data/science-classroom-to-real-life.js</b>.</div></div>';
-return;
+  var box = document.getElementById('classroomCard');
+  if (!box) return;
+  var total = classroom.length;
+  if (!total){
+    box.innerHTML = '<p class="empty">' + esc(t('emptyClassroom')) + '</p>';
+    return;
+  }
+  classroomIndex = ((classroomIndex % total) + total) % total;
+  var item = classroom[classroomIndex];
+  var emoji = itemEmoji(item, '🌱');
+  var rawTitle = item.title != null ? item.title : (item.name != null ? item.name : item.example);
+  var title = tx(rawTitle, lang);
+  var body = detailHTML(item, ['title','name','example']);
+  box.innerHTML =
+    '<div class="cc-head">' +
+      '<span class="cc-emoji">' + esc(emoji) + '</span>' +
+      '<div>' +
+        '<div class="cc-label">' + esc(t('example')) + '</div>' +
+        (title ? '<h3>' + esc(title) + '</h3>' : '') +
+      '</div>' +
+    '</div>' +
+    '<div class="cc-body">' + body + '</div>';
 }
 
-if(classroomIndex>=classroom.length)classroomIndex=0;
-
-const item=classroom[classroomIndex];
-
-box.innerHTML=
-'<div class="example-visual">'+item.icon+'</div>'+
-'<div>'+
-'<div class="example-label">SCIENCE IN ACTION</div>'+
-'<div class="example-title">'+item.example+'</div>'+
-'<div class="example-text">'+
-'<b>Concept:</b><br>'+item.concept+
-'<br><br>'+
-'<b>Real World Use:</b><br>'+item.use+
-'</div>'+
-'</div>';
+/* ---------------- LANGUAGE ---------------- */
+function applyLanguage(){
+  document.documentElement.lang = (lang === 'hi') ? 'hi' : 'en';
+  var nodes = document.querySelectorAll('[data-i18n]');
+  for (var i = 0; i < nodes.length; i++){
+    var key = nodes[i].getAttribute('data-i18n');
+    var entry = I18N[key];
+    if (entry) nodes[i].textContent = entry[lang] || entry.en;
+  }
+  var en = document.getElementById('langEn');
+  var hi = document.getElementById('langHi');
+  if (en) en.classList.toggle('on', lang === 'en');
+  if (hi) hi.classList.toggle('on', lang === 'hi');
+  renderDomains();
+  renderStories();
+  renderClassroom();
 }
 
-$("#nextExample").addEventListener("click",()=>{
-if(!classroom.length)return;
-classroomIndex=(classroomIndex+1)%classroom.length;
-renderClassroom();
-$("#classroom").scrollIntoView({behavior:"smooth",block:"center"});
-});
+function setLanguage(next){
+  if (next !== 'en' && next !== 'hi') return;
+  lang = next;
+  try{ localStorage.setItem('scienceLanguage', next); }catch(e){}
+  applyLanguage();
+}
 
-renderDomains();
-renderStories();
-renderClassroom();
+/* ---------------- EVENTS ---------------- */
+function bindEvents(){
+  var langToggle = document.getElementById('langToggle');
+  if (langToggle){
+    langToggle.addEventListener('click', function(){
+      setLanguage(lang === 'en' ? 'hi' : 'en');
+    });
+  }
 
+  var menuBtn = document.getElementById('menuBtn');
+  var mobileMenu = document.getElementById('mobileMenu');
+  if (menuBtn && mobileMenu){
+    menuBtn.addEventListener('click', function(){
+      var open = mobileMenu.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    mobileMenu.addEventListener('click', function(e){
+      if (e.target.tagName === 'A'){
+        mobileMenu.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+
+  var dropBtns = document.querySelectorAll('.drop-btn');
+  for (var i = 0; i < dropBtns.length; i++){
+    (function(btn){
+      btn.addEventListener('click', function(e){
+        e.stopPropagation();
+        var parent = btn.parentElement;
+        var wasOpen = parent.classList.contains('open');
+        var all = document.querySelectorAll('.nav-drop.open');
+        for (var j = 0; j < all.length; j++){
+          all[j].classList.remove('open');
+          var b = all[j].querySelector('.drop-btn');
+          if (b) b.setAttribute('aria-expanded','false');
+        }
+        if (!wasOpen){
+          parent.classList.add('open');
+          btn.setAttribute('aria-expanded','true');
+        }
+      });
+    })(dropBtns[i]);
+  }
+  document.addEventListener('click', function(){
+    var all = document.querySelectorAll('.nav-drop.open');
+    for (var j = 0; j < all.length; j++){
+      all[j].classList.remove('open');
+      var b = all[j].querySelector('.drop-btn');
+      if (b) b.setAttribute('aria-expanded','false');
+    }
+  });
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape'){
+      var all = document.querySelectorAll('.nav-drop.open');
+      for (var j = 0; j < all.length; j++) all[j].classList.remove('open');
+      if (mobileMenu) mobileMenu.classList.remove('open');
+      if (menuBtn) menuBtn.setAttribute('aria-expanded','false');
+    }
+  });
+
+  var grid = document.getElementById('domainGrid');
+  if (grid){
+    grid.addEventListener('click', function(e){
+      if (e.target.closest('[data-close]')){
+        activeDomain = null;
+        renderDomains();
+        return;
+      }
+      var card = e.target.closest('.domain-card');
+      if (!card) return;
+      var id = card.getAttribute('data-id');
+      activeDomain = (activeDomain === id) ? null : id;
+      renderDomains();
+    });
+  }
+
+  var storyGrid = document.getElementById('storyGrid');
+  if (storyGrid){
+    storyGrid.addEventListener('click', function(e){
+      var btn = e.target.closest('.learn-btn');
+      if (!btn) return;
+      var idx = parseInt(btn.getAttribute('data-story'), 10);
+      if (isNaN(idx)) return;
+      var card = btn.closest('.story-card');
+      var more = card ? card.querySelector('.story-more') : null;
+      var isOpen = card ? card.classList.toggle('open') : false;
+      if (more) more.hidden = !isOpen;
+      btn.textContent = isOpen ? t('showLess') : t('learnMore');
+      expandedStoryId = isOpen ? idx : null;
+    });
+  }
+
+  var nextStories = document.getElementById('nextStories');
+  if (nextStories){
+    nextStories.addEventListener('click', function(){
+      var total = stories.length;
+      if (!total) return;
+      storyStartIndex = (storyStartIndex + STORIES_PER_PAGE) % total;
+      renderStories();
+    });
+  }
+
+  var nextExample = document.getElementById('nextExample');
+  if (nextExample){
+    nextExample.addEventListener('click', function(){
+      if (!classroom.length) return;
+      classroomIndex = (classroomIndex + 1) % classroom.length;
+      renderClassroom();
+    });
+  }
+}
+
+/* ---------------- INIT ---------------- */
+function init(){
+  try{
+    var saved = localStorage.getItem('scienceLanguage');
+    if (saved === 'hi' || saved === 'en') lang = saved;
+  }catch(e){}
+
+  domains = resolveData(['scienceRealWorld','SCIENCE_REAL_WORLD','realWorldData','REAL_WORLD_DATA','realWorldApplications','scienceRealWorldData','realWorld']);
+  stories = resolveData(['howScienceChangesWorld','HOW_SCIENCE_CHANGES_WORLD','howScienceChangesOurWorld','scienceStories','SCIENCE_STORIES','storiesData','realStories']);
+  classroom = resolveData(['scienceClassroomToRealLife','SCIENCE_CLASSROOM_TO_REAL_LIFE','classroomToRealLife','CLASSROOM_TO_REAL_LIFE','classroomData','scienceInAction']);
+
+  var yearEl = document.getElementById('year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  bindEvents();
+  applyLanguage();
+}
+
+if (document.readyState === 'loading'){
+  document.addEventListener('DOMContentLoaded', init);
+} else {
+  init();
+}
 })();
 </script>
 </body>
