@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="description" content="Science in the Real World — discover how scientific ideas shape technology, medicine, energy, communication and everyday life.">
+<meta name="description" content="Science in the Real World — discover how science shapes technology, medicine, energy, communication and everyday life.">
 <title>Science in the Real World | Science Beyond the Textbook</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,27 +12,27 @@
 :root{
 --bg:#07100b;
 --bg2:#0b1510;
---panel:rgba(13,20,16,.94);
+--panel:rgba(13,20,16,.92);
 --panel2:#111b15;
 --green:#65f28b;
 --green2:#35c968;
 --text:#f4f5ef;
 --muted:#aeb8af;
---line:rgba(255,255,255,.14);
+--line:rgba(255,255,255,.13);
 --soft:rgba(101,242,139,.08);
---shadow:0 18px 50px rgba(0,0,0,.38);
+--shadow:0 18px 50px rgba(0,0,0,.4);
 --max:1280px;
 }
-*{box-sizing:border-box;margin:0;padding:0}
+*{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{
+margin:0;
 background:
-radial-gradient(circle at 15% 15%,rgba(53,201,104,.08),transparent 30%),
-radial-gradient(circle at 85% 40%,rgba(101,242,139,.045),transparent 32%),
-linear-gradient(180deg,#06100a,#08130d 45%,#06100a);
+radial-gradient(circle at 80% 15%,rgba(45,170,90,.09),transparent 28%),
+radial-gradient(circle at 15% 55%,rgba(20,120,60,.07),transparent 30%),
+linear-gradient(180deg,#07100b,#08130d 45%,#061009);
 color:var(--text);
 font-family:Inter,"Noto Sans Devanagari",sans-serif;
-line-height:1.55;
 overflow-x:hidden;
 }
 body:before{
@@ -40,9 +40,9 @@ content:"";
 position:fixed;
 inset:0;
 pointer-events:none;
-opacity:.18;
+opacity:.16;
 background-image:radial-gradient(rgba(255,255,255,.18) .6px,transparent .7px);
-background-size:32px 32px;
+background-size:6px 6px;
 z-index:-1;
 }
 a{text-decoration:none;color:inherit}
@@ -52,244 +52,259 @@ button{font:inherit}
 position:sticky;
 top:0;
 z-index:1000;
-background:rgba(5,13,9,.9);
+height:64px;
+background:rgba(5,13,9,.91);
 backdrop-filter:blur(16px);
 -webkit-backdrop-filter:blur(16px);
-border-bottom:1px solid rgba(101,242,139,.2);
+border-bottom:1px solid var(--line);
 }
 .nav-inner{
-height:72px;
+height:64px;
 display:flex;
 align-items:center;
-gap:28px;
+gap:26px;
 }
 .brand{
 display:flex;
 align-items:center;
-gap:12px;
-flex-shrink:0;
+gap:11px;
+min-width:max-content;
 }
 .brand-icon{
 width:40px;
 height:40px;
-border-radius:12px;
+border:1px solid rgba(117,229,144,.35);
+border-radius:11px;
 display:grid;
 place-items:center;
-background:rgba(101,242,139,.08);
-border:1px solid rgba(101,242,139,.35);
+background:rgba(30,110,60,.17);
 }
-.brand-icon svg{width:32px;height:32px}
-.brand-title strong{
-display:block;
-font-size:16px;
-letter-spacing:3px;
+.brand-icon svg{
+width:32px;
+height:32px;
+}
+.brand-title{
+display:flex;
+flex-direction:column;
 line-height:1;
 }
+.brand-title strong{
+font-size:14px;
+letter-spacing:3px;
+}
 .brand-title small{
-display:block;
+margin-top:4px;
 font-size:7px;
 letter-spacing:2px;
-color:#89958c;
-margin-top:5px;
+color:#819188;
 }
 .nav-links{
 display:flex;
 align-items:center;
-gap:22px;
-margin-left:0;
-font-size:13px;
+gap:26px;
+margin-left:auto;
+font-size:12px;
+font-weight:600;
 }
 .nav-links>a,.nav-drop{
-color:#e7ebe7;
-cursor:pointer;
 position:relative;
-padding:26px 0;
 white-space:nowrap;
+cursor:pointer;
+color:#e6ebe7;
 }
-.nav-links>a:hover,.nav-drop:hover{color:var(--green)}
-.nav-drop>span{font-size:10px;color:#849087;margin-left:4px}
+.nav-links>a:after{
+content:"";
+position:absolute;
+height:2px;
+left:0;
+right:0;
+bottom:-23px;
+background:var(--green);
+opacity:0;
+}
+.nav-links>a:hover:after{opacity:1}
+.nav-drop>span{display:inline-flex;gap:4px}
 .dropdown{
 position:absolute;
-top:62px;
+top:28px;
 left:-14px;
-min-width:205px;
-padding:8px;
+min-width:190px;
+padding:9px;
 border:1px solid var(--line);
 border-radius:14px;
-background:rgba(8,17,12,.98);
+background:rgba(8,17,12,.97);
 box-shadow:var(--shadow);
-display:none;
+opacity:0;
+visibility:hidden;
+transform:translateY(7px);
+transition:.2s;
 }
-.nav-drop:hover>.dropdown{display:block}
+.nav-drop:hover>.dropdown{
+opacity:1;
+visibility:visible;
+transform:none;
+}
 .dropdown a{
 display:block;
-padding:10px 12px;
+padding:10px 11px;
 border-radius:9px;
 font-size:12px;
-color:#dce3de;
 }
 .dropdown a:hover{background:var(--soft);color:var(--green)}
 .actions{
-margin-left:auto;
 display:flex;
 align-items:center;
 gap:10px;
+margin-left:0;
 }
 .lang{
-border:1px solid rgba(101,242,139,.28);
-background:rgba(101,242,139,.06);
+border:1px solid rgba(101,242,139,.25);
+background:rgba(24,90,48,.18);
 color:#fff;
-border-radius:30px;
-padding:9px 15px;
+border-radius:20px;
+padding:8px 13px;
 cursor:pointer;
 font-size:12px;
 }
 .lang b{color:var(--green)}
 .icon-btn{
-width:40px;
-height:40px;
+width:38px;
+height:38px;
 border-radius:50%;
-border:1px solid rgba(101,242,139,.28);
-background:rgba(101,242,139,.05);
-color:#fff;
+border:1px solid rgba(101,242,139,.25);
+background:rgba(24,90,48,.16);
+color:white;
 cursor:pointer;
 font-size:20px;
-display:grid;
-place-items:center;
 }
 .mobile-menu{
 display:none;
 position:fixed;
-top:72px;
-left:0;
-right:0;
 z-index:999;
-background:rgba(5,13,9,.98);
-border-bottom:1px solid rgba(101,242,139,.2);
-padding:14px 20px 20px;
-max-height:calc(100vh - 72px);
-overflow:auto;
+top:64px;
+right:16px;
+left:16px;
+padding:10px;
+border:1px solid var(--line);
+border-radius:16px;
+background:rgba(5,14,9,.98);
+box-shadow:var(--shadow);
 }
 .mobile-menu.open{display:block}
 .mobile-menu a{
 display:block;
-padding:12px 10px;
-border-bottom:1px solid rgba(255,255,255,.07);
-font-size:14px;
+padding:13px 14px;
+border-radius:10px;
+font-size:13px;
 }
-.mobile-menu a:hover{color:var(--green)}
+.mobile-menu a:hover{background:var(--soft);color:var(--green)}
 .hero{
 min-height:510px;
+position:relative;
 display:flex;
 align-items:center;
-position:relative;
 overflow:hidden;
 background:
-linear-gradient(90deg,rgba(4,12,8,.96) 0%,rgba(4,12,8,.78) 33%,rgba(4,12,8,.22) 68%,rgba(4,12,8,.52) 100%),
-linear-gradient(0deg,rgba(4,12,8,.78),transparent 40%),
+linear-gradient(90deg,rgba(4,13,8,.97) 0%,rgba(4,13,8,.82) 32%,rgba(4,13,8,.27) 70%,rgba(4,13,8,.42)),
 url("https://res.cloudinary.com/eq1jpw1h/image/upload/v1791127533/file_00000000c94c8211a59f489def3484a2.png") center/cover no-repeat;
-border-bottom:1px solid rgba(101,242,139,.18);
+border-bottom:1px solid var(--line);
 }
-.hero-inner{
-width:min(var(--max),calc(100% - 48px));
-margin:auto;
-padding:90px 0;
+.hero:after{
+content:"";
+position:absolute;
+inset:0;
+background:linear-gradient(180deg,transparent 65%,rgba(7,16,11,.7));
+pointer-events:none;
 }
-.kicker{
+.hero-content{
+position:relative;
+z-index:2;
+width:min(760px,100%);
+padding:70px 0;
+}
+.eyebrow{
 display:flex;
 align-items:center;
-gap:10px;
-color:var(--green);
-font-size:12px;
-font-weight:800;
+gap:8px;
+font-size:11px;
 letter-spacing:2px;
+font-weight:800;
+color:var(--green);
 text-transform:uppercase;
-margin-bottom:10px;
+margin-bottom:12px;
 }
-.kicker:before{
+.eyebrow:before{
 content:"";
-width:24px;
+width:25px;
 height:2px;
 background:var(--green);
 }
 .hero h1{
+margin:0;
 font-family:Caveat,cursive;
-font-size:clamp(58px,7vw,100px);
-line-height:.82;
+font-size:clamp(58px,7vw,96px);
+line-height:.88;
 font-weight:600;
+letter-spacing:-1px;
 text-transform:uppercase;
-max-width:720px;
-letter-spacing:-2px;
+max-width:700px;
 }
 .hero h1 span{color:var(--green)}
-.hero-subtitle{
-font-size:18px;
+.hero-sub{
+font-size:15px;
 font-weight:800;
-letter-spacing:2px;
+letter-spacing:1.5px;
 color:var(--green);
-margin-top:18px;
-text-transform:uppercase;
+margin:20px 0 13px;
 }
-.hero-description{
+.hero-text{
 max-width:560px;
-font-size:16px;
-color:#e0e6e1;
-margin-top:16px;
+font-size:15px;
+line-height:1.8;
+color:#e2e7e3;
 }
 .hero-caption{
 position:absolute;
-right:7%;
-bottom:45px;
+right:6%;
+bottom:35px;
+z-index:3;
 font-family:Caveat,cursive;
-font-size:27px;
+font-size:26px;
 line-height:1;
 transform:rotate(-5deg);
-text-align:center;
 }
 .hero-caption span{color:var(--green)}
 .section{
-padding:68px 0;
-border-bottom:1px solid rgba(101,242,139,.12);
+padding:64px 0;
+border-bottom:1px solid var(--line);
 }
 .section-head{
 display:flex;
 justify-content:space-between;
 align-items:flex-end;
 gap:25px;
-margin-bottom:26px;
+margin-bottom:28px;
 }
-.section-kicker{
-color:var(--green);
-font-size:11px;
-font-weight:800;
-letter-spacing:2px;
-text-transform:uppercase;
-display:flex;
-align-items:center;
-gap:9px;
-}
-.section-kicker:before{
-content:"";
-width:21px;
-height:2px;
-background:var(--green);
-}
+.section-title-wrap{max-width:850px}
 .section h2{
 font-family:Caveat,cursive;
-font-size:clamp(42px,5vw,68px);
-font-weight:600;
+font-size:48px;
 line-height:.95;
-margin-top:7px;
+font-weight:600;
+margin:0 0 10px;
 text-transform:uppercase;
 }
 .section h2 span{color:var(--green)}
-.section-intro{
-max-width:650px;
-color:var(--muted);
+.section-desc{
+margin:0;
+max-width:700px;
 font-size:14px;
-margin-top:10px;
+line-height:1.7;
+color:var(--muted);
 }
-.small-action{
+.section-action{
+border:0;
+background:none;
 color:var(--green);
 font-size:12px;
 font-weight:700;
@@ -299,174 +314,114 @@ cursor:pointer;
 .domain-grid{
 display:grid;
 grid-template-columns:repeat(7,1fr);
-gap:12px;
+gap:14px;
 }
 .domain-card{
-min-height:174px;
+min-height:170px;
 border:1px solid rgba(101,242,139,.25);
-border-radius:18px;
-padding:18px 13px;
+border-radius:17px;
 background:
-radial-gradient(circle at 50% 0,rgba(101,242,139,.12),transparent 55%),
-rgba(7,18,12,.78);
+radial-gradient(circle at 50% 20%,rgba(101,242,139,.12),transparent 45%),
+linear-gradient(180deg,rgba(13,34,20,.88),rgba(7,20,12,.94));
+padding:16px;
 cursor:pointer;
-transition:.25s ease;
+transition:.25s;
 display:flex;
 flex-direction:column;
 justify-content:space-between;
 }
 .domain-card:hover,.domain-card.active{
-transform:translateY(-4px);
 border-color:rgba(101,242,139,.65);
-box-shadow:0 12px 35px rgba(0,0,0,.25),0 0 24px rgba(101,242,139,.06);
+transform:translateY(-3px);
+box-shadow:0 12px 30px rgba(0,0,0,.25),inset 0 0 25px rgba(101,242,139,.04);
 }
 .domain-icon{
-width:58px;
-height:58px;
-border-radius:16px;
+width:54px;
+height:54px;
+border-radius:14px;
 display:grid;
 place-items:center;
-font-size:32px;
-border:1px solid rgba(101,242,139,.28);
-background:rgba(101,242,139,.07);
+font-size:30px;
+background:rgba(101,242,139,.08);
+border:1px solid rgba(101,242,139,.2);
 }
 .domain-name{
-font-size:14px;
+font-size:12px;
 font-weight:700;
-line-height:1.25;
+line-height:1.35;
 }
-.domain-arrow{
-color:var(--green);
-font-size:17px;
-}
-.domain-panel{
-margin-top:18px;
-border:1px solid rgba(101,242,139,.2);
-border-radius:20px;
-background:rgba(10,24,15,.76);
-padding:20px;
+.domain-arrow{color:var(--green);font-size:16px}
+.domain-topics{
 display:none;
+margin-top:18px;
+padding:20px;
+border:1px solid rgba(101,242,139,.2);
+border-radius:18px;
+background:rgba(8,23,14,.7);
 }
-.domain-panel.open{display:block}
-.panel-top{
+.domain-topics.open{display:block}
+.domain-topics-head{
 display:flex;
 justify-content:space-between;
 align-items:center;
-margin-bottom:16px;
+margin-bottom:15px;
 }
-.panel-title{
-font-size:16px;
-font-weight:800;
-}
-.panel-count{
-font-size:11px;
-color:var(--muted);
-}
-.close-panel{
+.domain-topics-head strong{font-size:14px}
+.close-domain{
 border:1px solid var(--line);
-background:rgba(255,255,255,.04);
+background:transparent;
 color:#fff;
-width:34px;
-height:34px;
-border-radius:10px;
+border-radius:50%;
+width:32px;
+height:32px;
 cursor:pointer;
 }
 .topic-list{
 display:grid;
 grid-template-columns:repeat(2,1fr);
-gap:10px;
+gap:9px;
 }
 .topic-item{
 border:1px solid rgba(255,255,255,.09);
-border-radius:13px;
-background:rgba(5,15,9,.62);
-overflow:hidden;
-}
-.topic-summary{
-width:100%;
-border:0;
-background:none;
-color:#fff;
-padding:14px;
-display:flex;
-align-items:center;
-gap:12px;
-text-align:left;
-cursor:pointer;
-}
-.topic-summary:hover{background:rgba(101,242,139,.045)}
-.topic-emoji{
-width:42px;
-height:42px;
+background:rgba(255,255,255,.025);
 border-radius:11px;
+padding:12px;
+font-size:12px;
+color:#dce3de;
+}
+.topic-item b{color:var(--green);font-weight:600}
+.stories-section{padding-top:72px}
+.stories-layout{
 display:grid;
-place-items:center;
-background:rgba(101,242,139,.07);
-border:1px solid rgba(101,242,139,.18);
-font-size:22px;
-flex-shrink:0;
-}
-.topic-summary strong{
-font-size:13px;
-font-weight:700;
-}
-.topic-plus{
-margin-left:auto;
-color:var(--green);
-font-size:18px;
-}
-.topic-detail{
-display:none;
-padding:0 14px 16px 68px;
-color:#bfc9c2;
-font-size:13px;
-}
-.topic-item.open .topic-detail{display:block}
-.topic-detail p{margin-top:8px}
-.topic-detail b{color:var(--green)}
-.real-stories{
-background:linear-gradient(180deg,rgba(7,18,11,.5),rgba(5,14,9,.72));
-}
-.story-layout{
-display:grid;
-grid-template-columns:280px 1fr;
-gap:32px;
+grid-template-columns:260px 1fr;
+gap:34px;
 align-items:start;
 }
-.story-side{
-position:sticky;
-top:100px;
-}
-.story-side h2{font-size:54px}
-.story-side p{
+.story-intro h2{font-size:52px}
+.story-intro p{
 font-size:13px;
+line-height:1.7;
 color:var(--muted);
-margin-top:14px;
 }
 .story-controls{
 display:flex;
 align-items:center;
 gap:10px;
-margin-top:22px;
+margin-top:20px;
 }
-.next-btn,.learn-btn,.example-btn{
-border:1px solid rgba(101,242,139,.38);
-background:rgba(101,242,139,.07);
+.next-btn{
+border:1px solid rgba(101,242,139,.4);
+background:rgba(25,104,52,.18);
 color:var(--green);
-border-radius:30px;
-padding:9px 15px;
-cursor:pointer;
+border-radius:20px;
+padding:9px 14px;
 font-size:11px;
 font-weight:700;
-transition:.2s;
-}
-.next-btn:hover,.learn-btn:hover,.example-btn:hover{
-background:rgba(101,242,139,.14);
-border-color:var(--green);
+cursor:pointer;
 }
 .counter{
-font-size:11px;
-color:#7e8a82;
+font-size:10px;
+color:#829087;
 }
 .story-grid{
 display:grid;
@@ -474,272 +429,308 @@ grid-template-columns:repeat(3,1fr);
 gap:14px;
 }
 .story-card{
-border:1px solid rgba(101,242,139,.22);
-border-radius:18px;
+border:1px solid rgba(101,242,139,.18);
+border-radius:17px;
 overflow:hidden;
-background:linear-gradient(180deg,rgba(16,38,23,.75),rgba(7,18,11,.92));
+background:linear-gradient(180deg,rgba(11,30,18,.9),rgba(6,17,10,.95));
+display:flex;
+flex-direction:column;
+min-width:0;
 }
 .story-visual{
-height:150px;
+height:145px;
 display:grid;
 place-items:center;
-font-size:64px;
 background:
-radial-gradient(circle,rgba(101,242,139,.13),transparent 58%),
-rgba(4,13,8,.7);
-border-bottom:1px solid rgba(101,242,139,.13);
+radial-gradient(circle,rgba(101,242,139,.13),transparent 48%),
+rgba(9,25,15,.9);
+border-bottom:1px solid rgba(255,255,255,.08);
+font-size:60px;
 }
-.story-body{
+.story-content{
 padding:16px;
 }
 .story-label{
 font-size:9px;
 font-weight:800;
-letter-spacing:1.8px;
+letter-spacing:2px;
 color:var(--green);
-text-transform:uppercase;
+margin-bottom:9px;
 }
 .story-title{
-font-family:Caveat,cursive;
-font-size:28px;
-line-height:1;
-margin-top:8px;
-}
-.data-text{
-font-family:Inter,"Noto Sans Devanagari",sans-serif!important;
-font-style:normal!important;
-font-weight:400!important;
-letter-spacing:0!important;
+font-size:19px;
+line-height:1.2;
+font-weight:500;
+margin-bottom:10px;
+font-family:Inter,"Noto Sans Devanagari",sans-serif;
 }
 .story-description{
+font-family:Inter,"Noto Sans Devanagari",sans-serif;
 font-size:12px;
-color:#c3cbc5;
-margin-top:10px;
 line-height:1.65;
+color:#cbd4cd;
+margin-bottom:12px;
 }
-.learn-more{
-display:none;
-margin-top:15px;
-padding-top:13px;
-border-top:1px solid rgba(255,255,255,.1);
-}
-.story-card.expanded .learn-more{display:block}
-.detail-block{margin-bottom:12px}
-.detail-block:last-child{margin-bottom:0}
-.detail-label{
-font-size:9px;
-font-weight:800;
-letter-spacing:1.4px;
-color:var(--green);
-text-transform:uppercase;
-margin-bottom:4px;
-}
-.detail-text{
-font-size:12px;
-color:#c8d0ca;
-line-height:1.65;
-}
-.story-bottom{
-display:flex;
-justify-content:flex-end;
-margin-top:18px;
-}
-.action-row{
-display:flex;
-justify-content:flex-end;
-margin-top:18px;
-}
-.classroom{
-background:
-radial-gradient(circle at 80% 30%,rgba(101,242,139,.035),transparent 35%);
-}
-.classroom-layout{
-display:grid;
-grid-template-columns:1fr 1.15fr;
-gap:42px;
-align-items:center;
-}
-.process{
-display:flex;
-align-items:center;
-gap:12px;
-margin-top:35px;
-}
-.process-step{
-text-align:center;
-min-width:95px;
-}
-.process-icon{
-width:68px;
-height:68px;
-border-radius:20px;
-display:grid;
-place-items:center;
-font-size:34px;
+.learn-btn{
+border:1px solid rgba(101,242,139,.35);
 background:rgba(101,242,139,.07);
-border:1px solid rgba(101,242,139,.3);
-margin:auto;
-}
-.process-arrow{
 color:var(--green);
-font-size:22px;
-}
-.process-label{
+border-radius:20px;
+padding:8px 12px;
 font-size:10px;
 font-weight:700;
+cursor:pointer;
+}
+.story-more{
+display:none;
+margin-top:14px;
+padding-top:13px;
+border-top:1px solid rgba(255,255,255,.09);
+}
+.story-card.expanded .story-more{display:block}
+.more-block{margin-bottom:13px}
+.more-block:last-child{margin-bottom:0}
+.more-label{
+font-size:9px;
+letter-spacing:1.6px;
+font-weight:800;
+color:var(--green);
+margin-bottom:5px;
+text-transform:uppercase;
+}
+.more-text{
+font-family:Inter,"Noto Sans Devanagari",sans-serif;
+font-size:11px;
+line-height:1.7;
+color:#d5ddd7;
+}
+.stories-bottom{
+display:flex;
+justify-content:flex-end;
+margin-top:18px;
+}
+.action-section{
+background:
+radial-gradient(circle at 75% 45%,rgba(60,160,90,.07),transparent 30%);
+}
+.action-layout{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:45px;
+align-items:center;
+}
+.flow{
+display:flex;
+align-items:center;
+justify-content:flex-start;
+gap:14px;
+margin-top:40px;
+}
+.flow-item{text-align:center}
+.flow-icon{
+width:58px;
+height:58px;
+border-radius:15px;
+display:grid;
+place-items:center;
+font-size:29px;
+background:rgba(20,76,39,.25);
+border:1px solid rgba(101,242,139,.25);
+}
+.flow-label{
+font-size:10px;
 margin-top:8px;
+color:#cbd4cd;
+max-width:85px;
+}
+.flow-arrow{
+color:var(--green);
+font-size:23px;
 }
 .example-card{
-border:1px solid rgba(101,242,139,.24);
-border-radius:22px;
-padding:20px;
-background:linear-gradient(135deg,rgba(15,38,22,.8),rgba(6,16,10,.9));
+border:1px solid rgba(101,242,139,.22);
+border-radius:20px;
+padding:16px;
+background:linear-gradient(135deg,rgba(13,32,20,.92),rgba(7,18,11,.94));
 display:grid;
-grid-template-columns:170px 1fr;
-gap:20px;
+grid-template-columns:130px 1fr;
+gap:18px;
 align-items:center;
 }
 .example-visual{
-height:190px;
-border-radius:16px;
+height:150px;
+border-radius:14px;
+border:1px solid rgba(101,242,139,.16);
+background:
+radial-gradient(circle,rgba(101,242,139,.14),transparent 50%),
+rgba(5,18,10,.8);
 display:grid;
 place-items:center;
-font-size:75px;
-background:
-radial-gradient(circle,rgba(101,242,139,.14),transparent 58%),
-rgba(4,13,8,.65);
-border:1px solid rgba(101,242,139,.15);
+font-size:64px;
 }
-.example-kicker{
+.example-label{
 font-size:9px;
 font-weight:800;
 letter-spacing:1.7px;
 color:var(--green);
-text-transform:uppercase;
 }
 .example-title{
+font-family:Inter,"Noto Sans Devanagari",sans-serif;
 font-size:20px;
-font-weight:800;
-margin-top:5px;
+font-weight:600;
+margin:7px 0 12px;
 }
-.example-copy{
-font-size:12px;
-color:#c4ccc6;
-margin-top:9px;
+.example-text{
+font-family:Inter,"Noto Sans Devanagari",sans-serif;
+font-size:11px;
 line-height:1.65;
+color:#d2dad4;
 }
-.example-label{
-color:var(--green);
-font-weight:700;
+.example-text b{color:var(--green)}
+.example-controls{
+display:flex;
+justify-content:flex-end;
+margin-top:14px;
 }
 .final-cta{
-min-height:360px;
+min-height:340px;
+position:relative;
 display:flex;
 align-items:center;
-position:relative;
 overflow:hidden;
 background:
-linear-gradient(90deg,rgba(5,14,9,.96),rgba(5,14,9,.65),rgba(5,14,9,.35)),
+linear-gradient(90deg,rgba(4,13,8,.96),rgba(4,13,8,.72),rgba(4,13,8,.25)),
 url("https://res.cloudinary.com/eq1jpw1h/image/upload/v1791127533/file_00000000c94c8211a59f489def3484a2.png") center/cover no-repeat;
 }
-.final-inner{padding:65px 0}
+.final-cta-content{
+padding:70px 0;
+max-width:650px;
+}
 .final-cta h2{
 font-family:Caveat,cursive;
-font-size:clamp(50px,6vw,82px);
-line-height:.9;
-max-width:700px;
+font-size:55px;
+line-height:.95;
+margin:0 0 12px;
 text-transform:uppercase;
 }
 .final-cta h2 span{color:var(--green)}
 .final-cta p{
-margin-top:15px;
-color:#d0d8d2;
-max-width:540px;
+font-size:14px;
+line-height:1.7;
+color:#d2d9d4;
+max-width:550px;
 }
-.footer{
-padding:25px 0;
-border-top:1px solid rgba(255,255,255,.07);
-color:#748078;
-font-size:11px;
-text-align:center;
+.cta-btn{
+display:inline-block;
+margin-top:14px;
+border:1px solid rgba(101,242,139,.45);
+background:rgba(21,103,51,.25);
+color:var(--green);
+padding:10px 17px;
+border-radius:22px;
+font-size:12px;
+font-weight:700;
 }
-.empty{
-border:1px dashed rgba(101,242,139,.25);
-border-radius:15px;
-padding:25px;
-color:#829087;
-font-size:13px;
-text-align:center;
+.toast{
+position:fixed;
+bottom:20px;
+left:50%;
+transform:translate(-50%,20px);
+opacity:0;
+pointer-events:none;
+z-index:2000;
+background:#102217;
+border:1px solid rgba(101,242,139,.3);
+color:#fff;
+padding:11px 16px;
+border-radius:12px;
+font-size:12px;
+transition:.25s;
 }
-@media(max-width:1100px){
-.nav-links{gap:14px}
+.toast.show{
+opacity:1;
+transform:translate(-50%,0);
+}
+[data-lang="hi"]{display:none}
+body.hindi [data-lang="en"]{display:none}
+body.hindi [data-lang="hi"]{display:block}
+span[data-lang="hi"],small[data-lang="hi"]{display:none}
+body.hindi span[data-lang="hi"],body.hindi small[data-lang="hi"]{display:inline}
+@media(max-width:1050px){
+.nav-links{gap:16px}
 .domain-grid{grid-template-columns:repeat(4,1fr)}
 }
-@media(max-width:900px){
-.container{width:min(var(--max),calc(100% - 32px))}
-.nav-inner{height:64px}
+@media(max-width:800px){
+.container{width:min(100% - 30px,var(--max))}
 .nav-links{display:none}
-.mobile-menu{top:64px;max-height:calc(100vh - 64px)}
-.hero{min-height:470px;background-position:58% center}
-.hero-inner{width:min(var(--max),calc(100% - 32px));padding:70px 0}
-.hero h1{font-size:clamp(54px,11vw,82px);max-width:620px}
-.hero-caption{right:4%;bottom:28px;font-size:23px}
-.section{padding:55px 0}
-.domain-grid{grid-template-columns:repeat(3,1fr)}
-.story-layout{grid-template-columns:1fr}
-.story-side{position:static}
-.story-side h2{font-size:58px}
-.classroom-layout{grid-template-columns:1fr}
-}
-@media(max-width:600px){
-.container{width:calc(100% - 28px)}
-.brand-title strong{font-size:14px}
-.brand-title small{font-size:6px}
-.actions{gap:6px}
-.lang{padding:8px 11px;font-size:11px}
-.icon-btn{width:38px;height:38px}
+.nav-inner{justify-content:space-between}
+.actions{margin-left:auto}
 .hero{
-min-height:480px;
-background-position:64% center;
+min-height:500px;
+background:
+linear-gradient(90deg,rgba(4,13,8,.96),rgba(4,13,8,.64),rgba(4,13,8,.3)),
+url("https://res.cloudinary.com/eq1jpw1h/image/upload/v1791127533/file_00000000c94c8211a59f489def3484a2.png") 62% center/cover no-repeat;
 }
-.hero-inner{padding:75px 0 80px}
-.hero h1{font-size:58px;line-height:.82;max-width:350px}
-.hero-subtitle{font-size:13px;letter-spacing:1.4px}
-.hero-description{font-size:13px;max-width:340px}
-.hero-caption{right:12px;bottom:23px;font-size:20px}
+.hero-content{padding:55px 0}
+.hero h1{font-size:58px;max-width:540px}
+.hero-text{font-size:13px;max-width:460px}
+.hero-caption{right:18px;bottom:25px;font-size:21px}
 .section{padding:48px 0}
 .section-head{display:block}
-.small-action{display:block;margin-top:16px}
-.section h2{font-size:48px}
-.section-intro{font-size:12px}
-.domain-grid{grid-template-columns:repeat(2,1fr);gap:9px}
-.domain-card{min-height:150px;padding:14px 11px}
-.domain-icon{width:50px;height:50px;font-size:28px}
-.domain-name{font-size:12px}
+.section-action{display:block;margin-top:14px}
+.section h2{font-size:43px}
+.domain-grid{grid-template-columns:repeat(2,1fr)}
+.domain-card{min-height:150px}
+.stories-layout{grid-template-columns:1fr;gap:25px}
+.story-intro{max-width:580px}
+.story-intro h2{font-size:48px}
+.story-grid{grid-template-columns:repeat(3,1fr)}
+.action-layout{grid-template-columns:1fr;gap:28px}
+}
+@media(max-width:560px){
+.nav{height:58px}
+.nav-inner{height:58px}
+.brand-icon{width:36px;height:36px}
+.brand-icon svg{width:28px;height:28px}
+.brand-title strong{font-size:12px;letter-spacing:2.5px}
+.brand-title small{font-size:6px}
+.lang{padding:7px 10px}
+.icon-btn{width:36px;height:36px}
+.mobile-menu{top:58px}
+.hero{
+min-height:520px;
+background:
+linear-gradient(90deg,rgba(4,13,8,.97) 0%,rgba(4,13,8,.82) 50%,rgba(4,13,8,.3)),
+url("https://res.cloudinary.com/eq1jpw1h/image/upload/v1791127533/file_00000000c94c8211a59f489def3484a2.png") 65% center/cover no-repeat;
+}
+.hero h1{font-size:53px}
+.hero-sub{font-size:12px}
+.hero-text{font-size:12px;line-height:1.7}
+.hero-caption{font-size:19px}
+.domain-grid{grid-template-columns:repeat(2,1fr);gap:10px}
+.domain-card{padding:13px;min-height:140px}
+.domain-icon{width:46px;height:46px;font-size:25px}
+.domain-name{font-size:11px}
 .topic-list{grid-template-columns:1fr}
-.domain-panel{padding:13px}
-.story-side h2{font-size:50px}
 .story-grid{grid-template-columns:1fr}
-.story-visual{height:135px}
-.story-card{border-radius:16px}
-.story-title{font-size:30px}
+.story-card{min-height:0}
+.story-visual{height:125px}
+.story-title{font-size:20px}
 .story-description{font-size:12px}
-.example-card{grid-template-columns:1fr;padding:14px}
-.example-visual{height:145px;font-size:60px}
-.process{justify-content:center;gap:6px}
-.process-step{min-width:72px}
-.process-icon{width:55px;height:55px;font-size:27px;border-radius:16px}
-.process-arrow{font-size:17px}
-.process-label{font-size:8px}
-.final-cta{min-height:320px;background-position:62% center}
-.final-inner{padding:50px 0}
-.final-cta h2{font-size:54px}
+.story-intro h2{font-size:45px}
+.example-card{grid-template-columns:92px 1fr;gap:13px}
+.example-visual{height:120px;font-size:48px}
+.example-title{font-size:17px}
+.flow{gap:7px;justify-content:space-between}
+.flow-arrow{font-size:18px}
+.flow-icon{width:48px;height:48px;font-size:24px}
+.flow-label{font-size:8px}
+.final-cta{min-height:380px}
+.final-cta h2{font-size:48px}
 }
 @media(prefers-reduced-motion:reduce){
 *{scroll-behavior:auto!important;transition:none!important}
 }
-body.hindi .en-only{display:none!important}
-body:not(.hindi) .hi-only{display:none!important}
 </style>
 </head>
 <body>
@@ -747,7 +738,7 @@ body:not(.hindi) .hi-only{display:none!important}
 <div class="container nav-inner">
 <a class="brand" href="../index.html">
 <div class="brand-icon">
-<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#75e590" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="filter:drop-shadow(0 0 6px rgba(117,229,144,.4));">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#75e590" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 <path d="M10 2v7.31"/>
 <path d="M14 9.3V1.99"/>
 <path d="M8.5 2h7"/>
@@ -755,48 +746,40 @@ body:not(.hindi) .hi-only{display:none!important}
 <path d="M5.52 16h12.96"/>
 </svg>
 </div>
-<div class="brand-title"><strong>SCIENCE</strong><small>BEYOND THE TEXTBOOK</small></div>
+<div class="brand-title">
+<strong>SCIENCE</strong>
+<small>BEYOND THE TEXTBOOK</small>
+</div>
 </a>
 <nav class="nav-links">
 <a href="../index.html">⌂ Home</a>
-<div class="nav-drop">Subjects⌄
-<div class="dropdown">
+<div class="nav-drop">Subjects⌄<div class="dropdown">
 <a href="../physics/index.html">Physics</a>
 <a href="../chemistry/index.html">Chemistry</a>
 <a href="../biology/index.html">Biology</a>
 <a href="../earth/index.html">Earth & Environment</a>
-</div>
-</div>
-<div class="nav-drop">Explore⌄
-<div class="dropdown">
+</div></div>
+<div class="nav-drop">Explore⌄<div class="dropdown">
 <a href="../why/index.html">Why Does This Happen?</a>
 <a href="../invisible-visible/index.html">Make the Invisible Visible</a>
 <a href="../magic-science/index.html">Science That Looks Like Magic</a>
 <a href="../what-if/index.html">What If?</a>
 <a href="../beyond-textbook/index.html">Beyond the Textbook</a>
-</div>
-</div>
-<div class="nav-drop">Games⌄
-<div class="dropdown">
+</div></div>
+<div class="nav-drop">Games⌄<div class="dropdown">
 <a href="../games/index.html">All Games</a>
 <a href="../games/circuit-builder.html">Circuit Builder</a>
 <a href="../games/magnetic-maze.html">Magnetic Maze</a>
 <a href="../games/build-a-cell.html">Build a Cell</a>
-</div>
-</div>
-<div class="nav-drop">Lab⌄
-<div class="dropdown">
+</div></div>
+<div class="nav-drop">Lab⌄<div class="dropdown">
 <a href="../lab/index.html">Virtual Lab</a>
-<a href="../lab/electric-circuit.html">Electric Circuit</a>
-</div>
-</div>
-<div class="nav-drop">More⌄
-<div class="dropdown">
+</div></div>
+<div class="nav-drop">More⌄<div class="dropdown">
 <a href="../science-around-us/index.html">Science Around Us</a>
 <a href="../real-world/index.html">Science in the Real World</a>
 <a href="../about.html">About</a>
-</div>
-</div>
+</div></div>
 </nav>
 <div class="actions">
 <button class="lang" id="langBtn">EN <span>|</span> <b>हिंदी</b></button>
@@ -818,104 +801,109 @@ body:not(.hindi) .hi-only{display:none!important}
 <a href="../beyond-textbook/index.html">🚀 Beyond the Textbook</a>
 <a href="../lab/index.html">🧪 Virtual Lab</a>
 <a href="../games/index.html">🎮 Science Games</a>
-<a href="../real-world/index.html">🌐 Science in the Real World</a>
 <a href="../science-around-us/index.html">📰 Science Around Us</a>
 </div>
 
-<main>
 <section class="hero">
-<div class="hero-inner">
-<div class="kicker">REAL WORLD IMPACT</div>
+<div class="container hero-content">
+<div class="eyebrow">REAL WORLD IMPACT</div>
 <h1>SCIENCE IN THE <span>REAL WORLD</span></h1>
-<div class="hero-subtitle">SCIENCE IS NOT JUST IN THE LAB.</div>
-<p class="hero-description en-only">The science you learn in books is already working around you — shaping our lives, solving problems and building the future.</p>
-<p class="hero-description hi-only">जो विज्ञान तुम किताबों में पढ़ते हो, वह असल दुनिया में हमारे आसपास, हमारे जीवन और हमारे भविष्य को बेहतर बनाने में काम आता है।</p>
+<div class="hero-sub">SCIENCE IS NOT JUST IN THE LAB.</div>
+<p class="hero-text">
+<span data-lang="en">The science you learn in books is already working around you — shaping our lives, solving problems and building the future.</span>
+<span data-lang="hi">जो विज्ञान तुम किताबों में पढ़ते हो, वह असल दुनिया में हमारे आसपास काम कर रहा है — हमारे जीवन को बेहतर बना रहा है, समस्याएँ हल कर रहा है और भविष्य बना रहा है।</span>
+</p>
 </div>
 <div class="hero-caption">Real Problems.<br><span>Real Solutions.</span></div>
 </section>
 
-<section class="section">
+<section class="section" id="applications">
 <div class="container">
 <div class="section-head">
-<div>
-<div class="section-kicker">AREAS OF IMPACT</div>
+<div class="section-title-wrap">
+<div class="eyebrow">AREAS OF IMPACT</div>
 <h2>REAL WORLD <span>APPLICATIONS</span></h2>
-<p class="section-intro en-only">Science makes our lives easier, safer, healthier and more connected. Explore the science behind important real-world applications.</p>
-<p class="section-intro hi-only">विज्ञान हमारे जीवन को आसान, सुरक्षित, स्वस्थ और अधिक जुड़ा हुआ बनाता है। अपने आसपास की दुनिया में छिपे विज्ञान को जानो।</p>
+<p class="section-desc">
+<span data-lang="en">Science makes our lives easier, safer, healthier and more connected. Explore the science behind important real-world applications.</span>
+<span data-lang="hi">विज्ञान हमारे जीवन को आसान, सुरक्षित, स्वस्थ और अधिक जुड़ा हुआ बनाता है। अपने आसपास की दुनिया में छिपे विज्ञान को जानो।</span>
+</p>
 </div>
-<button class="small-action" id="exploreDomains">Explore each area →</button>
+<button class="section-action" id="exploreDomains">Explore each area →</button>
 </div>
 <div class="domain-grid" id="domainGrid"></div>
-<div class="domain-panel" id="domainPanel">
-<div class="panel-top">
-<div>
-<div class="panel-title" id="domainPanelTitle"></div>
-<div class="panel-count" id="domainPanelCount"></div>
-</div>
-<button class="close-panel" id="closeDomain">×</button>
-</div>
-<div class="topic-list" id="domainTopics"></div>
-</div>
+<div class="domain-topics" id="domainTopics"></div>
 </div>
 </section>
 
-<section class="section real-stories">
-<div class="container story-layout">
-<div class="story-side">
-<div class="section-kicker">REAL STORIES</div>
+<section class="section stories-section" id="stories">
+<div class="container">
+<div class="stories-layout">
+<div class="story-intro">
+<div class="eyebrow">REAL STORIES</div>
 <h2>HOW SCIENCE CHANGES OUR <span>WORLD</span></h2>
-<p class="en-only data-text">These examples show how scientific ideas become real solutions that change the way we live.</p>
-<p class="hi-only data-text">ये उदाहरण दिखाते हैं कि वैज्ञानिक विचार कैसे वास्तविक समाधान बनकर हमारी दुनिया बदलते हैं।</p>
+<p>
+<span data-lang="en">These examples show how scientific ideas become real solutions that change the way we live.</span>
+<span data-lang="hi">ये उदाहरण दिखाते हैं कि वैज्ञानिक विचार कैसे वास्तविक समाधान बनकर हमारे जीवन को बदलते हैं।</span>
+</p>
 <div class="story-controls">
-<button class="next-btn" id="nextStories">Next Topics →</button>
-<span class="counter" id="storyCounter">0–0 / 0</span>
+<button class="next-btn" id="nextStoriesTop">Next Topics →</button>
+<span class="counter" id="storyCounterTop">1–3 / 18</span>
 </div>
 </div>
 <div>
 <div class="story-grid" id="storyGrid"></div>
-<div class="story-bottom">
+<div class="stories-bottom">
 <button class="next-btn" id="nextStoriesBottom">Next Topics →</button>
+</div>
 </div>
 </div>
 </div>
 </section>
 
-<section class="section classroom">
+<section class="section action-section" id="classroom">
 <div class="container">
 <div class="section-head">
-<div>
-<div class="section-kicker">SCIENCE IN ACTION</div>
+<div class="section-title-wrap">
+<div class="eyebrow">SCIENCE IN ACTION</div>
 <h2>FROM CLASSROOM TO <span>REAL LIFE</span></h2>
-<p class="section-intro en-only">What you learn today can change the world tomorrow.</p>
-<p class="section-intro hi-only">जो तुम आज सीखते हो, वही कल की दुनिया को बदल सकता है।</p>
+<p class="section-desc">
+<span data-lang="en">What you learn today can change the world tomorrow.</span>
+<span data-lang="hi">जो तुम आज सीखते हो, वही कल की दुनिया को बदल सकता है।</span>
+</p>
 </div>
 </div>
-<div class="classroom-layout">
+<div class="action-layout">
 <div>
-<div class="process">
-<div class="process-step">
-<div class="process-icon">⚛️</div>
-<div class="process-label en-only data-text">Science Concept</div>
-<div class="process-label hi-only data-text">वैज्ञानिक सिद्धांत</div>
+<div class="flow">
+<div class="flow-item">
+<div class="flow-icon">⚛️</div>
+<div class="flow-label">
+<span data-lang="en">Science Concept</span>
+<span data-lang="hi">वैज्ञानिक सिद्धांत</span>
 </div>
-<div class="process-arrow">→</div>
-<div class="process-step">
-<div class="process-icon">💡</div>
-<div class="process-label en-only data-text">Real World Use</div>
-<div class="process-label hi-only data-text">वास्तविक उपयोग</div>
 </div>
-<div class="process-arrow">→</div>
-<div class="process-step">
-<div class="process-icon">🌍</div>
-<div class="process-label en-only data-text">Better Future</div>
-<div class="process-label hi-only data-text">बेहतर भविष्य</div>
+<div class="flow-arrow">→</div>
+<div class="flow-item">
+<div class="flow-icon">💡</div>
+<div class="flow-label">
+<span data-lang="en">Real World Use</span>
+<span data-lang="hi">वास्तविक उपयोग</span>
+</div>
+</div>
+<div class="flow-arrow">→</div>
+<div class="flow-item">
+<div class="flow-icon">🌍</div>
+<div class="flow-label">
+<span data-lang="en">Better Future</span>
+<span data-lang="hi">एक बेहतर कल</span>
+</div>
 </div>
 </div>
 </div>
 <div>
 <div class="example-card" id="exampleCard"></div>
-<div class="action-row">
-<button class="example-btn" id="nextExample">Next Example →</button>
+<div class="example-controls">
+<button class="next-btn" id="nextExample">Next Example →</button>
 </div>
 </div>
 </div>
@@ -923,256 +911,349 @@ body:not(.hindi) .hi-only{display:none!important}
 </section>
 
 <section class="final-cta">
-<div class="container final-inner">
-<div class="section-kicker">LOOK AROUND</div>
+<div class="container final-cta-content">
+<div class="eyebrow">LOOK AROUND</div>
 <h2>SCIENCE IS ALREADY <span>THERE.</span></h2>
-<p class="en-only">Look around you. Science is not somewhere far away — it is already shaping the world you live in.</p>
-<p class="hi-only">अपने आसपास देखो। विज्ञान कहीं दूर नहीं है — यह पहले से ही उस दुनिया को बदल रहा है जिसमें तुम रहते हो।</p>
+<p>
+<span data-lang="en">Look around you. Science is not somewhere far away — it is already shaping the world you live in.</span>
+<span data-lang="hi">अपने आसपास देखो। विज्ञान कहीं दूर नहीं है — यह पहले से ही उस दुनिया को आकार दे रहा है जिसमें तुम रहते हो।</span>
+</p>
+<a class="cta-btn" href="../index.html">Explore More →</a>
 </div>
 </section>
-</main>
 
-<footer class="footer">SCIENCE BEYOND THE TEXTBOOK · SCIENCE IN THE REAL WORLD</footer>
+<div class="toast" id="toast"></div>
 
 <script src="../data/science-real-world.js"></script>
 <script src="../data/how-science-changes-world.js"></script>
 <script src="../data/science-classroom-to-real-life.js"></script>
+
 <script>
-document.addEventListener("DOMContentLoaded",()=>{
+(function(){
 "use strict";
 
 const $=s=>document.querySelector(s);
 const $$=s=>document.querySelectorAll(s);
 
 let language=localStorage.getItem("scienceLanguage")==="hi"?"hi":"en";
-let domainOpen=false;
-let activeDomain="";
-let storyStart=0;
-const storySize=3;
-let exampleIndex=0;
 
-function setLanguage(){
+function applyLanguage(){
 document.body.classList.toggle("hindi",language==="hi");
-const btn=$("#langBtn");
-if(btn)btn.innerHTML=language==="hi"?"EN <span>|</span> <b>हिंदी</b>":"EN <span>|</span> <b>हिंदी</b>";
+document.documentElement.lang=language==="hi"?"hi":"en";
 localStorage.setItem("scienceLanguage",language);
+}
+
+function getDataArray(globalObject,names){
+for(const name of names){
+if(globalObject&&Array.isArray(globalObject[name]))return globalObject[name];
+}
+return [];
+}
+
+function getApiArray(api,names){
+for(const name of names){
+if(api&&typeof api[name]==="function"){
+const result=api[name]();
+if(Array.isArray(result))return result;
+}
+}
+return [];
+}
+
+function textValue(value){
+if(value==null)return "";
+if(typeof value==="string")return value;
+if(typeof value==="object"){
+return value[language]||value.en||value.hi||Object.values(value)[0]||"";
+}
+return String(value);
+}
+
+function field(obj,names){
+for(const name of names){
+if(obj&&obj[name]!==undefined)return obj[name];
+}
+return "";
+}
+
+function normalizeStory(item){
+const title=field(item,["title","name","topic"]);
+const description=field(item,["description","desc","summary"]);
+const details=field(item,["details","learnMore"]);
+const how=field(item,["howItWorks","how","working"]);
+const impact=field(item,["impact","theImpact"]);
+return{
+id:field(item,["id"])||Math.random().toString(36).slice(2),
+icon:field(item,["icon","visual","emoji"])||"🔬",
+title:textValue(title),
+description:textValue(description),
+how:textValue(how)||textValue(details&&field(details,["howItWorks","how","working"])),
+impact:textValue(impact)||textValue(details&&field(details,["impact","theImpact"]))
+};
+}
+
+function normalizeClassroom(item){
+const example=field(item,["example","title","name"]);
+const concept=field(item,["concept"]);
+const use=field(item,["realWorldUse","real_world_use","realWorld"]);
+return{
+id:field(item,["id"])||Math.random().toString(36).slice(2),
+icon:field(item,["icon","visual","emoji"])||"🔬",
+example:textValue(example),
+concept:textValue(concept),
+use:textValue(use)
+};
+}
+
+function showToast(message){
+const t=$("#toast");
+t.textContent=message;
+t.classList.add("show");
+clearTimeout(showToast.timer);
+showToast.timer=setTimeout(()=>t.classList.remove("show"),2200);
+}
+
+applyLanguage();
+
+$("#langBtn").addEventListener("click",()=>{
+language=language==="en"?"hi":"en";
+applyLanguage();
 renderDomains();
 renderStories();
-renderExample();
-if(domainOpen&&activeDomain)openDomain(activeDomain);
+renderClassroom();
+});
+
+$("#menuBtn").addEventListener("click",()=>{
+$("#mobileMenu").classList.toggle("open");
+});
+
+$$(".mobile-menu a").forEach(a=>{
+a.addEventListener("click",()=>$("#mobileMenu").classList.remove("open"));
+});
+
+/* SECTION 1 */
+
+let realWorldData=[];
+let activeDomain=null;
+
+function loadRealWorld(){
+if(window.ScienceRealWorld&&typeof window.ScienceRealWorld.all==="function"){
+realWorldData=window.ScienceRealWorld.all();
+}else if(Array.isArray(window.scienceRealWorld)){
+realWorldData=window.scienceRealWorld;
+}else{
+realWorldData=[];
+}
 }
 
-function toggleLanguage(){
-language=language==="en"?"hi":"en";
-setLanguage();
+function getDomains(){
+const map=new Map();
+realWorldData.forEach(item=>{
+const domain=item.domain||"Other";
+if(!map.has(domain)){
+map.set(domain,{
+name:domain,
+icon:item.domainIcon||"🔬",
+topics:[]
+});
 }
-
-function getData(primaryNames){
-for(const name of primaryNames){
-if(window[name]){
-if(Array.isArray(window[name]))return window[name];
-if(typeof window[name].all==="function")return window[name].all();
-}
-}
-return[];
-}
-
-function val(obj,keys,fallback=""){
-for(const key of keys){
-const parts=key.split(".");
-let cur=obj;
-for(const p of parts){
-if(cur&&typeof cur==="object"&&p in cur)cur=cur[p];
-else{cur=null;break}
-}
-if(cur!==undefined&&cur!==null&&cur!==""){
-if(typeof cur==="object"&&("en"in cur||"hi"in cur))return cur[language]||cur.en||cur.hi||fallback;
-return cur;
-}
-}
-return fallback;
-}
-
-function langVal(obj,key,fallback=""){
-if(!obj)return fallback;
-const direct=obj[key];
-if(direct&&typeof direct==="object"){
-return direct[language]||direct.en||direct.hi||fallback;
-}
-return direct||fallback;
-}
-
-function getRealWorldData(){
-return getData(["ScienceRealWorld","scienceRealWorld"]);
-}
-
-function getHowScienceData(){
-return getData(["HowScienceChangesWorld","howScienceChangesWorld"]);
-}
-
-function getClassroomData(){
-return getData(["ScienceClassroomToRealLife","scienceClassroomToRealLife","ClassroomToRealLife","classroomToRealLife"]);
-}
-
-function domainNames(data){
-return[...new Set(data.map(x=>x.domain).filter(Boolean))];
-}
-
-function domainIcon(data,domain){
-const item=data.find(x=>x.domain===domain);
-return item?.domainIcon||"🔬";
+map.get(domain).topics.push(item);
+});
+return [...map.values()];
 }
 
 function renderDomains(){
+loadRealWorld();
 const grid=$("#domainGrid");
-const data=getRealWorldData();
+const domains=getDomains();
 grid.innerHTML="";
-const domains=domainNames(data);
+
 if(!domains.length){
-grid.innerHTML='<div class="empty">Science real-world data could not be loaded. Check <b>../data/science-real-world.js</b>.</div>';
+grid.innerHTML='<div class="topic-item">Science real-world data could not be loaded. Check <b>../data/science-real-world.js</b>.</div>';
 return;
 }
+
 domains.forEach(domain=>{
-const count=data.filter(x=>x.domain===domain).length;
-const card=document.createElement("button");
-card.className="domain-card"+(activeDomain===domain?" active":"");
-card.type="button";
-card.innerHTML='<div class="domain-icon">'+domainIcon(data,domain)+'</div><div class="domain-name">'+escapeHTML(domain)+'</div><div class="domain-arrow">→ <small style="color:#718078;font-size:10px">'+count+' topics</small></div>';
+const card=document.createElement("div");
+card.className="domain-card"+(activeDomain===domain.name?" active":"");
+card.innerHTML=
+'<div class="domain-icon">'+domain.icon+'</div>'+
+'<div class="domain-name">'+domain.name+'</div>'+
+'<div class="domain-arrow">→</div>';
 card.addEventListener("click",()=>openDomain(domain));
 grid.appendChild(card);
 });
 }
 
 function openDomain(domain){
-const data=getRealWorldData();
-const topics=data.filter(x=>x.domain===domain);
-if(!topics.length)return;
-activeDomain=domain;
-domainOpen=true;
-$("#domainPanel").classList.add("open");
-$("#domainPanelTitle").textContent=domain;
-$("#domainPanelCount").textContent=topics.length+" topics";
+activeDomain=domain.name;
 const box=$("#domainTopics");
-box.innerHTML="";
-topics.forEach(topic=>{
-const item=document.createElement("div");
-item.className="topic-item";
-const title=langVal(topic.title,"",topic.id||"Topic");
-const hook=langVal(topic.hook,"", "");
-const details=topic.details?.[language]||topic.details?.en||topic.details?.hi||{};
-item.innerHTML='<button class="topic-summary" type="button"><span class="topic-emoji">'+escapeHTML(topic.visual||"🔬")+'</span><strong class="data-text">'+escapeHTML(title)+'</strong><span class="topic-plus">+</span></button><div class="topic-detail data-text"><p><b>'+escapeHTML(language==="hi"?"तुम क्या देखते हो":"What you see")+'</b><br>'+escapeHTML(details.whatYouSee||hook)+'</p><p><b>'+escapeHTML(language==="hi"?"इसके पीछे का विज्ञान":"The science behind it")+'</b><br>'+escapeHTML(details.science||"")+'</p><p><b>'+escapeHTML(language==="hi"?"यह क्यों महत्वपूर्ण है":"Why it matters")+'</b><br>'+escapeHTML(details.whyItMatters||"")+'</p></div>';
-const btn=item.querySelector(".topic-summary");
-btn.addEventListener("click",()=>{
-item.classList.toggle("open");
-const plus=item.querySelector(".topic-plus");
-plus.textContent=item.classList.contains("open")?"−":"+";
-});
-box.appendChild(item);
+box.classList.add("open");
+box.innerHTML=
+'<div class="domain-topics-head">'+
+'<strong>'+domain.icon+" "+domain.name+" — "+domain.topics.length+' topics</strong>'+
+'<button class="close-domain" id="closeDomain">×</button>'+
+'</div>'+
+'<div class="topic-list">'+
+domain.topics.map(item=>
+'<div class="topic-item"><b>'+item.visual+" "+textValue(item.title)+'</b><br><span style="display:block;margin-top:5px;color:#8f9c93;font-size:10px">'+textValue(item.hook)+'</span></div>'
+).join("")+
+'</div>';
+$("#closeDomain").addEventListener("click",()=>{
+activeDomain=null;
+box.classList.remove("open");
+renderDomains();
 });
 renderDomains();
+box.scrollIntoView({behavior:"smooth",block:"nearest"});
 }
 
-function closeDomain(){
-domainOpen=false;
-activeDomain="";
-$("#domainPanel").classList.remove("open");
-renderDomains();
+$("#exploreDomains").addEventListener("click",()=>{
+const first=getDomains()[0];
+if(first)openDomain(first);
+});
+
+/* SECTION 2 */
+
+let stories=[];
+let storyStart=0;
+
+function loadStories(){
+let source=null;
+
+if(window.HowScienceChangesWorld&&typeof window.HowScienceChangesWorld.all==="function"){
+source=window.HowScienceChangesWorld.all();
+}else if(Array.isArray(window.howScienceChangesWorld)){
+source=window.howScienceChangesWorld;
+}else if(Array.isArray(window.howScienceChangesWorldData)){
+source=window.howScienceChangesWorldData;
 }
 
-function normalizeStory(item){
-const title=langVal(item.title,"",val(item,["name","id"],"Topic"));
-const description=langVal(item.description,"",val(item,["desc","teaser","summary"],""));
-let details=item.learnMore?.[language]||item.learnMore?.en||item.learnMore?.hi||item.details?.[language]||item.details?.en||item.details?.hi||{};
-const how=details.howItWorks||details.how||item.howItWorks?.[language]||item.howItWorks||"";
-const impact=details.impact||item.impact?.[language]||item.impact||"";
-const visual=item.visual||item.icon||item.emoji||"🔬";
-return{title,description,how,impact,visual};
+stories=Array.isArray(source)?source.map(normalizeStory):[];
 }
 
 function renderStories(){
+loadStories();
 const grid=$("#storyGrid");
-const data=getHowScienceData();
 grid.innerHTML="";
-if(!data.length){
-grid.innerHTML='<div class="empty">How Science Changes Our World data could not be loaded. Check <b>../data/how-science-changes-world.js</b>.</div>';
-$("#storyCounter").textContent="0–0 / 0";
+
+if(!stories.length){
+grid.innerHTML='<div class="topic-item">How Science Changes Our World data could not be loaded. Check <b>../data/how-science-changes-world.js</b>.</div>';
+$("#storyCounterTop").textContent="0 / 0";
 return;
 }
-if(storyStart>=data.length)storyStart=0;
+
+if(storyStart>=stories.length)storyStart=0;
+
 const visible=[];
-for(let i=0;i<Math.min(storySize,data.length);i++){
-visible.push(data[(storyStart+i)%data.length]);
+for(let i=0;i<3&&i<stories.length;i++){
+visible.push(stories[(storyStart+i)%stories.length]);
 }
-visible.forEach((raw,index)=>{
-const s=normalizeStory(raw);
+
+visible.forEach(item=>{
 const card=document.createElement("article");
 card.className="story-card";
-card.innerHTML='<div class="story-visual">'+escapeHTML(s.visual)+'</div><div class="story-body"><div class="story-label">REAL STORY</div><div class="story-title data-text">'+escapeHTML(s.title)+'</div><p class="story-description data-text">'+escapeHTML(s.description)+'</p><button class="learn-btn" type="button">'+(language==="hi"?"जानें और →":"Learn More →")+'</button><div class="learn-more"><div class="detail-block"><div class="detail-label">'+(language==="hi"?"HOW IT WORKS":"HOW IT WORKS")+'</div><div class="detail-text data-text">'+escapeHTML(s.how)+'</div></div><div class="detail-block"><div class="detail-label">'+(language==="hi"?"THE IMPACT":"THE IMPACT")+'</div><div class="detail-text data-text">'+escapeHTML(s.impact)+'</div></div></div></div>';
-const button=card.querySelector(".learn-btn");
-button.addEventListener("click",()=>{
+card.innerHTML=
+'<div class="story-visual">'+item.icon+'</div>'+
+'<div class="story-content">'+
+'<div class="story-label">REAL STORY</div>'+
+'<div class="story-title">'+item.title+'</div>'+
+'<div class="story-description">'+item.description+'</div>'+
+'<button class="learn-btn">Learn More →</button>'+
+'<div class="story-more">'+
+'<div class="more-block">'+
+'<div class="more-label">HOW IT WORKS</div>'+
+'<div class="more-text">'+(item.how||"")+'</div>'+
+'</div>'+
+'<div class="more-block">'+
+'<div class="more-label">THE IMPACT</div>'+
+'<div class="more-text">'+(item.impact||"")+'</div>'+
+'</div>'+
+'</div>'+
+'</div>';
+card.querySelector(".learn-btn").addEventListener("click",e=>{
 card.classList.toggle("expanded");
-button.textContent=card.classList.contains("expanded")?(language==="hi"?"कम दिखाएँ ↑":"Show Less ↑"):(language==="hi"?"जानें और →":"Learn More →");
+e.currentTarget.textContent=card.classList.contains("expanded")?"Show Less ↑":"Learn More →";
 });
 grid.appendChild(card);
 });
-const end=Math.min(storyStart+storySize,data.length);
-$("#storyCounter").textContent=(storyStart+1)+"–"+end+" / "+data.length;
+
+const end=Math.min(storyStart+3,stories.length);
+const shown=storyStart+1+"–"+end;
+$("#storyCounterTop").textContent=shown+" / "+stories.length;
 }
 
 function nextStories(){
-const data=getHowScienceData();
-if(!data.length)return;
-storyStart=(storyStart+storySize)%data.length;
+if(!stories.length)return;
+storyStart=(storyStart+3)%stories.length;
 renderStories();
+$("#stories").scrollIntoView({behavior:"smooth",block:"start"});
 }
 
-function normalizeExample(item){
-const title=langVal(item.title,"",val(item,["example","name","id"],"Scientific Example"));
-const concept=langVal(item.concept,"",val(item,["details.concept"],""));
-const use=langVal(item.realWorldUse,"",val(item,["realWorldUse","details.realWorldUse","use"],""));
-const icon=item.icon||item.visual||item.emoji||"🔬";
-return{title,concept,use,icon};
+$("#nextStoriesTop").addEventListener("click",nextStories);
+$("#nextStoriesBottom").addEventListener("click",nextStories);
+
+/* SECTION 3 */
+
+let classroom=[];
+let classroomIndex=0;
+
+function loadClassroom(){
+let source=null;
+
+if(window.ScienceClassroomToRealLife&&typeof window.ScienceClassroomToRealLife.all==="function"){
+source=window.ScienceClassroomToRealLife.all();
+}else if(Array.isArray(window.scienceClassroomToRealLife)){
+source=window.scienceClassroomToRealLife;
+}else if(Array.isArray(window.scienceClassroomToRealLifeData)){
+source=window.scienceClassroomToRealLifeData;
 }
 
-function renderExample(){
+classroom=Array.isArray(source)?source.map(normalizeClassroom):[];
+}
+
+function renderClassroom(){
+loadClassroom();
 const box=$("#exampleCard");
-const data=getClassroomData();
-if(!data.length){
-box.innerHTML='<div class="example-visual">🔬</div><div><div class="example-kicker">SCIENCE IN ACTION</div><div class="example-title data-text">'+(language==="hi"?"डेटा लोड नहीं हुआ":"Data not loaded")+'</div><p class="example-copy data-text">'+(language==="hi"?"कृपया data/science-classroom-to-real-life.js की जाँच करें।":"Please check data/science-classroom-to-real-life.js.")+'</p></div>';
+
+if(!classroom.length){
+box.innerHTML=
+'<div class="example-visual">🔬</div>'+
+'<div><div class="example-label">SCIENCE IN ACTION</div>'+
+'<div class="example-title">Data could not be loaded</div>'+
+'<div class="example-text">Please check <b>../data/science-classroom-to-real-life.js</b>.</div></div>';
 return;
 }
-if(exampleIndex>=data.length)exampleIndex=0;
-const e=normalizeExample(data[exampleIndex]);
-box.innerHTML='<div class="example-visual">'+escapeHTML(e.icon)+'</div><div><div class="example-kicker">SCIENCE IN ACTION</div><div class="example-title data-text">'+escapeHTML(e.title)+'</div><p class="example-copy data-text"><span class="example-label">'+(language==="hi"?"संकल्पना: ":"Concept: ")+'</span>'+escapeHTML(e.concept)+'</p><p class="example-copy data-text"><span class="example-label">'+(language==="hi"?"वास्तविक उपयोग: ":"Real World Use: ")+'</span>'+escapeHTML(e.use)+'</p></div>';
+
+if(classroomIndex>=classroom.length)classroomIndex=0;
+
+const item=classroom[classroomIndex];
+
+box.innerHTML=
+'<div class="example-visual">'+item.icon+'</div>'+
+'<div>'+
+'<div class="example-label">SCIENCE IN ACTION</div>'+
+'<div class="example-title">'+item.example+'</div>'+
+'<div class="example-text">'+
+'<b>Concept:</b><br>'+item.concept+
+'<br><br>'+
+'<b>Real World Use:</b><br>'+item.use+
+'</div>'+
+'</div>';
 }
 
-function nextExample(){
-const data=getClassroomData();
-if(!data.length)return;
-exampleIndex=(exampleIndex+1)%data.length;
-renderExample();
-}
-
-function escapeHTML(value){
-return String(value??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]));
-}
-
-$("#langBtn").addEventListener("click",toggleLanguage);
-$("#menuBtn").addEventListener("click",()=>$("#mobileMenu").classList.toggle("open"));
-$("#closeDomain").addEventListener("click",closeDomain);
-$("#exploreDomains").addEventListener("click",()=>{
-const data=getRealWorldData();
-const domains=domainNames(data);
-if(domains.length)openDomain(activeDomain||domains[0]);
+$("#nextExample").addEventListener("click",()=>{
+if(!classroom.length)return;
+classroomIndex=(classroomIndex+1)%classroom.length;
+renderClassroom();
+$("#classroom").scrollIntoView({behavior:"smooth",block:"center"});
 });
-$("#nextStories").addEventListener("click",nextStories);
-$("#nextStoriesBottom").addEventListener("click",nextStories);
-$("#nextExample").addEventListener("click",nextExample);
 
-$$(".mobile-menu a").forEach(a=>a.addEventListener("click",()=>$("#mobileMenu").classList.remove("open")));
+renderDomains();
+renderStories();
+renderClassroom();
 
-setLanguage();
-});
+})();
 </script>
 </body>
-   </html>
+</html>
