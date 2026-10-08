@@ -1,1 +1,265 @@
-
+{
+  "lastUpdated": "2026-10-08T11:28:55.951274+00:00",
+  "articles": [
+    {
+      "title": "Widespread steep X-ray spectra of luminous $z\\simeq5.85-7.5$ quasars and their implications for future X-ray surveys",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-07",
+      "summary": "Luminous quasars (QSOs) at the Epoch of Reionization (EoR, $z\\gtrsim6$) host billion-solar-mass black holes assembled within the first Gyr of cosmic time. Their X-ray emission probes the innermost accreting regions and constrains the physical state of the corona during early supermassive black hole (SMBH) growth. Previous results from the HYPerluminous quasars at the Epoch of ReionizatION (HYPERION) sample of $z \\gtrsim 6$ QSOs, powered by the most rapidly accreted SMBHs, suggested a link between X-ray spectral slope and long-term growth efficiency. We test whether the steep X-ray spectra of luminous z>6 QSOs are a general property of early SMBH growth or a peculiarity of the most efficientl",
+      "url": "http://arxiv.org/abs/2610.10522v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "BOLT: Imaging Lightning and Terrestrial Gamma-ray Flashes at the Pierre Auger Observatory",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-07",
+      "summary": "Lightning-related phenomena are known to interact with and influence all detector systems of the Pierre Auger Observatory. Notably, the Surface Detector has recorded unique signals associated with Terrestrial Gamma-ray Flashes (TGFs), which are rare phenomena linked to the initial processes of lightning. Studying TGFs in coincidence with their parent lightning discharges helps to constrain the mechanisms responsible for their production, providing key insights into how these high-energy emissions are generated and evolve within thunderstorms. To image the parent lightning discharges, we are developing the Broadband Observatory of Lightning and TGFs (BOLT), an interferometric lightning mappin",
+      "url": "http://arxiv.org/abs/2610.10434v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "The NANOGrav 15 yr Dataset: Modified Functional Forms for Profile-Evolution Time Delays in Pulsar Timing Models",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-07",
+      "summary": "Radio pulsars exhibit frequency-dependent variations in the shape of their pulse profiles that introduce systematic delays in the observed pulse times of arrival (TOA) across an observing band. The North American Nanohertz Observatory for Gravitational Waves (NANOGrav) models these delays using a frequency-dependent (FD) log-polynomial function whose coefficients are fit to TOA measurements at different radio frequencies. However, FD parameters are prone to absorbing power from other chromatic effects, such as interstellar dispersion, leading to fitted FD values that overestimate profile evolution and vary significantly across datasets. To separate these effects, we introduce two new mathema",
+      "url": "http://arxiv.org/abs/2610.10431v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Deep Learning for Cherenkov Astronomy: Performance of GammaLearn on LST-1",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-07",
+      "summary": "The Cherenkov Telescope Array Observatory (CTAO) marks the next generation of Imaging Atmospheric Cherenkov Telescopes (IACTs), offering a sensitivity improvement of up to a factor of 10 over current instruments. Its first prototype, the Large-Sized Telescope (LST-1), is already in operation at the Roque de los Muchachos Observatory in La Palma, Spain. Deep learning methods have shown significant promise in reconstructing key properties of incident particles, such as energy, arrival direction, and type, using simulated data. Unlike traditional approaches that rely on simplified image shape parameters, deep learning can exploit the full temporal and charge information of the recorded events, ",
+      "url": "http://arxiv.org/abs/2610.10392v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Changing-look Active Galactic Nuclei from the Dark Energy Spectroscopic Instrument. VII. Testing Disk-Corona Diagnostics with eROSITA",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-07",
+      "summary": "Changing-look active galactic nuclei (CL-AGN) have been proposed to follow an X-ray-binary-like, V-shaped relation between the optical/ultraviolet-to-X-ray spectral slope, $α_{\\rm OX}$, and the Eddington ratio, $λ_{\\rm Edd}\\equiv L_{\\rm bol}/L_{\\rm Edd}$. We test this interpretation using CL-AGN selected from the Dark Energy Spectroscopic Instrument (DESI) and control samples matched to the eROSITA all-sky survey (eRASS). We find that the apparent positive correlation between $α_{\\rm OX}$ and the optical-continuum-based Eddington ratio, $λ_{\\rm Edd,opt}$, is not unique to CL-AGN, but also appears in matched non-changing-look samples. In broad-H$α$ AGN, our main statistical sample, this struc",
+      "url": "http://arxiv.org/abs/2610.10331v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Two Low-Mass-Ratio Microlensing Planets from High-Magnification Events: KMT-2021-BLG-0247 and MOA-2023-BLG-169",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-07",
+      "summary": "We present an analysis of two planetary microlensing events, KMT-2021-BLG-0247 and MOA-2023-BLG-169, both of which exhibit high magnifications and low planet--host mass ratios, but with markedly different levels of parameter constraint. For KMT-2021-BLG-0247, the finite-source effect and microlens parallax are both clearly detected, leading to unusually tight constraints on the physical properties of the lens system. The host mass and lens distance are approximately $M_{\\rm L}=0.9\\pm0.1\\,M_\\odot$ and $D_{\\rm L}=6.7^{+1.0}_{-0.3}\\,\\mathrm{kpc}$, respectively, and the planet mass is $M_{\\rm p}=41\\pm5\\,M_\\oplus$. The projected planet--host separations are $a_\\perp=3.4^{+0.7}_{-0.3}\\,\\mathrm{au}",
+      "url": "http://arxiv.org/abs/2610.10308v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Analytic parity-violating greybody factors of a dynamical Chern-Simons black hole",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-07",
+      "summary": "We study the low-frequency scattering of gravitational and pseudoscalar waves off a non-rotating black hole in dynamical Chern-Simons (dCS) gravity, where the axial (odd-parity) gravitational sector is irreducibly coupled to the dynamical pseudoscalar while the polar sector remains general relativistic. Working to first order in the dimensionless coupling zeta = (ell_CS/M)^4 and using matched asymptotic expansions, we obtain an exact closed form for the graviton-to-pseudoscalar conversion probability, d_2 = 3(pi^2-9)^2/8, and a high-precision reconstruction, in a proven transcendental basis, of the graviton greybody (absorption) asymmetry, kappa_2 = (21/80) pi^4 + (27/8) pi^2 - 89833/1536, f",
+      "url": "http://arxiv.org/abs/2610.10280v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "A relativistic inflow candidate in a quasar at cosmic noon",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-07",
+      "summary": "Cosmic noon ($z\\sim2$) marks the peak epoch of cosmic star formation and black hole accretion activity, where strong accretion and outflows are expected. We report two candidate absorption features in the \\textit{XMM-Newton} spectrum of the quasar WISEA~J094835.95+432302.6 at $z=1.893$. Two redshifted features occur at rest-frame energies of $\\sim4.65$ and $\\sim5.75$keV with confidence levels of 99.3% and 94.1%, respectively, estimated from Monte Carlo (MC) simulations considering the look-elsewhere effect. These features can be explained by the Fe XXV/XXVI K-shell transitions from one ultra-fast inflow (UFI) with an apparent velocity of $0.37^{+0.02}_{-0.01}c$. If confirmed by follow-up \\te",
+      "url": "http://arxiv.org/abs/2610.10267v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "A Gravitationally Lensed Low-Luminosity AGN From The Cosmic Noon",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-07",
+      "summary": "Strong gravitational lensing provides a unique tool of studying intrinsically faint high-redshift active galactic nuclei (AGN). In particular, low-luminosity AGN (LLAGN) can probe black-hole growth in low-mass galaxies that current X-ray surveys cannot otherwise access. We investigate the nature and physical properties of a faint X-ray source triply imaged by the galaxy cluster SDSS J2243$-$0935, and determine whether the source hosts an AGN. We combine archival Hubble Space Telescope imaging and Chandra X-ray observations with the published strong-lensing models of SDSS J2243$-$0935. We constrain the source redshift geometrically, derive magnification maps, and infer the physical properties",
+      "url": "http://arxiv.org/abs/2610.10244v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "A Recurrent Infrared Modulation in the Warm Post-impact Debris Disk NGC 2547 ID8",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-07",
+      "summary": "Extreme debris disks are signposts of violent rocky collisions, but it remains unclear whether their mid-infrared variability traces transient dust clouds or longer-lived post-impact reservoirs. We analyze a 19 yr mid-infrared record of the young solar analog NGC 2547 ID8, combining four spectra from 2007-2024 with 3-5 micron monitoring through 2026. The optically thin mineral surface remains compositionally stable: broad fits spanning multiple grain sizes give 550-577 K, and a common-basis decomposition with T_surf fixed at 560 K is dominated by 1 micron olivine/Mg-olivine and 0.1 micron forsterite. The W2-equivalent 4.5 micron excess, traced across six recurrent high states, is instead dri",
+      "url": "http://arxiv.org/abs/2610.10130v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Quasi-periodic eruption spectral-timing: EMRIs crossing warped accretion disks",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-07",
+      "summary": "Quasi-periodic eruptions (QPEs) are repeating X-ray transients from galactic nuclei potentially caused by a stellar-mass orbiter repeatedly colliding with the accretion disk of a supermassive black hole (SMBH) in an extreme mass-ratio inspiral (EMRI). In this picture, the eruption arrival times encode the orbit and its relativistic precessions, while the quiescent spectral energy distribution (SED) probes the same disk and SMBH, providing two independent constraints on the same orbit-disk system. We present a joint spectral-timing framework that takes advantage of this by simultaneously fitting an analytic QPE timing model built on Kerr geodesic frequencies and a warped disk geometry, couple",
+      "url": "http://arxiv.org/abs/2610.10110v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Wave-Growth-Limited Particle Confinement in a Near-Parallel Interplanetary Shock Observed by Parker Solar Probe",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-07",
+      "summary": "Collisionless shocks confine the particles they accelerate with the upstream wave field they themselves drive. Streaming particles resonantly amplify Alfvén waves, and the waves then confine the same particles by pitch-angle scattering. The rigidity a shock precursor can hold is therefore capped by how fast those waves grow, and that coupling has not previously been constrained in-situ at any interplanetary shock. Here we report Parker Solar Probe measurements of a fast, near-parallel coronal mass ejection-driven shock at 0.24~AU on 2023 March 13 that constrain this wave-particle coupling through the energetic-particle population it accelerates. We measure the spectral folding energy, the bo",
+      "url": "http://arxiv.org/abs/2610.10067v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Composition $g$-modes and $f$-modes of neutron stars with gravitationally coupled dark matter: degeneracy with the symmetry energy",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-07",
+      "summary": "Composition gravity ($g$) modes have been proposed as a probe of dark matter in neutron stars, on the basis of one-fluid models in which the dark matter is in chemical equilibrium with the neutrons. We computed in full general relativity the $g$- and $f$-modes of stars in which fermionic dark matter couples to the nucleons only through gravity, and inferred the dark mass fraction from NICER and GW170817 data with a prior that comprises $63$ nucleonic equations of state (EOSs) from Skyrme and relativistic mean-field functionals, among them the models of Dutra \\textit{et al.} and of the compilation of Sun, Bhattiprolu and Lattimer. The data do not prefer dark matter and bound its mass fraction",
+      "url": "http://arxiv.org/abs/2610.10007v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Astrometric planet search around southern ultracool dwarfs: V. Discovery of the exoplanet candidate PALTA-1 b",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-07",
+      "summary": "We report the discovery of PALTA-1 b, a sub-Jupiter mass exoplanet candidate orbiting the nearby early-L dwarf DENIS-P J1253108-570924 (DE1253-57) located at a distance of ~17 pc. The exoplanet was discovered by monitoring the L dwarf's astrometric motion with FORS2 at the Very Large Telescope over more than eight years and characterising the deviations from the expected single-source motion. The estimated planet mass is between 0.54 MJup and 0.77 MJup, depending on the uncertain mass of the ultracool dwarf host. The system's mass ratio is about 0.010, and the relative separation is estimated at 1.6-3.4 au. If confirmed, PALTA-1 b would be one of the very few known examples of a giant planet",
+      "url": "http://arxiv.org/abs/2610.09965v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "A faint dust ring beyond the compact disk of Sz 76",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-07",
+      "summary": "We report new ALMA Band 7 high-resolution ($\\sim$0.05$^{''}$) continuum and $^{12}\\text{CO}\\ (J=3\\text{--}2)$ observations of the disk around the young low-mass star Sz 76. Visibility-plane modeling reveals a previously undetected, faint outer dust ring centered at $\\sim$45 au surrounding the compact central disk. Including this low-surface-brightness feature increases the characteristic dust radius from $R_{\\text{dust,68}} \\approx 7$ au to $41$ au. Combined with an outer gas extent of $R_{\\text{CO,68}} \\approx 77$ au, the resulting gas-to-dust size ratio decreases from an extreme value of $\\sim$11 to $\\sim$2, placing Sz 76 in line with typical protoplanetary disks and contradicting a scenar",
+      "url": "http://arxiv.org/abs/2610.09881v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Nonclinical Development of Oligonucleotide-Based Therapeutics: Insights from an IQ DruSafe ONT Working Group Survey.",
+      "category": "Medical Research",
+      "source": "PubMed",
+      "publishedAt": "2026 Oct 8",
+      "summary": "nonclinical development of oligonucleotide based therapeutics insights from an iq drusafe ont working group survey",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42845133/",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Dual inhibition of JAK and MEK suppresses T-cell acute lymphoblastic leukemia induced by mutant IL7R and RASGRP1 overexpression.",
+      "category": "Medical Research",
+      "source": "PubMed",
+      "publishedAt": "2026 Oct 8",
+      "summary": "dual inhibition of jak and mek suppresses t cell acute lymphoblastic leukemia induced by mutant il7r and rasgrp1 overexpression",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42845058/",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Validation of the International Working Group 2023 response criteria for higher risk myelodysplastic syndromes/neoplasms using the International Consortium for Myelodysplastic Syndromes VALIDATE database and a randomized phase III trial.",
+      "category": "Medical Research",
+      "source": "PubMed",
+      "publishedAt": "2026 Oct 8",
+      "summary": "validation of the international working group 2023 response criteria for higher risk myelodysplastic syndromes neoplasms using the international consortium for myelodysplastic syndromes validate database and a randomized phase iii trial",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42845057/",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Circadian biology in brain cancer diagnosis and treatment.",
+      "category": "Medical Research",
+      "source": "PubMed",
+      "publishedAt": "2026 Oct 8",
+      "summary": "circadian biology in brain cancer diagnosis and treatment",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42844996/",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Visibility of the Korean National Health Information Portal across search engines and generative artificial intelligence platforms: a repeated cross-sectional study.",
+      "category": "Medical Research",
+      "source": "PubMed",
+      "publishedAt": "2026 Oct 8",
+      "summary": "visibility of the korean national health information portal across search engines and generative artificial intelligence platforms a repeated cross sectional study",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42844963/",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Iridium-Based Nanomaterials: Precise Fabrication, Structural and Electronic Modulation, and Biomedical Applications.",
+      "category": "Medical Research",
+      "source": "PubMed",
+      "publishedAt": "2026 Oct 7",
+      "summary": "iridium based nanomaterials precise fabrication structural and electronic modulation and biomedical applications",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42844876/",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Extracellular Vesicles Are Associated With Biological, Mechanical, and Structural Tendon Healing Metrics in Preclinical Models: A Systematic Review and Meta-Analysis.",
+      "category": "Medical Research",
+      "source": "PubMed",
+      "publishedAt": "2026 Oct",
+      "summary": "extracellular vesicles are associated with biological mechanical and structural tendon healing metrics in preclinical models a systematic review and meta analysis",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42845123/",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Resveratrol in Microplastic- and Nanoplastic-Induced Toxicity: Current Evidence, Mechanistic Insights, and Future Directions.",
+      "category": "Medical Research",
+      "source": "PubMed",
+      "publishedAt": "2026 Oct",
+      "summary": "resveratrol in microplastic and nanoplastic induced toxicity current evidence mechanistic insights and future directions",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42844955/",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Adeno-Associated Virus Vector-Mediated Expression of Neuroligin 2 in the Mouse Hippocampus Attenuates the Progression of Pentylenetetrazol-Induced Seizures.",
+      "category": "Medical Research",
+      "source": "PubMed",
+      "publishedAt": "2026 Oct",
+      "summary": "adeno associated virus vector mediated expression of neuroligin 2 in the mouse hippocampus attenuates the progression of pentylenetetrazol induced seizures",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42844949/",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Intervention Using Video and Comic Books Targeting Nutritional Outcomes in Children and Adolescents: A Systematic Review.",
+      "category": "Medical Research",
+      "source": "PubMed",
+      "publishedAt": "2026 Oct",
+      "summary": "intervention using video and comic books targeting nutritional outcomes in children and adolescents a systematic review",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42844866/",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "NASA Science",
+      "category": "Space & Astronomy",
+      "source": "NASA APOD",
+      "publishedAt": "2019-06-30",
+      "summary": "Discover the cosmos! Each day a different image or photograph of our fascinating universe is featured, along with a brief explanation written by a professional astronomer.",
+      "url": "https://science.nasa.gov/wp-content/themes/nasa-child/assets/images/nasa-logo@2x.png",
+      "image": "https://science.nasa.gov/wp-content/themes/nasa-child/assets/images/nasa-logo@2x.png",
+      "type": "astronomy"
+    }
+  ]
+}
