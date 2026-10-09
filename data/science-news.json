@@ -1,6 +1,156 @@
 {
-  "lastUpdated": "2026-10-08T11:28:55.951274+00:00",
+  "lastUpdated": "2026-10-09T09:12:10.714217+00:00",
   "articles": [
+    {
+      "title": "Disk Structure May Determine AGN Variability and Explain the Accretion Disk Size Problem: No Broad Line Region Required",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-08",
+      "summary": "Variability is a crucial probe of active galactic nuclei (AGN) disks, but the impact of the structure and internal physics of the disk on this variability is poorly understood. We perform 3D multi-frequency radiation magnetohydrodynamic simulations of the $1300-5940~\\rmÅ$ emitting region of an AGN disk. This turbulent disk simulation happens to stochastically have different disk thickness above and below the midplane. Light curves emitted from the thin top of the disk are broadly consistent with traditional variability models, where the X-ray irradiation emitted from the corona is the main driver of variability in UV-optical light curves. Conversely, the UV-optical light curves emitted from ",
+      "url": "http://arxiv.org/abs/2610.12462v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Discovery of Hidden Extragalactic Pulsars in the Parkes Archival Data",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-08",
+      "summary": "Just over 1% of the known radio pulsar population resides in the Large and Small Magellanic Clouds (MCs), the satellite galaxies that are 50-62 kpc distant from the Milky Way. These pulsars are important for constraining the peak of the pulsar luminosity function, and may give insights into neutron star populations formed from stars of different metallicities than the Milky Way. Using search techniques that have proven highly effective at discovering a large number of pulsars in archival data by folding candidates near the noise floor at high harmonic folds, we reprocessed the original Parkes Multibeam MC surveys and discovered six pulsars. Five of these pulsars are located in the Large Mage",
+      "url": "http://arxiv.org/abs/2610.12450v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Listening to the Horizon: Probing Near-Horizon Reflectivity with GW250114",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-08",
+      "summary": "Testing the horizon properties of astrophysical black holes is a central goal of gravitational-wave astronomy. The recently identified Direct Wave (DW), a prompt non-quasinormal component of GW250114, provides a new probe of near-horizon physics. While it remains unclear whether the DW itself carries horizon information, we show that it enables a novel null test of horizon reflectivity. If the remnant is an exotic compact object (ECO) with a partially reflecting surface, inward plunge radiation is reflected and leaks back through the gravitational potential barrier, producing a delayed DW echo whose amplitude is set by the surface reflectivity ($|\\mathcal{R}_s|$). We construct the correspond",
+      "url": "http://arxiv.org/abs/2610.12429v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "ACORN I. Massive Black Hole Seeding and Tidal Disruption Events from Star Clusters in Cosmological Simulations",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-08",
+      "summary": "JWST has revealed massive star clusters at $z\\gtrsim 6$, which provide promising environments for massive black hole (MBH) seed formation. We introduce a new MBH seeding model for cosmological simulations, physically motivated by the runaway collisions in star clusters. Subgrid star clusters are generated according to the local ISM and evolved through stellar evolution and two-body relaxation. The masses of MBH seeds formed through runaway collisions are determined by the properties of their host clusters, including the effects of metallicity-dependent stellar winds. We further follow tidal disruption events (TDEs) with the evolving clusters, which can be enhanced in MBH binaries, and accoun",
+      "url": "http://arxiv.org/abs/2610.12398v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Funnel Leakage of the Wien Fireball in the Early Nebula after a Binary Neutron Star Merger",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-08",
+      "summary": "A newborn neutron star (NS) that survives after a binary NS merger can inject its rotational energy into the surrounding ejecta while the ejecta are still optically thick. The injected energy is redistributed by the pair cascade, and the nebula becomes a radiation-dominated plasma composed of photons and e^+- pairs. Compton scattering then governs the energy exchange while the photon number is conserved in scattering. This nebula is evolved with a one-zone model that includes pair creation, annihilation, photon injection, diffusion, and in particular the leakage through the jet-induced polar funnel. For typical parameters, we find that the Compton parameter y is much larger than unity at ear",
+      "url": "http://arxiv.org/abs/2610.12359v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "A morphological search for stable year-scale modulation in gamma-ray blazars",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-08",
+      "summary": "Year-scale quasi-periodic oscillations (QPOs) in blazar gamma-ray light curves have been proposed as signatures of supermassive binary black holes and precessing jets. Red noise can mimic periodicity, and detection alone does not establish persistence or period stability. We develop and calibrate a morphological framework to characterize year-scale modulation and constrain the incidence of stable modulation in blazars. We analyze 120 Fermi-LAT light curves spanning 18.1 yr. Singular spectrum analysis selects the oscillatory mode and period, while weighted wavelet Z-transform ridge tracking measures persistence, period drift, and cycle-to-cycle volatility. Flux randomization, 10,000 red-noise",
+      "url": "http://arxiv.org/abs/2610.12356v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Quantum Co-Design of Inhomogeneous Many-Body Neutrino Fast Flavor Transformation",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-08",
+      "summary": "Dense-neutrino flavor evolution is a quantum many-body problem whose fully correlated treatment becomes rapidly more expensive with increasing particle number and spatial structure. We develop a \\texttt{QCNO} quantum simulation code that maps a inhomogeneous forward-scattering neutrino Hamiltonian with advection and finite-range interactions to TEBD2 product-formula quantum circuits, and connects ideal many-body simulation, backend-aware execution, and fault-tolerant resource estimation within the same physical model. We reproduce the exact many-body evolution of the suppressed mean-field-like transverse fast flavor instability through $N=30$ and show that even a single open-boundary interac",
+      "url": "http://arxiv.org/abs/2610.12334v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Longitudinal distribution of Io's dayside atmospheric density",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-08",
+      "summary": "Since 2001, we have used the TEXES high resolution mid-infrared spectrograph at NASA's Infrared Telescope Facility to study the density of Io's SO$_{2}$-dominated atmosphere. The spectra cover several SO$_{2}$ absorption lines near 530 cm$^{-1}$ and are used to retrieve the equatorial SO$_{2}$ column density. In addition to covering a long time period, our 191 independent observations also cover the full range of Io central longitudes, allowing us to study the longitudinal variability of Io's dayside atmosphere in more depth than has previously been possible. By improving our modeling of longitudinal variability and using a seasonal model to apply a temporal normalization to the retrieved SO",
+      "url": "http://arxiv.org/abs/2610.12275v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Gen-EBM: an energy balance model for terrestrial planets. Climate multistability from snowball to post-runaway greenhouse climates",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-08",
+      "summary": "Climate multistability and tipping points are fundamental properties of planetary climates that depend sensitively on climate feedbacks. We introduce the Geneva Energy Balance Model (Gen-EBM), a new 1-D latitudinal EBM for rapid exploration of terrestrial planet climates, and use it to investigate how planetary rotation, eccentricity, and thermal inertia shape climate attractors and multistability. Gen-EBM is implemented in Rust and builds on previous exoplanet EBMs by incorporating a temperature-dependent outgoing longwave radiation prescription spanning Earth-like, runaway-onset, and post-runaway greenhouse regimes. We construct bifurcation diagrams from ensembles of simulations and explor",
+      "url": "http://arxiv.org/abs/2610.12267v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Evidence for orbital eccentricity supports a hierarchical origin for GW231123",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-08",
+      "summary": "GW231123 is the most massive binary black hole merger observed to date and one of the most intriguing hierarchical merger candidates in the pair-instability mass gap. Its exceptionally large inferred component spins and remarkably short in-band duration make the source highly sensitive to waveform physics near merger. Here we show that GW231123 is better described as an eccentric binary black-hole merger. We analyse data over 11--448 Hz using the eccentric, spin-precessing effective-one-body waveform model TEOBResumS--Dalí, accounting for detector calibration uncertainty. We measure $e_{5.5\\,\\mathrm{Hz}}=0.34^{+0.12}_{-0.23}$ at 90\\% credibility and obtain a Bayes factor of 10.2 in favour of",
+      "url": "http://arxiv.org/abs/2610.12205v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Autocorrelation in black hole flare movies: Departures from Kerr",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-08",
+      "summary": "Autocorrelation in black hole movies encodes the time delays and angular separations between gravitationally lensed images, offering a means of testing the spacetime geometry. Using an orbiting hot spot in the parametrized Johannsen-Psaltis metric with a single deformation parameter, we investigate the ability of lensing-induced correlations to distinguish departures from Kerr. From ray-traced movies, we extract the slope (k) and intercept (b) of an approximately linear secondary ridge in the time-angle autocorrelation map as potential future observables. Variations in the spin and the metric deformation parameter produce distinctive trajectories in the (k,b) plane, allowing the two observab",
+      "url": "http://arxiv.org/abs/2610.12199v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Discovery of the Slowest Radio Pulsar in the Small Magellanic Cloud",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-08",
+      "summary": "We report the discovery of a new radio pulsar PSR J0103$-$72 in the Small Magellanic Cloud (SMC) through a reanalysis of Parkes/Murriyang archival observations targeting supernova remnants and pulsar-wind nebulae in the SMC. Previously two pulsars were discovered in these observations, and PSR J0103$-$72 is the third which we independently detected in two observations of its target field. It has a spin period of 1.327 sec and a dispersion measure (DM) of $272\\pm13~\\mathrm{pc\\,cm^{-3}}$, making it the slowest known radio pulsar in the SMC with the second-highest DM. We did not identify any plausible supernova remnant or pulsar-wind nebula associated with the pulsar. Subtracting the predicted ",
+      "url": "http://arxiv.org/abs/2610.12143v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "An updated model of neutrino emission from proto-neutron stars",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-08",
+      "summary": "We present an improved parametric model for neutrino emission from core-collapse supernovae that directly connects neutrino luminosity and average energy to stellar properties during emission. Our model incorporates two critical physical processes: convection within the proto-neutron star and the evolution of the neutrinosphere radius during the early emission phase. Using simulated datasets of supernova neutrino events in the Super-Kamiokande detector, we assess the sensitivity to astrophysical properties in the event of a future detection. We show that the neutrino mass ordering plays a crucial role in determining which parameters can be constrained by the observed neutrino data.",
+      "url": "http://arxiv.org/abs/2610.12101v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Size, Shape, and Geometric Albedo of Dwarf Planet Quaoar's Largest Satellite Weywot",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-08",
+      "summary": "The small satellites of dwarf-planet size worlds in trans-Neptunian space are thought to be produced through giant impacts, and are typically observed to have bright water-ice-dominated surfaces. Here we focus on Quaoar's small primary satellite, Weywot. We build on previous work by re-analyzing the June 2023 stellar occultation by Weywot using results from 11 orbits of HST imaging with the Wide Field Camera 3. Weywot's rotational lightcurve was constrained along with its independent photometric phase curve, which we used to obtain more robust measurements of Weywot's size, shape, and geometric albedo. We found Weywot's volume-equivalent radius to be req = 73+-5 km, with principal axes a = 8",
+      "url": "http://arxiv.org/abs/2610.11988v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "From GeV to PeV: Orbital Modulation and Wind-Regulated Ultrahigh-energy Emission in Cygnus~X-3",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-08",
+      "summary": "Recent LHAASO observations reveal ultrahigh-energy (UHE) gamma-ray emission from Cygnus~X-3 with evidence for orbital modulation, providing a rare opportunity to study particle acceleration and transport on binary scales. We develop a common binary--jet model that jointly explains the contemporaneous GeV--PeV spectra and orbital light curves. The GeV emission is produced by anisotropic inverse-Compton scattering of stellar photons by relativistic electrons, while multi-PeV protons escaping from the inner region produce TeV--PeV gamma rays through photohadronic and hadronuclear interactions. The GeV orbital modulation constrains the binary--jet geometry, allowing the UHE observations to probe",
+      "url": "http://arxiv.org/abs/2610.11881v1",
+      "image": "",
+      "type": "research"
+    },
     {
       "title": "Widespread steep X-ray spectra of luminous $z\\simeq5.85-7.5$ quasars and their implications for future X-ray surveys",
       "category": "Scientific Research",
@@ -152,6 +302,36 @@
       "type": "research"
     },
     {
+      "title": "Sleep-dependent microglial functions in Alzheimer's disease.",
+      "category": "Medical Research",
+      "source": "PubMed",
+      "publishedAt": "2026 Sep 2",
+      "summary": "sleep dependent microglial functions in alzheimer s disease",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42850105/",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Integrating biology and mathematics to understand checkpoint immunotherapy.",
+      "category": "Medical Research",
+      "source": "PubMed",
+      "publishedAt": "2026 Sep 2",
+      "summary": "integrating biology and mathematics to understand checkpoint immunotherapy",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42850091/",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Evaluating the Impact of Ferritin Testing: Iron Status of the Donor Pool, Changes to Hemoglobin Deferrals, and Effects on Product Availability.",
+      "category": "Medical Research",
+      "source": "PubMed",
+      "publishedAt": "2026 Sep 1",
+      "summary": "evaluating the impact of ferritin testing iron status of the donor pool changes to hemoglobin deferrals and effects on product availability",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42850190/",
+      "image": "",
+      "type": "research"
+    },
+    {
       "title": "Nonclinical Development of Oligonucleotide-Based Therapeutics: Insights from an IQ DruSafe ONT Working Group Survey.",
       "category": "Medical Research",
       "source": "PubMed",
@@ -198,6 +378,66 @@
       "publishedAt": "2026 Oct 8",
       "summary": "visibility of the korean national health information portal across search engines and generative artificial intelligence platforms a repeated cross sectional study",
       "url": "https://pubmed.ncbi.nlm.nih.gov/42844963/",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Characterization of Bubble Cloud Formation and Tissue Ablation Using a High-Frequency Endoscopic Histotripsy System.",
+      "category": "Medical Research",
+      "source": "PubMed",
+      "publishedAt": "2026 Oct 8",
+      "summary": "characterization of bubble cloud formation and tissue ablation using a high frequency endoscopic histotripsy system",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42850155/",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Phosphorylation-driven rapid intrafibrillar mineralization: A biomimetic strategy for dentin remineralization.",
+      "category": "Medical Research",
+      "source": "PubMed",
+      "publishedAt": "2026 Oct 8",
+      "summary": "phosphorylation driven rapid intrafibrillar mineralization a biomimetic strategy for dentin remineralization",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42850100/",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Decoding the Direction of Bistable Illusory Motion from Source-Reconstructed MEG Signals.",
+      "category": "Medical Research",
+      "source": "PubMed",
+      "publishedAt": "2026 Oct 8",
+      "summary": "decoding the direction of bistable illusory motion from source reconstructed meg signals",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42850074/",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Patient-Reported Experience and Preferences with Long-Axial-Field-of-View and Total-Body PET/CT: A Prospective, Multicenter Cross-Sectional Survey.",
+      "category": "Medical Research",
+      "source": "PubMed",
+      "publishedAt": "2026 Oct 8",
+      "summary": "patient reported experience and preferences with long axial field of view and total body pet ct a prospective multicenter cross sectional survey",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42850036/",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "How commercial \"agenda laundering\" is shaping critical care.",
+      "category": "Medical Research",
+      "source": "PubMed",
+      "publishedAt": "2026 Oct 8",
+      "summary": "how commercial agenda laundering is shaping critical care",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42849925/",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Stereotactic body radiation therapy enriches mediators of humoral immune activity in metastatic renal cell carcinoma.",
+      "category": "Medical Research",
+      "source": "PubMed",
+      "publishedAt": "2026 Oct 8",
+      "summary": "stereotactic body radiation therapy enriches mediators of humoral immune activity in metastatic renal cell carcinoma",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42849919/",
       "image": "",
       "type": "research"
     },
@@ -252,10 +492,20 @@
       "type": "research"
     },
     {
+      "title": "State-of-the-art deep learning for dental implant detection: a standardized benchmark for clinical practice.",
+      "category": "Medical Research",
+      "source": "PubMed",
+      "publishedAt": "2026 Aug 1",
+      "summary": "state of the art deep learning for dental implant detection a standardized benchmark for clinical practice",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42849967/",
+      "image": "",
+      "type": "research"
+    },
+    {
       "title": "NASA Science",
       "category": "Space & Astronomy",
       "source": "NASA APOD",
-      "publishedAt": "2019-06-30",
+      "publishedAt": "2008-01-04",
       "summary": "Discover the cosmos! Each day a different image or photograph of our fascinating universe is featured, along with a brief explanation written by a professional astronomer.",
       "url": "https://science.nasa.gov/wp-content/themes/nasa-child/assets/images/nasa-logo@2x.png",
       "image": "https://science.nasa.gov/wp-content/themes/nasa-child/assets/images/nasa-logo@2x.png",
