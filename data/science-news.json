@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-09T09:12:10.714217+00:00",
+  "lastUpdated": "2026-10-10T08:35:47.248461+00:00",
   "articles": [
     {
       "title": "Disk Structure May Determine AGN Variability and Explain the Accretion Disk Size Problem: No Broad Line Region Required",
@@ -332,6 +332,106 @@
       "type": "research"
     },
     {
+      "title": "A Prospective, Observational, Open-Label, Nonrandomized, Multicenter Study Measuring Functional Outcomes in a Novel Interspinous Stabilization Device in Patients With Low Back Pain: 12-Month Results for the REFINE Study.",
+      "category": "Medical Research",
+      "source": "PubMed",
+      "publishedAt": "2026 Oct 9",
+      "summary": "prospective observational open label nonrandomized multicenter study measuring functional outcomes in a novel interspinous stabilization device in patients with low back pain 12 month results for the refine study",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42855423/",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Cardiovascular magnetic resonance derived myocardial strain: applications, acquisition techniques, analysis, and reporting. A Scientific Statement of the Society for Cardiovascular Magnetic Resonance, Radiological Society of North America, and the European Association of Cardiovascular Imaging of the ESC.",
+      "category": "Medical Research",
+      "source": "PubMed",
+      "publishedAt": "2026 Oct 9",
+      "summary": "cardiovascular magnetic resonance derived myocardial strain applications acquisition techniques analysis and reporting a scientific statement of the society for cardiovascular magnetic resonance radiological society of north america and the european association of cardiovascular imaging of the esc",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42855356/",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Cross-Validation of Acoustic Roughness Index in Korean.",
+      "category": "Medical Research",
+      "source": "PubMed",
+      "publishedAt": "2026 Oct 9",
+      "summary": "cross validation of acoustic roughness index in korean",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42855341/",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Primary Ciliary Dyskinesia in Adults With Bronchiectasis: Diagnostic Yield of Genetic Testing and Clinical Characterisation.",
+      "category": "Medical Research",
+      "source": "PubMed",
+      "publishedAt": "2026 Oct 9",
+      "summary": "primary ciliary dyskinesia in adults with bronchiectasis diagnostic yield of genetic testing and clinical characterisation",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42855327/",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Protein large language model-assisted one-to-one gene homology mapping in cross-species single-cell transcriptome integration.",
+      "category": "Medical Research",
+      "source": "PubMed",
+      "publishedAt": "2026 Oct 9",
+      "summary": "protein large language model assisted one to one gene homology mapping in cross species single cell transcriptome integration",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42855280/",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "A Randomized Clinical Trial of Transcutaneous Electrical Acupoint Stimulation for Pain Relief After Dental Implant Surgery.",
+      "category": "Medical Research",
+      "source": "PubMed",
+      "publishedAt": "2026 Oct 9",
+      "summary": "randomized clinical trial of transcutaneous electrical acupoint stimulation for pain relief after dental implant surgery",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42855277/",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Intratumoral susceptibility signals on susceptibility-weighted imaging for glioma grading and molecular profiling: a systematic review and meta-analysis.",
+      "category": "Medical Research",
+      "source": "PubMed",
+      "publishedAt": "2026 Oct 9",
+      "summary": "intratumoral susceptibility signals on susceptibility weighted imaging for glioma grading and molecular profiling a systematic review and meta analysis",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42855273/",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "When can a negative endosonographic examination be trusted?",
+      "category": "Medical Research",
+      "source": "PubMed",
+      "publishedAt": "2026 Oct 9",
+      "summary": "when can a negative endosonographic examination be trusted",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42855176/",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Expired endoscopic devices remain sterile and functional: an international multicentre study challenging current shelf-life criteria.",
+      "category": "Medical Research",
+      "source": "PubMed",
+      "publishedAt": "2026 Oct 9",
+      "summary": "expired endoscopic devices remain sterile and functional an international multicentre study challenging current shelf life criteria",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42855156/",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Long-term Safety and Efficacy of Once-Weekly Lonapegsomatropin in Adults With Growth Hormone Deficiency: Results From a 52-Week Open-Label Extension Trial.",
+      "category": "Medical Research",
+      "source": "PubMed",
+      "publishedAt": "2026 Oct 9",
+      "summary": "long term safety and efficacy of once weekly lonapegsomatropin in adults with growth hormone deficiency results from a 52 week open label extension trial",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42855131/",
+      "image": "",
+      "type": "research"
+    },
+    {
       "title": "Nonclinical Development of Oligonucleotide-Based Therapeutics: Insights from an IQ DruSafe ONT Working Group Survey.",
       "category": "Medical Research",
       "source": "PubMed",
@@ -500,16 +600,6 @@
       "url": "https://pubmed.ncbi.nlm.nih.gov/42849967/",
       "image": "",
       "type": "research"
-    },
-    {
-      "title": "NASA Science",
-      "category": "Space & Astronomy",
-      "source": "NASA APOD",
-      "publishedAt": "2008-01-04",
-      "summary": "Discover the cosmos! Each day a different image or photograph of our fascinating universe is featured, along with a brief explanation written by a professional astronomer.",
-      "url": "https://science.nasa.gov/wp-content/themes/nasa-child/assets/images/nasa-logo@2x.png",
-      "image": "https://science.nasa.gov/wp-content/themes/nasa-child/assets/images/nasa-logo@2x.png",
-      "type": "astronomy"
     }
   ]
 }
