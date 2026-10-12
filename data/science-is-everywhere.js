@@ -1649,10 +1649,133 @@ const scienceDiscoveries = [
     visualType: "leaf-photosynthesis-diagram"
   }
 ];
+// ========================================
+// VALIDATE RELATED DISCOVERY LINKS
+// ========================================
 
-// Export for use in browser or Node.js
-if (typeof module !== 'undefined' && module.exports) {
+// Build a set containing every valid discovery ID.
+const scienceDiscoveryIds = new Set(
+  scienceDiscoveries.map(item => item.id)
+);
+
+// Remove invalid, duplicate, and self-referencing links.
+scienceDiscoveries.forEach(item => {
+  item.relatedIds = [
+    ...new Set(item.relatedIds || [])
+  ].filter(id =>
+    scienceDiscoveryIds.has(id) &&
+    id !== item.id
+  );
+});
+
+
+// ========================================
+// GET DISCOVERY BY ID
+// ========================================
+
+function getDiscoveryById(id) {
+  return scienceDiscoveries.find(
+    item => item.id === id
+  ) || null;
+}
+
+
+// ========================================
+// GET RELATED DISCOVERIES
+// ========================================
+
+function getRelatedDiscoveries(discoveryOrId, limit = 4) {
+  const discovery =
+    typeof discoveryOrId === "string"
+      ? getDiscoveryById(discoveryOrId)
+      : discoveryOrId;
+
+  if (!discovery) return [];
+
+  const safeLimit = Math.max(
+    0,
+    Math.floor(Number(limit) || 0)
+  );
+
+  return (discovery.relatedIds || [])
+    .map(id => getDiscoveryById(id))
+    .filter(Boolean)
+    .slice(0, safeLimit);
+}
+
+
+// ========================================
+// GET DAILY DISCOVERIES
+// ========================================
+
+function getDailyDiscoveries(date = new Date(), limit = 8) {
+  if (!scienceDiscoveries.length) return [];
+
+  const safeLimit = Math.max(
+    0,
+    Math.min(
+      scienceDiscoveries.length,
+      Math.floor(Number(limit) || 0)
+    )
+  );
+
+  if (safeLimit === 0) return [];
+
+  // Use the local calendar date.
+  const dayKey = [
+    date.getFullYear(),
+    date.getMonth() + 1,
+    date.getDate()
+  ].join("-");
+
+  // Create a stable number from the date.
+  let hash = 0;
+
+  for (const char of dayKey) {
+    hash = (hash * 31 + char.charCodeAt(0)) >>> 0;
+  }
+
+  const start = hash % scienceDiscoveries.length;
+
+  // Select a stable set for this date.
+  return Array.from(
+    { length: safeLimit },
+    (_, index) =>
+      scienceDiscoveries[
+        (start + index) % scienceDiscoveries.length
+      ]
+  );
+}
+
+
+// ========================================
+// EXPORT DATA AND HELPER FUNCTIONS
+// ========================================
+
+if (typeof module !== "undefined" && module.exports) {
+  // Node.js / testing
   module.exports = scienceDiscoveries;
+
+  module.exports.getDiscoveryById =
+    getDiscoveryById;
+
+  module.exports.getRelatedDiscoveries =
+    getRelatedDiscoveries;
+
+  module.exports.getDailyDiscoveries =
+    getDailyDiscoveries;
+
 } else {
-  window.scienceDiscoveries = scienceDiscoveries;
-                }
+  // Browser
+  window.scienceDiscoveries =
+    scienceDiscoveries;
+
+  window.getDiscoveryById =
+    getDiscoveryById;
+
+  window.getRelatedDiscoveries =
+    getRelatedDiscoveries;
+
+  window.getDailyDiscoveries =
+    getDailyDiscoveries;
+}
