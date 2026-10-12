@@ -750,7 +750,7 @@ section{padding:16px 0}
 </div>
 
 <div class="toast" id="toast"></div>
-
+<script src="data/science-is-everywhere.js"></script>
 <script>
 /* ============================================================
    SCIENCE BEYOND THE TEXTBOOK — SINGLE FILE HOMEPAGE
@@ -865,17 +865,70 @@ const everydayScience = [
   {icon:"🌱", en:"Plants", hi:"पौधे", link:"biology/plants.html", image:""}
 ];
 
-function renderEveryday(){
+/* =========================================================
+   SCIENCE IS EVERYWHERE
+   Homepage visual unchanged — data comes from the
+   dedicated discovery database.
+   ========================================================= */
+
+function renderEveryday() {
   const row = document.getElementById("everyRow");
-  row.innerHTML = everydayScience.map(item => `
-    <a class="every-item" href="${item.link}">
-      <div class="every-img">
-        ${item.image ? `<img src="${item.image}" alt="${item.en}" style="width:100%;height:100%;object-fit:cover;border-radius:50%">` : item.icon}
-      </div>
-      <strong>${currentLanguage === "hi" ? item.hi : item.en}</strong>
-      ${item.image ? "" : '<div class="placeholder-note">image later</div>'}
-    </a>
-  `).join("");
+
+  if (!row || !Array.isArray(window.scienceDiscoveries)) {
+    if (row) {
+      row.innerHTML = "";
+    }
+    console.error("Science Is Everywhere data could not be loaded.");
+    return;
+  }
+
+  const discoveries = window.scienceDiscoveries;
+
+  // Stable daily selection: the same date shows the same 8 topics.
+  const dateKey = new Date().toLocaleDateString("en-CA");
+
+  let seed = 0;
+  for (let i = 0; i < dateKey.length; i++) {
+    seed = (seed * 31 + dateKey.charCodeAt(i)) >>> 0;
+  }
+
+  function random() {
+    seed = (seed * 1664525 + 1013904223) >>> 0;
+    return seed / 4294967296;
+  }
+
+  // Copy the data before shuffling.
+  const shuffled = [...discoveries];
+
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+
+  const todaysDiscoveries = shuffled.slice(0, 8);
+
+  row.innerHTML = todaysDiscoveries.map(item => {
+    const title = currentLanguage === "hi"
+      ? item.titleHi
+      : item.titleEn;
+
+    const icon = item.icon || "🔬";
+
+    return `
+      <a
+        class="every-item"
+        href="science-is-everywhere/index.html?id=${encodeURIComponent(item.id)}"
+        aria-label="${title}"
+        title="${title}"
+      >
+        <div class="every-img" aria-hidden="true">
+          ${icon}
+        </div>
+
+        <strong>${title}</strong>
+      </a>
+    `;
+  }).join("");
 }
 renderEveryday();
 
@@ -915,5 +968,6 @@ if(window.matchMedia("(prefers-reduced-motion: reduce)").matches){
   document.documentElement.style.scrollBehavior = "auto";
 }
 </script>
+  <script src="data/science-is-everywhere.js"></script>
 </body>
 </html>
