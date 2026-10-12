@@ -1,5 +1,5 @@
 // science-is-everywhere.js
-// Data for Science Is Everywhere – 32 discoveries (from Batches 1–8)
+// Data for Science Is Everywhere – 32 bilingual science discoveries
 
 const scienceDiscoveries = [
   // Batch 1 – Physics Around Us
@@ -724,6 +724,161 @@ const scienceDiscoveries = [
     },
     relatedIds: ["mirror-reflection", "rainbow", "eyeglasses", "smartphone"],
     visualType: "fibre-optic-total-internal-reflection"
+  },
+    // Additional Discovery – Light & Optics
+  {
+    id: "prism-dispersion",
+    category: "light-optics",
+    emoji: "🌈",
+
+    title: {
+      en: "How Does a Prism Split White Light?",
+      hi: "प्रिज़्म सफेद प्रकाश को अलग-अलग रंगों में कैसे बाँटता है?"
+    },
+
+    question: {
+      en: "White sunlight looks almost colourless. How can a glass prism reveal a spectrum of colours?",
+      hi: "सूर्य का सफेद प्रकाश लगभग रंगहीन दिखाई देता है। काँच का प्रिज़्म उसमें से कई रंग कैसे दिखाता है?"
+    },
+
+    intro: {
+      en: "White light contains a mixture of visible colours. When it passes through a triangular glass prism, the light changes direction because it travels at different speeds in air and glass. Different colours bend by slightly different amounts, so the white light spreads into a spectrum. Red usually bends less than violet in a typical glass prism.",
+      hi: "सफेद प्रकाश में दिखाई देने वाले कई रंग मिले होते हैं। जब यह त्रिकोणीय काँच के प्रिज़्म से गुजरता है, तो हवा और काँच में प्रकाश की चाल अलग होने के कारण उसकी दिशा बदलती है। अलग-अलग रंग थोड़ी अलग मात्रा में मुड़ते हैं, इसलिए सफेद प्रकाश रंगों के स्पेक्ट्रम में फैल जाता है। सामान्य काँच के प्रिज़्म में लाल रंग प्रायः बैंगनी रंग से कम मुड़ता है।"
+    },
+
+    thinkQuestion: {
+      en: "Why do different colours spread out after passing through a prism?",
+      hi: "प्रिज़्म से गुजरने के बाद अलग-अलग रंग एक-दूसरे से अलग क्यों हो जाते हैं?"
+    },
+
+    options: [
+      {
+        text: {
+          en: "Different colours bend by different amounts",
+          hi: "अलग-अलग रंग अलग मात्रा में मुड़ते हैं"
+        },
+        correct: true,
+        feedback: {
+          en: "Correct! Different wavelengths experience different refraction in the prism, spreading white light into a spectrum.",
+          hi: "सही! अलग-अलग तरंगदैर्घ्य के प्रकाश का प्रिज़्म में अपवर्तन अलग होता है, जिससे सफेद प्रकाश स्पेक्ट्रम में फैल जाता है।"
+        }
+      },
+      {
+        text: {
+          en: "The prism creates new colours from nothing",
+          hi: "प्रिज़्म बिना किसी कारण नए रंग बना देता है"
+        },
+        correct: false,
+        feedback: {
+          en: "The colours are already present in white light. The prism separates them.",
+          hi: "ये रंग पहले से ही सफेद प्रकाश में मौजूद होते हैं। प्रिज़्म उन्हें अलग करता है।"
+        }
+      },
+      {
+        text: {
+          en: "The glass absorbs every colour except red",
+          hi: "काँच लाल रंग को छोड़कर बाकी सभी रंग सोख लेता है"
+        },
+        correct: false,
+        feedback: {
+          en: "A suitable transparent prism transmits the visible light and refracts its colours by different amounts.",
+          hi: "उपयुक्त पारदर्शी प्रिज़्म दिखाई देने वाले प्रकाश को गुजरने देता है और अलग-अलग रंगों को अलग मात्रा में मोड़ता है।"
+        }
+      },
+      {
+        text: {
+          en: "Sound waves turn into colours inside the prism",
+          hi: "प्रिज़्म के अंदर ध्वनि तरंगें रंगों में बदल जाती हैं"
+        },
+        correct: false,
+        feedback: {
+          en: "A prism separates light; sound waves are not responsible for the spectrum.",
+          hi: "प्रिज़्म प्रकाश को अलग करता है; स्पेक्ट्रम बनने में ध्वनि तरंगों की भूमिका नहीं होती।"
+        }
+      }
+    ],
+
+    workingSteps: [
+      {
+        title: {
+          en: "White light enters",
+          hi: "सफेद प्रकाश प्रवेश करता है"
+        },
+        description: {
+          en: "A beam of white light reaches one sloping face of the transparent prism.",
+          hi: "सफेद प्रकाश की किरण पारदर्शी प्रिज़्म की एक तिरछी सतह पर पहुँचती है।"
+        }
+      },
+      {
+        title: {
+          en: "Light refracts",
+          hi: "प्रकाश का अपवर्तन होता है"
+        },
+        description: {
+          en: "The light changes direction as it enters the glass from air.",
+          hi: "हवा से काँच में प्रवेश करते समय प्रकाश की दिशा बदलती है।"
+        }
+      },
+      {
+        title: {
+          en: "Colours bend differently",
+          hi: "रंग अलग-अलग मात्रा में मुड़ते हैं"
+        },
+        description: {
+          en: "Different wavelengths of visible light refract by different amounts in the glass.",
+          hi: "काँच में दृश्य प्रकाश की अलग-अलग तरंगदैर्घ्य वाली किरणों का अपवर्तन अलग मात्रा में होता है।"
+        }
+      },
+      {
+        title: {
+          en: "A spectrum appears",
+          hi: "रंगों का स्पेक्ट्रम दिखाई देता है"
+        },
+        description: {
+          en: "The emerging light spreads into a band of colours, from red through orange, yellow, green, blue and indigo to violet.",
+          hi: "बाहर निकलने वाला प्रकाश रंगों की पट्टी में फैल जाता है—लाल, नारंगी, पीला, हरा, नीला, जामुनी और बैंगनी।"
+        }
+      }
+    ],
+
+    scienceBehind: {
+      en: "Dispersion occurs because a material's refractive index depends on the wavelength of light. When white light passes through a prism, different wavelengths change direction by different amounts at the prism surfaces. The colours spread out and can be observed as a spectrum. A rainbow forms through a different optical process involving refraction, internal reflection and dispersion in water droplets.",
+      hi: "प्रकाश का वर्ण-विक्षेपण इसलिए होता है क्योंकि किसी पदार्थ का अपवर्तनांक प्रकाश की तरंगदैर्घ्य पर निर्भर करता है। जब सफेद प्रकाश प्रिज़्म से गुजरता है, तो अलग-अलग तरंगदैर्घ्य की किरणों की दिशा प्रिज़्म की सतहों पर अलग मात्रा में बदलती है। इससे रंग अलग-अलग दिखाई देने लगते हैं और स्पेक्ट्रम बनता है। इंद्रधनुष एक अलग प्रकाशीय प्रक्रिया से बनता है, जिसमें पानी की बूँदों में अपवर्तन, आंतरिक परावर्तन और वर्ण-विक्षेपण शामिल होते हैं।"
+    },
+
+    realLifeUses: [
+      {
+        en: "Prisms and related optical components are used in scientific instruments to separate or redirect light.",
+        hi: "प्रिज़्म और उससे संबंधित प्रकाशीय उपकरणों का उपयोग वैज्ञानिक यंत्रों में प्रकाश को अलग करने या उसकी दिशा बदलने के लिए किया जाता है।"
+      },
+      {
+        en: "Spectroscopy helps scientists study the light emitted or absorbed by materials.",
+        hi: "स्पेक्ट्रोस्कोपी वैज्ञानिकों को पदार्थों द्वारा उत्सर्जित या अवशोषित प्रकाश का अध्ययन करने में मदद करती है।"
+      },
+      {
+        en: "Dispersion helps explain how white light can separate into colours in optical demonstrations.",
+        hi: "वर्ण-विक्षेपण यह समझाने में मदद करता है कि प्रकाशीय प्रयोगों में सफेद प्रकाश अलग-अलग रंगों में कैसे बँट सकता है।"
+      }
+    ],
+
+    didYouKnow: {
+      en: "A prism does not add colours to white light. It separates colours that are already present in the light.",
+      hi: "प्रिज़्म सफेद प्रकाश में नए रंग नहीं जोड़ता। वह उन रंगों को अलग करता है जो पहले से ही प्रकाश में मौजूद होते हैं।"
+    },
+
+    experiment: {
+      en: "With adult supervision, shine a low-power white flashlight through a transparent prism onto a white sheet of paper in a dim room. Adjust the angle and observe whether a band of colours appears. Never look directly at the Sun through a prism, and never direct concentrated sunlight into anyone's eyes.",
+      hi: "किसी वयस्क की देखरेख में, कम शक्ति वाली सफेद टॉर्च की रोशनी को पारदर्शी प्रिज़्म से गुजारकर कम रोशनी वाले कमरे में सफेद कागज़ पर डालें। कोण बदलकर देखें कि रंगों की पट्टी दिखाई देती है या नहीं। प्रिज़्म से सूर्य को सीधे कभी न देखें और केंद्रित सूर्यप्रकाश किसी की आँखों पर न डालें।"
+    },
+
+    relatedIds: [
+      "rainbow",
+      "mirror-reflection",
+      "eyeglasses",
+      "fibre-optic-internet"
+    ],
+
+    visualType: "prism-white-light-dispersion"
   },
   // Batch 5 – Electricity & Magnetism Around Us
   {
