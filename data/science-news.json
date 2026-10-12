@@ -1,6 +1,156 @@
 {
-  "lastUpdated": "2026-10-11T08:59:55.205652+00:00",
+  "lastUpdated": "2026-10-12T09:20:28.900582+00:00",
   "articles": [
+    {
+      "title": "OGLE-2016-BLG-0523: A Low-mass Brown Dwarf or super-Jupiter in a $>100$ au Orbit",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-09",
+      "summary": "To search for very wide-orbit binary-lens events, we cross-match microlensing events detected by OGLE-IV and KMTNet between 2011 and 2024. After removing contaminants from variable stars, we identify OGLE-2016-BLG-0523 as a microlensing event showing two short-lived bumps in its light curve, with the two separated by 8.36 yr. We investigate three scenarios to explain the two bumps, including a binary-lens single-source (2L1S), a single-lens binary-source (1L2S), and two unrelated single-lens single-source events (2$\\times$1L1S). The 1L2S interpretation is excluded due to its poorer fit to the data, while the 2$\\times$1L1S scenario is disfavored by the low event rate, unphysical total source ",
+      "url": "http://arxiv.org/abs/2610.13942v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Adiabatic evolution of hadronic neutron stars",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-09",
+      "summary": "In this paper we compute several structural properties of static and rotating neutron stars, considering both rigid and differential rotation. To this end, we use a finite-temperature beta-stable equation of state (EOS) extending the zero-temperature hadronic EOS derived by Fortin et al. (2017). We account for the formation of hyperons and the presence of a neutrino-trapped component. Our goal is to provide insights into the long-term evolution of a protoneutron star (PNS) formed after a core-collapse supernova (CCSN) or a remnant resulting from a binary neutron star merger (BNSM). The EOS is derived using a relativistic mean-field quantum many-body theory within the Hartree approximation. C",
+      "url": "http://arxiv.org/abs/2610.13926v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Impact of ab initio E1 strength on neutron capture rates along the nickel isotopic chain",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-09",
+      "summary": "Nucleosynthesis simulations of the r-process require neutron capture rates for neutron-rich nuclei, many of which lie beyond experimental reach. Predicting these rates relies on theoretical calculations of the low-energy electric dipole (E1) strength near the neutron threshold. We present the first ab initio computation of the E1 strength along the nickel isotopic chain, for $^{58}$Ni and the even-even isotopes $^{68-80}$Ni. The E1 strength is obtained with the Lorentz integral transform coupled-cluster (LIT-CC) method, extended to axially symmetric reference states to reach open-shell nuclei, using two- and three-nucleon interactions from chiral effective field theory. The approach is bench",
+      "url": "http://arxiv.org/abs/2610.13868v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Perpendicular transport in isotropic magnetic turbulence. The role of stochastic drifts",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-09",
+      "summary": "In cosmic ray propagation through turbulent magnetic fields, transport perpendicular to the mean field plays an important role in various astrophysical environments. Numerical simulations have shown that parallel and perpendicular diffusion coefficients exhibit different energy scalings, causing their ratio to increase with energy, but a comprehensive theoretical explanation remains elusive. Here, we investigate perpendicular diffusion using test particle simulations in synthetic isotropic turbulence spanning 6-7 orders of magnitude in wavenumber, together with a theoretical extension of nonlinear guiding center theory that incorporates stochastic drifts. Our approach combines field line ran",
+      "url": "http://arxiv.org/abs/2610.13865v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "TeV Gamma-Ray Emission in the DA 495 Region from HAWC Observations of J1952+2924, J1954+2837, and J1958+2848",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-09",
+      "summary": "Previous observations of the DA 495 region, which contains the pulsar wind nebula (PWN) DA 495 and other very-high-energy (VHE; $>100~\\textrm{GeV}$) gamma-ray emitters, showed inconsistent results across different VHE experiments, including differences in the measured flux of DA 495 and in the number of reported sources. Our new dedicated analysis using 3071 days of HAWC data resolves these discrepancies. We identify three extended sources, HAWC J1952+2924 (DA 495), HAWC J1954+2837, and HAWC J1958+2848, all with curved spectra, and find a hint of a fourth source. For DA 495, a multi-wavelength analysis, including our results, radio, X-ray, and other gamma-ray data, reveals that its extended ",
+      "url": "http://arxiv.org/abs/2610.13771v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "The origin of the large heavy element contents of warm Jupiters",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-09",
+      "summary": "Planet interior models have revealed that warm Jupiters should harbor large heavy element masses (up to 30-40% of the planetary mass). Within the pebble drift and evaporation scenario, inward drifting pebbles can evaporate and enrich the inner disc with vapor to super-stellar values, accreteable by giant planets. As H$_2$O ice evaporates in the inner disc, while CO$_2$, CH$_4$ and CO evaporate in the outer disc, the enrichment of the disc with vapor decreases with increasing orbital distance. We use the chemcomp code to model the migration and growth of planets via pebble and gas accretion in discs around stars with different masses and discs with different sizes. We show (i) that pebble dri",
+      "url": "http://arxiv.org/abs/2610.13762v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Assessing PLATO's Discovery Potential across Different Observing Strategies",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-09",
+      "summary": "The PLATO mission, planned to launch in spring 2027, will observe a fixed Southern field, LOPS2, for at least 2 years with the goal of discovering and deriving precise parameters for planets as small as Earth around FGK dwarfs and sub-giants. Afterwards, PLATO could continue to monitor the same field or move to a Northern field, LOPN1, overlapping with the Kepler field. We assess these two observing strategies in terms of sensitivity of detecting small and long period planets, and subsequently we estimate yields for both observing strategies. Within this we account for including the Kepler data in the LOPN1 field, monitoring of up to 8 years of the LOPS2 field, and the sensitivity improvemen",
+      "url": "http://arxiv.org/abs/2610.13686v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "How long could volcanic plumes persist in the Venus atmosphere?",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-09",
+      "summary": "Resolving the ambiguity surrounding current Venusian volcanism is a primary objective for upcoming missions like EnVision and VERITAS. This study uses the Venus Planetary Climate Model to simulate the dispersal and detectability of volcanic plumes containing water vapour (H2O), hydrogen chloride (HCl), carbon monoxide (CO), and carbonyl sulphide (OCS) within a three-dimensional atmospheric environment. We model localised gas enhancements at altitudes probed by nightside spectral windows (8.62, 20.91, and 35.45 km above surface). Results indicate that plumes persist longest in the deep atmosphere (8.62 km) at equatorial latitudes, where H2O enhancements remain distinguishable from low backgro",
+      "url": "http://arxiv.org/abs/2610.13641v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "The Hydrological Cycle and Circulation of Tidally-Locked Planets with a Finite Moisture Inventory",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-09",
+      "summary": "Tidally-locked planets express a range of climate regimes distinct from those found in our solar system. Their atmospheres are often dominated by planetary-wide overturning circulations and super- rotating jets. In this paper we explore the hydrological cycle of such planets and how it might depend on the total inventory of condensate. To this end we use a set of idealised GCM simulations to probe the response of the hydrological cycle to the surface moisture budget in their atmospheres. We find that for low moisture inventories the climate quickly develops a barren day side and a moist night side where the moisture is trapped, as might be expected. For higher moisture inventories the drying",
+      "url": "http://arxiv.org/abs/2610.13517v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "The School on Gravity: from motion to commotion",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-09",
+      "summary": "Understanding the gravitational interaction is one of the great scientific endeavors of the 21st century. The Nobel Prize-winning discovery of gravitational waves in 2015, and subsequent detections by the LIGO-Virgo-KAGRA Collaboration, have marked a revolutionary step forward in physics and astrophysics by opening an entirely new window for exploring the Universe. Future upgrades to these detectors, along with upcoming facilities such as LISA, the Einstein Telescope, and radio and optical instruments, promise other breakthrough discoveries that the next generation of scientists will need to interpret. The School on Gravity (22--26 June 2026, Copenhagen) aimed to introduce junior scientists-",
+      "url": "http://arxiv.org/abs/2610.13514v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Fermentation heterotrophy can reproduce Enceladus's H2 and CH4 under limited serpentiniaztion",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-09",
+      "summary": "Saturn's icy moon Enceladus is a prime target in the search for life beyond Earth. Abundant H2 and CH4 in Enceladus's south-polar plume have been shown to be consistent with hydrogenotrophic methanogens feeding on products of long-lived serpentinization. However, thermo-permeability models make sustained core-wide H2 production by serpentinization uncertain. We therefore explore whether an alternative metabolism based on fermentation-driven heterotrophy could reproduce Cassini H2 and CH4 escape fluxes under limited serpentinization. We develop a coupled ecosystem model of fermentation and methanogenesis in a hydrothermal-ocean-plume framework, using glycine as a proxy for amino-acid-like fer",
+      "url": "http://arxiv.org/abs/2610.13434v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Flip-Flop Shocks and Tori in Bondi-Hoyle-Lyttleton Accretion onto Rotating Kerr-Weyl Black Holes and Their Quasi-Periodic Variability",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-09",
+      "summary": "We present GRHD simulations of Bondi-Hoyle-Lyttleton accretion onto a rotating black hole in Weyl conformal gravity, described by the Kerr-Weyl metric. The equatorial flow is evolved for spins a=0.9M and a=0.5M and several Weyl coefficients, which enter through an effective curvature parameter k, and is compared with Kerr runs sharing the same setup. For the k considered, the horizon, ISCO and test-particle frequencies differ from Kerr by at most ~2%. However, the curvature term grows as kr^2 and acts at the accretion radius R_acc. The flow is controlled by one quantity, eta=|k|R_acc^3/M, the ratio of curvature-induced to Newtonian acceleration at R_acc. For eta<~0.03 a stable shock cone for",
+      "url": "http://arxiv.org/abs/2610.13384v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Extreme mass ratio inspirals from the Hills mechanism, The eccentricity distribution of Hills EMRIs in LISA",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-09",
+      "summary": "Extreme mass ratio inspirals (EMRIs) are promising sources for future space-based gravitational-wave detectors. We investigate EMRIs produced through the Hills mechanism, in which a stellar-mass black-hole binary (BBH) is tidally separated by a massive black hole (MBH), leaving one component bound to it. We present the first self-consistent modelling of this channel, combining an orbit-averaged Fokker-Planck treatment of the nuclear star cluster (NSC), three-body modelling of the binary-MBH encounter, Monte Carlo evolution of captured black holes (BHs), and fully relativistic EMRI trajectories to follow the evolution from binary supply down to final plunge. We find that Hills EMRIs are subst",
+      "url": "http://arxiv.org/abs/2610.13294v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Resistive alignment of a black-hole magnetosphere",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-09",
+      "summary": "Recent numerical simulations have shown that black-hole magnetospheres evolve rapidly toward alignment between the magnetic axis and spin axis but the physical origin of this process has remained unclear. We develop an analytic theory of this alignment within resistive relativistic magnetohydrodynamics. Taking the slow-spin Blandford-Znajek monopole solution as the exterior magnetic field, we reduce the induction equation to a relaxation equation for the current-sheet inclination angle. Our analysis shows that alignment results from second-order spin effects in the Blandford-Znajek solution combined with explicit resistive dissipation. We test this prediction using resistive-GRMHD simulation",
+      "url": "http://arxiv.org/abs/2610.13288v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Towards a coupled activity-fallback model for comets I) 67P/Churyumov-Gerasimenko's water activity from a microphysics model with dynamic dust-depth",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-09",
+      "summary": "We apply a two-layer thermophysical model, with water sublimating from below a dust-crust with dynamically varying depth, to simulate the water outgassing rate, dust-ejections, and non-gravitational forces and torques of comet 67P/Churyumov-Gerasimenko. The dust-depth is determined at each time-step by the balance of dehydration and subsurface pressure, leading to alternating ejections and crust build-up. This model is the first stage of implementing a fully coupled activity-fallback model that self-consistently incorporates dust-fallback into the ejection depth calculation, but already a number of conclusions can be drawn from these results. The two-layer model with only dehydration and eje",
+      "url": "http://arxiv.org/abs/2610.13230v1",
+      "image": "",
+      "type": "research"
+    },
     {
       "title": "Disk Structure May Determine AGN Variability and Explain the Accretion Disk Size Problem: No Broad Line Region Required",
       "category": "Scientific Research",
@@ -448,156 +598,6 @@
       "publishedAt": "2026 Oct 8",
       "summary": "dual inhibition of jak and mek suppresses t cell acute lymphoblastic leukemia induced by mutant il7r and rasgrp1 overexpression",
       "url": "https://pubmed.ncbi.nlm.nih.gov/42845058/",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Validation of the International Working Group 2023 response criteria for higher risk myelodysplastic syndromes/neoplasms using the International Consortium for Myelodysplastic Syndromes VALIDATE database and a randomized phase III trial.",
-      "category": "Medical Research",
-      "source": "PubMed",
-      "publishedAt": "2026 Oct 8",
-      "summary": "validation of the international working group 2023 response criteria for higher risk myelodysplastic syndromes neoplasms using the international consortium for myelodysplastic syndromes validate database and a randomized phase iii trial",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42845057/",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Circadian biology in brain cancer diagnosis and treatment.",
-      "category": "Medical Research",
-      "source": "PubMed",
-      "publishedAt": "2026 Oct 8",
-      "summary": "circadian biology in brain cancer diagnosis and treatment",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42844996/",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Visibility of the Korean National Health Information Portal across search engines and generative artificial intelligence platforms: a repeated cross-sectional study.",
-      "category": "Medical Research",
-      "source": "PubMed",
-      "publishedAt": "2026 Oct 8",
-      "summary": "visibility of the korean national health information portal across search engines and generative artificial intelligence platforms a repeated cross sectional study",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42844963/",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Characterization of Bubble Cloud Formation and Tissue Ablation Using a High-Frequency Endoscopic Histotripsy System.",
-      "category": "Medical Research",
-      "source": "PubMed",
-      "publishedAt": "2026 Oct 8",
-      "summary": "characterization of bubble cloud formation and tissue ablation using a high frequency endoscopic histotripsy system",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42850155/",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Phosphorylation-driven rapid intrafibrillar mineralization: A biomimetic strategy for dentin remineralization.",
-      "category": "Medical Research",
-      "source": "PubMed",
-      "publishedAt": "2026 Oct 8",
-      "summary": "phosphorylation driven rapid intrafibrillar mineralization a biomimetic strategy for dentin remineralization",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42850100/",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Decoding the Direction of Bistable Illusory Motion from Source-Reconstructed MEG Signals.",
-      "category": "Medical Research",
-      "source": "PubMed",
-      "publishedAt": "2026 Oct 8",
-      "summary": "decoding the direction of bistable illusory motion from source reconstructed meg signals",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42850074/",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Patient-Reported Experience and Preferences with Long-Axial-Field-of-View and Total-Body PET/CT: A Prospective, Multicenter Cross-Sectional Survey.",
-      "category": "Medical Research",
-      "source": "PubMed",
-      "publishedAt": "2026 Oct 8",
-      "summary": "patient reported experience and preferences with long axial field of view and total body pet ct a prospective multicenter cross sectional survey",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42850036/",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "How commercial \"agenda laundering\" is shaping critical care.",
-      "category": "Medical Research",
-      "source": "PubMed",
-      "publishedAt": "2026 Oct 8",
-      "summary": "how commercial agenda laundering is shaping critical care",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42849925/",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Stereotactic body radiation therapy enriches mediators of humoral immune activity in metastatic renal cell carcinoma.",
-      "category": "Medical Research",
-      "source": "PubMed",
-      "publishedAt": "2026 Oct 8",
-      "summary": "stereotactic body radiation therapy enriches mediators of humoral immune activity in metastatic renal cell carcinoma",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42849919/",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Iridium-Based Nanomaterials: Precise Fabrication, Structural and Electronic Modulation, and Biomedical Applications.",
-      "category": "Medical Research",
-      "source": "PubMed",
-      "publishedAt": "2026 Oct 7",
-      "summary": "iridium based nanomaterials precise fabrication structural and electronic modulation and biomedical applications",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42844876/",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Rapid Isothermal Detection of Heavy Metals via Transcription-Factor-Gated DNA Strand Synthesis.",
-      "category": "Medical Research",
-      "source": "PubMed",
-      "publishedAt": "2026 Oct 1",
-      "summary": "rapid isothermal detection of heavy metals via transcription factor gated dna strand synthesis",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42859052/",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Risk factors for implant-related infections after surgery for proximal femur fractures: retrospective analysis of 2572 patients.",
-      "category": "Medical Research",
-      "source": "PubMed",
-      "publishedAt": "2026 Oct 1",
-      "summary": "risk factors for implant related infections after surgery for proximal femur fractures retrospective analysis of 2572 patients",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42858952/",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "NOD1 contributes to reduced postoperative memory performance induced by preoperative sleep deprivation and anesthesia/surgery in mice.",
-      "category": "Medical Research",
-      "source": "PubMed",
-      "publishedAt": "2026 Oct 1",
-      "summary": "nod1 contributes to reduced postoperative memory performance induced by preoperative sleep deprivation and anesthesia surgery in mice",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42858945/",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Selective vulnerability of the spinal cord in a rat model of asphyxia-induced cardiac arrest.",
-      "category": "Medical Research",
-      "source": "PubMed",
-      "publishedAt": "2026 Oct 1",
-      "summary": "selective vulnerability of the spinal cord in a rat model of asphyxia induced cardiac arrest",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42858906/",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Uncertainty-aware auto-segmentation enables adaptive radiotherapy planning of liver metastases.",
-      "category": "Medical Research",
-      "source": "PubMed",
-      "publishedAt": "2026 Oct 1",
-      "summary": "uncertainty aware auto segmentation enables adaptive radiotherapy planning of liver metastases",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42858856/",
       "image": "",
       "type": "research"
     }
