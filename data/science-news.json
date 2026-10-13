@@ -1,6 +1,16 @@
 {
-  "lastUpdated": "2026-10-12T09:20:28.900582+00:00",
+  "lastUpdated": "2026-10-13T09:30:32.948681+00:00",
   "articles": [
+    {
+      "title": "Esc2 and Rad57 contribute to RNA polymerase II distribution at highly transcribed genes.",
+      "category": "Medical Research",
+      "source": "PubMed",
+      "publishedAt": "2027 Jan",
+      "summary": "esc2 and rad57 contribute to rna polymerase ii distribution at highly transcribed genes",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42864262/",
+      "image": "",
+      "type": "research"
+    },
     {
       "title": "OGLE-2016-BLG-0523: A Low-mass Brown Dwarf or super-Jupiter in a $>100$ au Orbit",
       "category": "Scientific Research",
@@ -472,6 +482,16 @@
       "type": "research"
     },
     {
+      "title": "Interpretation and reporting of coronary computed tomographic angiography (2026 update): An expert consensus document of the Society of Cardiovascular Computed Tomography (SCCT).",
+      "category": "Medical Research",
+      "source": "PubMed",
+      "publishedAt": "2026 Sep 2",
+      "summary": "interpretation and reporting of coronary computed tomographic angiography 2026 update an expert consensus document of the society of cardiovascular computed tomography scct",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42864251/",
+      "image": "",
+      "type": "research"
+    },
+    {
       "title": "Evaluating the Impact of Ferritin Testing: Iron Status of the Donor Pool, Changes to Hemoglobin Deferrals, and Effects on Product Availability.",
       "category": "Medical Research",
       "source": "PubMed",
@@ -578,26 +598,6 @@
       "publishedAt": "2026 Oct 9",
       "summary": "long term safety and efficacy of once weekly lonapegsomatropin in adults with growth hormone deficiency results from a 52 week open label extension trial",
       "url": "https://pubmed.ncbi.nlm.nih.gov/42855131/",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Nonclinical Development of Oligonucleotide-Based Therapeutics: Insights from an IQ DruSafe ONT Working Group Survey.",
-      "category": "Medical Research",
-      "source": "PubMed",
-      "publishedAt": "2026 Oct 8",
-      "summary": "nonclinical development of oligonucleotide based therapeutics insights from an iq drusafe ont working group survey",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42845133/",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Dual inhibition of JAK and MEK suppresses T-cell acute lymphoblastic leukemia induced by mutant IL7R and RASGRP1 overexpression.",
-      "category": "Medical Research",
-      "source": "PubMed",
-      "publishedAt": "2026 Oct 8",
-      "summary": "dual inhibition of jak and mek suppresses t cell acute lymphoblastic leukemia induced by mutant il7r and rasgrp1 overexpression",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42845058/",
       "image": "",
       "type": "research"
     }
