@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-13T09:30:32.948681+00:00",
+  "lastUpdated": "2026-10-14T07:44:13.334572+00:00",
   "articles": [
     {
       "title": "Esc2 and Rad57 contribute to RNA polymerase II distribution at highly transcribed genes.",
@@ -8,6 +8,156 @@
       "publishedAt": "2027 Jan",
       "summary": "esc2 and rad57 contribute to rna polymerase ii distribution at highly transcribed genes",
       "url": "https://pubmed.ncbi.nlm.nih.gov/42864262/",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Simulations of the Evolving Ozone Layer: Implications for the Early Earth, Exoplanets, and the Search For Life",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-13",
+      "summary": "Over 4 billion years, Earth's atmosphere has been transformed from a composition devoid of molecular oxygen (O$_2$) to one where O$_2$ is now 21% of our modern atmosphere by volume. With high quantities of O$_2$, an ozone (O$_3$) layer can form and partially shield the surface from biologically harmful ultraviolet radiation (UV). The evolution of the O$_3$ layer has previously been simulated under the modern Sun by independent groups with separate models. Here, we present simulations of Earth's atmosphere from four open-source one-dimensional (1D) photochemical models and a 3D chemistry-climate model, focussing on O$_3$. We find that the O$_3$ layer thickness exhibits a clear deviation betwe",
+      "url": "http://arxiv.org/abs/2610.18864v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Seeing Double: The Theory Defying Twin Flares of TDE 2022dbl",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-13",
+      "summary": "Partial tidal disruption events, in which a star survives a close passage by a supermassive black hole and may be disrupted again on a subsequent encounter, provide a unique probe of supermassive black hole properties and accretion physics. We examine TDE 2022dbl, a partial tidal disruption event candidate that exhibits two separate UV/optical flares, using 11 new optical spectra, updated UV/optical photometry, and a Keck-II/ESI host-galaxy spectrum. We trace the evolution of the prominent blended N III + He II feature across both flares and find that the blend evolves from N III-dominated to He II-dominated emission, which may reflect changing ionization conditions and a declining efficienc",
+      "url": "http://arxiv.org/abs/2610.18840v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Peering into the Midplane of the DM Tau Disk using N2H+ and DCO+",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-13",
+      "summary": "Planets form in the midplanes of protoplanetary disks, thus investigating the properties of the midplane region can shed light on the physical and chemical processes governing the evolution of planetary systems. In this work, we study the conditions near the midplane of the disk around DM Tau using 0.\"3 (~43 au) ALMA observations of N2H+ (J = 3 - 2) and DCO+ (J = 4 - 3). The radial profiles reveal that DCO+ is centrally peaked, with a depression near 120 au, while N2H+ exhibits a central depression and a peak near 100 au. In addition, both molecules display extended emission out to 400 au. Using parametric models to interpret our observations, we note that a fiducial model based on CO-derive",
+      "url": "http://arxiv.org/abs/2610.18821v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "A Spatial Map of the Atmospheric Limb of a Hot Jupiter",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-13",
+      "summary": "Planets are inherently three-dimensional objects shaped by their thermal structure and dynamics. Observations of transiting exoplanets have begun to uncover this three-dimensional nature, with JWST measuring their dayside atmosphere structure with eclipse mapping, and exploring spectroscopic asymmetries in the limbs of planets during transit. We apply the novel mapping method of transmission strings to the hot Jupiter WASP-17b. With this method, we are not only able to extract hemispheric limb asymmetries from east-to-west, but can map equator-to-pole variations around the transmitting atmosphere as a function of angle, spanning 0.6-12$μ$m. We find a clear transition in the thermal scale hei",
+      "url": "http://arxiv.org/abs/2610.18806v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Evidence for Distinct One-Off and Repeating Subpopulations in CHIME/FRB Catalog 2",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-13",
+      "summary": "The Canadian Hydrogen Intensity Mapping Experiment (CHIME) has published its second catalog of 3,641 fast radio bursts (FRBs). While this sample includes 981 bursts from 83 repeating sources, only 2.3% of CHIME FRBs are observed to repeat. This raises the question of whether the FRB population truly consists of a single repeating population or includes a distinct subpopulation of one-off sources. We apply Simulation Based Inference (SBI), a likelihood-free machine learning framework, to model the CHIME/FRB Catalog 2 dataset, testing eight FRB population models, half of which include a subpopulation of truly one-off sources. The current catalog strongly and decisively favors models including ",
+      "url": "http://arxiv.org/abs/2610.18710v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "The compact jets of the black hole X-ray binary Swift J1753.5-0127 during its 2023-2024 outburst",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-13",
+      "summary": "X-ray binaries are excellent laboratories to study the coupling between accretion and ejection phenomena around compact objects through multiwavelength observations. Swift J1753.5-0127 is a black hole low-mass X-ray binary discovered in outburst in 2005 that remained active for 11 years, followed by two mini-outbursts. We investigate the behavior of the compact jets of Swift J1753.5-0127 during its 2023-2024 outburst. We report a dense multiwavelength monitoring in the radio, NIR/optical/UV and X-ray bands. Using new and archival luminosity measurements, we construct a refined, smoother radio/X-ray plane that covers the steep/outlier and shallow/transition branches of the radio/X-ray correla",
+      "url": "http://arxiv.org/abs/2610.18687v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Multimessenger Constraints on Nuclear Acceleration in Neutrino-Emitting Seyfert Coronae",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-13",
+      "summary": "High-energy neutrinos from Seyfert galaxies probe particle acceleration near supermassive black holes, but the accelerated nuclear composition remains uncertain. We connect stochastic acceleration to nuclear and radiative cascades to assess nuclear contributions. Acceleration and losses limit the energy per nucleon available to nuclear cascades; without secondary reacceleration, fragmentation cannot raise this scale. For NGC~1068, joint neutrino and gamma-ray constraints depend on the nuclear mixture: helium-dominated injection permits larger nuclear power fractions than the heavier mixtures considered. For the harder candidate {neutrino} spectrum of NGC~7469, the adopted model yields more e",
+      "url": "http://arxiv.org/abs/2610.18671v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "The ePESSTO+ census of ZTF nuclear transients. I. What flares in galactic nuclei?",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-13",
+      "summary": "Transients in galactic nuclei arise from distinct processes, only some of which trace the supermassive black hole (SMBH). These include tidal disruption events (TDEs), changing-look active galactic nuclei, Bowen fluorescence flares (BFFs) and ambiguous nuclear transients, alongside supernovae that appear nuclear but are unrelated to the SMBH. Reliable classification requires spectroscopy, which will not scale to the alert volumes of the Legacy Survey of Space and Time (LSST). We aim to characterise the population of nuclear transients, to identify early observables capable of distinguishing SMBH-related flares, and TDEs in particular, from the dominant supernova background, and to assess the",
+      "url": "http://arxiv.org/abs/2610.18633v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Star spots mimic the proposed abundance signatures of planet formation",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-13",
+      "summary": "Trends with stellar elemental abundances and condensation temperature have been proposed as a possible tracer of rocky planet formation. Here we present an alternative explanation, where we show that stellar activity (star spots) can also cause apparent abundance changes in refractory elements preferentially over volatile elements. This effect arises naturally from atomic physics: refractory (rocky; high-$T_c$) elements preferentially have low first-ionization potentials, with strong transitions that are most sensitive to the cooler, magnetically-perturbed spot conditions, making any spot-induced change in line strength correlated with $T_c$. We re-examine literature on Sun-like stars in the",
+      "url": "http://arxiv.org/abs/2610.18509v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Black hole spin-mass correlation and accretion disks at birth stage of dense star clusters",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-13",
+      "summary": "We review the accretion-driven channel of stellar black-hole growth and spin-up in gaseous star clusters, developed within the framework of our MSCA project \"protoBH\". Our detailed calculations involving semi-analytic modelling, dynamical and hydrodynamic simulations suggest that the growth and spin-up of initially low-mass stellar black holes is an integral element of the formation process of dense massive star clusters, such as the proto-globular clusters observed at high redshift. The black holes accrete residual gas, remaining from the first star formation event, and form accretion disks generated by gas angular momentum induced by the black-holes' own curved orbits. Assuming initial bla",
+      "url": "http://arxiv.org/abs/2610.18505v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Broadband non-thermal emission predictions based on 3D simulations of supernova explosions within active galactic nuclei jets",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-13",
+      "summary": "Thermonuclear and core-collapse supernovae are statistically expected to happen within extragalactic jets, as these jets cross the inner regions of their host galaxies, and supernova ejecta-jet interactions can potentially lead to strong non-thermal activity. We model the non-thermal emission from a supernova interacting with a jet on kiloparsec scales, using detailed numerical simulations of the interaction. Using a post-processing method, we applied a non-thermal model of the acceleration and transport of electron and their synchrotron and inverse Compton emissions, simplified and tuned for flexibility and computational speed, to the results of a three-dimensional relativistic hydrodynamic",
+      "url": "http://arxiv.org/abs/2610.18476v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Tidal Excitation of Relativistic Stars",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-13",
+      "summary": "How a relativistic star responds to a time-dependent tide has lacked a first-principles counterpart of the Newtonian normal-mode expansion. In general relativity, the tidal field is gauge sensitive, radiative modes are non-Hermitian and incomplete, and the direct and late-time responses are intrinsically nonmodal. In this work we present, to our knowledge, the first causal relativistic theory that treats all of these components on equal footing. We first develop the spectral decomposition of the retarded Green function of the matched stellar interior--Schwarzschild exterior, which classifies four separate regimes in time domain: acausal region, prompt wave, surface-reflected wave, and mode+t",
+      "url": "http://arxiv.org/abs/2610.18475v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Delving into the depths of NGC 3783 with XRISM VI. Evidence for a failed wind based on Fe xxv absorption line variability",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-13",
+      "summary": "NGC 3783 exhibits a prominent Fe XXV absorption trough in the time-averaged XRISM/Resolve spectrum. To investigate its short-term variability, we present a time-resolved analysis of the Fe XXV absorption line during the continuous 10-day observation. We divided the resolved absorption profile into five fixed velocity intervals and measured their normalized equivalent widths in 19 time-resolved spectra. Three velocity intervals exhibit significant equivalent-width (EW) variability. Two velocity intervals respond differently to low- and high-flux states with less emission line contamination. The time-dependent photoionisation modelling is unable to reproduce the most significant observed EW va",
+      "url": "http://arxiv.org/abs/2610.18429v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Reconstruction of Interstellar Cosmic Ray Anisotropy via Heliospheric Propagation Modeling and SVD Inversion",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-13",
+      "summary": "Ground-based experiments such as the IceCube Neutrino Observatory and the High-Altitude Water Cherenkov Gamma-Ray Observatory detect cosmic-ray anisotropy on Earth, but magnetic deflections within the heliosphere complicate interpretation. Understanding the original spatial distribution of cosmic rays in the interstellar medium requires modeling particle propagation across the heliospheric boundary. We constructed a simulated transport model that backtracks antiprotons from Earth to the interstellar medium and maps spatial transfer probabilities across energies using HEALPix representations. Because our transfer matrices are singular, inversion relies on singular value decom- position regula",
+      "url": "http://arxiv.org/abs/2610.18384v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "On the Orbital Evolution of Giant Planet Pair Embedded in a Gaseous Disk. III. simultaneous gas accretion and the final mass ratio",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-13",
+      "summary": "Recent exoplanet surveys reveal a systematic trend in the mass ratios of giant planet pairs ($> 30 M_\\oplus$). Although the $M_{outer}/M_{inner}$ is broadly centered near unity, it exhibits a dependence on orbital separation. Compact pairs tend to have comparable masses, whereas widely separated pairs show outer-heavy configurations. To investigate the origin of this trend, we perform two-dimensional hydrodynamic simulations that couple gas accretion and orbital migration of two giant planet embryos with initial masses of $15-30 M_\\oplus$. We explore the effects of disk viscosity, surface density slope, and initial mass ratio on the coupled evolution of planetary growth and migration. We fin",
+      "url": "http://arxiv.org/abs/2610.18368v1",
       "image": "",
       "type": "research"
     },
@@ -448,156 +598,6 @@
       "publishedAt": "2026-10-07",
       "summary": "We report the discovery of PALTA-1 b, a sub-Jupiter mass exoplanet candidate orbiting the nearby early-L dwarf DENIS-P J1253108-570924 (DE1253-57) located at a distance of ~17 pc. The exoplanet was discovered by monitoring the L dwarf's astrometric motion with FORS2 at the Very Large Telescope over more than eight years and characterising the deviations from the expected single-source motion. The estimated planet mass is between 0.54 MJup and 0.77 MJup, depending on the uncertain mass of the ultracool dwarf host. The system's mass ratio is about 0.010, and the relative separation is estimated at 1.6-3.4 au. If confirmed, PALTA-1 b would be one of the very few known examples of a giant planet",
       "url": "http://arxiv.org/abs/2610.09965v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "A faint dust ring beyond the compact disk of Sz 76",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-07",
-      "summary": "We report new ALMA Band 7 high-resolution ($\\sim$0.05$^{''}$) continuum and $^{12}\\text{CO}\\ (J=3\\text{--}2)$ observations of the disk around the young low-mass star Sz 76. Visibility-plane modeling reveals a previously undetected, faint outer dust ring centered at $\\sim$45 au surrounding the compact central disk. Including this low-surface-brightness feature increases the characteristic dust radius from $R_{\\text{dust,68}} \\approx 7$ au to $41$ au. Combined with an outer gas extent of $R_{\\text{CO,68}} \\approx 77$ au, the resulting gas-to-dust size ratio decreases from an extreme value of $\\sim$11 to $\\sim$2, placing Sz 76 in line with typical protoplanetary disks and contradicting a scenar",
-      "url": "http://arxiv.org/abs/2610.09881v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Sleep-dependent microglial functions in Alzheimer's disease.",
-      "category": "Medical Research",
-      "source": "PubMed",
-      "publishedAt": "2026 Sep 2",
-      "summary": "sleep dependent microglial functions in alzheimer s disease",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42850105/",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Integrating biology and mathematics to understand checkpoint immunotherapy.",
-      "category": "Medical Research",
-      "source": "PubMed",
-      "publishedAt": "2026 Sep 2",
-      "summary": "integrating biology and mathematics to understand checkpoint immunotherapy",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42850091/",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Interpretation and reporting of coronary computed tomographic angiography (2026 update): An expert consensus document of the Society of Cardiovascular Computed Tomography (SCCT).",
-      "category": "Medical Research",
-      "source": "PubMed",
-      "publishedAt": "2026 Sep 2",
-      "summary": "interpretation and reporting of coronary computed tomographic angiography 2026 update an expert consensus document of the society of cardiovascular computed tomography scct",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42864251/",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Evaluating the Impact of Ferritin Testing: Iron Status of the Donor Pool, Changes to Hemoglobin Deferrals, and Effects on Product Availability.",
-      "category": "Medical Research",
-      "source": "PubMed",
-      "publishedAt": "2026 Sep 1",
-      "summary": "evaluating the impact of ferritin testing iron status of the donor pool changes to hemoglobin deferrals and effects on product availability",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42850190/",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "A Prospective, Observational, Open-Label, Nonrandomized, Multicenter Study Measuring Functional Outcomes in a Novel Interspinous Stabilization Device in Patients With Low Back Pain: 12-Month Results for the REFINE Study.",
-      "category": "Medical Research",
-      "source": "PubMed",
-      "publishedAt": "2026 Oct 9",
-      "summary": "prospective observational open label nonrandomized multicenter study measuring functional outcomes in a novel interspinous stabilization device in patients with low back pain 12 month results for the refine study",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42855423/",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Cardiovascular magnetic resonance derived myocardial strain: applications, acquisition techniques, analysis, and reporting. A Scientific Statement of the Society for Cardiovascular Magnetic Resonance, Radiological Society of North America, and the European Association of Cardiovascular Imaging of the ESC.",
-      "category": "Medical Research",
-      "source": "PubMed",
-      "publishedAt": "2026 Oct 9",
-      "summary": "cardiovascular magnetic resonance derived myocardial strain applications acquisition techniques analysis and reporting a scientific statement of the society for cardiovascular magnetic resonance radiological society of north america and the european association of cardiovascular imaging of the esc",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42855356/",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Cross-Validation of Acoustic Roughness Index in Korean.",
-      "category": "Medical Research",
-      "source": "PubMed",
-      "publishedAt": "2026 Oct 9",
-      "summary": "cross validation of acoustic roughness index in korean",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42855341/",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Primary Ciliary Dyskinesia in Adults With Bronchiectasis: Diagnostic Yield of Genetic Testing and Clinical Characterisation.",
-      "category": "Medical Research",
-      "source": "PubMed",
-      "publishedAt": "2026 Oct 9",
-      "summary": "primary ciliary dyskinesia in adults with bronchiectasis diagnostic yield of genetic testing and clinical characterisation",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42855327/",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Protein large language model-assisted one-to-one gene homology mapping in cross-species single-cell transcriptome integration.",
-      "category": "Medical Research",
-      "source": "PubMed",
-      "publishedAt": "2026 Oct 9",
-      "summary": "protein large language model assisted one to one gene homology mapping in cross species single cell transcriptome integration",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42855280/",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "A Randomized Clinical Trial of Transcutaneous Electrical Acupoint Stimulation for Pain Relief After Dental Implant Surgery.",
-      "category": "Medical Research",
-      "source": "PubMed",
-      "publishedAt": "2026 Oct 9",
-      "summary": "randomized clinical trial of transcutaneous electrical acupoint stimulation for pain relief after dental implant surgery",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42855277/",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Intratumoral susceptibility signals on susceptibility-weighted imaging for glioma grading and molecular profiling: a systematic review and meta-analysis.",
-      "category": "Medical Research",
-      "source": "PubMed",
-      "publishedAt": "2026 Oct 9",
-      "summary": "intratumoral susceptibility signals on susceptibility weighted imaging for glioma grading and molecular profiling a systematic review and meta analysis",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42855273/",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "When can a negative endosonographic examination be trusted?",
-      "category": "Medical Research",
-      "source": "PubMed",
-      "publishedAt": "2026 Oct 9",
-      "summary": "when can a negative endosonographic examination be trusted",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42855176/",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Expired endoscopic devices remain sterile and functional: an international multicentre study challenging current shelf-life criteria.",
-      "category": "Medical Research",
-      "source": "PubMed",
-      "publishedAt": "2026 Oct 9",
-      "summary": "expired endoscopic devices remain sterile and functional an international multicentre study challenging current shelf life criteria",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42855156/",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Long-term Safety and Efficacy of Once-Weekly Lonapegsomatropin in Adults With Growth Hormone Deficiency: Results From a 52-Week Open-Label Extension Trial.",
-      "category": "Medical Research",
-      "source": "PubMed",
-      "publishedAt": "2026 Oct 9",
-      "summary": "long term safety and efficacy of once weekly lonapegsomatropin in adults with growth hormone deficiency results from a 52 week open label extension trial",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42855131/",
       "image": "",
       "type": "research"
     }
