@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-15T07:31:47.361495+00:00",
+  "lastUpdated": "2026-10-16T07:17:06.163700+00:00",
   "articles": [
     {
       "title": "Esc2 and Rad57 contribute to RNA polymerase II distribution at highly transcribed genes.",
@@ -8,6 +8,156 @@
       "publishedAt": "2027 Jan",
       "summary": "esc2 and rad57 contribute to rna polymerase ii distribution at highly transcribed genes",
       "url": "https://pubmed.ncbi.nlm.nih.gov/42864262/",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "LSST and Keck characterization of outer Main Belt comet P/2026 N2",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-15",
+      "summary": "We characterize comet P/2026 N2, whose outer Main Belt orbit has $a=3.07$ au, $e=0.21$, and $i=2.25^\\circ$, using optical observations, archival imaging, and dynamical integrations. Observations from the Legacy Survey of Space and Time (LSST) at NSF-DOE Vera C. Rubin Observatory in 2026 June-July and Keck/LRIS imaging on October 7 show active morphology across perihelion over 102 days. Within a projected aperture radius of approximately 1,000 km, Keck colors of $g-r=0.50\\pm0.05$ and $r-i=0.06\\pm0.06$ mag are consistent with nearly neutral B/C-complex reflectance. Phase-corrected $a(0^\\circ)fρ=3.66\\pm0.12$ cm in derived $r$ and $3.46\\pm0.17$ cm in $i$ are comparable to LSST measurements. The ",
+      "url": "http://arxiv.org/abs/2610.22354v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Singles in Disguise: Kepler's Low-SNR Single-Transiting Systems as Incompletely Detected Multis",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-15",
+      "summary": "NASA's Kepler mission found more systems with one transiting planet (``singles'') than expected from those with several (``multis''). This excess was first taken as evidence for a Kepler dichotomy -- a second population of intrinsically single or highly inclined systems -- but later work argued that selection effects acting on a single population can reproduce it. Singles also show a puzzling excess of low signal-to-noise ratio (SNR) detections relative to multis. The question arises whether this excess reflects false positives, a selection effect, or an inherent population difference. Here we show, using the ExoMOD population synthesis model and the Kepler DR25 catalog, that multis drawn fr",
+      "url": "http://arxiv.org/abs/2610.22349v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Identifying deformed exoplanets with JWST and Ariel: A target selection metric for phase curve observations",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-15",
+      "summary": "The shape of an exoplanet encodes fundamental information about its internal structure. For close-in giant planets, strong stellar tidal forces induce measurable deformations that can be probed through high-precision photometry. These deformations are quantified by the fluid Love numbers, which characterise a planet's response to external perturbations and are directly linked to its internal density distribution. In this work, we assess the potential of JWST and the future Ariel mission to constrain the Love numbers of hot Jupiters through full-orbit phase curve observations. To identify the most promising targets for this science case, we introduce a new detection metric, the deformation me",
+      "url": "http://arxiv.org/abs/2610.22338v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Chemical Demographics of Star-forming Regions",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-15",
+      "summary": "Our understanding of complex organic chemistry during the formation of stars and planets is shaped by a handful of cherry-picked sources with bright molecular emission lines. This observational bias impedes our assessment of how universal chemical complexity is during star formation. The lack of systematic wideband spectral surveys for statistically significant samples of protostars and cores is a major roadblock to properly probing how COM inventories and abundances depend on the vast range of physical conditions, local cloud and global galactic environments, and evolutionary timescales of low- and high-mass star formation. In turn, this limits our ability to constrain and test physicochemi",
+      "url": "http://arxiv.org/abs/2610.22303v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "A New Method for Constraining 3D Exoplanet Atmospheres: Application to WASP-94A b's Panchromatic Spectrum",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-15",
+      "summary": "A growing number of transiting exoplanets exhibit spectroscopic evidence that their leading and trailing limbs differ. Interpreting these observations is now the limiting step. The standard approach of fitting limb-resolved transit depths results in highly anti-correlated transit depths, and treating them as independent measurements can result in strongly biased ($3σ$) retrieved molecular abundances. We present an inference framework that avoids these correlations by using the temporal signature of limb asymmetry instead. This wavelength-dependent shift in mid-transit time, or `time-shift spectrum', carries the limb-asymmetry information, is measurable from existing light curves with a spher",
+      "url": "http://arxiv.org/abs/2610.22271v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "A Sample of Thick-Disk Stars Hosting Hot Jupiters",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-15",
+      "summary": "We present a homogeneous analysis of 268 confirmed and candidate transiting hot-Jupiter host stars with 4800K < Teff < 6200K. We combine high-resolution TRES spectra, Gaia, 2MASS and WISE photometry, and Gaia astrometry to determine these stars' Teff, log g, Rstar, [alpha/Fe] and [Fe/H]. Based on their [alpha/Fe] and [Fe/H], we classify the stars as members of the Milky Way's low-[alpha/Fe] thin disk, high-[alpha/Fe] thick disk or an ambiguous intermediate population. We identify two confirmed hot Jupiters (WASP-81 b and TOI-5322 b) and three candidate hot Jupiters (TOI-3118.01, TOI-2728.01, and TOI-5781.01) as orbiting previously-unrecognized members of the high-alpha thick disk. We compare",
+      "url": "http://arxiv.org/abs/2610.22254v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "ALMA2040: Submillimeter-wave Limb Sounding of Venus and Mars",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-15",
+      "summary": "Venus and Mars are unique laboratories for understanding the evolution and diversity of terrestrial planets. Despite their broadly similar rocky compositions, their atmospheres, climates, and surface environments have evolved into dramatically different states. Understanding the physical and chemical processes responsible for these divergent pathways is essential for interpreting terrestrial exoplanets and their habitability. By the 2040s, spacecraft missions will provide unprecedented close-up observations of Venus and Mars, while ground-based facilities can provide the long-term monitoring needed to place these snapshots in the context of atmospheric variability and planetary-scale circula",
+      "url": "http://arxiv.org/abs/2610.22233v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "X-ray point sources towards the giant radio lobes of Centaurus A",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-15",
+      "summary": "Centaurus A (NGC 5128) is the nearest radio galaxy (d = 3.8 Mpc), so individual X-ray point sources can be resolved against its giant radio lobes. We test whether a compact X-ray source population over the lobes exceeds the expected field population, once the selection function, foreground stars and the cosmic X-ray background (CXB) are accounted for. From five Chandra/ACIS-I lobe pointings we build a 0.5-7 keV catalogue of 185 sources, with Bayesian hardness ratios, Gaia DR3 and AllWISE counterparts, and spectral fits to the eight brightest. The hardness-ratio distribution (median -0.17; 80% of sources below N_H = 10^22 cm^-2) is that of background AGN plus a few foreground stars. Above the",
+      "url": "http://arxiv.org/abs/2610.22168v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Are $E>B$ regions essential for particle injection in relativistic magnetic reconnection?",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-15",
+      "summary": "During relativistic magnetic reconnection, X-points ($E>B$ regions at vanishing guide field) have been proposed to play an essential role in injecting particles into the nonthermal population. Using fully kinetic particle-in-cell simulations at a range of magnetizations $σ\\equiv B_0^2/(4πn_0 m_e c^2) = 12$--$800$, we study in detail how the particle energy gains up to the injection threshold $γ_{\\rm inj} = σ/4$ are partitioned into work done inside $E>B$ regions (unmagnetized), within one gyration after exit (re-magnetizing), and at all other times (magnetized). The magnetized channel supplies the largest part of the energy gain for $\\sim 95\\%$ of injected tracers at $σ= 12$ and $\\sim 65\\%$ ",
+      "url": "http://arxiv.org/abs/2610.22118v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Chemistry on solar system scales",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-15",
+      "summary": "The initial chemical composition of planets, primitive bodies in our solar system, and exoplanets is ultimately set by their nascent protoplanetary disks. Yet observing key carbon-, oxygen-, and nitrogen-bearing molecules (as well as rarer but important sulphur- and phosphorus-bearing species) in the inner (exo)planet-forming zone ($\\lesssim 10$~au) remains extremely challenging with current facilities. Therefore, to construct a complete picture of the chemistry of planet formation and understand how (exo)planetary composition is set by physical and chemical processes within the protoplanetary disk, a more powerful observing facility, i.e., ALMA2040, is needed. Compared to current ALMA (the ",
+      "url": "http://arxiv.org/abs/2610.22055v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Multi-wavelength Polarization as a Probe of Planet Formation",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-15",
+      "summary": "Polarization reveals details of circumstellar disks that are not readily available from total intensity observations. Via multi-wavelength polarimetric observations of disks, we can trace how planets form, how dust grains evolve at the onset of planet formation, and how magnetic fields (B-fields) influence accretion. Since polarized emission from these disks is typically at levels from 0.5% to a few percent of the total emission, very high sensitivities are needed. Current ALMA capabilities make these key measurements of protoplanetary disks challenging due to (1) long integrations with separate observations to measure multi-wavelength polarization of substructures, (2) prohibitive time requ",
+      "url": "http://arxiv.org/abs/2610.22048v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Time-reversible timestepping in many-body planetary systems",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-15",
+      "summary": "Simulating chaotic planetary system evolution requires resolving small time-scales due to close encounters, scattering, collisions, and more. Simulations typically assign fixed timesteps to all particles, however, which is inefficient and wastes compute resources in a chaotically evolving system; moreover, it may under-resolve the simulation. Hybrid methods are a blunt tool for resolving small time-scales as they do not allow for fine-grained adaptation. Assigning individual timesteps, which vary in time, to planetary bodies usually violates desirable properties such as symplecticity and reversibility. In this work, we develop an \"almost\" exactly time-reversible direct $N$-body integrator, M",
+      "url": "http://arxiv.org/abs/2610.22007v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Breakdown of hydrodynamic universality in causal first-order viscous neutron star oscillations",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-15",
+      "summary": "Hydrodynamic modeling of viscous neutron stars requires a choice of theory of relativistic hydrodynamics. That distinct formulations contain the same physical content in the long-wavelength limit is referred to as ``hydrodynamic universality.'' It has been recently shown that hydrodynamic universality can break down in radial neutron star oscillations: causality and finite-size effects restrict access to the long-wavelength universal hydrodynamic regime in sufficiently viscous stars. We show that this breakdown occurs for a broad range of causal hydrodynamic frames in Bemfica--Disconzi--Noronha--Kovtun (BDNK) theory. Increasing viscosity collectively pushes this class of causal frames away f",
+      "url": "http://arxiv.org/abs/2610.21966v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Planetary system architectures in the final stages of planet formation",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-15",
+      "summary": "The processes in the last stages of planet formation determine the final assembly and composition of planets. After the protoplanetary discs dissipate, a system of planets and planetesimals -- analogues of the Asteroid and Kuiper Belts -- remains. Ongoing collisions between these bodies produce second-generation dust and gas that form a debris disc. Resolved images of such belts allow us to trace the dynamical history of these systems, including giant impacts and planet-belt interactions, during the crucial era from 10 to a few 100 Myr of terrestrial planet formation. High-resolution mm and optical/near-IR imagers have revolutionised our view of the brightest planetesimal belts, providing fi",
+      "url": "http://arxiv.org/abs/2610.21957v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Planet formation on solar system scales",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-15",
+      "summary": "Giant planets are often regarded as primordial protoplanetary \"architects\". Their formation and interactions with planetesimals and other planets during and after the protoplanetary disc phase are key to setting the blueprint of the planetary systems we observe today. Catching nascent gas giants is our best opportunity to uncover these crucial steps in the planet formation process and shed light on the origins of our own solar system. Over the last decade, ALMA has revolutionised our understanding of planet formation; still, detecting signatures of Jupiter-like planets has remained out of reach. We argue that ALMA2040, a next-generation sub(mm) interferometer with improved sensitivity ($\\tim",
+      "url": "http://arxiv.org/abs/2610.21906v1",
       "image": "",
       "type": "research"
     },
@@ -448,156 +598,6 @@
       "publishedAt": "2026-10-09",
       "summary": "Recent numerical simulations have shown that black-hole magnetospheres evolve rapidly toward alignment between the magnetic axis and spin axis but the physical origin of this process has remained unclear. We develop an analytic theory of this alignment within resistive relativistic magnetohydrodynamics. Taking the slow-spin Blandford-Znajek monopole solution as the exterior magnetic field, we reduce the induction equation to a relaxation equation for the current-sheet inclination angle. Our analysis shows that alignment results from second-order spin effects in the Blandford-Znajek solution combined with explicit resistive dissipation. We test this prediction using resistive-GRMHD simulation",
       "url": "http://arxiv.org/abs/2610.13288v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Towards a coupled activity-fallback model for comets I) 67P/Churyumov-Gerasimenko's water activity from a microphysics model with dynamic dust-depth",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-09",
-      "summary": "We apply a two-layer thermophysical model, with water sublimating from below a dust-crust with dynamically varying depth, to simulate the water outgassing rate, dust-ejections, and non-gravitational forces and torques of comet 67P/Churyumov-Gerasimenko. The dust-depth is determined at each time-step by the balance of dehydration and subsurface pressure, leading to alternating ejections and crust build-up. This model is the first stage of implementing a fully coupled activity-fallback model that self-consistently incorporates dust-fallback into the ejection depth calculation, but already a number of conclusions can be drawn from these results. The two-layer model with only dehydration and eje",
-      "url": "http://arxiv.org/abs/2610.13230v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Disk Structure May Determine AGN Variability and Explain the Accretion Disk Size Problem: No Broad Line Region Required",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-08",
-      "summary": "Variability is a crucial probe of active galactic nuclei (AGN) disks, but the impact of the structure and internal physics of the disk on this variability is poorly understood. We perform 3D multi-frequency radiation magnetohydrodynamic simulations of the $1300-5940~\\rmÅ$ emitting region of an AGN disk. This turbulent disk simulation happens to stochastically have different disk thickness above and below the midplane. Light curves emitted from the thin top of the disk are broadly consistent with traditional variability models, where the X-ray irradiation emitted from the corona is the main driver of variability in UV-optical light curves. Conversely, the UV-optical light curves emitted from ",
-      "url": "http://arxiv.org/abs/2610.12462v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Discovery of Hidden Extragalactic Pulsars in the Parkes Archival Data",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-08",
-      "summary": "Just over 1% of the known radio pulsar population resides in the Large and Small Magellanic Clouds (MCs), the satellite galaxies that are 50-62 kpc distant from the Milky Way. These pulsars are important for constraining the peak of the pulsar luminosity function, and may give insights into neutron star populations formed from stars of different metallicities than the Milky Way. Using search techniques that have proven highly effective at discovering a large number of pulsars in archival data by folding candidates near the noise floor at high harmonic folds, we reprocessed the original Parkes Multibeam MC surveys and discovered six pulsars. Five of these pulsars are located in the Large Mage",
-      "url": "http://arxiv.org/abs/2610.12450v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Listening to the Horizon: Probing Near-Horizon Reflectivity with GW250114",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-08",
-      "summary": "Testing the horizon properties of astrophysical black holes is a central goal of gravitational-wave astronomy. The recently identified Direct Wave (DW), a prompt non-quasinormal component of GW250114, provides a new probe of near-horizon physics. While it remains unclear whether the DW itself carries horizon information, we show that it enables a novel null test of horizon reflectivity. If the remnant is an exotic compact object (ECO) with a partially reflecting surface, inward plunge radiation is reflected and leaks back through the gravitational potential barrier, producing a delayed DW echo whose amplitude is set by the surface reflectivity ($|\\mathcal{R}_s|$). We construct the correspond",
-      "url": "http://arxiv.org/abs/2610.12429v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "ACORN I. Massive Black Hole Seeding and Tidal Disruption Events from Star Clusters in Cosmological Simulations",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-08",
-      "summary": "JWST has revealed massive star clusters at $z\\gtrsim 6$, which provide promising environments for massive black hole (MBH) seed formation. We introduce a new MBH seeding model for cosmological simulations, physically motivated by the runaway collisions in star clusters. Subgrid star clusters are generated according to the local ISM and evolved through stellar evolution and two-body relaxation. The masses of MBH seeds formed through runaway collisions are determined by the properties of their host clusters, including the effects of metallicity-dependent stellar winds. We further follow tidal disruption events (TDEs) with the evolving clusters, which can be enhanced in MBH binaries, and accoun",
-      "url": "http://arxiv.org/abs/2610.12398v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Funnel Leakage of the Wien Fireball in the Early Nebula after a Binary Neutron Star Merger",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-08",
-      "summary": "A newborn neutron star (NS) that survives after a binary NS merger can inject its rotational energy into the surrounding ejecta while the ejecta are still optically thick. The injected energy is redistributed by the pair cascade, and the nebula becomes a radiation-dominated plasma composed of photons and e^+- pairs. Compton scattering then governs the energy exchange while the photon number is conserved in scattering. This nebula is evolved with a one-zone model that includes pair creation, annihilation, photon injection, diffusion, and in particular the leakage through the jet-induced polar funnel. For typical parameters, we find that the Compton parameter y is much larger than unity at ear",
-      "url": "http://arxiv.org/abs/2610.12359v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "A morphological search for stable year-scale modulation in gamma-ray blazars",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-08",
-      "summary": "Year-scale quasi-periodic oscillations (QPOs) in blazar gamma-ray light curves have been proposed as signatures of supermassive binary black holes and precessing jets. Red noise can mimic periodicity, and detection alone does not establish persistence or period stability. We develop and calibrate a morphological framework to characterize year-scale modulation and constrain the incidence of stable modulation in blazars. We analyze 120 Fermi-LAT light curves spanning 18.1 yr. Singular spectrum analysis selects the oscillatory mode and period, while weighted wavelet Z-transform ridge tracking measures persistence, period drift, and cycle-to-cycle volatility. Flux randomization, 10,000 red-noise",
-      "url": "http://arxiv.org/abs/2610.12356v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Quantum Co-Design of Inhomogeneous Many-Body Neutrino Fast Flavor Transformation",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-08",
-      "summary": "Dense-neutrino flavor evolution is a quantum many-body problem whose fully correlated treatment becomes rapidly more expensive with increasing particle number and spatial structure. We develop a \\texttt{QCNO} quantum simulation code that maps a inhomogeneous forward-scattering neutrino Hamiltonian with advection and finite-range interactions to TEBD2 product-formula quantum circuits, and connects ideal many-body simulation, backend-aware execution, and fault-tolerant resource estimation within the same physical model. We reproduce the exact many-body evolution of the suppressed mean-field-like transverse fast flavor instability through $N=30$ and show that even a single open-boundary interac",
-      "url": "http://arxiv.org/abs/2610.12334v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Longitudinal distribution of Io's dayside atmospheric density",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-08",
-      "summary": "Since 2001, we have used the TEXES high resolution mid-infrared spectrograph at NASA's Infrared Telescope Facility to study the density of Io's SO$_{2}$-dominated atmosphere. The spectra cover several SO$_{2}$ absorption lines near 530 cm$^{-1}$ and are used to retrieve the equatorial SO$_{2}$ column density. In addition to covering a long time period, our 191 independent observations also cover the full range of Io central longitudes, allowing us to study the longitudinal variability of Io's dayside atmosphere in more depth than has previously been possible. By improving our modeling of longitudinal variability and using a seasonal model to apply a temporal normalization to the retrieved SO",
-      "url": "http://arxiv.org/abs/2610.12275v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Gen-EBM: an energy balance model for terrestrial planets. Climate multistability from snowball to post-runaway greenhouse climates",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-08",
-      "summary": "Climate multistability and tipping points are fundamental properties of planetary climates that depend sensitively on climate feedbacks. We introduce the Geneva Energy Balance Model (Gen-EBM), a new 1-D latitudinal EBM for rapid exploration of terrestrial planet climates, and use it to investigate how planetary rotation, eccentricity, and thermal inertia shape climate attractors and multistability. Gen-EBM is implemented in Rust and builds on previous exoplanet EBMs by incorporating a temperature-dependent outgoing longwave radiation prescription spanning Earth-like, runaway-onset, and post-runaway greenhouse regimes. We construct bifurcation diagrams from ensembles of simulations and explor",
-      "url": "http://arxiv.org/abs/2610.12267v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Evidence for orbital eccentricity supports a hierarchical origin for GW231123",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-08",
-      "summary": "GW231123 is the most massive binary black hole merger observed to date and one of the most intriguing hierarchical merger candidates in the pair-instability mass gap. Its exceptionally large inferred component spins and remarkably short in-band duration make the source highly sensitive to waveform physics near merger. Here we show that GW231123 is better described as an eccentric binary black-hole merger. We analyse data over 11--448 Hz using the eccentric, spin-precessing effective-one-body waveform model TEOBResumS--Dalí, accounting for detector calibration uncertainty. We measure $e_{5.5\\,\\mathrm{Hz}}=0.34^{+0.12}_{-0.23}$ at 90\\% credibility and obtain a Bayes factor of 10.2 in favour of",
-      "url": "http://arxiv.org/abs/2610.12205v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Autocorrelation in black hole flare movies: Departures from Kerr",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-08",
-      "summary": "Autocorrelation in black hole movies encodes the time delays and angular separations between gravitationally lensed images, offering a means of testing the spacetime geometry. Using an orbiting hot spot in the parametrized Johannsen-Psaltis metric with a single deformation parameter, we investigate the ability of lensing-induced correlations to distinguish departures from Kerr. From ray-traced movies, we extract the slope (k) and intercept (b) of an approximately linear secondary ridge in the time-angle autocorrelation map as potential future observables. Variations in the spin and the metric deformation parameter produce distinctive trajectories in the (k,b) plane, allowing the two observab",
-      "url": "http://arxiv.org/abs/2610.12199v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Discovery of the Slowest Radio Pulsar in the Small Magellanic Cloud",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-08",
-      "summary": "We report the discovery of a new radio pulsar PSR J0103$-$72 in the Small Magellanic Cloud (SMC) through a reanalysis of Parkes/Murriyang archival observations targeting supernova remnants and pulsar-wind nebulae in the SMC. Previously two pulsars were discovered in these observations, and PSR J0103$-$72 is the third which we independently detected in two observations of its target field. It has a spin period of 1.327 sec and a dispersion measure (DM) of $272\\pm13~\\mathrm{pc\\,cm^{-3}}$, making it the slowest known radio pulsar in the SMC with the second-highest DM. We did not identify any plausible supernova remnant or pulsar-wind nebula associated with the pulsar. Subtracting the predicted ",
-      "url": "http://arxiv.org/abs/2610.12143v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "An updated model of neutrino emission from proto-neutron stars",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-08",
-      "summary": "We present an improved parametric model for neutrino emission from core-collapse supernovae that directly connects neutrino luminosity and average energy to stellar properties during emission. Our model incorporates two critical physical processes: convection within the proto-neutron star and the evolution of the neutrinosphere radius during the early emission phase. Using simulated datasets of supernova neutrino events in the Super-Kamiokande detector, we assess the sensitivity to astrophysical properties in the event of a future detection. We show that the neutrino mass ordering plays a crucial role in determining which parameters can be constrained by the observed neutrino data.",
-      "url": "http://arxiv.org/abs/2610.12101v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Size, Shape, and Geometric Albedo of Dwarf Planet Quaoar's Largest Satellite Weywot",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-08",
-      "summary": "The small satellites of dwarf-planet size worlds in trans-Neptunian space are thought to be produced through giant impacts, and are typically observed to have bright water-ice-dominated surfaces. Here we focus on Quaoar's small primary satellite, Weywot. We build on previous work by re-analyzing the June 2023 stellar occultation by Weywot using results from 11 orbits of HST imaging with the Wide Field Camera 3. Weywot's rotational lightcurve was constrained along with its independent photometric phase curve, which we used to obtain more robust measurements of Weywot's size, shape, and geometric albedo. We found Weywot's volume-equivalent radius to be req = 73+-5 km, with principal axes a = 8",
-      "url": "http://arxiv.org/abs/2610.11988v1",
       "image": "",
       "type": "research"
     }
