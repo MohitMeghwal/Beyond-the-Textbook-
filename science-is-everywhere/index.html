@@ -2134,4 +2134,71 @@ function init(){
 
 /* EVENTS */
 
-$("#languageToggle").add
+$("#languageToggle").addEventListener("click", toggleLanguage);
+
+$("#menuToggle").addEventListener("click", () => {
+  const menu = $("#mobileMenu");
+  const button = $("#menuToggle");
+
+  const isOpen = menu.classList.toggle("open");
+
+  button.setAttribute("aria-expanded", String(isOpen));
+});
+
+$("#randomDiscoveryButton").addEventListener("click", surpriseMe);
+
+$("#dailyOpenButton").addEventListener("click", () => {
+  if (dailyDiscovery) {
+    renderDetail(dailyDiscovery, true);
+  }
+});
+
+$("#searchInput").addEventListener("input", renderDiscoveryCards);
+
+$("#categoryFilter").addEventListener("change", renderDiscoveryCards);
+
+$("#clearFiltersButton").addEventListener("click", () => {
+  $("#searchInput").value = "";
+  $("#categoryFilter").value = "all";
+
+  renderDiscoveryCards();
+});
+
+$("#backToDiscoveries").addEventListener("click", () => {
+  $("#discoveries").scrollIntoView({
+    behavior: "smooth",
+    block: "start"
+  });
+});
+
+/*
+  Discovery cards aur related discovery cards:
+  Dono par tap karne se selected discovery ka poora detail khulega.
+*/
+
+document.addEventListener("click", event => {
+  const button = event.target.closest("[data-open-discovery]");
+
+  if (!button) return;
+
+  const id = button.dataset.openDiscovery;
+
+  if (!id) return;
+
+  openDiscovery(id);
+
+  // Selected discovery ka link bhi update hoga.
+  history.replaceState(
+    null,
+    "",
+    window.location.pathname +
+      window.location.search +
+      "#discovery-" +
+      encodeURIComponent(id)
+  );
+});
+
+/* Page initialize karo. */
+
+init();
+applyLanguage();
