@@ -909,10 +909,10 @@ function renderEveryday() {
 
   row.innerHTML = todaysDiscoveries.map(item => {
     const title = currentLanguage === "hi"
-      ? item.titleHi
-      : item.titleEn;
+  ? item.title.hi
+  : item.title.en;
 
-    const icon = item.icon || "🔬";
+const icon = item.emoji || "🔬";
 
     return `
       <a
@@ -968,6 +968,5 @@ if(window.matchMedia("(prefers-reduced-motion: reduce)").matches){
   document.documentElement.style.scrollBehavior = "auto";
 }
 </script>
-  <script src="data/science-is-everywhere.js"></script>
 </body>
 </html>
