@@ -867,27 +867,33 @@ const everydayScience = [
 
 /* =========================================================
    SCIENCE IS EVERYWHERE
-   Homepage visual unchanged — data comes from the
-   dedicated discovery database.
+   Homepage discovery cards
    ========================================================= */
 
 function renderEveryday() {
   const row = document.getElementById("everyRow");
 
-  if (!row || !Array.isArray(window.scienceDiscoveries)) {
-    if (row) {
-      row.innerHTML = "";
-    }
-    console.error("Science Is Everywhere data could not be loaded.");
-    return;
-  }
+  if (!row) return;
 
   const discoveries = window.scienceDiscoveries;
 
-  // Stable daily selection: the same date shows the same 8 topics.
-  const dateKey = new Date().toLocaleDateString("en-CA");
+  if (!Array.isArray(discoveries) || discoveries.length === 0) {
+    row.innerHTML = `
+      <p style="padding:16px;color:#333;">
+        Discoveries could not be loaded. Please try again.
+      </p>
+    `;
+    console.error(
+      "Science Is Everywhere: scienceDiscoveries is missing or empty."
+    );
+    return;
+  }
+
+  // Stable daily selection
+  const dateKey = new Date().toISOString().slice(0, 10);
 
   let seed = 0;
+
   for (let i = 0; i < dateKey.length; i++) {
     seed = (seed * 31 + dateKey.charCodeAt(i)) >>> 0;
   }
@@ -897,7 +903,6 @@ function renderEveryday() {
     return seed / 4294967296;
   }
 
-  // Copy the data before shuffling.
   const shuffled = [...discoveries];
 
   for (let i = shuffled.length - 1; i > 0; i--) {
@@ -908,28 +913,44 @@ function renderEveryday() {
   const todaysDiscoveries = shuffled.slice(0, 8);
 
   row.innerHTML = todaysDiscoveries.map(item => {
-    const title = currentLanguage === "hi"
-  ? item.title.hi
-  : item.title.en;
+    // Support either string titles or bilingual title objects.
+    const title =
+      typeof item.title === "object" && item.title !== null
+        ? (currentLanguage === "hi"
+            ? item.title.hi || item.title.en
+            : item.title.en || item.title.hi)
+        : item.title;
 
-const icon = item.emoji || "🔬";
+    const name =
+      title ||
+      item.en ||
+      item.name ||
+      item.id ||
+      "Science Discovery";
+
+    const icon = item.emoji || item.icon || "🔬";
+
+    // Send the selected discovery ID to the detail page.
+    const href =
+      "science-is-everywhere/index.html#discovery-" +
+      encodeURIComponent(item.id);
 
     return `
       <a
         class="every-item"
-        href="science-is-everywhere/index.html?id=${encodeURIComponent(item.id)}"
-        aria-label="${title}"
-        title="${title}"
+        href="${href}"
+        aria-label="${name}"
+        title="${name}"
       >
         <div class="every-img" aria-hidden="true">
           ${icon}
         </div>
-
-        <strong>${title}</strong>
+        <strong>${name}</strong>
       </a>
     `;
   }).join("");
 }
+
 renderEveryday();
 
 /* ---------- MOBILE MENU ---------- */
