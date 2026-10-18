@@ -808,6 +808,7 @@ function applyLanguage(){
     currentLanguage === "en" ? "EN <span>|</span> <b>हिंदी</b>" : "<b>EN</b> <span>|</span> हिंदी";
 
   renderQuestion();
+  if(typeof renderEveryday === "function") renderEveryday();
 }
 document.getElementById("langBtn").addEventListener("click", () => {
   currentLanguage = currentLanguage === "en" ? "hi" : "en";
@@ -850,50 +851,29 @@ document.getElementById("answerBtn").addEventListener("click", () => {
       : (currentLanguage === "hi" ? "◉ उत्तर छिपाएँ" : "◉ Hide Answer");
 });
 
-/* ---------- SCIENCE IS EVERYWHERE ----------
-   These currently use lightweight placeholders.
-   Later add Cloudinary image URLs in the image property.
-*/
-const everydayScience = [
-  {icon:"📱", en:"Smartphone", hi:"स्मार्टफोन", link:"science-around-us/smartphone.html", image:""},
-  {icon:"▣", en:"Refrigerator", hi:"फ्रिज", link:"science-around-us/refrigerator.html", image:""},
-  {icon:"♨", en:"Pressure Cooker", hi:"प्रेशर कुकर", link:"science-around-us/pressure-cooker.html", image:""},
-  {icon:"🚲", en:"Bicycle", hi:"साइकिल", link:"science-around-us/bicycle.html", image:""},
-  {icon:"🔋", en:"Battery", hi:"बैटरी", link:"science-around-us/battery.html", image:""},
-  {icon:"👓", en:"Glasses", hi:"चश्मा", link:"science-around-us/glasses.html", image:""},
-  {icon:"🌈", en:"Rainbow", hi:"इंद्रधनुष", link:"magic-science/rainbow.html", image:""},
-  {icon:"🌱", en:"Plants", hi:"पौधे", link:"biology/plants.html", image:""}
-];
-
 /* =========================================================
    SCIENCE IS EVERYWHERE
-   Homepage discovery cards
+   Homepage visual unchanged — data comes from the
+   dedicated discovery database.
    ========================================================= */
 
 function renderEveryday() {
   const row = document.getElementById("everyRow");
 
-  if (!row) return;
-
-  const discoveries = window.scienceDiscoveries;
-
-  if (!Array.isArray(discoveries) || discoveries.length === 0) {
-    row.innerHTML = `
-      <p style="padding:16px;color:#333;">
-        Discoveries could not be loaded. Please try again.
-      </p>
-    `;
-    console.error(
-      "Science Is Everywhere: scienceDiscoveries is missing or empty."
-    );
+  if (!row || !Array.isArray(window.scienceDiscoveries)) {
+    if (row) {
+      row.innerHTML = "";
+    }
+    console.error("Science Is Everywhere data could not be loaded.");
     return;
   }
 
-  // Stable daily selection
-  const dateKey = new Date().toISOString().slice(0, 10);
+  const discoveries = window.scienceDiscoveries;
+
+  // Stable daily selection: the same date shows the same 8 topics.
+  const dateKey = new Date().toLocaleDateString("en-CA");
 
   let seed = 0;
-
   for (let i = 0; i < dateKey.length; i++) {
     seed = (seed * 31 + dateKey.charCodeAt(i)) >>> 0;
   }
@@ -903,6 +883,7 @@ function renderEveryday() {
     return seed / 4294967296;
   }
 
+  // Copy the data before shuffling.
   const shuffled = [...discoveries];
 
   for (let i = shuffled.length - 1; i > 0; i--) {
@@ -913,44 +894,28 @@ function renderEveryday() {
   const todaysDiscoveries = shuffled.slice(0, 8);
 
   row.innerHTML = todaysDiscoveries.map(item => {
-    // Support either string titles or bilingual title objects.
-    const title =
-      typeof item.title === "object" && item.title !== null
-        ? (currentLanguage === "hi"
-            ? item.title.hi || item.title.en
-            : item.title.en || item.title.hi)
-        : item.title;
+    const title = currentLanguage === "hi"
+  ? item.title.hi
+  : item.title.en;
 
-    const name =
-      title ||
-      item.en ||
-      item.name ||
-      item.id ||
-      "Science Discovery";
-
-    const icon = item.emoji || item.icon || "🔬";
-
-    // Send the selected discovery ID to the detail page.
-    const href =
-      "science-is-everywhere/index.html#discovery-" +
-      encodeURIComponent(item.id);
+const icon = item.emoji || "🔬";
 
     return `
       <a
         class="every-item"
-        href="${href}"
-        aria-label="${name}"
-        title="${name}"
+        href="science-is-everywhere/index.html?id=${encodeURIComponent(item.id)}"
+        aria-label="${title}"
+        title="${title}"
       >
         <div class="every-img" aria-hidden="true">
           ${icon}
         </div>
-        <strong>${name}</strong>
+
+        <strong>${title}</strong>
       </a>
     `;
   }).join("");
 }
-
 renderEveryday();
 
 /* ---------- MOBILE MENU ---------- */
@@ -982,7 +947,6 @@ function showToast(message){
 /* ---------- YEAR + LANGUAGE INIT ---------- */
 document.getElementById("year").textContent = new Date().getFullYear();
 applyLanguage();
-renderEveryday();
 
 /* Respect reduced motion */
 if(window.matchMedia("(prefers-reduced-motion: reduce)").matches){
