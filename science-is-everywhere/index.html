@@ -2026,7 +2026,8 @@ function shareCurrentDiscovery(){
 
   const title = textOf(selectedDiscovery.title);
   const url = new URL(window.location.href);
-  url.hash = "discovery-" + selectedDiscovery.id;
+  url.search = "?id=" + encodeURIComponent(selectedDiscovery.id);
+  url.hash = "";
 
   const shareData = {
     title:title + " | Science Is Everywhere",
@@ -2123,14 +2124,55 @@ function init(){
   renderDailyDiscovery();
   renderDiscoveryCards();
 
-  const hash = window.location.hash;
+  openFromURL(false);
+}
 
+/* URL se discovery id nikalo: ?id=magnet (homepage) ya #discovery-magnet (purane links). */
+function getIdFromURL(){
+  const params = new URLSearchParams(window.location.search);
+  const queryId = params.get("id");
+  if(queryId) return queryId;
+
+  const hash = window.location.hash;
   if(hash.startsWith("#discovery-")){
-    const id = decodeURIComponent(hash.slice("#discovery-".length));
-    const found = getById(id);
-    if(found) renderDetail(found,false);
+    return decodeURIComponent(hash.slice("#discovery-".length));
+  }
+  return null;
+}
+
+function openFromURL(shouldScroll){
+  const id = getIdFromURL();
+  if(!id) return;
+
+  const found = getById(id);
+  if(found){
+    renderDetail(found, shouldScroll);
+    // Layout settle hone ke baad detail tak scroll karo.
+    if(!shouldScroll){
+      requestAnimationFrame(()=> detailSection.scrollIntoView({block:"start"}));
+    }
   }
 }
+
+/* URL ko selected discovery ke hisaab se update karo (?id=...). */
+function updateURL(id){
+  const url = new URL(window.location.href);
+  url.searchParams.set("id", id);
+  url.hash = "";
+  history.pushState({id}, "", url.pathname + url.search);
+}
+
+/* Browser back/forward button support */
+window.addEventListener("popstate", () => {
+  const id = getIdFromURL();
+  const found = id ? getById(id) : null;
+  if(found){
+    renderDetail(found, true);
+  }else{
+    detailSection.classList.add("hidden");
+    selectedDiscovery = null;
+  }
+});
 
 /* EVENTS */
 
@@ -2186,19 +2228,13 @@ document.addEventListener("click", event => {
   if (!id) return;
 
   openDiscovery(id);
-
-  // Selected discovery ka link bhi update hoga.
-  history.replaceState(
-    null,
-    "",
-    window.location.pathname +
-      window.location.search +
-      "#discovery-" +
-      encodeURIComponent(id)
-  );
+  updateURL(id);
 });
 
 /* Page initialize karo. */
 
 init();
 applyLanguage();
+</script>
+</body>
+</html>
