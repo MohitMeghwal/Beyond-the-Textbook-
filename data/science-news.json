@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-18T07:16:57.187308+00:00",
+  "lastUpdated": "2026-10-19T07:53:00.404234+00:00",
   "articles": [
     {
       "title": "Esc2 and Rad57 contribute to RNA polymerase II distribution at highly transcribed genes.",
@@ -8,6 +8,156 @@
       "publishedAt": "2027 Jan",
       "summary": "esc2 and rad57 contribute to rna polymerase ii distribution at highly transcribed genes",
       "url": "https://pubmed.ncbi.nlm.nih.gov/42864262/",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Entering the Era of Circumplanetary Ring Detection with Direct Imaging",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-16",
+      "summary": "Rings are ubiquitous among the giant planets in the Solar System, yet their presence around exoplanets remains observationally unconstrained. As direct imaging missions such as the Nancy Grace Roman Space Telescope approach first light, understanding the influence of circumplanetary rings on reflected light photometry is critical for the accurate interpretation and follow-up of direct imaging observations. We present a hybrid forward model for reflected light phase curves of ringed exoplanets, coupling a ray casting framework for computing mutual planet-ring shadowing with empirical reflectance spectra from Cassini observations of Saturn's rings. We model Jupiter-like planets with opaque, ic",
+      "url": "http://arxiv.org/abs/2610.23850v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Detecting Exoplanetary Rings with Roman CGI Reflected Light Phase Curve Observations",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-16",
+      "summary": "The Nancy Grace Roman Space Telescope's Coronagraph Instrument (CGI) will provide the first opportunity to directly detect mature giant exoplanets in reflected light. However, most known radial-velocity planets lie near CGI's sensitivity limit. In contrast, Saturn-like rings around these planets may be much more accessible: our models show that rings can outshine their host planets by one to two orders of magnitude or more, making them easier to detect than the planets themselves. However, because the planet and rings would be unresolved in reflected light, unrecognized rings could lead to misinterpretation of the planet's intrinsic brightness and physical properties. To disentangle these bl",
+      "url": "http://arxiv.org/abs/2610.23835v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Clustering of JWST LRDs. Implications for PBHs and other early-forming seeds",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-16",
+      "summary": "We use the observed abundance and spatial clustering of JWST little red dots (LRDs) over z = 4--8 to confront two formation scenarios: the standard picture in which LRDs form in virialized dark-matter halos, and one in which they are seeded by a dynamically subdominant population of primordial black holes (PBHs). The halo formation scenario accounts for both observables naturally and without fine-tuning. In the PBH scenario, matching the observed LRD abundance requires a negligibly small PBH mass fraction, and a power-spectrum analysis shows that such a Poisson isocurvature component predicts a clustering signal far below what is observed. The same conclusion holds for any population of dyna",
+      "url": "http://arxiv.org/abs/2610.23806v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Foreground dependence of the 20 GeV Galactic halo gamma-ray excess and its proposed connection to the LUX-ZEPLIN event",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-16",
+      "summary": "We assess the dark matter interpretation of the 20 GeV gamma-ray halo excess reported by Totani and its proposed connection to the LUX-ZEPLIN (LZ) high-energy nuclear-recoil event, which independently favors dark matter masses above about 200 GeV. Using fifteen years of Fermi-LAT data, we reproduce the excess under the original assumptions and test it against 281 Galactic diffuse emission configurations, three descriptions of the Fermi bubbles, four of Loop I, and uniform and X-ray-brightness-weighted eROSITA bubbles templates. A component correlated with a Navarro-Frenk-White (NFW) annihilation template remains with finer spatial binning and the instrumental response included. Outside the F",
+      "url": "http://arxiv.org/abs/2610.23713v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Survey of Orion Disks with ALMA (SODA) IV: Millimeter variability of protoplanetary disks",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-16",
+      "summary": "Context. Short-term millimeter-wavelength variability in Class II young stellar objects (YSOs) has been considered minimal, often dismissed as very rare in ALMA-based studies on short timescales. However, recent findings suggest that variability on sub-day timescales is significant. Aims. This study aims to quantify short timescale (~1 hour to ~3 days) millimeter flux variability in unresolved Class II YSO disks observed as part of the SODA survey, leveraging its large dataset to assess the statistical significance of such variability across the LDN 1641 and LDN 1647 regions in Orion. Methods. We analyze ALMA Band 6 observations of 873 YSOs obtained over multiple epochs using a custom flux e",
+      "url": "http://arxiv.org/abs/2610.23640v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "A Hectospec Spectroscopic Census of Kinematic Members in the Orion Nebula Cluster",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-16",
+      "summary": "We present a comprehensive spectroscopic census of the Orion Nebula Cluster (ONC), based primarily on low-resolution optical spectroscopy obtained with MMT/Hectospec. We derive spectral types, youth indicators, and accretion diagnostics for 1513 stars located in the ONC region, enabling the identification and characterization of pre-main-sequence stars. We combine these measurements with a kinematic membership analysis based on Gaia Data Release 3 astrometry to identify and confirm cluster members. Using these combined diagnostics, we identify and characterize 780 bona fide T Tauri stars associated with the ONC. In addition, we construct a census of protoplanetary discs using infrared photom",
+      "url": "http://arxiv.org/abs/2610.23636v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Andreev Beta Conversion and Bulk Viscosity in Superfluid Neutron-Star Matter",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-16",
+      "summary": "Bulk viscosity in neutron-star matter is attributed to the phase lag between a density oscillation and weak beta equilibration. We point out a distinct coherent channel when the baryonic component that stores the condensate is superfluid: an effective beta-conversion event between a neutron condensate and normal protons can proceed as an Andreev process, converting a particle-like excitation into a hole-like excitation while adding or removing a Cooper pair from the condensate. The resulting Andreev contribution to beta equilibration is fourth order in the effective conversion vertex, is enhanced by anomalous neutron Green's functions, and is not captured by standard Urca process. We identif",
+      "url": "http://arxiv.org/abs/2610.23581v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "The Atmospheric Chemistry and Surface Interactions on Mars (ACSIOM) Workshop 2025",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-16",
+      "summary": "The ACSIOM workshop was held in Cambridge from 10th-12th November 2025. Its primary aims were twofold: 1) to gather UK researchers involved in Mars atmospheric science to identify current shortcomings and challenges in the field, and 2) to discuss possible collaborations and future steps needed to maximise the research output from current and future Mars missions. Workshop attendees spanned a wide range of subjects and disciplines, from atmospheric modellers and surface scientists to experimental chemists and Earth/Venus/exoplanet scientists. One of the primary outcomes of the workshop as identified by the attendees was the need for more collaborations between these different communities. It",
+      "url": "http://arxiv.org/abs/2610.23500v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "ExHaLe-jet: Modeling blazar jets with an extended hadro-leptonic radiation code",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-16",
+      "summary": "Blazars - active galaxies with the jet pointing at Earth - emit across all electromagnetic wavelengths. As the one-zone model becomes increasingly inadequate to describe blazar emission, more elaborate models are needed. In order to self-consistently describe the entire electromagnetic spectrum, extended jet models are necessary. Notably, kinetic descriptions of extended jets can provide the temporal and spatial evolution of the particle species and the full electromagnetic output. ExHaLe-jet is a lepto-hadronic, extended-jet code allowing for in-depth studies of the particle and radiation evolution on all scales. Here, we present our ongoing study regarding acceleration scenarios of particl",
+      "url": "http://arxiv.org/abs/2610.23425v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "SN 2025wiu: A Type Ib Supernova with Post-Peak Optical Rebrightening",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-16",
+      "summary": "We present optical photometric and optical/near-infrared spectroscopic observations of SN 2025wiu, a Type Ib supernova (SN) at z = 0.046927. The r-band light curve exhibits an initial maximum of approximately -18.2 mag, followed by a weaker optical rebrightening reaching approximately -17.8 mag at +38 days in the rest frame relative to the first maximum. However, the reconstructed bolometric light curve does not show a distinct second peak, but instead exhibits a reduced decline rate during the corresponding phase. The spectra consistently show Type Ib features without narrow emission components associated with circumstellar material. The late-time bolometric decline rate of 0.054 +/- 0.008 ",
+      "url": "http://arxiv.org/abs/2610.23414v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Impact of neutron captures on the r-process: I. Propagation of statistical model uncertainties",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-16",
+      "summary": "Background: The r-process is responsible for producing about half of the elements heavier than iron in the Universe, but the underlying nuclear physics is still largely inaccessible to experiments and relies on theoretical calculations. Purpose: We aim to quantify the impact of statistical model uncertainties on the r-process with a large set of neutron-capture rates within the Hauser-Feshbach framework with varied statistical model parameters. Propagating neutron-capture rates to r-process calculations of various astrophysical sites allows us to link abundance features to nuclear uncertainties. Methods: We calculate neutron-capture reactivities using different nuclear level density (NLD) an",
+      "url": "http://arxiv.org/abs/2610.23395v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Exploring Cosmic Rays from Gravity-Limited Acceleration at Supermassive Black Holes",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-16",
+      "summary": "We show that horizon-scale magnetic fields around supermassive black holes (SMBHs), only limited by gravity, yield a universal, model-independent ceiling on electromagnetic energy density. For rotating SMBHs, this field enables particle acceleration up to $\\sim\\!10^{27}$\\,eV set solely by fundamental constants. We identify a parameter space in accretion rate and magnetic field strength in which quiescent nuclei simultaneously satisfy the transparency conditions for Ultra-High-Energy Cosmic Rays (UHECR) escape and the field requirements for reaching Ultra-High Energies (UHE), naturally complementing photon-rich Active Galactic Nuclei (AGN), which favor neutrino production but suppress UHECR e",
+      "url": "http://arxiv.org/abs/2610.23393v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Prospects for Simultaneously Detecting Long and Short Duration Gravitational Waves from Pulsar Glitches with Current and Future Detectors",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-16",
+      "summary": "The internal mechanisms that drive the sudden change in rotation frequency in pulsar glitches could emit gravitational waves (GWs) at multiple time scales. The potential for GW analyses to detect both long and short forms of emission (\"tCW-like\" and \"burst-like\") improves as the detectors increase in sensitivity. We aim to examine how future detectors fare in making this joint measurement. By examining past glitches from the ATNF catalog, we quantify the double-detectability prospects of current- and next-generation GW detector networks. We further explore what astrophysical constraints could be placed following a double non-detection using extrapolations from the 2024 Vela pulsar glitch as ",
+      "url": "http://arxiv.org/abs/2610.23385v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Three-dimensional spatial modelling of nuclear de-excitation lines",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-16",
+      "summary": "Galactic cosmic rays (GCRs) are thought to originate from shock acceleration in supernova remnants, but interstellar ionization rates suggest an additional low-energy cosmic-ray (LECR) component. LECRs excite nuclei in the ISM, producing MeV gamma-ray line emission through subsequent de-excitation. Observations of this emission can constrain the LECR flux, morphology, and acceleration mechanisms. We construct all-sky maps of Galactic de-excitation emission using three-dimensional (3D) CR distribution models. By comparing them with the Galactic diffuse gamma-ray emission, we assess the detectability of the de-excitation line components against the underlying continuum. We calculate the emissi",
+      "url": "http://arxiv.org/abs/2610.23380v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "A blazar is a blazar is a blazar ... Comparing long-term varaibility properties of PKS 1510-089 and PKS 2155-304",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-16",
+      "summary": "Blazars are typically divided by spectral appearance; may that be strength of optical emission lines or the frequency of the synchrotron peak. However, this may say nothing about the variability properties of the various types. Here, we study the long-term variability properties with nearly 20 years of multiwavelength data of one flat-spectrum radio quasar, PKS 1510-089, and one high-frequency-peaked BL Lac object, PKS 2155-304. Both exhibit strong variability with an energy-dependent variability amplitude. Using the total data sets, we do not find any correlation between the various bands. While the flux distributions of PKS 2155-304 are compatible with log-normal functions, this is not the",
+      "url": "http://arxiv.org/abs/2610.23359v1",
       "image": "",
       "type": "research"
     },
@@ -448,156 +598,6 @@
       "publishedAt": "2026-10-13",
       "summary": "Ground-based experiments such as the IceCube Neutrino Observatory and the High-Altitude Water Cherenkov Gamma-Ray Observatory detect cosmic-ray anisotropy on Earth, but magnetic deflections within the heliosphere complicate interpretation. Understanding the original spatial distribution of cosmic rays in the interstellar medium requires modeling particle propagation across the heliospheric boundary. We constructed a simulated transport model that backtracks antiprotons from Earth to the interstellar medium and maps spatial transfer probabilities across energies using HEALPix representations. Because our transfer matrices are singular, inversion relies on singular value decom- position regula",
       "url": "http://arxiv.org/abs/2610.18384v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "On the Orbital Evolution of Giant Planet Pair Embedded in a Gaseous Disk. III. simultaneous gas accretion and the final mass ratio",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-13",
-      "summary": "Recent exoplanet surveys reveal a systematic trend in the mass ratios of giant planet pairs ($> 30 M_\\oplus$). Although the $M_{outer}/M_{inner}$ is broadly centered near unity, it exhibits a dependence on orbital separation. Compact pairs tend to have comparable masses, whereas widely separated pairs show outer-heavy configurations. To investigate the origin of this trend, we perform two-dimensional hydrodynamic simulations that couple gas accretion and orbital migration of two giant planet embryos with initial masses of $15-30 M_\\oplus$. We explore the effects of disk viscosity, surface density slope, and initial mass ratio on the coupled evolution of planetary growth and migration. We fin",
-      "url": "http://arxiv.org/abs/2610.18368v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "OGLE-2016-BLG-0523: A Low-mass Brown Dwarf or super-Jupiter in a $>100$ au Orbit",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-09",
-      "summary": "To search for very wide-orbit binary-lens events, we cross-match microlensing events detected by OGLE-IV and KMTNet between 2011 and 2024. After removing contaminants from variable stars, we identify OGLE-2016-BLG-0523 as a microlensing event showing two short-lived bumps in its light curve, with the two separated by 8.36 yr. We investigate three scenarios to explain the two bumps, including a binary-lens single-source (2L1S), a single-lens binary-source (1L2S), and two unrelated single-lens single-source events (2$\\times$1L1S). The 1L2S interpretation is excluded due to its poorer fit to the data, while the 2$\\times$1L1S scenario is disfavored by the low event rate, unphysical total source ",
-      "url": "http://arxiv.org/abs/2610.13942v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Adiabatic evolution of hadronic neutron stars",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-09",
-      "summary": "In this paper we compute several structural properties of static and rotating neutron stars, considering both rigid and differential rotation. To this end, we use a finite-temperature beta-stable equation of state (EOS) extending the zero-temperature hadronic EOS derived by Fortin et al. (2017). We account for the formation of hyperons and the presence of a neutrino-trapped component. Our goal is to provide insights into the long-term evolution of a protoneutron star (PNS) formed after a core-collapse supernova (CCSN) or a remnant resulting from a binary neutron star merger (BNSM). The EOS is derived using a relativistic mean-field quantum many-body theory within the Hartree approximation. C",
-      "url": "http://arxiv.org/abs/2610.13926v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Impact of ab initio E1 strength on neutron capture rates along the nickel isotopic chain",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-09",
-      "summary": "Nucleosynthesis simulations of the r-process require neutron capture rates for neutron-rich nuclei, many of which lie beyond experimental reach. Predicting these rates relies on theoretical calculations of the low-energy electric dipole (E1) strength near the neutron threshold. We present the first ab initio computation of the E1 strength along the nickel isotopic chain, for $^{58}$Ni and the even-even isotopes $^{68-80}$Ni. The E1 strength is obtained with the Lorentz integral transform coupled-cluster (LIT-CC) method, extended to axially symmetric reference states to reach open-shell nuclei, using two- and three-nucleon interactions from chiral effective field theory. The approach is bench",
-      "url": "http://arxiv.org/abs/2610.13868v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Perpendicular transport in isotropic magnetic turbulence. The role of stochastic drifts",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-09",
-      "summary": "In cosmic ray propagation through turbulent magnetic fields, transport perpendicular to the mean field plays an important role in various astrophysical environments. Numerical simulations have shown that parallel and perpendicular diffusion coefficients exhibit different energy scalings, causing their ratio to increase with energy, but a comprehensive theoretical explanation remains elusive. Here, we investigate perpendicular diffusion using test particle simulations in synthetic isotropic turbulence spanning 6-7 orders of magnitude in wavenumber, together with a theoretical extension of nonlinear guiding center theory that incorporates stochastic drifts. Our approach combines field line ran",
-      "url": "http://arxiv.org/abs/2610.13865v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "TeV Gamma-Ray Emission in the DA 495 Region from HAWC Observations of J1952+2924, J1954+2837, and J1958+2848",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-09",
-      "summary": "Previous observations of the DA 495 region, which contains the pulsar wind nebula (PWN) DA 495 and other very-high-energy (VHE; $>100~\\textrm{GeV}$) gamma-ray emitters, showed inconsistent results across different VHE experiments, including differences in the measured flux of DA 495 and in the number of reported sources. Our new dedicated analysis using 3071 days of HAWC data resolves these discrepancies. We identify three extended sources, HAWC J1952+2924 (DA 495), HAWC J1954+2837, and HAWC J1958+2848, all with curved spectra, and find a hint of a fourth source. For DA 495, a multi-wavelength analysis, including our results, radio, X-ray, and other gamma-ray data, reveals that its extended ",
-      "url": "http://arxiv.org/abs/2610.13771v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "The origin of the large heavy element contents of warm Jupiters",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-09",
-      "summary": "Planet interior models have revealed that warm Jupiters should harbor large heavy element masses (up to 30-40% of the planetary mass). Within the pebble drift and evaporation scenario, inward drifting pebbles can evaporate and enrich the inner disc with vapor to super-stellar values, accreteable by giant planets. As H$_2$O ice evaporates in the inner disc, while CO$_2$, CH$_4$ and CO evaporate in the outer disc, the enrichment of the disc with vapor decreases with increasing orbital distance. We use the chemcomp code to model the migration and growth of planets via pebble and gas accretion in discs around stars with different masses and discs with different sizes. We show (i) that pebble dri",
-      "url": "http://arxiv.org/abs/2610.13762v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Assessing PLATO's Discovery Potential across Different Observing Strategies",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-09",
-      "summary": "The PLATO mission, planned to launch in spring 2027, will observe a fixed Southern field, LOPS2, for at least 2 years with the goal of discovering and deriving precise parameters for planets as small as Earth around FGK dwarfs and sub-giants. Afterwards, PLATO could continue to monitor the same field or move to a Northern field, LOPN1, overlapping with the Kepler field. We assess these two observing strategies in terms of sensitivity of detecting small and long period planets, and subsequently we estimate yields for both observing strategies. Within this we account for including the Kepler data in the LOPN1 field, monitoring of up to 8 years of the LOPS2 field, and the sensitivity improvemen",
-      "url": "http://arxiv.org/abs/2610.13686v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "How long could volcanic plumes persist in the Venus atmosphere?",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-09",
-      "summary": "Resolving the ambiguity surrounding current Venusian volcanism is a primary objective for upcoming missions like EnVision and VERITAS. This study uses the Venus Planetary Climate Model to simulate the dispersal and detectability of volcanic plumes containing water vapour (H2O), hydrogen chloride (HCl), carbon monoxide (CO), and carbonyl sulphide (OCS) within a three-dimensional atmospheric environment. We model localised gas enhancements at altitudes probed by nightside spectral windows (8.62, 20.91, and 35.45 km above surface). Results indicate that plumes persist longest in the deep atmosphere (8.62 km) at equatorial latitudes, where H2O enhancements remain distinguishable from low backgro",
-      "url": "http://arxiv.org/abs/2610.13641v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "The Hydrological Cycle and Circulation of Tidally-Locked Planets with a Finite Moisture Inventory",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-09",
-      "summary": "Tidally-locked planets express a range of climate regimes distinct from those found in our solar system. Their atmospheres are often dominated by planetary-wide overturning circulations and super- rotating jets. In this paper we explore the hydrological cycle of such planets and how it might depend on the total inventory of condensate. To this end we use a set of idealised GCM simulations to probe the response of the hydrological cycle to the surface moisture budget in their atmospheres. We find that for low moisture inventories the climate quickly develops a barren day side and a moist night side where the moisture is trapped, as might be expected. For higher moisture inventories the drying",
-      "url": "http://arxiv.org/abs/2610.13517v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "The School on Gravity: from motion to commotion",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-09",
-      "summary": "Understanding the gravitational interaction is one of the great scientific endeavors of the 21st century. The Nobel Prize-winning discovery of gravitational waves in 2015, and subsequent detections by the LIGO-Virgo-KAGRA Collaboration, have marked a revolutionary step forward in physics and astrophysics by opening an entirely new window for exploring the Universe. Future upgrades to these detectors, along with upcoming facilities such as LISA, the Einstein Telescope, and radio and optical instruments, promise other breakthrough discoveries that the next generation of scientists will need to interpret. The School on Gravity (22--26 June 2026, Copenhagen) aimed to introduce junior scientists-",
-      "url": "http://arxiv.org/abs/2610.13514v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Fermentation heterotrophy can reproduce Enceladus's H2 and CH4 under limited serpentiniaztion",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-09",
-      "summary": "Saturn's icy moon Enceladus is a prime target in the search for life beyond Earth. Abundant H2 and CH4 in Enceladus's south-polar plume have been shown to be consistent with hydrogenotrophic methanogens feeding on products of long-lived serpentinization. However, thermo-permeability models make sustained core-wide H2 production by serpentinization uncertain. We therefore explore whether an alternative metabolism based on fermentation-driven heterotrophy could reproduce Cassini H2 and CH4 escape fluxes under limited serpentinization. We develop a coupled ecosystem model of fermentation and methanogenesis in a hydrothermal-ocean-plume framework, using glycine as a proxy for amino-acid-like fer",
-      "url": "http://arxiv.org/abs/2610.13434v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Flip-Flop Shocks and Tori in Bondi-Hoyle-Lyttleton Accretion onto Rotating Kerr-Weyl Black Holes and Their Quasi-Periodic Variability",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-09",
-      "summary": "We present GRHD simulations of Bondi-Hoyle-Lyttleton accretion onto a rotating black hole in Weyl conformal gravity, described by the Kerr-Weyl metric. The equatorial flow is evolved for spins a=0.9M and a=0.5M and several Weyl coefficients, which enter through an effective curvature parameter k, and is compared with Kerr runs sharing the same setup. For the k considered, the horizon, ISCO and test-particle frequencies differ from Kerr by at most ~2%. However, the curvature term grows as kr^2 and acts at the accretion radius R_acc. The flow is controlled by one quantity, eta=|k|R_acc^3/M, the ratio of curvature-induced to Newtonian acceleration at R_acc. For eta<~0.03 a stable shock cone for",
-      "url": "http://arxiv.org/abs/2610.13384v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Extreme mass ratio inspirals from the Hills mechanism, The eccentricity distribution of Hills EMRIs in LISA",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-09",
-      "summary": "Extreme mass ratio inspirals (EMRIs) are promising sources for future space-based gravitational-wave detectors. We investigate EMRIs produced through the Hills mechanism, in which a stellar-mass black-hole binary (BBH) is tidally separated by a massive black hole (MBH), leaving one component bound to it. We present the first self-consistent modelling of this channel, combining an orbit-averaged Fokker-Planck treatment of the nuclear star cluster (NSC), three-body modelling of the binary-MBH encounter, Monte Carlo evolution of captured black holes (BHs), and fully relativistic EMRI trajectories to follow the evolution from binary supply down to final plunge. We find that Hills EMRIs are subst",
-      "url": "http://arxiv.org/abs/2610.13294v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Resistive alignment of a black-hole magnetosphere",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-09",
-      "summary": "Recent numerical simulations have shown that black-hole magnetospheres evolve rapidly toward alignment between the magnetic axis and spin axis but the physical origin of this process has remained unclear. We develop an analytic theory of this alignment within resistive relativistic magnetohydrodynamics. Taking the slow-spin Blandford-Znajek monopole solution as the exterior magnetic field, we reduce the induction equation to a relaxation equation for the current-sheet inclination angle. Our analysis shows that alignment results from second-order spin effects in the Blandford-Znajek solution combined with explicit resistive dissipation. We test this prediction using resistive-GRMHD simulation",
-      "url": "http://arxiv.org/abs/2610.13288v1",
       "image": "",
       "type": "research"
     }
