@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-20T07:41:16.618547+00:00",
+  "lastUpdated": "2026-10-21T07:45:18.538442+00:00",
   "articles": [
     {
       "title": "Esc2 and Rad57 contribute to RNA polymerase II distribution at highly transcribed genes.",
@@ -8,6 +8,156 @@
       "publishedAt": "2027 Jan",
       "summary": "esc2 and rad57 contribute to rna polymerase ii distribution at highly transcribed genes",
       "url": "https://pubmed.ncbi.nlm.nih.gov/42864262/",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Constraints on Millimeter-wave Extragalactic Transient Populations from 4 Years of SPT-3G data",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-20",
+      "summary": "Wide-field cosmic microwave background (CMB) instruments have reached sufficient sensitivity and cadence to conduct untargeted millimeter-wave searches for astronomical transients. To date, such searches have primarily discovered stellar flares, while extragalactic detections remain limited to a few flaring blazars and active galactic nuclei. In contrast, recent simulations suggest that current and future CMB experiments should detect a few to dozens of extragalactic transients per year from sources including gamma-ray bursts (GRBs), tidal disruption events, and fast blue optical transients. At timescales under one week, predicted detections are dominated by flares from reverse shocks in lon",
+      "url": "http://arxiv.org/abs/2610.28633v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Dynamical stability of Magnetic Supramassive Neutron Stars",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-20",
+      "summary": "We investigate the dynamical stability of strongly magnetized supramassive neutron stars close to the mass-shedding limit using fully general-relativistic magnetohydrodynamic simulations in three spatial dimensions. Equilibrium configurations are constructed using a microphysical equation of state and considering poloidal magnetic fields up to maximum strengths ${\\sim} 10^{17}\\,\\mathrm{G}$. The initially unstable magnetic fields reorganize into mixed poloidal--toroidal configurations on Alfvén timescales shorter than the stellar rotation period. The subsequent dynamical evolution is governed by timescales set by the Lehnert number. For stars with masses sufficiently lower than the maximum ma",
+      "url": "http://arxiv.org/abs/2610.28609v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Automated optimization of solar energetic particle acceleration and transport parameters against five-spacecraft observations of the 9 October 2021 event",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-20",
+      "summary": "Solar energetic particle (SEP) events threaten space infrastructure, yet physics-based prediction models depend on numerous poorly constrained free parameters. We introduce the Fujitsu Solar Energetic particle Intelligent Tuning and Evaluation Network (SEITEN), which couples the SUSANOO MHD model of CME propagation to SEPIF, a diffusive shock acceleration and focused transport model, through the shock conditions SUSANOO supplies, and automatically optimizes the free parameters of the particle model against the SEP event of 9 October 2021. The mean free path and the injection efficiency vary independently along each magnetic field line and heliolongitudinal bin, giving a 19-dimensional proble",
+      "url": "http://arxiv.org/abs/2610.28603v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "A sub-Earth-sized TESS planet candidate in the nearby M-dwarf binary GJ 774, most likely orbiting GJ 774 A (TIC 351339274)",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-20",
+      "summary": "Small planets transiting the nearest M dwarfs are the terrestrial planets most accessible to detailed characterisation. We report a sub-Earth-sized transiting planet candidate in the wide (17.6\") M-dwarf binary GJ 774 at 12.86 pc, most likely orbiting the M2.5 primary GJ 774 A (TIC 351339274). The signal was a SPOC multi-sector threshold-crossing event (MES = 7.95) and is not a TESS Object of Interest. In eight TESS sectors (2019-2026) a 1.28-h transit recurs every 4.225138 +/- 0.000010 d with a box-mean depth of 365 +/- 32 ppm in A's light. The 2026 data, which entered neither the SPOC search nor our selection, show it at the ephemeris predicted from 2019-2023 data (304 +/- 43 ppm; none of ",
+      "url": "http://arxiv.org/abs/2610.28575v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "TOI-3686: A Hot Jupiter and Sub-Neptune In A 2:1 Mean-Motion Resonance",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-20",
+      "summary": "Hot Jupiters are typically thought to be \"lonely\", but a small and growing subset of them have been found to have nearby planets in the same system. We present the discovery of a new member of this class of systems, TOI-3686. TOI-3686 c is a hot Jupiter with $P_\\mathrm{orb} = 5.078$ days detected by NASA's TESS mission that shows peak-to-peak transit timing variations (TTVs) of 40 minutes, amongst the largest ever observed for a hot Jupiter. A subsequent search of the TESS data revealed the transits of a second planet, TOI-3686 b, a sub-Neptune with $P_\\mathrm{orb} = 2.54$~days and peak-to-peak TTVs of 10 hours, $\\sim 16\\%$ of its orbital period. We characterized the system through photodyna",
+      "url": "http://arxiv.org/abs/2610.28533v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Two Validated Planets and 179 Candidates From a TESS Faint Star Transit Search in the ULTRASAT Fields",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-20",
+      "summary": "The TESS mission is designed to survey the entire sky to find planets most amenable to follow-up observations, and transit searches have therefore focused specifically on bright targets. Faint stars ($T_{mag}>13.5$) have not been systematically searched for planets, despite TESS having the sensitivity necessary to do so, therefore representing a promising avenue for increasing TESS's scientific yield. We utilized TESS's sensitivity for faint stars in particular to find more planets for joint optical-UV studies of exoplanet transits. Observing transits in both UV and optical gives insight into exoplanet atmosphere composition and evolution and remains relatively unexplored due to the lack of ",
+      "url": "http://arxiv.org/abs/2610.28518v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "A Solar Optical Clock",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-20",
+      "summary": "Precision spectroscopy underpins quantum sensing, atomic timekeeping, and the search for terrestrial-mass exoplanets. Finding an Earth-Sun analog requires fractional splitting of spectral features that rivals the precision of the best laboratory spectroscopy. This corresponds to resolution of a few parts in $10^5$ of a typical stellar spectral line, or a Doppler velocity precision of less than 10 cm s$^{-1}$. Only a few astrophysical spectrometers reach this regime, and only by dispersing starlight with large gratings and averaging thousands of lines. Here, we show that comparable precision can be achieved on a single solar line by leveraging techniques used in quantum sensors and optical cl",
+      "url": "http://arxiv.org/abs/2610.28485v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Identifying a jet-shaped point-symmetric morphology in the supernova remnant HB9",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-20",
+      "summary": "I identify a point-symmetric morphology in the supernova remnant HB9 (G160.9+2.6), supposedly a core-collapse supernova (CCSN) remnant (CCSNR), and attribute this structure to two or more pairs of jets that exploded the star within the jittering-jets explosion mechanism (JJEM). The pairs of jets that shape the point-symmetric morphology of HB9 are part of a larger number of pairs that exploded the star. The point-symmetric structure is composed of a pair of ears, a pair of ears/nozzles, a pair of dents, and a pair of bright bars. Although these pairs of morphological features are small and the point-symmetric structure is subtle, I consider the identification robust. I use visual inspection ",
+      "url": "http://arxiv.org/abs/2610.28428v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Hybrid Stars with Different Amount of Quark Matter",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-20",
+      "summary": "In a previous work, we explored the possibility of neutron stars with large quark cores. Through Bayesian inference, we obtained large sets of equations of state imposing constraints regarding the properties of nuclear matter, mass-radius data from NICER, the GW170817 data from Virgo-LIGO collaboration, perturbative QCD and causality. We also imposed that the maximum mass neutron star (NS$\\text{max}$) must have a large quark core. In this work, we obtain a new set of equations of state (SmallQ set) with the same constraints as before. However, we relaxed the last constraint, imposing only that NS$\\text{max}$ must have quark core, regardless of its size. We compare the results with the set fr",
+      "url": "http://arxiv.org/abs/2610.28408v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Data-Driven Ages from Asteroseismology for FGK Dwarfs",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-20",
+      "summary": "Age is the one of the most difficult stellar properties to constrain. However, upcoming surveys such as PLATO are about to revolutionize our ability to measure FGK dwarf ages with asteroseismology. Here, we use The Cannon to construct a data-driven model for inferring asteroseismic-quality age measurements from large spectroscopic survey observations and demonstrate that forthcoming asteroseismology datasets from future surveys can be leveraged, together with our model, to obtain stellar age samples larger than can be obtained by those surveys alone. We train The Cannon on 323 FGK dwarf stars with asteroseismic age labels from NASA Kepler photometry and high-resolution spectra from the Apach",
+      "url": "http://arxiv.org/abs/2610.28345v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Coevolution of Dust Growth and Gravitational Instability in Massive Protostellar Disks",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-20",
+      "summary": "Massive protostellar disks are expected to sustain high accretion rates through gravitational instability, while dust growth may modify their opacity, cooling efficiency, and stability. Conversely, the time-dependent and nonaxisymmetric structures produced by gravitational instability may regulate the local conditions for dust growth. However, the coupled evolution of dust growth and gravitational instability in massive protostellar disks has not yet been explored self-consistently. We present two-dimensional hydrodynamic simulations that follow gas dynamics, dust growth, and opacity-dependent radiative cooling in a massive protostellar disk. We find that dust grains rapidly grow to millimet",
+      "url": "http://arxiv.org/abs/2610.28331v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Hidden engines in tidal disruption events: multimessenger signatures in a lepto-hadronic framework",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-20",
+      "summary": "Tidal disruption events (TDEs) provide a unique laboratory for studying transient accretion, outflows, particle acceleration, and the possible connection between stellar disruptions and high-energy neutrinos. Motivated by recent candidate TDE-neutrino associations and by the forthcoming sensitivity of multimessenger facilities, we investigate under which physical conditions TDEs can be detected in MeV, GeV, and TeV gamma rays, and in high-energy neutrinos. We develop a lepto-hadronic emission framework and apply it to three representative sources: AT2019dsg, AT2019ehz, and ASASSN-14li. For each source we explore a set of physically motivated models that vary the proton and electron spectral ",
+      "url": "http://arxiv.org/abs/2610.28182v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "On the Stability of Tolman Oppenheimer Volkoff Fireholes",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-20",
+      "summary": "We investigate the radial stability of singular Tolman--Oppenheimer--Volkoff fireholes with a radiation equation of state. These configurations contain a naked, negative point-mass singularity surrounded by a positive-density fluid, whose mass profile develops a Schwarzschild-like plateau before approaching an extended, self-similar atmosphere. Using the Prüfer phase method to identify the fundamental radial mode, we consider two outer boundary conditions: vanishing Lagrangian pressure perturbation (open firehole) and vanishing radial displacement (boxed firehole). For both, the fundamental squared frequency changes from positive to negative as the outer boundary exceeds a critical radius $R",
+      "url": "http://arxiv.org/abs/2610.28140v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "The T-matrix method for modeling the optical properties of grains in exoplanetary atmospheres",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-20",
+      "summary": "Observations of exoplanetary atmospheres have revealed a rather complex co-existence between the gaseous and condensed phases, ranging from atmospheres apparently covered in clouds to clear ones, across a myriad of intermediate regimes. The interaction between solids and stellar radiation is of fundamental importance when forward or retrieval models are compared to observations. The simplest approach is to assume spherical particles, whose scattering and absorption properties are readily computed with Mie theory. More advanced computational methods, however, can also treat non-spherical condensates. Among these, the transition matrix approach has proven to provide a rigorous and efficient ca",
+      "url": "http://arxiv.org/abs/2610.28117v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Pulsar J1909+0749 and Supernova Remnant G42.1-0.2: A case of a pulsar that has exited the shell of its associated supernova remnant",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-20",
+      "summary": "(Abridged) The ATNF pulsar catalogue features only 63 pulsars that are possibly associated with a supernova remnant (SNR). Even rarer is the scenario in which the pulsar has escaped the physical extent of its corresponding SNR. We aim to identify the serendipitously discovered shell-type object G42.1-0.2 as a SNR. The known pulsar (PSR) J1909+0749 lies well outside the shell of SNR G42.1-0.2, but it has a cometary tail pointing towards the centre of the SNR; we propose that the SNR and the pulsar originated from the same supernova explosion. By measuring the flux densities of the shell G42.1-0.2 from ${\\sim}$200 MHz to ${\\sim}$6 GHz, we establish the nonthermal nature of its emission. With t",
+      "url": "http://arxiv.org/abs/2610.28073v1",
       "image": "",
       "type": "research"
     },
@@ -448,156 +598,6 @@
       "publishedAt": "2026-10-15",
       "summary": "The processes in the last stages of planet formation determine the final assembly and composition of planets. After the protoplanetary discs dissipate, a system of planets and planetesimals -- analogues of the Asteroid and Kuiper Belts -- remains. Ongoing collisions between these bodies produce second-generation dust and gas that form a debris disc. Resolved images of such belts allow us to trace the dynamical history of these systems, including giant impacts and planet-belt interactions, during the crucial era from 10 to a few 100 Myr of terrestrial planet formation. High-resolution mm and optical/near-IR imagers have revolutionised our view of the brightest planetesimal belts, providing fi",
       "url": "http://arxiv.org/abs/2610.21957v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Planet formation on solar system scales",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-15",
-      "summary": "Giant planets are often regarded as primordial protoplanetary \"architects\". Their formation and interactions with planetesimals and other planets during and after the protoplanetary disc phase are key to setting the blueprint of the planetary systems we observe today. Catching nascent gas giants is our best opportunity to uncover these crucial steps in the planet formation process and shed light on the origins of our own solar system. Over the last decade, ALMA has revolutionised our understanding of planet formation; still, detecting signatures of Jupiter-like planets has remained out of reach. We argue that ALMA2040, a next-generation sub(mm) interferometer with improved sensitivity ($\\tim",
-      "url": "http://arxiv.org/abs/2610.21906v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Transient PULSE: Code for the Transient Propagation of UltraLight (pseudo)Scalars to Earth",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-14",
-      "summary": "We present Transient PULSE, a software package that numerically implements a previously developed source-to-detector framework for transient ultralight bosonic signals from astrophysical bursts. Predicting these signals relies on connecting the source emission spectrum to its evolution during propagation and the resulting observables at a terrestrial detector. The package discretizes a user supplied energy spectrum into momentum modes, propagates them through a specified matter density profile and constructs the time-frequency energy density distribution at Earth, accounting for dispersion and in-medium screening effects. This treatment accommodates non-Gaussian source spectra and provides i",
-      "url": "http://arxiv.org/abs/2610.20601v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "GRB 181201A: Spectropolarimetric Constraints on Prompt Emission and Magnetic Field Structure",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-14",
-      "summary": "Gamma-ray bursts (GRBs) have served as testbeds for high-energy astrophysical phenomena since their discovery over 50 years ago. GRB detections reveal diverse properties across events, complicating efforts to constrain their emission mechanisms, magnetic fields, jet structures, and compositions. Spectropolarimetry is a powerful tool utilized to disentangle these properties. INTEGRAL/IBIS has previously detected three polarized GRBs 041219A ($65\\pm 26$%), 061122 ($>$33%) and 140206A ($>$28%). We present the time-integrated and time-resolved analyses of the fourth-polarized GRB 181201A. This GRB exhibits high polarization ($81.5^{+17.2}_{-15.7}$%) over three time bins with the highest signal-t",
-      "url": "http://arxiv.org/abs/2610.20580v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Revealing the Spatial Distribution of Dust and Plasma Solitary Waves in Jupiter's Innermost Magnetosphere Using Juno Waves Observations",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-14",
-      "summary": "Jupiter's faint ring system contains micron- and submicron-sized dust whose dynamics are influenced by the planet's rapidly rotating magnetic field. Optical observations have established the morphology of the main ring and halo, but tenuous dust close to Jupiter remains difficult to characterize. We analyze nearly a decade of in-situ Juno Waves electric-field measurements using a two-stage convolutional neural network to identify and classify dust impacts, solitary waves, and other plasma waves. These in-situ dust-impact detections reveal a radially evolving structure extending well inside the traditionally observed halo. In the innermost region, dust is concentrated in a compact, equatorial",
-      "url": "http://arxiv.org/abs/2610.20541v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Can bosenovae deplete the galactic dark matter?",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-14",
-      "summary": "No: neither through the bosenovae of gravitational atoms formed around stars and compact objects, nor through those of boson stars formed in the galactic dark-matter halo. We assume that all the dark matter consists of ultralight bosons with attractive self-interactions, which can be captured in the gravitational potential of astrophysical objects or condense into self-gravitating configurations. When these systems collapse in a bosenova, part of their mass is turned into relativistic radiation that escapes the galaxy. We bound the mass that a single object can eject and sum it over realistic models of the Milky Way and of other types of galaxies. For gravitational atoms, with realistic stel",
-      "url": "http://arxiv.org/abs/2610.20507v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "A Parsec-Scale Transient High-Frequency-Peaked Radio Source in the Very Large Array Sky Survey Brightening and Fading over a Decadal Timescale",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-14",
-      "summary": "A subset of active galactic nuclei (AGN) manifests as compact radio sources with peaked radio spectra, commonly referred to as peaked-spectrum (PS) sources. Generally, PS sources are interpreted as young radio jets, but the early evolution of the jet is rarely observed and not fully understood. Here, we present VT J182357-234511 (VT J1823-2345), a radio transient in the Very Large Array Sky Survey (VLASS) that resembles a PS source. Notable properties of VT J1823-2345 include: (i) brightening by a factor of 3 between 1996 and 2021 at 1.4 GHz, (ii) peaked spectra with high frequency peaks at $ν_{\\mathrm{p,obs}}\\gtrsim6\\,\\mathrm{GHz}$, (iii) a peaked 3 GHz light curve that has been fading sinc",
-      "url": "http://arxiv.org/abs/2610.20495v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "LHAASO Constraints on New-Source Cosmic Rays:Abundance Scenarios and Injection Spectral Indices",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-14",
-      "summary": "Recent LHAASO observations indicate that microquasars and massive star clusters contribute to Galactic cosmic rays, and likely also to the pre-knee spectral hardening. Their markedly different astrophysical environments, compared with supernova remnants (SNRs), may imprint distinct cosmic-ray abundances. We investigate the spectra and composition of new-source cosmic rays under two abundance scenarios: Case-1, the SNR-like composition with enhanced heavy nuclei, and Case-2, the surface abundances of microquasar companion stars. We constrain injection spectral indices using LHAASO proton, helium, and all-particle spectra, and use their <lnA> data for model discrimination. Under the assumption",
-      "url": "http://arxiv.org/abs/2610.20477v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "The contact frontier in Galactic civilization networks: radial structure and the Galactic habitable zone",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-14",
-      "summary": "The probability of interstellar contact depends not only on the abundance of technological civilizations but also on their spatial connectivity. Treating civilizations as nodes linked whenever their separation is smaller than the distance a signal travels within a communicative lifetime, we determine the radial structure of Galactic civilization networks. An exponential stellar disc replaces the uniform disc of earlier work, and the fraction of stars hosting civilizations may vary with radius as a Galactic Habitable Zone (GHZ). The isolation, contact and network transitions are frontiers several kiloparsecs wide, not boundaries: the contact frontier is set entirely by the disc scale length, ",
-      "url": "http://arxiv.org/abs/2610.20475v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Rotochemical heating of neutron stars in 2D",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-14",
-      "summary": "The matter inside a spinning-down neutron star (NS) undergoes a slow compression that may drive it out of chemical equilibrium and, consequently, trigger non-equilibrium nuclear reactions that can heat up the star. This phenomenon is called rotochemical heating, and it is relatively well-investigated in the literature. Historically, it has been studied almost exclusively via 1D spherically symmetric models. However, rapidly rotating NSs are not spherically symmetric. We present pioneering simulations of rotochemical heating in full General Relativity in 2D axially symmetric models without relying on the slow rotation approximation. We explicitly follow thermal, mechanical, and chemical evolu",
-      "url": "http://arxiv.org/abs/2610.20423v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Probing Planet Formation within 10 au: Dust Substructures in Extremely Compact Protoplanetary Disks",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-14",
-      "summary": "ALMA high-resolution surveys have so far focused mainly on large, bright protoplanetary disks, where substructures are routinely detected, leaving compact disks poorly characterized. Yet, the survival of millimeter emission in Class II sources implies that radial drift must have been halted by pressure traps, previously undetected due to limited angular resolution. We present ALMA Band 7 (0.9 mm) continuum observations of 11 of the smallest ($R_{68} < 10$ au) Class II disks in Lupus, reaching $0.02''$ (2 au) resolution, the highest currently available with ALMA at this wavelength. We detect substructures in 4 disks, including a clear inner cavity of radius 1.6 au, and hints of substructure i",
-      "url": "http://arxiv.org/abs/2610.20393v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Biases in Ringdown Tests of General Relativity from Gravitational-Wave Microlensing",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-14",
-      "summary": "Gravitational-wave (GW) ringdown signals provide a powerful probe of the strong-field regime of general relativity (GR) through black hole spectroscopy and tests of the Kerr hypothesis. However, unmodeled propagation effects can bias the inference of remnant properties and the interpretation of ringdown features. We investigate the impact of gravitational lensing on ringdown inference and tests of GR using GW150914-like simulated signals spanning the long-wavelength, wave-optics, and geometric-optics regimes. We perform complementary time-domain post-merger and frequency-domain full inspiral--merger--ringdown analyses using unlensed waveform models. We find that lensing in the wave-optics re",
-      "url": "http://arxiv.org/abs/2610.20201v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Revisiting the Optical F-corona from the Artemis II Total Solar Eclipse with RAW Data: How Far Can Consumer JPEG Images Be Trusted for Astronomical Photometry?",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-14",
-      "summary": "We reanalyze the total solar eclipse images taken with a consumer camera during the Artemis II lunar flyby, using the RAW data as ground truth for our previous analysis of the released JPEG image. Calibrated with field stars, the RAW data show that the lens vignetting and the variation of the pixel solid angle reduce the signal of diffuse light by up to $\\sim$70% at the edge of the field, and that the signal on the dark side of the Moon is most likely foreground light rather than an instrumental offset. Between 10 degrees and 15 degrees elongation, the radial profiles of the F-corona follow power laws with indices of $-2.0$ to $-2.3$ (east), $-2.5$ (west), and $-2.4$ to $-2.7$ (north and sou",
-      "url": "http://arxiv.org/abs/2610.20194v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Search for High-Energy Neutrinos from Infrared Flares",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-14",
-      "summary": "IceCube has detected a diffuse flux of high-energy astrophysical neutrinos. While its astrophysical origin is unknown, a significant neutrino emission has been observed from the gamma-ray blazar TXS 0506+056 and the Seyfert galaxy NGC 1068. This suggests accretion by supermassive black holes as one of the candidate mechanisms of the diffuse neutrino flux. Indeed, external studies that made use of IceCube data identified candidate sources, including AT2019dsg, likely a stellar tidal disruption event (TDE), and AT2019fdr, associated with an active galactic nucleus (AGN). An additional study using an optically detected sample of 63 accretion flares revealed another candidate as a potential high",
-      "url": "http://arxiv.org/abs/2610.20163v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Optical constraints on intranight variability in TeV HBLs from a two-year Asiago Schmidt monitoring campaign",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-14",
-      "summary": "We present a two-year homogeneous optical monitoring campaign of three TeV-emitting high-synchrotron-peaked BL Lac objects, 1ES 1959+650, H 1426+428, and PG 1553+113, carried out with the Asiago Schmidt 67/92 cm telescope. TeV blazars are key targets in high-energy astrophysics, relevant for relativistic jet physics, particle acceleration, multiwavelength variability studies, and, in selected cases, multimessenger programmes. In this context, dense optical monitoring provides a low-energy synchrotron tracer of jet activity over temporal baselines that are difficult to cover continuously with high-energy facilities. The dataset consists of more than 17,000 R- and I-band photometric measuremen",
-      "url": "http://arxiv.org/abs/2610.20065v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "HD 152384: A 5 Myr old debris disk system showing a gaseous ring of refractory elements at the dust sublimation radius",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-14",
-      "summary": "Context: Circumstellar gas around young stars provides key insights into planet formation and disk evolution. HD 152384, a young (5 Myr) A0 V star in Sco-Cen, shows hybrid-disk traits: a modest infrared excess from small dust grains and atomic emission lines dominated by refractory elements, but its disk structure and origin remain unclear. Aims: We characterise the kinematics and excitation of the circumstellar gas around HD 152384 and constrain the physical properties of its emitting region. Methods: We use new high-resolution optical and near-infrared VLT/UVES and VLT/CRIRES spectra to re-examine the circumstellar environment of HD 152384, previously suggested to host a broad, gas-rich di",
-      "url": "http://arxiv.org/abs/2610.20059v1",
       "image": "",
       "type": "research"
     }
