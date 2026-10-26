@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-25T07:38:58.052877+00:00",
+  "lastUpdated": "2026-10-26T07:52:50.683402+00:00",
   "articles": [
     {
       "title": "Esc2 and Rad57 contribute to RNA polymerase II distribution at highly transcribed genes.",
@@ -8,6 +8,156 @@
       "publishedAt": "2027 Jan",
       "summary": "esc2 and rad57 contribute to rna polymerase ii distribution at highly transcribed genes",
       "url": "https://pubmed.ncbi.nlm.nih.gov/42864262/",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Comprehensive Visible and Near-infrared Keck and Gemini Monitoring and Characterization of Interstellar Comet 3I/ATLAS during its Encounter with the Solar System",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-23",
+      "summary": "We present 14 optical imaging and eight optical spectroscopic epochs of interstellar comet 3I/ATLAS from Keck/LRIS and Gemini/GMOS, two near-infrared (NIR) imaging epochs from Keck/MOSFIRE, and four NIR spectroscopic epochs from Gemini/Flamingos-2 and GNIRS, obtained between 2025 July and 2026 May. Mean GMOS colors of $g-r=0.732\\pm0.029$, $r-i=0.237\\pm0.025$, and $i-z=0.109\\pm0.022$ mag show no significant change across perihelion. Phase-corrected red-band activity follows $Afρ\\propto r_h^{-2.10\\pm0.14}$ inbound and $r_h^{-3.34\\pm0.43}$ outbound. Transverse-width and sunward-plume speeds imply dust losses of $2.7\\times10^9$ and $1.0\\times10^{10}$ kg over 2025 July 3--2026 May 15 for 1-$μ$m--",
+      "url": "http://arxiv.org/abs/2610.32972v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "ExoVetter and a TESS Exoplanet Transit Search of Kepler Stars as Ground Truth",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-23",
+      "summary": "We introduce a Python package called exoVetter that produces vetting metrics and visualizations to evaluate transiting exoplanet signals found in high-cadence time-series photometry. exoVetter is open source, modular, and independent of the mission data so that it can be easily expanded and used as part of different transit search pipelines tuned to different science cases and missions. We demonstrate its use in a pipeline as a way to distinguish real events found in a box-least squares exoplanet transit search of 324,530 light curves from the Transiting Exoplanet Survey Satellite mission; we limit our demonstration to stars also observed by the more sensitive Kepler telescope as a way to es",
+      "url": "http://arxiv.org/abs/2610.32949v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Three subpopulations of binary black holes in mass, spin magnitudes and tilts following GWTC-5",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-23",
+      "summary": "The mass and spin distributions of merging binary black holes offer clues to their formation pathways, which remain uncertain. In this work, we model the population of binary black holes using generic subpopulations with distinct mass-ratio, spin-magnitude, and spin-tilt distributions, whose relative contributions vary with primary mass. Using the 259 binary black holes in the fifth LIGO-Virgo-KAGRA catalog (GWTC-5), we resolve three subpopulations with low, medium, and high spins. The low-spin population dominates for primary masses near $35 M_\\odot$, contributes roughly half of the binaries for primary masses of $10 M_\\odot$, and favors nearly equal mass ratios overall; its spins are consi",
+      "url": "http://arxiv.org/abs/2610.32935v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "A Population Synthesis Model for Odd Radio Circles Produced by Shock-Bubble Interactions",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-23",
+      "summary": "Odd Radio Circles (ORCs) are edge-brightened rings of diffuse radio emission of roughly arcminute size whose physical origin remains debated. One proposed mechanism is vortex formation through Shock-Bubble interaction (SBI), in which a merger or accretion shock re-energizes a fossil radio lobe into an edge-brightened ring. We test whether this mechanism can reproduce the observed ORC abundance using a Monte Carlo population-synthesis model that combines the galaxy stellar mass function, the radio-AGN incidence relation, dark-matter halo merger histories, and the inflation and buoyant survival of AGN-inflated bubbles, with synthetic radio fluxes and ring geometries drawn from a grid of magnet",
+      "url": "http://arxiv.org/abs/2610.32916v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "The ALMA Survey of Gas Evolution of PROtoplanetary disks (AGE-PRO): Evolution of dust properties from multi-wavelength observations",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-23",
+      "summary": "Understanding the evolution of solids in protoplanetary discs is important to comprehend the formation of giant planets cores and terrestrial planets. The ALMA Large Program AGE-PRO studied key disc properties in a survey of 30 protoplanetary discs across three evolutionary stages: the embedded phase (0.5-1 Myr), the middle-age phase (1-3 Myr), and the end of the disc lifetime (2-6 Myr). Preliminary dust properties were estimated using 1.3 mm observations, but a multi-wavelength analysis provides a better constraint of important properties such as the dust disc mass, the dust temperature, and the maximum grain size. We present new ALMA 3.1 mm and 1.5 mm (Bands 3 and 5) continuum observations",
+      "url": "http://arxiv.org/abs/2610.32906v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "GRB 260924A: Extreme Energetics, Bright GeV Emission, and Exceptional X-ray and Optical Luminosity",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-23",
+      "summary": "We present a multiwavelength study of GRB~260924A at $z=3.51\\pm0.10$ using \\textit{Fermi}, \\textit{Swift}, and ground-based optical and near-infrared observations. Its isotropic-equivalent gamma-ray energy, $E_{γ,\\mathrm{iso}}\\simeq9.79\\times10^{54}$~erg, places it among the most energetic GRBs observed. The prompt emission comprised two bright episodes separated by weaker activity. The X-ray afterglow ranked among the most luminous in our comparison sample at selected post-flare epochs, with a luminosity comparable to that of GRB~221009A at a rest-frame time of 3.5~ks. At a common redshift of $z=1$, the optical afterglow outshone GRB~221009A by approximately 2~mag at 0.3~d and 1~mag near 1~",
+      "url": "http://arxiv.org/abs/2610.32861v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "The Galactic Center Gamma-Ray Excess and the Look-Elsewhere Effect",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-23",
+      "summary": "The origin of the excess of GeV gamma-rays in the Milky Way's galactic center observed by Fermi-LAT has been an open question for nearly two decades. The two leading interpretations of this signal are that it is produced either by annihilating dark matter (DM), or arises from unresolved point sources, such as a novel population of millisecond pulsars. In both scenarios, uncertainties and limitations in the modeling of galactic diffuse gamma-ray emission, such as the steady-state approximation of cosmic ray (CR) propagation and assumption of an axisymmetric distribution of CRs, complicate the interpretation of the galactic center excess (GCE). Simulations with full magnetohydrodynamics (MHD) ",
+      "url": "http://arxiv.org/abs/2610.32845v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Diversity of planetary origins and compositions traced by stellar abundance differences of co-natal star systems",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-23",
+      "summary": "Co-natal stars, wide binaries that form from the same molecular cloud, should harbor the same stellar composition. Observations indicate stellar abundance differences in a small fraction of these co-natal systems. The stellar abundance differences have been attributed to the ingestion of planets by their host stars. We analyze a previous sample of co-natal stars to determine the composition of the planets that were ingested. The abundance differences in these co-natal pairs can show a positive abundance difference of the refractory elements (Fe, Mg, Si) paired with a positive, zero, or negative abundance difference of volatiles (O, C, S). Positive trends of refractory and volatile abundance ",
+      "url": "http://arxiv.org/abs/2610.32833v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "The GAPS Programme at TNG LXXXI. The puzzle of the HeI absorption signal in the atmosphere of V1298 Tau b with GIARPS@TNG",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-23",
+      "summary": "Atmospheric escape shapes close-in planets mostly in their first tens of Myr. The young V1298Tau system (10-30Myr) is a benchmark for investigating photoevaporation and planetary evolution at early stages. The metastable HeI near-infrared triplet is a key proxy for atmospheric escape. We aim to detect and characterise HeI in the extended atmosphere of V1298Taub. We analysed four transits over a 4-year baseline using GIARPS (GIANO-B + HARPS-N) at the Telescopio Nazionale Galileo. We re-derived the projected spin-orbit angle by modelling the Rossiter-McLaughlin effect. Using simultaneous optical and near-infrared high-resolution transmission spectroscopy of V1298Taub, we monitored the HeI trip",
+      "url": "http://arxiv.org/abs/2610.32815v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Probing the star-forming environment of GRB across cosmic ages with high-resolution X-ray spectroscopy: From \\textit{XMM-Newton}/RGS and \\textit{XRISM}/Resolve to \\textit{NewAthena}/X-IFU",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-23",
+      "summary": "Optical and infrared GRB absorption spectroscopy provides valuable insight into host-galaxy properties across cosmic time. However, the star-forming region embedding the progenitor, on scales $\\lesssim 100~\\mathrm{pc}$ is heavily ionized by the GRB emission, making X-ray spectroscopy the sole probe of its physical and chemical conditions. We characterize the GRB-embedding medium as a function of progenitor type and cosmic epoch via high-resolution X-ray spectroscopy. We extend our study to high-redshift GRBs to evaluate how effectively X-ray absorption signatures can distinguish between pristine, Pop~III-, and Pop~II-enriched environments. Using the time-dependent photoionization code \\textt",
+      "url": "http://arxiv.org/abs/2610.32786v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Tracking the Evolution of Supermassive Black Hole Binaries with Pulsar Terms",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-23",
+      "summary": "Pulsar timing arrays will soon be able to resolve the loudest supermassive black hole binaries contributing to the stochastic gravitational wave background at nanohertz frequencies. While the few decades of observations are typically not enough to see these binaries evolve in frequency, the so-called pulsar terms offer a glimpse into the past and can help us map out the frequency evolution of these binaries over tens of thousands of years. Measuring this long-term frequency evolution can allow us to look for deviations from a vacuum binary evolution due to various environmental effects. We develop a Fisher-matrix approach to calculate how precisely the frequency can be tracked over time in t",
+      "url": "http://arxiv.org/abs/2610.32736v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Magnetic Reconnection Modifies Cosmic-Ray Transport in the Interstellar Medium",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-23",
+      "summary": "We present numerical magnetohydrodynamic (MHD) simulations of the interstellar medium in gravity-stratified boxes with the Piernik MHD code. The system contains thermal gas, spectrally resolved cosmic-ray (CR) nuclei within the CRESP algorithm, and spectrally unresolved CR protons. CR protons drive gas outflows and undergo Coulomb and hadronic losses. CR nuclei undergo Coulomb losses. We also include the spallation of primary Carbon by thermal gas atoms, thereby decaying Car- bon into secondary stable Boron isotopes. We use the resistive-MHD approximation as a subgrid model for unresolved turbulent magnetic dissipation in current sheets. We perform a parameter study of the magnetic diffusivi",
+      "url": "http://arxiv.org/abs/2610.32716v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Comparison of observed and theoretically calculated amplitudes of Forbush effects for events associated with the arrival of a shock wave",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-23",
+      "summary": "This paper examines the role of plasma compression regions ahead of interplanetary coronal mass ejections in the formation of Forbush effects decreases in cosmic ray intensity during the first phase. The aim of this study is to identify and quantify the relationship between the structure of the CME (specifically, the parameters of the compression region behind the shock front) and the nature of the observed Forbush effect. To this end, events with intensity decrease amplitudes greater than 5 percent were selected, and a theoretical model of cosmic ray behavior at the shock front was tested using modern analytical methods and mathematical models. Analysis of the results for two dozen events r",
+      "url": "http://arxiv.org/abs/2610.32509v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Local Analogs of Little Red Dots: Clues to the X-ray Weakness",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-23",
+      "summary": "A major question about JWST's little red dots (LRDs) at $z\\sim4-8$ is the origin of their apparent X-ray weakness. Even deep Chandra stacks yield only tentative detections or broad-band limits and cannot distinguish among super-Eddington accretion, intrinsic X-ray weakness, and Compton-thick (CT) obscuration. Local analogs offer a powerful complementary route. At $z\\sim0.3$, similarly luminous sources require $\\sim10^{3-4}$ less exposure for comparable signal-to-noise, suffer less source confusion, and directly probe the diagnostic rest-frame soft X-rays. Here we present a pilot Einstein Probe/FXT study of six \"local little red dots\" (LLRDs), V-shaped broad-line green pea galaxies selected a",
+      "url": "http://arxiv.org/abs/2610.32430v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Estimation Of The Mass And The Spin Of The Neutron Star 4U 1728-34 Using Triples Of X-Ray Quasi-Periodic Oscillations",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-23",
+      "summary": "X-ray quasi-periodic oscillations (QPOs) were reported for 19 different observations of the atoll source 4U 1728- 34. Three of them reveal triplets of QPOs: a lower and a upper kHz QPOs and a low-frequency QPO. Even though they are discernible only after averaging we assume them to be simultaneous. We apply a separate model (formula) for each of the three frequencies of the observed QPOs and compose a system which contains three algebraic equations for the three unknown parameters - the mass and the specific angular momentum of the central neutron star, and the radius of the orbit of orgin of the given triplet of QPOs, which allows us to find the numerical values of the later. Error propagat",
+      "url": "http://arxiv.org/abs/2610.32371v1",
       "image": "",
       "type": "research"
     },
@@ -448,156 +598,6 @@
       "publishedAt": "2026-10-20",
       "summary": "Observations of exoplanetary atmospheres have revealed a rather complex co-existence between the gaseous and condensed phases, ranging from atmospheres apparently covered in clouds to clear ones, across a myriad of intermediate regimes. The interaction between solids and stellar radiation is of fundamental importance when forward or retrieval models are compared to observations. The simplest approach is to assume spherical particles, whose scattering and absorption properties are readily computed with Mie theory. More advanced computational methods, however, can also treat non-spherical condensates. Among these, the transition matrix approach has proven to provide a rigorous and efficient ca",
       "url": "http://arxiv.org/abs/2610.28117v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Pulsar J1909+0749 and Supernova Remnant G42.1-0.2: A case of a pulsar that has exited the shell of its associated supernova remnant",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-20",
-      "summary": "(Abridged) The ATNF pulsar catalogue features only 63 pulsars that are possibly associated with a supernova remnant (SNR). Even rarer is the scenario in which the pulsar has escaped the physical extent of its corresponding SNR. We aim to identify the serendipitously discovered shell-type object G42.1-0.2 as a SNR. The known pulsar (PSR) J1909+0749 lies well outside the shell of SNR G42.1-0.2, but it has a cometary tail pointing towards the centre of the SNR; we propose that the SNR and the pulsar originated from the same supernova explosion. By measuring the flux densities of the shell G42.1-0.2 from ${\\sim}$200 MHz to ${\\sim}$6 GHz, we establish the nonthermal nature of its emission. With t",
-      "url": "http://arxiv.org/abs/2610.28073v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "X-ray Comptonization in an Accreting Kerr Black Hole System with a Tilted Disc and Thermal Corona; A General-Relativistic Monte Carlo Simulation: I. Model, Radiative Transfer and Spectral-Timing Properties",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-19",
-      "summary": "Quasi-periodic oscillations (QPOs) in the X-ray emission of accreting black hole binaries are commonly attributed to the relativistic Lense--Thirring precession of the inner accretion flow, in which a hot inner flow, tilted with respect to the black hole spin axis, precesses as a solid body while a cooler outer disc remains at its own, different tilt -- a warped, Bardeen--Petterson-type geometry. Testing this picture requires a radiative-transfer model that self-consistently follows photons through such a system: from emission near the innermost stable circular orbit (ISCO), through Compton scattering in a hot corona, to possible reflection off the misaligned outer disc, all under the full e",
-      "url": "http://arxiv.org/abs/2610.26769v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Deep X-ray Observations of the Gamma-ray Bright Pulsar Wind Nebula HESS J1303-631",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-19",
-      "summary": "HESS J1303$-$631 is an evolved, TeV-bright pulsar wind nebula (PWN) powered by the energetic radio pulsar PSR~J1301$-$6305, offset by $\\approx7'$ northwest of the TeV centroid, with an energy-dependent gamma-ray morphology. We present new, deep joint Chandra (108 ks) and XMM-Newton (102 ks) observations of this field. High-resolution Chandra ACIS imaging resolves the pulsar from a neighboring point source that XMM-Newton cannot separate. The pulsar's 2-10 keV spectrum is well described by an absorbed power law with $Γ=2.02\\pm1.04$ and an unabsorbed luminosity of $3.44\\times10^{31}\\,{\\rm erg\\,s^{-1}}$ at $d=4.7$ kpc. Chandra also reveals faint diffuse emission east of the pulsar: a clumpy com",
-      "url": "http://arxiv.org/abs/2610.26723v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Detection Forecasting for Blazars at MeV Energies with Fermi-LAT Swift-BAT Cross Match",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-19",
-      "summary": "Over the past two decades, the lack of an MeV $γ$-ray all-sky instrument has left an observational gap in blazar broadband emission. Recently, a new suite of MeV $γ$-ray instruments with sensitivity in the $10^{-11}$ to $10^{-12}$ $\\mathrm{erg/cm^{2}/s}$ range has been proposed, with the potential to far surpass the capabilities of previous all-sky MeV instruments. In this work, we forecast the capabilities of future MeV $γ$-ray instruments including COSI, GRAMS, newASTROGAM, and AMEGO-X to observe blazars. We pair total source count estimates of blazar luminosity functions with SED-modeled flux estimates of 76 blazars selected from a sample of 115 blazars cross-matched between the latest Fe",
-      "url": "http://arxiv.org/abs/2610.26658v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Dark Matter Interpretations of the Galactic Center Gamma-Ray Excess with 18 Years of Fermi-LAT Data and the FL16Y Source Catalog",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-19",
-      "summary": "We investigate dark matter (DM) interpretations of the Galactic Center Excess (GCE) using 17.7 years of Fermi-LAT data and the FL16Y source catalog. We test 80 Galactic diffuse-emission models and include correlated systematic uncertainties from Galactic-plane control regions. We derive combined 95\\% CL annihilation limits from 30 dwarf spheroidal galaxies (dSphs), including $J$-factor uncertainties, and compare the GCE-preferred regions with these limits and AMS-02 antiproton bounds. For self-conjugate DM, we study two-body annihilation, effective $4b$, $4τ$, and $2b2τ$ channels, and cascades through on-shell scalar mediators. For Model X, the best-fitting diffuse-emission model in our temp",
-      "url": "http://arxiv.org/abs/2610.26648v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "The EMA Justitia Probe: Terminator Frame-Based Deployment Orbit Selection and Surface Coverage Analysis",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-19",
-      "summary": "The Emirates Mission to the Asteroid Belt (EMA) probe is designed to perform asteroid imaging during an uncontrolled ballistic descent to (269) Justitia. The mission design is constrained by main spacecraft proximity operations, uncertain asteroid gravity, limited knowledge of the final deployment trajectory, and requirements for illumination and safe operations. These constraints necessitate a mission design that ensures suitable illumination, attitude determination and control, and payload pointing throughout descent. The EMA probe concept of operations employs near-terminator deployment orbit geometry with continuous Sun visibility and two attitude control modes: single-axis Sun-spin for ",
-      "url": "http://arxiv.org/abs/2610.26581v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "The accretion flow and jet of M87: broadband modelling across spatial scales",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-19",
-      "summary": "The nearby radio galaxy M87 is an ideal laboratory for studying accretion flows and relativistic jet emission. The EHT collaboration conducted the most comprehensive multi-wavelength observational campaign of M87, in which radio instruments with resolutions ranging from tens of microarcseconds to about an arcsecond sampled different portions of the outflow. We model these data using a radiatively inefficient accretion flow (RIAF) with winds and a new multi-zone jet model, initially magnetically dominated, in which we solve the transport equation for the non-thermal electrons as they are injected, advected, and cooled along the jet. We then compare each radio flux with the jet emission within",
-      "url": "http://arxiv.org/abs/2610.26434v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Disc breaking and parametric instability in warped accretion discs driven by differential precession",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-19",
-      "summary": "We present the first local simulations of accretion disc breaking (or disc tearing) with differential precession. Precession can occur due to a non-spherical potential (e.g. tilted circumbinary discs), or relativistic effects (e.g. tilted discs around spinning black holes). This tends to induce a twist in the disc, potentially causing it to break into rings. We extend earlier work on free (unforced) warps in Held+2026 [arXiv:2511.18655v1] to include differential precession in the shearing box, and carry out quasi-2D, isothermal, high-resolution ($N = 32$ cells per scale-height $H$) numerical simulations in which an imposed precession drives a warp in a tilted disc in either the wavelike ($α<",
-      "url": "http://arxiv.org/abs/2610.26184v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Competitive roles of turbulence and magnetic field on the formation of unipolar outflows in isolated molecular cloud cores",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-19",
-      "summary": "We investigate the impact of turbulence and magnetic field on the formation of unipolar outflows in the gravitational collapse of isolated low-mass cloud cores using three-dimensional non-ideal magnetohydrodynamics simulations. In the models explored in this study, we find that unipolar outflows are formed in cloud cores with the super-Alfvénic turbulence of $M_{\\rm{A}}>1$, where $M_{\\rm{A}}$ is the Alfvén Mach number of the initial cloud core. In contrast, bipolar outflows are formed in cloud cores with $M_{\\rm{A}}\\lesssim1$. Our results suggest that the relative strength of the turbulence to the magnetic field in the initial cloud core plays a key role in the formation of unipolar outflows",
-      "url": "http://arxiv.org/abs/2610.26176v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Probing the Interstellar Medium towards the Double Pulsar and the Gum Nebula using Low-Frequency Pulse Broadening Measurements",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-19",
-      "summary": "Long-term timing of the double pulsar system (PSR J0737-3039A/B) has enabled some of the most stringent constraints on strong-field gravity. Yet, despite the system's high profile, there have been very few observations at frequencies below 300 MHz, where pulse broadening due to interstellar scattering becomes significant. Measurements of the pulse broadening timescale and its frequency scaling, $τ_\\mathrm{s}\\proptoν^α$ (where $α$ is the scattering spectral index), provide valuable constraints on the structure of the scattering medium. Here we report on simultaneous observations of J0737-3039A and five other nearby pulsars (J0630-3824, J0742-2822, J0820-4114, J0835-4510, J0837-4135) in the fr",
-      "url": "http://arxiv.org/abs/2610.26141v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Pulse Morphology and Spectral Study of LPT J1634+44 Using GMRT",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-19",
-      "summary": "Long-period radio transients (LPTs) are a recently discovered class of Galactic coherent radio emitters characterized by rotation periods of minutes to hours and highly polarized radio pulses. Their nature remains uncertain, with proposed scenarios invoking isolated or binary systems containing neutron stars (NSs) or white dwarfs (WDs). We investigate the nature of CHIME/ILT J1634+44 through multi-band observations with the Giant Metrewave Radio Telescope (GMRT), examining its pulse morphology, spectral evolution, and timing behavior. The pulses show substantial profile variability, and the subpulse features evolve significantly across observing frequencies. Using our measurements of quasi-p",
-      "url": "http://arxiv.org/abs/2610.26128v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "A 36.34-day Sub-Neptune Candidate Transiting the Nearby K Dwarf TIC 402710280",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-19",
-      "summary": "We report a transiting sub-Neptune candidate with a period of 36.34 days around TIC 402710280 (TYC 9041-03677-1), a K dwarf of TESS magnitude 9.24 at 66.8 pc that the Transiting Exoplanet Survey Satellite (TESS) has observed only in full-frame images. Four transits, recorded between 2021 and 2026 in Sectors 39, 93, 100 and 102 and reduced by three independent pipelines, share a depth of $2092 \\pm 47$ ppm and a duration of $5.27 \\pm 0.05$ h. Two of them fall on consecutive cycles, and every shorter period predicts transits in covered data that are absent at $\\geq 18.6σ$; the period is $P = 36.33986 \\pm 0.00051$ d. A transit model gives $R_p/R_\\star = 0.0421^{+0.0007}_{-0.0005}$ and a stellar ",
-      "url": "http://arxiv.org/abs/2610.26056v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Kinematic structure and age of a Scorpius--Centaurus subcomponent: implications for PDS 70 planetary system",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-19",
-      "summary": "PDS~70, the only system with two directly imaged protoplanets embedded in their natal disk, is a benchmark for giant-planet formation theory. Interpreting the planetary luminosities requires a precise age for the host star, but the widely adopted isochronal age of $5.4\\pm1.0$~Myr is substantially younger than ages inferred for the Upper Centaurus--Lupus (UCL) population with which it is associated. We address this discrepancy by determining a new kinematic age for PDS~70 using radial velocities for 405 candidate members of the Scorpius--Centaurus T subcomponent from the Wide Field Spectrograph (WiFeS) on the ANU 2.3~m telescope, reducing uncertainties by a factor of $\\sim5.5$ compared to \\te",
-      "url": "http://arxiv.org/abs/2610.25987v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Constraints on the Progenitor of SN 2023bee from its Nebular-Phase Spectra",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-19",
-      "summary": "We present late-time photometry (~100-400 days after peak) and nebular-phase optical/NIR spectroscopy (100-360 days) of the Type Ia supernova (SN Ia) SN 2023bee. This SN Ia was observed TESS immediately before and after explosion and showed a relatively weak early excess light-curve feature detected in multiple UV and optical bands. Possible explanations for this early excess feature include interaction between the SN ejecta and a non-degenerate companion, or the decay of radioactive isotopes synthesized near the ejecta surface in a sub-$\\text{M}_\\text{Ch}$ double-detonation scenario. However, the degeneracies and incompleteness of existing models have so far prevented a definitive conclusio",
-      "url": "http://arxiv.org/abs/2610.25674v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Hyperonic Direct-Urca Neutrino Emission with Lattice-QCD-Informed Form Factors",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-18",
-      "summary": "We investigate the sensitivity of direct-Urca neutrino emission in hyperonic neutron-star matter to the structure and momentum dependence of baryonic transition form factors. Using the zero-temperature FSU2H relativistic mean-field equation of state, we derive the relativistic emissivity for general spin-$1/2$ baryon transitions with the complete six form-factor contribution. We compare conventional static flavor-SU(3) couplings with vacuum lattice-QCD-informed form factors, using direct lattice vacuum input for $n\\rightarrow p$ and $Λ\\rightarrow p$ and a hybrid construction for the remaining hyperonic channels. Evaluating the latter both at $q^2=0$ and at the kinetic momentum transfer sampl",
-      "url": "http://arxiv.org/abs/2610.25514v1",
       "image": "",
       "type": "research"
     }
