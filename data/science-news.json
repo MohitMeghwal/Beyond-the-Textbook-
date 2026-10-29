@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-28T08:40:35.431772+00:00",
+  "lastUpdated": "2026-10-29T08:36:57.937730+00:00",
   "articles": [
     {
       "title": "Esc2 and Rad57 contribute to RNA polymerase II distribution at highly transcribed genes.",
@@ -8,6 +8,156 @@
       "publishedAt": "2027 Jan",
       "summary": "esc2 and rad57 contribute to rna polymerase ii distribution at highly transcribed genes",
       "url": "https://pubmed.ncbi.nlm.nih.gov/42864262/",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Weighing dark matter particles with gravitational waves",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-27",
+      "summary": "It is commonly assumed that the mass of dark matter particles cannot be determined from their gravitational effects when dark matter behaves as collisionless matter. Here we show that extreme-mass-ratio inspirals observable by millihertz gravitational-wave observatories such as the Laser Interferometer Space Antenna (LISA) could measure the mass of ultralight dark matter particles in sufficiently dense dark matter spikes. The separation of scales between the two black holes allows ultralight dark matter to form a collisionless density spike around the massive primary while retaining wave effects in its interaction with the stellar-mass companion. We incorporate wave-dependent accretion and d",
+      "url": "http://arxiv.org/abs/2610.37638v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "A Quiet Night in the Millihertz Sky? LISA Forecasts from LIGO/Virgo/KAGRA Populations",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-27",
+      "summary": "The high-mass black hole population inferred from ground-based observations can substantially affect the number of binaries detectable by the Laser Interferometer Space Antenna (LISA). We use population constraints based on data from the latest LIGO/Virgo/KAGRA Gravitational-Wave Transient Catalog (GWTC-5.0), as well as constraints from the O3 search for intermediate-mass black hole binaries, to forecast the number and masses of binary black holes detectable by LISA. Using the released GWTC-5.0 population posterior, we obtain $6.6^{+5.5}_{-2.2}$ expected detections with signal-to-noise ratio $>8$ in 4 years (median and $90\\%$ credible interval). The alternative population models we consider ",
+      "url": "http://arxiv.org/abs/2610.37617v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Effects of Dust in Electron-Capture Supernovae: Difficulty in Explaining Intermediate Luminosity Red Transients",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-27",
+      "summary": "The progenitors of intermediate-luminosity red transients (ILRTs) spanning the luminosity gap between novae and supernovae are under debate, and electron-capture supernovae (ECSNe) have been proposed as a strong candidate. ECSNe from super asymptotic giant branch (super-AGB) stars have been theoretically predicted to be much brighter than ILRTs, but attenuation by dusty winds of their super-AGB progenitors may ease this tension. Here we construct a semi-analytical framework for calculating the light curves of ECSNe with dust attenuation and re-emission, by combining recent ECSN light curve predictions with a model for dust physics. Even by varying both the wind mass-loss rate and the ECSN mo",
+      "url": "http://arxiv.org/abs/2610.37574v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "JWST/MIRI Observations of Amorphous Silicates in Interstellar Comet 3I/ATLAS",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-27",
+      "summary": "We present JWST/MIRI Low Resolution Spectroscopy (LRS) of 3I/ATLAS obtained post-perihelion at a heliocentric distance of 2.21 au. Our spectrum contains a prominent 10 micron silicate emission feature with a broad, smooth shape that is distinct from those commonly observed in Solar System comets. We model the spectrum using thermal emission from amorphous carbon, amorphous olivine, and amorphous pyroxene grains. Our models strongly favor a pyroxene-dominated, amorphous silicate composition and show a degeneracy between silicate grain size and the relative abundance of silicate and carbon dust. Across a set of representative models, the best-fitting crystalline abundance is zero, and we place",
+      "url": "http://arxiv.org/abs/2610.37540v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Faint and Fast Transients from Double Detonations of Low Mass White Dwarfs",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-27",
+      "summary": "There is significant evidence that white dwarfs can explode via the double detonation mechanism, whereby an initial detonation in an accreted helium shell triggers a second detonation of the carbon-oxygen core. This scenario has been invoked for white dwarfs near a solar mass to produce Type Ia-like supernovae, but low-mass explosions have been relatively unexplored despite the most common white dwarf being near 0.6 solar masses. We predict faint and fast transients emerging from double detonations of white dwarfs with total masses around 0.6 solar masses and accreted helium shells up to 0.3 solar masses. The models are computed through the moving-mesh nuclear hydrodynamics code Cattails and",
+      "url": "http://arxiv.org/abs/2610.37507v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Effects of Short-Range Correlations on Quarkyonic Matter",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-27",
+      "summary": "In this work, we focus on investigating the impact of the short-range correlations on the properties of quarkyonic matter. These correlations induce the scattering of nucleons to momenta exceeding the Fermi momentum, thereby altering the momentum-space occupation distribution that underlies the quarkyonic framework. In particular, we examine to what extent the emergence of a high-momentum tail, due to the short-range nucleon-nucleon correlations, in the momentum distribution, for momenta exceeding the Fermi momentum, affects the fundamental properties of quarkyonic matter, such as the energy density, pressure, and speed of sound, among others. In fact, at high densities, the behavior of the ",
+      "url": "http://arxiv.org/abs/2610.37502v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Quasinormal Ringing of a Schwarzschild Black Hole Surrounded by a King Dark Matter Halo: Higher-Order WKB Analysis",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-27",
+      "summary": "We study scalar and electromagnetic perturbations of a Schwarzschild black hole (BH) surrounded by a dark matter halo described by the King density profile. The lapse function can be expressed as $1-2[M+M_{\\rm DM}(r)]/r$, where $M_{\\rm DM}(r)$ is the halo mass enclosed within radius $r$; thus, the halo affects the geometry through its enclosed-mass function. We compute the quasinormal frequencies using the sixth-order WKB method and its Padé-improved version. Rewriting the lapse function in terms of the inverse hyperbolic sine avoids the severe numerical cancellations that arise when evaluating its high-order derivatives. For the configurations examined, the fundamental frequencies agree wit",
+      "url": "http://arxiv.org/abs/2610.37501v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Evidence for a nova super-remnant surrounding the recurrent nova V745 Scorpii using eROSITA",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-27",
+      "summary": "Nova super-remnants (NSRs) are vast shell-like structures encompassing recurrent novae (RNe), created through the excavation of large amounts of local interstellar medium by repeated nova eruptions. Simulations predict that such NSRs should surround all novae. Indeed, NSRs have now been discovered around the Galactic RNe KT Eridani, RS Ophiuchi and T Coronae Borealis, and the Large Magellanic Cloud RN LMCN 1971-08a, to place alongside the prototypical NSR in M31, associated with the extreme RN, M31N 2008-12a. Highly energetic novae ejecta impacting the inner boundary of the NSR shell alongside inter-ejecta shocks are predicted to generate high levels of X-ray emission in the form of an exten",
+      "url": "http://arxiv.org/abs/2610.37414v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Probing the inner disk edge of rotating neutron stars with dipole excitations in finite nuclei",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-27",
+      "summary": "The nuclear equation of state shapes both the structure of rapidly rotating neutron stars and the orbital motion in their surrounding spacetime. Its uncertainty affects the mass and radius at which the innermost stable circular orbit reaches the stellar surface, a condition that defines the transition between disks whose inner edge is set by the surface and those truncated by orbital instability. We quantify how measurements of the electric dipole polarizability of neutron-rich nuclei reduce the uncertainty in this transition and in the orbital properties at the disk inner edge. We compute uniformly rotating neutron stars in general relativity for a family of equations of state that systemat",
+      "url": "http://arxiv.org/abs/2610.37394v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Impact of Neutrino Trapping on the Equation of State and Structure of Hybrid Stars with 2SC Quark Matter",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-27",
+      "summary": "We investigate how sensitive the effects of neutrino trapping on hot hybrid stars are to uncertainties in the hadronic and quark equations of state and in the thermodynamic construction of the hadron--quark transition. The hadronic phase is described by finite-temperature covariant density functional equations of state, and the quark phase by a three-flavor Nambu--Jona-Lasinio (NJL) model with repulsive vector interactions and two-flavor color superconductivity. Because confinement is absent from the NJL model, an effective pressure shift $B^*$ is used phenomenologically to locate the deconfinement transition. We construct isentropic stellar equations of state with and without trapped electr",
+      "url": "http://arxiv.org/abs/2610.37360v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Nonradial oscillation modes of axion condensed neutron stars in the Cowling approximation",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-27",
+      "summary": "In light QCD axion models, finite-density corrections to the axion potential can source a nonvanishing axion field inside neutron stars. Extending our previous analysis of radial oscillations, we study the nonradial ($l=2$) oscillation spectrum of such axion condensed neutron stars in the relativistic Cowling approximation, keeping the fluid and axion perturbations fully coupled and dynamical. The condensate modifies the fluid spectrum in two ways: the altered equilibrium structure raises the $f$- and $p$-mode frequencies by up to $\\sim20\\%$, while the dynamical coupling to the axion field partially compensates this shift, almost entirely for the $f$-mode. Fluid modes with frequencies above ",
+      "url": "http://arxiv.org/abs/2610.37308v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "$γ$-ray variability of changing-look blazars: FSRQ-like jet behaviour",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-27",
+      "summary": "Changing-look blazars (CLBs) move between the flat-spectrum radio quasar (FSRQ) and BL Lacertae (BL Lac) optical classifications. Either the accretion flow switches regime, or a brightening jet continuum swamps the broad lines while the system itself is unchanged. The two pictures predict the same optical behaviour but differ in the jet, so the $γ$-ray emission could potentially separate them. Catalogue quantities averaged over the mission cannot, because a permanently intermediate source and one alternating between two states return the same mean. We therefore use 17.9\\,yr of \\textit{Fermi}-LAT light curves at 3-, 7- and 30-day cadence, comparing CLBs with BL Lac and FSRQ controls selected ",
+      "url": "http://arxiv.org/abs/2610.37303v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "The First Deep Learning all-sky List of Fermi-LAT Gamma-ray Sources",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-27",
+      "summary": "Aims: We develop a deep-learning-based pipeline to construct a list of γ-ray sources and to quantitatively assess the impact of background uncertainties on source detection and characterization. This work extends and enhances the existing AutoSource-ID algorithm, previously adopted on optical observations, for applications on γ-ray data. Methods: Source detection was performed through image segmentation using a U-Net architecture, while dedicated deep neural networks (DNNs) were employed for source localization, flux estimation, and the classification of detected sources as either genuine or spurious. The training data were generated from Monte Carlo simulations based on 10 years of Fermi-LA",
+      "url": "http://arxiv.org/abs/2610.37287v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "An SRG/eROSITA Study of Be X-ray binaries in Quiescence",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-27",
+      "summary": "Be X-ray binaries (BeXRBs) are mostly transient X-ray binaries with usually a neutron star as the compact object and a Be star as their optical companion. We performed a comprehensive analysis of BeXRBs in quiescence with the extended ROentgen Survey with an Imaging Telescope Array (eROSITA), the soft X-ray instrument on board the Spectrum-Roentgen-Gamma satellite, using its first all-sky survey (eRASS1) data. The transient BeXRBs spend majority of time in their quiescent state, but are often studied during their outbursts. A quiescence study is useful to probe the emission mechanism of BeXRBs at low mass accretion rates. The spectra of BeXRBs detected in the eRASS1 main catalogue could be w",
+      "url": "http://arxiv.org/abs/2610.37277v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Coherent Radio Emission from Flux Rope Mergers in 3D Relativistic Reconnection",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-27",
+      "summary": "Coherent emission from merging plasmoids in relativistic reconnection is the leading model for radio emission originating in the outer magnetosphere of pulsars such as the Crab, and a candidate emission mechanism for fast radio bursts. This process has only been studied in 2D, and whether it survives in 3D, where the dynamics of structures in the reconnection layer can differ substantially, is still an open question. Here we present the first study of coherent wave generation from flux rope mergers in 3D relativistic reconnection. We use particle-in-cell simulations of relativistic reconnection with outflow boundary conditions and guide fields $B_g/B_0 = \\{0,0.1,0.3\\}$, and measure the effic",
+      "url": "http://arxiv.org/abs/2610.37214v1",
       "image": "",
       "type": "research"
     },
@@ -448,156 +598,6 @@
       "publishedAt": "2026-10-22",
       "summary": "Direct detection and characterization of exoplanet atmospheres via reflected starlight enables probes of composition of mature exoplanet systems (since flux is decoupled from age) at closer separations than via thermal emission (due to observations in visible wavelengths), and even probes of biosignatures. New and upcoming ground and space-based platforms are enabling these observations for the first time. Recently the 3-m Lazuli Space Telescope, from the Eric and Wendy Schmidt Observatory System, was announced, which will be equipped with the ExtraSolar Coronagraph (ESC) designed for reflected light gas giant exoplanet observations in visible wavelengths. In this paper we present 27 known g",
       "url": "http://arxiv.org/abs/2610.31286v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "In Search of the Gravitational Wave of Fast X-Ray Transient in the Second Part of the LIGO-Virgo-KAGRA Fourth Observing Run",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-22",
-      "summary": "Fast X-ray Transients (FXTs) are brief, intense X-ray flashes unassociated with persistent X-ray sources or known stellar objects, typically lasting from seconds to hours. With the launch of the Einstein Probe in January 2024, the study of FXTs has entered a new phase. Its large field of view significantly increases the discovery rate, enabling more robust statistics. The leading discoveries have revealed a fraction of gamma-ray bursts, while the rest remain unexplained. We propose a methodology to search for possible relations between gravitational waves (GWs) and FXTs, as it may serve as a discrepancy among proposed theoretical models. To achieve this, we intend to utilize X-Pipeline, an u",
-      "url": "http://arxiv.org/abs/2610.31227v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Predictions for an unseen third planet in the WISPIT 2 system",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-21",
-      "summary": "We predict the mass and semi-major axis of a currently unseen but hypothesised planet in the WISPIT 2 system based on the location of the ring observed by ALMA at 144.4 au. Using findings from previous hydrodynamical models, we predict that a ~0.2-1 $M_{Jup}$ planet may exist at ~ 100-120 au. We also demonstrate that the ring seen in VLT/SPHERE observations at 96.7 au is consistent with the mass and semi-major axis of WISPIT 2b and confirm that WISPIT 2b cannot be the cause of the ALMA ring. We also discuss how future observations of the system's gas component may help constrain these predictions better, and note that this third planet in WISPIT 2 may be discoverable using upcoming JWST/NIRC",
-      "url": "http://arxiv.org/abs/2610.30115v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Modeling MAD Sgr A* flares and their dependence on spin",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-21",
-      "summary": "Aims: This study aims to place constraints on the spin of Sgr A* from recent flare observations. It models the flare kinematics in the vicinity of a supermassive black hole, evaluates their dependence on black hole spin, and assesses the correlation between the spin of the black hole and the astrometric observations in the Galactic center. Methods: Our study extends the work of Antonopoulou et al. 2025 to a range of black hole spins. A prominent flux eruption is identified in the simulation, and the evolution of the active region on the equatorial plane is tracked during the event. The flare model consists of a spherical hot spot ejected along the flux tube with a relativistic velocity. Resu",
-      "url": "http://arxiv.org/abs/2610.30095v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Extended vs. thin screen approximation in astrophysical settings",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-21",
-      "summary": "Context: In the context of radio wave propagation through plasma concentrations and for gravitational lensing, the thin screen approximation often provides a suitable approximation for scattering and deflections caused by three-dimensional spatial structures. For scattering of electromagnetic waves from an extended medium, stochastic theories provide analytical bounds on ensemble averaged quantities, such as the scintillation index. If neither the conditions for a stochastic treatment nor the thin screen approximation are fulfilled, fully numerical methods are required. Aims: For an extended structure, the applicability of the thin screen approximation needs to be verified by comparing it wi",
-      "url": "http://arxiv.org/abs/2610.30093v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "The Pandora SmallSat: Target Selection and Early Science",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-21",
-      "summary": "The Pandora spacecraft is a smallsat selected in NASA's inaugural class of Pioneers missions. The aim of the Pandora mission is to disentangle stellar activity signals from exoplanet atmospheric transmission spectroscopy measurements. Pandora accomplishes this goal with its combined visible photometry and NIR spectroscopy that observe each target in the prime mission for 10 separate transit observations, each spanning 24 hours at a time. Targets were carefully selected for the Pandora prime mission. Pandora is specifically studying planets around low-mass stellar hosts (K and M dwarf stars) spanning a range of rotation periods and activity levels. The planets range in size from 1.5 - 15 Eart",
-      "url": "http://arxiv.org/abs/2610.30028v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Local tests of Schwarzschild-Bertotti-Robinson spacetime",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-21",
-      "summary": "We study weak field local tests of Schwarzschild-Bertotti-Robinson spacetime, which describes a static black hole embedded in an external magnetic field. Perihelion precession, deflection of light rays and time delay of radar echoes are the phenomena considered in this work to understand the possible effects of this external magnetic field on these observationally important tests. We not only derive weak field analytical results by employing appropriate methods, but also consider an exact approach to directly integrate the relevant geodesic equations, to both confirm those weak field analytical results and to obtain results beyond the weak field approximation.",
-      "url": "http://arxiv.org/abs/2610.29990v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "The diversity of late-time interaction in Type II supernovae",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-21",
-      "summary": "Studying core-collapse supernovae (SNe) beyond one year after explosion, when ejecta interaction with circumstellar material (CSM) progressively becomes the dominant power source, offers critical insights into the progenitor mass loss history. Using binary progenitors that underwent different levels of H-rich envelope stripping, we present radiative transfer calculations of the ejecta with CSM interaction in Type IIb, II-L and II-P SN scenarios covering epochs of 1.5 to 3-6yr, with a focus on the UV and optical properties. The impact of CSM interaction is evaluated for a cold-dense shell (CDS) of 0.1-2.0Msun (CDS velocity of ~5000-10000km/s) and shock powers of 1e39-1e41erg/s, producing a gr",
-      "url": "http://arxiv.org/abs/2610.29962v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Rotation slows the instability of Ellis-Bronnikov wormholes",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-21",
-      "summary": "We present nonlinear 3+1 evolutions of rotating Ellis-Bronnikov wormholes. We construct stationary rotating drainhole solutions with a spectral solver up to an equatorial rotation velocity of 99% of the speed of light, validate the solver against published symmetric solutions, and correct an inconsistency in a published field equation. Perturbed only by truncation error, the evolutions show that rotation slows the radial instability of the static wormhole. Near 30% of the extremal angular momentum the unperturbed throat expands instead of collapsing, rather than the instability disappearing as second-order perturbation theory suggests. From 58% upward we find no evidence of instability over ",
-      "url": "http://arxiv.org/abs/2610.29941v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "PBR sensitivity to boosted dark matter explanation for the KM3-230213A event",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-21",
-      "summary": "POEMMA-Balloon with Radio (PBR) is a hybrid fluorescence and optical Cherenkov telescope that is a pathfinder instrument for a future Probe Of Extreme Multi-Messenger Astrophysics (POEMMA), together with a radio instrument, to be flown on a super pressure balloon in Spring 2028. One of its science objectives is follow up of astrophysical event alerts via signals of tau decays in the atmosphere, sourced by Earth-skimming tau neutrinos. The recent report of the KM3NeT Collaboration's muon event with $ E_μ=120^{+110}_{-60}$ PeV sparked searches for beyond the standard model (BSM) physics explanations. Using a specific, boosted dark matter scenario which together with the KM3NeT observation, set",
-      "url": "http://arxiv.org/abs/2610.29942v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Topographically Forced Stationary Waves Can Explain the Near-Surface Zonal Winds Observed by Huygens on Titan",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-21",
-      "summary": "Titan's equatorial superrotation is associated with climatological retrograde (westward) near-surface winds at low latitudes, as consistently simulated by Titan general circulation models. However, the Huygens probe measured prograde (eastward) near-surface winds, contrary to the expected circulation. We investigate whether these observations reflect localized forcing by large-scale topography, using paired three-dimensional dry simulations with and without topography in the Titan Atmospheric Model. We find that topography generates longitude-locked, vertically structured zonal wind anomalies that reproduce key features of the Huygens wind profile in the lowest few kilometers. Helmholtz and ",
-      "url": "http://arxiv.org/abs/2610.29930v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Cosmic Ray Observations using Coincident Scintillator and Radio Signals with the Beamforming Elevated Array for COsmic Neutrinos (BEACON)",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-21",
-      "summary": "At energies above 100 PeV, coherent radio frequency (RF) emission across the 10 -- 1000 MHz band from cosmic particle-induced atmospheric showers becomes increasingly dominant, making radio detection a powerful probe at ultrahigh energies. The Beamforming Elevated Array for COsmic Neutrinos (BEACON) considers mountaintop phased radio arrays to monitor large areas at the horizon for upward-going geomagnetic emission in the 30 -- 80 MHz band produced as a consequence of Earth-skimming tau neutrinos. As part of ongoing efforts to measure the sensitivity of BEACON to such signals, the BEACON prototype identifies cosmic rays through the same emission mechanism. Prior to 2023, BEACON operated a fo",
-      "url": "http://arxiv.org/abs/2610.29923v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "In-orbit anomaly and recovery of IXPE detector 2",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-21",
-      "summary": "The Imaging X-ray Polarimetry Explorer (IXPE) is a joint NASA-ASI mission launched in December 2021 to measure the linear polarization of celestial X-ray sources in the 2-8 keV energy range. The payload comprises three identical telescopes, each combining grazing-incidence X-ray optics with a focal-plane photoelectric polarimeter based on the Gas Pixel Detector technology. On 14 April 2025, the second detector experienced an anomaly that significantly altered the electrical behavior of the ASIC responsible for reading out the photoelectron track images. In this contribution, we describe the effect of the anomaly on the instrumental response and the actions taken to mitigate its effects and r",
-      "url": "http://arxiv.org/abs/2610.29920v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "PSR J0653+0443: An Eclipsing Millisecond Pulsar in an Extremely Eccentric Double Neutron Star System",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-21",
-      "summary": "Double neutron star (DNS) systems emit gravitational waves (GW) as they orbit each other, with waveforms dependent on their orbital properties \\cite{Poisson+2014grav.book.....P}. The number of DNS systems surviving binary star evolution in the Milky Way and the distribution of their orbital parameters are fundamental questions for GW astronomy and binary evolution studies. Here, we report the discovery of a new Galactic field DNS system, PSR J0653+0443, comprising two ~1.4 $M_\\odot$ components in an extremely eccentric orbit $e=0.992387$, $P_{\\rm orb}=79.084$ d. Its unique orbital dynamics include a 46-minute transit from true anomaly $θ=-90^\\circ$ to $90^\\circ$ and striking periastron relat",
-      "url": "http://arxiv.org/abs/2610.29838v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Neutron Star-Main-Sequence Star Collision: Formation and Long-Term Evolution of Thorne-Żytkow Objects",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-21",
-      "summary": "Thorne-$\\dot{\\mathrm{Z}}$ytkow objects (T$\\dot{\\mathrm{Z}}$Os) are stars containing a neutron-star (NS) or black-hole (BH) core embedded in a stellar envelope and powered primarily by mass accretion onto the core. Classical evolution models of T$\\dot{\\mathrm{Z}}$Os begin with an assumed equilibrium configuration and predict chemical anomalies in the stellar envelope resulting from nuclear burning in the vicinity of the NS core. Here we connect dynamical formation to long-term evolution by combining a three-dimensional simulation of a post-supernova collision between a $1.4M_\\odot$ NS and a $10M_\\odot$ main-sequence star with a subsequent stellar evolution calculation using MESA. The collisio",
-      "url": "http://arxiv.org/abs/2610.29833v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "The morphology of contact binary objects in the Solar System",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-21",
-      "summary": "Contact binaries, appearing as two objects stuck together, are prevalent throughout the Solar System, making up between 30- 50% of asteroids and comets. Despite this, detailed shape models of contact binaries are hard to obtain remotely, requiring rare occultation events or close approaches to Earth (< 0.1 au) to observe with ground-based radar systems. Despite only 16 contact binary models being published, there already exists a wide variety of different arrangements of the two lobes relative to one another. At the same time, simulations of contact binary object formation are increasing in scale, producing 10s to 1000s of contact binary candidates per simulation. It is therefore necessary t",
-      "url": "http://arxiv.org/abs/2610.29805v1",
       "image": "",
       "type": "research"
     }
