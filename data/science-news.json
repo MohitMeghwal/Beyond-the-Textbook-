@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-29T08:36:57.937730+00:00",
+  "lastUpdated": "2026-10-30T08:43:49.830064+00:00",
   "articles": [
     {
       "title": "Esc2 and Rad57 contribute to RNA polymerase II distribution at highly transcribed genes.",
@@ -8,6 +8,156 @@
       "publishedAt": "2027 Jan",
       "summary": "esc2 and rad57 contribute to rna polymerase ii distribution at highly transcribed genes",
       "url": "https://pubmed.ncbi.nlm.nih.gov/42864262/",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Gravitational-Wave Echoes and Greybody Cutoff from Logarithmic Throats at a Marginal-Trapping Threshold",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-29",
+      "summary": "When a static, spherically symmetric configuration is brought close to a marginal-trapping threshold, it develops a long throat. As the nondegenerate minimum of $F=1-2m/r$ approaches zero, $F\\simeqΔ+β(r-R_M)^2$, the proper length across the throat grows as $-\\lnΔ/\\sqrtβ$, even though the local curvature stays finite. We study how axial gravitational waves propagate in an effective model of this throat, in which the lapse is parametrized as $N\\propto F^{s/2}$. For $s>0$ the throat acts as a cavity behind the angular-momentum barrier, and waves come back out as echoes spaced by $T_{\\rm echo}\\simeq2Λ+δ\\proptoΔ^{-s/2}$, where $Λ$ is the optical length of the throat and $δ$ does not depend on $Δ$",
+      "url": "http://arxiv.org/abs/2610.40631v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "The Conditional CMB Visibility of High-Redshift X-Ray Cavities in Galaxy clusters",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-29",
+      "summary": "At high redshift, the cosmic microwave background (CMB) both cools relativistic leptons and provides seed photons for inverse-Compton (IC) X-ray emission. These two effects link the particle content of a bubble directly to the soft X-ray depression used to identify a cavity. We derive a physical criterion connecting lepton cooling, bubble volume, enthalpy evolution, and 0.5--2 keV X-ray visibility, while separating intrinsic filling of the X-ray depression from detector-dependent cavity recovery. For uncooled electron populations described by a power law with spectral index $s=2.5$, minimum Lorentz factor $100\\leqγ_{\\min}\\leq1000$, and maximum Lorentz factor $γ_{\\max}=10^5$, the measured atm",
+      "url": "http://arxiv.org/abs/2610.40610v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "The unresolved high-mass frontier of the black hole Fundamental Plane",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-29",
+      "summary": "Accreting black holes follow a Fundamental Plane (FP) linking radio and X-ray luminosities to black hole mass, but whether this relation changes in the ultramassive regime, above $\\sim10^{10}\\,\\Msun$, remains unresolved. Brightest cluster galaxies (BCGs) provide the most direct access to this regime, although earlier claims of enhanced radio emission relied largely on heterogeneous nuclear measurements and black hole masses inferred from host-galaxy proxies. We recalibrate the forward FP using galaxies with direct dynamical mass measurements and reassess the evidence for a high-mass radio excess using the available BCG data. We find that the archival proxy-mass sample cannot uniquely establi",
+      "url": "http://arxiv.org/abs/2610.40606v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Mapping Stellar Obliquity Across Space and Time",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-29",
+      "summary": "The angle between a star's rotational angular momentum vector and the orbital angular momentum vector of its planets---stellar obliquity---encodes the initial conditions and dynamical history of planetary systems. Variations in obliquity with orbital separation may arise from either primordial disk structure (e.g., broken or warped protoplanetary disks with misaligned inner and outer regions) or subsequent dynamical interactions with planets or external perturbers. Comparing obliquities across orbital distance therefore probes the spatial imprint of these processes, while comparisons across age constrain their temporal evolution. To test for signatures of obliquity evolution in both space an",
+      "url": "http://arxiv.org/abs/2610.40527v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Tailoring Infra-Red Filters for Global Mapping of Enceladus' Thermal Environment",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-29",
+      "summary": "We present the results of an initial study into the feasibility and design of the Enceladus Thermal Mapper (ETM) instrument, designed to provide detailed temperature data for Enceladus, an icy moon of Saturn identified by the Cassini Mission as a prime candidate for astrobiological study due to its subsurface ocean and active cryovolcanism. Building on heritage from previous missions including TechDemoSat-1, Mars Climate Sounder, and Lunar Trailblazer, ETM aims to measure temperature variations across Enceladus' surface, including at the poles during the extreme cold of winter, when they can reach as low as 45 K. Where Cassini provided limited high-resolution flyby data of Enceladus due to i",
+      "url": "http://arxiv.org/abs/2610.40456v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Influence of $Δ$ resonances in hyperonic neutron stars on gravitational-wave inspiral signatures",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-29",
+      "summary": "The composition of dense matter in neutron star interiors remains uncertain, with the possible appearance of the non-strange $Δ$ resonances providing an important source of theoretical uncertainty. In this work, we investigate the gravitational wave signatures of hyperonic neutron stars containing $Δ$ baryons within a density-dependent relativistic mean-field framework based on the DDME2 parametrization. Within this framework, the baryons interact among themselves via mesons. For $Δ$ baryons, the interaction is uncertain to date. We investigate how variations of the scalar and vector $Δ-$meson couplings, subject to \\(x_{σΔ}-x_{ωΔ}=0.2\\), modify the tidal properties and inspiral gravitational",
+      "url": "http://arxiv.org/abs/2610.40441v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "TEMPEST - A modular Python-based thermophysical model for rough, irregularly-shaped airless bodies",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-29",
+      "summary": "Comparing observed and predicted surface temperatures on airless planetary bodies is crucial for interpreting their surface processes, constraining activity, and deriving their surface properties. We present a new tool in this endeavour: TEMPEST (Thermophysical Evolution Model for Planetary Environment Surface Temperatures). It is a modular, open-source Python model for diurnal thermal evolution on irregular bodies. TEMPEST can reproduce non-Lambertian multiple scattering using arbitrary Bidirectional Reflectance Distribution Functions (BRDFs) and notably incorporates surface roughness on sub-facet scales through representative sphere-section geometry. The model includes an explicit time-ste",
+      "url": "http://arxiv.org/abs/2610.40406v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Polarization and Burst Properties of the Repeating FRB~20240209A in a Quiescent Elliptical Host",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-29",
+      "summary": "We report polarimetric observations of the repeating fast radio burst (FRB) source FRB 20240209A with the Green Bank Telescope at L band and 800 MHz. This source has previously been associated with a quiescent elliptical galaxy with a mass-weighted stellar age of approximately 11 Gyr. We detected three bursts, and the brightest burst resolves into eight components that drift toward lower frequencies. The bursts have mutually consistent rotation measures (RMs), and the small extragalactic RM agrees with the low RM predicted from the small host-galaxy dispersion measure ($\\mathrm{DM}_\\mathrm{host}$). The linear polarization fraction decreases toward lower frequencies within the brightest burst",
+      "url": "http://arxiv.org/abs/2610.40326v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "posterior-landscape: morphological feature finding in two-dimensional probability densities",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-29",
+      "summary": "We present posterior-landscape, a Python framework to identify and characterize morphological features in two-dimensional probability densities. The framework combines concepts from topological data analysis, statistical density-ridge estimation, and scale-space image analysis. It extracts localized concentrations, valleys, ridges, and changes of slope; for Bayesian reconstructions, it propagates uncertainty in feature recovery, geometry, and correspondence across posteriors. The framework also connects two-dimensional structures to features in one-dimensional marginals, and quantifies their correlation with other inferred parameters. We validate the method on controlled densities, and demon",
+      "url": "http://arxiv.org/abs/2610.40272v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "A Candidate Binary Microlensing Event in the 2018 Gamma-Ray Flare of 3C 279",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-29",
+      "summary": "The April 2018 gamma-ray flare of the flat-spectrum radio quasar 3C~279 exhibited sharp peaks within a broader outburst. Its rapid substructure was previously attributed to magnetic reconnection. Motivated by its distinctive temporal profile within our comparison sample of bright blazar flares and its resemblance to caustic-crossing features in optical microlensing events, we investigate a finite-source binary-microlensing interpretation. A jointly fitted model of binary-lens magnification, a smooth intrinsic flare, and Gaussian-process variability reproduces the principal double-peaked structure of the GeV light curve. The adopted local solution has a binary mass ratio of $q\\simeq0.098$ and",
+      "url": "http://arxiv.org/abs/2610.40255v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "From photons to neutrinos : Advancing multi-messenger modeling with Gammapy",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-29",
+      "summary": "In recent years, several astrophysical objects have been identified as potential multi-messenger photon-neutrino emitters. New instruments dedicated to the study of these two messengers have been and are still being built, achieving unprecedented sensitivity. This observational improvement increases the need for more sophisticated and precise analysis tools. Multi-wavelength and multi-messenger data fitting is crucial to constrain astrophysical models of particle acceleration and radiation mechanisms at work in these extreme environments. In this contribution, we present a novel framework dedicated to multi-wavelength and multi-messenger modeling, built within the open-source software Gammap",
+      "url": "http://arxiv.org/abs/2610.40242v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "What kinds of strong star--black-hole encounters in AGN disks occur, and how often?",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-29",
+      "summary": "Disks surrounding active galactic nuclei contain many stars and black holes, which will inevitably encounter one another. The outcome of these encounters depends on how closely and how rapidly the bodies meet. Extending previous studies, we account for initial relative velocities seeded by stochastic effects in the disk; incorporate a strong-encounter cross-section accounting for single- and binary-mediated interactions computed via direct two-body (Hill) or three-body (isolated) interactions; and present a repeated-encounter model accounting both for energy loss due to stellar encounters as well as the SMBH tidal field. We convolve our encounter model with a parametric family of natal stell",
+      "url": "http://arxiv.org/abs/2610.40144v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "The dark surface of (163693) Atira and implications for inner-Earth asteroid origins",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-29",
+      "summary": "We compare the physical properties of inner-Earth asteroid (163693) Atira with the NEOMOD3 population model. Its radar-derived diameter of 4.9 km and absolute magnitude H$_V\\simeq$16.4 imply a geometric albedo of p$_V\\sim$0.02. Photometry with the Astrophysical Research Consortium 3.5-m telescope and ARCTIC yields g-r=0.49$\\pm$0.03, r-i=0.20$\\pm$0.02, i-z=0.02$\\pm$0.03, a$^\\ast$=$-0.05\\pm0.03$, and a g-to-i spectral slope of 3.4$\\pm$0.9$\\%$/100 nm. The photometric reflectance favors a provisional X-type classification; combined with the low albedo, it supports a Tholen P-type interpretation. NEOMOD3 assigns an approximately 66$\\%$ probability of delivery through inner Main Belt channels and ",
+      "url": "http://arxiv.org/abs/2610.40114v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Seven Years of TESS Precovery Observations of the Dwarf-planet Candidate 2026 ED$_{138}$",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-29",
+      "summary": "The trans-Neptunian object 2026 ED$_{138}$ was announced in 2026 October as the first dwarf-planet candidate in our solar system discovered by the Vera C. Rubin Observatory. The Transiting Exoplanet Survey Satellite (TESS) observed it in five month-long sectors between 2019 and 2026, four of them before its discovery. We subtract every Gaia DR3 star from these crowded full-frame images with the TESS-Gaia Light Curve (TGLC) package, then remove static residuals with a running median. Stacking the images along its predicted path detects 2026 ED$_{138}$ in all five sectors at 5-21$σ$, and at 34$σ$ combined. The TESS positions alone confirm the JPL orbit, and its brightness is consistent with th",
+      "url": "http://arxiv.org/abs/2610.40106v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Evolutionary tracks and isochrones of the inverse Hall cascade",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-10-29",
+      "summary": "Decaying MHD turbulence can exhibit an inverse cascade, which means that the height of the spectrum of magnetic energy in the subinertial range increases with time. However, there is evidence for a resistive dependence of the inverse transfer speed. It is unclear whether this is caused by reconnection, which is known to depend on resistivity. Here, we show that in the Hall cascade, where no momentum equation is solved, and the induction term is replaced by what corresponds to the negative Lorentz force in MHD, there is still a resistive dependence of the inverse transfer speed, but no such dependence is found for an analogous numerical reconnection experiment. This suggests that the resistiv",
+      "url": "http://arxiv.org/abs/2610.40092v1",
       "image": "",
       "type": "research"
     },
@@ -448,156 +598,6 @@
       "publishedAt": "2026-10-23",
       "summary": "A major question about JWST's little red dots (LRDs) at $z\\sim4-8$ is the origin of their apparent X-ray weakness. Even deep Chandra stacks yield only tentative detections or broad-band limits and cannot distinguish among super-Eddington accretion, intrinsic X-ray weakness, and Compton-thick (CT) obscuration. Local analogs offer a powerful complementary route. At $z\\sim0.3$, similarly luminous sources require $\\sim10^{3-4}$ less exposure for comparable signal-to-noise, suffer less source confusion, and directly probe the diagnostic rest-frame soft X-rays. Here we present a pilot Einstein Probe/FXT study of six \"local little red dots\" (LLRDs), V-shaped broad-line green pea galaxies selected a",
       "url": "http://arxiv.org/abs/2610.32430v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Estimation Of The Mass And The Spin Of The Neutron Star 4U 1728-34 Using Triples Of X-Ray Quasi-Periodic Oscillations",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-23",
-      "summary": "X-ray quasi-periodic oscillations (QPOs) were reported for 19 different observations of the atoll source 4U 1728- 34. Three of them reveal triplets of QPOs: a lower and a upper kHz QPOs and a low-frequency QPO. Even though they are discernible only after averaging we assume them to be simultaneous. We apply a separate model (formula) for each of the three frequencies of the observed QPOs and compose a system which contains three algebraic equations for the three unknown parameters - the mass and the specific angular momentum of the central neutron star, and the radius of the orbit of orgin of the given triplet of QPOs, which allows us to find the numerical values of the later. Error propagat",
-      "url": "http://arxiv.org/abs/2610.32371v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Boosted Dark Matter Directionality in Large Liquid Scintillator Detectors",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-22",
-      "summary": "Light dark matter can be boosted by cosmic-ray-dark matter interactions, which opens the possibility of direct-detection searches with large neutrino detectors. We consider the signal produced by boosted dark matter undergoing quasi-elastic scattering off carbon and knocking out a neutron in a large liquid scintillator detector. A distinctive delayed gamma ray from neutron capture can be reconstructed after $\\sim 210$ $μ$s, which is paired up with the prompt signal during neutron propagation. We find that 100 kt$\\cdot$yr of data from the neutron-coincidence channel will be able to probe new parameter space compared to free proton signals found in previous work. We further consider the possib",
-      "url": "http://arxiv.org/abs/2610.31666v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Formation and Detectability of PSR J0653+0443-like Extremely Eccentric Binary Neutron Stars in the Milky Way",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-22",
-      "summary": "Recently, the Five-hundred-meter-Aperture-Spherical-radio-Telescope (FAST) Galactic Plane Pulsar Snapshot (GPPS) survey discovers an extraordinary binary neutron star (BNS) system, PSR J0653+0443, possessing the highest known orbital eccentricity ($e\\approx0.992$) among Galactic BNSs (Yang et al., 2026), which provides a unique probe into the formation and evolution of BNSs. In this Letter, we perform compact binary population synthesis calculations with self-consistent neutron star spin evolution to model extremely eccentric BNS population detectable by the FAST GPPS survey, explicitly incorporating observational selection effects. We find that BNSs with $e>0.99$ constitute only $\\sim0.6\\%$",
-      "url": "http://arxiv.org/abs/2610.31583v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Charged fluid tori with an approximate magnetic self-field around magnetized Schwarzschild black holes: A semi-analytic approach",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-22",
-      "summary": "We study toroidal structures formed by a charged, non-self-gravitating perfect fluid orbiting a Schwarzschild black hole immersed in a poloidal magnetic field. To obtain analytic and semi-analytic solutions, we assume a cold, rest-mass-dominated fluid with uniform specific charge and zero conductivity, so the current is purely convective. This regime is formally opposite to the ideal GRMHD limit. The total magnetic field comprises a prescribed asymptotically uniform external component and an approximate self-field associated with the azimuthal current in the torus. We represent the latter by a regularized dipole approximation to the field of an effective circular current loop. Neglecting the",
-      "url": "http://arxiv.org/abs/2610.31577v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "A Generalized Framework for Rapid Polarization Response Generation in Wide Field-of-View Compton Polarimeters",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-22",
-      "summary": "Polarimetry is the most direct probe of the unsettled radiation mechanism and magnetic field structure of gamma-ray burst (GRB) prompt emission at the energies where it peaks, tens of keV to about 1 MeV. Compton polarimeters use the azimuthal scattering angle distribution (ASAD), a 180 degree modulation on axis. GRB measurements have largely relied on the on-axis modulation factor $μ_{100}$. For a wide field-of-view planar polarimeter, GRBs arrive off axis, where the Klein-Nishina projection adds harmonics to the ASAD. Muleri (2014) described this projection and evaluated it in a low-energy expansion for X-rays. We evaluate it numerically without approximation over the whole prompt-emission ",
-      "url": "http://arxiv.org/abs/2610.31559v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "A Headwind-like Helium Outflow from TOI-3884b",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-22",
-      "summary": "Constraining atmospheric loss is crucial for understanding the evolution of planetary atmospheres. We report the detection of an evaporating exosphere from TOI-3884b, a super-Neptune in a polar orbit around an M4 dwarf star. We infer this evaporation from a 6.8$\\pm$0.27\\% excess transit depth in the He I 10830 Å\\, line, observed during five transits of TOI-3884b with the Habitable Zone Planet Finder spectrometer. While we observe outflow signatures starting as early as 5 hours before the onset of the planet's optical transit, no significant post-transit tail is detected. Hitherto, such a pre-transit headwind without a significant post-transit tail has only been detected from HAT-P-67b, a hot",
-      "url": "http://arxiv.org/abs/2610.31492v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Prompt Jet Launching and Delayed Thermal Disk in Tidal Disruption Event for Prolonged Activity GRB 220706A",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-22",
-      "summary": "GRB 220706A exhibits X-ray flaring activity extending to ~51 days after the trigger, along with a luminous optical thermal component emerging on a timescale of ~10^6 s. Such prolonged central-engine activity could be powered by a collapsar fed by an extended stellar envelope. However, a relativistic jet may struggle to break out of the extended envelope. These challenges motivate a tidal disruption event (TDE), although explaining both the early relativistic jet and the luminous late optical thermal emission within one TDE framework remains difficult. We investigate a TDE scenario in which shocks between stellar debris streams drive the early inflow of some debris, potentially carrying preex",
-      "url": "http://arxiv.org/abs/2610.31484v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Simulation-based inference of profile evolution for high-precision pulsar timing",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-22",
-      "summary": "Pulsars are exceptional cosmic laboratories, the most stable of which rival atomic clocks. Nearly all of that precision rests on one observable, the average pulse profile unique to each pulsar and stable over decades. These profiles change shape systematically with observing frequency, reflecting the physics of the emitting pulsar beam, but if left unmodelled, it can bias the arrival-time measurements, undermining precision timing. Profile-domain timing has been proposed to address this effect, but current implementations use stochastic sampling, which is computationally prohibitive and has limited the application in large-scale analyses. Here, we present a simulation-based inference approac",
-      "url": "http://arxiv.org/abs/2610.31450v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Gravitational Wave Diffractive Images Reveal the Structure of Astrophysical Objects",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-22",
-      "summary": "Scattering patterns encode the structure of extended objects, as demonstrated by charged particle scattering on atomic nuclei. Gravitational wave (GW) diffraction offers an analogous probe of otherwise invisible mass distributions. At linear order in the lens potential we derive expressions relating the central diffractive image contribution to a gravitationally lensed GW waveform to the Fourier transform of the projected lens density. For finite mass lenses this contribution takes the form of a point mass Born amplitude multiplied by a normalized mass form factor, analogous to that in nuclear scattering. As the frequency of GWs from a merging compact binary source evolves the signal samples",
-      "url": "http://arxiv.org/abs/2610.31441v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Synthetic 2D magnetic turbulence with controlled island structuring",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-22",
-      "summary": "Magnetic turbulence remains up to this day not fully understood, despite its important role in the behavior of plasmas. A recurring ingredient in plasma turbulence is the spontaneous formation and evolution of plasmoids. These represent magnetic islands on current sheets in two-dimensional turbulent magnetic fields that are consistently found in high-resolution direct numerical simulations (DNSs) using a magnetohydrodynamic description. However, such simulations require considerable amounts of computational power. Synthetic turbulence models provide an alternative, cheap approach to the generation of fully-developed turbulent fields. In this work, we first present an extension of our open-so",
-      "url": "http://arxiv.org/abs/2610.31367v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "FRB 20210601A: Extreme Temporal Clustering in a Repeating Fast Radio Burst Source as Evidence for a Hidden Class of Episodic Repeaters",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-22",
-      "summary": "Population studies of fast radio burst (FRB) repetition typically model sources using a single distribution of steady, time-averaged burst rates, yet individual sources show significant departures from this assumption. Here we present FRB 20210601A, a source discovered by the Canadian Hydrogen Intensity Mapping Experiment FRB project (CHIME/FRB) that represents the most extreme such departure yet identified. The source produced at least nine bursts within a single 106.5 s interval -- the highest instantaneous burst rate yet reported from a repeating FRB source at $\\gtrsim 2$ Jy ms fluences -- yet remained otherwise undetected despite $\\sim 320$ hr of exposure spanning 7 yr. The active interv",
-      "url": "http://arxiv.org/abs/2610.31365v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Spectral Properties of X-Ray Flares in Gamma-Ray Bursts",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-22",
-      "summary": "We conducted a systematic spectral analysis of the X-ray flares of gamma-ray bursts (GRBs) observed by Swift/X-ray Telescope from 2005 April to 2015 March. The sample includes 521 flares from 206 GRBs. The GRBs cover the three subtypes: X-ray flashes (XRFs), X-ray-rich GRBs (XRRs), and classical GRBs (C-GRBs). We used a simple power-law model to fit the spectra during the flares, as well as to fit the preflare and postflare afterglow emissions, and obtained the parameters such as photon index and intrinsic hydrogen column density ($N_{\\rm H}$). By comparing the spectral characteristics of flares, prompt emission, and afterglow emission, and analyzing the temporal evolution of the X-ray flare",
-      "url": "http://arxiv.org/abs/2610.31360v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Multigroup Radiation Diffusion with Compton Scattering on a Moving Mesh: Implementation in RICH and Application to Tidal Disruption Events",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-22",
-      "summary": "Compton scattering exchanges energy between radiation and hot gas and changes the spectrum in high-energy astrophysical systems such as tidal disruption events (TDEs). Because it couples all photon energies and can act faster than the hydrodynamic time step, many radiation-hydrodynamics (RHD) simulations omit its spectral redistribution or treat its energy exchange in the gray approximation. We extend the multigroup flux-limited diffusion module of the moving-mesh RHD code RICH to include Compton scattering with the exact thermal Compton kernel. In our semi-implicit scheme for the thermal radiative transfer equation, the temperature dependence of the kernel enters a generalized Fleck factor,",
-      "url": "http://arxiv.org/abs/2610.31324v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Breaking the symmetry: X-ray polarization from a spreading layer on a tilted weakly magnetized neutron star",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-22",
-      "summary": "When modeling the emission from an X-ray binary system, we often assume that the rotational axis of the compact object is aligned with that of the binary system. While often considered irrelevant for spectroscopic observations, the orientation of the binary system is crucial for polarimetric properties. With the recent advent of X-ray polarimetric observations enabled by the Imaging X-ray Polarimetry Explorer (IXPE), indications of a possible misalignment of the neutron star rotational axis with respect to the binary axis have been reported. Following these indications, we present an analytical model for the polarimetric properties of emission arising from a spreading layer on an inclined we",
-      "url": "http://arxiv.org/abs/2610.31300v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "The first selection of optimal targets for the Lazuli ExtraSolar Coronagraph's reflected starlight exoplanet campaign",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-22",
-      "summary": "Direct detection and characterization of exoplanet atmospheres via reflected starlight enables probes of composition of mature exoplanet systems (since flux is decoupled from age) at closer separations than via thermal emission (due to observations in visible wavelengths), and even probes of biosignatures. New and upcoming ground and space-based platforms are enabling these observations for the first time. Recently the 3-m Lazuli Space Telescope, from the Eric and Wendy Schmidt Observatory System, was announced, which will be equipped with the ExtraSolar Coronagraph (ESC) designed for reflected light gas giant exoplanet observations in visible wavelengths. In this paper we present 27 known g",
-      "url": "http://arxiv.org/abs/2610.31286v1",
       "image": "",
       "type": "research"
     }
