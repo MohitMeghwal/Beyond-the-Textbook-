@@ -1,6 +1,16 @@
 {
-  "lastUpdated": "2026-11-02T09:36:52.654080+00:00",
+  "lastUpdated": "2026-11-03T09:39:55.149324+00:00",
   "articles": [
+    {
+      "title": "Performance of artificial intelligence versus clinician left-ventricular segmentation of cardiac MRI for mortality prediction: a retrospective, multicentre, prognostic study.",
+      "category": "Medical Research",
+      "source": "PubMed",
+      "publishedAt": "2027 Jun 1",
+      "summary": "performance of artificial intelligence versus clinician left ventricular segmentation of cardiac mri for mortality prediction a retrospective multicentre prognostic study",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42971896/",
+      "image": "",
+      "type": "research"
+    },
     {
       "title": "Esc2 and Rad57 contribute to RNA polymerase II distribution at highly transcribed genes.",
       "category": "Medical Research",
@@ -8,6 +18,156 @@
       "publishedAt": "2027 Jan",
       "summary": "esc2 and rad57 contribute to rna polymerase ii distribution at highly transcribed genes",
       "url": "https://pubmed.ncbi.nlm.nih.gov/42864262/",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "The Neptunian ridge through the lens of TESS",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-02",
+      "summary": "The Neptunian desert and savanna are separated by a ridge, an overdensity at orbital periods of approximately 3-6 d identified with Kepler. Like the hot Jupiter pileup at larger radii, this feature has been linked to the accumulation of successful outcomes of high-eccentricity migration (HEM). We revisit the ridge independently using TESS occurrence posteriors for FGK main-sequence stars. We quantify its excess over adjacent regions and compare six occurrence profiles using leave-one-out cross-validation and Bayesian evidence. For planets with radii of approximately 5-8 $R_\\oplus$, the ridge has twice the occurrence density of the denser neighbouring region ($J=2.05^{+0.52}_{-0.44}$), with 9",
+      "url": "http://arxiv.org/abs/2611.03643v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "The Giant Planet Mass Function Across Stellar Mass and Metallicity: Massive Stars Make Massive Planets",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-02",
+      "summary": "Although giant planet occurrence correlates with stellar mass and metallicity, it remains unclear whether these properties also shape the companion mass distribution. We investigate this question using 719 FGKM stars from the California Legacy Survey and companion true-mass constraints from radial velocities and Hipparcos-Gaia astrometry. Our hierarchical occurrence analysis accounts for survey completeness and companion parameter uncertainties over giant planet and brown dwarf masses of M_c=0.4-50 M_Jup and semi-major axes of a=0.1-10 AU. We find that, compared to the rate among our full sample of 0.19 +/- 0.02 planets per star in this interval, giant planet occurrence is significantly enha",
+      "url": "http://arxiv.org/abs/2611.03613v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "HCN detection in the Kreutz sungrazing comet C/2026 A1 (MAPS) shortly before its disruption",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-02",
+      "summary": "Context. Kreutz sungrazing comets are characterised by extremely small perihelion distances (q < 3.45 R). These objects are of particular interest because their intense activity and fragmentation can expose material from deeper within the nucleus, providing unique access to their bulk chemical composition rather than merely their surface layers. Aims. The discovery of C/2026 A1 (MAPS) three months before its perihelion offered a rare opportunity to investigate the composition and activity of a Kreutz sungrazing comet. We present the first millimetre wavelength study of this type of comet. Methods. We observed C/2026 A1 (MAPS) with the IRAM 30-m telescope from April 1 to April 3 2026 at helio",
+      "url": "http://arxiv.org/abs/2611.03417v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Milliarcsecond-scale jet reorientations in GRS 1915+105 pointing towards a warped accretion disc",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-02",
+      "summary": "The black hole X-ray binary GRS 1915+105 was persistently X-ray bright for over 26 years before entering a prolonged low X-ray flux state in 2018, while remaining bright at radio wavelengths. Multi-wavelength observations suggest this state results from a complex layer of absorbing material of unknown nature. Radio jet observations provide an unobstructed view of the physical changes during this phase, and recent Very Large Array and East Asian VLBI Network observations revealed substantial changes in the jet position angle (PA). We use higher-resolution VLBI observations to investigate the connection between the obscuration event and the jet behaviour close to the launch region. We observed",
+      "url": "http://arxiv.org/abs/2611.03395v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "White dwarf pollution in wide binaries: the role of planetary mass",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-02",
+      "summary": "Atmospheric pollution in white dwarfs is interpreted as evidence for the accretion of rocky material from remnant planetary systems. In wide binaries, these reservoirs can be influenced by planetary perturbers. Here, we investigate how planetary mass affects the survival and delivery of planetesimals onto an evolving white dwarf. We perform N-body simulations incorporating time-dependent stellar evolution and a stellar companion, varying planetary masses and following the evolution of a planetesimal disc. We find that lower-mass planets perturb the planetesimal reservoir less efficiently, allowing more planetesimals to survive longer. Consequently, delivery onto the white dwarf can persist i",
+      "url": "http://arxiv.org/abs/2611.03291v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "A GeV PWN Candidate in the PSR J1135--6055/G293.8+0.6 Field",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-02",
+      "summary": "We present a \\textit{Fermi} Large Area Telescope (LAT) study of PSR~J1135--6055 and the composite supernova remnant (SNR) G293.8+0.6. MeerKAT radio observations reveal a bright central plerion within the faint SNR shell, while Chandra observations detect a compact nebula around the pulsar. Together, these observations establish the presence of a PWN within G293.8+0.6. Our analysis of the 20~GeV--1~TeV LAT data yields a point-like excess with $\\mathrm{TS}=26.30$ and photon index $Γ=1.63\\pm0.33$. Its best-fit position is consistent with the pulsar within the 95\\% statistical localization region, and neither the uniform-disk nor Gaussian model is favored, providing no evidence for significant e",
+      "url": "http://arxiv.org/abs/2611.03266v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "A Multi-messenger Study of the Cygnus bubble",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-02",
+      "summary": "We perform a comprehensive investigation of particle acceleration at the termination shocks of massive star clusters, with a particular focus on the Cygnus region. Building on the particle-acceleration model for cluster-driven winds, we use recently available spectral and spatial measurements of ultra-high-energy $γ$-rays from the Cygnus bubble to place stringent constraints on the physical conditions in the acceleration zone. By jointly modelling the observed $γ$-ray spectrum and spatial morphology, we derive quantitative limits on key parameters such as the maximum particle energy, acceleration efficiency, magnetic-field strength, and shock geometry, and assess their consistency with a had",
+      "url": "http://arxiv.org/abs/2611.03248v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Spectral instability of charged scalar quasinormal modes and superradiance: Stabilizing the unstable",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-02",
+      "summary": "The spectral instability of black holes has become a central topic of the black-hole spectroscopy program. Small changes to the black-hole scattering potential are known to produce disproportionately large migrations of its quasinormal modes in the complex plane, but it is unclear whether this sensitivity carries over to energy extraction through superradiance. We study this relation for massless charged scalar fields on Reissner--Nordström and Reissner--Nordström--de Sitter backgrounds. A localized positive potential bump, small in mass-scaled height, is displaced outward from the light ring while the original radiative boundary conditions are preserved. In the asymptotically flat case, a q",
+      "url": "http://arxiv.org/abs/2611.03070v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Are habitable-zone TESS Objects of Interest really there? Period resolution from the full archive",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-02",
+      "summary": "TESS Objects of Interest (TOIs) seen as single or duo transits carry a catalogue period that is undefined or equal to the separation of the two events, and their insolation and any habitable-zone label inherit it. We reanalyse all 187 TOIs catalogued with P = 0 or P >= 200 d using all public TESS data through Sector 107, with a flux-based method that weights each alias by per-epoch transit likelihoods, the transit duration and a geometric prior, and tests for coherence, data edges, contamination by other planets and instrumental artefacts. It recovers 12 published periods blindly and, in injection-recovery tests, 71 per cent of periods constrained by a new transit, with no wrong period. It r",
+      "url": "http://arxiv.org/abs/2611.03019v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Decomposition of disk and jet optical emission: Case of PKS~1510-089 and PKS~0736+017",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-02",
+      "summary": "Measuring BLR size and black hole mass of jetted quasars with strong radio emission is challenging due to the contribution from non-thermal synchrotron radiation from the jet in the optical continuum. Here, we investigate the optical continuum emission in two flat-spectrum radio quasars (FSRQs), PKS~0736+017 and PKS~1510-089, by separating the thermal emission from the accretion disk and the non-thermal synchrotron emission from the jet using their distinct polarization signatures. Our analysis combines multi-epoch optical spectro-photometric and polarimetric observations from the archival optical continuum, H$β$ emission line light curves from earlier reverberation mapping campaigns, and 37",
+      "url": "http://arxiv.org/abs/2611.03006v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Cometary impacts an unlikely pathway towards the origins of life on Earth",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-02",
+      "summary": "An early period of cometary bombardment has long been speculated to provide an important source of prebiotic feedstock molecules, required for the origins of life on Earth. In support of this interpretation, comets boast a rich diversity of volatile organic molecules, with many thought to be limiting for prebiotic chemistry. Modelling studies suggest, however, that a significant proportion of these molecules will be destroyed during hypervelocity impact. Here, we revisit the ability of comets to deliver prebiotic feedstock molecules in the high concentrations required for prebiotic chemistry, leveraging recent advances in cometary impact simulations, comet-atmosphere interactions, and dynami",
+      "url": "http://arxiv.org/abs/2611.02924v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "X-ray Variability of Mrk 421 in 2025 January: A Ten-Day XPoSat XSPECT Campaign with Contemporaneous NICER Coverage",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-02",
+      "summary": "We present an X-ray study of the high-synchrotron-peaked blazar Mrk 421 using ten days of XPoSat/XSPECT observations (2025 January 20-29; 202 ks) and contemporaneous NICER data. The 0.8-15 keV light curve has a fractional variability amplitude of 19.6 +/- 0.3 per cent, and Bayesian blocks resolve 26 flux states spanning a factor of 2.3. The best-constrained flare has a fast rise and a slow decay, with e-folding times of about 3 h and 30 h. For typical jet parameters, the X-ray-emitting electrons cool faster than this, suggesting that the decay traces a gradual weakening of their acceleration. The count-rate distribution is best described by two lognormal components, consistent with multiplic",
+      "url": "http://arxiv.org/abs/2611.02772v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "The colors of protoplanetary disks - Impact of nonspherical dust particles on the polarized and total intensity colors",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-02",
+      "summary": "Dust properties in protoplanetary disks remain poorly understood despite their central role in planet formation. Recent studies based on analyses of scattered-light images and phase functions provide promising insights into dust characterization, but the phase function alone is insufficient to constrain dust properties. Degeneracies between dust remain a major obstacle to linking observations to realistic dust models. We investigate the behavior of the disk color as a function of dust. We used MCFOST to generate synthetic scattered-light images from the visible to the near-infrared, in total and polarized intensity. We considered compact spherical grains using, irregular particles and compac",
+      "url": "http://arxiv.org/abs/2611.02753v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Two Fast Radio Burst Candidates Detected in the RATAN-600 Blind Survey",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-02",
+      "summary": "We report the detection of two single dispersed pulses with widths of about 6.7\\,ms and 15.6\\,ms and flux densities of about 0.8 and 1.7\\,Jy. These were found in a blind survey of two circular regions (Dec$\\;=+22^{\\circ}$ and $+5^{\\circ}$,RA: 0--24~h) at high radio frequencies \\mbox{(4400--5000\\,MHz)} using four 4-channel filter radiometers (central frequencies of 4475, 4625, 4775, and 4925\\,MHz) spanning a total frequency bandwidth of 600\\,MHz. The survey was carried out with the Western Sector antenna of the RATAN-600 radio telescope, which had an effective area of 1200\\,m$^2$ in~2017--2025. The total area of the survey was about 1500~square degrees, and each pointing of the antenna lasted",
+      "url": "http://arxiv.org/abs/2611.02697v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Hidden by Exponential Screening: The Invisibility of the Dymnikova Black Hole de Sitter Core to Accretion Observables",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-02",
+      "summary": "The Dymnikova spacetime replaces the Schwarzschild singularity with a de Sitter core, and its lapse deviates from Schwarzschild by a factor decaying as $e^{-r^3/(2l_{\\rm cr}^2M)}$. Whether this screening renders the core invisible to accretion has remained an open quantitative question. We address it with GRHD simulations of BHL accretion onto Dymnikova BH for six values of the critical length, $0.1M\\le l_{\\rm cr}\\le 1.1M$, the last being 97% of the extremal value. All runs share identical gas parameters and resolution, so any difference in the flow must originate from the geometry. The dynamically relevant quantity is the gravitational acceleration, whose deviation reaches 12% at the inner ",
+      "url": "http://arxiv.org/abs/2611.02669v1",
       "image": "",
       "type": "research"
     },
@@ -438,166 +598,6 @@
       "publishedAt": "2026-10-27",
       "summary": "Aims: We develop a deep-learning-based pipeline to construct a list of γ-ray sources and to quantitatively assess the impact of background uncertainties on source detection and characterization. This work extends and enhances the existing AutoSource-ID algorithm, previously adopted on optical observations, for applications on γ-ray data. Methods: Source detection was performed through image segmentation using a U-Net architecture, while dedicated deep neural networks (DNNs) were employed for source localization, flux estimation, and the classification of detected sources as either genuine or spurious. The training data were generated from Monte Carlo simulations based on 10 years of Fermi-LA",
       "url": "http://arxiv.org/abs/2610.37287v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "An SRG/eROSITA Study of Be X-ray binaries in Quiescence",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-27",
-      "summary": "Be X-ray binaries (BeXRBs) are mostly transient X-ray binaries with usually a neutron star as the compact object and a Be star as their optical companion. We performed a comprehensive analysis of BeXRBs in quiescence with the extended ROentgen Survey with an Imaging Telescope Array (eROSITA), the soft X-ray instrument on board the Spectrum-Roentgen-Gamma satellite, using its first all-sky survey (eRASS1) data. The transient BeXRBs spend majority of time in their quiescent state, but are often studied during their outbursts. A quiescence study is useful to probe the emission mechanism of BeXRBs at low mass accretion rates. The spectra of BeXRBs detected in the eRASS1 main catalogue could be w",
-      "url": "http://arxiv.org/abs/2610.37277v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Coherent Radio Emission from Flux Rope Mergers in 3D Relativistic Reconnection",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-27",
-      "summary": "Coherent emission from merging plasmoids in relativistic reconnection is the leading model for radio emission originating in the outer magnetosphere of pulsars such as the Crab, and a candidate emission mechanism for fast radio bursts. This process has only been studied in 2D, and whether it survives in 3D, where the dynamics of structures in the reconnection layer can differ substantially, is still an open question. Here we present the first study of coherent wave generation from flux rope mergers in 3D relativistic reconnection. We use particle-in-cell simulations of relativistic reconnection with outflow boundary conditions and guide fields $B_g/B_0 = \\{0,0.1,0.3\\}$, and measure the effic",
-      "url": "http://arxiv.org/abs/2610.37214v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Interaction of Strong X-mode Waves with Magnetized Pair Plasmas",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-26",
-      "summary": "The interaction of strong ($a_0>1$), superluminal X-mode electromagnetic waves with magnetized pair plasma falls into two regimes set by $\\varepsilon_{\\rm B}\\equiv a_0ω_{\\rm B}/ω_0$, the ratio of the wave strength parameter to its frequency, in units of cyclotron frequency. For $\\varepsilon_{\\rm B}<1$ the wave propagates until induced scattering disrupts it. Using analytical theory and kinetic simulations, we show that the background magnetic field introduces a restoring frequency $Ω_{\\rm B}$ to scattering; when $Ω_{\\rm B}$ exceeds the scattering rate, the unattenuated length grows from $\\simeq\\varepsilon_{\\rm p}^{-2/3}$ to $\\simeq\\varepsilon_{\\rm B}^{1/2}/\\varepsilon_{\\rm p}$ wavelengths ($",
-      "url": "http://arxiv.org/abs/2610.35849v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Spectroscopic Survey of Small Solar System Bodies with Ariel",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-26",
-      "summary": "The small Solar System bodies (SSSBs) preserve records of the formation and evolution of the Solar System. In particular, the near-infrared wavelength region around 3 $μ$m provides crucial insights into the origin and transport of hydrated materials and organics, although it is difficult to observe from the ground because of strong telluric absorption. We assess the observability of SSSBs as complementary science to the ESA Ariel space mission, operating in the visible to mid-infrared wavelength range (0.5--7.8 $μ$m). Using the NASA JPL Horizons ephemeris system, we evaluate the visibility of known SSSBs from 2032 to 2035. Our analysis shows that Ariel can spectroscopically characterize up t",
-      "url": "http://arxiv.org/abs/2610.35825v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Tidal contributions to neutron star orbital precession around Sgr $A^*$",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-26",
-      "summary": "We investigate tidal contributions to the orbital precession of neutron stars around the supermassive black hole Sgr A*, using stellar configurations described by the Tolman - Oppenheimer - Volkoff equations. We examine the dependence of tidal precession on stellar compactness, pericentre distance, and the quadrupolar tidal Love number $k_2$, and compare its magnitude with general relativistic orbital precession. The calculated tidal angular shift decreases strongly with increasing pericentre distance and, for the stellar configurations considered, with increasing compactness. Larger Love numbers enhance the tidal contribution. This behaviour reflects the strong dependence of tidal precessio",
-      "url": "http://arxiv.org/abs/2610.35776v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Post-DART impact ejecta re-accumulation on Dimorphos and implications for Hera gravity measurements",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-26",
-      "summary": "Context. The DART impact might have substantially modified the surface and near-surface structure of Dimorphos, affecting the morphology and gravity field that is to be measured by ESA's Hera mission. Aims. We investigate the post-impact redistribution of ejecta and its dependence on the assumed internal structure of Dimorphos. Methods. We performed high-resolution SPH simulations of the DART impact into two low-cohesion rubble-pile models, with and without a large central boulder. We followed the processes of ejecta re-accumulation and gravity evolution for six hours. Results. The impact ejects about 13% of Dimorphos's mass, most of which is re-accreted, producing near-global resurfacing. T",
-      "url": "http://arxiv.org/abs/2610.35718v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "The design and flight of the Payload for Ultrahigh Energy Observations (PUEO)",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-26",
-      "summary": "Sources of cosmic rays at ultrahigh energies (UHE, $\\gtrsim$ 1 EeV) are anticipated to give rise to neutrinos at similar energies by production via propagation interactions either within the source region or on cosmological scales. Measurements of the neutrino flux, flavor, and energy provide significant insight into those underlying processes governing UHE cosmic ray acceleration and propagation. Detecting neutrinos at these energies requires immense detector volumes due to their low predicted flux. We present the balloon-borne mission PUEO (Payload for Ultrahigh Energy Observations) which is an antenna array designed to detect the Askaryan emission from UHE neutrino interactions in the Ant",
-      "url": "http://arxiv.org/abs/2610.35675v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "The long-term evolution of a black hole accretion torus: a comparison between GRMHD simulations and relativistic thin disk theory",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-26",
-      "summary": "In this paper we analyse the long-term evolution of a black hole accretion torus using novel GRMHD simulations which, for the first time, have been run out to extremely large evolutionary times $t_{\\rm max} = 10^7 GM_\\bullet/c^3$. This allows for detailed comparisons between the gross evolution of this GRMHD simulation and existing \"spreading disk\" analytical theories. We show that the long-term features of this evolution are well described by General Relativistic Thin Disk Theory (GRTDT), which reproduces various aspects of the GRMHD evolution to within a factor $\\sim 2$, despite the disk in our simulation not being remotely thin, showing dynamically dominant (MAD) magnetic fields, and laun",
-      "url": "http://arxiv.org/abs/2610.35648v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Indication of Electron Antineutrinos from the Diffuse Supernova Neutrino Background",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-26",
-      "summary": "We report an indication of $\\barν_e$ from the diffuse supernova neutrino background (DSNB) based on a spectral fit analysis of a 5003.0-day dataset in Super-Kamiokande. Key improvements over previous searches include enhanced rejection of atmospheric $ν$ backgrounds, updated evaluations of systematic uncertainties, and a refined spectral fitting method. Using a representative DSNB model, the best-fit flux was determined to be $3.6^{+1.6}_{-1.5}~\\mathrm{cm^{-2}\\,s^{-1}}$ for $E_ν>13.3$~MeV, corresponding to a $2.6σ$ tension with a null hypothesis ($99.5\\%$ C.L., one-sided). Similar significances were obtained with signal models of varying spectral shapes.",
-      "url": "http://arxiv.org/abs/2610.35619v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Distilling neural networks into equations to predict planetary instability",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-26",
-      "summary": "The problem of predicting when a multi-planet system will become dynamically unstable has defied analytical progress over the past three hundred years. Recent machine learning advances achieve high predictive performance of instability dynamics, but as black-box systems cannot be interpreted to connect to existing scientific understanding. Here we show analytic equations that predict when a multi-planet system will undergo instability. We discover these equations by first training a neural network on a dataset of N-body simulations, and then distilling its latent knowledge into closed-form algebraic expressions. Our two-stage pipeline first learns an interpretable variable basis, then search",
-      "url": "http://arxiv.org/abs/2610.35617v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Nonlinear Tides of Binary Neutron Stars",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-26",
-      "summary": "Nonlinear tides couple stellar oscillations and reshape the gravitational wave (GW) signal from inspiralling binaries. We present hydrodynamic simulations of nonlinear tides in inspiralling neutron-star binaries and, within a mode-coupling model, derive a semi-analytic quadrupolar fundamental mode-frequency shift through second order in the tidal strength. The two approaches agree in the perturbative regime, but diverge at stronger tidal fields, where perturbation theory breaks down. In the late inspiral, nonlinear tides reduce the fundamental-mode frequency by ${\\sim}10\\%$ for equal-mass binaries and add a GW phase shift of $\\mathcal{O}(1)$ radian beyond the linear tidal response. These eff",
-      "url": "http://arxiv.org/abs/2610.35602v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Gravitationally Induced Polarization-Angle Rotation in Pulsar-Black Hole Binaries",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-26",
-      "summary": "Radio pulsars emit highly polarized radiation whose polarization properties are commonly described by the Rotating Vector Model (RVM). In this work, we investigate the effects of gravitational light bending and parallel transport on the polarization profile of a pulsar in a hypothetical binary system with a black hole (BH) companion. We combine the RVM with numerical integration of null geodesics to calculate the polarization direction along the photon trajectory and model the orbital-phase-dependent variation of the observed polarization position angle (PPA). We consider both non-spinning and spinning black hole companions and include the evolution of the orbital geometry due to relativisti",
-      "url": "http://arxiv.org/abs/2610.35589v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Classification of Fermi Blazars of Uncertain Type Using Positive-Unlabelled Machine Learning",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-26",
-      "summary": "We apply positive-unlabelled (PU) machine learning to the 1623 blazars of uncertain type (BCUs) in the Fermi Large Area Telescope Fourth Source Catalogue, Data Release 4 (4FGL-DR4). Five PU classifiers are trained on seven gamma-ray features, once with the 820 flat-spectrum radio quasars (FSRQs) and once with the 1490 BL Lac objects as the labelled class (FSRQ mode and BL Lac mode). Each source is scored out of fold over 100 repeated five-fold splits, and its confidence is the fraction of splits in which at least three of the five classifiers flag it. At a confidence of at least 0.1, 437 BCUs are FSRQ-like, 597 are BL Lac-like, 12 are flagged in both modes and 577 in neither. On known source",
-      "url": "http://arxiv.org/abs/2610.35573v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "A Warped Dust Ring in the CQ Tau Disk",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-26",
-      "summary": "The diversity of planetary orbital architectures calls for observational constraints on radial variations in disk-plane orientation, or warps, yet such variations in dust disks remain poorly characterized. CQ Tau is a promising target because its misaligned inner disk and candidate gas warp suggest a radially extended warp. We present the ALMA 1.3 mm dust continuum image reconstructed from the real part of the visibilities, extracting the centro-symmetric disk structure. At an effective spatial resolution of $0.052'' \\times 0.042''$ ($7.8 \\times 6.3$ au), the image reveals a bright main ring at radii of $\\sim20$--$70$ au and an unresolved compact emission component tracing the inner disk aro",
-      "url": "http://arxiv.org/abs/2610.35548v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "An Intermediate Mass Stripped Star in a 4.2-hour Orbit around a Compact Object",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-26",
-      "summary": "From their discovery as radio pulsars to landmark multi-messenger observations of their mergers, double neutron stars have transformed our understanding of the extreme Universe and the formation of heavy elements (Drout et al. 2017; Abbott et al. 2017). Yet, uncertainties in their formation result in predicted merger rates spanning orders of magnitude (Tauris et al. 2017; Mandel & Broekgaarden 2022). The most critical stage occurs when a star is stripped of its hydrogen-rich envelope, causing the binary orbit to shrink drastically. Despite its fundamental role, the resulting tight binaries comprising a stripped star and neutron star have remained elusive. Here we report a $\\sim$$3.4\\,M_{\\odo",
-      "url": "http://arxiv.org/abs/2610.35539v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Revisiting supernova constraints on dark gauge bosons",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-26",
-      "summary": "We revisit the supernova constraints on three well-motivated light gauge bosons: the dark photon, the $U(1)_{B-L}$ gauge boson, and the $U(1)_{L_μ-L_τ}$ gauge boson. For the dark photon and the $U(1)_{B-L}$ gauge boson, we re-evaluate the nucleon bremsstrahlung process within the one-pion exchange approximation, retaining the full momentum and mass dependence. The geometrical dependence of the decay and absorption of these gauge bosons inside the supernova core is also taken into account. Updated bounds on these models are derived based on the cooling of SN1987A and energy deposition constraints from low-energy supernovae (LESNe). Taking the SFHo-18.8 $18.8\\,M_\\odot$ profile, the SN1987A coo",
-      "url": "http://arxiv.org/abs/2610.35379v1",
       "image": "",
       "type": "research"
     }
