@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-04T09:24:48.706022+00:00",
+  "lastUpdated": "2026-11-05T09:35:18.915591+00:00",
   "articles": [
     {
       "title": "Performance of artificial intelligence versus clinician left-ventricular segmentation of cardiac MRI for mortality prediction: a retrospective, multicentre, prognostic study.",
@@ -18,6 +18,156 @@
       "publishedAt": "2027 Jan",
       "summary": "esc2 and rad57 contribute to rna polymerase ii distribution at highly transcribed genes",
       "url": "https://pubmed.ncbi.nlm.nih.gov/42864262/",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Preparing for the Gaia DR4 Epochalypse: Simulated Epoch Astrometry for Substellar Companion Orbit-Modeling Benchmarks",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-04",
+      "summary": "Gaia's fourth data release (DR4) will provide epoch astrometry for billions of sources, enabling the detection of potentially tens of thousands of substellar companions. We present the epochalypse catalog: Gaia DR4-like epoch astrometry for testing orbit-modeling pipelines on a common set of injected systems with known parameters. Onto each of the $5{,}040{,}328$ main-sequence Gaia stars within $500\\,{ \\rm pc}$ in the G23H catalog, we inject a zero-, one-, and two-companions system, for $15{,}120{,}984$ systems in total. Companion masses and semimajor axes are drawn log-uniformly over $1\\,M_{ \\rm Mars}$--$80\\,M_{ \\rm Jup}$ and $0.03$--$100\\,{ \\rm au}$, with no occurrence model and no detecta",
+      "url": "http://arxiv.org/abs/2611.06915v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Gravitational-Wave Constraints on $R^2$ Gravity",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-04",
+      "summary": "Gravitational waves from compact binary coalescences provide a unique opportunity to test general relativity in the strong-field regime. Quadratic $f(R)=R+aR^2$ gravity is among the simplest higher-curvature extensions of general relativity and introduces a massive scalar degree of freedom whose finite interaction range can modify compact-binary dynamics and gravitational-wave emission. We map this theory onto the effective-field-theory waveform for generic massive scalar-tensor gravity, obtaining a theory-specific inspiral phase correction governed by the single coupling parameter $a$. Using Bayesian analyses of the binary-neutron-star events GW170817 and GW190425, we obtain a combined cons",
+      "url": "http://arxiv.org/abs/2611.06902v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Constraining the white-dwarf mass in the intermediate polar IGR J17014-4306 using X-ray and optical spectroscopy",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-04",
+      "summary": "Intermediate polars (IPs), a subclass of magnetic cataclysmic variables, often show discrepancies between white-dwarf (WD) mass measurements from X-ray spectral modeling and optical dynamical studies. We investigate the IP IGR J17014-4306. We performed a joint spectral analysis of NuSTAR observations combined with archival XMM-Newton and Swift data, modeling the broad-band X-ray spectrum with a multi-temperature cooling-flow model. Additionally, we obtained time-resolved optical spectroscopy with the SOAR telescope to measure the radial velocity of the donor star and constrain the system's orbital parameters. The X-ray spectral analysis reveals a very high post-shock plasma temperature of $k",
+      "url": "http://arxiv.org/abs/2611.06785v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Migration and eccentricity damping timescales in overstable resonant planetary systems: hydrodynamic and N-body simulations",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-04",
+      "summary": "Tidal interactions between planets and discs modify semimajor axes and eccentricities. These effects are represented by migration and eccentricity damping timescales in analytical and Nbody models, although they are assumed constant. This approximation is uncertain in resonant multiplanet systems, where coupled planet disc evolution can produce non-linear torque feedback. We investigate migration and eccentricity damping in two planet systems undergoing resonant and overstable evolution near the 2:1 mean motion resonance. Using hydrodynamic simulations with varying disc surface densities, viscosities, and aspect ratios, we measure both timescales from energy and angular momentum exchange bet",
+      "url": "http://arxiv.org/abs/2611.06765v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Energetic Nonthermal Electrons within the Above-the-looptop Regions in Solar Flares: Acceleration, Feedback, and Quasi-Periodic Pulsations",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-04",
+      "summary": "Solar flares are among the most dramatic events in the solar system, releasing substantial magnetic energy and accelerating a large number of electrons to high energies. Notably, in certain events, the above-the-looptop region may contain a significant population of nonthermal electrons, both in number and energy. For the first time, we adopt a novel numerical method that combines magnetohydrodynamics with energetic particles incorporating feedback from nonthermal electrons to investigate electron acceleration and transport in solar flares. We find that a large fraction of energetic electrons are accelerated via the current sheet and termination shock regions. Most energetic electrons are co",
+      "url": "http://arxiv.org/abs/2611.06763v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Can Magnetic Reconnection Accelerate Energetic Particles in the Heliosheath?",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-04",
+      "summary": "The mechanism for accelerating energetic particles in the outer heliosphere is still under debate. The termination shock, turbulence, and magnetic reconnection have all been proposed as viable mechanisms. We investigate compression-driven particle acceleration during magnetic reconnection in the heliospheric current sheet using the MHD--SDE framework that incorporates energetic-particle feedback into the MHD evolution. For the heliosheath conditions considered here, we find that reconnection-driven acceleration is inefficient downstream of the termination shock, whereas reconnection near the heliopause can generate stronger compression and produce a power-law differential intensity spectrum ",
+      "url": "http://arxiv.org/abs/2611.06735v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Probing Solar-Wind Structure During Crab Pulsar Conjunctions with Dispersion and Faraday Rotation",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-04",
+      "summary": "Observations of the Crab pulsar (PSR B0531+21) during solar conjunction probe plasma structure in the inner solar wind through radio-propagation effects. We analyze dispersion measure (DM) and rotation measure (RM) measurements from the annual conjunctions of 2022-2026, obtained with the Canadian Hydrogen Intensity Mapping Experiment (CHIME). The 2025 DM time series is distinguished from those of the other years by a secondary enhancement on 21 June, about one week after the main conjunction peak. In our scattering-corrected DM measurements, this feature, $Δ$DM $= (3.95 \\pm 0.20) \\times 10^{-3}$ pc cm$^{-3}$, is about 20 times the day-to-day DM scatter outside the conjunction window. The RM ",
+      "url": "http://arxiv.org/abs/2611.06723v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "APOLLO-Timing: Annealed Phase - Orbit Lattice Linking across Observations for Binary Pulsar Timing",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-04",
+      "summary": "Sparse observations of binary pulsars can leave the orbit and the pulse count across observing gaps uncertain. We present APOLLO-Timing, a Bayesian phase-orbit lattice method that fits timing parameters together with integer pulse offsets between observing sessions. PINT checks the candidate connections at fixed pulse numbers. For PSR J1912-1215, a preliminary Keplerian fit to variations in the apparent spin period and its derivative did not phase-connect 96 times of arrival (TOAs) spanning 1438.07 days in 23 sessions. Starting from its position, spin frequency F0, and first time derivative F1 estimated in that fit, with dispersion measure fixed, APOLLO-Timing recovers the orbit and a unique",
+      "url": "http://arxiv.org/abs/2611.06640v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Population synthesis of substellar companions surviving common-envelope evolution",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-04",
+      "summary": "Predicting the population of substellar companions around white dwarfs (WDs) requires accounting for both companions that avoid engulfment during stellar evolution and those that survive common-envelope (CE) evolution. While the former population was investigated in our previous population-synthesis study, a comprehensive population synthesis of the latter remains lacking. We investigated the fate of engulfed substellar companions within the same population-synthesis framework. We aim to predict the occurrence rates and properties of companions surviving CE evolution, identify the conditions permitting survival, and assess their detectability. We determined the stellar structure at the onset",
+      "url": "http://arxiv.org/abs/2611.06549v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "The Environment of High-Energy Transient Host Galaxies at High Redshifts as Observed by SHARP",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-04",
+      "summary": "The study of transient events, such as Gamma-Ray Bursts (GRBs) and extreme Supernovae (SNe), provides a unique probe of star-forming environments in the early Universe. Traditional global host galaxy studies often fail to capture the local conditions around the progenitor, leading to potential mischaracterizations due to metallicity gradients and spatial inhomogeneities. Using high spatial resolution integral field unit (IFU) data, such as those obtained with SHARP/VESPER, allows us to spatially resolve the host galaxies and accurately determine the physical properties (metallicity, stellar age, kinematics) at the precise explosion site. Here, we review the need for near-infrared spatially-r",
+      "url": "http://arxiv.org/abs/2611.06352v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "A search for sterile neutrinos at ultrahigh energies at the Pierre Auger Observatory",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-04",
+      "summary": "We investigate the sensitivity of the Pierre Auger Observatory to sterile neutrinos with masses in the MeV-to-100 MeV range. To this end, we consider a minimal $3+1$ framework in which a single sterile state mixes mainly with the $ν_τ$ flavor through an active--sterile mixing angle $θ_N$ to produce a mass eigenstate $N_1$. At ultrahigh energies, $N_1$ neutrinos can traverse substantial chord lengths through the Earth and interact through their active component, producing $τ$ leptons that may emerge near the surface and decay in the atmosphere, thereby generating detectable air showers. We compute the corresponding exposures with a detailed Monte Carlo simulation of neutrino propagation, inte",
+      "url": "http://arxiv.org/abs/2611.06284v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Optical linear polarization of the Be--X-ray pulsar binary LS V +44 17",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-04",
+      "summary": "We present the optical $BVR$ polarization measurements for the Be--X-ray pulsar binary LS V +44 17 from its giant outburst in early 2023 and subsequently over three years. We detect a significant polarization of about $\\approx1.1$--$2.1\\%$, which includes the interstellar contribution. Polarization evolves significantly with time since the outburst. The interstellar polarization was found to be $\\approx2.5$--$2.9\\%$. The obtained intrinsic optical polarization of LS V +44 17 after correction is between $0.5$--$1.7\\%$, perpendicular to the interstellar polarization direction. We consider various plausible sources of optical polarization and infer scattering in the Be decretion disk to be the ",
+      "url": "http://arxiv.org/abs/2611.06249v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Orientation of the spin axes of large Kuiper belt bodies as an indicator of the mechanism of their origin",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-04",
+      "summary": "The paper analyses the orientation of the spin axes of Kuiper Belt (KB) bodies that have satellites. For most of these bodies, the axes orientations were estimated under the assumption that the orbital planes of the satellites lie close to the bodies' equatorial planes. It was found that the spin axes of large scattered disks and plutinos' bodies, including four dwarf planets, are inclined at relatively small angles to the planes of their heliocentric orbits. This feature points to a possibility that all the scattered disk bodies, together with the bodies in the 3:2 resonance with Neptune, originated from the disruption of a single large body. The origin of the bodies of the so-called cold c",
+      "url": "http://arxiv.org/abs/2611.06232v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Orbital Architecture of Super-Earth-Cold-Jupiter Systems from Transit Duration Ratios",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-04",
+      "summary": "Super-Earths are commonly found with cold Jupiters, yet it is unclear whether these Super-Earth-Cold-Jupiter (SE-CJ) systems differ architecturally from other Kepler-like systems (Non-SE-CJ). One might expect the CJs to excite eccentricities and mutual inclinations among the SEs. We use two metrics: the normalized transit duration $T/T_0$, set by the host-star density, and the pairwise duration ratio $ξ$ between neighboring transiting planets. We find no population-level difference in $T/T_0$ between the samples. Forward modeling of $ξ$, which is more directly sensitive to mutual inclinations because it isolates the impact-parameter contrast, finds no evidence that SE-CJ systems are more mut",
+      "url": "http://arxiv.org/abs/2611.05963v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Longitudinal-field particle acceleration in channels generated by strong electromagnetic waves in pair plasma",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-04",
+      "summary": "Relativistically strong electromagnetic waves interacting with pair plasmas appear in astrophysical settings and may become accessible in future laboratory experiments using high-power lasers. Transverse modulations and filamentation can turn extended wavefronts into structures of a finite transverse width. We examine the interaction of such a finite-width wave incident on a cold, uniform pair plasma using a three-dimensional kinetic particle-in-cell simulation. The wave does not penetrate the plasma and instead advances by creating a fully evacuated channel. The wave loses energy at a rate that cannot be explained by plasma clearing alone. We find that the excess losses are caused by strong",
+      "url": "http://arxiv.org/abs/2611.05948v1",
       "image": "",
       "type": "research"
     },
@@ -448,156 +598,6 @@
       "publishedAt": "2026-10-30",
       "summary": "The magnetic Prandtl number ($\\mathrm{Pm}$), the ratio of viscosity to magnetic diffusivity, spans many orders of magnitude in astrophysical plasmas. It shapes how turbulence amplifies and structures magnetic fields. In direct numerical simulations (DNS) the viscosity and magnetic diffusivity can be controlled explicitly and independently, whereas in implicit large eddy simulations (ILES) they are set by the numerical scheme. We test whether, in a finite-volume code, $\\mathrm{Pm}$ can be varied through the reconstruction scheme by applying different methods to the hydro and magnetic variables. As a proof of concept, we simulate driven, subsonic, homogeneous magnetohydrodynamic turbulence usi",
       "url": "http://arxiv.org/abs/2610.41493v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Enhanced Detectability of Very-High-Energy Gamma Rays from Off-Axis Short Gamma-Ray Bursts: Impacts of Structured Jets and External Inverse-Compton Scattering",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-30",
-      "summary": "The binary neutron star merger GW170817 established a direct link between gravitational waves and short gamma-ray bursts (sGRBs), whose afterglows are commonly interpreted as nonthermal emission from structured relativistic jets viewed off-axis. Some sGRBs exhibit extended or plateau X-ray emission, suggesting prolonged central-engine activity. These X-ray photons can serve as seed photons for external inverse-Compton (EIC) scattering by relativistic electrons in the jet, producing very-high-energy (VHE) gamma rays. However, how the angular structure of the jet affects the detectability of EIC emission remains insufficiently explored. Here, we investigate EIC emission from off-axis structure",
-      "url": "http://arxiv.org/abs/2610.41476v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Effect of quark-hadron phase transitions on the neutron star mass distribution",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-30",
-      "summary": "The neutron star (NS) mass distribution serves as a crucial probe of the dense matter equation of state (EOS) and core-collapse supernova explosion mechanisms. Although observations reveal a bimodal NS mass distribution, existing theoretical simulations often struggle to naturally reproduce the high-mass peak, and the impact of the quark-hadron phase transition (PT) in high-density nuclear matter remains largely unexplored. Employing the 1D general-relativistic hydrodynamics code GR1D with hybrid EOSs incorporating a first-order PT (RDF1.1 and RDF1.2), we systematically simulate core-collapse supernovae for progenitors with zero-age main-sequence masses ranging from 13 to 120 $M_\\odot$. Our ",
-      "url": "http://arxiv.org/abs/2610.41242v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Gravitational-Wave Echoes and Greybody Cutoff from Logarithmic Throats at a Marginal-Trapping Threshold",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-29",
-      "summary": "When a static, spherically symmetric configuration is brought close to a marginal-trapping threshold, it develops a long throat. As the nondegenerate minimum of $F=1-2m/r$ approaches zero, $F\\simeqΔ+β(r-R_M)^2$, the proper length across the throat grows as $-\\lnΔ/\\sqrtβ$, even though the local curvature stays finite. We study how axial gravitational waves propagate in an effective model of this throat, in which the lapse is parametrized as $N\\propto F^{s/2}$. For $s>0$ the throat acts as a cavity behind the angular-momentum barrier, and waves come back out as echoes spaced by $T_{\\rm echo}\\simeq2Λ+δ\\proptoΔ^{-s/2}$, where $Λ$ is the optical length of the throat and $δ$ does not depend on $Δ$",
-      "url": "http://arxiv.org/abs/2610.40631v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "The Conditional CMB Visibility of High-Redshift X-Ray Cavities in Galaxy clusters",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-29",
-      "summary": "At high redshift, the cosmic microwave background (CMB) both cools relativistic leptons and provides seed photons for inverse-Compton (IC) X-ray emission. These two effects link the particle content of a bubble directly to the soft X-ray depression used to identify a cavity. We derive a physical criterion connecting lepton cooling, bubble volume, enthalpy evolution, and 0.5--2 keV X-ray visibility, while separating intrinsic filling of the X-ray depression from detector-dependent cavity recovery. For uncooled electron populations described by a power law with spectral index $s=2.5$, minimum Lorentz factor $100\\leqγ_{\\min}\\leq1000$, and maximum Lorentz factor $γ_{\\max}=10^5$, the measured atm",
-      "url": "http://arxiv.org/abs/2610.40610v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "The unresolved high-mass frontier of the black hole Fundamental Plane",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-29",
-      "summary": "Accreting black holes follow a Fundamental Plane (FP) linking radio and X-ray luminosities to black hole mass, but whether this relation changes in the ultramassive regime, above $\\sim10^{10}\\,\\Msun$, remains unresolved. Brightest cluster galaxies (BCGs) provide the most direct access to this regime, although earlier claims of enhanced radio emission relied largely on heterogeneous nuclear measurements and black hole masses inferred from host-galaxy proxies. We recalibrate the forward FP using galaxies with direct dynamical mass measurements and reassess the evidence for a high-mass radio excess using the available BCG data. We find that the archival proxy-mass sample cannot uniquely establi",
-      "url": "http://arxiv.org/abs/2610.40606v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Mapping Stellar Obliquity Across Space and Time",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-29",
-      "summary": "The angle between a star's rotational angular momentum vector and the orbital angular momentum vector of its planets---stellar obliquity---encodes the initial conditions and dynamical history of planetary systems. Variations in obliquity with orbital separation may arise from either primordial disk structure (e.g., broken or warped protoplanetary disks with misaligned inner and outer regions) or subsequent dynamical interactions with planets or external perturbers. Comparing obliquities across orbital distance therefore probes the spatial imprint of these processes, while comparisons across age constrain their temporal evolution. To test for signatures of obliquity evolution in both space an",
-      "url": "http://arxiv.org/abs/2610.40527v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Tailoring Infra-Red Filters for Global Mapping of Enceladus' Thermal Environment",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-29",
-      "summary": "We present the results of an initial study into the feasibility and design of the Enceladus Thermal Mapper (ETM) instrument, designed to provide detailed temperature data for Enceladus, an icy moon of Saturn identified by the Cassini Mission as a prime candidate for astrobiological study due to its subsurface ocean and active cryovolcanism. Building on heritage from previous missions including TechDemoSat-1, Mars Climate Sounder, and Lunar Trailblazer, ETM aims to measure temperature variations across Enceladus' surface, including at the poles during the extreme cold of winter, when they can reach as low as 45 K. Where Cassini provided limited high-resolution flyby data of Enceladus due to i",
-      "url": "http://arxiv.org/abs/2610.40456v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Influence of $Δ$ resonances in hyperonic neutron stars on gravitational-wave inspiral signatures",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-29",
-      "summary": "The composition of dense matter in neutron star interiors remains uncertain, with the possible appearance of the non-strange $Δ$ resonances providing an important source of theoretical uncertainty. In this work, we investigate the gravitational wave signatures of hyperonic neutron stars containing $Δ$ baryons within a density-dependent relativistic mean-field framework based on the DDME2 parametrization. Within this framework, the baryons interact among themselves via mesons. For $Δ$ baryons, the interaction is uncertain to date. We investigate how variations of the scalar and vector $Δ-$meson couplings, subject to \\(x_{σΔ}-x_{ωΔ}=0.2\\), modify the tidal properties and inspiral gravitational",
-      "url": "http://arxiv.org/abs/2610.40441v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "TEMPEST - A modular Python-based thermophysical model for rough, irregularly-shaped airless bodies",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-29",
-      "summary": "Comparing observed and predicted surface temperatures on airless planetary bodies is crucial for interpreting their surface processes, constraining activity, and deriving their surface properties. We present a new tool in this endeavour: TEMPEST (Thermophysical Evolution Model for Planetary Environment Surface Temperatures). It is a modular, open-source Python model for diurnal thermal evolution on irregular bodies. TEMPEST can reproduce non-Lambertian multiple scattering using arbitrary Bidirectional Reflectance Distribution Functions (BRDFs) and notably incorporates surface roughness on sub-facet scales through representative sphere-section geometry. The model includes an explicit time-ste",
-      "url": "http://arxiv.org/abs/2610.40406v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Polarization and Burst Properties of the Repeating FRB~20240209A in a Quiescent Elliptical Host",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-29",
-      "summary": "We report polarimetric observations of the repeating fast radio burst (FRB) source FRB 20240209A with the Green Bank Telescope at L band and 800 MHz. This source has previously been associated with a quiescent elliptical galaxy with a mass-weighted stellar age of approximately 11 Gyr. We detected three bursts, and the brightest burst resolves into eight components that drift toward lower frequencies. The bursts have mutually consistent rotation measures (RMs), and the small extragalactic RM agrees with the low RM predicted from the small host-galaxy dispersion measure ($\\mathrm{DM}_\\mathrm{host}$). The linear polarization fraction decreases toward lower frequencies within the brightest burst",
-      "url": "http://arxiv.org/abs/2610.40326v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "posterior-landscape: morphological feature finding in two-dimensional probability densities",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-29",
-      "summary": "We present posterior-landscape, a Python framework to identify and characterize morphological features in two-dimensional probability densities. The framework combines concepts from topological data analysis, statistical density-ridge estimation, and scale-space image analysis. It extracts localized concentrations, valleys, ridges, and changes of slope; for Bayesian reconstructions, it propagates uncertainty in feature recovery, geometry, and correspondence across posteriors. The framework also connects two-dimensional structures to features in one-dimensional marginals, and quantifies their correlation with other inferred parameters. We validate the method on controlled densities, and demon",
-      "url": "http://arxiv.org/abs/2610.40272v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "A Candidate Binary Microlensing Event in the 2018 Gamma-Ray Flare of 3C 279",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-29",
-      "summary": "The April 2018 gamma-ray flare of the flat-spectrum radio quasar 3C~279 exhibited sharp peaks within a broader outburst. Its rapid substructure was previously attributed to magnetic reconnection. Motivated by its distinctive temporal profile within our comparison sample of bright blazar flares and its resemblance to caustic-crossing features in optical microlensing events, we investigate a finite-source binary-microlensing interpretation. A jointly fitted model of binary-lens magnification, a smooth intrinsic flare, and Gaussian-process variability reproduces the principal double-peaked structure of the GeV light curve. The adopted local solution has a binary mass ratio of $q\\simeq0.098$ and",
-      "url": "http://arxiv.org/abs/2610.40255v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "From photons to neutrinos : Advancing multi-messenger modeling with Gammapy",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-29",
-      "summary": "In recent years, several astrophysical objects have been identified as potential multi-messenger photon-neutrino emitters. New instruments dedicated to the study of these two messengers have been and are still being built, achieving unprecedented sensitivity. This observational improvement increases the need for more sophisticated and precise analysis tools. Multi-wavelength and multi-messenger data fitting is crucial to constrain astrophysical models of particle acceleration and radiation mechanisms at work in these extreme environments. In this contribution, we present a novel framework dedicated to multi-wavelength and multi-messenger modeling, built within the open-source software Gammap",
-      "url": "http://arxiv.org/abs/2610.40242v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "What kinds of strong star--black-hole encounters in AGN disks occur, and how often?",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-29",
-      "summary": "Disks surrounding active galactic nuclei contain many stars and black holes, which will inevitably encounter one another. The outcome of these encounters depends on how closely and how rapidly the bodies meet. Extending previous studies, we account for initial relative velocities seeded by stochastic effects in the disk; incorporate a strong-encounter cross-section accounting for single- and binary-mediated interactions computed via direct two-body (Hill) or three-body (isolated) interactions; and present a repeated-encounter model accounting both for energy loss due to stellar encounters as well as the SMBH tidal field. We convolve our encounter model with a parametric family of natal stell",
-      "url": "http://arxiv.org/abs/2610.40144v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "The dark surface of (163693) Atira and implications for inner-Earth asteroid origins",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-29",
-      "summary": "We compare the physical properties of inner-Earth asteroid (163693) Atira with the NEOMOD3 population model. Its radar-derived diameter of 4.9 km and absolute magnitude H$_V\\simeq$16.4 imply a geometric albedo of p$_V\\sim$0.02. Photometry with the Astrophysical Research Consortium 3.5-m telescope and ARCTIC yields g-r=0.49$\\pm$0.03, r-i=0.20$\\pm$0.02, i-z=0.02$\\pm$0.03, a$^\\ast$=$-0.05\\pm0.03$, and a g-to-i spectral slope of 3.4$\\pm$0.9$\\%$/100 nm. The photometric reflectance favors a provisional X-type classification; combined with the low albedo, it supports a Tholen P-type interpretation. NEOMOD3 assigns an approximately 66$\\%$ probability of delivery through inner Main Belt channels and ",
-      "url": "http://arxiv.org/abs/2610.40114v1",
       "image": "",
       "type": "research"
     }
