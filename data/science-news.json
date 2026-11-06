@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-05T09:35:18.915591+00:00",
+  "lastUpdated": "2026-11-06T09:29:05.171717+00:00",
   "articles": [
     {
       "title": "Performance of artificial intelligence versus clinician left-ventricular segmentation of cardiac MRI for mortality prediction: a retrospective, multicentre, prognostic study.",
@@ -18,6 +18,156 @@
       "publishedAt": "2027 Jan",
       "summary": "esc2 and rad57 contribute to rna polymerase ii distribution at highly transcribed genes",
       "url": "https://pubmed.ncbi.nlm.nih.gov/42864262/",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "BeAR: The Bern Atmospheric Retrieval code - A GPU-accelerated framework for low-resolution, high-resolution, and joint retrievals of exoplanet atmospheres",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-05",
+      "summary": "We present BeAR, the Bern Atmospheric Retrieval code and successor of Helios-r, and its new high-resolution cross-correlation framework for emission and transmission spectra. BeAR performs joint retrievals by adding the log-likelihoods of high- and low-resolution data computed from the same model atmosphere. The framework implements established cross-correlation log-likelihoods, with the line-depth scaling either fitted analytically or sampled as a free parameter, their per-pixel generalization, fast model filtering, and model re-injection adapted to this filtering. The forward model and likelihood run entirely on a graphics processing unit (GPU). One forward model takes about 1 ms on an NVI",
+      "url": "http://arxiv.org/abs/2611.08489v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Evolution of Dust In Protoplanetary Disks With Magnetized Winds",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-05",
+      "summary": "Observations and theory increasingly indicate that protoplanetary disks are weakly turbulent, implying that magnetized disk winds may dominate their angular momentum transport and long-term evolution. Yet dust evolution in wind-dominated disks remains poorly understood, despite its importance for planet formation. In particular, whether wind-dominated disk evolution can create regions with enhanced dust-to-gas mass ratios that enable planetesimal formation via the streaming instability is unclear. We build a parametric hybrid disk evolution model that includes turbulent accretion, wind-driven accretion, and wind-driven mass loss to investigate dust evolution in magnetized protoplanetary disk",
+      "url": "http://arxiv.org/abs/2611.08484v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "The cold substellar frontier in JWST Extragalactic surveys: a robust parallax measurement yields the most distant known ultra-cold Y dwarf",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-05",
+      "summary": "We present an analysis of JADES-GS-BD-5, an extremely cold Y dwarf identified in the JADES/GOODS-South field. Using multi-epoch JWST/NIRCam imaging spanning a $\\simeq2$-yr baseline, we calibrate the JWST astrometry and obtain the first robust parallax measurement for a brown dwarf discovered in a JWST extragalactic deep field. We measure a proper motion of $μ_{\\rm tot}=49.8^{+0.3}_{-0.3}$ mas yr$^{-1}$ and a parallax of $\\varpi=15.7^{+1.4}_{-1.3}$ mas, corresponding to a geometric distance of $d=64^{+6}_{-5}$ pc, $\\sim3\\times$ further than that of the previously known most distant Y dwarfs with parallax-measured distances. We hence determine a tangential velocity of $v_{\\rm tan}=15.0^{+1.4}_",
+      "url": "http://arxiv.org/abs/2611.08346v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "The complex periodic variability of PKS 0301-243: hints of a supermassive black hole binary candidate",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-05",
+      "summary": "In hierarchical galaxy formation, supermassive black hole binaries are a ubiquitous consequence of frequent galaxy mergers, yet subparsec binaries remain difficult to be confirmed. Periodic flux modulations may arise from the orbital motion of black holes in close binaries, while relativistic jet precession can provide an additional source of periodic variability. Such periodic signatures therefore motivate us to identify close binary candidates. Here, we report an optical periodicity of $269^{+13}_{-14}$ days in both Zwicky Transient Facility g and r bands of the blazar PKS 0301-243, with corrected global significances of $2.75σ$ and $2.18σ$, respectively. This signal persists over 7 cycles",
+      "url": "http://arxiv.org/abs/2611.08332v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Mitigating scanning-induced systematics in Hipparcos and implications for Gaia astrometry",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-05",
+      "summary": "Space-based astrometric missions such as Hipparcos and Gaia rely on one-dimensional scanning strategies that couple the measured signals with both observation times and scanning geometry. This coupling can introduce spurious periodicities and complicate their interpretation. We present a non-parametric extension of the phase-distance correlation (PDC) periodogram that quantifies and reduces dependence on scan geometry at the period-search stage. Using Hipparcos data, we identified recurrent periodicities associated with characteristic scanning-law timescales and showed that they are strongly suppressed by the scan-angle-controlled statistic. We then applied the method to Gaia Data Release 4 ",
+      "url": "http://arxiv.org/abs/2611.08282v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "The slower rotation of planet-hosting stars revisited",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-05",
+      "summary": "Previous studies combined rotation periods derived from Kepler photometry, stellar parameters from previous Gaia Data Releases, and planet hosts from the NASA Exoplanet Archive to conclude that statistically planet-hosting stars rotate slower than stars without detected planets. Here, we revisit these studies by using similar Kepler rotational period sample, but with an updated Gaia DR3-based stellar parameter catalogue and an updated exoplanet catalogue. We apply minimal sample cuts in evolutionary state, metallicity, and distance, and then model the stellar rotation period as a function of effective temperature alone. For each star, we derive the ratio of its observed period to the tempera",
+      "url": "http://arxiv.org/abs/2611.08267v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "DIS-secting the universe with high-energy neutrinos",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-05",
+      "summary": "We revisit the impact of electroweak (EW) radiative corrections on the kinematic distributions of charged leptons in neutrino-induced charged-current (CC) deep inelastic scattering (DIS). These corrections are particularly relevant for observables sensitive to collinear photon radiation, such as the energy spectrum of high-energy muons detected in neutrino telescopes. To study these effects, we implement full next-to-leading order (NLO) EW corrections to CC DIS in a flexible Monte Carlo framework, supplemented with higher-order logarithmically enhanced final-state QED radiation and coherent scattering contributions. We compare our results to exclusive NLO QCD plus parton shower (PS) predicti",
+      "url": "http://arxiv.org/abs/2611.08221v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Results from a Stellar Occultation by (623) Chimaera",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-05",
+      "summary": "We present results from a stellar occultation by the asteroid (623) Chimaera on October 21st, 2025, when it passed in front of V magnitude 13.86 star UCAC4 626-004193. Chimaera is the largest asteroid in the Chimaerid asteroid family and will be subject to a spacecraft flyby in the 2030s. Eighteen telescopes were deployed, spanning the United States from Arizona to North Carolina, incrementally spaced by $\\sim4.4$\\,km with respect to the cross-track of the shadow. In total, sixteen telescopes collected useful data. This multi-chord observation, when compiled into a single sky-plane plot, suggests a profile which is well-described by an elongated elliptical fit, with a semi-major axis $a=26.2",
+      "url": "http://arxiv.org/abs/2611.08041v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Mass loss in AF supergiants: At the verge of the Eddington limit and still with weak line-driven winds",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-05",
+      "summary": "We study global atmosphere models of AF supergiants. In agreement with previous studies, we found super-Eddington layers in the photospheres of these stars, which lead to density inversions. Our tests showed that the super-Eddington layers are caused by hydrogen ionization. The analysis of radial perturbations has not revealed any instability of such layers, but we show that super-Eddington layers in an optically thick environment are prone to instabilities due to nonradial perturbations. We predict the wind parameters of AF supergiants from our global wind code with a comoving-frame radiative force. Despite the existence of density inversions, the predicted mass-loss rates are significantly",
+      "url": "http://arxiv.org/abs/2611.07986v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Multi-epoch monitoring of the faint northern component in 3C 84 during 2016-2021",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-05",
+      "summary": "We present the results of multi-epoch very long baseline interferometry (VLBI) observations of the sub-parsec-scale northern jet component of 3C 84 (known as the N1 component) at 7 mm from 2016 to 2021. The peak position of the N1 component exhibits positional variations of approximately 0.2 mas at a distance of about 2.5 mas from the central radio core (C1) throughout the observation period. Although a linear fit yields a small proper motion of $μ_{\\rm{Dec}}=0.054\\pm0.019~\\rm{mas}~\\rm{yr}^{-1}$, corresponding to an apparent velocity of $β_{\\rm{app}}=0.062\\pm0.021$, this displacement is comparable to the observed positional scatter, and the hypothesis that N1 exhibits systematic motion is no",
+      "url": "http://arxiv.org/abs/2611.07782v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "FALCON (FERMI-ALMA Calibrator ObservatioN): Cross-matching ALMA Calibrators with Fermi-LAT Blazars",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-05",
+      "summary": "Blazars are active galactic nuclei with relativistic jets closely aligned with our line of sight, producing Doppler-boosted emission from radio to gamma rays. Millimeter emission near the synchrotron self-absorption turnover probes compact regions at the jet base, yet large statistical studies in this regime remain limited. We construct the FALCON (FERMI--ALMA Calibrator ObservatioN) catalogue, a millimeter-selected blazar sample by cross-matching the ALMA Calibrator Source Catalogue with the Third Data Release of the Fourth LAT AGN Catalog (4LAC-DR3). After removing duplicates, we obtain 949 unique gamma-ray-associated sources, corresponding to approximately 25 % of the 4LAC-DR3 blazar popu",
+      "url": "http://arxiv.org/abs/2611.07737v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Discovery of the redback pulsar PSR J2053+6905 and multi-epoch optical observations of the system",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-05",
+      "summary": "Using the Green Bank Telescope, we discovered the 1.68-ms binary pulsar PSR J2053+6905. The discovery resulted from a targeted search for radio pulsations from a redback candidate, previously identified through optical and X-ray observations and spatially coincident with the $γ$-ray source 4FGL J2054.2+6904. We report the first results from the pulsar timing, including the spin period, dispersion measure, precisely measured Keplerian binary parameters, and the pulsar mass function. We also found potential evidence of scintillation and long radio eclipses. To constrain the system parameters, we performed multi-epoch time-series photometric observations using the 2.1-m telescope at the Observa",
+      "url": "http://arxiv.org/abs/2611.07668v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "The Influence of the Inclination of the Accretion Disk in Black Hole X-Ray Binaries on the Energy Spectrum Characteristics",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-05",
+      "summary": "During the ascending and descending phases of some black hole X-ray binaries(BH XRBs), it was found that the X-ray Eddington ratio ($ L_{X-ray(3-25keV)}/L_{Edd} $) and the photon spectral index $Γ$ had an anticorrelation when the X-ray Eddington ratio was less than a specific value, and a positive correlation when it was greater than that value. Moreover, the cross points of the anticorrelation and positive correlation are different for different BH XRBs ($ L_{X-ray(3-25keV)}/L_{Edd} $ of cross point is between $ 0.1 \\% $ and $ 10\\% $). The reason why the cross points are different for different BH XRBs were still uncertain. So we processed the light curve and energy spectrum of 15 outbursts",
+      "url": "http://arxiv.org/abs/2611.07590v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Probing the Seed Effect of Supermassive Primordial Black Holes with Weak Gravitational Lensing",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-05",
+      "summary": "We investigate the cosmological implications of supermassive primordial black holes (PBHs) as a component of dark matter (DM), focusing on their seed effect on large-scale structure formation. In contrast to the Poisson effect associated with the discrete distribution of PBHs, the seed effect arises because PBHs act as early gravitational seeds, accreting surrounding DM and developing dense DM spikes to form dressed PBHs. These structures enhance the matter power spectrum, particularly on small scales. We model their contribution within the halo-model framework under two prescriptions for DM accretion: an optimistic scenario (Case 1) and a conservative scenario (Case 2), which predict differ",
+      "url": "http://arxiv.org/abs/2611.07574v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Systematic Search for Cataclysmic Variables in Radio Surveys: First Radio Detection of IX Velorum",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-05",
+      "summary": "We present a systematic search for radio emission from cataclysmic variables (CVs) across four wide-field radio surveys in the 0.7-4 GHz frequency range: VLASS; RACS; VAST; and EMU. We generated a reliable catalog of 2225 optically-identified CV candidates using a multi-stage cross-match, combined with systematic and manual verification; 1374 are matched to Gaia sources within the radio surveys' footprints. Among these, we detected six CVs in at least one epoch (at 1e16.5-1e17.5 erg/s/Hz, consistent with the typical population of radio-detected CVs); five had been detected in radio before. IX Vel, the closest nova-like CV, is detected in radio for the first time and shows quasi-persistent lo",
+      "url": "http://arxiv.org/abs/2611.07448v1",
       "image": "",
       "type": "research"
     },
@@ -448,156 +598,6 @@
       "publishedAt": "2026-11-02",
       "summary": "Dust properties in protoplanetary disks remain poorly understood despite their central role in planet formation. Recent studies based on analyses of scattered-light images and phase functions provide promising insights into dust characterization, but the phase function alone is insufficient to constrain dust properties. Degeneracies between dust remain a major obstacle to linking observations to realistic dust models. We investigate the behavior of the disk color as a function of dust. We used MCFOST to generate synthetic scattered-light images from the visible to the near-infrared, in total and polarized intensity. We considered compact spherical grains using, irregular particles and compac",
       "url": "http://arxiv.org/abs/2611.02753v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Two Fast Radio Burst Candidates Detected in the RATAN-600 Blind Survey",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-02",
-      "summary": "We report the detection of two single dispersed pulses with widths of about 6.7\\,ms and 15.6\\,ms and flux densities of about 0.8 and 1.7\\,Jy. These were found in a blind survey of two circular regions (Dec$\\;=+22^{\\circ}$ and $+5^{\\circ}$,RA: 0--24~h) at high radio frequencies \\mbox{(4400--5000\\,MHz)} using four 4-channel filter radiometers (central frequencies of 4475, 4625, 4775, and 4925\\,MHz) spanning a total frequency bandwidth of 600\\,MHz. The survey was carried out with the Western Sector antenna of the RATAN-600 radio telescope, which had an effective area of 1200\\,m$^2$ in~2017--2025. The total area of the survey was about 1500~square degrees, and each pointing of the antenna lasted",
-      "url": "http://arxiv.org/abs/2611.02697v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Hidden by Exponential Screening: The Invisibility of the Dymnikova Black Hole de Sitter Core to Accretion Observables",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-02",
-      "summary": "The Dymnikova spacetime replaces the Schwarzschild singularity with a de Sitter core, and its lapse deviates from Schwarzschild by a factor decaying as $e^{-r^3/(2l_{\\rm cr}^2M)}$. Whether this screening renders the core invisible to accretion has remained an open quantitative question. We address it with GRHD simulations of BHL accretion onto Dymnikova BH for six values of the critical length, $0.1M\\le l_{\\rm cr}\\le 1.1M$, the last being 97% of the extremal value. All runs share identical gas parameters and resolution, so any difference in the flow must originate from the geometry. The dynamically relevant quantity is the gravitational acceleration, whose deviation reaches 12% at the inner ",
-      "url": "http://arxiv.org/abs/2611.02669v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Nova V1674 Her as a fast magnetic rotator",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-30",
-      "summary": "We report on the results of our XMM-Newton and NuSTAR campaign targeting V1674 Her in October 2023. These observations were timed to investigate the post-nova quiescent state 28 months after the 2021 outburst, although the optical luminosity was still slowly declining. The X-ray spectra are well-modeled by a multi-temperature thermal plasma. While in the best fit temperature we find that the highest plasma temperature is indicative of a massive white dwarf ($M_{\\text{WD}} \\approx 1.35 M_\\odot$), we caution that there is a degeneracy between the plasma temperature and the metallicity in the spectral fit, hindering a definitive constraint. Alternatively, the continuum can be phenomenologically",
-      "url": "http://arxiv.org/abs/2610.42132v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Distinguishing N$_2$-Dominated from O$_2$-Dominated Atmospheres on Terrestrial Exoplanets with Reflected-Light Spectroscopy",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-30",
-      "summary": "Reflected-light spectra of Earth-sized exoplanets promise to probe habitability and biosignatures, but interpreting atmospheric oxygen can be challenging because $O_2$ can arise from both biological and abiotic processes. In addition, reflected-light retrievals exhibit degeneracies among atmospheric composition, clouds, surface reflectance, and gravity. We use the Bayesian retrieval framework ExoReL$^\\Re$, leveraging recent model developments that incorporate (i) $O_2$-$O_2$ collision-induced absorption (CIA), which produces the $O_4$ bands, and (ii) a wavelength-dependent (step-function) surface albedo parameterization. Focusing on a modern Earth analog, we compare retrievals with and witho",
-      "url": "http://arxiv.org/abs/2610.42035v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "An end-to-end CNN search for ultra-short-period planets in TESS: from the blend ceiling to the independent validation of TOI-6662 b",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-30",
-      "summary": "We trained a convolutional neural network to detect ultra-short-period planets in TESS photometry, following the procedure now standard in the field: synthetic transits as positives, eclipsing binaries as negatives. Measured that way it reaches an area under the ROC curve of 0.97. Keeping the same model and the same planets, but replacing the negatives with false positives that the TESS Follow-up Observing Program has actually rejected, the area falls to 0.50 -- the value of a random classifier. The conventional benchmark had been measuring a problem that does not exist. The reason is physical, and it bounds what is possible. Of 145 such false positives examined at pixel level, 42% are blend",
-      "url": "http://arxiv.org/abs/2610.42009v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Formation of Micron-sized Presolar Graphite Grains in Low-energy Supernova Ejecta",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-30",
-      "summary": "Presolar graphite grains with supernova isotopic signatures provide direct evidence that large graphite grains formed in supernova ejecta. However, theoretical calculations of dust formation in supernovae have typically predicted graphite grains smaller than $0.1\\,{\\rm μm}$, leaving unclear the physical conditions required to form those grains with radii of order $1\\,{\\rm μm}$. We systematically investigate graphite nucleation and growth in expanding supernova ejecta by varying the explosion energy, ejecta mass, initial ejecta radius, and ejected $^{56}$Ni mass. We use a simplified one-zone model that follows the temperature and density evolution including adiabatic cooling, radiative coolin",
-      "url": "http://arxiv.org/abs/2610.41948v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Current Sheets and Magnetic Reconnection statistics by Solar Orbiter at few to tens of Ion Inertial Lengths I: Energy Dissipation",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-30",
-      "summary": "In this work, we study the turbulent origin of ion-scale Current Sheets (CSs) and the dissipation of energy via magnetic reconnection. We analyze 103 hours of high-cadence (4 samples/s) in-situ ion data from Solar Orbiter, collected between July 2020 and September 2022. We apply an automatic detection algorithm that finds current sheets (CSs) of thickness (length in the normal direction, $λ$) near the ion inertial length ($δ_i$), and classifies them as Alfvénic or reconnecting. We compile a catalog of 974 CSs of thickness in the range of few to 90 ion inertial lengths, of which 53 contain an ion reconnection jet. We estimate that Solar Orbiter spends $\\sim 1 \\%$ of the dwell time inside a CS",
-      "url": "http://arxiv.org/abs/2610.41923v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "A multi-wavelength view of PSR J0437-4715 with NICER and other missions: Radius measurements from far-ultraviolet to hard X-ray pulse profile modeling",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-30",
-      "summary": "We report updated mass and radius measurements for the millisecond pulsar PSR J0437-4715 obtained with pulse profile modeling of the emission from the far-ultraviolet to the hard X-rays. Using an extended 2.56 Ms Neutron Star Interior Composition ExploreR (NICER) dataset together with XMM-Newton, Nuclear Spectroscopic Telescope ARray and Hubble Space Telescope observations, we perform Bayesian inference with models describing the thermal emission from hot spots of increasing complexities, together with the rest of the warm NS surface, as well as the non-thermal emission component represented by a phase-dependent (pulsed) power-law. With this comprehensive model and broadband data set, as wel",
-      "url": "http://arxiv.org/abs/2610.41846v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "First Light with the Dark100 Array of PANOSETI Telescopes at Palomar Observatory",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-30",
-      "summary": "Dark100 is the first phase of an extensive array of Panoramic SETI (PANOSETI) telescopes at Palomar Observatory, California. PANOSETI telescopes are small, 0.5-m Fresnel lens telescopes instrumented with 1024-pixel silicon photomultiplier (SiPM) cameras. The telescopes were originally designed to search for ultra-fast optical transients, but they also function as cost-effective imaging atmospheric Cherenkov telescopes (IACTs). Dark100 will use seven of these widely separated IACTs to map the ultra-high-energy (UHE) gamma-ray sources on the Galactic Plane at high resolution. Dark100 will also leverage the IACT technique to search for evidence of ultra-heavy dark matter in a mass range that ex",
-      "url": "http://arxiv.org/abs/2610.41775v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Gamma-Ray Emission from LS 5039: A 30-500 GeV Excess and Phase-Resolved Broadband Spectral Modeling",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-30",
-      "summary": "LS~5039 is a well-studied $γ$-ray binary exhibiting strong orbital modulation from GeV to TeV energies. We present a phase-resolved analysis of 17.3~yr of \\textit{Fermi}-LAT observations and identify an additional $γ$-ray excess in the $\\sim30$--$500$~GeV at a significance of $\\sim7.9σ$. The phase-resolved spectra show pronounced orbital dependence above $\\sim10$~GeV, with the inferior-conjunction more complex than the superior-conjunction. To investigate the broadband spectral energy distribution, we combine the \\textit{Fermi}-LAT spectra with published H.E.S.S.\\ and HAWC measurements and compare purely leptonic and lepto-hadronic models using the Bayesian information criterion. In both int",
-      "url": "http://arxiv.org/abs/2610.41739v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Long-term variability of the 35-day cycle in Her X-1",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-30",
-      "summary": "Her X-1 is an eclipsing X-ray binary system consisting of an accreting neutron star and an optical component HZ Her. In addition to the 1.24-s X-ray pulsations and the 1.7-d orbital period, the system also shows a 35-day X-ray variability related to the precessional motion of a tilted and twisted accretion disk around the neutron star. The long-term persistence of the 35-day X-ray variability suggests the presence of a stable clock mechanism, most likely free precession of the magnetized neutron star. We have studied the long-term behavior of the 35-day cycle of Her X-1 using all available CGRO/BATSE, RXTE/ASM, Swift/BAT, Fermi/GBM, MAXI data and archival turn-on moments of the 35-day cycle ",
-      "url": "http://arxiv.org/abs/2610.41734v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "SN 2025dys: A luminous supernova explosion from a partially stripped helium star",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-30",
-      "summary": "We present well-sampled multi-band imaging and low- to medium-resolution spectroscopic observations of the early-discovered Type~II supernova (SN)~2025dys. The photometric evolution exhibits a rise time of $\\sim$\\,18 days ($r$ band) and a rapid decline transitioning to the radioactive decay tail at $\\sim$\\,70 days. SN~2025dys is among the high-luminosity events with a peak pseudo-bolometric luminosity of $L_{\\rm opt}=8.57\\times10^{42}\\,\\mathrm{erg\\,s^{-1}}$. Early X-ray emission was identified, displaying a luminosity of $7.55\\times10^{40}\\,\\mathrm{erg\\,s^{-1}}$. The observational investigation points to a dense, hydrogen-rich circumstellar medium with a mass of $M_{\\rm CSM}\\approx0.5$--$0.7",
-      "url": "http://arxiv.org/abs/2610.41729v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "From Anoxic to Oxic Earth: Detectability of Atmospheric Biosignatures across Stellar Hosts with ELT/ANDES",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-30",
-      "summary": "Earth's atmosphere evolved from an anoxic, methane-bearing Archean state through Proterozoic oxygenation to the O$_2$-rich modern atmosphere. However, most biosignature detectability studies focus on modern Earth, leaving earlier atmospheric states comparatively unexplored. We investigate how atmospheric evolution and stellar environments influence the detectability of O$_2$, CH$_4$, H$_2$O, and CO$_2$, and their potential to distinguish anoxic from oxygenated atmospheres. We construct two complementary photochemical grids: representative Archean, Proterozoic, and modern-Earth scenarios around the Sun, and four geological epochs (3.9, 2.0, 0.8 Ga, and modern Earth) across FGKM hosts. Combini",
-      "url": "http://arxiv.org/abs/2610.41621v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Disk-Corona Energy Balance Evolves with Flux State in the Quasar PDS 456",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-30",
-      "summary": "We investigate the long-term X-ray spectral evolution of the highly luminous, radio-quiet quasar PDS 456 using AstroSat observations obtained in 2019 and 2021 together with archival XMM-Newton, NuSTAR and Suzaku observations spanning 2001-2024. The AstroSat observations provide valuable coverage following the bright flaring state observed in 2018, revealing that the source underwent a relatively quiescent phase in 2019 before re-brightening in 2021. During the AstroSat epochs, PDS 456 exhibits a harder-when-brighter spectral trend, whereas the long-term XMM-Newton, NuSTAR, and Suzaku observations confirm the overall softer-when-fainter behavior. This behavior is consistent with the presence ",
-      "url": "http://arxiv.org/abs/2610.41509v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "As a matter of reconstruction -- varying the magnetic Prandtl number in implicit large eddy simulations",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-10-30",
-      "summary": "The magnetic Prandtl number ($\\mathrm{Pm}$), the ratio of viscosity to magnetic diffusivity, spans many orders of magnitude in astrophysical plasmas. It shapes how turbulence amplifies and structures magnetic fields. In direct numerical simulations (DNS) the viscosity and magnetic diffusivity can be controlled explicitly and independently, whereas in implicit large eddy simulations (ILES) they are set by the numerical scheme. We test whether, in a finite-volume code, $\\mathrm{Pm}$ can be varied through the reconstruction scheme by applying different methods to the hydro and magnetic variables. As a proof of concept, we simulate driven, subsonic, homogeneous magnetohydrodynamic turbulence usi",
-      "url": "http://arxiv.org/abs/2610.41493v1",
       "image": "",
       "type": "research"
     }
