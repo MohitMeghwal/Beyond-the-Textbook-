@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-12T09:55:25.196540+00:00",
+  "lastUpdated": "2026-11-13T09:39:12.226543+00:00",
   "articles": [
     {
       "title": "Performance of artificial intelligence versus clinician left-ventricular segmentation of cardiac MRI for mortality prediction: a retrospective, multicentre, prognostic study.",
@@ -28,6 +28,166 @@
       "publishedAt": "2027 Jan",
       "summary": "tracing the impact of maternal communication deviance on joint engagement the mediating role of maternal supportive behaviors",
       "url": "https://pubmed.ncbi.nlm.nih.gov/43009439/",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "ClinicalAge, a framework for modelling ageing trajectories from longitudinal electronic health records in the UK: a model development and validation study.",
+      "category": "Medical Research",
+      "source": "PubMed",
+      "publishedAt": "2027 Aug 1",
+      "summary": "clinicalage a framework for modelling ageing trajectories from longitudinal electronic health records in the uk a model development and validation study",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43020745/",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "A Dark-Sector Mass Flip-Flop Mechanism for the ANITA-IV Events",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-12",
+      "summary": "ANITA-IV has observed four upward-going air-shower candidates just below the horizon, consistent with ultra-high-energy $ν_τ$, yet IceCube, despite its much larger exposure, has detected no neutrino events at such energies. We propose a dark-sector mass flip-flop mechanism that reconciles these observations. We consider an all-sky, monoenergetic flux of ultra-high-energy $N_1$, that is lighter than its partner $N_2$ and stable in vacuum. In our scenario, an ultralight scalar mediating interactions with Earth matter inverts the mass ordering of $N_1$ and $N_2$, allowing an incident $N_1$ to decay into $N_2$ deep underground. The resulting $N_2$ propagates unimpeded through matter and exits th",
+      "url": "http://arxiv.org/abs/2611.17328v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "JWST Rocky Worlds DDT Observations of LTT 1445 A b and c in Secondary Eclipse Using MIRI/F1500W",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-12",
+      "summary": "The JWST Rocky Worlds Director's Discretionary Time (RWDDT) program uses secondary eclipse observations to determine the conditions under which rocky exoplanets around M dwarfs retain their atmospheres. We present RWDDT MIRI/F1500W observations of LTT 1445 A b and c, the transiting rocky siblings in the nearest such system (6.9 pc), comprising two eclipses of each planet across three visits. We perform three independent reductions and a joint fit that includes all existing JWST data and 220 radial velocities, improving the precision on the planetary radii, masses, and orbital parameters by factors of 1.6-2.3. We measure eclipse depths of $157^{+18}_{-17}$ ppm and $154^{+54}_{-37}$ ppm for pl",
+      "url": "http://arxiv.org/abs/2611.17300v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "The origin of Potassium in Galactic chemical evolution - The effect of C-O shell mergers in massive stars",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-12",
+      "summary": "The Galactic chemical evolution (GCE) of potassium (K) and of most other odd-Z elements remains poorly understood: models generally underproduce the observed [K/Fe] over a wide metallicity range, depending on the adopted massive star yields. A proposed site for efficient K nucleosynthesis is the merger between the oxygen and carbon shells (C-O shell merger) that can occur in massive stars a few hours before core collapse. Some GCE models with specific yield sets have been shown to reconcile predictions with observations. Here we re-analyse these yield sets to quantify the contribution of C-O shell mergers to K production and what the Galactic evolution of K implies about the occurrence of th",
+      "url": "http://arxiv.org/abs/2611.17224v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Effects of Lensing by Sgr A* on Semicoherent Searches for Continuous Gravitational Waves. I. Signal Model and Mismatch Studies",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-12",
+      "summary": "Continuous gravitational waves (CWs) from neutron stars beyond the Galactic Center can be lensed by the supermassive black hole in Sgr A$^*$. Since the signal lasts far longer than the lensing time delay, the two geometric-optics images overlap and interfere. Transverse source motion during the observation makes their magnifications and relative time delay evolve, producing evolving amplitude and phase modulations absent from standard CW templates. Using lensed and unlensed injections in Gaussian noise, we quantify their effect on a Hough-based semicoherent search through a semicoherent mismatch. Recovery is governed by the competition between lensing amplification and waveform modulation. S",
+      "url": "http://arxiv.org/abs/2611.17153v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "A Variable Compact Millimeter Excess in the Type-1 Seyfert Galaxy NGC 985: Implications for a Black-Hole Corona",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-12",
+      "summary": "Compact millimeter emission from radio-quiet active galactic nuclei has been proposed as a probe of magnetized accretion-disk coronae. We present three epochs of ALMA observations of the type-1 Seyfert galaxy NGC 985, together with archival post-upgrade VLA data presented here for the first time, to investigate its compact millimeter excess. The millimeter flux density decreased strongly between the first two ALMA epochs separated by approximately one month, while the component was detected again at an intermediate level in the third epoch. This variability demonstrates an intrinsically variable compact component and implies a model-independent size limit of $\\lesssim 0.024$ pc ($\\simeq 1.1\\",
+      "url": "http://arxiv.org/abs/2611.17033v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Lurkers at the Threshold: GWTC-4.0's near-threshold events",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-12",
+      "summary": "We present the first systematic parameter-estimation analysis of 42 candidate gravitational-wave signals identified in GWTC-4.0 with a probability of astrophysical origin $p_\\mathrm{astro} \\geq 0.5$, but a false-alarm rate of at least $1\\,\\mathrm{yr}^{-1}$, which were therefore not selected for parameter estimation in the catalogue. We use a catalogue-style analysis workflow and publicly available strain data to obtain posterior samples for these candidates, of which 29 pass our validation criteria. Of the remaining 13 candidates, seven are consistent with noise or impacted by instrumental artefacts, while six yield results that cannot be reliably interpreted. We identify several interesting",
+      "url": "http://arxiv.org/abs/2611.16985v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Stellar-Field-Driven Induction Heating Unlikely To Cause Significant Heating in Giant Exoplanets",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-12",
+      "summary": "A planet moving through a changing magnetic field will have a current induced on it by that magnetic field. If the magnetic Reynolds number in the upper atmosphere of this planet is small, the dissipation of this current could result in observable changes to the planet's properties. In this paper, we estimated the total power that would be dissipated in the observed giant exoplanet population if they orbited stars with misaligned magnetic dipoles. We found that, even if all planets orbit stars with extremely misaligned surface magnetic fields, the vast majority of known exoplanets are unlikely to dissipate enough magnetic power to cause observable changes in their surface temperatures. We al",
+      "url": "http://arxiv.org/abs/2611.16949v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Lense-Thirring induced repeating blast trains in continuous gravitational waves",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-12",
+      "summary": "We characterise gravitational lensing induced by the Lense-Thirring effect in a continuous gravitational-wave source orbiting a spinning supermassive black hole. This scenario is very likely to generate lensing events, as long as the source's orbital inclination is not aligned with the black hole's spin axis and the Lense-Thirring timescale is shorter than the observational window. The signal appears as short-duration ($T_{\\rm blast}$) gravitational-wave \"blasts\" that repeat after every orbit ($T_{\\rm orb}$) within a limited time window ($T_{\\rm train}$). The blasts' signal strength depends on the system's geometry and not on the black hole mass. The signal will go silent and renew twice in ",
+      "url": "http://arxiv.org/abs/2611.16914v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "The $w$-mode instability of strangeon ergostars and its impact on energy extraction",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-12",
+      "summary": "Rapidly rotating compact ergostars have been proposed as alternative central engines for short gamma-ray bursts. However, competing energy-loss channels, such as gravitational-wave emission driven by non-axisymmetric instabilities, could curtail the power available for relativistic electromagnetic outflows. In this work, we investigate the $w$-mode instability of rapidly rotating strangeon ergostars by solving the coupled spacetime and fluid perturbation equations in the Hilbert gauge using a spectral method, without relying on a slow-rotation approximation. We calculate the complex eigenvalues of the axial-led and polar-led $w$-mode branches originating from the fundamental $l=m=2$ modes of",
+      "url": "http://arxiv.org/abs/2611.16836v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Bayesian Inference of Fermionic Dark Matter Admixed Neutron Stars Informed by Galaxy Cluster Constraints",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-12",
+      "summary": "Self-interacting dark matter is constrained on galactic and cluster scales by its elastic scattering cross section per unit mass, $σ/m_χ\\sim 0.1-10\\ {\\rm cm^2/g}$. We incorporate this cross section into the equation of state of an asymmetric, self-interacting fermionic dark matter component and perform a Bayesian inference of dark matter admixed neutron stars in the two-fluid framework at $σ/m_χ= 0.1$, $1$ and $10\\ {\\rm cm^2/g}$. Seven nuclear matter parameters are sampled together with the dark particle mass and mass fraction, and confronted with nuclear theory and neutron star observations. The nuclear sector and the global observables are statistically indistinguishable across the whole r",
+      "url": "http://arxiv.org/abs/2611.16785v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "The Same But Different: SiO$_2$ Clouds in Two L-Dwarfs with JWST",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-12",
+      "summary": "The precision of brown dwarf spectra from JWST enables unprecedented insight into the atmospheric and cloud properties of sub-stellar atmospheres. Here, we compare both self-consistent radiative-convective equilibrium (RCE) and retrieval atmosphere models to high-SNR 1--18~$μ$m spectra of two field L-dwarfs from JWST, J0624 (L5) and J2148 (L6--L6.5). Our observations include spectral features from H$_2$O, CO, CO$_2$, CH$_4$, Na, and K and cover approximately 98\\% of the outgoing thermal emission from the two objects. We first compare the data to three independent grids of 1D-RCE models: BT-Settl, exoREM, and Sonora Diamondback. While exoREM provides the best fit of the grid models, no 1D-RCE",
+      "url": "http://arxiv.org/abs/2611.16783v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Combining TTVs, RVs, and astrometry to characterize distant giant companions of transiting hot Jupiters: Application to WASP-4",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-12",
+      "summary": "The origins and architectures of hot Jupiter (HJ) systems remain unclear, with potential explanations for the tight orbits being in-situ formation, disk-migration, or high-eccentricity migration. These mechanisms can leave different imprints on the orbital architecture, but tidal interactions act to erase these imprints for HJs, leading to orbital circularization, realignment, and potentially orbital decay. The latter can be mimicked by the introduction of light travel-time effects (LTTE) caused by an outer giant companion, as for WASP-4$\\,$b. We examine the WASP-4 system using newly obtained ESO$\\,$3.6/HARPS radial velocity (RV) observations and archival transit-timing data, leveraging the ",
+      "url": "http://arxiv.org/abs/2611.16782v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Global climate modeling of the Martian water cycle. I) Improved parameterizations of physical processes",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-12",
+      "summary": "We implement four new physical parameterizations relevant to the water cycle in the Mars PCM (previously Mars Laboratoire de M{é}t{é}orologie Dynamique GCM)\\,: the latent heat of ground ice sublimation, a temperature-dependent nucleation scheme in cloud microphysics, differentiated albedos for water frost and perennial ice and scavenging of water ice clouds by CO2 particle formation. After a new tuning of the poorly known model parameters, we find that combining these parameterizations allows for an improved agreement of the modeled water cycle compared to Thermal Emission Spectrometer column-integrated vapor and ice retrievals. We show that latent heat cooling prevents the formation of surf",
+      "url": "http://arxiv.org/abs/2611.16760v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Resolving Radiogenic Heterogeneity in the Earth's Mantle with Multi-Site Geo-neutrino Measurements",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-12",
+      "summary": "We present a global fit to geo-neutrino measurements at four underground sites (Kamioka, Gran Sasso, Sudbury, Jiangmen), combining signal rates with site-specific predictions of the lithospheric contribution to constrain the quantity and distribution of radioactivity in the Earth's mantle. Assuming a uniform distribution of radioactivity in the mantle, we find a geo-neutrino rate of $S_\\text{mantle} = 14.8 \\pm 4.5$ NIU when the lithospheric predictions are allowed to vary within their uncertainties. This uniform mantle signal rate corresponds to radiogenic heating of $18.5 \\pm 5.6$ TW. Although the uniform-mantle signal is resolved at $\\sim3.2σ$, there is noticeable tension between the infer",
+      "url": "http://arxiv.org/abs/2611.16715v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Efficient Standard Siren Cosmological Inference with Posterior Reuse",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-12",
+      "summary": "Standard siren cosmology depends on several modelling assumptions, including the underlying source population, galaxy catalogue, and detection selection function. Quantifying the effect of each choice typically requires a full, independent analysis. As gravitational-wave catalogs grow incrementally, much computational effort is spent re-analysing largely overlapping datasets. We apply the recently developed ASPIRE (Accelerated Sequential Posterior Inference via Reuse) sampler to the joint estimation of cosmological and population parameters with dark sirens. ASPIRE updates existing posterior samples into the posterior under a new hypothesis without restarting from the prior. It combines norm",
+      "url": "http://arxiv.org/abs/2611.16697v1",
       "image": "",
       "type": "research"
     },
@@ -438,166 +598,6 @@
       "publishedAt": "2026-11-06",
       "summary": "The habitable zone (HZ) boundaries calculated with the Clima one-dimensional radiative-convective equilibrium (RCE) model have served as a standard reference for exoplanet target selection for three decades, but they have never been independently validated with a comparable model. We present ExoColumn, a new one-dimensional RCE model that couples an independently developed atmospheric column physics package to the ExoRT correlated-k radiative transfer core that is also used by the three-dimensional ExoCAM model. We calibrate ExoColumn to present-day conditions, which matches other RCE models to within a few kelvin through the troposphere. Line-by-line benchmarks show that the ExoRT and Clima",
       "url": "http://arxiv.org/abs/2611.09475v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "CO gaps in cold transition disks around low-mass stars",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-06",
-      "summary": "Transition disks with large inner dust cavities are promising targets to study planet formation, as these disks are likely hosting massive planetary companions. The structure of gas and dust inside the cavity are crucial for understanding the potential of planet formation in the regions. We investigate the structure of gas and dust in a sample of three cold, inclined transition disks around K and M stars without evidence for an inner dusty disk. We present new high-resolution ALMA Band 6 data of both 230 GHz continuum at 0.02\" (~3 au) resolution and the 12CO 2-1, 13CO 2-1, C18O 2-1 isotopologues at 0.12\" (~20 au) resolution. We analyze the radial profiles, compute the brightness temperatures",
-      "url": "http://arxiv.org/abs/2611.09449v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Activity of the ejected galactic nuclei and cosmic rays",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-06",
-      "summary": "The double and triple approaches of supermassive central black holes are a fairly common process in the hierarchical picture of galaxy formation. In this case, the ejection of a black hole is possible; it may carry the accretion disk and some amount of stars with it. The activity of the galactic nucleus can be restored after the ejection. One consequence of this activity is an ultrafast gas outflow, accompanied by a shock wave. We show that the acceleration of cosmic rays at such a shock is more effective than in the case of a stationary galactic nucleus due to the lower density of the surrounding gas and the higher velocity of the shock front. In this case, proton acceleration can occur up ",
-      "url": "http://arxiv.org/abs/2611.09343v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "GW230729\\_082317 and GW231118\\_005626: A Candidate of Hierarchical Triple Mergers",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-06",
-      "summary": "Hierarchical triple mergers denote a sequential merger process in which the black hole remnant from an initial binary merger subsequently merges with a third black hole. In this study, we identify a related pair of binary black hole mergers, GW230729\\_082317 and GW231118\\_005626, which exhibit consistent sky localization and luminosity distances; the latter is identified as a candidate hierarchical merger binary back holes. The Bayes factor in favor of a hierarchical triple merger origin over the non-association hypothesis is $110$. However, after accounting for the priors odds, the corresponding odds ratio decreases to $0.1$, indicating that the current evidence is insufficient to favor the",
-      "url": "http://arxiv.org/abs/2611.09338v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Quasi-spherical fallback in binary neutron-star mergers: fuel and obstacle for extended emission",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-06",
-      "summary": "Extended emission (EE) lasting hundreds of seconds has been observed in a fraction of short gamma-ray bursts (sGRB) containing both nonthermal and thermal components, and representing a significant puzzle for models involving binary neutron stars (BNSs). Recent GRMHD simulations of BNS mergers found that the late-time fallback is approximately quasi-spherical and motivated an r-process powered thermal model for EE. However, the available radioactive-heating power may be insufficient to sustain the luminosity inferred by such a model. We therefore propose a fallback-fed secondary-jet scenario in which a fraction of the fallback material circularizes on the black-hole equatorial plane and powe",
-      "url": "http://arxiv.org/abs/2611.09216v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "BeAR: The Bern Atmospheric Retrieval code - A GPU-accelerated framework for low-resolution, high-resolution, and joint retrievals of exoplanet atmospheres",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-05",
-      "summary": "We present BeAR, the Bern Atmospheric Retrieval code and successor of Helios-r, and its new high-resolution cross-correlation framework for emission and transmission spectra. BeAR performs joint retrievals by adding the log-likelihoods of high- and low-resolution data computed from the same model atmosphere. The framework implements established cross-correlation log-likelihoods, with the line-depth scaling either fitted analytically or sampled as a free parameter, their per-pixel generalization, fast model filtering, and model re-injection adapted to this filtering. The forward model and likelihood run entirely on a graphics processing unit (GPU). One forward model takes about 1 ms on an NVI",
-      "url": "http://arxiv.org/abs/2611.08489v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Evolution of Dust In Protoplanetary Disks With Magnetized Winds",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-05",
-      "summary": "Observations and theory increasingly indicate that protoplanetary disks are weakly turbulent, implying that magnetized disk winds may dominate their angular momentum transport and long-term evolution. Yet dust evolution in wind-dominated disks remains poorly understood, despite its importance for planet formation. In particular, whether wind-dominated disk evolution can create regions with enhanced dust-to-gas mass ratios that enable planetesimal formation via the streaming instability is unclear. We build a parametric hybrid disk evolution model that includes turbulent accretion, wind-driven accretion, and wind-driven mass loss to investigate dust evolution in magnetized protoplanetary disk",
-      "url": "http://arxiv.org/abs/2611.08484v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "The cold substellar frontier in JWST Extragalactic surveys: a robust parallax measurement yields the most distant known ultra-cold Y dwarf",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-05",
-      "summary": "We present an analysis of JADES-GS-BD-5, an extremely cold Y dwarf identified in the JADES/GOODS-South field. Using multi-epoch JWST/NIRCam imaging spanning a $\\simeq2$-yr baseline, we calibrate the JWST astrometry and obtain the first robust parallax measurement for a brown dwarf discovered in a JWST extragalactic deep field. We measure a proper motion of $μ_{\\rm tot}=49.8^{+0.3}_{-0.3}$ mas yr$^{-1}$ and a parallax of $\\varpi=15.7^{+1.4}_{-1.3}$ mas, corresponding to a geometric distance of $d=64^{+6}_{-5}$ pc, $\\sim3\\times$ further than that of the previously known most distant Y dwarfs with parallax-measured distances. We hence determine a tangential velocity of $v_{\\rm tan}=15.0^{+1.4}_",
-      "url": "http://arxiv.org/abs/2611.08346v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "The complex periodic variability of PKS 0301-243: hints of a supermassive black hole binary candidate",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-05",
-      "summary": "In hierarchical galaxy formation, supermassive black hole binaries are a ubiquitous consequence of frequent galaxy mergers, yet subparsec binaries remain difficult to be confirmed. Periodic flux modulations may arise from the orbital motion of black holes in close binaries, while relativistic jet precession can provide an additional source of periodic variability. Such periodic signatures therefore motivate us to identify close binary candidates. Here, we report an optical periodicity of $269^{+13}_{-14}$ days in both Zwicky Transient Facility g and r bands of the blazar PKS 0301-243, with corrected global significances of $2.75σ$ and $2.18σ$, respectively. This signal persists over 7 cycles",
-      "url": "http://arxiv.org/abs/2611.08332v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Mitigating scanning-induced systematics in Hipparcos and implications for Gaia astrometry",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-05",
-      "summary": "Space-based astrometric missions such as Hipparcos and Gaia rely on one-dimensional scanning strategies that couple the measured signals with both observation times and scanning geometry. This coupling can introduce spurious periodicities and complicate their interpretation. We present a non-parametric extension of the phase-distance correlation (PDC) periodogram that quantifies and reduces dependence on scan geometry at the period-search stage. Using Hipparcos data, we identified recurrent periodicities associated with characteristic scanning-law timescales and showed that they are strongly suppressed by the scan-angle-controlled statistic. We then applied the method to Gaia Data Release 4 ",
-      "url": "http://arxiv.org/abs/2611.08282v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "The slower rotation of planet-hosting stars revisited",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-05",
-      "summary": "Previous studies combined rotation periods derived from Kepler photometry, stellar parameters from previous Gaia Data Releases, and planet hosts from the NASA Exoplanet Archive to conclude that statistically planet-hosting stars rotate slower than stars without detected planets. Here, we revisit these studies by using similar Kepler rotational period sample, but with an updated Gaia DR3-based stellar parameter catalogue and an updated exoplanet catalogue. We apply minimal sample cuts in evolutionary state, metallicity, and distance, and then model the stellar rotation period as a function of effective temperature alone. For each star, we derive the ratio of its observed period to the tempera",
-      "url": "http://arxiv.org/abs/2611.08267v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "DIS-secting the universe with high-energy neutrinos",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-05",
-      "summary": "We revisit the impact of electroweak (EW) radiative corrections on the kinematic distributions of charged leptons in neutrino-induced charged-current (CC) deep inelastic scattering (DIS). These corrections are particularly relevant for observables sensitive to collinear photon radiation, such as the energy spectrum of high-energy muons detected in neutrino telescopes. To study these effects, we implement full next-to-leading order (NLO) EW corrections to CC DIS in a flexible Monte Carlo framework, supplemented with higher-order logarithmically enhanced final-state QED radiation and coherent scattering contributions. We compare our results to exclusive NLO QCD plus parton shower (PS) predicti",
-      "url": "http://arxiv.org/abs/2611.08221v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Results from a Stellar Occultation by (623) Chimaera",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-05",
-      "summary": "We present results from a stellar occultation by the asteroid (623) Chimaera on October 21st, 2025, when it passed in front of V magnitude 13.86 star UCAC4 626-004193. Chimaera is the largest asteroid in the Chimaerid asteroid family and will be subject to a spacecraft flyby in the 2030s. Eighteen telescopes were deployed, spanning the United States from Arizona to North Carolina, incrementally spaced by $\\sim4.4$\\,km with respect to the cross-track of the shadow. In total, sixteen telescopes collected useful data. This multi-chord observation, when compiled into a single sky-plane plot, suggests a profile which is well-described by an elongated elliptical fit, with a semi-major axis $a=26.2",
-      "url": "http://arxiv.org/abs/2611.08041v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Mass loss in AF supergiants: At the verge of the Eddington limit and still with weak line-driven winds",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-05",
-      "summary": "We study global atmosphere models of AF supergiants. In agreement with previous studies, we found super-Eddington layers in the photospheres of these stars, which lead to density inversions. Our tests showed that the super-Eddington layers are caused by hydrogen ionization. The analysis of radial perturbations has not revealed any instability of such layers, but we show that super-Eddington layers in an optically thick environment are prone to instabilities due to nonradial perturbations. We predict the wind parameters of AF supergiants from our global wind code with a comoving-frame radiative force. Despite the existence of density inversions, the predicted mass-loss rates are significantly",
-      "url": "http://arxiv.org/abs/2611.07986v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Multi-epoch monitoring of the faint northern component in 3C 84 during 2016-2021",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-05",
-      "summary": "We present the results of multi-epoch very long baseline interferometry (VLBI) observations of the sub-parsec-scale northern jet component of 3C 84 (known as the N1 component) at 7 mm from 2016 to 2021. The peak position of the N1 component exhibits positional variations of approximately 0.2 mas at a distance of about 2.5 mas from the central radio core (C1) throughout the observation period. Although a linear fit yields a small proper motion of $μ_{\\rm{Dec}}=0.054\\pm0.019~\\rm{mas}~\\rm{yr}^{-1}$, corresponding to an apparent velocity of $β_{\\rm{app}}=0.062\\pm0.021$, this displacement is comparable to the observed positional scatter, and the hypothesis that N1 exhibits systematic motion is no",
-      "url": "http://arxiv.org/abs/2611.07782v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "FALCON (FERMI-ALMA Calibrator ObservatioN): Cross-matching ALMA Calibrators with Fermi-LAT Blazars",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-05",
-      "summary": "Blazars are active galactic nuclei with relativistic jets closely aligned with our line of sight, producing Doppler-boosted emission from radio to gamma rays. Millimeter emission near the synchrotron self-absorption turnover probes compact regions at the jet base, yet large statistical studies in this regime remain limited. We construct the FALCON (FERMI--ALMA Calibrator ObservatioN) catalogue, a millimeter-selected blazar sample by cross-matching the ALMA Calibrator Source Catalogue with the Third Data Release of the Fourth LAT AGN Catalog (4LAC-DR3). After removing duplicates, we obtain 949 unique gamma-ray-associated sources, corresponding to approximately 25 % of the 4LAC-DR3 blazar popu",
-      "url": "http://arxiv.org/abs/2611.07737v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Discovery of the redback pulsar PSR J2053+6905 and multi-epoch optical observations of the system",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-05",
-      "summary": "Using the Green Bank Telescope, we discovered the 1.68-ms binary pulsar PSR J2053+6905. The discovery resulted from a targeted search for radio pulsations from a redback candidate, previously identified through optical and X-ray observations and spatially coincident with the $γ$-ray source 4FGL J2054.2+6904. We report the first results from the pulsar timing, including the spin period, dispersion measure, precisely measured Keplerian binary parameters, and the pulsar mass function. We also found potential evidence of scintillation and long radio eclipses. To constrain the system parameters, we performed multi-epoch time-series photometric observations using the 2.1-m telescope at the Observa",
-      "url": "http://arxiv.org/abs/2611.07668v1",
       "image": "",
       "type": "research"
     }
