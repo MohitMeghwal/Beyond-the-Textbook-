@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-13T09:39:12.226543+00:00",
+  "lastUpdated": "2026-11-14T09:03:18.334814+00:00",
   "articles": [
     {
       "title": "Performance of artificial intelligence versus clinician left-ventricular segmentation of cardiac MRI for mortality prediction: a retrospective, multicentre, prognostic study.",
@@ -28,6 +28,16 @@
       "publishedAt": "2027 Jan",
       "summary": "tracing the impact of maternal communication deviance on joint engagement the mediating role of maternal supportive behaviors",
       "url": "https://pubmed.ncbi.nlm.nih.gov/43009439/",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Special Populations in Dermatologic Infectious Disease.",
+      "category": "Medical Research",
+      "source": "PubMed",
+      "publishedAt": "2027 Jan",
+      "summary": "special populations in dermatologic infectious disease",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43025930/",
       "image": "",
       "type": "research"
     },
@@ -588,16 +598,6 @@
       "publishedAt": "2026-11-06",
       "summary": "The Cosmic $γ$-ray Background (CGB) in the MeV regime remains among the least understood components of diffuse cosmic radiation, primarily due to instrumental limitations in detecting faint isotropic emission at MeV energies. We present an indirect method for probing isotropic emission from soft X-rays to $γ$-rays through scattered emission in Jupiter's atmosphere. Using archival observations from SPI, the spectrometer aboard INTEGRAL, spanning 22 years of serendipitous Jupiter observations, we analyse the planet as a moving $γ$-ray point source in the 30 keV to 8 MeV range. Our analysis focuses on Jupiter's $γ$-ray albedo, produced by high-energy photon and cosmic-ray interactions. We perfo",
       "url": "http://arxiv.org/abs/2611.09488v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Validation of Habitable Zone Limits with a New Radiative-Convective Equilibrium Climate Model",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-06",
-      "summary": "The habitable zone (HZ) boundaries calculated with the Clima one-dimensional radiative-convective equilibrium (RCE) model have served as a standard reference for exoplanet target selection for three decades, but they have never been independently validated with a comparable model. We present ExoColumn, a new one-dimensional RCE model that couples an independently developed atmospheric column physics package to the ExoRT correlated-k radiative transfer core that is also used by the three-dimensional ExoCAM model. We calibrate ExoColumn to present-day conditions, which matches other RCE models to within a few kelvin through the troposphere. Line-by-line benchmarks show that the ExoRT and Clima",
-      "url": "http://arxiv.org/abs/2611.09475v1",
       "image": "",
       "type": "research"
     }
