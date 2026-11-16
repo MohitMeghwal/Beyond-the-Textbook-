@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-15T09:33:32.102993+00:00",
+  "lastUpdated": "2026-11-16T09:51:47.238466+00:00",
   "articles": [
     {
       "title": "Performance of artificial intelligence versus clinician left-ventricular segmentation of cardiac MRI for mortality prediction: a retrospective, multicentre, prognostic study.",
@@ -48,6 +48,156 @@
       "publishedAt": "2027 Aug 1",
       "summary": "clinicalage a framework for modelling ageing trajectories from longitudinal electronic health records in the uk a model development and validation study",
       "url": "https://pubmed.ncbi.nlm.nih.gov/43020745/",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "TOI-1699A: a sub-Neptune and a super-Jovian in an S-type planetary system",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-13",
+      "summary": "We present the detection and characterization of the TOI-1699A (TYC 3415-00428-1) S-type planetary system, hosted by the G5 V primary of a wide binary with an M3 V stellar companion at a projected separation of $\\sim$348 au. The inner planet, TOI-1699A b, was initially detected by TESS and confirmed with targeted CHEOPS photometry, ground-based photometry, and HARPS-N follow-up. With an orbital period of $\\sim$4.55 d, radius of $3.096^{+0.057}_{-0.056}$ $R_\\oplus$, mass of $13.9^{+1.9}_{-1.8}$ $M_\\oplus$, and bulk density of $2.58^{+0.40}_{-0.39}$ g cm$^{-3}$, TOI-1699A b lies firmly in the sub-Neptune regime and requires a substantial volatile envelope. The HARPS-N data additionally reveal ",
+      "url": "http://arxiv.org/abs/2611.18481v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Eleven Trans-Neptunian Objects and Eight Candidates Discovered by TESS",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-13",
+      "summary": "We report a blind search for trans-Neptunian objects (TNOs) in Transiting Exoplanet Survey Satellite (TESS) full-frame images from 2018 July 25 through 2026 November 6. We search 572 CCD fields near the ecliptic across 95 TESS sectors. After modeling and subtracting Gaia stars with the TESS-Gaia Light Curve package, we stack the residuals along curved trial paths and link detections across sectors. We identify eleven new TNOs, each detected blindly in two to five TESS sectors and independently in archival ground-based images, with arcs of 2-20 years. They have V = 20.8-22.1, heliocentric distances of 25-57 au, inclinations of 16-27 deg, and diameters of about 120-910 km for an assumed albedo",
+      "url": "http://arxiv.org/abs/2611.18452v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "A New Galactic Close Binary Supersoft Source Candidate",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-13",
+      "summary": "The identification of a new galactic Close Binary Supersoft Source (CBSS) candidate, whose main ID is ZTF J043609.49+364057.7, is presented on the basis of the analysis of its optical spectrum, light curve and Spectral Energy Distribution (SED). During a survey designed to find candidates to the aforementioned class independently of X-ray emissions, this object's optical spectrum was found to exhibit the typical emission features expected for a CBSS. The available photometric data show a quasi-sinusoidal modulation, with a period of 5.42 h, compatible with the orbital modulation of the system. Although there is no current identification of X-ray emission from this source, its SED displays a ",
+      "url": "http://arxiv.org/abs/2611.18441v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "The effect of vertical mixing on oxygen sequestration by refractory elements in the atmosphere of giant planets",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-13",
+      "summary": "The most widely used route to study the formation history of giant exoplanets is the C/O ratio, usually derived from H$_2$O, CO, CO$_2$ and CH$_4$. However, refractory elements can sequester a significant fraction of O, causing the observed C/O ratio to be overestimated with respect to the intrinsic one. Previous calculations of this bias relied on chemical equilibrium models. Here we quantify the impact of vertical mixing using the 1-D chemical kinetics code VULCAN, expanded with a Mg-Si-Fe network including the condensation and settling of enstatite, forsterite and metallic iron. We compute 168 models spanning equilibrium temperatures $T_{eq} \\in$ [700, 1500] K, eddy diffusion coefficients",
+      "url": "http://arxiv.org/abs/2611.18431v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "A Multiscale Analysis of an Interplanetary Shock from IMAP, SOLAR-1, and the L1 Constellation to Earth",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-13",
+      "summary": "Collisionless shocks are primary sites of particle acceleration throughout the Universe. Transient, mesoscale structures forming around these shocks influence their energy conversion efficiency, yet remain poorly observed at interplanetary (IP) shocks: spacecraft sample the shock transition briefly, and single-point measurements cannot disentangle temporal evolution from spatial structure. Here, we examine a fast, CME-driven IP shock of 2026 January 19, observed by IMAP, SOLAR-1, Wind, ACE, DSCOVR, and Aditya-L1 at L1 and by ARTEMIS and MMS near Earth, to determine its spatial and temporal structure. At MHD scales, a pre-existing solar wind flux tube is overtaken by the shock as it crosses t",
+      "url": "http://arxiv.org/abs/2611.18314v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "JCMT--Venus: Daily Monitoring of HDO and SO$_2$ Absorption in Venus' Mesosphere",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-13",
+      "summary": "We present three multi-week, disc-integrated James Clerk Maxwell Telescope (JCMT) campaigns monitoring HDO and SO$_2$ absorption in Venus' upper mesosphere at altitudes of approximately 80--110 km. Obtained in February 2022, July 2023, and August--September 2023, these observations provide dense temporal sampling and complementary observing geometries, enabling the disentanglement of short-term, long-term, and local solar time (LST) variability, which has been challenging in previous studies. We have four main findings. First, SO$_2$ in the upper mesosphere, being largely absent in February 2022 but present in both 2023 campaigns, may follow the same long-term trend observed at cloud tops. S",
+      "url": "http://arxiv.org/abs/2611.18271v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Magnetic kink instability of jet-wind outflows. I. Static column configuration",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-13",
+      "summary": "We describe the results of computer simulations investigating the stability of an axisymmetric static equilibrium combining a highly magnetised ($σ=10^3$) central column and a mildly ($σ=0.1$) to weakly ($σ=0.001$) magnetised outer shell with a helical and mostly force-free magnetic field of constant pitch. The measured linear growth rates of the instability are in agreement with the maximum growth rate for a uniform density column with a force-free magnetic field of constant pitch obtained by Appl et al. (2000), being only a little bit higher. At the non-linear phase, the interface separating the central column and the outer shell develops the characteristic corkscrew shape, with the space ",
+      "url": "http://arxiv.org/abs/2611.18268v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "JWST/NIRISS-SOSS Spectroscopic Variability and Auroral Modelling of Warm Ultracool Dwarf LSR J1835+3259",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-13",
+      "summary": "Auroral variability in ultracool dwarfs (UCDs) has been proposed as a key source of optical and infrared modulation, yet its physical origin remains poorly understood. We present JWST Near Infrared Imager and Slitless Spectrograph/Single Object Slitless Spectroscopy (NIRISS/SOSS) time-series spectroscopy of the M8.5 UCD LSR J1835+3259. These observations probe the object's wavelength-dependent rotational variability, providing insight into the atmospheric processes underlying its infrared behaviour. Additional GTC/MEGARA optical spectra reveal that its H$α$ emission has declined markedly since earlier epochs, suggesting a reduced activity state during the JWST observations. We detect no emis",
+      "url": "http://arxiv.org/abs/2611.18246v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "A helium-rich mass-donor in a 3.5-hr low mass X-ray binary",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-13",
+      "summary": "Binary systems in which a neutron star accretes material from a low-mass stellar companion arise from evolutionary processes that depend sensitively on the progenitor properties. It is usually assumed that the accreted material has approximately solar composition, unless the orbital period is $\\lesssim80$ min, indicating an \"ultracompact\" system with a hydrogen deficient donor. However, few constraints on the donor composition are available. Here we apply a Bayesian model-comparison framework, BEANSP, to a sample of 21 thermonuclear bursts from the accretion-powered millisecond pulsar, IGR J17511-3057, to constrain the fuel composition as well as the system parameters. Our analysis strongly ",
+      "url": "http://arxiv.org/abs/2611.18226v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Discovery of a Short-Duration Fast X-ray Transient Associated with a Short Gamma-Ray Burst",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-13",
+      "summary": "Extragalactic fast X-ray transients (EFXTs) are an emerging population of high-energy transients with diverse physical origins. Only a few observed EFXTs are associated with compact object mergers, and the known events generally display X-ray emission lasting much longer than their associated short gamma-ray bursts (GRBs). Here we report EP260411a, an $\\sim8$-s EFXT discovered in archival Einstein Probe Wide-field X-ray Telescope (EP-WXT) observations through a time-targeted search for X-ray counterparts of short GRBs. This fast X-ray transient is temporally coincident with short GRB 260411A, with both the pulse width and peak time showing clear anticorrelations with the characteristic photo",
+      "url": "http://arxiv.org/abs/2611.18210v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Constraining Accretion Regimes of Little Red Dots from Their Variability",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-13",
+      "summary": "The ``little red dots'' (LRDs) are photometrically and spectroscopically non-variable on rest-frame baselines of months, with a $5.9σ$ deficit relative to ordinary active galactic nuclei (AGNs). If we consider LRDs to be accreting black holes, this non-varying could be a clue about the nature of the accretion. Here, we present a general semi-analytic model of variability from super-Eddington (slim) accretion disks. We consider three mechanisms that play crucial roles in the observed variability, viz., advective attenuation, photospheric averaging, and photon diffusion filter. With this, above $\\mdot \\sim$ a few, the fractional rms collapses steeply with $\\mdot$. Comparing with JWST monitorin",
+      "url": "http://arxiv.org/abs/2611.18153v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Suprathermal bulk viscosity in binary neutron star mergers",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-13",
+      "summary": "Numerical relativity simulations of binary neutron star mergers and core-collapse supernovae indicate that the neutron star matter can be driven far from equilibrium due to large amplitude density oscillations, with frequency in the kHz range. Urca processes in neutron star matter try to restore the system towards equilibrium providing strong bulk viscous damping of these density oscillations. Standard bulk viscosity calculations typically assume small amplitude density oscillations, such that the deviation from chemical equilibrium $μ_Δ$ is less than the temperature $T$. In this work we compute the complete amplitude dependent bulk viscosity, taking into account, for the first time, thermal",
+      "url": "http://arxiv.org/abs/2611.18146v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Model Choice or Model Bias? How stellar spectral libraries and activity modelling choices influence Ariel spectra- I. Forward model",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-13",
+      "summary": "The Ariel mission will conduct a population-level survey of approximately 1000 exoplanet atmospheres across its nominal lifetime, requiring unprecedented consistency in the treatment of stellar contamination of transmission spectra. We present a systematic comparison of stellar spectral libraries and modelling approaches for computing facular and spot contamination spectra across the full Ariel wavelength range (0.5-7.8 microns) for six stellar spectral types spanning F3 to M2. Using a surface resolved forward model with approximately 200 randomly generated active region configurations per spectral type, we compute contamination spectra at Ariel Tier 3 resolution and compare three 1D spectra",
+      "url": "http://arxiv.org/abs/2611.18107v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Separability defects in artificial satellite theory: intermediaries, zonal harmonics and secular separatrices",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-13",
+      "summary": "A five-input Poisson-bracket operator, which reproduces the Levi-Civita separability expressions and is cubic in the Hamiltonian, is used as a diagnostic of artificial satellite theory, in a modified polar-nodal chart regular at prograde equatorial orbits. For the general intermediary proposed by the author in 2020, covering those of Sterne, Garfinkel, Brouwer, Aksnes, Cid and Lahulla and Deprit, the linearised defects vanish if and only if the integrability ansatz holds, the condition for additive first-order Hamilton-Jacobi separation in polar-nodal variables. Second-order defects follow in closed form, and the coupling with the nodal pair comes from the dependence on the physical latitude",
+      "url": "http://arxiv.org/abs/2611.18083v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Unsupervised Machine Learning Classification of FRB 20121102A across Distinct Active Episodes: Implications for FRB Emission Physics and Source Environments",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-13",
+      "summary": "Fast radio bursts (FRBs) are millisecond-duration radio transients of extragalactic origin. Identifying distinct burst populations and investigating their variations across active episodes provide important insights into the physical origins of repeating FRBs. In this paper, we apply an unsupervised machine learning approach to bursts from three active episodes of FRB 20121102A observed by the Five-hundred-metre Aperture Spherical Telescope (FAST). Our analysis reveals four distinct clusters primarily distinguished by their spectral properties. Notably, Cluster 1 exhibits bimodal-like distributions in central frequency and bandwidth and contains nearly all high-energy bursts, with a mean ene",
+      "url": "http://arxiv.org/abs/2611.18056v1",
       "image": "",
       "type": "research"
     },
@@ -448,156 +598,6 @@
       "publishedAt": "2026-11-09",
       "summary": "The bright, variable early X-ray emission of GRB~241030A at $z=1.411$ motivates investigating continued central-engine activity before the smoother afterglow emerges. We model a possible underlying magnetar contribution to the unabsorbed 0.3--10~keV XRT flux over 80--430~s, evolving the spin under fallback-disk and electromagnetic torques. A descriptive estimate gives $P_0\\simeq4.25$~ms, $B\\simeq3.04\\times10^{15}$~G and source-frame $t_{\\rm fb}\\simeq143$~s, with exploratory temporal-block uncertainty ranges. The effective efficiency reaches its geometry-dependent ceiling of 81.2. At observer time 200~s, this realization has $P_*\\simeq4.82$~ms and magnetospheric, corotation and light-cylinder",
       "url": "http://arxiv.org/abs/2611.12660v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Testing Models of Disk Formation and Gravito-Viscous Evolution Against Observations of Young Protoplanetary Disks",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-09",
-      "summary": "Young protoplanetary disks have received increasing attention in recent years, due to observations revealing the presence of substructures in disks younger than one million years, suggesting that planet formation may begin earlier than previously thought. Other recent observations have provided new insights into the evolution of gas and dust in these early stages, enabling comparisons with evolved Class II disks. Yet the physical processes governing the earliest stages of disk evolution remain poorly understood. In this paper, we present two-dimensional thin-disk hydrodynamical simulations of the formation and early evolution of protoplanetary disks, under the influence of self-gravity and t",
-      "url": "http://arxiv.org/abs/2611.12655v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "The Swift/UVOT Observation Campaign of Comet C/2013 US10 (Catalina) and Near-nucleus UV Excess",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-09",
-      "summary": "We present results of a multi-wavelength extended monitoring campaign of dynamically new long-period comet C/2013 US$_{10}$ (Catalina), captured with the Ultraviolet and Optical Telescope (UVOT) on board the Swift spacecraft covering 5.8 AU inbound to 5 AU outbound. The pipeline and methodology developed for these results is introduced, along with derived water production rates, active areas, and dust content proxy $A(θ)fρ$. We describe a Bayesian solution to address the unknown spectral gradient $S'$ of the dust of C/2013 US$_{10}$ necessary for our continuum subtraction calculations. The comet exhibited significant hyperactivity, with the water production rate approaching $2.5 \\times 10^{2",
-      "url": "http://arxiv.org/abs/2611.12637v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "The Edge of the Warm Corona in Active Galactic Nuclei",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-09",
-      "summary": "A model of warm, dissipative corona on top of an accretion disk is investigated, to explain the soft X-ray excess (SXE) emission observed in active galactic nuclei (AGN). The final ray-traced spectrum, computed through photoionization code with Comptonization, accounts for both: emitted and reflected components. As a result, the strength of the SXE depends on the radial extend of the warm corona, i.e., its outer edge. We show that the radial transition from warm corona to disk atmosphere is governed by line cooling. By moving away from a central black hole Compton cooling is gradually replaced by line cooling, and the temperature drops sharply in vertical direction at a narrow iron ionizatio",
-      "url": "http://arxiv.org/abs/2611.12595v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "The compositional link between rocky exoplanets and their host stars is consistent with Earth-like devolatilization",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-09",
-      "summary": "Previous work found a higher bulk iron-to-silicon (Fe/Si) ratio in rocky exoplanets relative to their host star, traditionally explained by iron enrichment. An alternative explanation is devolatilization of the planetary abundance ratios with respect to the host star, where volatile elements such as O and S are progressively depleted compared to refractory elements such as Fe and Mg, as in Earth. We explore whether these elemental molar ratios are consistent with a devolatilization trend. We revisit the core mass fraction of 14 rocky exoplanets with masses between 0.5 and 10 Earth masses whose host stars have spectroscopic abundances of Fe, Si, Mg, O, and S in the literature. We use interior",
-      "url": "http://arxiv.org/abs/2611.12581v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "A Many-Shapes framework for Galactic Cosmic Rays",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-09",
-      "summary": "Thanks to recent measurements by space and ground-level detectors, the energy spectra of cosmic ray protons and helium nuclei are now known with good precision over a broad energy range extending for more than six orders of magnitude, from a few GeV to approximately 10PeV. These measurements reveal that both spectra do not have a simple power--law form, and exhibit several features. The proton to helium ratio exhibits a very unexpected behavior: it decreases for rigidities $\\lesssim 10^5$~GV, and increases for higher rigidities. Several authors have interpreted the observed spectral features as revealing the fact the CR spectra are formed by the contributions of a few components (in some cas",
-      "url": "http://arxiv.org/abs/2611.12580v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "VLT and Keck recovery and characterisation of 2025 SC$_{79}$: linking 'Ayló'chaxnim and Atira asteroids",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-06",
-      "summary": "Asteroids near the boundary between the Atira and 'Ayló'chaxnim classes can trace dynamical links between the two populations, but their small solar elongations make recovery and physical characterisation difficult. We recover 2025 SC$_{79}$, measure its optical colours, and investigate its likely source region and transitions between these populations. We combine Keck/LRIS astrometry and VLT/FORS2 four-filter photometry with Bus-DeMeo taxonomic comparisons, published source-model probabilities, and integrations of 10,000 clones drawn from the covariance of JPL solution #2 and followed for 5 Myr in each direction. The SDSS-equivalent colours are $g-r=0.8254_{-0.1339}^{+0.2136}$, $r-i=0.1764_",
-      "url": "http://arxiv.org/abs/2611.09884v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Effects of a Nuclear Detonation in Low Earth Orbit",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-06",
-      "summary": "More than 13,000 satellites operate in low Earth orbit (LEO), and concern has grown that nuclear weapons could be used in space to target them. Beyond the initial X-ray burst, electrons released by radioactive fission products can become trapped in Earth's magnetic field, repeatedly exposing satellites as an artificial radiation belt. Here we couple prompt radiation, electron trapping and belt evolution to satellite failures, collisions and atmospheric drag. For a 1-Mt detonation at 500km over the South Atlantic, repeated belt exposure disables approximately 98% of modeled satellites within one week in our central case. Tripling the assumed radiation tolerance delays widespread failure by on",
-      "url": "http://arxiv.org/abs/2611.09827v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Superorbital period evolution of Hercules X-1",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-06",
-      "summary": "Context. Hercules X-1 (Her X-1) is a well-studied X-ray binary exhibiting superorbital modulation of its X-ray flux. The origin of this periodicity remains debated between a counter-precessing twisted-tilted accretion disc and free precession of the neutron star. Earlier observations (1970-1990) reported stochastic fluctuations in the superorbital period, with no long-term trend. Aims. We investigated the long-term trend of the superorbital modulation using more recent, uninterrupted data from 1995-2025 to identify features that may favour or disfavour the proposed mechanisms. Methods. We probed the superorbital period using long-term light curves from five X-ray monitors, namely CGRO/BATSE,",
-      "url": "http://arxiv.org/abs/2611.09801v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Forecasting Fundamental-Plane Tests of Intermediate-mass Black Holes in Radio-selected Dwarf Galaxies",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-06",
-      "summary": "A radio/X-ray Fundamental Plane (FP) test of an intermediate-mass black hole is informative only when the compact radio emission, hard X-rays, accretion state, and host association refer to the same accretor. We used published VLA, VLBA, \\textit{Chandra}, and \\textit{HST} observations of a radio-selected dwarf-galaxy sample to determine when present nondetections are constraining and what observations are required for a stronger test. The VLBA follow-up reveals that compactness alone does not establish association with the target dwarf, while for the best nuclear candidates the radio component relevant to the FP has not yet been isolated on the intermediate physical scales between the VLA an",
-      "url": "http://arxiv.org/abs/2611.09720v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Advances in High-Precision Astrometry for Exoplanet Detection for Astrometric Missions",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-06",
-      "summary": "High-precision astrometry is a cornerstone for detecting Earth-like exoplanets in the habitable zones of nearby solar-type stars and probing the nature of dark matter in galactic environments. Achieving sub-microarcsecond accuracy requires unprecedented control over detector morphology, optical distortion, and astrometric measurement techniques. This paper reviews recent progress in characterizing large format detector at the micropixel scale level, calibrating optical distortion using reference stars, and refining differential astrometry methods to detect the faint astrometric signatures of Earth-mass exoplanets. We highlight the latest developments in the RETINA project, which aims to adva",
-      "url": "http://arxiv.org/abs/2611.09657v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "A possible connection between the ridge and hypotenuse in the bispectrum of black hole X-ray binaries through quasi-periodic modulation",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-06",
-      "summary": "Quasi-periodic oscillations (QPOs) in black-hole X-ray binaries show nonlinear coupling with broadband variability, producing characteristic ridge, hypotenuse, and web-like structures in the bicoherence. However, the origin of these structures remains unclear. We develop a mathematical model in which a modulator phase-locked to the QPO acts multiplicatively on the underlying variability. The resulting frequency mixing naturally produces both the ridge and hypotenuse associated with the fundamental QPO, as two parts of the same modulation-induced bispectral structure, and the same mechanism extends to the second harmonic. The model further predicts opposite-sign biphases between each ridge an",
-      "url": "http://arxiv.org/abs/2611.09635v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Fundamental Noise Processes in Pulsar Timing",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-06",
-      "summary": "The stability of spin rates and emission regions of radio-emitting neutron stars (pulsars) has enabled remarkable advances, including the detection of exoplanets, testing theories of gravity, and stimulating the vigorous exploration of a new window in gravitational wave astronomy an nanohertz frequencies. An ideal astrophysical clock would emit identical pulses at a constant rate, propagating along single geodesics through a perfect vacuum. In reality, the timing precision achievable with pulsars is limited by spin noise, variability in the beam produced in a complex magnetosphere, and multipath propagation through a turbulent interstellar medium, with additional limitations from uncertainti",
-      "url": "http://arxiv.org/abs/2611.09628v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Mathematical foundations and numerical simulations of BDNK hydrodynamics: from heavy-ion collisions to astrophysics",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-06",
-      "summary": "We present new developments in the mathematical foundations and numerical simulations of the causal and stable first-order relativistic viscous hydrodynamic theory by Bemfica, Disconzi, Noronha, and Kovtun (BDNK) in general spacetimes. We develop two independent flux-conservative algorithms for arbitrary 3+1-dimensional spacetime metrics. Both are hyperbolic, causal, and well-posed, pass convergence tests, and reproduce known results. The first uses a new first-order reduction with mathematically preserved constraints, whose numerical violations can be handled with cleaning fields (the resulting coupled system is proven hyperbolic and well-posed). The second uses a new mixed-order formulatio",
-      "url": "http://arxiv.org/abs/2611.09582v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "XMM-Newton observations of the highest field polar AR UMa: An extreme case of soft-blobby accretion",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-06",
-      "summary": "(Context) The X-ray spectra of magnetic cataclysmic variables (MCVs) with extreme magnetic fields, the polars, often exhibit a prominent soft X-ray excess attributed to buried shocks. (Aims) Using the first-ever high-state XMM-Newton observation of the highest field polar, AR UMa ($B\\approx230$ MG), we established the source's accretion scenario and derived the energy budget at the magnetic extreme of MCVs. (Methods) Using X-ray, UV, and optical spectral and timing analysis, we disentangled the radiation components and located their origin in the binary. (Results) AR UMa showed one active (\"southern\") pole during our observation. The spectrum of the active pole was dominated by soft, blackbo",
-      "url": "http://arxiv.org/abs/2611.09556v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Constraints on Cosmic-Rays and the MeV Emission from Jupiter's Atmosphere",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-06",
-      "summary": "The Cosmic $γ$-ray Background (CGB) in the MeV regime remains among the least understood components of diffuse cosmic radiation, primarily due to instrumental limitations in detecting faint isotropic emission at MeV energies. We present an indirect method for probing isotropic emission from soft X-rays to $γ$-rays through scattered emission in Jupiter's atmosphere. Using archival observations from SPI, the spectrometer aboard INTEGRAL, spanning 22 years of serendipitous Jupiter observations, we analyse the planet as a moving $γ$-ray point source in the 30 keV to 8 MeV range. Our analysis focuses on Jupiter's $γ$-ray albedo, produced by high-energy photon and cosmic-ray interactions. We perfo",
-      "url": "http://arxiv.org/abs/2611.09488v1",
       "image": "",
       "type": "research"
     }
