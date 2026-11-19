@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-18T10:16:36.256755+00:00",
+  "lastUpdated": "2026-11-19T10:28:02.300219+00:00",
   "articles": [
     {
       "title": "Performance of artificial intelligence versus clinician left-ventricular segmentation of cardiac MRI for mortality prediction: a retrospective, multicentre, prognostic study.",
@@ -48,6 +48,156 @@
       "publishedAt": "2027 Aug 1",
       "summary": "clinicalage a framework for modelling ageing trajectories from longitudinal electronic health records in the uk a model development and validation study",
       "url": "https://pubmed.ncbi.nlm.nih.gov/43020745/",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Discovery of a Massive Outer Companion to the TOI-178 Resonant Chain",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-18",
+      "summary": "We report the discovery of a massive outer companion around TOI-178, a known planetary system with six inner small planets within 0.15 AU, five of which are in a 2:4:6:9:12 resonant chain. We analyse the astrometric anomalies in the combined Gaia DR2/DR3 - Hipparcos catalogue (G23H) and literature radial velocities, revealing strong evidence for a massive outer companion at several AU. We combine the resulting orbital fit posterior with archival high-contrast imaging to constrain the properties of the corresponding massive outer companion, TOI-178 h. We also study the dynamical stability of the inner resonant chain in the presence of this previously unknown outer companion via both heuristic",
+      "url": "http://arxiv.org/abs/2611.24854v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Deconstructing the cosmic baryon distribution with fast radio bursts",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-18",
+      "summary": "The precise distribution of baryons in the Universe remains an open question in cosmology, as their highly diffuse nature hinders direct observation. However, mapping it is integral for precision cosmology in studies of gravitational lensing, galaxy evolution and the cosmic microwave background with current and upcoming surveys. We use fast radio bursts (FRBs) and their dispersion measures (DMs) to probe and localise this baryon distribution in the large-scale structure (LSS). Using IllustrisTNG simulations, we classify the LSS into eight bins of increasing matter density, analogous to voids, filaments, and haloes. We model the DM contribution from each substructure and compare it with the s",
+      "url": "http://arxiv.org/abs/2611.24838v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "A Homogeneous Benchmark of Exoplanet Mass-Radius Relations",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-18",
+      "summary": "The mass-radius ($M$-$R$) relation is fundamental to inferring the bulk composition and internal structure of exoplanets. However, published relations remain difficult to compare directly because studies adopt different planetary samples, fitting procedures, and evaluation metrics. We construct a homogeneous, quality-controlled benchmark of 963 exoplanets with dynamically measured masses and transit radii from the NASA Exoplanet Archive. We compare empirical power laws, probabilistic models, and machine-learning (ML) regressors using point accuracy, interval coverage, and probabilistic calibration. On the full test set, a multi-feature random forest has the lowest root-mean-square error, 0.3",
+      "url": "http://arxiv.org/abs/2611.24812v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Potential spectral markers of intrinsic magnetic fields of hot exoplanets in the UV range",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-18",
+      "summary": "A method for detecting the intrinsic magnetic fields of exoplanets, based on the effect of atomic alignment (the redistribution of populations among magnetic sublevels under the action of anisotropic radiation from the host star), has been adapted for observations with the Spektr-UV space telescope. A procedure for selecting sensitive transitions is proposed, and triplet absorption lines in the UV range that are sensitive to alignment are identified. On the basis of three-dimensional aeronomic models of the hot Jupiters KELT-20 b and HAT-P-32 b, absorption spectra in these lines are calculated for cases with and without intrinsic magnetic fields of the exoplanets. Using the Spektr-UV exposur",
+      "url": "http://arxiv.org/abs/2611.24811v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Surrogate Modeling and Reduced-Order Methods in Gravitational-Wave Physics and Numerical Relativity: From Spectral Representations to Adaptive Compression",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-18",
+      "summary": "The rapid expansion of gravitational-wave astronomy and high-precision numerical relativity has created an acute computational bottleneck: direct numerical integration of the Einstein field equations and high-dimensional Bayesian parameter estimation require millions of waveform evaluations that cannot be sustained by traditional solvers alone. Reduced-order modeling (ROM) and surrogate techniques have emerged as foundational tools to bridge this gap, compressing high-fidelity solution manifolds into compact, rapidly evaluable representations without sacrificing physical accuracy. This perspective reviews the mathematical pillars of projection-based reduced-order modeling---including Proper ",
+      "url": "http://arxiv.org/abs/2611.24727v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Rapid Equation of State Inference from Multiprobe Datasets",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-18",
+      "summary": "Fully constraining the neutron star equation of state (EoS) requires combining observations from various channels that probe different density regimes. We perform a joint multimessenger inference of the equation of state using gravitational-wave observations from binary neutron star mergers, NICER mass-radius measurements of X-ray pulsars, and radio timing measurements of massive pulsars. We constrain the parametrized equation of state and perform Bayesian model selection among a set of candidate equations of state. The joint analysis produces a radius of $R_{1.4} = 11.93^{+1.02}_{-0.83} \\, \\rm km$ for a canonical $1.4 \\, M_\\odot$ neutron star, and a maximum non-rotating neutron star mass of",
+      "url": "http://arxiv.org/abs/2611.24664v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Investigating the Impact of SAX J1808.4-3658's Very Bright Thermonuclear X-ray Burst on the Accretion Disc with NICER",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-18",
+      "summary": "We analyse a bright thermonuclear X-ray burst from the accreting millisecond X-ray pulsar (AMXP) SAX J1808.4-3658, the brightest burst detected by \\textit{NICER} to date, to explore interactions between thermonuclear burst radiation and the accretion disc. This burst features a remarkable soft (<1.5 keV) excess in its spectra. For the first time, we simultaneously detect a reflection signal and the signature of an evolving persistent component, with our fits producing a peak persistent scaling factor $f_{a,1} = 59.6\\pm0.6$. We find a high peak reflection fraction ($f_{r,1} = 0.82\\pm0.15$) and a peak bolometric burst blackbody flux below Eddington (0.68$L_{\\mathrm{Edd}}$) despite signatures o",
+      "url": "http://arxiv.org/abs/2611.24635v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Early spectra of AT2017gfo from scaled 3D merger ejecta: mass--velocity distribution, 3D structure, and treatment of line opacity",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-18",
+      "summary": "We present ARTIS radiative transfer calculations for neutron star merger ejecta with line-by-line opacities, wavelength-calibrated lanthanide data, and time-dependent r-process compositions and thermalisation, testing how the early kilonova depends on the mass-velocity distribution, dimensionality, and line treatment. We rescale 3D dynamical ejecta from a merger simulation in density and velocity to approximate AT2017gfo. Mass scaling alone provides good agreement with the bolometric light curve but inconsistent spectra. With velocities additionally halved, the model also reproduces the observed spectra at 1.4, 2.4, and (albeit less accurately) 3.4 days. The Sr II triplet contributes most to",
+      "url": "http://arxiv.org/abs/2611.24627v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Thermodynamics of gas giants accreting via shocks: the role of molecular hydrogen dissociation",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-18",
+      "summary": "Within the core-accretion framework, gas giants acquire most of their mass through accretion shocks during runaway gas accretion. The shock thermodynamics---governed by radiative cooling, accretion history, and equation of state (EoS)---sets the post-shock gas entropy and initial thermal state, strongly influencing both observables and subsequent evolution. We aim to build a coupled evolutionary model predicting the initial thermodynamic conditions, intrinsic luminosities, and upper limits on magnetic field strengths of gas giants across diverse accretion histories. We couple radiation hydrodynamics and $\\mathrm{H_2}$ dissociation to long-term planetary interior evolution by training a physi",
+      "url": "http://arxiv.org/abs/2611.24615v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Interpretable attention-based neural posterior estimation for fast radio burst cosmology",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-18",
+      "summary": "Fast radio bursts (FRBs) probe the integrated free-electron density along extragalactic sightlines and can be used to study late-time cosmic evolution. Conventional Bayesian analyses require repeated evaluations of computationally expensive likelihoods, making inference increasingly challenging as FRB catalogs grow. In this work, we develop an interpretable attention-based neural posterior estimator (AttNPE) for rapid posterior inference of the physical parameters from FRB catalogs with measured redshifts. The attention encoder compresses the catalog into a low-dimensional representation, and a conditional masked autoregressive flow maps samples from a base distribution to the seven-dimensio",
+      "url": "http://arxiv.org/abs/2611.24542v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Sun-like stars show lowered X-ray activity together with over-rotation at beyond-solar ages",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-18",
+      "summary": "In recent years, substructure in the age-rotation relationship of cool, sun-like stars has been identified, showing deviations from the historical Skumanich law. Since magnetic activity is expected to be the physical root cause of the stellar spin-down, namely via the magnetic braking process mediated through stellar winds, changes in spin-down should correspond to unusual activity behaviour. We selected a sample of old sun-like stars in the solar neighborhood with asteroseismic age estimates and measured rotation periods, and present an analysis of their magnetic activity using deep X-ray observations from XMM-Newton. We observe that sample stars less massive than the Sun (late-G and early-",
+      "url": "http://arxiv.org/abs/2611.24459v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "A lepto-hadronic perspective on the properties of the candidate neutrino-emitter blazar 5BZQ J0808+4950",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-18",
+      "summary": "The role of active galactic nuclei in the production of high-energy neutrinos has been highlighted by the association of the blazar TXS 0506+056 and the Seyfert galaxy NGC 1068 with IceCube neutrino events. In particular, blazars, with their powerful jets, are potential sites of neutrino production via (photo-)hadronic interactions. The gamma-ray bright blazar 5BZQJ0808+4950 is consistent with a spatial anisotropy in the IceCube neutrino all-sky maps. An individual high-energy neutrino event, IC110929A, was also reported in the direction of this blazar. Although the correlation between the gamma-ray bright blazars and the neutrino production remains inconclusive, 5BZQ J0808+4950, with a lumi",
+      "url": "http://arxiv.org/abs/2611.24418v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Analytical formulae for planet-planet or moon-moon tides",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-18",
+      "summary": "Almost negligible among the solar system planets, mutual tides raised by a secondary on another secondary orbiting the same primary may gain increased importance in tightly packed systems, e.g., between the components of close-in exoplanetary systems or between the moons of gas giants. In this work, we derive an analytical formula for the planet-planet tidal potential and for the effect of mutual tides on the rotational and orbital evolution of moons or planets in a coplanar configuration. The procedure follows closely the steps of W. M. Kaula (1961), and the resulting potential and derived quantities are presented in the form of an expansion into modes of different frequencies (in the tempo",
+      "url": "http://arxiv.org/abs/2611.24416v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Asgard/NOTT: L-band nulling interferometry at the VLTI IV. Prospects for characterising hot exozodiacal dust",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-18",
+      "summary": "Near-infrared interferometric surveys have revealed extended emission around the photosphere of $\\approx 40$ main-sequence stars, attributed to the presence of hot exozodiacal dust (HEZD). A promising technique for investigating this phenomenon is nulling interferometry. The Very Large Telescope Interferometer (VLTI) nulling interferometer NOTT (Nulling Observations of exoplaneTs and dusT) is designed to characterise exoplanets and HEZD in the $L'$ band ($3.5-4.0\\,μ$m). We aim to assess NOTT's potential for the detection and characterisation of HEZD with various instrumental and model parameter configurations. We model the HEZD as an optically thin dust ring, using the nearby Sun-like star $",
+      "url": "http://arxiv.org/abs/2611.24397v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Possible origins of the two γ-ray components C0 and C1 in IC 443",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-18",
+      "summary": "Recent LHAASO observations of IC~443 reveal that its high-energy $γ$-ray emission can be decomposed into two components with clearly distinct spatial morphologies and spectral properties, namely the compact component C0 and component C1 with an angular extent of 0.67$^\\circ$. We aim to explain the $γ$-ray emission mechanisms responsible for the two components in IC~443 and to further investigate their respective possible astrophysical counterparts. We model components C0 and C1 independently using two different physical scenarios. For component C0, we adopt an SNR-MC hadronic model that accounts for finite source-size effects to describe the escape and diffusion of high-energy particles and ",
+      "url": "http://arxiv.org/abs/2611.24300v1",
       "image": "",
       "type": "research"
     },
@@ -448,156 +598,6 @@
       "publishedAt": "2026-11-13",
       "summary": "Extragalactic fast X-ray transients (EFXTs) are an emerging population of high-energy transients with diverse physical origins. Only a few observed EFXTs are associated with compact object mergers, and the known events generally display X-ray emission lasting much longer than their associated short gamma-ray bursts (GRBs). Here we report EP260411a, an $\\sim8$-s EFXT discovered in archival Einstein Probe Wide-field X-ray Telescope (EP-WXT) observations through a time-targeted search for X-ray counterparts of short GRBs. This fast X-ray transient is temporally coincident with short GRB 260411A, with both the pulse width and peak time showing clear anticorrelations with the characteristic photo",
       "url": "http://arxiv.org/abs/2611.18210v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Constraining Accretion Regimes of Little Red Dots from Their Variability",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-13",
-      "summary": "The ``little red dots'' (LRDs) are photometrically and spectroscopically non-variable on rest-frame baselines of months, with a $5.9σ$ deficit relative to ordinary active galactic nuclei (AGNs). If we consider LRDs to be accreting black holes, this non-varying could be a clue about the nature of the accretion. Here, we present a general semi-analytic model of variability from super-Eddington (slim) accretion disks. We consider three mechanisms that play crucial roles in the observed variability, viz., advective attenuation, photospheric averaging, and photon diffusion filter. With this, above $\\mdot \\sim$ a few, the fractional rms collapses steeply with $\\mdot$. Comparing with JWST monitorin",
-      "url": "http://arxiv.org/abs/2611.18153v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Suprathermal bulk viscosity in binary neutron star mergers",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-13",
-      "summary": "Numerical relativity simulations of binary neutron star mergers and core-collapse supernovae indicate that the neutron star matter can be driven far from equilibrium due to large amplitude density oscillations, with frequency in the kHz range. Urca processes in neutron star matter try to restore the system towards equilibrium providing strong bulk viscous damping of these density oscillations. Standard bulk viscosity calculations typically assume small amplitude density oscillations, such that the deviation from chemical equilibrium $μ_Δ$ is less than the temperature $T$. In this work we compute the complete amplitude dependent bulk viscosity, taking into account, for the first time, thermal",
-      "url": "http://arxiv.org/abs/2611.18146v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Model Choice or Model Bias? How stellar spectral libraries and activity modelling choices influence Ariel spectra- I. Forward model",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-13",
-      "summary": "The Ariel mission will conduct a population-level survey of approximately 1000 exoplanet atmospheres across its nominal lifetime, requiring unprecedented consistency in the treatment of stellar contamination of transmission spectra. We present a systematic comparison of stellar spectral libraries and modelling approaches for computing facular and spot contamination spectra across the full Ariel wavelength range (0.5-7.8 microns) for six stellar spectral types spanning F3 to M2. Using a surface resolved forward model with approximately 200 randomly generated active region configurations per spectral type, we compute contamination spectra at Ariel Tier 3 resolution and compare three 1D spectra",
-      "url": "http://arxiv.org/abs/2611.18107v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Separability defects in artificial satellite theory: intermediaries, zonal harmonics and secular separatrices",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-13",
-      "summary": "A five-input Poisson-bracket operator, which reproduces the Levi-Civita separability expressions and is cubic in the Hamiltonian, is used as a diagnostic of artificial satellite theory, in a modified polar-nodal chart regular at prograde equatorial orbits. For the general intermediary proposed by the author in 2020, covering those of Sterne, Garfinkel, Brouwer, Aksnes, Cid and Lahulla and Deprit, the linearised defects vanish if and only if the integrability ansatz holds, the condition for additive first-order Hamilton-Jacobi separation in polar-nodal variables. Second-order defects follow in closed form, and the coupling with the nodal pair comes from the dependence on the physical latitude",
-      "url": "http://arxiv.org/abs/2611.18083v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Unsupervised Machine Learning Classification of FRB 20121102A across Distinct Active Episodes: Implications for FRB Emission Physics and Source Environments",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-13",
-      "summary": "Fast radio bursts (FRBs) are millisecond-duration radio transients of extragalactic origin. Identifying distinct burst populations and investigating their variations across active episodes provide important insights into the physical origins of repeating FRBs. In this paper, we apply an unsupervised machine learning approach to bursts from three active episodes of FRB 20121102A observed by the Five-hundred-metre Aperture Spherical Telescope (FAST). Our analysis reveals four distinct clusters primarily distinguished by their spectral properties. Notably, Cluster 1 exhibits bimodal-like distributions in central frequency and bandwidth and contains nearly all high-energy bursts, with a mean ene",
-      "url": "http://arxiv.org/abs/2611.18056v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "A Dark-Sector Mass Flip-Flop Mechanism for the ANITA-IV Events",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-12",
-      "summary": "ANITA-IV has observed four upward-going air-shower candidates just below the horizon, consistent with ultra-high-energy $ν_τ$, yet IceCube, despite its much larger exposure, has detected no neutrino events at such energies. We propose a dark-sector mass flip-flop mechanism that reconciles these observations. We consider an all-sky, monoenergetic flux of ultra-high-energy $N_1$, that is lighter than its partner $N_2$ and stable in vacuum. In our scenario, an ultralight scalar mediating interactions with Earth matter inverts the mass ordering of $N_1$ and $N_2$, allowing an incident $N_1$ to decay into $N_2$ deep underground. The resulting $N_2$ propagates unimpeded through matter and exits th",
-      "url": "http://arxiv.org/abs/2611.17328v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "JWST Rocky Worlds DDT Observations of LTT 1445 A b and c in Secondary Eclipse Using MIRI/F1500W",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-12",
-      "summary": "The JWST Rocky Worlds Director's Discretionary Time (RWDDT) program uses secondary eclipse observations to determine the conditions under which rocky exoplanets around M dwarfs retain their atmospheres. We present RWDDT MIRI/F1500W observations of LTT 1445 A b and c, the transiting rocky siblings in the nearest such system (6.9 pc), comprising two eclipses of each planet across three visits. We perform three independent reductions and a joint fit that includes all existing JWST data and 220 radial velocities, improving the precision on the planetary radii, masses, and orbital parameters by factors of 1.6-2.3. We measure eclipse depths of $157^{+18}_{-17}$ ppm and $154^{+54}_{-37}$ ppm for pl",
-      "url": "http://arxiv.org/abs/2611.17300v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "The origin of Potassium in Galactic chemical evolution - The effect of C-O shell mergers in massive stars",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-12",
-      "summary": "The Galactic chemical evolution (GCE) of potassium (K) and of most other odd-Z elements remains poorly understood: models generally underproduce the observed [K/Fe] over a wide metallicity range, depending on the adopted massive star yields. A proposed site for efficient K nucleosynthesis is the merger between the oxygen and carbon shells (C-O shell merger) that can occur in massive stars a few hours before core collapse. Some GCE models with specific yield sets have been shown to reconcile predictions with observations. Here we re-analyse these yield sets to quantify the contribution of C-O shell mergers to K production and what the Galactic evolution of K implies about the occurrence of th",
-      "url": "http://arxiv.org/abs/2611.17224v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Effects of Lensing by Sgr A* on Semicoherent Searches for Continuous Gravitational Waves. I. Signal Model and Mismatch Studies",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-12",
-      "summary": "Continuous gravitational waves (CWs) from neutron stars beyond the Galactic Center can be lensed by the supermassive black hole in Sgr A$^*$. Since the signal lasts far longer than the lensing time delay, the two geometric-optics images overlap and interfere. Transverse source motion during the observation makes their magnifications and relative time delay evolve, producing evolving amplitude and phase modulations absent from standard CW templates. Using lensed and unlensed injections in Gaussian noise, we quantify their effect on a Hough-based semicoherent search through a semicoherent mismatch. Recovery is governed by the competition between lensing amplification and waveform modulation. S",
-      "url": "http://arxiv.org/abs/2611.17153v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "A Variable Compact Millimeter Excess in the Type-1 Seyfert Galaxy NGC 985: Implications for a Black-Hole Corona",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-12",
-      "summary": "Compact millimeter emission from radio-quiet active galactic nuclei has been proposed as a probe of magnetized accretion-disk coronae. We present three epochs of ALMA observations of the type-1 Seyfert galaxy NGC 985, together with archival post-upgrade VLA data presented here for the first time, to investigate its compact millimeter excess. The millimeter flux density decreased strongly between the first two ALMA epochs separated by approximately one month, while the component was detected again at an intermediate level in the third epoch. This variability demonstrates an intrinsically variable compact component and implies a model-independent size limit of $\\lesssim 0.024$ pc ($\\simeq 1.1\\",
-      "url": "http://arxiv.org/abs/2611.17033v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Lurkers at the Threshold: GWTC-4.0's near-threshold events",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-12",
-      "summary": "We present the first systematic parameter-estimation analysis of 42 candidate gravitational-wave signals identified in GWTC-4.0 with a probability of astrophysical origin $p_\\mathrm{astro} \\geq 0.5$, but a false-alarm rate of at least $1\\,\\mathrm{yr}^{-1}$, which were therefore not selected for parameter estimation in the catalogue. We use a catalogue-style analysis workflow and publicly available strain data to obtain posterior samples for these candidates, of which 29 pass our validation criteria. Of the remaining 13 candidates, seven are consistent with noise or impacted by instrumental artefacts, while six yield results that cannot be reliably interpreted. We identify several interesting",
-      "url": "http://arxiv.org/abs/2611.16985v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Stellar-Field-Driven Induction Heating Unlikely To Cause Significant Heating in Giant Exoplanets",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-12",
-      "summary": "A planet moving through a changing magnetic field will have a current induced on it by that magnetic field. If the magnetic Reynolds number in the upper atmosphere of this planet is small, the dissipation of this current could result in observable changes to the planet's properties. In this paper, we estimated the total power that would be dissipated in the observed giant exoplanet population if they orbited stars with misaligned magnetic dipoles. We found that, even if all planets orbit stars with extremely misaligned surface magnetic fields, the vast majority of known exoplanets are unlikely to dissipate enough magnetic power to cause observable changes in their surface temperatures. We al",
-      "url": "http://arxiv.org/abs/2611.16949v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Lense-Thirring induced repeating blast trains in continuous gravitational waves",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-12",
-      "summary": "We characterise gravitational lensing induced by the Lense-Thirring effect in a continuous gravitational-wave source orbiting a spinning supermassive black hole. This scenario is very likely to generate lensing events, as long as the source's orbital inclination is not aligned with the black hole's spin axis and the Lense-Thirring timescale is shorter than the observational window. The signal appears as short-duration ($T_{\\rm blast}$) gravitational-wave \"blasts\" that repeat after every orbit ($T_{\\rm orb}$) within a limited time window ($T_{\\rm train}$). The blasts' signal strength depends on the system's geometry and not on the black hole mass. The signal will go silent and renew twice in ",
-      "url": "http://arxiv.org/abs/2611.16914v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "The $w$-mode instability of strangeon ergostars and its impact on energy extraction",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-12",
-      "summary": "Rapidly rotating compact ergostars have been proposed as alternative central engines for short gamma-ray bursts. However, competing energy-loss channels, such as gravitational-wave emission driven by non-axisymmetric instabilities, could curtail the power available for relativistic electromagnetic outflows. In this work, we investigate the $w$-mode instability of rapidly rotating strangeon ergostars by solving the coupled spacetime and fluid perturbation equations in the Hilbert gauge using a spectral method, without relying on a slow-rotation approximation. We calculate the complex eigenvalues of the axial-led and polar-led $w$-mode branches originating from the fundamental $l=m=2$ modes of",
-      "url": "http://arxiv.org/abs/2611.16836v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Bayesian Inference of Fermionic Dark Matter Admixed Neutron Stars Informed by Galaxy Cluster Constraints",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-12",
-      "summary": "Self-interacting dark matter is constrained on galactic and cluster scales by its elastic scattering cross section per unit mass, $σ/m_χ\\sim 0.1-10\\ {\\rm cm^2/g}$. We incorporate this cross section into the equation of state of an asymmetric, self-interacting fermionic dark matter component and perform a Bayesian inference of dark matter admixed neutron stars in the two-fluid framework at $σ/m_χ= 0.1$, $1$ and $10\\ {\\rm cm^2/g}$. Seven nuclear matter parameters are sampled together with the dark particle mass and mass fraction, and confronted with nuclear theory and neutron star observations. The nuclear sector and the global observables are statistically indistinguishable across the whole r",
-      "url": "http://arxiv.org/abs/2611.16785v1",
       "image": "",
       "type": "research"
     }
