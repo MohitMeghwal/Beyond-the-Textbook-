@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-19T10:28:02.300219+00:00",
+  "lastUpdated": "2026-11-20T10:07:42.074458+00:00",
   "articles": [
     {
       "title": "Performance of artificial intelligence versus clinician left-ventricular segmentation of cardiac MRI for mortality prediction: a retrospective, multicentre, prognostic study.",
@@ -48,6 +48,156 @@
       "publishedAt": "2027 Aug 1",
       "summary": "clinicalage a framework for modelling ageing trajectories from longitudinal electronic health records in the uk a model development and validation study",
       "url": "https://pubmed.ncbi.nlm.nih.gov/43020745/",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Which black hole modes ring freely? Horizon regularity, the forced ringdown transient, and GW250114",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-19",
+      "summary": "The quasinormal modes (QNMs) of a black hole are defined by keeping only ingoing waves at the horizon. We ask what horizon regularity requires of the outgoing waves this condition discards. For a scalar-like perturbation, bounded first derivatives in a frame regular at the future horizon rule out outgoing waves that decay more slowly than the surface gravity $κ$, and smoothness singles out a ladder of frequencies, $ω=mΩ_{\\rm H}-ijκ$ with $j=1,2,\\dots$ and $Ω_{\\rm H}$ the horizon angular velocity. We call these the horizon modes. For Schwarzschild black holes and the dominant $\\ell=m=2$ Kerr modes, only the fundamental QNM decays more slowly than $κ$. These local statements leave the QNM spec",
+      "url": "http://arxiv.org/abs/2611.26591v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Demographic inference in exoplanet chemistry is shaped by retrieval assumptions",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-19",
+      "summary": "Understanding the chemical diversity of exoplanet atmospheres is crucial for linking atmospheric composition to planetary formation history. Atmospheric C/O can provide clues about where and how planets form, particularly through the accretion of gas and solids across disk snowlines. Since planetary migration can change orbital distances and hence equilibrium temperatures ($T_{eq}$), investigating C/O across different planetary populations may provide insights into their formation and evolution. As observational precision improves with the JWST, the limits of standard atmospheric retrieval methods that assume altitude-independent molecular abundances have become apparent. We present atmosphe",
+      "url": "http://arxiv.org/abs/2611.26548v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Nonlinearly Causal General-Relativistic Superfluid Hydrodynamics: Simulating Vortex Dynamics in Neutron-Star Interiors",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-19",
+      "summary": "Neutron stars provide a natural laboratory for superfluid matter under extreme conditions. Its nonlinear dynamics is central to pulsar glitches, their possible links to fast radio bursts, and tidal interactions in inspiralling binaries. We develop a general-relativistic superfluid hydrodynamics framework incorporating entrainment, vortex forces, and line energy, and derive, for the first time, necessary and sufficient conditions for nonlinear causality and strong hyperbolicity. We also show that commonly used dissipative, force-balanced formulations without line tension are generically ill-posed at short wavelengths because of the Donnelly-Glaberson instability. Exploiting the analogy betwee",
+      "url": "http://arxiv.org/abs/2611.26547v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Self-gravity depletes superradiant clouds",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-19",
+      "summary": "Superradiant clouds of ultralight scalars around black holes are often modeled as free fields, whose levels grow independently and decay slowly through gravitational-wave emission. We show that this limit is never realized. The cloud's self-gravity redistributes particles between levels, just as in the case of axion self-interactions, and dominates over self-interactions for decay constants $f_a\\gtrsim6\\times10^{16}\\,{\\rm GeV}\\,(α/0.1)$, with $α$ the gravitational fine-structure constant. Self-gravity depletes the cloud by orders of magnitude and feeds more extended levels, weakening all signals that rely on the existence of a large cloud mass. A binary companion, however, can partly offset ",
+      "url": "http://arxiv.org/abs/2611.26541v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Outflow Properties from a Broad Range of GR$ν$RMHD Stellar-Mass Black Hole Accretion Disks",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-19",
+      "summary": "The majority of the mass ejected by neutron star mergers comes from accretion disk outflows. Over timescales of seconds, the thermodynamic evolution of the disk and its resultant outflows set the stage for the ejecta properties which manifest in kilonova observations at later times (hours/days). Kilonova observables depend sensitively on key properties of these outflows -- mass ejection, the ejecta velocity distribution, late-time ejecta morphology and nucleosynthetic yields -- which can only be modeled with a detailed treatment of microphysical interactions including neutrino and general relativistic effects. In this work, we present a library of 25 general-relativistic magnetohydrodynamic ",
+      "url": "http://arxiv.org/abs/2611.26534v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Near Infrared HST Images Resolve the Filamentary Emission Knots in Pa 30, the Remnant of the Galactic Supernova of 1181 AD",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-19",
+      "summary": "We report the results of a near-infrared HST WFC3/IR imaging program investigating the sub-arcsecond structure of optical filaments in the Galactic nebula, Pa 30, believed to be a SNIax remnant of the historic supernova of 1181 AD. Using a near infrared filter sensitive to [S II] and [S III] emission lines, a 1.2 micron filter to reject stars, and a deep Gemini GMOS [S II] image to help define the remnant's filaments, we identify 226 knots along radially aligned filaments in 15 fields. Knot median PSF-corrected FWHM is 0.154'' (350 AU at 2.3 kpc) with 32 (14%) unresolved at a PSF of 0.225''. We find that Pa 30's knots are not round but elongated along the filaments. Fitting stacks of knots w",
+      "url": "http://arxiv.org/abs/2611.26494v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Multimessenger constraints on the origin of long gamma-ray bursts with plateaus: three cases",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-19",
+      "summary": "The central engines of long gamma-ray bursts (LGRBs) with X-ray plateaus remain uncertain. They involve a magnetar or black hole (BH), powered by spin energy and/or accretion. We examine how gravitational waves (GWs) discriminate between these scenarios. For collapsars, we consider three models: (A) a prompt phase powered by hyper-accretion onto a BH, followed by a spin-down-powered plateau; (B) a prompt phase powered by BH spin-down; and (C) a magnetar powering both the prompt and plateau phases. Each predicts a distinct GW signature in timing, energy, and frequency, ranging from broadband emission to a coherent descending chirp. We fit the selected X-ray plateaus of Swift GRBs using the mo",
+      "url": "http://arxiv.org/abs/2611.26468v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Gamma-Ray Pulsar Discovery Using a Lattice-Based Method",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-19",
+      "summary": "Pulsars are difficult to discover via $γ$-ray pulsations because typically only one photon is observed per ${\\sim}10^8$ rotations. We report the first $γ$-ray pulsar discovered with an extension of a recently proposed algorithm, which uses efficient tools for identifying short vectors in high-dimensional lattices instead of exhaustively searching for periodic signals. PSR J1622$-$7204, an isolated pulsar spinning at 261 Hz, was found in 15 years of Fermi-LAT data using about ten CPU hours. In contrast, the previous state-of-the-art (a semicoherent search) failed after ${\\sim}600$ CPU years. This new approach may enable the discovery of many new $γ$-ray pulsars, including in binary systems, a",
+      "url": "http://arxiv.org/abs/2611.26425v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Lower-Mass Giants Can Spare Inner Planets during High-Eccentricity Migration",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-19",
+      "summary": "The survival of an inner planet next to a close-in giant is commonly used to argue against high-eccentricity migration (HEM), because the eccentric giant is expected to destabilize the inner system. Existing survival calculations have concentrated on Jupiter-mass migrants, although several Jupiter-sized close-in giants with nearby companions have sub-Jovian masses. We use dissipative three-body integrations to measure the collision-survival boundary at seven giant masses from $0.25$ to $1.0,M_{\\rm Jup}$ and combine it with uncompressed equilibrium-tide circularization times. At fixed physical periapse, lower giant mass weakens the forcing of the inner orbit and shifts the survival boundary i",
+      "url": "http://arxiv.org/abs/2611.26372v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "SN 2017gkk: A moderately luminous and fast evolving Type IIb supernova",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-19",
+      "summary": "We present optical imaging (\\textit{BVRI} bands) and low-resolution optical spectroscopic follow-up of Type IIb supernova SN~2017gkk that occurred in NGC~2748. These observations consist of 31 and 17 epochs of photometry and spectroscopy, spanning $\\sim$\\,218 days since the $V$-band peak. The light curve analysis infers that the SN reached maximum in $\\sim$\\,13~days after the explosion with an absolute magnitude of $M_\\mathrm{V}$\\,=\\,--17.01\\,$\\pm$\\,0.07 mag. The peak pseudo-bolometric luminosity of SN~2017gkk is $L_{\\rm bol}=(8.37\\pm0.19)\\times10^{41}\\,\\mathrm{erg\\,s^{-1}}$. Between 25 and 80 days (after maximum), SN~2017gkk displays a fast decline rate of $2.35\\pm0.06~\\mathrm{mag\\times(100",
+      "url": "http://arxiv.org/abs/2611.26306v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "The Silk Nebula Revisited: A Comment on Wu et al. (2026) and New Constraints from Archival Survey Spectroscopy",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-19",
+      "summary": "Wu et al. (2026) used one LAMOST MRS-N plate to suggest that the Silk Nebula, a $17^\\circ$-long \\Oiii~$λ$5007 filament in Gemini, is possibly associated with a supernova remnant at a fiducial distance of $\\sim$160\\,pc. We test this against their published values and independent archival data. The \\Ni\\ airglow in their blue-arm spectrum lies at air, topocentric rest wavelengths, so their \\Oiii\\ velocities omit the heliocentric correction and are $10.1\\pm1.0$\\,\\kms\\ too high. Corrected and combined with DESI DR1 and SDSS spectra, \\Oiii\\ lies at \\vhel\\ $=+13.3\\pm1.0$\\,\\kms, the velocity of \\Nii\\ and of the local warm ionized medium (WIM). Their \\Ha\\ velocities are 4.5--6.7\\,\\kms\\ redder than \\N",
+      "url": "http://arxiv.org/abs/2611.26243v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "The gravitational wave candidate S251112cm: near-complete optical coverage with ATLAS, Pan-STARRS and the Vera C. Rubin Observatory",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-19",
+      "summary": "On 2025 November 12, the LIGO-Virgo-KAGRA (LVK) network detected S251112cm, a compact binary merger candidate with a false alarm rate of one per four years at a luminosity distance of $93 \\pm 27$ Mpc. The probability that the lighter component's mass lies below 1 $M_\\odot$ is >99%, while the probability that either component lies at 1-3 $M_\\odot$ is only 8%, leaving the nature of the progenitor system unclear. We present Pan-STARRS and ATLAS optical follow-up of the 90% localisation region, and quantify Vera C. Rubin Observatory target-of-opportunity observations. In the North, Pan-STARRS imaged 1084 deg$^2$ (65%) within 7 days to a median depth of 21.9 mag and ATLAS 1545 deg$^2$ (87%) withi",
+      "url": "http://arxiv.org/abs/2611.26222v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Periodicities of small regular jet deviations in SS433 and their origin",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-19",
+      "summary": "Based on the results of spectroscopic observations of SS433 conducted with the 2.5-m telescope at the Caucasian Mountain Observatory between 2020 and 2026, we study the deviations of the moving hydrogen and helium emission lines from their positions as predicted by the kinematic model of the jets' precessional motion. In these deviations, in addition to the previously known periodicities of $13^d.08$, $11^d.27$, $6^d.29$, and $5^d.83$, a new period of $3^d.08$ is identified. All observed periodicities are explained by a model in which the jet offsets occur in a fixed direction relative to the star-disk axis $\\bf r$, and the magnitude of the offset is a function $a(μ)$, where $μ$ is the cosin",
+      "url": "http://arxiv.org/abs/2611.26088v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Strong Field Tidal Disruptions of Rotating Stars by Spinning Black Holes",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-19",
+      "summary": "We study tidal disruptions of rotating solar-type stars by a rapidly spinning supermassive black hole with general-relativistic smoothed-particle hydrodynamics. To capture strong-field effects, we place the pericentre at a few gravitational radii of a black hole, and compare with weak-field encounters at a larger pericentre around a lighter black hole. We vary the black hole spin, the orbital inclination and the stellar rotation, using rigidly and differentially rotating stars with spin aligned, anti-aligned or perpendicular to the orbital angular momentum. In the strong field, the black hole spin decides whether a core survives on equatorial and inclined orbits, and stellar rotation reduces",
+      "url": "http://arxiv.org/abs/2611.26043v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "The Ionospheric Cut-off as a Potential Radio Technosignature",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-19",
+      "summary": "Radio emission generated on a planetary surface must cross the planet's ionosphere before escaping into space: below the local plasma frequency it is reflected back towards the surface. We investigate this process for broadband radio technosignatures (BRaTs) using a Chapman-layer description of photoionised atmospheres. The plasma frequency depends only weakly on stellar XUV irradiation, scaling as $Q_{\\infty}^{1/4}$, implying turnover frequencies of 5-40 MHz for most terrestrial habitable-zone planets, potentially rising towards 100 MHz in extreme environments. The basic signature is simple: the continuum of a surface-origin BRaT should be strongly suppressed below a characteristic frequenc",
+      "url": "http://arxiv.org/abs/2611.26025v1",
       "image": "",
       "type": "research"
     },
@@ -448,156 +598,6 @@
       "publishedAt": "2026-11-16",
       "summary": "The nearby Type Ia supernova SN 2026ahvu offers a rare opportunity to probe its progenitor that may have evolved unusually rapidly. If the progenitor formed in either of the two young stellar clusters near the explosion site in NGC 1433, the delay from star formation to explosion could have been $\\sim$100 Myr or less. The distance to NGC 1433 remains uncertain, with published estimates of 9.1 Mpc and 18.9 Mpc. Our preliminary fit to the rising ATLAS light curve yields a distance of $17.7^{+1.5}_{-1.4}$ Mpc. In the classical single-degenerate scenario, a white dwarf steadily burning hydrogen accreted from a non-degenerate companion can emit detectable supersoft X-rays before explosion. We sea",
       "url": "http://arxiv.org/abs/2611.21342v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Why Cassini's Oval Could Not Replace Kepler's Ellipse?",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-16",
-      "summary": "In the later seventeenth century, Kepler's ellipse was not yet accepted. Ward claimed that Boulliau's conic hypothesis amounted to a Ptolemaic equant at the ellipse's empty focus, and built his own model on it. Around 1675--1680, Giovanni Domenico Cassini proposed another curve, the ``oval'', a genus-1 quartic with no closed-form Kepler equation; yet its eccentric anomaly shares exactly the leading coefficient of Kepler's, and its empty focus is, for the Sun, 38 times closer to a true equant than the ellipse's. Dynamically, Binet's formula shows that the force producing the oval under the area law departs from the inverse square by an index $\\mathcal{D}(e)\\sim3/(4e^2)$, depending on the oval",
-      "url": "http://arxiv.org/abs/2611.21336v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Non-thermal emission from molecular clouds illuminated by continuous cosmic-ray accelerators: application to the stellar cluster W43",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-16",
-      "summary": "Context: Cosmic rays escaping from their accelerators produce gamma-ray emission through interactions with ambient gas. While the scenario of an impulsive injection of cosmic rays has been extensively studied, that of a continuous injection in time has received comparatively less attention. The latter scenario is particularly relevant for stellar clusters, which may contribute to a non-negligible fraction of Galactic cosmic rays. Aims: We intend to characterize the excesses of cosmic rays around their accelerators and to assess the detectability of the gamma-ray emission resulting from the interactions of cosmic rays in nearby molecular clouds. We focus in particular on star clusters and see",
-      "url": "http://arxiv.org/abs/2611.21317v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Noise and quasi-periodic oscillations in black hole accretion flows",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-16",
-      "summary": "Temporal fluctuations of the viscosity parameter at different radii in an accretion flow are known to give rise to variability in the accretion rate onto the black hole. The power spectrum of accretion-rate fluctuations is expected to exhibit a broad-band power-law dependence on frequency (e.g., flicker noise). We show that viscosity fluctuations can also generate quasi-periodic oscillations (QPOs) in the power spectrum. In our model, QPOs are caused by reflection of accretion-rate fluctuations at the outer radius of the accretion flow and arise near the low-frequency break of the power spectrum, which corresponds to the inverse viscous timescale at the outer radius. These QPOs occur in geom",
-      "url": "http://arxiv.org/abs/2611.21246v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Impact of the Initial Lorentz Factor on Kinetic Instabilities, Magnetic-Field Evolution, and Particle Acceleration in Relativistic Jets",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-16",
-      "summary": "We investigate how the initial Lorentz factor shapes the evolution of relativistic jets---a key open question in high-energy astrophysics. Using global three-dimensional particle-in-cell (PIC) simulations with cylindrical jet geometry on a Cartesian grid, we analyze the self-consistent evolution of relativistic electron--positron and electron--ion jets from active galactic nuclei (AGN) and their interaction with the ambient medium. We implement an injection scheme that assigns space- and time-dependent velocities to injected particles and simulate jets with initial Lorentz factors of $γ_{0} = 10$ and 15. Jets with the higher Lorentz factor ($γ_{0} = 15$) exhibit stronger electron collimation",
-      "url": "http://arxiv.org/abs/2611.21109v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Observing Earth's ionospheric irregularities from the Moon",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-16",
-      "summary": "Radio signals that propagate through the Earth's ionosphere carry information about possible irregular plasma structures. Such irregularities manifest themselves as amplitude signatures that depend on the propagation and observation geometry [1, 2]. Conventional ground and low-Earth-orbit (LEO) measurements sample these effects close to Earth. Here we present a systematic characterization of terrestrial ionospheric irregularities using Global Navigation Satellite System (GNSS) amplitude observations from the lunar surface, at distances of approximately 356,000-398,000 km from Earth's surface [3]. Using nearly 93 h of 1-Hz lunar-surface observations of GPS L1/L5 and Galileo E1/E5a collected b",
-      "url": "http://arxiv.org/abs/2611.21062v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "TOI-1699A: a sub-Neptune and a super-Jovian in an S-type planetary system",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-13",
-      "summary": "We present the detection and characterization of the TOI-1699A (TYC 3415-00428-1) S-type planetary system, hosted by the G5 V primary of a wide binary with an M3 V stellar companion at a projected separation of $\\sim$348 au. The inner planet, TOI-1699A b, was initially detected by TESS and confirmed with targeted CHEOPS photometry, ground-based photometry, and HARPS-N follow-up. With an orbital period of $\\sim$4.55 d, radius of $3.096^{+0.057}_{-0.056}$ $R_\\oplus$, mass of $13.9^{+1.9}_{-1.8}$ $M_\\oplus$, and bulk density of $2.58^{+0.40}_{-0.39}$ g cm$^{-3}$, TOI-1699A b lies firmly in the sub-Neptune regime and requires a substantial volatile envelope. The HARPS-N data additionally reveal ",
-      "url": "http://arxiv.org/abs/2611.18481v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Eleven Trans-Neptunian Objects and Eight Candidates Discovered by TESS",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-13",
-      "summary": "We report a blind search for trans-Neptunian objects (TNOs) in Transiting Exoplanet Survey Satellite (TESS) full-frame images from 2018 July 25 through 2026 November 6. We search 572 CCD fields near the ecliptic across 95 TESS sectors. After modeling and subtracting Gaia stars with the TESS-Gaia Light Curve package, we stack the residuals along curved trial paths and link detections across sectors. We identify eleven new TNOs, each detected blindly in two to five TESS sectors and independently in archival ground-based images, with arcs of 2-20 years. They have V = 20.8-22.1, heliocentric distances of 25-57 au, inclinations of 16-27 deg, and diameters of about 120-910 km for an assumed albedo",
-      "url": "http://arxiv.org/abs/2611.18452v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "A New Galactic Close Binary Supersoft Source Candidate",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-13",
-      "summary": "The identification of a new galactic Close Binary Supersoft Source (CBSS) candidate, whose main ID is ZTF J043609.49+364057.7, is presented on the basis of the analysis of its optical spectrum, light curve and Spectral Energy Distribution (SED). During a survey designed to find candidates to the aforementioned class independently of X-ray emissions, this object's optical spectrum was found to exhibit the typical emission features expected for a CBSS. The available photometric data show a quasi-sinusoidal modulation, with a period of 5.42 h, compatible with the orbital modulation of the system. Although there is no current identification of X-ray emission from this source, its SED displays a ",
-      "url": "http://arxiv.org/abs/2611.18441v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "The effect of vertical mixing on oxygen sequestration by refractory elements in the atmosphere of giant planets",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-13",
-      "summary": "The most widely used route to study the formation history of giant exoplanets is the C/O ratio, usually derived from H$_2$O, CO, CO$_2$ and CH$_4$. However, refractory elements can sequester a significant fraction of O, causing the observed C/O ratio to be overestimated with respect to the intrinsic one. Previous calculations of this bias relied on chemical equilibrium models. Here we quantify the impact of vertical mixing using the 1-D chemical kinetics code VULCAN, expanded with a Mg-Si-Fe network including the condensation and settling of enstatite, forsterite and metallic iron. We compute 168 models spanning equilibrium temperatures $T_{eq} \\in$ [700, 1500] K, eddy diffusion coefficients",
-      "url": "http://arxiv.org/abs/2611.18431v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "A Multiscale Analysis of an Interplanetary Shock from IMAP, SOLAR-1, and the L1 Constellation to Earth",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-13",
-      "summary": "Collisionless shocks are primary sites of particle acceleration throughout the Universe. Transient, mesoscale structures forming around these shocks influence their energy conversion efficiency, yet remain poorly observed at interplanetary (IP) shocks: spacecraft sample the shock transition briefly, and single-point measurements cannot disentangle temporal evolution from spatial structure. Here, we examine a fast, CME-driven IP shock of 2026 January 19, observed by IMAP, SOLAR-1, Wind, ACE, DSCOVR, and Aditya-L1 at L1 and by ARTEMIS and MMS near Earth, to determine its spatial and temporal structure. At MHD scales, a pre-existing solar wind flux tube is overtaken by the shock as it crosses t",
-      "url": "http://arxiv.org/abs/2611.18314v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "JCMT--Venus: Daily Monitoring of HDO and SO$_2$ Absorption in Venus' Mesosphere",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-13",
-      "summary": "We present three multi-week, disc-integrated James Clerk Maxwell Telescope (JCMT) campaigns monitoring HDO and SO$_2$ absorption in Venus' upper mesosphere at altitudes of approximately 80--110 km. Obtained in February 2022, July 2023, and August--September 2023, these observations provide dense temporal sampling and complementary observing geometries, enabling the disentanglement of short-term, long-term, and local solar time (LST) variability, which has been challenging in previous studies. We have four main findings. First, SO$_2$ in the upper mesosphere, being largely absent in February 2022 but present in both 2023 campaigns, may follow the same long-term trend observed at cloud tops. S",
-      "url": "http://arxiv.org/abs/2611.18271v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Magnetic kink instability of jet-wind outflows. I. Static column configuration",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-13",
-      "summary": "We describe the results of computer simulations investigating the stability of an axisymmetric static equilibrium combining a highly magnetised ($σ=10^3$) central column and a mildly ($σ=0.1$) to weakly ($σ=0.001$) magnetised outer shell with a helical and mostly force-free magnetic field of constant pitch. The measured linear growth rates of the instability are in agreement with the maximum growth rate for a uniform density column with a force-free magnetic field of constant pitch obtained by Appl et al. (2000), being only a little bit higher. At the non-linear phase, the interface separating the central column and the outer shell develops the characteristic corkscrew shape, with the space ",
-      "url": "http://arxiv.org/abs/2611.18268v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "JWST/NIRISS-SOSS Spectroscopic Variability and Auroral Modelling of Warm Ultracool Dwarf LSR J1835+3259",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-13",
-      "summary": "Auroral variability in ultracool dwarfs (UCDs) has been proposed as a key source of optical and infrared modulation, yet its physical origin remains poorly understood. We present JWST Near Infrared Imager and Slitless Spectrograph/Single Object Slitless Spectroscopy (NIRISS/SOSS) time-series spectroscopy of the M8.5 UCD LSR J1835+3259. These observations probe the object's wavelength-dependent rotational variability, providing insight into the atmospheric processes underlying its infrared behaviour. Additional GTC/MEGARA optical spectra reveal that its H$α$ emission has declined markedly since earlier epochs, suggesting a reduced activity state during the JWST observations. We detect no emis",
-      "url": "http://arxiv.org/abs/2611.18246v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "A helium-rich mass-donor in a 3.5-hr low mass X-ray binary",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-13",
-      "summary": "Binary systems in which a neutron star accretes material from a low-mass stellar companion arise from evolutionary processes that depend sensitively on the progenitor properties. It is usually assumed that the accreted material has approximately solar composition, unless the orbital period is $\\lesssim80$ min, indicating an \"ultracompact\" system with a hydrogen deficient donor. However, few constraints on the donor composition are available. Here we apply a Bayesian model-comparison framework, BEANSP, to a sample of 21 thermonuclear bursts from the accretion-powered millisecond pulsar, IGR J17511-3057, to constrain the fuel composition as well as the system parameters. Our analysis strongly ",
-      "url": "http://arxiv.org/abs/2611.18226v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Discovery of a Short-Duration Fast X-ray Transient Associated with a Short Gamma-Ray Burst",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-13",
-      "summary": "Extragalactic fast X-ray transients (EFXTs) are an emerging population of high-energy transients with diverse physical origins. Only a few observed EFXTs are associated with compact object mergers, and the known events generally display X-ray emission lasting much longer than their associated short gamma-ray bursts (GRBs). Here we report EP260411a, an $\\sim8$-s EFXT discovered in archival Einstein Probe Wide-field X-ray Telescope (EP-WXT) observations through a time-targeted search for X-ray counterparts of short GRBs. This fast X-ray transient is temporally coincident with short GRB 260411A, with both the pulse width and peak time showing clear anticorrelations with the characteristic photo",
-      "url": "http://arxiv.org/abs/2611.18210v1",
       "image": "",
       "type": "research"
     }
