@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-22T09:52:49.104357+00:00",
+  "lastUpdated": "2026-11-23T10:52:35.178078+00:00",
   "articles": [
     {
       "title": "Performance of artificial intelligence versus clinician left-ventricular segmentation of cardiac MRI for mortality prediction: a retrospective, multicentre, prognostic study.",
@@ -48,6 +48,156 @@
       "publishedAt": "2027 Aug 1",
       "summary": "clinicalage a framework for modelling ageing trajectories from longitudinal electronic health records in the uk a model development and validation study",
       "url": "https://pubmed.ncbi.nlm.nih.gov/43020745/",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Carving the Neptunian desert as a function of stellar mass and lifetime XUV irradiation",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-20",
+      "summary": "The Neptunian desert is a prominent feature in the exoplanet population, thought to arise from both XUV-driven photoevaporation and tidal circularisation following high-eccentricity migration. However, the extent to which each mechanism contributes, and where, remains uncertain. We examine the desert as a function of stellar type as a test of these mechanisms. We determine the desert boundaries for subsamples of F, G, K, and M-hosted planets for radius against period, semi-major axis, bolometric instellation, and lifetime XUV irradiation. Going from F to M, we observe shifts in the boundary between 2.2-7.5 R$_\\oplus$ towards shorter orbital periods, smaller orbital distances, and much smalle",
+      "url": "http://arxiv.org/abs/2611.27836v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "What determines the properties of Population III binaries?",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-20",
+      "summary": "Population~III binaries may provide a gravitational-wave probe of the first stellar populations. Uncertain initial binary parameter distributions and evolutionary prescriptions complicate predictions of their remnant masses, birth orbits and formation spins. Varying these model evolutionary parameters (MEPs) jointly is needed to identify which MEPs shape each property and whether their effects persist among binaries that merge. We use \\textsc{StarTrack} to evolve $2\\times10^6$ initial binaries per model across 1152 configurations spanning eight MEPs. To our knowledge, this is the largest grid of Population~III isolated-binary population-synthesis models to date by number of distinct paramete",
+      "url": "http://arxiv.org/abs/2611.27820v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "2026 QQ8: Earth's temporary flyby of maximum lunation",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-20",
+      "summary": "Aims: On a rare occasion, asteroids are temporarily captured by the Earth to become the planet's interim companions. The discovery of asteroid 2026~QQ$_8$ provided an opportunity to study this class of objects, adding to the sparse discovery catalogue of Earth's temporary companions. Methods: We performed astrometric, photometric, and dynamical studies of 2026~QQ$_8$, and measured its solar radiation pressure signal to discern between a natural and an artificial origin. Results: We find 2026 QQ$_8$ to be of natural origin, with solar radiation pressure signal commensurable with natural objects and spectrophotometry of an S-type object. 2026 QQ$_8$ is Earth's third discovered otemporarily-cap",
+      "url": "http://arxiv.org/abs/2611.27770v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Disrupted stars and captured compact objects: Combining observations from multiple messengers to infer the population of massive black holes",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-20",
+      "summary": "Massive black holes (MBHs) are found in galactic centres, but their formation and evolution remain elusive. Tidal disruption events (TDEs) and extreme mass-ratio inspirals (EMRIs) both arise from stellar dynamics in the nuclear star clusters around MBHs, and are observed with electromagnetic surveys and gravitational waves, respectively. To overcome the scarcity of coincident detections, we formulate how to combine gravitational-wave detections from LISA-EMRIs with observations from ZTF-TDEs to measure properties of the MBH population. Building on two-dimensional Fokker-Planck simulations of EMRIs and TDEs, we model how their populations are affected by the MBH-host scaling relation, the nuc",
+      "url": "http://arxiv.org/abs/2611.27742v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Probing for relativistic outflows in the Ultraluminous X-ray pulsar RX J0209.6-7427",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-20",
+      "summary": "Context. Relativistic winds have been observed in Ultraluminous X-ray sources (ULXs), but their detection at large distances remains limited. Galactic neutron stars accreting matter from Be-star companions provide a valuable opportunity to improve our understanding of these outflows. Aims. RX J0209.6-7427 is a Be-XRB, powered by a neutron star with a spin period of 9.3 seconds, that underwent an outburst in 2019, exceeding a bolometric luminosity of $10^{39}$ erg s$^{-1}$ at its peak. Owing to its relatively low distance and a high-resolution XMM-Newton observation, this source is a strong candidate for investigating outflows associated with super-Eddington accretion. Methods. The RGS spectr",
+      "url": "http://arxiv.org/abs/2611.27693v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Nuclear Precision and Multimessenger Constraints on Neutron-Star Structure",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-20",
+      "summary": "Neutron-star cores retain structural freedom beyond the constraints supplied by nuclear measurements. We quantify this freedom through an observable-dependent variance ceiling and identify radius--Love compensation as a mechanism suppressing nuclear constraints on tides. Across four data-conditioned equation-of-state families, a pulsar radius measured to 0.3 km paired with a binary tide measured to 10\\% removes 44--68\\% of the current logarithmic Love-number variance. The framework connects laboratory precision and complementary stellar measurements to core structure.",
+      "url": "http://arxiv.org/abs/2611.27669v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Hints of planet formation in progress around DR Tau from observations with LBT SHARK-NIR and SHARK-VIS",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-20",
+      "summary": "Protoplanetary disks are the primary sites of planet formation. However, the direct imaging of protoplanets still embedded within their parental disks remains a significant challenge, with only a small number of confirmed detections to date and several candidates awaiting verification. We search for embedded planets in the protoplanetary disk of the young star DRTau by targeting accretion signatures from forming sub-stellar objects. Using narrow-band imaging, we observe both visible Halpha and near-infrared Paschen-beta (Pabeta) emission to identify actively accreting companions. To this end, we performed high-contrast observations of DRTau using the SHARK-VIS (0.40-0.95 micron) and SHARK-NI",
+      "url": "http://arxiv.org/abs/2611.27643v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Nuclear Urca cooling in magnetar crust and anomalous heating",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-20",
+      "summary": "We present a new result that the nuclear Urca process in magnetars, associated with ultrastrong magnetic field, dramatically alters the neutrino cooling efficiency to support higher surface temper ature, which is not common in ordinary neutron stars. A new formalism for neutrino luminosity accommodating finite temperature on top of magnetic field is extended with the use of realistic nuclear structure inputs for the Urca pair 29Na-29Mg. We find that the neutrino luminosity of Urca pair shows a spiral variation as a function of magnetic field and crust density, while the Urca pair persists, in contrast to previous studies. Applying geometrically correct volumetric energy loss rate to Urca she",
+      "url": "http://arxiv.org/abs/2611.27628v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "The GAPS programme at TNG. LXXXIII. Orbital refinement and atmospheric investigation of TOI-1518 b (BD+66 1610 b)",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-20",
+      "summary": "TOI-1518 b (BD+66 1610 b) is a highly irradiated ultra-hot Jupiter on a strongly misaligned orbit, a benchmark target for atmospheric and dynamical studies. We comprehensively characterise the TOI-1518 system by refining its orbital and physical parameters, and by investigating the chemical composition of the planetary atmosphere through transmission spectroscopy. We employed a joint Bayesian framework combining TESS photometry, HARPS-N high-resolution spectroscopy, and least-squares deconvolution profiles to break stellar geometrical degeneracies. We then applied single-line and cross-correlation function (CCF) transmission spectroscopy across theoretical templates. By anchoring the stellar",
+      "url": "http://arxiv.org/abs/2611.27589v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Modelling scintillation in Fast Radio Bursts",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-20",
+      "summary": "Fast Radio Bursts (FRBs) are bright, ms-duration, extragalactic radio transients. Propagation through inhomogeneities in the ionised medium produces scintillation, observed as frequency-dependent intensity variations in their spectra, with bright patches, called scintles. The characteristic scintillation bandwidth probes scattering material along the line of sight. Measuring this scale can be challenging when the observing bandwidth of the burst spectra contains a few scintles. We study the uncertainties associated with recovering $ν_s$ from frequency autocorrelation functions (ACFs) under finite-bandwidth conditions. We examine the recovery of $ν_s$ from individual ACFs and investigate if a",
+      "url": "http://arxiv.org/abs/2611.27527v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "The First Adolescent Super-Earth-Sized Multi-Planet System Around an M Dwarf: TOI-2079",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-20",
+      "summary": "We identify two planets in close-in orbits around the M-type star TOI-2079 as the first super-Earth-sized planets orbiting a multi-planet M dwarf with a well-determined age of $1$-$2$\\,Gyr. The interior planet, TOI-2079 b, has an orbital period of $1.49232359^{+0.00000099}_{-0.00000086}$ d, and the outer planet, TOI-2079 c, has an orbital period of $9.3174523\\pm0.0000098$ d. The host star characterization is based on spectroscopic observations, which classify it from an M1.5 to an M3.5 dwarf with an effective temperature of $3695\\pm77$ K. Further analysis determined TOI-2079's rotation period to be $17.33^{+0.29}_{-0.28}$ d. Multiple ground-based follow-up observations, combined with a state",
+      "url": "http://arxiv.org/abs/2611.27522v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Hard X-ray spectroscopy of a short-period asynchronous polar: IGR J19552+0044",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-20",
+      "summary": "IGR J19552+0044 is an asynchronous polar with a beat modulation of $\\approx2$ days due to $\\approx3$% spin-orbit asynchronism. We present the first hard X-ray properties of this system using a NuSTAR observation. Spectral modeling yields a shock temperature of $kT_{\\rm s}=44.50^{+3.60}_{-3.29}$ keV, implying a white dwarf mass of $M_{\\rm WD}\\geq 0.85\\,M_\\odot$. We infer an average accretion rate of $\\dot{M}\\sim 3.0\\times 10^{-11}\\,M_\\odot\\,{\\rm yr}^{-1}$, consistent with expectations for short-period systems (orbital period $<2$ h). Even at this low accretion rate, we detect a significant Compton reflection component that gives a shock height of $H\\sim 0.3\\,R_{\\rm WD}$. Time-resolved spectro",
+      "url": "http://arxiv.org/abs/2611.27508v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "A Relativistic Newton's Third Law for Binaries in Environments",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-20",
+      "summary": "We derive the relativistic form of Newton's Third Law governing the interaction between intermediate- and extreme-mass-ratio inspirals and surrounding relativistic matter fields. Working within a two-parameter expansion, we rewrite the evolution of the secondary's orbital elements in a form resembling the integrated forces acting on the environment, avoiding the need to calculate any gravitational perturbations sourced by the dynamical matter content. Using the retarded and advanced Green's functions, we obtain both instantaneous and orbit-averaged laws relating the rate of change of the secondary's orbital energy and angular momentum to that of the matter and the gravitational-wave fluxes a",
+      "url": "http://arxiv.org/abs/2611.27442v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Obliquity of Mercury with a fluid core and a deformable mantle",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-20",
+      "summary": "In anticipation of BepiColombo's orbital insertion in 2026, this study revisits the rotation of Mercury, modelling it with a fluid core and a deformable mantle. For this well-established physical model, we provide an analytical solution based on a novel Lagrangian formalism. Our approach enables a comprehensive 3D solution for the mantle's orientation, including the phase in longitude at the perihelion. The model incorporates dissipative torques from core-mantle boundary friction and tidal deformations, conservative pressure torques, and the effect of the planet's apsidal precession. We validate the equilibrium positions obtained numerically in previous studies, but identify discrepancies in",
+      "url": "http://arxiv.org/abs/2611.27409v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "IGRINS-2 Reveals an Oxygen-rich Dayside Atmosphere of WASP-12 b: Resolving the C/O Controversy",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-20",
+      "summary": "Recent studies have shown that measurements of hot-Jupiter atmospheric composition, including carbon-to-oxygen (C/O) and refractory-to-volatile (R/V) abundance ratios, provide powerful diagnostics of the chemistry and formation of gas giant planets. Important questions remain about the atmospheric composition of the ultra-hot Jupiter WASP-12 b: its dayside C/O ratio remains under debate, and its R/V ratio is not yet well constrained. We present high-resolution (R $\\sim$ 45,000) near-infrared dayside emission spectroscopy of the ultra-hot Jupiter WASP-12 b with IGRINS-2 on Gemini North during post-eclipse phases. Cross-correlation analysis reveals volatile molecular signals of H$_2$O and CO t",
+      "url": "http://arxiv.org/abs/2611.27082v1",
       "image": "",
       "type": "research"
     },
@@ -448,156 +598,6 @@
       "publishedAt": "2026-11-17",
       "summary": "Ancient Chinese records of lunar occultations of planets have been used to test planetary theories and investigate long-term changes in Earth's rotation. However, certain records contain identification errors whose origins remain poorly understood; we propose that some of these errors may arise from misidentifying guest stars, such as novae or supernovae, as planets. We analyzed 67 errata on lunar occultations of planets from Liu Ci-Yuan's (2015) monograph using modern ephemerides and the open-source Python package \\texttt{occultsky}, publicly available on GitHub. Using recorded dates and dynastic capital coordinates, we constructed observing windows anchored at solar noon and extending by $",
       "url": "http://arxiv.org/abs/2611.22800v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Low-state X-ray spectra of magnetized neutron stars: Probing accretion regimes in SFXTs",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-17",
-      "summary": "Supergiant fast X-ray transients (SFXTs) are a subclass of high-mass X-ray binaries characterized by prolonged quiescent states, making them ideal sources for studying accretion onto highly magnetized neutron stars (NSs) at low rates. In this work, we present a broadband spectral analysis of three SFXTs: IGR J16418$-$4532, IGR J17544$-$2619, and IGR J11215$-$5952, using archival $XMM-Newton$, NICER, and $ NuSTAR$ observations. Joint spectral fitting of the NICER and $NuSTAR$ data for IGR J16418$-$4532 confirms the presence of a cyclotron resonant scattering feature (CRSF) at $\\sim 50$ keV, implying a NS magnetic field strength of $\\sim 6\\times10^{12}$ G. We detect a cyclotron line at $\\sim27",
-      "url": "http://arxiv.org/abs/2611.22787v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Black hole ADaptive Multi-relation Mass Estimation based on Timing Analysis (BADMET)",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-17",
-      "summary": "Active galactic nucleus (AGN) variability is widely recognized as a promising avenue for constraining black hole mass, yet its practical application remains limited. Although the correlation between black hole mass and variability timescale has been extensively investigated, finite observational baselines often lead to systematic underestimation of the timescale, thereby hindering reliable mass estimation for individual sources. To address this limitation, we develop the Black hole ADaptive Multi-relation Mass Estimation based on Timing analysis (BADMET), an extendable framework that provides black hole mass estimates by assimilating multiple mass-related parameters that include variability ",
-      "url": "http://arxiv.org/abs/2611.22771v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Cataclysmic Variables from XMM-Newton and eROSITA",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-17",
-      "summary": "Cataclysmic variables (CVs) are interacting binaries where a white dwarf accretes material from a late-type donor. The most evolved systems, referred to as period-bouncers, host degenerate donors. We present XMM-Newton and eROSITA, which provide complementary views of the CV population. We summarize the capabilities of XMM-Newton for timing and spectroscopic studies, and its ability to characterize accretion geometries, magnetic field strengths, and short-term variability across magnetic/non-magnetic CVs. These data allow studies of individual systems, including magnetic period-bouncers with soft X-ray spectra and faint luminosities that offer insights into the late stages of CV evolution. W",
-      "url": "http://arxiv.org/abs/2611.22739v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Temporal polarization properties of accretion flows into supermassive black holes: INSANE as an alternative",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-17",
-      "summary": "Temporal variability and polarization provide unique diagnostics of the magnetic field structure and plasma dynamics in accretion flows around supermassive black holes. We investigate the temporal polarization properties of horizon-scale emission using general relativistic magnetohydrodynamic (GRMHD) simulations coupled with polarized general relativistic radiative transfer (GRRT) for three accretion states: Standard and Normal Evolution (SANE), Magnetically Arrested Disk (MAD), and an intermediate regime (INSANE). Fourier polarization-mode decomposition, through the ratio $|β_m|/|β_2|$, shows that MAD produces the most rotationally symmetric EVPA patterns, SANE the most asymmetric, and INSA",
-      "url": "http://arxiv.org/abs/2611.22707v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Magnetic Flux Eruptions in Magnetically Arrested Disks: Magnetic Reconnection and Bubble Expansion",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-17",
-      "summary": "Using a high-resolution GRMHD simulation of a magnetically arrested disk, we investigate the physical mechanism driving magnetic-flux eruption. The horizon-threading magnetic flux declines mainly in off-equatorial regions, whereas localized hot spots associated with magnetic reconnection appear near the equatorial plane around the onset of flux decline. A non-axisymmetric, magnetically supported low-density structure, which we identify as a magnetic bubble, expands radially and azimuthally within a pre-existing low-density channel in the filamentary accretion flow. Based on these findings, we propose a physical picture linking reconnection, bubble expansion, and horizon magnetic flux decline",
-      "url": "http://arxiv.org/abs/2611.22689v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Rest-frame annihilation lines of $\\sim70$ GeV WIMPs in 23,000 stacked galaxy clusters",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-16",
-      "summary": "Weakly interacting massive particle (WIMP) annihilation features were reported as a 43 GeV line in three Fermi-LAT galaxy clusters ($\\mathtt{S}_3$), as triad $\\{γγ, γZ,γh\\}$ lines from $\\sim70$ GeV WIMPs in LAT data cross-correlated ($\\mathtt{C}_{\\mathtt{W}}$) with western eROSITA X-rays, and as a nonad (combining three triads) of two cross-annihilating WIMPs in $\\mathtt{C}_{\\mathtt{W}}$. A blind scan of LAT 16.3-year data around 23,343 high-latitude clusters in their rest frames finds three triads, at 70 GeV ($2.8σ$ trial-corrected, henceforth), $72$ GeV ($1.3σ$; strengthening to $2.7σ$ if mass-fixed by $\\mathtt{S}_3$, $4.0σ$ combined with $\\mathtt{C}_{\\mathtt{W}}$ masked around the cluster",
-      "url": "http://arxiv.org/abs/2611.21595v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Compositions of Exoplanetary Debris Shaped by Milky Way Stellar Abundance Patterns",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-16",
-      "summary": "Galactic chemical evolution (GCE) predicts large-scale variations in exoplanet compositions with host star elemental abundances, reflecting the Milky Way's history of star formation and elemental enrichment from stellar feedback. We investigate the impact of GCE on the compositions of exoplanetary bodies using polluted white dwarfs (WDs), which probe the bulk elemental abundances of planetary debris. Using a literature sample of 70 polluted WDs, we calculate iron mass fractions for the accreted bodies and compare these to tracers of the WD progenitor's initial abundances, including age and kinematics. We demonstrate predicted trends using a sample of main sequence stars, and we show that the",
-      "url": "http://arxiv.org/abs/2611.21583v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Scaling of impact ripples across planetary conditions",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-16",
-      "summary": "Ubiquitous wind-driven (aeolian) ripples have been thought to emerge solely from grain collisions with the bed during saltation. Recent findings, however, have shown that there are two scales of aeolian ripples, with the larger scale having a hydrodynamic origin, akin to water ripples, and the smaller scale ('impact ripples') being hypothesized to emerge from the grain-bed collision mechanism. Still, there are several instances where only one ripple scale is found and the formation mechanism is not clear. Here we compare numerical simulations of only impact ripples with observations, over a broad range of planetary conditions, to clarify their defining characteristics. We find two main regim",
-      "url": "http://arxiv.org/abs/2611.21575v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "X-ray Flare Evolution and Changing-Look Nature of the TeV Blazar OQ 334",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-16",
-      "summary": "The blazar OQ 334 (B2 1420+326, z = 0.682) is one of the few jetted AGN with repeated changing-look (CL) transitions between FSRQ and BL Lac states. We present a multi-wavelength study covering 2017 December to 2024 September, focusing on three X-ray flares observed with Swift-XRT (X1: 2019 June 26--July 24, X2: 2020 January 4--February 21, X3: 2024 June 24--August 2) and on the spectral properties of the CL states. The spectrum hardens from flare to flare, with $Γ$ decreasing from $1.97 \\pm 0.09$ to $1.71 \\pm 0.04$ and $1.34 \\pm 0.06$, while the hysteresis evolves from an initial clockwise loop, consistent with cooling-dominated emission, to multi-loop trajectories in the later flares. The ",
-      "url": "http://arxiv.org/abs/2611.21518v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "The JWST Sub-Jupiters Survey: Observed Sensitivities to the Wide-Separation, Cold, Sub-Jupiter Exoplanet Population",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-16",
-      "summary": "We present a sensitivity analysis of three recent JWST direct imaging programs (GO-4050, GO-5835, and SURVEY-6005) designed to build a demographic study of sub-Jupiter mass ($0.1 - 1$ M$_{\\mathrm{J}}$) exoplanets in nearby young associations and moving groups. We find that these programs are sensitive to sub-Saturn to Jupiter mass exoplanets with effective temperature (T$_\\mathrm{eff}$) as low as $\\lesssim 250$ K, already at $\\sim 2$ arcsec. A comparison with the SHINE survey confirms that the improvements in mass sensitivity provided by JWST high-contrast imaging surveys outpace current ground observation for masses $\\lesssim 1$ M$_{\\mathrm{J}}$ and separations between $\\sim20-500$ au, open",
-      "url": "http://arxiv.org/abs/2611.21468v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "A First Look at Astrometric Outer Companions to Super-Earths and Sub-Neptunes using Gaia DR2 and DR3",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-16",
-      "summary": "Massive outer companions (OCs) are believed to promote, inhibit, or otherwise regulate the formation and composition of inner small planets (ISPs) both in the solar system and in exoplanetary systems. To assess how, we leverage calibrated absolute astrometry from Gaia DR2-DR3 of 7,321 FGKM dwarfs and present measurements of the relative occurrence rate of OCs in systems hosting known ISPs (i.e. P(OC$|$ISP)/P(OC)), including systems with inner super-Earths only, inner sub-Neptunes only, and across a range of spectral types and stellar metallicities. We search for OCs in pairs of planet and reference stellar samples using the orbital fitting framework Octofitter and characterize the occurrence",
-      "url": "http://arxiv.org/abs/2611.21436v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Conditions for mass-loading: Investigating jet-disk material exchange in strongly magnetised accretion flows",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-16",
-      "summary": "Relativistic jets are produced by accreting black holes across a wide range of masses, from stellar-mass X-ray binaries to supermassive active galactic nuclei (AGN). In low-luminosity AGN, these jets are believed to be powered by strongly magnetised accretion flows, a picture supported by Event Horizon Telescope and VLBI observations of M87. The jets often exhibit high-energy flaring emission which, if partly hadronic, implies that baryons must be loaded into the jet and accelerated despite strong magnetic barriers. However, the mechanism behind this remains unclear. We present high-resolution, three-dimensional General Relativistic Magnetohydrodynamic (GRMHD) simulations of a high-spin Magn",
-      "url": "http://arxiv.org/abs/2611.21401v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "EP241206a: A Sub-kilosecond X-Ray Flare Possibly from an Active Galactic Nucleus with a Flux Increase over 3 Orders of Magnitude",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-16",
-      "summary": "EP241206a is a fast X-ray transient detected with the Wide-field X-ray Telescope (WXT) on board the Einstein Probe. The event exhibited a single-peaked soft X-ray flare with a duration of $\\sim 500$ s and a peak flux of $1.0 \\times 10^{-9}$ erg s$^{-1}$ cm$^{-2}$ in 0.5--4 keV, spatially coincident with a spectroscopically confirmed active galactic nucleus (AGN) at $z = 0.62$. Follow-up and archival observations revealed persistent X-ray emission at a level of $\\sim 5 \\times 10^{-13}$ erg s$^{-1}$ cm$^{-2}$, corresponding to $L_{2-10 \\mathrm{keV}} \\simeq 2.3 \\times 10^{44}$ erg s$^{-1}$ if associated with the AGN; the WXT flare reached an estimated peak isotropic-equivalent rest-frame 2--10 ",
-      "url": "http://arxiv.org/abs/2611.21369v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Astrophysical Constraints for Bosonic Dark Matter in and Around Quark Stars",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-16",
-      "summary": "We investigate the structure, stability, and mass-radius relations of compact stars composed of quark matter within the non-ideal MIT Bag Model mixed with self-interacting bosonic dark matter with a $φ^n$ self-interaction potential. By solving the coupled two-fluid Tolman-Oppenheimer-Volkoff equations for boson masses between 200 MeV and 1 GeV and self-interaction strengths with $n=4$ and $n=40$, we show that strong self-interactions and higher boson masses enhance the stability of compact star configurations at high central pressures, though they reduce maximum overall masses. Ultra-compact solutions with $C \\ge 1/3$ capable of mimicking black holes are significantly restricted compared to ",
-      "url": "http://arxiv.org/abs/2611.21368v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "No Supersoft X-rays Before SN 2026ahvu: Constraints on a Potentially Prompt Type Ia Progenitor",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-16",
-      "summary": "The nearby Type Ia supernova SN 2026ahvu offers a rare opportunity to probe its progenitor that may have evolved unusually rapidly. If the progenitor formed in either of the two young stellar clusters near the explosion site in NGC 1433, the delay from star formation to explosion could have been $\\sim$100 Myr or less. The distance to NGC 1433 remains uncertain, with published estimates of 9.1 Mpc and 18.9 Mpc. Our preliminary fit to the rising ATLAS light curve yields a distance of $17.7^{+1.5}_{-1.4}$ Mpc. In the classical single-degenerate scenario, a white dwarf steadily burning hydrogen accreted from a non-degenerate companion can emit detectable supersoft X-rays before explosion. We sea",
-      "url": "http://arxiv.org/abs/2611.21342v1",
       "image": "",
       "type": "research"
     }
