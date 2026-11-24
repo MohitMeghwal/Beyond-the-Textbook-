@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-23T10:52:35.178078+00:00",
+  "lastUpdated": "2026-11-24T12:35:31.933320+00:00",
   "articles": [
     {
       "title": "Performance of artificial intelligence versus clinician left-ventricular segmentation of cardiac MRI for mortality prediction: a retrospective, multicentre, prognostic study.",
@@ -48,6 +48,156 @@
       "publishedAt": "2027 Aug 1",
       "summary": "clinicalage a framework for modelling ageing trajectories from longitudinal electronic health records in the uk a model development and validation study",
       "url": "https://pubmed.ncbi.nlm.nih.gov/43020745/",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "VLT, Keck, and Gemini characterization of the temporarily captured flyby 2026 QQ$_8$",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-23",
+      "summary": "Very Large Telescope, Keck I, and Gemini North photometry of 2026 QQ$_8$ on November 7-21 gives Sloan Digital Sky Survey-equivalent colors $g-r=0.594^{+0.056}_{-0.053}$, $g-i=0.840^{+0.066}_{-0.065}$, and $i-z=-0.104^{+0.067}_{-0.057}$ mag. Apollo 17 basalt slabs 75075,197 and 71055,239 fit the colors (reduced $χ^2$ of 0.57 and 0.89). The Bus-DeMeo Sq- and K-type templates give reduced $χ^2=0.87$ and 0.90, respectively. The colors permit both an Sq-like asteroid and exposed lunar basalt. With revised Keck timing uncertainties, 71 positions (August 19-November 21) give an outward acceleration of $(1.363\\pm0.090)\\times10^{-10}$ au day$^{-2}$ at 1 au, implying an area-to-mass ratio of $(6.02\\pm",
+      "url": "http://arxiv.org/abs/2611.31213v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Optimal Statistic for a Stochastic Gravitational Wave Background using Pulsar-Timing--Astrometry Cross Correlations",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-23",
+      "summary": "Astrometric measurements have emerged as a viable probe of gravitational waves (GWs), complementing pulsar timing searches by providing overlapping and higher GW frequency coverage. At its core, the search for GWs using astrometry is very similar to the search with pulsar timing data: GWs induce a change in pulse arrival times along the line of sight to a pulsar and a transverse angular deflection in the apparent position of a star. In analogy to pulsar timing, we develop a correlation statistic between pairs of stellar deflections for astrometry to search for a stochastic GW background. With a common formalism for both astrometry and pulsar timing, we also develop the cross-correlation stat",
+      "url": "http://arxiv.org/abs/2611.31196v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Probabilistic, facility-specific prioritisation of temperate exoplanets for atmospheric characterisation with JWST and the ELT",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-23",
+      "summary": "Deciding which temperate exoplanets to observe first matters for JWST transit spectroscopy and for planned ELT reflected-light instruments, yet signal-to-noise metrics ignore habitability and similarity indices ignore observability. We present an open Monte Carlo framework (UHI v6.1) that builds probabilistic priority lists separately for each facility and composition class, never as a single ranking. For each of 6,112 planets in the NASA Exoplanet Archive, 10,000 draws carry catalogue uncertainties through climate, cumulative stellar-XUV atmospheric retention, per-draw rocky, Hycean or gas-rich classes, and a JWST (transiting) or ELT/PCS (non-transiting) detection model, giving each planet ",
+      "url": "http://arxiv.org/abs/2611.31181v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "The Gamma-ray Luminosity Function of Fermi BL Lacertae Objects",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-23",
+      "summary": "We have used the largest sample of gamma-ray-selected Fermi BL Lacertae objects (1035 BL Lacs) ever used to determine the luminosity function and its evolution through cosmic time. This sample has its survey biases and selection effects well studied and a robust calculation of its detection efficiency. It spans a large range in luminosity ($L_{γ,min}$ = $5.71\\times10^{40}$ erg s$^{-1}$ and $L_{γ,max}$ = $1.76\\times10^{48}$ erg s$^{-1}$) and redshift ($ 0 < z \\lesssim 4 $). We find that the local luminosity function follows a double power law. The density evolution of BL Lacs depends on the luminosity of the objects, with low-luminosity objects showing negative evolution (i.e., they are less ",
+      "url": "http://arxiv.org/abs/2611.31177v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Enhancing eccentricity through tidal resonance in binary neutron star systems",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-23",
+      "summary": "Orbital eccentricity of binary neutron star systems is a key parameter to reveal their formation history. Since binaries formed in isolation are expected to circularize long before merger, measurable eccentricity suggests dynamical formation in dense stellar environments. However, using numerical-relativity simulations, we show that eccentricity can be introduced in the late inspiral of an initially quasicircular binary, due to the $f$-mode resonance of one of the stars. We simulate the merger of two highly spinning neutron stars, one star spinning prograde and the other retrograde. Persistent tidal resonance with the $f$ mode of the retrograde-spinning star is observed, accompanied by a gra",
+      "url": "http://arxiv.org/abs/2611.31172v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "The Sensitivity of Gamma-Ray Searches for Dark Matter Annihilation in Milky Way Dwarf Galaxies: the LSST Era and Beyond",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-23",
+      "summary": "We forecast the sensitivity of gamma-ray searches to dark matter annihilation in Milky Way satellite dwarf galaxies using BabyBison, a Monte Carlo pipeline combining cosmological satellite simulations and observational selection functions with a joint likelihood analysis of gamma-ray data. Although LSST is expected to substantially expand the catalog of known satellite galaxies, we find that these discoveries are likely to produce only modest improvements in the resulting dark matter annihilation constraints, typically below 20\\%. Much more substantial gains are possible, however, in relatively rare realizations that contain yet-to-be-discovered satellites with large $J$-factors. These resul",
+      "url": "http://arxiv.org/abs/2611.31130v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Selection-aware inference of supernova kicks",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-23",
+      "summary": "Observed compact objects (isolated or in binaries) used to infer natal kicks are selected by class membership, which depends on disruption, subsequent evolution, and discovery. Ignoring this selection can bias the inferred kicks. To demonstrate this bias in a comprehensive inference framework, we construct a differentiable model for key components of binary evolution, including correlated remnant-mass and kick prescriptions as well as survival probabilities. As initial conditions prior to the first SN, we use a fiducial COSMIC analysis. Using conventional statistical methods to assess bias due to omitted selection factors in a likelihood, we demonstrate this bias concretely. Reliable natal i",
+      "url": "http://arxiv.org/abs/2611.31123v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Relativistic dynamical friction and accretion for Kerr black holes",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-23",
+      "summary": "Extreme-mass-ratio inspirals (EMRIs) observed by LISA will probe the environments of massive black holes (BHs), including the dark matter (DM) overdensities expected to form around them. We compute the relativistic dynamical friction and accretion experienced by a non-spinning compact object on circular equatorial orbits around a Kerr BH embedded in a collisionless DM distribution, extending previous results in Schwarzschild. The DM is modeled as a spike grown adiabatically from an initial Hernquist profile, and the momentum transfer is obtained by integrating relativistic scattering and capture cross sections over the full, generically anisotropic phase space seen by the secondary. Far from",
+      "url": "http://arxiv.org/abs/2611.31061v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Dawn of the Gaia Era: Revisiting Cold Jupiters Orbiting M Dwarfs with Astrometry+Doppler Data Joint Analysis",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-23",
+      "summary": "We perform a joint analysis of ground-based radial velocities (RVs), Hipparcos Intermediate Astrometric Data, and two-epoch Gaia astrometry for known M dwarfs hosting cold Jupiters discovered through long-term spectroscopic monitoring. Among a sample of 25 planets in 19 systems, we derive robust absolute masses and orbital solutions for 13 planets in 11 systems with companion inclination uncertainties lower than 30 degrees. These include first mass measurements for five planets: GJ 328b, GJ 649b, GJ 849b and c, and GJ 9066c. We also reclassify one object, HIP 79431B, as a brown dwarf. We further compare the mass ratios of these 13 cold Jupiter systems with those of giant planets orbiting M s",
+      "url": "http://arxiv.org/abs/2611.31057v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Radial and vertical structure of accretion discs around magnetized stars",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-23",
+      "summary": "The ubiquity of accretion discs around magnetized stars motivates studies of the structure of these discs, in particular in whether the external magnetic field changes the radial and vertical profiles of pressure, temperature, and other quantities. We study the effects of the magnetic field of a central star on a steady accretion disc under the assumption that the magnetic field of the central star is able to partially penetrate the disc, with a degree of penetration quantified by a single parameter. We construct an analytical model of the interaction between the disc and the star's magnetic field. The equations of motion are modified to take the magnetic field into account. We solve the ver",
+      "url": "http://arxiv.org/abs/2611.30967v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Early Realignment of Eccentric Planetary Orbits without Orbital Decay",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-23",
+      "summary": "Warm Jupiters are, on average, more closely aligned with their host stars than hot Jupiters, even at high eccentricities. The low projected obliquities of eccentric warm Jupiters on the tidal migration track are difficult to reconcile with high-eccentricity migration (HEM) pathways that excite large misalignments. We examine whether tides acting on the star can realign initially misaligned systems before their orbits circularize. We extend a frequency-dependent tidal model to arbitrary eccentricities and focus on the $(1,0)$ obliquity tide. This component is stationary in the inertial frame, dissipates stellar rotational energy, and can change spin obliquity while leaving the semimajor axis ",
+      "url": "http://arxiv.org/abs/2611.30855v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Search for Axion-like Particles using Blazar Observations with the HAWC Observatory",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-23",
+      "summary": "Axion-like particles (ALPs) can mix with photons in astrophysical magnetic fields, modifying the propagation of very-high-energy gamma rays from distant blazars and producing an energy-dependent enhancement of the observed flux relative to the standard expectation from absorption on the extragalactic background light (EBL). We search for this signature through a joint likelihood analysis of seven TeV BL Lac objects at redshifts $z = 0.14-0.60$, combining approximately 3,000 days of HAWC observations with published High Energy Spectroscopic System (H.E.S.S.), Major Atmospheric Gamma Imaging Cherenkov Telescopes (MAGIC), and Very Energetic Radiation Imaging Telescope Array System(VERITAS) spec",
+      "url": "http://arxiv.org/abs/2611.30818v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Constraining Gamma-Ray Emission Beyond the TOV Limit: A Targeted Fermi-GBM Search for Counterparts to 39 LVK Gravitational-Wave Candidates in GWTC-5.0",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-23",
+      "summary": "We present a systematic search for sub-threshold gamma-ray counterparts within a one-day time window of 161 gravitational-wave (GW) events from the GWTC-5.0 catalog, whose inferred source masses exceed the adopted Tolman--Oppenheimer--Volkoff (TOV) limit, using the Gamma-ray Targeted Search (GTS) pipeline. The search identifies 39 candidate GW--gamma-ray pairs satisfying the adopted joint likelihood-ratio thresholds. None of these candidates exhibits a temporal offset compatible with the prompt-emission delay observed for GW170817 ($\\sim 1.7$ s); the smallest temporal separation is 17 min 17.976 s, ruling out GW170817-like prompt temporal associations in our candidate sample. Several candida",
+      "url": "http://arxiv.org/abs/2611.30800v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Archival X-Ray Observations of the Eclipsing Algol-type Binary TV~Cassiopeiae",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-23",
+      "summary": "TV~Cassiopeiae (TV~Cas) is an eclipsing Algol-type binary with a B9\\,V primary and an evolved late-type secondary in a 1.81-day orbit. We examine six serendipitous Chandra and two XMM-Newton observations spanning 2003--2012. The supplied Chandra spectra show thermal plasma near 1~keV and sub-solar fitted abundances, with an additional hotter component in one observation. EPIC-pn fits improve substantially with two temperatures: approximately 0.74/1.39~keV in 2003 and 0.87/2.16~keV in 2012. At 240~pc their nominal intrinsic 0.3--8~keV luminosities are $7.1\\times10^{30}$ and $1.2\\times10^{31}$~erg~s$^{-1}$, but residual structure, particularly in 2012, and response-calibration uncertainties li",
+      "url": "http://arxiv.org/abs/2611.30701v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Reconstructing the depth of first interaction in extensive air showers from fluorescence detector profiles with a physics-motivated neural network",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-23",
+      "summary": "We present a physics-motivated neural network that reconstructs, event by event, the depth of the first interaction of ultra-high-energy cosmic rays from longitudinal profiles measured by fluorescence detectors. The network couples a convolutional encoder to a decoder that implements the Gaisser-Hillas function and predicts quantiles of the target, providing a per-event uncertainty estimate. It is trained and evaluated on four million proton- and iron-induced showers between $10^{18}$ and $10^{20}$ eV, simulated with the hadronic interaction models EPOS LHC-R and Sibyll 2.3d and processed by an end-to-end simulation of the fluorescence detector response. Despite detector effects, the reconst",
+      "url": "http://arxiv.org/abs/2611.30661v1",
       "image": "",
       "type": "research"
     },
@@ -448,156 +598,6 @@
       "publishedAt": "2026-11-18",
       "summary": "Fast radio bursts (FRBs) probe the integrated free-electron density along extragalactic sightlines and can be used to study late-time cosmic evolution. Conventional Bayesian analyses require repeated evaluations of computationally expensive likelihoods, making inference increasingly challenging as FRB catalogs grow. In this work, we develop an interpretable attention-based neural posterior estimator (AttNPE) for rapid posterior inference of the physical parameters from FRB catalogs with measured redshifts. The attention encoder compresses the catalog into a low-dimensional representation, and a conditional masked autoregressive flow maps samples from a base distribution to the seven-dimensio",
       "url": "http://arxiv.org/abs/2611.24542v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Sun-like stars show lowered X-ray activity together with over-rotation at beyond-solar ages",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-18",
-      "summary": "In recent years, substructure in the age-rotation relationship of cool, sun-like stars has been identified, showing deviations from the historical Skumanich law. Since magnetic activity is expected to be the physical root cause of the stellar spin-down, namely via the magnetic braking process mediated through stellar winds, changes in spin-down should correspond to unusual activity behaviour. We selected a sample of old sun-like stars in the solar neighborhood with asteroseismic age estimates and measured rotation periods, and present an analysis of their magnetic activity using deep X-ray observations from XMM-Newton. We observe that sample stars less massive than the Sun (late-G and early-",
-      "url": "http://arxiv.org/abs/2611.24459v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "A lepto-hadronic perspective on the properties of the candidate neutrino-emitter blazar 5BZQ J0808+4950",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-18",
-      "summary": "The role of active galactic nuclei in the production of high-energy neutrinos has been highlighted by the association of the blazar TXS 0506+056 and the Seyfert galaxy NGC 1068 with IceCube neutrino events. In particular, blazars, with their powerful jets, are potential sites of neutrino production via (photo-)hadronic interactions. The gamma-ray bright blazar 5BZQJ0808+4950 is consistent with a spatial anisotropy in the IceCube neutrino all-sky maps. An individual high-energy neutrino event, IC110929A, was also reported in the direction of this blazar. Although the correlation between the gamma-ray bright blazars and the neutrino production remains inconclusive, 5BZQ J0808+4950, with a lumi",
-      "url": "http://arxiv.org/abs/2611.24418v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Analytical formulae for planet-planet or moon-moon tides",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-18",
-      "summary": "Almost negligible among the solar system planets, mutual tides raised by a secondary on another secondary orbiting the same primary may gain increased importance in tightly packed systems, e.g., between the components of close-in exoplanetary systems or between the moons of gas giants. In this work, we derive an analytical formula for the planet-planet tidal potential and for the effect of mutual tides on the rotational and orbital evolution of moons or planets in a coplanar configuration. The procedure follows closely the steps of W. M. Kaula (1961), and the resulting potential and derived quantities are presented in the form of an expansion into modes of different frequencies (in the tempo",
-      "url": "http://arxiv.org/abs/2611.24416v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Asgard/NOTT: L-band nulling interferometry at the VLTI IV. Prospects for characterising hot exozodiacal dust",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-18",
-      "summary": "Near-infrared interferometric surveys have revealed extended emission around the photosphere of $\\approx 40$ main-sequence stars, attributed to the presence of hot exozodiacal dust (HEZD). A promising technique for investigating this phenomenon is nulling interferometry. The Very Large Telescope Interferometer (VLTI) nulling interferometer NOTT (Nulling Observations of exoplaneTs and dusT) is designed to characterise exoplanets and HEZD in the $L'$ band ($3.5-4.0\\,μ$m). We aim to assess NOTT's potential for the detection and characterisation of HEZD with various instrumental and model parameter configurations. We model the HEZD as an optically thin dust ring, using the nearby Sun-like star $",
-      "url": "http://arxiv.org/abs/2611.24397v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Possible origins of the two γ-ray components C0 and C1 in IC 443",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-18",
-      "summary": "Recent LHAASO observations of IC~443 reveal that its high-energy $γ$-ray emission can be decomposed into two components with clearly distinct spatial morphologies and spectral properties, namely the compact component C0 and component C1 with an angular extent of 0.67$^\\circ$. We aim to explain the $γ$-ray emission mechanisms responsible for the two components in IC~443 and to further investigate their respective possible astrophysical counterparts. We model components C0 and C1 independently using two different physical scenarios. For component C0, we adopt an SNR-MC hadronic model that accounts for finite source-size effects to describe the escape and diffusion of high-energy particles and ",
-      "url": "http://arxiv.org/abs/2611.24300v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Near Resonance, Less Ordered: Radius and Mass Ordering in Compact Multi-planet Systems",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-17",
-      "summary": "Compact multi-planet systems exhibit a tendency for planetary radii to follow ordered sequences with orbital position, suggesting that these non-random patterns preserve a fossil record of their formation. Here, we investigate whether ordering of planet radii and masses with orbital period is related to proximity to mean-motion resonances. We compare near-resonant and non-resonant systems using complementary rank- and inversion-based measures of ordering, while accounting for differences in planet multiplicity and uncertainties in the measured planetary properties. We find that radii and masses are less monotonically ordered in near-resonant systems than in non-resonant systems, with the pri",
-      "url": "http://arxiv.org/abs/2611.23217v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Convergence of the quasinormal-mode expansion of the Kerr Green function",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-17",
-      "summary": "Black-hole ringdown is usually modeled as a linear superposition of quasinormal modes, and fits to gravitational-wave observations increasingly include high overtones. However, the overtone sum does not necessarily converge: overtones are more strongly damped and thus decay faster in time, but their amplitudes in the Green function (the signal at an observer produced by an impulse at a source point) grow, so the mode description may break down before a finite time. We show that for a rotating (Kerr) black hole this time has a clear geometric meaning. For highly damped modes, the amplitudes grow exponentially with the optical distance from the source and the observer to a characteristic \"boun",
-      "url": "http://arxiv.org/abs/2611.23110v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "An Efficient Method for Directly Integrating the Vlasov Equation in Collisionless and Weakly-Collisional Simulations",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-17",
-      "summary": "We describe and test a new numerical method to solve the Vlasov/Boltzmann equation in systems with arbitrary levels of collisionality. The method combines recent ideas to evolve the distribution function (DF) directly in 6+1 dimensional phase-space in a manner which is Lagrangian in both position+velocity. The 'particles' of traditional Monte-Carlo/Particle-In-Cell/N-body (MC/PIC/NB) methods become mesh-generating points defining a volume partition, each of which carries a set of momentum-Lagrangian basis functions representing a local anisotropic momentum DF. The DF is then integrated between cells and bases via a higher-order reconstruction and Godunov-type method, evolving a 10 or 13-mome",
-      "url": "http://arxiv.org/abs/2611.23084v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "The low-luminosity state of the Be/X-ray pulsar IGR J06074+2205",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-17",
-      "summary": "Context. At low accretion rates, X-ray pulsars can develop a two-hump spectrum through the thermalization and Comptonization of cyclotron photons in an accretion-heated, strongly magnetized atmosphere. Sources with independently measured cyclotron-line energies, $E_{\\rm cyc}$, are particularly important because they provide a direct estimate of magnetic field strength and allow the continuum shape to be tested against spectral formation models. Aims. We investigate the luminosity-dependent spectral evolution of the Be/X-ray pulsar IGR J06074+2205 and constrain the accretion regime in its newly observed low-luminosity state. Methods. We analyzed three NuSTAR observations obtained during the 2",
-      "url": "http://arxiv.org/abs/2611.23011v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "\\texttt{StochAXtic}: a JAX-Accelerated, End-to-End Differentiable Framework for Gravitational-Wave Backgrounds from Compact Binary Populations",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-17",
-      "summary": "We present \\texttt{StochAXtic}, a package for computing the dimensionless energy density spectrum $Ω_{\\mathrm{GW}}(f)$ of the stochastic gravitational-wave background generated by compact binary coalescences. Rather than sampling binary populations via Monte Carlo, \\texttt{StochAXtic} exploits the \\emph{scale invariance} of the waveforms: at fixed mass ratio, spins and tidal deformabilities, the waveform depends on the total mass only through the dimensionless combination $Mf$. This allows all computationally expensive waveform evaluations using \\texttt{LALSuite} to be performed once and stored in a population-independent lookup table. The subsequent integrals over mass and redshift can then",
-      "url": "http://arxiv.org/abs/2611.22999v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Observational diagnostics of external photoevaporation at millimetre wavelengths",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-17",
-      "summary": "External photoevaporation is increasingly recognised as an important influence on protoplanetary disk evolution. However, there are no established molecular line diagnostics that can reliably distinguish external irradiation from variations in intrinsic stellar and disk properties. We use a large grid of thermochemical models to predict the fluxes of 48 transitions from eight species observable with ALMA, spanning a wide range of system properties and external FUV fields of 100 to 100,000 G0. At fixed stellar and disk properties, all transitions generally brighten with increasing FUV field strength. HCO+ and CO fluxes increase monotonically in virtually all disks, whereas lower-excitation li",
-      "url": "http://arxiv.org/abs/2611.22952v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Probing the Macroscopic Imprints of Singularity Resolution: Polarization Diagnostics of Rotating ABG Black Holes",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-17",
-      "summary": "Recent observations by the Event Horizon Telescope have revealed important electromagnetic information around the supermassive black holes $\\text{M87}^*$ and $\\text{Sgr A}^*$, providing experimental supports for investigating physics near the event horizon. In the absence of a complete quantum gravity theory, exploring the observational appearances and polarized images of accretion flows in regularized geometries, and seeking specific observational differences from Kerr black holes, is of value for understanding the singularity problem. Based on backward ray tracing method, this work investigates both the optical and polarimetric observational features of rotating Ayón-Beato-García spacetime",
-      "url": "http://arxiv.org/abs/2611.22936v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "A novel method for dust evolution in protoplanetary disks and a new criterion for gap opening",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-17",
-      "summary": "We present the Grain Residence-Time Method (GRTM), a computationally efficient particle-tracking approach for studying dust evolution and trapping in protoplanetary disks. By reconstructing steady-state dust distributions from particle residence times, this method provides a way to obtain radial dust surface density profiles without directly evolving the dust as a fluid. We compare the GRTM with dust profiles computed via standard methods using the $\\texttt{FARGO3D}$ code, which models the dust as a pressureless fluid, and find very good agreement over a wide range of parameter space. Finally, we investigate how dust gap formation depends on the planet-to-star mass ratio ($q$) and Stokes num",
-      "url": "http://arxiv.org/abs/2611.22913v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Search for UHE photon sources using direction-time clustering algorithms with a BDT particle discriminant",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-17",
-      "summary": "Direction-time clustering methods for neutral particle searches are motivated by the possibility that ultra-high-energy (UHE) neutral particles are produced during flaring periods of various astrophysical sources. In this scenario, clusters of events correlated in both arrival direction and time would be generated, which, when observed, would indicate a neutral-particle flare, and a non-observation would provide upper limits on fluxes for point-like sources. Focusing on UHE photon searches, an improvement of the sensitivity of direction-time clustering methods by the application of different photon tags, such as the depth of the extensive air shower maximum (X_max), the lateral distribution ",
-      "url": "http://arxiv.org/abs/2611.22833v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "New Historical Guest-Star Candidates from Reassessed Chinese Records: Lunar Occultation of Planets",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-17",
-      "summary": "Ancient Chinese records of lunar occultations of planets have been used to test planetary theories and investigate long-term changes in Earth's rotation. However, certain records contain identification errors whose origins remain poorly understood; we propose that some of these errors may arise from misidentifying guest stars, such as novae or supernovae, as planets. We analyzed 67 errata on lunar occultations of planets from Liu Ci-Yuan's (2015) monograph using modern ephemerides and the open-source Python package \\texttt{occultsky}, publicly available on GitHub. Using recorded dates and dynastic capital coordinates, we constructed observing windows anchored at solar noon and extending by $",
-      "url": "http://arxiv.org/abs/2611.22800v1",
       "image": "",
       "type": "research"
     }
