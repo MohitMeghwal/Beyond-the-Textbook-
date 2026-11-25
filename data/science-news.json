@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-24T12:35:31.933320+00:00",
+  "lastUpdated": "2026-11-25T11:25:13.827549+00:00",
   "articles": [
     {
       "title": "Performance of artificial intelligence versus clinician left-ventricular segmentation of cardiac MRI for mortality prediction: a retrospective, multicentre, prognostic study.",
@@ -48,6 +48,156 @@
       "publishedAt": "2027 Aug 1",
       "summary": "clinicalage a framework for modelling ageing trajectories from longitudinal electronic health records in the uk a model development and validation study",
       "url": "https://pubmed.ncbi.nlm.nih.gov/43020745/",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Self-arresting vortex rearrangements in pinned spinning-down superfluids",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-24",
+      "summary": "Superfluids, in a spinning-down container with pinning centres, exhibit sudden collective migration of quantized vortices. The onset, progress, and termination of this process remain poorly understood. Here, we show that: 1) the first exodus of vortices occurs when a sector of the vortex array, having a minimum opening angle, is vacated close to the wall; 2) driven by this exodus, the superfluid flow near the boundary continually decreases in strength and arrests the exit; and 3) the resultant depletion region has well-defined dimensions---governed primarily by the critical unpinning velocity, the container size, and the initial rotation rate---that limit the angular momentum transferred to ",
+      "url": "http://arxiv.org/abs/2611.33103v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "A comparative analysis of the presence of haze in sub-Neptunes observed with JWST",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-24",
+      "summary": "Photochemical hazes have been proposed to explain the diversity of sub-Neptune transmission spectra, with early HST observations suggesting a temperature-dependent trend in aerosol opacity. However, JWST observations reveal a more heterogeneous picture. Here, we perform a consistent atmospheric retrieval analysis of eight moderately irradiated JWST-observed sub-Neptunes, LP 791-18 c, TOI-1231 b, TOI-732 c, TOI-270 d, GJ 1214 b, GJ 9827 d, GJ 3090 b, and TOI-421 b, using experimentally derived haze optical properties. We compare haze-free models with two experimentally haze analogues to assess haze evidence and spectral signatures. We find significant evidence for haze in LP 791-18 c, TOI-732",
+      "url": "http://arxiv.org/abs/2611.32950v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "TeV Gamma-Ray Transparency Bounds on Neutrinos and Axions",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-24",
+      "summary": "Multi-TeV gamma rays propagating over cosmological distances measure the extragalactic background light (EBL) through attenuation by electron--positron pair production. This is particularly valuable in the infrared, where the EBL is difficult to measure directly. Since the growing sample of observed multi-TeV photons provides tight constraints on the EBL photon intensity, this, in turn, constrains new particles that radiatively decay into meV--eV photons. We set the first TeV-transparency bounds on active-neutrino electromagnetic transition moments, obtain new constraints on radiatively decaying sterile neutrinos, and derive competitive limits on the axion--photon coupling.",
+      "url": "http://arxiv.org/abs/2611.32905v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "On the potential of widening the band of X-ray polarimetry",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-24",
+      "summary": "The Imaging X-ray Polarimetry Explorer (IXPE) has made X-ray polarimetry a routine astrophysical diagnostic, but its sensitivity is confined to the 2-8 keV band, where the photoelectric effect in a gas is most efficiently exploited. Several of the questions raised by its results, as well as some classical goals of high-energy astrophysics, require polarimetry below 2~keV, to reach the thermal emission of neutron stars, black-hole discs and blazars, and above 8~keV, where reflection, cyclotron lines and the non-thermal emission of supernova remnants, pulsar wind nebulae and magnetars can be isolated. Following a recent review of the subject, we discuss the scientific case for extending the ba",
+      "url": "http://arxiv.org/abs/2611.32885v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Super-Eddington Neutron Star Accretion Columns: Comparing GRRMHD Simulations with Spectral Models",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-24",
+      "summary": "The geometry and structure of neutron star accretion columns affect the X-ray emission in super-Eddington accreting systems. We perform four axisymmetric general relativistic radiation magnetohydrodynamic simulations of super-Eddington accretion onto magnetized neutron stars with the maximum surface magnetic fields ranging from $3\\times10^{10}$ to $1\\times10^{11}\\,\\mathrm{G}$. We measure the column width and estimate the characteristic radiation shock heights from the flow velocity and velocity gradient. Across the four models, the angular width decreases from approximately $0.14$ to $0.07\\,\\mathrm{rad}$, while the estimated shock height increases from $1.95$ to $3.89\\,\\mathrm{km}$. We then ",
+      "url": "http://arxiv.org/abs/2611.32865v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "MINDS: The mid-infrared spectrum of the disk, jets, and winds of DG Tau",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-24",
+      "summary": "DG Tau is one of the best-studied young stellar objects in transition from a Class I protostar to a T Tauri star. It is no longer embedded in a dense molecular cloud, but still reveals features that are commonly seen in protostars at earlier evolutionary stages. DG Tau hosts a protoplanetary disk and two energetic jets that can be studied down to the immediate environment of the star and disk at optical, infrared, and X-ray wavelengths. We use the Medium Resolution Spectrometer of MIRI on the James Webb Space Telescope. DG Tau's mid-infrared spectrum consists of a very bright continuum with various silicate features, and lines of CO, H$_2$O, OH, H I, H$_2$, Ne$^{+}$, Ne$^{2+}$, Ar$^{+}$, Fe$",
+      "url": "http://arxiv.org/abs/2611.32856v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "CORALIE Radial Velocity Search for Companions around Evolved Stars (CASCADES) VI. Revised masses and homogeneous estimation of the stellar parameters of 583 red giants",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-24",
+      "summary": "Giant-star radial-velocity surveys allow us to study how the exoplanet population varies with stellar mass and evolution. However, obtaining accurate estimates of stellar masses for such stars is challenging, as methods like isochrone fitting are prone to large errors due to the degeneracy associated with the closeness of isochrones. We provide a homogeneous re-derivation of the stellar parameters of the CASCADES giant-star survey. This includes parameters obtained from spectral energy distribution fitting, as well as an update of the stellar masses using asteroseismology. We use TESS light curves to measure the frequency of maximum oscillation power, $ν_{\\rm max}$, for all the stars when ap",
+      "url": "http://arxiv.org/abs/2611.32831v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Dynamical conditions for tilting Neptune during planetary migration",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-24",
+      "summary": "Giant planets are expected to form with near-zero obliquities, so that their current tilts must be the result of some post-formation processes. Capture into spin-orbit resonances has been shown to provide a viable mechanism for explaining the current obliquities of Jupiter, Saturn, and Uranus. We aim to determine whether specific configurations of a primordial satellite system of Neptune could have enabled the tilting of its spin axis during planetary migration. We modeled Neptune's secular spin-axis dynamics, including the presence of a primordial satellite system that enhanced the planet's precession constant. We numerically explored the conditions on the primordial satellite system that c",
+      "url": "http://arxiv.org/abs/2611.32787v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Stellar-evolution systematic biases on $^{12}\\text{C}(α,γ)^{16}\\text{O}$ constraints from the primordial-black-hole mass gap",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-24",
+      "summary": "The $^{12}\\text{C}(α,γ)^{16}\\text{O}$ reaction determines helium-burning carbon-oxygen core masses and sets the pair-instability-supernova mass-gap boundary, which limits the maximum mass of stellar-origin primordial black holes. Gravitational-wave population analyses using GWTC-4 report a low-spin-black-hole upper cutoff at $68.5^{+19.8}_{-18.5}\\,M_\\odot$, implying a low astrophysical S-factor $S_{300}\\approx 108.6\\,\\mathrm{keV\\,barn}$, in tension with canonical nuclear-astrophysics evaluations. However, stellar-evolution systematic uncertainties from metallicity, rotation, and mass-loss prescriptions remain poorly quantified. Here we use the MESA stellar-evolution code to construct a three",
+      "url": "http://arxiv.org/abs/2611.32692v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Cosmic ray protons from 40 GeV to 10 EeV due to star formation?",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-24",
+      "summary": "The formation of massive stars eventually results in supernovae explosions. Typical supernova remnants (SNRs) accelerate cosmic ray (CR) protons up to $E_{max-p} \\sim 10$ TeV; the value of $E_{max-p}$ may reach $\\sim 1$ EeV for the case of the hypernovae and/or for a sub-relativistic velocity of the SNR's shock wave. We show that the observable CR proton spectrum in the energy range between 40 GeV and 10 EeV is reasonably well described with a sum of three components that correspond to three distinct SNR populations. We consider two basic scenarios of CR origin: I) the supergalactic scenario assuming diffusion of the protons inside a magnetic field structure with the characteristic radius $H",
+      "url": "http://arxiv.org/abs/2611.32671v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Critical Eddington luminosity and photon cooling of compact spherical stars",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-24",
+      "summary": "Context. Relativistic corrections to the luminosity have been used for neutron stars of radius greater than $3MG/c^2$ in studies of X-ray bursts. However, there is no fundamental limit that excludes the existence of more compact massive objects with a physical surface, fluid or solid. Aims. We aim to discuss critical \"Eddington\" luminosity for spherical stars that have a surface within the sphere of unstable circular photon orbits (photon sphere). Methods. We use standard analytical ray-tracing formulae in the Schwarzschild metric. Results. We find that for stars within the photon sphere, the Eddington condition for balance between radiative force and gravitational attraction is fundamentall",
+      "url": "http://arxiv.org/abs/2611.32629v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "A homogeneous mass campaign of transiting sub-Neptunes around FGK stars",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-24",
+      "summary": "Sub-Neptunes are among the most common planets in our Galaxy, but are still poorly understood. Addressing their origins and compositions requires precise bulk densities, but literature values come from studies using different radial velocity (RV) extraction methods, stellar activity treatments, and statistical frameworks, which introduces systematic biases that can lead to spurious conclusions in population-level analyses. We conducted a systematic and homogeneous mass-measurement campaign for 12 sub-Neptune systems observed by Kepler and K2, selected for their absent or poorly constrained masses ($σ_{M_p}/M_p > 25\\%$). Using new HIRES, HARPS-N, and ESPRESSO spectroscopy as well as archival ",
+      "url": "http://arxiv.org/abs/2611.32356v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Kepler-404: A near-resonant pair of sub-Neptunes. Reinterpreting a false-positive signal with the novel detection method RIVERS.radon",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-24",
+      "summary": "According to the current understanding of planet formation and evolution, (near)-resonant systems should be a common occurrence in nature. However, pairs of planets with period ratios close to commensurability are rarely observed. In this paper, we discuss how observational bias caused by transit timing variations (TTVs) can affect the detection of low signal-to-noise ratio (S/N) planets in transit surveys, playing a role in the lack of representation of these systems. We present an alternative detection method, RIVERS.radon, which overcomes the effect of TTVs on planet detectability by not relying on an exact periodic solution for the transit signal. It leverages 2D representations of the l",
+      "url": "http://arxiv.org/abs/2611.32298v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Plasma Heating by Magnetic Reconnection and Alfven Waves in Collisionless Shocks",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-24",
+      "summary": "In collisionless shock waves, the ion and electron temperatures generally differ, and the mechanisms governing their energy partitioning remain one of the central unresolved problems in shock physics. Although energy can be exchanged through various plasma waves generated upstream and downstream of the shock, large-amplitude Alfven waves excited by ions reflected at the shock front play a particularly important role in high-Mach-number shocks. In this study, we focus on these large-amplitude Alfven waves and examine not only plasma heating through conventional wave-particle interactions but also preferential ion heating driven by magnetic reconnection within current sheets formed by trains o",
+      "url": "http://arxiv.org/abs/2611.32287v1",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "The 2026 iron meteorite fall near Zadzim (Poland) and atmospheric ablation of iron meteoroids",
+      "category": "Scientific Research",
+      "source": "arXiv",
+      "publishedAt": "2026-11-24",
+      "summary": "Understanding the process of penetration of cosmic material through the Earth's atmosphere is important for linking the atmospheric and ground effects with the properties of original bodies. It has been shown previously that the main process affecting the fate of stony impactors is atmospheric fragmentation. Much less is known about iron impactors,mainly because the scarcity of data about actual iron meteorite falls. Here we present the trajectory, dynamics, light curve, spectrum, and orbit of a fireball which occurred on April 17, 2026, over Poland and was observed by the European Fireball Network and the Skytinel Network. Based on the fireball observations, single 2.9 kg iron meteorite was",
+      "url": "http://arxiv.org/abs/2611.32268v1",
       "image": "",
       "type": "research"
     },
@@ -448,156 +598,6 @@
       "publishedAt": "2026-11-19",
       "summary": "We present optical imaging (\\textit{BVRI} bands) and low-resolution optical spectroscopic follow-up of Type IIb supernova SN~2017gkk that occurred in NGC~2748. These observations consist of 31 and 17 epochs of photometry and spectroscopy, spanning $\\sim$\\,218 days since the $V$-band peak. The light curve analysis infers that the SN reached maximum in $\\sim$\\,13~days after the explosion with an absolute magnitude of $M_\\mathrm{V}$\\,=\\,--17.01\\,$\\pm$\\,0.07 mag. The peak pseudo-bolometric luminosity of SN~2017gkk is $L_{\\rm bol}=(8.37\\pm0.19)\\times10^{41}\\,\\mathrm{erg\\,s^{-1}}$. Between 25 and 80 days (after maximum), SN~2017gkk displays a fast decline rate of $2.35\\pm0.06~\\mathrm{mag\\times(100",
       "url": "http://arxiv.org/abs/2611.26306v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "The Silk Nebula Revisited: A Comment on Wu et al. (2026) and New Constraints from Archival Survey Spectroscopy",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-19",
-      "summary": "Wu et al. (2026) used one LAMOST MRS-N plate to suggest that the Silk Nebula, a $17^\\circ$-long \\Oiii~$λ$5007 filament in Gemini, is possibly associated with a supernova remnant at a fiducial distance of $\\sim$160\\,pc. We test this against their published values and independent archival data. The \\Ni\\ airglow in their blue-arm spectrum lies at air, topocentric rest wavelengths, so their \\Oiii\\ velocities omit the heliocentric correction and are $10.1\\pm1.0$\\,\\kms\\ too high. Corrected and combined with DESI DR1 and SDSS spectra, \\Oiii\\ lies at \\vhel\\ $=+13.3\\pm1.0$\\,\\kms, the velocity of \\Nii\\ and of the local warm ionized medium (WIM). Their \\Ha\\ velocities are 4.5--6.7\\,\\kms\\ redder than \\N",
-      "url": "http://arxiv.org/abs/2611.26243v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "The gravitational wave candidate S251112cm: near-complete optical coverage with ATLAS, Pan-STARRS and the Vera C. Rubin Observatory",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-19",
-      "summary": "On 2025 November 12, the LIGO-Virgo-KAGRA (LVK) network detected S251112cm, a compact binary merger candidate with a false alarm rate of one per four years at a luminosity distance of $93 \\pm 27$ Mpc. The probability that the lighter component's mass lies below 1 $M_\\odot$ is >99%, while the probability that either component lies at 1-3 $M_\\odot$ is only 8%, leaving the nature of the progenitor system unclear. We present Pan-STARRS and ATLAS optical follow-up of the 90% localisation region, and quantify Vera C. Rubin Observatory target-of-opportunity observations. In the North, Pan-STARRS imaged 1084 deg$^2$ (65%) within 7 days to a median depth of 21.9 mag and ATLAS 1545 deg$^2$ (87%) withi",
-      "url": "http://arxiv.org/abs/2611.26222v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Periodicities of small regular jet deviations in SS433 and their origin",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-19",
-      "summary": "Based on the results of spectroscopic observations of SS433 conducted with the 2.5-m telescope at the Caucasian Mountain Observatory between 2020 and 2026, we study the deviations of the moving hydrogen and helium emission lines from their positions as predicted by the kinematic model of the jets' precessional motion. In these deviations, in addition to the previously known periodicities of $13^d.08$, $11^d.27$, $6^d.29$, and $5^d.83$, a new period of $3^d.08$ is identified. All observed periodicities are explained by a model in which the jet offsets occur in a fixed direction relative to the star-disk axis $\\bf r$, and the magnitude of the offset is a function $a(μ)$, where $μ$ is the cosin",
-      "url": "http://arxiv.org/abs/2611.26088v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Strong Field Tidal Disruptions of Rotating Stars by Spinning Black Holes",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-19",
-      "summary": "We study tidal disruptions of rotating solar-type stars by a rapidly spinning supermassive black hole with general-relativistic smoothed-particle hydrodynamics. To capture strong-field effects, we place the pericentre at a few gravitational radii of a black hole, and compare with weak-field encounters at a larger pericentre around a lighter black hole. We vary the black hole spin, the orbital inclination and the stellar rotation, using rigidly and differentially rotating stars with spin aligned, anti-aligned or perpendicular to the orbital angular momentum. In the strong field, the black hole spin decides whether a core survives on equatorial and inclined orbits, and stellar rotation reduces",
-      "url": "http://arxiv.org/abs/2611.26043v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "The Ionospheric Cut-off as a Potential Radio Technosignature",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-19",
-      "summary": "Radio emission generated on a planetary surface must cross the planet's ionosphere before escaping into space: below the local plasma frequency it is reflected back towards the surface. We investigate this process for broadband radio technosignatures (BRaTs) using a Chapman-layer description of photoionised atmospheres. The plasma frequency depends only weakly on stellar XUV irradiation, scaling as $Q_{\\infty}^{1/4}$, implying turnover frequencies of 5-40 MHz for most terrestrial habitable-zone planets, potentially rising towards 100 MHz in extreme environments. The basic signature is simple: the continuum of a surface-origin BRaT should be strongly suppressed below a characteristic frequenc",
-      "url": "http://arxiv.org/abs/2611.26025v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Discovery of a Massive Outer Companion to the TOI-178 Resonant Chain",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-18",
-      "summary": "We report the discovery of a massive outer companion around TOI-178, a known planetary system with six inner small planets within 0.15 AU, five of which are in a 2:4:6:9:12 resonant chain. We analyse the astrometric anomalies in the combined Gaia DR2/DR3 - Hipparcos catalogue (G23H) and literature radial velocities, revealing strong evidence for a massive outer companion at several AU. We combine the resulting orbital fit posterior with archival high-contrast imaging to constrain the properties of the corresponding massive outer companion, TOI-178 h. We also study the dynamical stability of the inner resonant chain in the presence of this previously unknown outer companion via both heuristic",
-      "url": "http://arxiv.org/abs/2611.24854v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Deconstructing the cosmic baryon distribution with fast radio bursts",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-18",
-      "summary": "The precise distribution of baryons in the Universe remains an open question in cosmology, as their highly diffuse nature hinders direct observation. However, mapping it is integral for precision cosmology in studies of gravitational lensing, galaxy evolution and the cosmic microwave background with current and upcoming surveys. We use fast radio bursts (FRBs) and their dispersion measures (DMs) to probe and localise this baryon distribution in the large-scale structure (LSS). Using IllustrisTNG simulations, we classify the LSS into eight bins of increasing matter density, analogous to voids, filaments, and haloes. We model the DM contribution from each substructure and compare it with the s",
-      "url": "http://arxiv.org/abs/2611.24838v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "A Homogeneous Benchmark of Exoplanet Mass-Radius Relations",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-18",
-      "summary": "The mass-radius ($M$-$R$) relation is fundamental to inferring the bulk composition and internal structure of exoplanets. However, published relations remain difficult to compare directly because studies adopt different planetary samples, fitting procedures, and evaluation metrics. We construct a homogeneous, quality-controlled benchmark of 963 exoplanets with dynamically measured masses and transit radii from the NASA Exoplanet Archive. We compare empirical power laws, probabilistic models, and machine-learning (ML) regressors using point accuracy, interval coverage, and probabilistic calibration. On the full test set, a multi-feature random forest has the lowest root-mean-square error, 0.3",
-      "url": "http://arxiv.org/abs/2611.24812v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Potential spectral markers of intrinsic magnetic fields of hot exoplanets in the UV range",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-18",
-      "summary": "A method for detecting the intrinsic magnetic fields of exoplanets, based on the effect of atomic alignment (the redistribution of populations among magnetic sublevels under the action of anisotropic radiation from the host star), has been adapted for observations with the Spektr-UV space telescope. A procedure for selecting sensitive transitions is proposed, and triplet absorption lines in the UV range that are sensitive to alignment are identified. On the basis of three-dimensional aeronomic models of the hot Jupiters KELT-20 b and HAT-P-32 b, absorption spectra in these lines are calculated for cases with and without intrinsic magnetic fields of the exoplanets. Using the Spektr-UV exposur",
-      "url": "http://arxiv.org/abs/2611.24811v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Surrogate Modeling and Reduced-Order Methods in Gravitational-Wave Physics and Numerical Relativity: From Spectral Representations to Adaptive Compression",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-18",
-      "summary": "The rapid expansion of gravitational-wave astronomy and high-precision numerical relativity has created an acute computational bottleneck: direct numerical integration of the Einstein field equations and high-dimensional Bayesian parameter estimation require millions of waveform evaluations that cannot be sustained by traditional solvers alone. Reduced-order modeling (ROM) and surrogate techniques have emerged as foundational tools to bridge this gap, compressing high-fidelity solution manifolds into compact, rapidly evaluable representations without sacrificing physical accuracy. This perspective reviews the mathematical pillars of projection-based reduced-order modeling---including Proper ",
-      "url": "http://arxiv.org/abs/2611.24727v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Rapid Equation of State Inference from Multiprobe Datasets",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-18",
-      "summary": "Fully constraining the neutron star equation of state (EoS) requires combining observations from various channels that probe different density regimes. We perform a joint multimessenger inference of the equation of state using gravitational-wave observations from binary neutron star mergers, NICER mass-radius measurements of X-ray pulsars, and radio timing measurements of massive pulsars. We constrain the parametrized equation of state and perform Bayesian model selection among a set of candidate equations of state. The joint analysis produces a radius of $R_{1.4} = 11.93^{+1.02}_{-0.83} \\, \\rm km$ for a canonical $1.4 \\, M_\\odot$ neutron star, and a maximum non-rotating neutron star mass of",
-      "url": "http://arxiv.org/abs/2611.24664v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Investigating the Impact of SAX J1808.4-3658's Very Bright Thermonuclear X-ray Burst on the Accretion Disc with NICER",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-18",
-      "summary": "We analyse a bright thermonuclear X-ray burst from the accreting millisecond X-ray pulsar (AMXP) SAX J1808.4-3658, the brightest burst detected by \\textit{NICER} to date, to explore interactions between thermonuclear burst radiation and the accretion disc. This burst features a remarkable soft (<1.5 keV) excess in its spectra. For the first time, we simultaneously detect a reflection signal and the signature of an evolving persistent component, with our fits producing a peak persistent scaling factor $f_{a,1} = 59.6\\pm0.6$. We find a high peak reflection fraction ($f_{r,1} = 0.82\\pm0.15$) and a peak bolometric burst blackbody flux below Eddington (0.68$L_{\\mathrm{Edd}}$) despite signatures o",
-      "url": "http://arxiv.org/abs/2611.24635v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Early spectra of AT2017gfo from scaled 3D merger ejecta: mass--velocity distribution, 3D structure, and treatment of line opacity",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-18",
-      "summary": "We present ARTIS radiative transfer calculations for neutron star merger ejecta with line-by-line opacities, wavelength-calibrated lanthanide data, and time-dependent r-process compositions and thermalisation, testing how the early kilonova depends on the mass-velocity distribution, dimensionality, and line treatment. We rescale 3D dynamical ejecta from a merger simulation in density and velocity to approximate AT2017gfo. Mass scaling alone provides good agreement with the bolometric light curve but inconsistent spectra. With velocities additionally halved, the model also reproduces the observed spectra at 1.4, 2.4, and (albeit less accurately) 3.4 days. The Sr II triplet contributes most to",
-      "url": "http://arxiv.org/abs/2611.24627v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Thermodynamics of gas giants accreting via shocks: the role of molecular hydrogen dissociation",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-18",
-      "summary": "Within the core-accretion framework, gas giants acquire most of their mass through accretion shocks during runaway gas accretion. The shock thermodynamics---governed by radiative cooling, accretion history, and equation of state (EoS)---sets the post-shock gas entropy and initial thermal state, strongly influencing both observables and subsequent evolution. We aim to build a coupled evolutionary model predicting the initial thermodynamic conditions, intrinsic luminosities, and upper limits on magnetic field strengths of gas giants across diverse accretion histories. We couple radiation hydrodynamics and $\\mathrm{H_2}$ dissociation to long-term planetary interior evolution by training a physi",
-      "url": "http://arxiv.org/abs/2611.24615v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Interpretable attention-based neural posterior estimation for fast radio burst cosmology",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-18",
-      "summary": "Fast radio bursts (FRBs) probe the integrated free-electron density along extragalactic sightlines and can be used to study late-time cosmic evolution. Conventional Bayesian analyses require repeated evaluations of computationally expensive likelihoods, making inference increasingly challenging as FRB catalogs grow. In this work, we develop an interpretable attention-based neural posterior estimator (AttNPE) for rapid posterior inference of the physical parameters from FRB catalogs with measured redshifts. The attention encoder compresses the catalog into a low-dimensional representation, and a conditional masked autoregressive flow maps samples from a base distribution to the seven-dimensio",
-      "url": "http://arxiv.org/abs/2611.24542v1",
       "image": "",
       "type": "research"
     }
