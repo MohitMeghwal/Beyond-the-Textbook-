@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-27T10:57:54.867125+00:00",
+  "lastUpdated": "2026-11-28T10:34:19.038901+00:00",
   "articles": [
     {
       "title": "Performance of artificial intelligence versus clinician left-ventricular segmentation of cardiac MRI for mortality prediction: a retrospective, multicentre, prognostic study.",
@@ -38,6 +38,16 @@
       "publishedAt": "2027 Jan",
       "summary": "special populations in dermatologic infectious disease",
       "url": "https://pubmed.ncbi.nlm.nih.gov/43025930/",
+      "image": "",
+      "type": "research"
+    },
+    {
+      "title": "Bridging the Translation Gap: What Can We Do as Microvascular Physiologists?",
+      "category": "Medical Research",
+      "source": "PubMed",
+      "publishedAt": "2027 Jan",
+      "summary": "bridging the translation gap what can we do as microvascular physiologists",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43102966/",
       "image": "",
       "type": "research"
     },
@@ -588,16 +598,6 @@
       "publishedAt": "2026-11-20",
       "summary": "TOI-1518 b (BD+66 1610 b) is a highly irradiated ultra-hot Jupiter on a strongly misaligned orbit, a benchmark target for atmospheric and dynamical studies. We comprehensively characterise the TOI-1518 system by refining its orbital and physical parameters, and by investigating the chemical composition of the planetary atmosphere through transmission spectroscopy. We employed a joint Bayesian framework combining TESS photometry, HARPS-N high-resolution spectroscopy, and least-squares deconvolution profiles to break stellar geometrical degeneracies. We then applied single-line and cross-correlation function (CCF) transmission spectroscopy across theoretical templates. By anchoring the stellar",
       "url": "http://arxiv.org/abs/2611.27589v1",
-      "image": "",
-      "type": "research"
-    },
-    {
-      "title": "Modelling scintillation in Fast Radio Bursts",
-      "category": "Scientific Research",
-      "source": "arXiv",
-      "publishedAt": "2026-11-20",
-      "summary": "Fast Radio Bursts (FRBs) are bright, ms-duration, extragalactic radio transients. Propagation through inhomogeneities in the ionised medium produces scintillation, observed as frequency-dependent intensity variations in their spectra, with bright patches, called scintles. The characteristic scintillation bandwidth probes scattering material along the line of sight. Measuring this scale can be challenging when the observing bandwidth of the burst spectra contains a few scintles. We study the uncertainties associated with recovering $ν_s$ from frequency autocorrelation functions (ACFs) under finite-bandwidth conditions. We examine the recovery of $ν_s$ from individual ACFs and investigate if a",
-      "url": "http://arxiv.org/abs/2611.27527v1",
       "image": "",
       "type": "research"
     }
